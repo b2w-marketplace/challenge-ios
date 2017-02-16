@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Lojinha' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Lojinha
+  pod 'Alamofire'
+  pod 'JSONJoy-Swift'
+  pod 'UIScrollView-InfiniteScroll'
+
+  target 'LojinhaTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'LojinhaUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

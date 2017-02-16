@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.2.0)
+  - JSONJoy-Swift (3.0.1)
+  - UIScrollView-InfiniteScroll (1.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - JSONJoy-Swift
+  - UIScrollView-InfiniteScroll
+
+SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  JSONJoy-Swift: ef6eccdcf319412f149bbdd031b27f0430d5d576
+  UIScrollView-InfiniteScroll: d26885be71caca7485cdb37eab513a8f89036bb0
+
+PODFILE CHECKSUM: c3ad781a86226560fc32566c8e04647bedaa677e
+
+COCOAPODS: 1.2.0.beta.1
