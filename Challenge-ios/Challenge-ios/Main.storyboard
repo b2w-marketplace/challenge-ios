@@ -19,7 +19,7 @@
             <objects>
                 <navigationController id="1jy-qj-Ct1" customClass="CustomNavigationController" customModule="Challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sobre" image="tagDeselected" selectedImage="tagSelected" id="hmm-B1-BMb"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kSu-0e-vUj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kSu-0e-vUj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
