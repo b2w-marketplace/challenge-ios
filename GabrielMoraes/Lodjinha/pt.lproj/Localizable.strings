@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Lodjinha
+
+  Created by Gabriel Moraes on 2/27/17.
+  Copyright © 2017 Gabriel Moraes. All rights reserved.
+ */
+
+"homeSectionBestSellers" = "Mais vendidos";
+"productCellPriceOld" = "De: ";
+"productCellPriceNew" = "Por ";
+"errorTitle" = "Erro";
+"errorSerialization" = "Falha ao serializar.";
+"errorUnexpected" = "Retorno inesperado.";
