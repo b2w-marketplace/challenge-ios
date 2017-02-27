@@ -12,9 +12,6 @@ import ObjectMapper
 
 class Service: NSObject {
     
-    private static let serializationError = "Serialization fail."
-    private static let returnError = "Unexpected result."
-    
     static func requestObject<T: Mappable>(with url: String, params: Parameters? = nil, completion: @escaping (_ responseObject: T?, _ errorMessage: String?) -> Void) {
         Alamofire.request(url, parameters: params).responseJSON { response in
             if let error = response.result.error {
@@ -23,10 +20,10 @@ class Service: NSObject {
                 if let object = Mapper<T>().map(JSONObject: responseObject) {
                     completion(object, nil)
                 } else {
-                    completion(nil, self.serializationError)
+                    completion(nil, Strings.errorSerialization)
                 }
             } else {
-                completion(nil, self.returnError)
+                completion(nil, Strings.errorUnexpected)
             }
         }
     }
@@ -39,10 +36,10 @@ class Service: NSObject {
                 if let objects = Mapper<T>().mapArray(JSONObject: responseObject) {
                     completion(objects, nil)
                 } else {
-                    completion(nil, self.serializationError)
+                    completion(nil, Strings.errorSerialization)
                 }
             } else {
-                completion(nil, self.returnError)
+                completion(nil, Strings.errorUnexpected)
             }
         }
     }

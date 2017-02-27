@@ -9,3 +9,6 @@
 "homeSectionBestSellers" = "Best sellers";
 "productCellPriceOld" = "Old: ";
 "productCellPriceNew" = "Now ";
+"errorTitle" = "Error";
+"errorSerialization" = "Serialization fail.";
+"errorUnexpected" = "Unexpected result.";

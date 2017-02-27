@@ -17,5 +17,8 @@ struct Strings {
     static let homeSectionBestSellers = Strings.get(key: "homeSectionBestSellers")
     static let productCellPriceOld = Strings.get(key: "productCellPriceOld")
     static let productCellPriceNew = Strings.get(key: "productCellPriceNew")
+    static let errorTitle = Strings.get(key: "errorTitle")
+    static let errorSerialization = Strings.get(key: "errorSerialization")
+    static let errorUnexpected = Strings.get(key: "errorUnexpected")
     
 }

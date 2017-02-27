@@ -30,3 +30,24 @@ extension Float {
     }
     
 }
+
+extension UIViewController {
+    
+    func showErrorAlert(with message: String?) {
+        let alertController = UIAlertController(title: Strings.errorTitle, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+}
+
+extension UIRefreshControl {
+    func insert(in view: UIScrollView) {
+        view.addSubview(self)
+        view.alwaysBounceVertical = true
+        self.layoutIfNeeded()
+        view.contentOffset = CGPoint(x: 0, y: -self.frame.size.height)
+        self.beginRefreshing()
+    }
+}

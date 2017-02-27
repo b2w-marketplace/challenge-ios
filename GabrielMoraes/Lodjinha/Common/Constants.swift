@@ -19,5 +19,6 @@ struct Constants {
     static let urlProduct = urlBase + "/produto"
     static let urlBestSellers = urlProduct + "/maisvendidos"
     static let urlCategories = urlBase + "/categoria"
+    static let urlBanners = urlBase + "/banner"
     
 }
