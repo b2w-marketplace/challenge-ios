@@ -37,4 +37,11 @@ class Product: NSObject, Mappable {
         imageUrl <- (map["urlImagem"], URLTransform())
     }
     
+    func showDetail(from context: UIViewController) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: Constants.controllerProductDetail) as! ProductDetailViewController
+        controller.product = self
+        context.navigationController?.show(controller, sender: nil)
+    }
+    
 }

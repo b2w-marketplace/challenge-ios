@@ -120,6 +120,11 @@ class HomeViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = self.products[indexPath.item]
+        product.showDetail(from: self)
+    }
+    
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if let indexPath = self.collectionBanner.indexPathsForVisibleItems.first {
             self.pageControl.currentPage = indexPath.item
