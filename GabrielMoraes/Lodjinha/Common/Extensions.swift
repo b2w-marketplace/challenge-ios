@@ -42,9 +42,11 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func showAlert(with message: String?) {
+    func showInfoAlert(with message: String?) {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .default) { action in
+            print(self.navigationController?.popViewController(animated: true) ?? "View controller is nil")
+        }
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
     }

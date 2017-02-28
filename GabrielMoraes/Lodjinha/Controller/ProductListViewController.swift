@@ -68,7 +68,7 @@ class ProductListViewController: UITableViewController {
                         self.products.append(contentsOf: products)
                     }
                 } else if empty {
-                    self.showAlert(with: Strings.infoNoResults)
+                    self.showInfoAlert(with: Strings.infoNoResults)
                 } else {
                     self.products = products
                 }

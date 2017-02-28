@@ -29,6 +29,9 @@
 /* Class = "UILabel"; text = "Gabriel Gomes de Moraes"; ObjectID = "TuA-xT-vem"; */
 "TuA-xT-vem.text" = "Gabriel Gomes de Moraes";
 
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "UhX-LG-NvD"; */
+"UhX-LG-NvD.title" = "Voltar";
+
 /* Class = "UINavigationItem"; title = "About"; ObjectID = "ZLO-Xh-i1D"; */
 "ZLO-Xh-i1D.title" = "Sobre";
 

@@ -42,12 +42,7 @@ class ProductDetailViewController: UIViewController {
             if let message = errorMessage {
                 self.showErrorAlert(with: message)
             } else {
-                let alertController = UIAlertController(title: nil, message: Strings.productReservationSuccess, preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default) { action in
-                    print(self.navigationController?.popViewController(animated: true) ?? "View controller is nil")
-                }
-                alertController.addAction(action)
-                self.present(alertController, animated: true, completion: nil)
+                self.showInfoAlert(with: Strings.productReservationSuccess)
             }
             sender.stopLoading()
         }
