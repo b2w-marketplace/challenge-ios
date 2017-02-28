@@ -15,6 +15,8 @@ struct Constants {
     
     static let identifierProduct = "ProductCell"
     
+    static let segueProductList = "sgProductList"
+    
     private static let urlBase = "https://alodjinha.herokuapp.com"
     static let urlProduct = urlBase + "/produto"
     static let urlBestSellers = urlProduct + "/maisvendidos"

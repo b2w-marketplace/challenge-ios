@@ -13,6 +13,8 @@ extension UINavigationController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationBar.barStyle = .black
+        self.navigationBar.tintColor = UIColor.white
         self.navigationBar.barTintColor = Constants.colorDarkishPurple
         self.tabBarController?.tabBar.tintColor = Constants.colorWarmPurple
     }
@@ -40,9 +42,17 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func showAlert(with message: String?) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
 }
 
 extension UIRefreshControl {
+    
     func insert(in view: UIScrollView) {
         view.addSubview(self)
         view.alwaysBounceVertical = true
@@ -50,4 +60,5 @@ extension UIRefreshControl {
         view.contentOffset = CGPoint(x: 0, y: -self.frame.size.height)
         self.beginRefreshing()
     }
+    
 }

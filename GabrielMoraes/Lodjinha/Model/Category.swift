@@ -11,7 +11,7 @@ import ObjectMapper
 
 class Category: NSObject, Mappable {
     
-    var id: String!
+    var id: Int!
     var desc: String!
     var imageUrl: URL!
     

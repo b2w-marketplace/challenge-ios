@@ -11,7 +11,7 @@ import ObjectMapper
 
 class Product: NSObject, Mappable {
     
-    var id: String!
+    var id: Int!
     var name: String!
     var desc: String!
     var category: Category!

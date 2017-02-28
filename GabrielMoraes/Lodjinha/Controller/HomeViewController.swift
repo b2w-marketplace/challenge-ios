@@ -31,6 +31,12 @@ class HomeViewController: UITableViewController {
         self.loadContent()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { context in
@@ -120,15 +126,15 @@ class HomeViewController: UITableViewController {
         }
     }
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        self.tabBarController?.tabBar.isHidden = true
+        if segue.identifier == Constants.segueProductList {
+            let controller = segue.destination as! ProductListViewController
+            controller.category = sender as! Category
+        }
     }
-    */
 
 }
 
@@ -166,7 +172,13 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if collectionView == self.collectionBanner {
+            let banner = self.banners[indexPath.item]
+            UIApplication.shared.openURL(banner.linkUrl)
+        } else {
+            let category = self.categories[indexPath.item]
+            self.performSegue(withIdentifier: Constants.segueProductList, sender: category)
+        }
     }
     
 }

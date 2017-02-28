@@ -12,3 +12,4 @@
 "errorTitle" = "Erro";
 "errorSerialization" = "Falha ao serializar.";
 "errorUnexpected" = "Retorno inesperado.";
+"infoNoResults" = "Sem resultados.";

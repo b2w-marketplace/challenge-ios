@@ -11,7 +11,7 @@ import ObjectMapper
 
 class Banner: NSObject, Mappable {
     
-    var id: String!
+    var id: Int!
     var linkUrl: URL!
     var imageUrl: URL!
     

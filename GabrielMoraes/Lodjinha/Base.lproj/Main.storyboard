@@ -223,11 +223,31 @@
                         <outlet property="collectionBanner" destination="gVS-wB-oag" id="fAd-JA-BDz"/>
                         <outlet property="collectionCategory" destination="SaC-gv-qbL" id="OL7-1C-dn2"/>
                         <outlet property="pageControl" destination="0gN-gK-lck" id="GUL-Lf-eRY"/>
+                        <segue destination="b5V-Xr-dNA" kind="show" identifier="sgProductList" id="STa-ut-5fZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGd-Qq-6MH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1741.5999999999999" y="-310.79460269865069"/>
+        </scene>
+        <!--Product List-->
+        <scene sceneID="zyF-H8-Fls">
+            <objects>
+                <tableViewController id="b5V-Xr-dNA" customClass="ProductListViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="PFo-n2-pNS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="b5V-Xr-dNA" id="GZA-nV-Sy9"/>
+                            <outlet property="delegate" destination="b5V-Xr-dNA" id="KhX-xr-3sI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Product List" id="OmG-5O-ojO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOM-u2-PPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2545" y="-308"/>
         </scene>
         <!--Home-->
         <scene sceneID="5Bj-al-qsR">

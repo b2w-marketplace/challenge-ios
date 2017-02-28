@@ -28,6 +28,7 @@
 		AF5BAB2B1E64BB2700A2A5F6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BAB2A1E64BB2700A2A5F6 /* CategoryCell.swift */; };
 		AF5BAB2D1E64CC6100A2A5F6 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BAB2C1E64CC6100A2A5F6 /* BannerCell.swift */; };
 		AF5BAB2F1E64CCBF00A2A5F6 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BAB2E1E64CCBF00A2A5F6 /* Banner.swift */; };
+		AF5BAB311E64ED0700A2A5F6 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BAB301E64ED0700A2A5F6 /* ProductListViewController.swift */; };
 		B96815671B29598B21F332F3 /* Pods_LodjinhaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628460AAF626EC818B0F8612 /* Pods_LodjinhaUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		AF5BAB2A1E64BB2700A2A5F6 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		AF5BAB2C1E64CC6100A2A5F6 /* BannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		AF5BAB2E1E64CCBF00A2A5F6 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		AF5BAB301E64ED0700A2A5F6 /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		D9580E0BBF39FEE9A1E84D3B /* Pods-LodjinhaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaUITests/Pods-LodjinhaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4D55F876364B1F9D3B9A839 /* Pods-LodjinhaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaTests/Pods-LodjinhaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EADE2E2EFA3091A7CA44AC70 /* Pods-LodjinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaTests/Pods-LodjinhaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5BAB111E6493E200A2A5F6 /* HomeViewController.swift */,
+				AF5BAB301E64ED0700A2A5F6 /* ProductListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF5BAB161E6493E200A2A5F6 /* HomeViewController.swift in Sources */,
+				AF5BAB311E64ED0700A2A5F6 /* ProductListViewController.swift in Sources */,
 				AF5BAB291E64B43E00A2A5F6 /* Strings.swift in Sources */,
 				AF5BAB1E1E64A15F00A2A5F6 /* Service.swift in Sources */,
 				AF39D8AF1E647A6B00205342 /* AppDelegate.swift in Sources */,

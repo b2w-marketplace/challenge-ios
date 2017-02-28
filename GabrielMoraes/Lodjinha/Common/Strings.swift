@@ -20,5 +20,6 @@ struct Strings {
     static let errorTitle = Strings.get(key: "errorTitle")
     static let errorSerialization = Strings.get(key: "errorSerialization")
     static let errorUnexpected = Strings.get(key: "errorUnexpected")
+    static let infoNoResults = Strings.get(key: "infoNoResults")
     
 }
