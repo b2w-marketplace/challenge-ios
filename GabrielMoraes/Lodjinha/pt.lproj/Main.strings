@@ -1,0 +1,45 @@
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "1tr-Os-VHz"; */
+"1tr-Os-VHz.title" = "Home";
+
+/* Class = "UITabBarItem"; title = "About"; ObjectID = "1wk-jL-cXP"; */
+"1wk-jL-cXP.title" = "Sobre";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6aI-2j-fHY"; */
+"6aI-2j-fHY.text" = "Label";
+
+/* Class = "UILabel"; text = "27 de Fevereiro de 2017"; ObjectID = "773-WN-Tls"; */
+"773-WN-Tls.text" = "27 de Fevereiro de 2017";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "7iv-Cr-KQl"; */
+"7iv-Cr-KQl.text" = "Description";
+
+/* Class = "UIButton"; normalTitle = "Reserve"; ObjectID = "F1I-um-raT"; */
+"F1I-um-raT.normalTitle" = "Reservar";
+
+/* Class = "UILabel"; text = "a Lodjinha"; ObjectID = "MnS-7c-BXO"; */
+"MnS-7c-BXO.text" = "a Lodjinha";
+
+/* Class = "UINavigationItem"; title = "Product List"; ObjectID = "OmG-5O-ojO"; */
+"OmG-5O-ojO.title" = "Product List";
+
+/* Class = "UILabel"; text = "New 9999,00"; ObjectID = "Qex-Y1-OnJ"; */
+"Qex-Y1-OnJ.text" = "New 9999,00";
+
+/* Class = "UILabel"; text = "Gabriel Gomes de Moraes"; ObjectID = "TuA-xT-vem"; */
+"TuA-xT-vem.text" = "Gabriel Gomes de Moraes";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "ZLO-Xh-i1D"; */
+"ZLO-Xh-i1D.title" = "Sobre";
+
+/* Class = "UILabel"; text = "Categories"; ObjectID = "gM9-ww-8zG"; */
+"gM9-ww-8zG.text" = "Categorias";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "gQU-a6-IG1"; */
+"gQU-a6-IG1.title" = "Home";
+
+/* Class = "UINavigationItem"; title = "Product Detail"; ObjectID = "h8Z-1Y-brL"; */
+"h8Z-1Y-brL.title" = "Product Detail";
+
+/* Class = "UILabel"; text = "Old: 9999,99"; ObjectID = "l8b-c8-DR3"; */
+"l8b-c8-DR3.text" = "Old: 9999,99";
