@@ -121,6 +121,7 @@ class HomeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tabBarController?.tabBar.isHidden = true
         let product = self.products[indexPath.item]
         product.showDetail(from: self)
     }

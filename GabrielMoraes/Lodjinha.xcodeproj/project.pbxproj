@@ -31,6 +31,7 @@
 		AF5BAB311E64ED0700A2A5F6 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BAB301E64ED0700A2A5F6 /* ProductListViewController.swift */; };
 		AF5BAB331E65049700A2A5F6 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BAB321E65049700A2A5F6 /* ProductDetailViewController.swift */; };
 		AF5BAB351E6517E900A2A5F6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BAB341E6517E900A2A5F6 /* RoundedButton.swift */; };
+		AF5BAB371E6522ED00A2A5F6 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5BAB361E6522C000A2A5F6 /* Pacifico-Regular.ttf */; };
 		B96815671B29598B21F332F3 /* Pods_LodjinhaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628460AAF626EC818B0F8612 /* Pods_LodjinhaUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		AF5BAB301E64ED0700A2A5F6 /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		AF5BAB321E65049700A2A5F6 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		AF5BAB341E6517E900A2A5F6 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		AF5BAB361E6522C000A2A5F6 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		D9580E0BBF39FEE9A1E84D3B /* Pods-LodjinhaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaUITests/Pods-LodjinhaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4D55F876364B1F9D3B9A839 /* Pods-LodjinhaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaTests/Pods-LodjinhaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EADE2E2EFA3091A7CA44AC70 /* Pods-LodjinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaTests/Pods-LodjinhaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				AF39D8B71E647A6B00205342 /* Assets.xcassets */,
 				AF39D8BC1E647A6B00205342 /* Info.plist */,
 				AF5BAB251E64B34F00A2A5F6 /* Localizable.strings */,
+				AF5BAB361E6522C000A2A5F6 /* Pacifico-Regular.ttf */,
 			);
 			path = Lodjinha;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				AF5BAB231E64B34F00A2A5F6 /* Localizable.strings in Resources */,
 				AF39D8BB1E647A6B00205342 /* LaunchScreen.storyboard in Resources */,
 				AF5BAB1A1E64960F00A2A5F6 /* ProductCell.xib in Resources */,
+				AF5BAB371E6522ED00A2A5F6 /* Pacifico-Regular.ttf in Resources */,
 				AF39D8B81E647A6B00205342 /* Assets.xcassets in Resources */,
 				AF39D8B61E647A6B00205342 /* Main.storyboard in Resources */,
 			);
