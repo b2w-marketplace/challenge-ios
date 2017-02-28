@@ -31,12 +31,6 @@ class HomeViewController: UITableViewController {
         self.loadContent()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        self.tabBarController?.tabBar.isHidden = false
-    }
-    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { context in

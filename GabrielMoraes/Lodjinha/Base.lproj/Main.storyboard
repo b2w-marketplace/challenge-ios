@@ -92,13 +92,13 @@
         <!--Product Detail-->
         <scene sceneID="evu-MZ-aCV">
             <objects>
-                <viewController storyboardIdentifier="ProductDetail" id="0Cn-Fy-lvP" customClass="ProductDetailViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetail" hidesBottomBarWhenPushed="YES" id="0Cn-Fy-lvP" customClass="ProductDetailViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qZw-dC-otS"/>
                         <viewControllerLayoutGuide type="bottom" id="vlN-Uy-1gu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i5Z-Ex-o2q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReW-bn-Ox8">
@@ -208,7 +208,7 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFi-Pa-ObL">
-                                <rect key="frame" x="0.0" y="250" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="305" width="375" height="70"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gI-K5-sOu">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
@@ -249,13 +249,13 @@
                             <constraint firstItem="ReW-bn-Ox8" firstAttribute="top" secondItem="i5Z-Ex-o2q" secondAttribute="top" id="BLM-OV-edy"/>
                             <constraint firstItem="ReW-bn-Ox8" firstAttribute="leading" secondItem="i5Z-Ex-o2q" secondAttribute="leading" id="H0w-MU-jJF"/>
                             <constraint firstItem="vlN-Uy-1gu" firstAttribute="top" secondItem="yFi-Pa-ObL" secondAttribute="bottom" id="Ss7-yT-egD"/>
-                            <constraint firstItem="vlN-Uy-1gu" firstAttribute="top" secondItem="ReW-bn-Ox8" secondAttribute="bottom" constant="15" id="ZsY-de-sbB"/>
                             <constraint firstAttribute="trailing" secondItem="ReW-bn-Ox8" secondAttribute="trailing" id="g6y-lf-tOg"/>
+                            <constraint firstItem="yFi-Pa-ObL" firstAttribute="top" secondItem="ReW-bn-Ox8" secondAttribute="bottom" id="z1L-8D-iBY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Product Detail" id="h8Z-1Y-brL"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="320"/>
+                    <size key="freeformSize" width="375" height="375"/>
                     <connections>
                         <outlet property="imgProduct" destination="96K-3d-wz7" id="xYQ-7J-qWU"/>
                         <outlet property="lblDesc" destination="3ka-zU-qHt" id="Wtc-Jw-xb9"/>
@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5l3-Zb-Kfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2729" y="348"/>
+            <point key="canvasLocation" x="2731" y="348"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -424,7 +424,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="1tr-Os-VHz">
                         <view key="titleView" contentMode="scaleToFill" id="b7W-F5-ZPK">
-                            <rect key="frame" x="113" y="6" width="150" height="33"/>
+                            <rect key="frame" x="85" y="6" width="150" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoNavbar" translatesAutoresizingMaskIntoConstraints="NO" id="5ug-2k-3n3">
@@ -449,7 +449,7 @@
         <!--Product List-->
         <scene sceneID="zyF-H8-Fls">
             <objects>
-                <tableViewController id="b5V-Xr-dNA" customClass="ProductListViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="b5V-Xr-dNA" customClass="ProductListViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="PFo-n2-pNS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
