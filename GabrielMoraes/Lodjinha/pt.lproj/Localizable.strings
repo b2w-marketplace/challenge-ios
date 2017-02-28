@@ -13,3 +13,4 @@
 "errorSerialization" = "Falha ao serializar.";
 "errorUnexpected" = "Retorno inesperado.";
 "infoNoResults" = "Sem resultados.";
+"productReservationSuccess" = "Produto reservado com sucesso!";

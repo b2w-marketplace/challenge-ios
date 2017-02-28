@@ -13,7 +13,7 @@ import ObjectMapper
 class Service: NSObject {
     
     static func requestObject<T: Mappable>(with url: String, params: Parameters? = nil, completion: @escaping (_ responseObject: T?, _ errorMessage: String?) -> Void) {
-        Alamofire.request(url, parameters: params).responseJSON { response in
+        Alamofire.request(url, method: .get, parameters: params).responseJSON { response in
             if let error = response.result.error {
                 completion(nil, error.localizedDescription)
             } else if let responseObject = (response.result.value as? [String: AnyObject])?["data"] {
@@ -29,7 +29,7 @@ class Service: NSObject {
     }
     
     static func requestArray<T: Mappable>(with url: String, params: Parameters? = nil, completion: @escaping (_ responseObject: [T]?, _ errorMessage: String?) -> Void) {
-        Alamofire.request(url, parameters: params).responseJSON { response in
+        Alamofire.request(url, method: .get, parameters: params).responseJSON { response in
             if let error = response.result.error {
                 completion(nil, error.localizedDescription)
             } else if let responseObject = (response.result.value as? [String: AnyObject])?["data"] {
@@ -40,6 +40,16 @@ class Service: NSObject {
                 }
             } else {
                 completion(nil, Strings.errorUnexpected)
+            }
+        }
+    }
+    
+    static func request(with url: String, params: Parameters? = nil, completion: @escaping (_ errorMessage: String?) -> Void) {
+        Alamofire.request(url, method: .post, parameters: params).responseJSON { response in
+            if let error = response.result.error {
+                completion(error.localizedDescription)
+            } else {
+                completion(nil)
             }
         }
     }

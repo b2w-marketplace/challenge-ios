@@ -31,12 +31,6 @@ class HomeViewController: UITableViewController {
         self.loadContent()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        self.tabBarController?.tabBar.isHidden = false
-    }
-    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { context in
@@ -118,6 +112,12 @@ class HomeViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.identifierProduct, for: indexPath) as! ProductCell
         cell.product = self.products[indexPath.item]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tabBarController?.tabBar.isHidden = true
+        let product = self.products[indexPath.item]
+        product.showDetail(from: self)
     }
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
