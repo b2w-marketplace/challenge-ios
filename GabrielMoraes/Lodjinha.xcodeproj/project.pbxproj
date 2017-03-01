@@ -32,6 +32,7 @@
 		AF5BAB331E65049700A2A5F6 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BAB321E65049700A2A5F6 /* ProductDetailViewController.swift */; };
 		AF5BAB351E6517E900A2A5F6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BAB341E6517E900A2A5F6 /* RoundedButton.swift */; };
 		AF5BAB371E6522ED00A2A5F6 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5BAB361E6522C000A2A5F6 /* Pacifico-Regular.ttf */; };
+		AF941A551E67512E00B5C454 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF941A541E67512E00B5C454 /* AboutViewController.swift */; };
 		B96815671B29598B21F332F3 /* Pods_LodjinhaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628460AAF626EC818B0F8612 /* Pods_LodjinhaUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		AF5BAB341E6517E900A2A5F6 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		AF5BAB361E6522C000A2A5F6 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		AF5BAB391E6526D500A2A5F6 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
+		AF941A541E67512E00B5C454 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D9580E0BBF39FEE9A1E84D3B /* Pods-LodjinhaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaUITests/Pods-LodjinhaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4D55F876364B1F9D3B9A839 /* Pods-LodjinhaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaTests/Pods-LodjinhaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EADE2E2EFA3091A7CA44AC70 /* Pods-LodjinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaTests/Pods-LodjinhaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				AF5BAB111E6493E200A2A5F6 /* HomeViewController.swift */,
 				AF5BAB301E64ED0700A2A5F6 /* ProductListViewController.swift */,
 				AF5BAB321E65049700A2A5F6 /* ProductDetailViewController.swift */,
+				AF941A541E67512E00B5C454 /* AboutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				AF5BAB1C1E649F5900A2A5F6 /* Product.swift in Sources */,
 				AF5BAB201E64A30E00A2A5F6 /* Category.swift in Sources */,
 				AF5BAB2B1E64BB2700A2A5F6 /* CategoryCell.swift in Sources */,
+				AF941A551E67512E00B5C454 /* AboutViewController.swift in Sources */,
 				AF5BAB2D1E64CC6100A2A5F6 /* BannerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

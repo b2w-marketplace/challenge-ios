@@ -35,8 +35,10 @@ class HomeViewController: UITableViewController {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { context in
             self.collectionBanner.collectionViewLayout.invalidateLayout()
-            self.collectionBanner.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
-            self.pageControl.currentPage = 0
+            if self.banners.count > 0 {
+                self.collectionBanner.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
+                self.pageControl.currentPage = 0
+            }
         }) { context in
             
         }
