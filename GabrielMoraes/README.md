@@ -2,6 +2,7 @@
 
 Versão mínima: iOS 9</br>
 Linguagem: Swift</br>
+Idiomas: Português e Inglês</br>
 
 ## INSTALAÇÃO (VIA COCOAPODS)
 

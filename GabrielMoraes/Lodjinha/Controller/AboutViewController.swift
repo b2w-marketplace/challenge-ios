@@ -30,9 +30,9 @@ class AboutViewController: UIViewController {
     
     private func checkTitle() {
         if UIDevice.current.userInterfaceIdiom == .phone && UIDevice.current.orientation.isLandscape {
-            self.lblTitle.text = ""
+            self.lblTitle?.text = ""
         } else {
-            self.lblTitle.text = "a Lodjinha"
+            self.lblTitle?.text = "a Lodjinha"
         }
     }
 
