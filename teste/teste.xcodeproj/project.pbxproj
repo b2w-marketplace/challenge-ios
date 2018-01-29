@@ -19,6 +19,8 @@
 		FFFF4D11201B70550030B2B6 /* TopSellerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D10201B70550030B2B6 /* TopSellerTableViewController.swift */; };
 		FFFF4D16201F677F0030B2B6 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF4D15201F677F0030B2B6 /* Pacifico-Regular.ttf */; };
 		FFFF4D1D201FB9D40030B2B6 /* TopSellerCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D1C201FB9D40030B2B6 /* TopSellerCellTableViewCell.swift */; };
+		FFFF4D1F201FC8610030B2B6 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFF4D1E201FC8610030B2B6 /* CategoryView.xib */; };
+		FFFF4D21201FC9700030B2B6 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D20201FC9700030B2B6 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		FFFF4D10201B70550030B2B6 /* TopSellerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSellerTableViewController.swift; sourceTree = "<group>"; };
 		FFFF4D15201F677F0030B2B6 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pacifico-Regular.ttf"; path = "../../Pacifico/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		FFFF4D1C201FB9D40030B2B6 /* TopSellerCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSellerCellTableViewCell.swift; sourceTree = "<group>"; };
+		FFFF4D1E201FC8610030B2B6 /* CategoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
+		FFFF4D20201FC9700030B2B6 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				FFFF4D1C201FB9D40030B2B6 /* TopSellerCellTableViewCell.swift */,
+				FFFF4D1E201FC8610030B2B6 /* CategoryView.xib */,
+				FFFF4D20201FC9700030B2B6 /* CategoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 			files = (
 				FFFF4D03201B6A710030B2B6 /* LaunchScreen.storyboard in Resources */,
 				FFFF4D16201F677F0030B2B6 /* Pacifico-Regular.ttf in Resources */,
+				FFFF4D1F201FC8610030B2B6 /* CategoryView.xib in Resources */,
 				FFFF4D00201B6A710030B2B6 /* Assets.xcassets in Resources */,
 				FFFF4CFE201B6A710030B2B6 /* Main.storyboard in Resources */,
 			);
@@ -182,6 +189,7 @@
 				FFFF4D11201B70550030B2B6 /* TopSellerTableViewController.swift in Sources */,
 				FFFF4D0F201B701F0030B2B6 /* CategoryViewController.swift in Sources */,
 				FFFF4D0B201B6F0A0030B2B6 /* HomeViewController.swift in Sources */,
+				FFFF4D21201FC9700030B2B6 /* CategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,22 +51,22 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Yn-Sc-PE2">
-                                <rect key="frame" x="0.0" y="281" width="375" height="140"/>
+                                <rect key="frame" x="0.0" y="281" width="375" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="Une-0a-Q5e"/>
+                                    <constraint firstAttribute="height" constant="120" id="Une-0a-Q5e"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="Lm8-LW-qLa" kind="embed" id="Edb-ub-0pl"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5Y-WX-KEK">
-                                <rect key="frame" x="0.0" y="457.5" width="375" height="160.5"/>
+                                <rect key="frame" x="0.0" y="437.5" width="375" height="180.5"/>
                                 <connections>
                                     <segue destination="PrH-nn-CVw" kind="embed" id="sin-ei-Jcv"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mais vendidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDW-hU-I1u">
-                                <rect key="frame" x="8" y="429" width="117.5" height="21"/>
+                                <rect key="frame" x="8" y="409" width="117.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -213,11 +213,50 @@
             <objects>
                 <viewController id="Lm8-LW-qLa" customClass="CategoryViewController" customModule="teste" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NSX-zb-Qwc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.0" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CH3-cU-sQ6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJZ-Hs-enV">
+                                        <rect key="frame" x="0.0" y="0.0" width="800" height="120"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="t08-Op-IB3">
+                                                <rect key="frame" x="0.0" y="0.0" width="800" height="120"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.38217755526459068" green="0.11613976142248621" blue="0.70071581868350807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="t08-Op-IB3" firstAttribute="top" secondItem="RJZ-Hs-enV" secondAttribute="top" id="JUK-Yn-afS"/>
+                                            <constraint firstAttribute="trailing" secondItem="t08-Op-IB3" secondAttribute="trailing" id="RlP-zK-sHA"/>
+                                            <constraint firstItem="t08-Op-IB3" firstAttribute="leading" secondItem="RJZ-Hs-enV" secondAttribute="leading" id="YAu-0m-5we"/>
+                                            <constraint firstAttribute="bottom" secondItem="t08-Op-IB3" secondAttribute="bottom" id="tmi-aG-Hap"/>
+                                            <constraint firstAttribute="width" constant="800" id="z4k-TZ-oJa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.0" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RJZ-Hs-enV" secondAttribute="trailing" id="H0l-lL-De8"/>
+                                    <constraint firstItem="RJZ-Hs-enV" firstAttribute="leading" secondItem="CH3-cU-sQ6" secondAttribute="leading" id="VLZ-jO-ytg"/>
+                                    <constraint firstAttribute="bottom" secondItem="RJZ-Hs-enV" secondAttribute="bottom" id="dMD-lP-hoG"/>
+                                    <constraint firstItem="RJZ-Hs-enV" firstAttribute="top" secondItem="CH3-cU-sQ6" secondAttribute="top" id="h87-bD-3TN"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cWN-eI-wyg" firstAttribute="bottom" secondItem="CH3-cU-sQ6" secondAttribute="bottom" id="0dt-nd-dOX"/>
+                            <constraint firstItem="CH3-cU-sQ6" firstAttribute="leading" secondItem="cWN-eI-wyg" secondAttribute="leading" id="5bf-6c-XsQ"/>
+                            <constraint firstItem="RJZ-Hs-enV" firstAttribute="height" secondItem="NSX-zb-Qwc" secondAttribute="height" id="LAs-oI-SjM"/>
+                            <constraint firstItem="cWN-eI-wyg" firstAttribute="trailing" secondItem="CH3-cU-sQ6" secondAttribute="trailing" id="Xge-gA-ntT"/>
+                            <constraint firstItem="CH3-cU-sQ6" firstAttribute="top" secondItem="cWN-eI-wyg" secondAttribute="top" id="dTB-7G-G5l"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cWN-eI-wyg"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryStack" destination="t08-Op-IB3" id="lqU-yO-Z9b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odp-y8-Lmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,7 +267,7 @@
             <objects>
                 <tableViewController id="PrH-nn-CVw" customClass="TopSellerTableViewController" customModule="teste" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JR5-lP-iAH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="160.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="180.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
