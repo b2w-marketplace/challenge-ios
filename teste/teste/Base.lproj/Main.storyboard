@@ -267,39 +267,39 @@
         <scene sceneID="nQX-Mg-uSs">
             <objects>
                 <tableViewController id="PrH-nn-CVw" customClass="TopSellerTableViewController" customModule="teste" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JR5-lP-iAH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JR5-lP-iAH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="250.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopSellerCell" id="puU-i6-Hca" customClass="TopSellerCellTableViewCell" customModule="teste" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="puU-i6-Hca" id="0Jm-7G-2h2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wn3-sP-bu8">
-                                            <rect key="frame" x="8" y="4.5" width="65" height="65"/>
+                                            <rect key="frame" x="8" y="4" width="55" height="55"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="65" id="4BU-wb-bYi"/>
-                                                <constraint firstAttribute="height" constant="65" id="ijD-h0-1sG"/>
+                                                <constraint firstAttribute="width" constant="55" id="P8x-A8-hUT"/>
+                                                <constraint firstAttribute="height" constant="55" id="qqG-Z9-O3U"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do produto com uma descrição grandona" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-Ml-PtV">
-                                            <rect key="frame" x="89" y="4" width="278" height="36"/>
+                                            <rect key="frame" x="79" y="8" width="288" height="36"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De: 999,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imI-4K-dFl">
-                                            <rect key="frame" x="89" y="44" width="59" height="13.5"/>
+                                            <rect key="frame" x="79" y="48" width="59" height="13.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por: 9999,98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EU-Fx-oQD">
-                                            <rect key="frame" x="233.5" y="41" width="109.5" height="20.5"/>
+                                            <rect key="frame" x="233.5" y="45" width="109.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.96470588235294119" green="0.33333333333333331" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -312,7 +312,7 @@
                                         <constraint firstItem="wn3-sP-bu8" firstAttribute="leading" secondItem="0Jm-7G-2h2" secondAttribute="leading" constant="8" id="TGs-Yk-Hjh"/>
                                         <constraint firstAttribute="trailing" secondItem="0d8-Ml-PtV" secondAttribute="trailing" constant="8" id="jB6-uA-vI0"/>
                                         <constraint firstItem="3EU-Fx-oQD" firstAttribute="centerY" secondItem="imI-4K-dFl" secondAttribute="centerY" id="jDQ-Wb-Xq8"/>
-                                        <constraint firstItem="0d8-Ml-PtV" firstAttribute="top" secondItem="0Jm-7G-2h2" secondAttribute="top" constant="4" id="kpP-iv-7PN"/>
+                                        <constraint firstItem="0d8-Ml-PtV" firstAttribute="top" secondItem="0Jm-7G-2h2" secondAttribute="top" constant="8" id="kpP-iv-7PN"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="3EU-Fx-oQD" secondAttribute="trailing" constant="16" id="qcb-Qc-5Ub"/>
                                         <constraint firstItem="0d8-Ml-PtV" firstAttribute="leading" secondItem="wn3-sP-bu8" secondAttribute="trailing" constant="16" id="u7s-fJ-Uj4"/>
                                     </constraints>

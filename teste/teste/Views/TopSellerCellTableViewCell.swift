@@ -18,15 +18,21 @@ class TopSellerCellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: "De: 9999,99")
-        attributeString.addAttribute(NSAttributedStringKey.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
-        previousPrice.attributedText = attributeString;
+        
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureCell(_ name:String, de:Float, por:Float, imageUrl:String) {
+        self.productName.text = name
+        self.currentPrice.text = "Por: \(String(format:"%.2f",por))"
+        
+        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: "De: \(String(format:"%.2f",de))")
+        attributeString.addAttribute(NSAttributedStringKey.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+        previousPrice.attributedText = attributeString;
+        
+        if let url = URL(string:imageUrl) {
+            self.productImage.af_setImage(withURL: url)
+        }
+        
     }
 
 }
