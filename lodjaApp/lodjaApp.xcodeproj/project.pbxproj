@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9CA5E68509FEBC8E9F92C2E7 /* Pods_lodjaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1B686D69F280288D59A8D /* Pods_lodjaApp.framework */; };
+		CBF5E3ACDE9E2F67C4908874 /* Pods_lodjaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64C75FED182551A194D27C8 /* Pods_lodjaApp.framework */; };
 		FFFF4CF7201B6A710030B2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4CF6201B6A710030B2B6 /* AppDelegate.swift */; };
 		FFFF4CF9201B6A710030B2B6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4CF8201B6A710030B2B6 /* FirstViewController.swift */; };
 		FFFF4CFB201B6A710030B2B6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4CFA201B6A710030B2B6 /* SecondViewController.swift */; };
@@ -34,9 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		17F9085AD5F091023922EEB2 /* Pods-lodjaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lodjaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-lodjaApp/Pods-lodjaApp.release.xcconfig"; sourceTree = "<group>"; };
-		2CE1B686D69F280288D59A8D /* Pods_lodjaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lodjaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		79A49F8D6FB97905B5F91FDB /* Pods-lodjaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lodjaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lodjaApp/Pods-lodjaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		0A135B1FEAC0C8A01EB65C41 /* Pods-lodjaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lodjaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lodjaApp/Pods-lodjaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7D491B707B0C43B5DB810E27 /* Pods-lodjaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lodjaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-lodjaApp/Pods-lodjaApp.release.xcconfig"; sourceTree = "<group>"; };
+		E64C75FED182551A194D27C8 /* Pods_lodjaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lodjaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFF4CF3201B6A710030B2B6 /* lodjaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lodjaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFF4CF6201B6A710030B2B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFFF4CF8201B6A710030B2B6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -69,26 +69,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA5E68509FEBC8E9F92C2E7 /* Pods_lodjaApp.framework in Frameworks */,
+				CBF5E3ACDE9E2F67C4908874 /* Pods_lodjaApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		282560F6C47D051B3E199F44 /* Pods */ = {
+		8A89A6B5F236C918B95BFAE2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				79A49F8D6FB97905B5F91FDB /* Pods-lodjaApp.debug.xcconfig */,
-				17F9085AD5F091023922EEB2 /* Pods-lodjaApp.release.xcconfig */,
+				0A135B1FEAC0C8A01EB65C41 /* Pods-lodjaApp.debug.xcconfig */,
+				7D491B707B0C43B5DB810E27 /* Pods-lodjaApp.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		471039747C94BC8EFB42F117 /* Frameworks */ = {
+		DD7FEBF8EA56104B73B769D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2CE1B686D69F280288D59A8D /* Pods_lodjaApp.framework */,
+				E64C75FED182551A194D27C8 /* Pods_lodjaApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,10 +112,10 @@
 			isa = PBXGroup;
 			children = (
 				FFFF4D14201F67680030B2B6 /* Resources */,
-				FFFF4CF5201B6A710030B2B6 /* teste */,
+				FFFF4CF5201B6A710030B2B6 /* lodjaApp */,
 				FFFF4CF4201B6A710030B2B6 /* Products */,
-				282560F6C47D051B3E199F44 /* Pods */,
-				471039747C94BC8EFB42F117 /* Frameworks */,
+				8A89A6B5F236C918B95BFAE2 /* Pods */,
+				DD7FEBF8EA56104B73B769D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,7 +127,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FFFF4CF5201B6A710030B2B6 /* teste */ = {
+		FFFF4CF5201B6A710030B2B6 /* lodjaApp */ = {
 			isa = PBXGroup;
 			children = (
 				FFA4A1F02020E0F200E7473A /* ViewControllers */,
@@ -141,7 +141,7 @@
 				FFFF4D25201FD5D20030B2B6 /* URLConstants.swift */,
 				FFFF4D2B20200EF50030B2B6 /* Extensions.swift */,
 			);
-			path = teste;
+			path = lodjaApp;
 			sourceTree = "<group>";
 		};
 		FFFF4D14201F67680030B2B6 /* Resources */ = {
@@ -181,12 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFFF4D07201B6A710030B2B6 /* Build configuration list for PBXNativeTarget "lodjaApp" */;
 			buildPhases = (
-				02CFAF7DD577B9EF8677BFFE /* [CP] Check Pods Manifest.lock */,
+				D266E325CB04FBBF0CD5AD26 /* [CP] Check Pods Manifest.lock */,
 				FFFF4CEF201B6A710030B2B6 /* Sources */,
 				FFFF4CF0201B6A710030B2B6 /* Frameworks */,
 				FFFF4CF1201B6A710030B2B6 /* Resources */,
-				BBF89E255BD020D87153E0F9 /* [CP] Embed Pods Frameworks */,
-				4358410C1551043EC450573F /* [CP] Copy Pods Resources */,
+				A5555341153F011CDD3D5C28 /* [CP] Embed Pods Frameworks */,
+				9871F50D91CE9954E65B245A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,25 +248,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		02CFAF7DD577B9EF8677BFFE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-lodjaApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4358410C1551043EC450573F /* [CP] Copy Pods Resources */ = {
+		9871F50D91CE9954E65B245A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,7 +263,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lodjaApp/Pods-lodjaApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BBF89E255BD020D87153E0F9 /* [CP] Embed Pods Frameworks */ = {
+		A5555341153F011CDD3D5C28 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,6 +287,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lodjaApp/Pods-lodjaApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D266E325CB04FBBF0CD5AD26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lodjaApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -465,16 +465,18 @@
 		};
 		FFFF4D08201B6A710030B2B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79A49F8D6FB97905B5F91FDB /* Pods-lodjaApp.debug.xcconfig */;
+			baseConfigurationReference = 0A135B1FEAC0C8A01EB65C41 /* Pods-lodjaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 79YSD73QFY;
-				INFOPLIST_FILE = teste/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/lodjaApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.romarangoni.lodjaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -482,16 +484,18 @@
 		};
 		FFFF4D09201B6A710030B2B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17F9085AD5F091023922EEB2 /* Pods-lodjaApp.release.xcconfig */;
+			baseConfigurationReference = 7D491B707B0C43B5DB810E27 /* Pods-lodjaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 79YSD73QFY;
-				INFOPLIST_FILE = teste/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/lodjaApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.romarangoni.lodjaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
