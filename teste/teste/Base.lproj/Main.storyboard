@@ -122,7 +122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rodrigo Marangoni" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="121.5" y="562.5" width="131" height="17"/>
+                                <rect key="frame" x="122.5" y="562.5" width="131" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -141,7 +141,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="a Lodjinha" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="49" y="299.5" width="278" height="70"/>
+                                <rect key="frame" x="49.5" y="299" width="278" height="70"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="60"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -201,6 +201,12 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QYP-9E-dr8">
                                 <rect key="frame" x="168" y="75" width="39" height="37"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gT-vb-FlQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                <connections>
+                                    <action selector="clickBanner:" destination="xUb-Tk-kwN" eventType="touchUpInside" id="zLY-Zi-yUH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -209,7 +215,11 @@
                             <constraint firstItem="ojB-0Z-YYT" firstAttribute="bottom" secondItem="iw4-6h-hRF" secondAttribute="bottom" id="b60-Wt-iSg"/>
                             <constraint firstItem="iw4-6h-hRF" firstAttribute="top" secondItem="ojB-0Z-YYT" secondAttribute="top" id="oBY-eH-PMA"/>
                             <constraint firstItem="QYP-9E-dr8" firstAttribute="centerX" secondItem="jVK-zx-0Tw" secondAttribute="centerX" id="p2p-FU-VB0"/>
+                            <constraint firstItem="1gT-vb-FlQ" firstAttribute="leading" secondItem="ojB-0Z-YYT" secondAttribute="leading" id="pSs-qN-7LG"/>
+                            <constraint firstItem="ojB-0Z-YYT" firstAttribute="bottom" secondItem="1gT-vb-FlQ" secondAttribute="bottom" id="udY-gz-Itx"/>
+                            <constraint firstItem="1gT-vb-FlQ" firstAttribute="top" secondItem="ojB-0Z-YYT" secondAttribute="top" id="vd0-OK-ksu"/>
                             <constraint firstItem="QYP-9E-dr8" firstAttribute="bottom" secondItem="ojB-0Z-YYT" secondAttribute="bottom" constant="2" id="was-fh-zqC"/>
+                            <constraint firstItem="1gT-vb-FlQ" firstAttribute="trailing" secondItem="ojB-0Z-YYT" secondAttribute="trailing" id="zqO-QM-B8H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ojB-0Z-YYT"/>
                         <connections>

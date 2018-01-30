@@ -33,6 +33,12 @@ class BannerViewController: UIViewController {
         self.setupBanner()
     }
     
+    @IBAction func clickBanner(_ sender: Any) {
+        if let url = URL(string: self.banners[self.pageControl.currentPage].linkUrl!) {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
     func getBanners() {
         Alamofire.request(APPURL.GetBanners, method: .get).validate().responseObject { (response:DataResponse<BannerData>) in
             switch response.result {
