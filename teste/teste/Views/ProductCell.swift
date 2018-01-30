@@ -1,6 +1,6 @@
 //
 //  ProductCell.swift
-//  teste
+//  lodjaApp
 //
 //  Created by Rodrigo Marangoni on 29/01/18.
 //  Copyright © 2018 romarangoni. All rights reserved.
@@ -30,7 +30,7 @@ class ProductCell: UITableViewCell {
         if let url = URL(string:product.urlImage!) {
             self.productImage.af_setImage(withURL: url)
         }
-        
+        self.accessoryType = .disclosureIndicator
     }
 
 }

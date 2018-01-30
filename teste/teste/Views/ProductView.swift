@@ -1,6 +1,6 @@
 //
 //  ProductView.swift
-//  teste
+//  lodjaApp
 //
 //  Created by Rodrigo Marangoni on 30/01/18.
 //  Copyright © 2018 romarangoni. All rights reserved.
@@ -30,8 +30,6 @@ class ProductView: UIView {
     
     func setDescription(_ description: String?) {
         do {
-            //var attrs: NSDictionary? = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 19.0)]
-
             let attrStr = try NSAttributedString(
                 data: (description?.data(using: String.Encoding.unicode, allowLossyConversion: true))!,
                 options: [.documentType: NSAttributedString.DocumentType.html],

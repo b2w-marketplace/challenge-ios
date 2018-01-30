@@ -1,6 +1,6 @@
 //
 //  BannerViewController.swift
-//  teste
+//  lodjaApp
 //
 //  Created by Rodrigo Marangoni on 26/01/18.
 //  Copyright © 2018 romarangoni. All rights reserved.
@@ -19,6 +19,7 @@ class BannerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.shadows()
         self.pageControl.numberOfPages = 0;
         self.getBanners()
 
@@ -44,6 +45,14 @@ class BannerViewController: UIViewController {
                 UIApplication.shared.openURL(url)
             }
         }
+    }
+    func shadows() {
+        //Shadow
+        self.view?.layer.shadowColor = UIColor.black.cgColor
+        self.view?.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        self.view?.layer.shadowRadius = 4.0
+        self.view?.layer.shadowOpacity = 0.9
+        self.view?.layer.masksToBounds = false
     }
     
     func getBanners() {

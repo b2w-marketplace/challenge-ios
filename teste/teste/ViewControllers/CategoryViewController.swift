@@ -1,6 +1,6 @@
 //
 //  CategoryViewController.swift
-//  teste
+//  lodjaApp
 //
 //  Created by Rodrigo Marangoni on 26/01/18.
 //  Copyright © 2018 romarangoni. All rights reserved.
@@ -19,7 +19,6 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getCategories()
-        
     }
     
     func configCategories() {
@@ -58,8 +57,5 @@ class CategoryViewController: UIViewController {
             dest.categoryID = sender as! Int
         }
     }
-    
-    
-    
 
 }

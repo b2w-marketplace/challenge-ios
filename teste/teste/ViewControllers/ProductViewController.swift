@@ -1,6 +1,6 @@
 //
 //  ProductViewController.swift
-//  teste
+//  lodjaApp
 //
 //  Created by Rodrigo Marangoni on 29/01/18.
 //  Copyright © 2018 romarangoni. All rights reserved.
@@ -18,7 +18,6 @@ class ProductViewController: UIViewController {
         super.viewDidLoad()
         self.productView.configure(self.product)
         self.title = self.product.nome
-
     }
     
     @IBAction func doReserve(_ sender: Any) {

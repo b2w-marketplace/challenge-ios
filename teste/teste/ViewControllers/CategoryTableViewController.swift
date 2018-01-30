@@ -1,6 +1,6 @@
 //
 //  CategoryTableViewController.swift
-//  teste
+//  lodjaApp
 //
 //  Created by Rodrigo Marangoni on 30/01/18.
 //  Copyright © 2018 romarangoni. All rights reserved.
@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireObjectMapper
+import MBProgressHUD
 
 class CategoryTableViewController: UITableViewController {
     var produtos: Array<Product> = []
@@ -18,14 +19,11 @@ class CategoryTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.tableFooterView = UIView()
         
         self.getCategoryProducts(offset: self.currentOffset)
         self.tableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
-
     }
-
 
     // MARK: - Table view data source
 
@@ -62,6 +60,7 @@ class CategoryTableViewController: UITableViewController {
     }
     
     func getCategoryProducts(offset: Int) {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         let categoryURL = "\(APPURL.GetProduto)?offset=\(offset)&limit=\(String(self.pageSize))&categoriaId=\(String(self.categoryID))"
         
         Alamofire.request(categoryURL, method: .get).validate().responseObject { (response: DataResponse<ProductData>) in
@@ -75,6 +74,7 @@ class CategoryTableViewController: UITableViewController {
             case .failure(let error):
                 print(error)
             }
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
 }
