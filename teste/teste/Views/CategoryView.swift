@@ -14,9 +14,9 @@ class CategoryView: UIView {
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryName: UILabel!
     
-    func configureView(_ name: String, catImage: String) {
+    func configureView(_ name: String?, catImage: String?) {
         self.categoryName.text = name;
-        if let url = URL(string:catImage) {
+        if let url = URL(string:catImage!) {
             self.categoryImage.af_setImage(withURL: url)
         }
     }

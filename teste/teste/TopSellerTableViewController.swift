@@ -8,12 +8,12 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import AlamofireImage
+import AlamofireObjectMapper
 
 class TopSellerTableViewController: UITableViewController {
     
-    private var produtos: Array<JSON>!
+    private var produtos: Array<Product>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,6 @@ class TopSellerTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -45,22 +44,27 @@ class TopSellerTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TopSellerCell", for: indexPath) as! TopSellerCellTableViewCell
         let product = self.produtos[indexPath.row]
         
-        
-        cell.configureCell(product["nome"].stringValue, de: product["precoDe"].floatValue, por: product["precoPor"].floatValue, imageUrl: product["urlImagem"].stringValue)
+        cell.configureCell(product)
         
         return cell
     }
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        print("Selected cell: %d\n",indexPath.row);
+        self.performSegue(withIdentifier: "pushToProduct", sender: self.produtos[indexPath.row])
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pushToProduct" {
+            let dest = segue.destination as! ProductViewController
+            dest.product = sender as! Product
+        }
+    }
+    
     func getTopProducts() {
-        Alamofire.request(APPURL.GetMaisVendidos, method: .get).validate().responseJSON { response in
+        Alamofire.request(APPURL.GetMaisVendidos, method: .get).validate().responseObject { (response: DataResponse<ProductData>) in
             switch response.result {
             case .success(let value):
-                let jsonData = JSON(value)
-                self.produtos = jsonData["data"].arrayValue
+                self.produtos = value.data
                 self.tableView.reloadData()
                 print("JSON: \(self.produtos)")
             case .failure(let error):

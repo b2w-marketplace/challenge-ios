@@ -21,15 +21,13 @@ class TopSellerCellTableViewCell: UITableViewCell {
         
     }
 
-    func configureCell(_ name:String, de:Float, por:Float, imageUrl:String) {
-        self.productName.text = name
-        self.currentPrice.text = "Por: \(String(format:"%.2f",por))"
+    func configureCell(_ product: Product) {
+        self.productName.text = product.nome
         
-        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: "De: \(String(format:"%.2f",de))")
-        attributeString.addAttribute(NSAttributedStringKey.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
-        previousPrice.attributedText = attributeString;
+        self.currentPrice.text = "Por: \(String(format:"%.2f",product.precoPor!))"
+        self.previousPrice.setScratchedText("De: \(String(format:"%.2f",product.precoDe!))")
         
-        if let url = URL(string:imageUrl) {
+        if let url = URL(string:product.urlImage!) {
             self.productImage.af_setImage(withURL: url)
         }
         
