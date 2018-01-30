@@ -7,44 +7,41 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+import SwiftyJSON
 
 class CategoryViewController: UIViewController {
 
     @IBOutlet weak var categoryStack: UIStackView!
+    private var categories: Array<JSON>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let category1 = UINib(nibName: "CategoryView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CategoryView
-        let category2 = UINib(nibName: "CategoryView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CategoryView
-        let category3 = UINib(nibName: "CategoryView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CategoryView
-        let category4 = UINib(nibName: "CategoryView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CategoryView
-        let category5 = UINib(nibName: "CategoryView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CategoryView
-        
-        self.categoryStack.addArrangedSubview(category1)
-        self.categoryStack.addArrangedSubview(category2)
-        self.categoryStack.addArrangedSubview(category3)
-        self.categoryStack.addArrangedSubview(category4)
-        self.categoryStack.addArrangedSubview(category5)
-        
-        
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.getCategories()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func configCategories() {
+        for cat in self.categories {
+            let categoryView = UINib(nibName: "CategoryView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CategoryView
+            categoryView.configureView(cat["descricao"].stringValue, catImage: cat["urlImagem"].stringValue)
+            self.categoryStack.addArrangedSubview(categoryView)
+        }
     }
-    */
+    
+    func getCategories() {
+        Alamofire.request(APPURL.GetCategories, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let jsonData = JSON(value)
+                self.categories = jsonData["data"].arrayValue
+                self.configCategories()
+                print("JSON: \(self.categories)")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
 
 }
