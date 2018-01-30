@@ -19,7 +19,7 @@
 		FFFF4D0F201B701F0030B2B6 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D0E201B701F0030B2B6 /* CategoryViewController.swift */; };
 		FFFF4D11201B70550030B2B6 /* TopSellerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D10201B70550030B2B6 /* TopSellerTableViewController.swift */; };
 		FFFF4D16201F677F0030B2B6 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFF4D15201F677F0030B2B6 /* Pacifico-Regular.ttf */; };
-		FFFF4D1D201FB9D40030B2B6 /* TopSellerCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D1C201FB9D40030B2B6 /* TopSellerCellTableViewCell.swift */; };
+		FFFF4D1D201FB9D40030B2B6 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D1C201FB9D40030B2B6 /* ProductCell.swift */; };
 		FFFF4D1F201FC8610030B2B6 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFF4D1E201FC8610030B2B6 /* CategoryView.xib */; };
 		FFFF4D21201FC9700030B2B6 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D20201FC9700030B2B6 /* CategoryView.swift */; };
 		FFFF4D26201FD5D20030B2B6 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D25201FD5D20030B2B6 /* URLConstants.swift */; };
@@ -28,6 +28,8 @@
 		FFFF4D2C20200EF50030B2B6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D2B20200EF50030B2B6 /* Extensions.swift */; };
 		FFFF4D2F202014510030B2B6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D2E202014510030B2B6 /* Product.swift */; };
 		FFFF4D31202015F00030B2B6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D30202015F00030B2B6 /* Category.swift */; };
+		FFFF4D3320209FCC0030B2B6 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D3220209FCC0030B2B6 /* CategoryTableViewController.swift */; };
+		FFFF4D352020A36F0030B2B6 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFF4D342020A36F0030B2B6 /* ProductCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +49,7 @@
 		FFFF4D0E201B701F0030B2B6 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FFFF4D10201B70550030B2B6 /* TopSellerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSellerTableViewController.swift; sourceTree = "<group>"; };
 		FFFF4D15201F677F0030B2B6 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pacifico-Regular.ttf"; path = "../../Pacifico/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
-		FFFF4D1C201FB9D40030B2B6 /* TopSellerCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSellerCellTableViewCell.swift; sourceTree = "<group>"; };
+		FFFF4D1C201FB9D40030B2B6 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		FFFF4D1E201FC8610030B2B6 /* CategoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
 		FFFF4D20201FC9700030B2B6 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		FFFF4D25201FD5D20030B2B6 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
@@ -56,6 +58,8 @@
 		FFFF4D2B20200EF50030B2B6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FFFF4D2E202014510030B2B6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FFFF4D30202015F00030B2B6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FFFF4D3220209FCC0030B2B6 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		FFFF4D342020A36F0030B2B6 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 				FFFF4D25201FD5D20030B2B6 /* URLConstants.swift */,
 				FFFF4D27202007B20030B2B6 /* ProductViewController.swift */,
 				FFFF4D2B20200EF50030B2B6 /* Extensions.swift */,
+				FFFF4D3220209FCC0030B2B6 /* CategoryTableViewController.swift */,
 			);
 			path = teste;
 			sourceTree = "<group>";
@@ -140,10 +145,11 @@
 		FFFF4D17201FB8330030B2B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FFFF4D1C201FB9D40030B2B6 /* TopSellerCellTableViewCell.swift */,
+				FFFF4D1C201FB9D40030B2B6 /* ProductCell.swift */,
 				FFFF4D1E201FC8610030B2B6 /* CategoryView.xib */,
 				FFFF4D20201FC9700030B2B6 /* CategoryView.swift */,
 				FFFF4D2920200BFF0030B2B6 /* ProductView.swift */,
+				FFFF4D342020A36F0030B2B6 /* ProductCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 				FFFF4D03201B6A710030B2B6 /* LaunchScreen.storyboard in Resources */,
 				FFFF4D16201F677F0030B2B6 /* Pacifico-Regular.ttf in Resources */,
 				FFFF4D1F201FC8610030B2B6 /* CategoryView.xib in Resources */,
+				FFFF4D352020A36F0030B2B6 /* ProductCell.xib in Resources */,
 				FFFF4D00201B6A710030B2B6 /* Assets.xcassets in Resources */,
 				FFFF4CFE201B6A710030B2B6 /* Main.storyboard in Resources */,
 			);
@@ -297,9 +304,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFFF4D1D201FB9D40030B2B6 /* TopSellerCellTableViewCell.swift in Sources */,
+				FFFF4D1D201FB9D40030B2B6 /* ProductCell.swift in Sources */,
 				FFFF4D0D201B700C0030B2B6 /* BannerViewController.swift in Sources */,
 				FFFF4CFB201B6A710030B2B6 /* SecondViewController.swift in Sources */,
+				FFFF4D3320209FCC0030B2B6 /* CategoryTableViewController.swift in Sources */,
 				FFFF4D28202007B20030B2B6 /* ProductViewController.swift in Sources */,
 				FFFF4D2A20200BFF0030B2B6 /* ProductView.swift in Sources */,
 				FFFF4CF7201B6A710030B2B6 /* AppDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  TopSellerCellTableViewCell.swift
+//  ProductCell.swift
 //  teste
 //
 //  Created by Rodrigo Marangoni on 29/01/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TopSellerCellTableViewCell: UITableViewCell {
+class ProductCell: UITableViewCell {
 
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var currentPrice: UILabel!

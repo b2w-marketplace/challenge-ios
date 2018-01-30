@@ -30,12 +30,19 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zig-yt-bd5">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="zig-yt-bd5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3TE-Jz-gtX"/>
+                <constraint firstAttribute="bottom" secondItem="zig-yt-bd5" secondAttribute="bottom" id="MEX-Fx-vHf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Wk8-oS-ynE" secondAttribute="trailing" constant="4" id="Mei-Tu-RBp"/>
                 <constraint firstItem="Wk8-oS-ynE" firstAttribute="top" secondItem="L9v-QI-oIB" secondAttribute="bottom" constant="4" id="NJc-mi-V1H"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zig-yt-bd5" secondAttribute="trailing" id="Zea-du-4VN"/>
                 <constraint firstItem="Wk8-oS-ynE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="bBQ-W7-eTF"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Wk8-oS-ynE" secondAttribute="bottom" constant="8" id="gbf-Ug-BL8"/>
+                <constraint firstItem="zig-yt-bd5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="meg-X7-xHO"/>
                 <constraint firstItem="Wk8-oS-ynE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sa1-tl-bhR"/>
                 <constraint firstItem="L9v-QI-oIB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="u2l-RM-bB4"/>
                 <constraint firstItem="L9v-QI-oIB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vxd-b2-kuO"/>
@@ -45,6 +52,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="categoryButton" destination="zig-yt-bd5" id="pO6-8R-E4G"/>
                 <outlet property="categoryImage" destination="L9v-QI-oIB" id="TAL-Oc-brW"/>
                 <outlet property="categoryName" destination="Wk8-oS-ynE" id="RC2-Yx-XIh"/>
             </connections>

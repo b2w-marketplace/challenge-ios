@@ -19,12 +19,16 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getCategories()
+        
     }
     
     func configCategories() {
         for cat in self.categories {
             let categoryView = UINib(nibName: "CategoryView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CategoryView
             categoryView.configureView(cat.descricao, catImage: cat.urlImage)
+            categoryView.categoryButton.tag = cat.catId!
+            categoryView.categoryButton.addTarget(self, action: #selector(pressButton(_:)), for: .touchUpInside)
+            
             self.categoryStack.addArrangedSubview(categoryView)
         }
     }
@@ -42,6 +46,20 @@ class CategoryViewController: UIViewController {
             }
         }
     }
+    
+    @objc func pressButton(_ button: UIButton) {
+        self.performSegue(withIdentifier: "pushToCategory", sender: button.tag)
+        print("Button with tag: \(button.tag) clicked!")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pushToCategory" {
+            let dest = segue.destination as! CategoryTableViewController
+            dest.categoryID = sender as! Int
+        }
+    }
+    
+    
     
 
 }

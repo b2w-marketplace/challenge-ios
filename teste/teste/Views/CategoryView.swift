@@ -13,6 +13,7 @@ class CategoryView: UIView {
 
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryName: UILabel!
+    @IBOutlet weak var categoryButton: UIButton!
     
     func configureView(_ name: String?, catImage: String?) {
         self.categoryName.text = name;
