@@ -30,6 +30,7 @@
 		FFFF4D31202015F00030B2B6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D30202015F00030B2B6 /* Category.swift */; };
 		FFFF4D3320209FCC0030B2B6 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D3220209FCC0030B2B6 /* CategoryTableViewController.swift */; };
 		FFFF4D352020A36F0030B2B6 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFF4D342020A36F0030B2B6 /* ProductCell.xib */; };
+		FFFF4D372020AD950030B2B6 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFF4D362020AD950030B2B6 /* Banner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		FFFF4D30202015F00030B2B6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FFFF4D3220209FCC0030B2B6 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		FFFF4D342020A36F0030B2B6 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		FFFF4D362020AD950030B2B6 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				FFFF4D2E202014510030B2B6 /* Product.swift */,
 				FFFF4D30202015F00030B2B6 /* Category.swift */,
+				FFFF4D362020AD950030B2B6 /* Banner.swift */,
 			);
 			name = Model;
 			path = "New Group";
@@ -281,16 +284,16 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -318,6 +321,7 @@
 				FFFF4D26201FD5D20030B2B6 /* URLConstants.swift in Sources */,
 				FFFF4D31202015F00030B2B6 /* Category.swift in Sources */,
 				FFFF4D0B201B6F0A0030B2B6 /* HomeViewController.swift in Sources */,
+				FFFF4D372020AD950030B2B6 /* Banner.swift in Sources */,
 				FFFF4D21201FC9700030B2B6 /* CategoryView.swift in Sources */,
 				FFFF4D2F202014510030B2B6 /* Product.swift in Sources */,
 			);

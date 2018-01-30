@@ -69,6 +69,7 @@ class CategoryTableViewController: UITableViewController {
             case .success(let value):
                 self.produtos.append(contentsOf: value.data!)
                 self.currentOffset += self.pageSize
+                self.title = self.produtos.first?.category?.descricao
                 self.tableView.reloadData()
                 print("JSON: \(self.produtos)")
             case .failure(let error):

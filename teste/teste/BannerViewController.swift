@@ -9,13 +9,13 @@
 import UIKit
 import Alamofire
 import AlamofireImage
-import SwiftyJSON
+import AlamofireObjectMapper
 
 class BannerViewController: UIViewController {
 
     @IBOutlet weak var bannerImage: UIImageView!
     @IBOutlet weak var pageControl: UIPageControl!
-    private var banners: Array<JSON>!
+    private var banners: Array<Banner> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +34,10 @@ class BannerViewController: UIViewController {
     }
     
     func getBanners() {
-        Alamofire.request(APPURL.GetBanners, method: .get).validate().responseJSON { response in
+        Alamofire.request(APPURL.GetBanners, method: .get).validate().responseObject { (response:DataResponse<BannerData>) in
             switch response.result {
             case .success(let value):
-                let jsonData = JSON(value)
-                self.banners = jsonData["data"].arrayValue
+                self.banners.append(contentsOf: value.data!)
                 self.pageControl.numberOfPages = self.banners.count
                 self.setupBanner()
                 
@@ -50,7 +49,7 @@ class BannerViewController: UIViewController {
     }
     
     func setupBanner() {
-        if let urlImagem = URL(string: self.banners[self.pageControl.currentPage]["urlImagem"].stringValue) {
+        if let urlImagem = URL(string: self.banners[self.pageControl.currentPage].urlImage!) {
             self.bannerImage.af_setImage(withURL: urlImagem)
         }
         

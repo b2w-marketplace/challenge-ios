@@ -15,6 +15,7 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.productView.configure(self.product)
+        self.title = self.product.nome
 
     }
     @IBAction func doReserve(_ sender: Any) {
