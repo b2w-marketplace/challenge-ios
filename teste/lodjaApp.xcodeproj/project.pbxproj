@@ -37,7 +37,7 @@
 		75A36011DADC2993DEBE6953 /* Pods_teste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB4849DEF0346E8A7910500 /* Pods-teste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste.release.xcconfig"; path = "Pods/Target Support Files/Pods-teste/Pods-teste.release.xcconfig"; sourceTree = "<group>"; };
 		CE2F7A0614FBAA1ECF3516A4 /* Pods-teste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teste.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teste/Pods-teste.debug.xcconfig"; sourceTree = "<group>"; };
-		FFFF4CF3201B6A710030B2B6 /* teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFFF4CF3201B6A710030B2B6 /* lodjaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lodjaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFF4CF6201B6A710030B2B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFFF4CF8201B6A710030B2B6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		FFFF4CFA201B6A710030B2B6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +93,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FFA4A1F02020E0F200E7473A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFFF4CF8201B6A710030B2B6 /* FirstViewController.swift */,
+				FFFF4CFA201B6A710030B2B6 /* SecondViewController.swift */,
+				FFFF4D0A201B6F0A0030B2B6 /* HomeViewController.swift */,
+				FFFF4D0C201B700C0030B2B6 /* BannerViewController.swift */,
+				FFFF4D0E201B701F0030B2B6 /* CategoryViewController.swift */,
+				FFFF4D10201B70550030B2B6 /* TopSellerTableViewController.swift */,
+				FFFF4D27202007B20030B2B6 /* ProductViewController.swift */,
+				FFFF4D3220209FCC0030B2B6 /* CategoryTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		FFFF4CEA201B6A710030B2B6 = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +122,7 @@
 		FFFF4CF4201B6A710030B2B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FFFF4CF3201B6A710030B2B6 /* teste.app */,
+				FFFF4CF3201B6A710030B2B6 /* lodjaApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,23 +130,16 @@
 		FFFF4CF5201B6A710030B2B6 /* teste */ = {
 			isa = PBXGroup;
 			children = (
+				FFA4A1F02020E0F200E7473A /* ViewControllers */,
 				FFFF4D2D202014360030B2B6 /* Model */,
 				FFFF4D17201FB8330030B2B6 /* Views */,
 				FFFF4CF6201B6A710030B2B6 /* AppDelegate.swift */,
-				FFFF4CF8201B6A710030B2B6 /* FirstViewController.swift */,
-				FFFF4CFA201B6A710030B2B6 /* SecondViewController.swift */,
 				FFFF4CFC201B6A710030B2B6 /* Main.storyboard */,
 				FFFF4CFF201B6A710030B2B6 /* Assets.xcassets */,
 				FFFF4D01201B6A710030B2B6 /* LaunchScreen.storyboard */,
 				FFFF4D04201B6A710030B2B6 /* Info.plist */,
-				FFFF4D0A201B6F0A0030B2B6 /* HomeViewController.swift */,
-				FFFF4D0C201B700C0030B2B6 /* BannerViewController.swift */,
-				FFFF4D0E201B701F0030B2B6 /* CategoryViewController.swift */,
-				FFFF4D10201B70550030B2B6 /* TopSellerTableViewController.swift */,
 				FFFF4D25201FD5D20030B2B6 /* URLConstants.swift */,
-				FFFF4D27202007B20030B2B6 /* ProductViewController.swift */,
 				FFFF4D2B20200EF50030B2B6 /* Extensions.swift */,
-				FFFF4D3220209FCC0030B2B6 /* CategoryTableViewController.swift */,
 			);
 			path = teste;
 			sourceTree = "<group>";
@@ -170,9 +178,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FFFF4CF2201B6A710030B2B6 /* teste */ = {
+		FFFF4CF2201B6A710030B2B6 /* lodjaApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FFFF4D07201B6A710030B2B6 /* Build configuration list for PBXNativeTarget "teste" */;
+			buildConfigurationList = FFFF4D07201B6A710030B2B6 /* Build configuration list for PBXNativeTarget "lodjaApp" */;
 			buildPhases = (
 				76B0D0D4CFEBE2A85987C64B /* [CP] Check Pods Manifest.lock */,
 				FFFF4CEF201B6A710030B2B6 /* Sources */,
@@ -185,9 +193,9 @@
 			);
 			dependencies = (
 			);
-			name = teste;
+			name = lodjaApp;
 			productName = teste;
-			productReference = FFFF4CF3201B6A710030B2B6 /* teste.app */;
+			productReference = FFFF4CF3201B6A710030B2B6 /* lodjaApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FFFF4CEE201B6A710030B2B6 /* Build configuration list for PBXProject "teste" */;
+			buildConfigurationList = FFFF4CEE201B6A710030B2B6 /* Build configuration list for PBXProject "lodjaApp" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,7 +227,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FFFF4CF2201B6A710030B2B6 /* teste */,
+				FFFF4CF2201B6A710030B2B6 /* lodjaApp */,
 			);
 		};
 /* End PBXProject section */
@@ -466,7 +474,7 @@
 				INFOPLIST_FILE = teste/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.romarangoni.teste;
+				PRODUCT_BUNDLE_IDENTIFIER = com.romarangoni.lodjaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,7 +491,7 @@
 				INFOPLIST_FILE = teste/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.romarangoni.teste;
+				PRODUCT_BUNDLE_IDENTIFIER = com.romarangoni.lodjaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -493,7 +501,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FFFF4CEE201B6A710030B2B6 /* Build configuration list for PBXProject "teste" */ = {
+		FFFF4CEE201B6A710030B2B6 /* Build configuration list for PBXProject "lodjaApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FFFF4D05201B6A710030B2B6 /* Debug */,
@@ -502,7 +510,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FFFF4D07201B6A710030B2B6 /* Build configuration list for PBXNativeTarget "teste" */ = {
+		FFFF4D07201B6A710030B2B6 /* Build configuration list for PBXNativeTarget "lodjaApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FFFF4D08201B6A710030B2B6 /* Debug */,

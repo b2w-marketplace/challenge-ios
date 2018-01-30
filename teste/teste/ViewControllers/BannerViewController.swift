@@ -19,23 +19,30 @@ class BannerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pageControl.numberOfPages = 0;
         self.getBanners()
-        
+
         // Do any additional setup after loading the view.
     }
 
     @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
-        self.pageControl.currentPage-=1;
-        self.setupBanner()
+        if self.pageControl.numberOfPages > 0 {
+            self.pageControl.currentPage-=1;
+            self.setupBanner()
+        }
     }
     @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
-        self.pageControl.currentPage+=1;
-        self.setupBanner()
+        if self.pageControl.numberOfPages > 0 {
+            self.pageControl.currentPage+=1;
+            self.setupBanner()
+        }
     }
     
     @IBAction func clickBanner(_ sender: Any) {
-        if let url = URL(string: self.banners[self.pageControl.currentPage].linkUrl!) {
-            UIApplication.shared.openURL(url)
+        if self.pageControl.numberOfPages > 0 {
+            if let url = URL(string: self.banners[self.pageControl.currentPage].linkUrl!) {
+                UIApplication.shared.openURL(url)
+            }
         }
     }
     
