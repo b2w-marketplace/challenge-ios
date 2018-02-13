@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Kingfisher (4.2.0)
+  - Nimble (7.0.2)
+  - Quick (1.2.0)
+  - SwiftyJSON (3.1.4)
+  - UIScrollView-InfiniteScroll (1.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - Nimble
+  - Quick
+  - SwiftyJSON
+  - UIScrollView-InfiniteScroll
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
+  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  UIScrollView-InfiniteScroll: c132d6d5851daff229ab4a1060ccf70a05a051c9
+
+PODFILE CHECKSUM: 677bc1c5154b064ec3903abe8250e355cb3a7332
+
+COCOAPODS: 1.4.0
