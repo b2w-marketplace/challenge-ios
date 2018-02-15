@@ -26,6 +26,6 @@ class Category: NSObject
     {
         id = dataJSON["id"].intValue
         strDescription = dataJSON["descricao"].stringValue
-        image = ElementImage(dataJSON: dataJSON["urlImagem"])
+        image = ElementImage(dataJSON: dataJSON)
     }
 }

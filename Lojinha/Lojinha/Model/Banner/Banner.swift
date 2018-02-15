@@ -25,6 +25,6 @@ class Banner: NSObject
     {
         id = dataJSON["id"].intValue
         linkURL = dataJSON["linkUrl"].stringValue
-        image = ElementImage(dataJSON: dataJSON["urlImagem"])
+        image = ElementImage(dataJSON: dataJSON)
     }
 }

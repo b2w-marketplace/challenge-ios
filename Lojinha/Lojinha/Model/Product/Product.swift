@@ -35,7 +35,7 @@ class Product: NSObject
         id = dataJSON["id"].intValue
         name = dataJSON["nome"].stringValue
         strDescription = dataJSON["descricao"].stringValue
-        image = ElementImage(dataJSON: dataJSON["urlImagem"])
+        image = ElementImage(dataJSON: dataJSON)
         priceOld = dataJSON["precoDe"].doubleValue
         priceNew = dataJSON["precoPor"].doubleValue
         category = Category(dataJSON: dataJSON["categoria"])
