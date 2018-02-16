@@ -12,12 +12,14 @@ extension UIViewController
 {
     func configTitle(title: String)
     {
-        self.title = title
+        let attributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 17)]
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        self.navigationItem.title = title
     }
     
     func setTitleWithCustomFont(title: String)
     {
-        let attributes = [NSAttributedStringKey.font: UIFont(name: "Pacifico-Regular", size: 17)!]
+        let attributes = [NSAttributedStringKey.font: UIFont(name: "Pacifico-Regular", size: 24)!]
         UINavigationBar.appearance().titleTextAttributes = attributes
         self.navigationItem.title = title
     }

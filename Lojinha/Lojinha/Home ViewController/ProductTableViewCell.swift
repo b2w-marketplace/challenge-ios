@@ -17,7 +17,7 @@ class ProductTableViewCell: UITableViewCell
         {
             if let product = product
             {
-                let text = product.name + "\n\n" + product.strDescription
+                let text = product.name + "<br/><br/>" + product.strDescription
                 setDescription(text: text)
                 setOldPriceLabel(price: product.priceOld)
                 setNewPriceLabel(price: product.priceNew)
@@ -49,17 +49,18 @@ class ProductTableViewCell: UITableViewCell
     
     private func setDescription(text: String)
     {
-        productDescriptionLabel.text = text
+        productDescriptionLabel.attributedText = text.html2AttributedString
     }
     
     private func setOldPriceLabel(price: Double)
     {
-        productOldPriceLabel.text = String(price)
+        let text = "De " + String(format: "%.2f", price)
+        productOldPriceLabel.attributedText = text.textMiddleLine()
     }
     
     private func setNewPriceLabel(price: Double)
     {
-        productNewPriceLabel.text = String(price)
+        productNewPriceLabel.text = "Por " + String(format: "%.2f", price)
     }
     
     private func setImage(imgURL: String)

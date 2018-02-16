@@ -50,6 +50,8 @@
 		5B078C6C20328F8A00227A14 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B078C6B20328F8A00227A14 /* Product.swift */; };
 		5B078C6E20328F9100227A14 /* ListProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B078C6D20328F9100227A14 /* ListProduct.swift */; };
 		5B87A2A720352E43001E6D4B /* CategoryListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87A2A620352E43001E6D4B /* CategoryListDetailViewController.swift */; };
+		5B95EAD7203672E700716B96 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EAD6203672E700716B96 /* AboutViewController.swift */; };
+		5B95EAD92036788700716B96 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EAD82036788700716B96 /* String.swift */; };
 		5BCBA9EC20329CBF00F0CBF6 /* GenerateURLTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBA9EB20329CBF00F0CBF6 /* GenerateURLTest.swift */; };
 		5BCBA9EE20329CC800F0CBF6 /* ErrorManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBA9ED20329CC800F0CBF6 /* ErrorManagerTest.swift */; };
 		5BCBA9F020329CE600F0CBF6 /* APIManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBA9EF20329CE600F0CBF6 /* APIManagerTest.swift */; };
@@ -132,6 +134,8 @@
 		5B078C6B20328F8A00227A14 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		5B078C6D20328F9100227A14 /* ListProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProduct.swift; sourceTree = "<group>"; };
 		5B87A2A620352E43001E6D4B /* CategoryListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListDetailViewController.swift; sourceTree = "<group>"; };
+		5B95EAD6203672E700716B96 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		5B95EAD82036788700716B96 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5BCBA9EB20329CBF00F0CBF6 /* GenerateURLTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateURLTest.swift; sourceTree = "<group>"; };
 		5BCBA9ED20329CC800F0CBF6 /* ErrorManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManagerTest.swift; sourceTree = "<group>"; };
 		5BCBA9EF20329CE600F0CBF6 /* APIManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTest.swift; sourceTree = "<group>"; };
@@ -324,6 +328,7 @@
 				5B078C512032875B00227A14 /* UIImage+Kingfisher.swift */,
 				5B078C532032875C00227A14 /* UIView.swift */,
 				5B078C542032875C00227A14 /* UIViewController.swift */,
+				5B95EAD82036788700716B96 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 		5B078C3D20327A3700227A14 /* About ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5B95EAD6203672E700716B96 /* AboutViewController.swift */,
 			);
 			path = "About ViewController";
 			sourceTree = "<group>";
@@ -808,7 +814,9 @@
 				5B078C5020327D6D00227A14 /* Enum.swift in Sources */,
 				5B04930E20334AC700B032BF /* BannerCollectionViewCell.swift in Sources */,
 				5B078C5A2032876B00227A14 /* CustomViewController.swift in Sources */,
+				5B95EAD92036788700716B96 /* String.swift in Sources */,
 				5B078C6E20328F9100227A14 /* ListProduct.swift in Sources */,
+				5B95EAD7203672E700716B96 /* AboutViewController.swift in Sources */,
 				5B04931A2033D55200B032BF /* CategoryViewModel.swift in Sources */,
 				5B078C0C203275C000227A14 /* Lojinha.xcdatamodeld in Sources */,
 				5B078C6120328B4800227A14 /* Banner.swift in Sources */,

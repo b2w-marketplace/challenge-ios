@@ -37,6 +37,11 @@ protocol RequestElementURL: class
 }
 
 
+protocol SingleElement: InitializerProtocol, RequestElementURL
+{
+    
+}
+
 protocol ListProtocol: InitializerProtocol, Countable, RequestElement
 {
     

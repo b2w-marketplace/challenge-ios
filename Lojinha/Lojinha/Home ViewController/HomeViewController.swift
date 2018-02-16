@@ -52,9 +52,8 @@ class HomeViewController: CustomViewController
     {
         super.viewDidLoad()
 
-        self.setTitleWithCustomFont(title: "a Lojinha")
-//        self.configTitle(title: "a Lojinha")
-        
+//        self.setTitleWithCustomFont(title: "a Lojinha")
+
         listBannerViewModel = BannerViewModel()
         listCategoryViewModel = CategoryViewModel()
         listTopSellingProducts = TopSellingProductsViewModel()
@@ -104,7 +103,17 @@ class HomeViewController: CustomViewController
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        if segue.identifier == Segue.detailProduct.rawValue
+        {
+            let productDetail = segue.destination as! DetailProductViewController
+            productDetail.productID = (sender as! Product).id
+        }
         
+        if segue.identifier == Segue.detailCategory.rawValue
+        {
+            let productsByCategory = segue.destination as! CategoryListDetailViewController
+            productsByCategory.categoryID = (sender as! Category).id
+        }
         
     }
 }
@@ -186,7 +195,7 @@ extension HomeViewController: UITableViewDelegate
         {
             return 100
         }
-        return 300
+        return UITableViewAutomaticDimension
     }
     
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
@@ -226,11 +235,12 @@ extension HomeViewController: UITableViewDelegate
         homeTableView.deselectRow(at: indexPath, animated: true)
         
         let section = indexPath.section
-//        let row = indexPath.row
+        let row = indexPath.row
         
         if section == 2
         {
-            self.performSegue(withIdentifier: Segue.detailProduct.rawValue, sender: nil)
+            let product = listTopSellingProducts?.list?.products[row]
+            self.performSegue(withIdentifier: Segue.detailProduct.rawValue, sender: product)
         }
     }
 }
@@ -272,6 +282,23 @@ extension HomeViewController: UICollectionViewDataSource
     }
 }
 
+
+extension HomeViewController: UICollectionViewDelegate
+{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        if collectionView.restorationIdentifier == RestorationID.bannerHome.rawValue
+        {
+            
+        }
+        else
+        {
+            let item = indexPath.item
+            let category = listCategoryViewModel?.list?.categories[item]
+            self.performSegue(withIdentifier: Segue.detailCategory.rawValue, sender: category)
+        }
+    }
+}
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout
 {
