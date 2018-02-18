@@ -54,6 +54,8 @@ class HomeViewController: CustomViewController, VisibleView
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        setImageInTitle()
 
         listBannerViewModel = BannerViewModel()
         listCategoryViewModel = CategoryViewModel()
@@ -173,6 +175,7 @@ extension HomeViewController: UITableViewDataSource
         if section == 0
         {
             cell = homeTableView.dequeueReusableCell(withIdentifier: CellIdentifier.bannerHome.rawValue, for: indexPath) as! BannerHomeTableViewCell
+            (cell as! BannerHomeTableViewCell).numberOfPages = listBannerViewModel?.list?.banners.count ?? 0
         }
         else if section == 1
         {
@@ -295,6 +298,18 @@ extension HomeViewController: UICollectionViewDataSource
 // MARK: - Extension CollectionView Delegate
 extension HomeViewController: UICollectionViewDelegate
 {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
+    {
+        if collectionView.restorationIdentifier == RestorationID.bannerHome.rawValue
+        {
+            let item = indexPath.item
+            if let cell = homeTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? BannerHomeTableViewCell
+            {
+                cell.pagePosition = item
+            }
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         if collectionView.restorationIdentifier == RestorationID.bannerHome.rawValue

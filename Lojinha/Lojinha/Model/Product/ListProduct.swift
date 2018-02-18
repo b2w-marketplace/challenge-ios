@@ -12,15 +12,21 @@ import SwiftyJSON
 class ListProduct: NSObject
 {
     var products: [Product]
+    var offset: Int
+    var total: Int
     
     override init()
     {
         products = [Product]()
+        offset = 0
+        total = 0
     }
     
     required convenience init(dataJSON: JSON)
     {
         self.init()
+        offset = dataJSON["offset"].intValue
+        total = dataJSON["total"].intValue
         parseJSON(arrayJson: dataJSON["data"].arrayValue)
     }
 }

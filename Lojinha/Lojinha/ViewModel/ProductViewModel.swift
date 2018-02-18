@@ -37,6 +37,7 @@ class ProductViewMode: ProductViewModelProtocol
     {
         let tempProducts = list
         tempProducts?.products += products.products
+        tempProducts?.offset = products.offset
         list = tempProducts
     }
     
@@ -53,7 +54,7 @@ extension ProductViewMode
         ProductManager.getProducts(withURL: url) { (products, error) in
             if let list = products
             {
-                self.list = list
+                self.add(products: list)
             }
             if let error = error
             {

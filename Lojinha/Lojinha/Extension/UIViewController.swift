@@ -21,4 +21,11 @@ extension UIViewController
         UINavigationBar.appearance().titleTextAttributes = attributes
         self.navigationItem.title = title
     }
+    
+    func setImageInTitle()
+    {
+        let img = UIImage(named: "ic_logo_navbar")
+        let imgView = UIImageView(image: img)
+        self.navigationItem.titleView = imgView
+    }    
 }

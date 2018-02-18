@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIScrollView_InfiniteScroll
 
 class CategoryListDetailViewController: CustomViewController, VisibleView
 {
@@ -17,8 +18,16 @@ class CategoryListDetailViewController: CustomViewController, VisibleView
         didSet
         {
             listProductsViewModel?.listProductDidChange = { [weak self] viewModel in
-                self?.categoryListDetailTableView.reloadData()
-                self?.isView(hide: false)
+                if viewModel.list?.products.count == 0
+                {
+                    self?.present(Alert.show(message: "Não há produtos disponíveis no momento..."), animated: true, completion: nil)
+                    self?.isView(hide: true)
+                }
+                else
+                {
+                    self?.categoryListDetailTableView.reloadData()
+                    self?.isView(hide: false)
+                }
             }
         }
     }
@@ -39,13 +48,13 @@ class CategoryListDetailViewController: CustomViewController, VisibleView
         
         listProductsViewModel = ProductViewMode()
         getProductsByCategory(offSet: 0)
+        infinityScroll()
         
         categoryListDetailTableView.tableFooterView = UIView()
     }
 
     func isView(hide: Bool)
     {
-        print("-->> Hide: \(hide)")
         categoryListDetailTableView.isHidden = hide
         Spinner.shared.stopAnimating()
     }
@@ -62,6 +71,19 @@ class CategoryListDetailViewController: CustomViewController, VisibleView
                 self.present(Alert.show(message: error.localizedDescription), animated: true, completion: nil)
             }
         })
+    }
+    
+    private func infinityScroll()
+    {
+        categoryListDetailTableView.addInfiniteScroll { (tableView) in
+            if self.listProductsViewModel?.list?.products.count ?? 0 == Int(NumberOfProductsList.range.rawValue) ?? 0
+            {
+                let offset = (self.listProductsViewModel?.list?.offset ?? 0) + Int(NumberOfProductsList.range.rawValue)!
+                self.getProductsByCategory(offSet: offset)
+            }
+            
+            tableView.finishInfiniteScroll()
+        }
     }
 
     // MARK: - Navigation

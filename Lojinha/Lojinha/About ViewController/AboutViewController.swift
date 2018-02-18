@@ -16,12 +16,4 @@ class AboutViewController: CustomViewController
         super.viewDidLoad()
 
     }
-    
-//    override func viewWillAppear(_ animated: Bool)
-//    {
-//        super.viewWillDisappear(animated)
-//        
-//        self.configTitle(title: "Sobre")
-//    }
-
 }

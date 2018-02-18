@@ -10,6 +10,28 @@ import UIKit
 
 class BannerHomeTableViewCell: UITableViewCell
 {
+    var numberOfPages: Int?
+    {
+        didSet
+        {
+            if let numberOfPages = numberOfPages
+            {
+                setNumberOfPages(numberOfPages)
+            }
+        }
+    }
+    
+    var pagePosition: Int?
+    {
+        didSet
+        {
+            if let pagePosition = pagePosition
+            {
+                setPositionPageControl(pagePosition)
+            }
+        }
+    }
+    
     // MARK: - IBOutlets
     @IBOutlet weak var bannerHomeCollectionView: UICollectionView!
     @IBOutlet weak var bannerHomePageControl: UIPageControl!
@@ -26,9 +48,16 @@ class BannerHomeTableViewCell: UITableViewCell
     {
         super.setSelected(selected, animated: animated)
 
-
     }
 
+    private func setNumberOfPages(_ pages: Int)
+    {
+        bannerHomePageControl.numberOfPages = pages
+    }
+    private func setPositionPageControl(_ position: Int)
+    {
+        bannerHomePageControl.currentPage = position
+    }
 }
 
 

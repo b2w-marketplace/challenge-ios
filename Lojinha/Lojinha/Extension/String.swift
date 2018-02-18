@@ -9,28 +9,12 @@
 import UIKit
 
 extension String
-{
-//    func convertHtml() -> NSAttributedString?
-//    {
-//        guard let data = data(using: .utf8) else { return NSAttributedString() }
-//        do
-//        {
-//            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
-//        }
-//        catch
-//        {
-//            return nil
-//        }
-//    }
-    
+{    
     var html2AttributedString: NSAttributedString?
     {
         do
         {
-            return try NSAttributedString(data: Data(utf8),
-                                          options: [.documentType: NSAttributedString.DocumentType.html,
-                                                    .characterEncoding: String.Encoding.utf8.rawValue],
-                                          documentAttributes: nil)
+            return try NSAttributedString(data: Data(utf8), options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
         }
         catch
         {
@@ -51,5 +35,32 @@ extension String
         attributeString.addAttribute(NSAttributedStringKey.strikethroughStyle, value: 1.5, range: NSMakeRange(0, attributeString.length))
         
         return attributeString
+    }
+    
+//    var oldPrice: NSAttributedString
+//    {
+//        let price = String(format: "%.2f", self).replacingOccurrences(of: ".", with: ",")
+//        return ("De: R$ " + price).textMiddleLine()
+//    }
+//
+//    var newPrice: String
+//    {
+//        let price = String(format: "%.2f", self).replacingOccurrences(of: ".", with: ",")
+//        return "Por: R$ " + price
+//    }
+}
+
+extension Double
+{
+    var oldPrice: NSAttributedString
+    {
+        let price = String(format: "%.2f", self).replacingOccurrences(of: ".", with: ",")
+        return ("De: R$ " + price).textMiddleLine()
+    }
+    
+    var newPrice: String
+    {
+        let price = String(format: "%.2f", self).replacingOccurrences(of: ".", with: ",")
+        return "Por: R$ " + price
     }
 }

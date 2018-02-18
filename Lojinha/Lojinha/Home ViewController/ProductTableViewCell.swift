@@ -54,13 +54,12 @@ class ProductTableViewCell: UITableViewCell
     
     private func setOldPriceLabel(price: Double)
     {
-        let text = "De " + String(format: "%.2f", price)
-        productOldPriceLabel.attributedText = text.textMiddleLine()
+        productOldPriceLabel.attributedText = price.oldPrice
     }
     
     private func setNewPriceLabel(price: Double)
     {
-        productNewPriceLabel.text = "Por " + String(format: "%.2f", price)
+        productNewPriceLabel.text = price.newPrice
     }
     
     private func setImage(imgURL: String)

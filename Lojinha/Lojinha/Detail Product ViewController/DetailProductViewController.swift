@@ -126,13 +126,11 @@ class DetailProductViewController: CustomViewController, VisibleView
     private func setDetail()
     {
         let product = detailProductViewModel?.product
-        let oldPrice = "De " + String(format: "%.2f", product?.priceOld ?? 0)
-        let newPrice = "Por " + String(format: "%.2f", product?.priceNew ?? 0)
         
         productDetailImage.download(image: product?.image.urlImage ?? "")
         productDetailNameLabel.text = product?.name
-        productDetailOldPrideLabel.attributedText = oldPrice.textMiddleLine()
-        productDetailNewPriceLabel.text = newPrice
+        productDetailOldPrideLabel.attributedText = product?.priceOld.oldPrice
+        productDetailNewPriceLabel.text = product?.priceNew.newPrice
         productDetailDescriptionLabel.attributedText = product?.strDescription.html2AttributedString
         
         isView(hide: false)
