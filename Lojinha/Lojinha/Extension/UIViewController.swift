@@ -10,11 +10,9 @@ import UIKit
 
 extension UIViewController
 {
-    func configTitle(title: String)
+    func set(title: String)
     {
-        let attributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 17)]
-        UINavigationBar.appearance().titleTextAttributes = attributes
-        self.navigationItem.title = title
+        self.title = title
     }
     
     func setTitleWithCustomFont(title: String)

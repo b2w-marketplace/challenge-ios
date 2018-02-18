@@ -63,6 +63,7 @@
 		5BCBA9FC20329D2E00F0CBF6 /* ProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBA9FB20329D2E00F0CBF6 /* ProductTest.swift */; };
 		5BCBA9FE20329D3500F0CBF6 /* ListProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBA9FD20329D3500F0CBF6 /* ListProductTest.swift */; };
 		5BCBAA0020329D5000F0CBF6 /* RequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBA9FF20329D5000F0CBF6 /* RequestTest.swift */; };
+		5BEEC0A020391ED800181EF3 /* StatusReserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEC09F20391ED800181EF3 /* StatusReserve.swift */; };
 		AB3908C998B8827C0D4FAC3E /* Pods_Lojinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696D001E23467EA1B664C4F6 /* Pods_Lojinha.framework */; };
 		B72F03E335C462E332ECDC58 /* Pods_LojinhaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBAAF02728582BD25B66B6D /* Pods_LojinhaTests.framework */; };
 /* End PBXBuildFile section */
@@ -147,6 +148,7 @@
 		5BCBA9FB20329D2E00F0CBF6 /* ProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTest.swift; sourceTree = "<group>"; };
 		5BCBA9FD20329D3500F0CBF6 /* ListProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductTest.swift; sourceTree = "<group>"; };
 		5BCBA9FF20329D5000F0CBF6 /* RequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTest.swift; sourceTree = "<group>"; };
+		5BEEC09F20391ED800181EF3 /* StatusReserve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusReserve.swift; sourceTree = "<group>"; };
 		5CBAAF02728582BD25B66B6D /* Pods_LojinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LojinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE5CE95CB1E6A4622685087 /* Pods-Lojinha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lojinha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lojinha/Pods-Lojinha.debug.xcconfig"; sourceTree = "<group>"; };
 		696D001E23467EA1B664C4F6 /* Pods_Lojinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lojinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +319,7 @@
 				5B078C5D20328AB300227A14 /* Banner */,
 				5B078C5C20328AB200227A14 /* Category */,
 				5B078C5B20328AB100227A14 /* Product */,
+				5BEEC09E20391EB900181EF3 /* Status Reserve */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -452,6 +455,14 @@
 				5B87A2A620352E43001E6D4B /* CategoryListDetailViewController.swift */,
 			);
 			path = "Category List Detail ViewController";
+			sourceTree = "<group>";
+		};
+		5BEEC09E20391EB900181EF3 /* Status Reserve */ = {
+			isa = PBXGroup;
+			children = (
+				5BEEC09F20391ED800181EF3 /* StatusReserve.swift */,
+			);
+			path = "Status Reserve";
 			sourceTree = "<group>";
 		};
 		828702035A9A74711394FDB3 /* Pods */ = {
@@ -825,6 +836,7 @@
 				5B078C552032875C00227A14 /* UIImage+Kingfisher.swift in Sources */,
 				5B0493162033D3DF00B032BF /* HomeViewModel.swift in Sources */,
 				5B078C5F20328AE800227A14 /* Protocols.swift in Sources */,
+				5BEEC0A020391ED800181EF3 /* StatusReserve.swift in Sources */,
 				5B0493202033E40900B032BF /* TopSellingProductsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

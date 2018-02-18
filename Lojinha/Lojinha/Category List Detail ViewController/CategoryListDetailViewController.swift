@@ -8,16 +8,17 @@
 
 import UIKit
 
-class CategoryListDetailViewController: CustomViewController
+class CategoryListDetailViewController: CustomViewController, VisibleView
 {
     // MARK: Lets and Vars
-    var categoryID: Int!
+    var category: Category!
     var listProductsViewModel: ProductViewMode?
     {
         didSet
         {
             listProductsViewModel?.listProductDidChange = { [weak self] viewModel in
                 self?.categoryListDetailTableView.reloadData()
+                self?.isView(hide: false)
             }
         }
     }
@@ -32,35 +33,50 @@ class CategoryListDetailViewController: CustomViewController
     {
         super.viewDidLoad()
 
+        self.set(title: category.strDescription)
+        
+        Spinner.shared.show(view: self.view)
+        
         listProductsViewModel = ProductViewMode()
         getProductsByCategory(offSet: 0)
         
         categoryListDetailTableView.tableFooterView = UIView()
     }
 
+    func isView(hide: Bool)
+    {
+        print("-->> Hide: \(hide)")
+        categoryListDetailTableView.isHidden = hide
+        Spinner.shared.stopAnimating()
+    }
+    
+    // MARK: - Request
     private func getProductsByCategory(offSet: Int)
     {
-        let url = GenerateURL.get(type: .productByCategory, offset: String(offSet)) + String(categoryID)
+        let url = GenerateURL.get(type: .productByCategory, offset: String(offSet)) + String(category.id)
         listProductsViewModel?.getElement(withURL: url, completion: { (error) in
             if let error = error
             {
+                self.isView(hide: true)
                 print("-->> Error get product by category [VC]: \(error)")
                 self.present(Alert.show(message: error.localizedDescription), animated: true, completion: nil)
             }
         })
     }
 
-
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        
-        
+        if segue.identifier == Segue.detailProduct.rawValue
+        {
+            let productDetail = segue.destination as! DetailProductViewController
+            productDetail.product = (sender as! Product)
+        }
     }
 }
 
 
+// MARK: - Extension TableView DataSource
 extension CategoryListDetailViewController: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -81,6 +97,7 @@ extension CategoryListDetailViewController: UITableViewDataSource
 }
 
 
+// MARK: - Extension TableView Delegate
 extension CategoryListDetailViewController: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
@@ -91,5 +108,14 @@ extension CategoryListDetailViewController: UITableViewDelegate
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        categoryListDetailTableView.deselectRow(at: indexPath, animated: true)
+        
+        let row = indexPath.row
+        let product = listProductsViewModel?.list?.products[row]
+        self.performSegue(withIdentifier: Segue.detailProduct.rawValue, sender: product)
     }
 }

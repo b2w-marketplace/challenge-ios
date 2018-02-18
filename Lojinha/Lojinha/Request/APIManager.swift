@@ -99,12 +99,13 @@ class ProductManager: NSObject
         }
     }
     
-    static func postProduct(withURL url: String, completion: @escaping(String?, Error?) -> Void)
+    static func postProduct(withURL url: String, completion: @escaping(StatusReserve?, Error?) -> Void)
     {
-        Request.getFrom(url) { (result) in
-            if let strStatus = result as? String
+        Request.postTo(url) { (result) in
+            if let data = result as? Data
             {
-                completion(strStatus, nil)
+                let statusReserve = StatusReserve(dataJSON: JSON(data))
+                completion(statusReserve, nil)
             }
             else if let error = result as? Error
             {

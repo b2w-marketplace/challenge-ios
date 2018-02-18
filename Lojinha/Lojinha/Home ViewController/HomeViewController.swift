@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: CustomViewController
+class HomeViewController: CustomViewController, VisibleView
 {
     // MARK: - Lets and Vars
     var listBannerViewModel: BannerViewModel?
@@ -17,6 +17,7 @@ class HomeViewController: CustomViewController
         {
             listBannerViewModel?.listBannerDidChange = { [weak self] viewModel in
                 self?.homeTableView.reloadData()
+                self?.isView(hide: false)
             }
         }
     }
@@ -27,6 +28,7 @@ class HomeViewController: CustomViewController
         {
             listCategoryViewModel?.listCategoryDidChange = { [weak self] viewModel in
                 self?.homeTableView.reloadData()
+                self?.isView(hide: false)
             }
         }
     }
@@ -37,6 +39,7 @@ class HomeViewController: CustomViewController
         {
             listTopSellingProducts?.listTopSellingProductsDidChange = { [weak self] viewModel in
                 self?.homeTableView.reloadData()
+                self?.isView(hide: false)
             }
         }
     }
@@ -52,17 +55,30 @@ class HomeViewController: CustomViewController
     {
         super.viewDidLoad()
 
-//        self.setTitleWithCustomFont(title: "a Lojinha")
-
         listBannerViewModel = BannerViewModel()
         listCategoryViewModel = CategoryViewModel()
         listTopSellingProducts = TopSellingProductsViewModel()
         
+        Spinner.shared.show(view: self.view)
+        
+        requests()
+        
+        homeTableView.tableFooterView = UIView()
+    }
+    
+    func isView(hide: Bool)
+    {
+        homeTableView.isHidden = hide
+        Spinner.shared.stopAnimating()
+    }
+    
+    
+    // MARK: - Request
+    private func requests()
+    {
         getBanners()
         getCategories()
         getTopSellingProducts()
-        
-        homeTableView.tableFooterView = UIView()
     }
     
     private func getBanners()
@@ -98,27 +114,26 @@ class HomeViewController: CustomViewController
         })
     }
     
-
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == Segue.detailProduct.rawValue
         {
             let productDetail = segue.destination as! DetailProductViewController
-            productDetail.productID = (sender as! Product).id
+            productDetail.product = (sender as! Product)
         }
         
         if segue.identifier == Segue.detailCategory.rawValue
         {
             let productsByCategory = segue.destination as! CategoryListDetailViewController
-            productsByCategory.categoryID = (sender as! Category).id
+            productsByCategory.category = (sender as! Category)
         }
         
     }
 }
 
 
+// MARK: - Extension TableView DataSource
 extension HomeViewController: UITableViewDataSource
 {
     func numberOfSections(in tableView: UITableView) -> Int
@@ -177,6 +192,7 @@ extension HomeViewController: UITableViewDataSource
 }
 
 
+// MARK: - Extension TableView Delegate
 extension HomeViewController: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
@@ -197,14 +213,6 @@ extension HomeViewController: UITableViewDelegate
         }
         return UITableViewAutomaticDimension
     }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
-//    {
-//        let viewHeader = UIView()
-//        viewHeader.backgroundColor = UIColor.white
-//
-//        return viewHeader
-//    }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
     {
@@ -246,6 +254,7 @@ extension HomeViewController: UITableViewDelegate
 }
 
 
+// MARK: - Extension CollectionView DataSource
 extension HomeViewController: UICollectionViewDataSource
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -283,6 +292,7 @@ extension HomeViewController: UICollectionViewDataSource
 }
 
 
+// MARK: - Extension CollectionView Delegate
 extension HomeViewController: UICollectionViewDelegate
 {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
@@ -300,6 +310,8 @@ extension HomeViewController: UICollectionViewDelegate
     }
 }
 
+
+// MARK: - Extension CollectionView DelegateFlowLayout
 extension HomeViewController: UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize

@@ -12,6 +12,8 @@ protocol ProductViewModelProtocol: ListParamURLProtocol
 {
     var list: ListProduct? { get }
     var listProductDidChange: ((ProductViewModelProtocol) -> Void)? { get set }
+    
+    func add(products: ListProduct)
 }
 
 class ProductViewMode: ProductViewModelProtocol
@@ -31,6 +33,12 @@ class ProductViewMode: ProductViewModelProtocol
         list = ListProduct()
     }
     
+    func add(products: ListProduct)
+    {
+        let tempProducts = list
+        tempProducts?.products += products.products
+        list = tempProducts
+    }
     
     func numberOfRows() -> Int
     {
@@ -50,6 +58,21 @@ extension ProductViewMode
             if let error = error
             {
                 completion(error)
+            }
+        }
+    }
+    
+    func addProductToReserve(productID: Int, completion: @escaping (StatusReserve?, Error?) -> Void)
+    {
+        let url = GenerateURL.get(type: .reserveProduct) + String(productID)
+        ProductManager.postProduct(withURL: url) { (status, error) in
+            if let status = status
+            {
+                completion(status, nil)
+            }
+            if let error = error
+            {
+                completion(nil, error)
             }
         }
     }

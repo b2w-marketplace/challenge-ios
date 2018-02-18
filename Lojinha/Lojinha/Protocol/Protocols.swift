@@ -10,6 +10,11 @@ import Foundation
 import SwiftyJSON
 
 
+protocol VisibleView
+{
+    func isView(hide: Bool)
+}
+
 protocol ListControl: class
 {
     func parseJSON(arrayJson: [JSON])

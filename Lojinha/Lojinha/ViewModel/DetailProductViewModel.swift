@@ -12,6 +12,8 @@ protocol DetailProductViewModelProtocol: SingleElement
 {
     var product: Product? { get }
     var productDidChange: ((DetailProductViewModelProtocol) -> Void)? { get set }
+    
+    func addProductToReserve(productID: Int, completion: @escaping(StatusReserve?, Error?) -> Void)
 }
 
 class DetailProductViewModel: DetailProductViewModelProtocol
@@ -30,6 +32,8 @@ class DetailProductViewModel: DetailProductViewModelProtocol
     {
         product = Product()
     }
+    
+    
 }
 
 
@@ -45,6 +49,21 @@ extension DetailProductViewModel
             if let error = error
             {
                 completion(error)
+            }
+        }
+    }
+    
+    func addProductToReserve(productID: Int, completion: @escaping (StatusReserve?, Error?) -> Void)
+    {
+        let url = GenerateURL.get(type: .reserveProduct) + String(productID)
+        ProductManager.postProduct(withURL: url) { (status, error) in
+            if let status = status
+            {
+                completion(status, nil)
+            }
+            else if let error = error
+            {
+                completion(nil, error)
             }
         }
     }

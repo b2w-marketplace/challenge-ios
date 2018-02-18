@@ -32,7 +32,7 @@ class Request: NSObject
         }
     }
     
-    static func postTo(_ url: String, parameters: Dictionary<String, Any>?, header: [String:String]? = nil, completion: @escaping(Any?) -> Void)
+    static func postTo(_ url: String, parameters: Dictionary<String, Any>? = nil, header: [String:String]? = nil, completion: @escaping(Any?) -> Void)
     {
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: header)
             .validate()
