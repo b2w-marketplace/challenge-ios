@@ -16,10 +16,12 @@ class Spinner: NSObject
         static let width: CFloat  = 60.0
     }
     
-    static var viewActivity : UIView?
-    static var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    static let shared = Spinner()
     
-    private static func createSppiner(view: UIView) -> UIView
+    var viewActivity : UIView?
+    var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    
+    private func createSppiner(view: UIView) -> UIView
     {
         activityIndicator.center = view.center
         activityIndicator.hidesWhenStopped = true
@@ -30,7 +32,7 @@ class Spinner: NSObject
         return activityIndicator
     }
     
-    static func show(view:UIView)
+    func show(view:UIView)
     {
         let mainView = UIApplication.shared.keyWindow!.rootViewController!.view!
         
@@ -42,7 +44,7 @@ class Spinner: NSObject
         self.activityIndicator = createSppiner(view: view) as! UIActivityIndicatorView
     }
     
-    static func stopAnimating()
+    func stopAnimating()
     {
         self.viewActivity?.isHidden = true
         self.activityIndicator.stopAnimating()

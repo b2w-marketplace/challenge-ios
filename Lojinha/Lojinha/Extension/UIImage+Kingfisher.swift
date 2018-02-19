@@ -18,7 +18,8 @@ extension UIImageView
         }
         
         self.kf.indicator?.startAnimatingView()
-        self.kf.setImage(with: ImageResource(downloadURL: imgURL))
+        self.kf.indicatorType = .activity
+        self.kf.setImage(with: ImageResource(downloadURL: imgURL), placeholder: UIImage(named: "image_placeholder"))
         self.kf.indicator?.stopAnimatingView()
     }
 }

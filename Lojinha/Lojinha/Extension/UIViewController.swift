@@ -10,8 +10,22 @@ import UIKit
 
 extension UIViewController
 {
-    func configTitle(title: String)
+    func set(title: String)
     {
         self.title = title
     }
+    
+    func setTitleWithCustomFont(title: String)
+    {
+        let attributes = [NSAttributedStringKey.font: UIFont(name: "Pacifico-Regular", size: 24)!]
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        self.navigationItem.title = title
+    }
+    
+    func setImageInTitle()
+    {
+        let img = UIImage(named: "ic_logo_navbar")
+        let imgView = UIImageView(image: img)
+        self.navigationItem.titleView = imgView
+    }    
 }

@@ -16,9 +16,14 @@ class CustomViewController: UIViewController
     {
         super.viewWillDisappear(animated)
         
-        Spinner.stopAnimating()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool)
+    {
+        super.viewDidDisappear(animated)
         
+        Spinner.shared.stopAnimating()
     }
     
     

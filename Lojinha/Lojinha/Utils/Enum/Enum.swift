@@ -57,11 +57,40 @@ enum ErrorType
 }
 
 
+enum Corner: CGFloat
+{
+    case button = 5
+}
+
+
+enum Status: String
+{
+    case success = "success"
+    case error = "error"
+}
+
+enum NotificationName: String
+{
+    case popView = "popViewControllerNotificationCenter"
+}
+
 enum CellIdentifier: String
 {
     case listHome = "listHomeCell"
     case bannerHome = "bannerHomeCell"
     case listCatetoryHome = "listCategoryHome"
+    
+    case bannerCell = "bannerCell"
+    case categoryCell = "categoryCell"
+    
+    case categoryListCell = "categoryListCell"
+    
+}
+
+
+enum RestorationID: String
+{
+    case bannerHome = "bannerHomeCollectionView"
 }
 
 
