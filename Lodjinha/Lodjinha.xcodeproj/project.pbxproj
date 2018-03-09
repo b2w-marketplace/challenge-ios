@@ -11,6 +11,15 @@
 		0E140F112052F49A00CC446E /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F102052F49A00CC446E /* Banner.swift */; };
 		0E140F132052F62300CC446E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F122052F62300CC446E /* Category.swift */; };
 		0E140F152052F7EA00CC446E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F142052F7EA00CC446E /* Product.swift */; };
+		0E140F192052FB9F00CC446E /* BannerApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F182052FB9F00CC446E /* BannerApiProvider.swift */; };
+		0E140F1B2052FE1000CC446E /* BannerBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F1A2052FE1000CC446E /* BannerBusiness.swift */; };
+		0E140F1D2053007100CC446E /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F1C2053007100CC446E /* ApiProvider.swift */; };
+		0E140F1F205303D100CC446E /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F1E205303D100CC446E /* HomeManager.swift */; };
+		0E140F21205303EF00CC446E /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F20205303EF00CC446E /* BaseManager.swift */; };
+		0E140F272053053E00CC446E /* CategoryApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F262053053E00CC446E /* CategoryApiProvider.swift */; };
+		0E140F2B2053069700CC446E /* CategoryBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F2A2053069700CC446E /* CategoryBusiness.swift */; };
+		0E140F2D2053088300CC446E /* ProductApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F2C2053088300CC446E /* ProductApiProvider.swift */; };
+		0E140F3020530A3300CC446E /* ProductBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140F2F20530A3300CC446E /* ProductBusiness.swift */; };
 		0E8087022051B9F3002D6167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8087012051B9F3002D6167 /* AppDelegate.swift */; };
 		0E8087072051B9F3002D6167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E8087052051B9F3002D6167 /* Main.storyboard */; };
 		0E8087092051B9F3002D6167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8087082051B9F3002D6167 /* Assets.xcassets */; };
@@ -23,6 +32,15 @@
 		0E140F102052F49A00CC446E /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		0E140F122052F62300CC446E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0E140F142052F7EA00CC446E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0E140F182052FB9F00CC446E /* BannerApiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerApiProvider.swift; sourceTree = "<group>"; };
+		0E140F1A2052FE1000CC446E /* BannerBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerBusiness.swift; sourceTree = "<group>"; };
+		0E140F1C2053007100CC446E /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		0E140F1E205303D100CC446E /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		0E140F20205303EF00CC446E /* BaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
+		0E140F262053053E00CC446E /* CategoryApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryApiProvider.swift; sourceTree = "<group>"; };
+		0E140F2A2053069700CC446E /* CategoryBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBusiness.swift; sourceTree = "<group>"; };
+		0E140F2C2053088300CC446E /* ProductApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductApiProvider.swift; sourceTree = "<group>"; };
+		0E140F2F20530A3300CC446E /* ProductBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBusiness.swift; sourceTree = "<group>"; };
 		0E8086FE2051B9F3002D6167 /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8087012051B9F3002D6167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E8087062051B9F3002D6167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,13 +76,13 @@
 		0E140F032052F0CA00CC446E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0E140F0A2052F15300CC446E /* Model */,
+				0E140F0D2052F17A00CC446E /* Common */,
 				0E140F082052F14600CC446E /* View */,
 				0E140F0C2052F17200CC446E /* Controller */,
 				0E140F0B2052F15A00CC446E /* Manager */,
 				0E140F072052F13800CC446E /* Business */,
 				0E140F092052F14E00CC446E /* Provider */,
-				0E140F0D2052F17A00CC446E /* Common */,
-				0E140F0A2052F15300CC446E /* Model */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -99,6 +117,9 @@
 		0E140F072052F13800CC446E /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				0E140F2E20530A2600CC446E /* Product */,
+				0E140F292053056700CC446E /* Category */,
+				0E140F282053055F00CC446E /* Banner */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -113,6 +134,10 @@
 		0E140F092052F14E00CC446E /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				0E140F222053050A00CC446E /* Base Provider */,
+				0E140F182052FB9F00CC446E /* BannerApiProvider.swift */,
+				0E140F262053053E00CC446E /* CategoryApiProvider.swift */,
+				0E140F2C2053088300CC446E /* ProductApiProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -130,6 +155,8 @@
 		0E140F0B2052F15A00CC446E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				0E140F252053052B00CC446E /* Home */,
+				0E140F232053051C00CC446E /* Base */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -146,6 +173,54 @@
 			children = (
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		0E140F222053050A00CC446E /* Base Provider */ = {
+			isa = PBXGroup;
+			children = (
+				0E140F1C2053007100CC446E /* ApiProvider.swift */,
+			);
+			path = "Base Provider";
+			sourceTree = "<group>";
+		};
+		0E140F232053051C00CC446E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0E140F20205303EF00CC446E /* BaseManager.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0E140F252053052B00CC446E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0E140F1E205303D100CC446E /* HomeManager.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0E140F282053055F00CC446E /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				0E140F1A2052FE1000CC446E /* BannerBusiness.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		0E140F292053056700CC446E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0E140F2A2053069700CC446E /* CategoryBusiness.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		0E140F2E20530A2600CC446E /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				0E140F2F20530A3300CC446E /* ProductBusiness.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		0E8086F52051B9F3002D6167 = {
@@ -325,10 +400,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E140F1F205303D100CC446E /* HomeManager.swift in Sources */,
+				0E140F272053053E00CC446E /* CategoryApiProvider.swift in Sources */,
 				0E8087022051B9F3002D6167 /* AppDelegate.swift in Sources */,
 				0E140F152052F7EA00CC446E /* Product.swift in Sources */,
+				0E140F192052FB9F00CC446E /* BannerApiProvider.swift in Sources */,
+				0E140F2D2053088300CC446E /* ProductApiProvider.swift in Sources */,
+				0E140F1B2052FE1000CC446E /* BannerBusiness.swift in Sources */,
 				0E140F112052F49A00CC446E /* Banner.swift in Sources */,
+				0E140F21205303EF00CC446E /* BaseManager.swift in Sources */,
+				0E140F1D2053007100CC446E /* ApiProvider.swift in Sources */,
 				0E140F132052F62300CC446E /* Category.swift in Sources */,
+				0E140F2B2053069700CC446E /* CategoryBusiness.swift in Sources */,
+				0E140F3020530A3300CC446E /* ProductBusiness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
