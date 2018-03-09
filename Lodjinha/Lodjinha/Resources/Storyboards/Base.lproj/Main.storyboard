@@ -78,7 +78,6 @@
         <!--Home-->
         <scene sceneID="qS4-IS-zzt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aUv-LM-6Ek" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cuM-Fd-Rci" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="homeDeselected" selectedImage="homeActive" id="N4t-rW-sTN"/>
                     <toolbarItems/>
@@ -94,6 +93,7 @@
                         <segue destination="ZkT-lJ-IHu" kind="relationship" relationship="rootViewController" id="hjB-2t-gt6"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUv-LM-6Ek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="175" y="-151"/>
         </scene>
@@ -159,6 +159,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HJO-uE-cW5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y56-ad-5kH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -207,6 +208,7 @@
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gwd-z9-0Nc"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQa-XX-hEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -231,7 +233,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7QN-YW-a5U">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="7QN-YW-a5U">
                                         <rect key="frame" x="0.0" y="15" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -270,6 +272,7 @@
                             <constraint firstAttribute="trailing" secondItem="ZB5-gB-34E" secondAttribute="trailing" id="Y3j-Aw-EiE"/>
                             <constraint firstItem="ZB5-gB-34E" firstAttribute="leading" secondItem="xmt-2d-ygd" secondAttribute="leading" id="w3k-SS-bbH"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZRm-uj-8t1"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsH-jr-uxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,7 +291,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="261"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="104" id="6gP-On-ASI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MostSelledTableViewCell" rowHeight="104" id="6gP-On-ASI">
                                         <rect key="frame" x="0.0" y="28" width="375" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6gP-On-ASI" id="rjT-25-p6L">
@@ -347,6 +350,7 @@
                             <constraint firstItem="KLX-gg-fbj" firstAttribute="leading" secondItem="DVx-es-J00" secondAttribute="leading" id="p0G-XH-oOX"/>
                             <constraint firstAttribute="bottom" secondItem="KLX-gg-fbj" secondAttribute="bottom" id="tTJ-fU-uWi"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="OGF-2t-wJx"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFn-Bn-lwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
