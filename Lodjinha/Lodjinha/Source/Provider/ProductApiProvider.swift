@@ -22,7 +22,7 @@ class ProductApiProvider {
             }
             
             guard let products = try? JSONDecoder().decode([Product].self, from: data) else {
-                print("Failed to parse banners!")
+                print("Failed to parse products!")
                 return
             }
             

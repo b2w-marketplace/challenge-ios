@@ -13,7 +13,7 @@ struct Banner : Codable {
     var imageUrl : String
     var linkUrl : String
     
-    enum CodingKeys: String, CodingKey {
+    enum BannersKeys: String, CodingKey {
         case id
         case imageUrl = "urlImagem"
         case linkUrl

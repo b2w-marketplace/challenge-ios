@@ -22,7 +22,7 @@ class CategoryApiProvider {
             }
             
             guard let categories = try? JSONDecoder().decode([Category].self, from: data) else {
-                print("Failed to parse!")
+                print("Failed to parse categories!")
                 return
             }
             

@@ -8,11 +8,11 @@
 
 import Foundation
 
-typealias BannerCallback = (@escaping () -> [Banner]?) -> Void
+typealias BannerCallback = (@escaping () -> BannerList?) -> Void
 
 class BannerBusiness {
     
-    private var banners : [Banner]?
+    private var banners : BannerList?
     
     public func fetchBanners(completion : @escaping BannerCallback) {
         
