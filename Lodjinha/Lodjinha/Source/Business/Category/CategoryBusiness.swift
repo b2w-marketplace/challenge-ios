@@ -10,7 +10,7 @@ import Foundation
 
 class CategoryBusiness {
     
-    private var categories : [Category]?
+    private var categories : CategoryList?
     
     public func fetchCategories(completion : @escaping CategoriesCallback) {
         

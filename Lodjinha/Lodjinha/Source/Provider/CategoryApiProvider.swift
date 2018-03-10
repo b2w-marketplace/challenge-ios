@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-typealias CategoriesCallback = (@escaping () -> [Category]?) -> Void
+typealias CategoriesCallback = (@escaping () -> CategoryList?) -> Void
 
 class CategoryApiProvider {
     
@@ -21,7 +21,7 @@ class CategoryApiProvider {
                 return
             }
             
-            guard let categories = try? JSONDecoder().decode([Category].self, from: data) else {
+            guard let categories = try? JSONDecoder().decode(CategoryList.self, from: data) else {
                 print("Failed to parse categories!")
                 return
             }

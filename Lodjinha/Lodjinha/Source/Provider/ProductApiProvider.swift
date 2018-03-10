@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-typealias ProductsCallback = (@escaping () -> [Product]?) -> Void
+typealias ProductsCallback = (@escaping () -> ProductList?) -> Void
 
 class ProductApiProvider {
     
@@ -20,14 +20,14 @@ class ProductApiProvider {
                 print("Failed to get data!")
                 return
             }
-            
-            guard let products = try? JSONDecoder().decode([Product].self, from: data) else {
+
+            guard let products = try? JSONDecoder().decode(ProductList.self, from: data) else {
                 print("Failed to parse products!")
                 return
             }
-            
+
             completion { products }
-            
+
         }
         
     }

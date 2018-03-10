@@ -13,11 +13,9 @@ struct Product : Codable {
     var description : String
     var id : Int
     var name : String
-    var oldPrice : Int
-    var newPrice : Int
+    var oldPrice : Double
+    var newPrice : Double
     var imageUrl : String
-    var offset : Int
-    var total : Int
     
     enum CodingKeys: String, CodingKey {
         case category = "categoria"
@@ -27,7 +25,5 @@ struct Product : Codable {
         case oldPrice = "precoDe"
         case newPrice = "precoPor"
         case imageUrl = "urlImagem"
-        case offset
-        case total
     }
 }

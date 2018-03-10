@@ -1,5 +1,5 @@
 //
-//  Banner.swift
+//  CategoryList.swift
 //  Lodjinha
 //
 //  Created by Guilherme Antunes on 09/03/18.
@@ -8,15 +8,10 @@
 
 import Foundation
 
-struct Banner : Codable {
-    var id : Int
-    var imageUrl : String
-    var linkUrl : String
+struct CategoryList : Codable {
+    var data : [Category]?
     
     enum CodingKeys: String, CodingKey {
-        case id
-        case imageUrl = "urlImagem"
-        case linkUrl
+        case data
     }
 }
-

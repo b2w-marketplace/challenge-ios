@@ -10,8 +10,8 @@ import Foundation
 
 class ProductBusiness {
     
-    private var topSelledProducts : [Product]?
-    private var allProductsByCategory : [Product]?
+    private var topSelledProducts : ProductList?
+    private var allProductsByCategory : ProductList?
     
     public func fetchTopSelledProducts(completion : @escaping ProductsCallback) {
         

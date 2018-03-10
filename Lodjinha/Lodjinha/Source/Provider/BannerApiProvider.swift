@@ -19,7 +19,7 @@ class BannerApiProvider {
                 return
             }
             
-            guard let banners = try? JSONDecoder().decode([Banner].self, from: data) else {
+            guard let banners = try? JSONDecoder().decode(BannerList.self, from: data) else {
                 print("Failed to parse banners!")
                 return
             }

@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="175" y="-151"/>
         </scene>
-        <!--Home-->
+        <!--a Lodjinha-->
         <scene sceneID="9Nt-Je-A10">
             <objects>
                 <viewController id="ZkT-lJ-IHu" customClass="HomeViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +126,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eD7-jl-ttP">
                                 <rect key="frame" x="0.0" y="468" width="375" height="261"/>
                                 <connections>
-                                    <segue destination="B9w-uZ-KOe" kind="embed" id="myb-1J-06T"/>
+                                    <segue destination="B9w-uZ-KOe" kind="embed" identifier="TopSelledProductsViewController" id="myb-1J-06T"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -145,7 +145,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3QX-l7-NJ1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="jmf-bm-x23">
+                    <navigationItem key="navigationItem" title="a Lodjinha" id="jmf-bm-x23">
                         <barButtonItem key="backBarButtonItem" title=" " id="LSM-dk-0ui"/>
                     </navigationItem>
                 </viewController>
@@ -279,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="2340" y="-199.50738916256159"/>
         </scene>
-        <!--View Controller-->
+        <!--Top Selled Products View Controller-->
         <scene sceneID="3lP-qW-gWO">
             <objects>
-                <viewController id="B9w-uZ-KOe" sceneMemberID="viewController">
+                <viewController id="B9w-uZ-KOe" customClass="TopSelledProductsViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DVx-es-J00">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="261"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,7 +291,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="261"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MostSelledTableViewCell" rowHeight="104" id="6gP-On-ASI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopSelledProductTableViewCell" rowHeight="104" id="6gP-On-ASI" customClass="TopSelledProductTableViewCell" customModule="Lodjinha" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6gP-On-ASI" id="rjT-25-p6L">
@@ -339,6 +339,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="SSE-kk-9WQ" secondAttribute="bottom" constant="40" id="sqa-h8-SBD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newPriceLabel" destination="OYy-cf-SXY" id="sDB-wU-pGV"/>
+                                            <outlet property="oldPriceLabel" destination="xp4-d1-fSD" id="zDJ-g4-Tcw"/>
+                                            <outlet property="productImageView" destination="aLv-1E-j0z" id="WzG-hR-BVc"/>
+                                            <outlet property="productNameLabel" destination="SSE-kk-9WQ" id="S5B-6f-CZU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -352,6 +358,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OGF-2t-wJx"/>
                     </view>
+                    <connections>
+                        <outlet property="topProductsTableView" destination="KLX-gg-fbj" id="SgZ-LC-mGP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFn-Bn-lwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
