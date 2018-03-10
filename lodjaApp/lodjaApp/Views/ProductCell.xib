@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="75" id="ehP-1a-hxL" customClass="ProductCell" customModule="lodjaApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ehP-1a-hxL" id="ptO-2B-8q1">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PYm-pw-NLn">
+                        <rect key="frame" x="8" y="8" width="55" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="MIQ-h8-aIM"/>
+                            <constraint firstAttribute="width" constant="55" id="UQW-pZ-ULI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do produto com uma descrição grandona" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ina-bl-0AJ">
+                        <rect key="frame" x="79" y="10" width="288" height="36"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De: 999,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGb-YZ-MBA">
+                        <rect key="frame" x="79" y="50" width="59" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por: 9999,98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrX-jr-m0u">
+                        <rect key="frame" x="227.5" y="46.5" width="115.5" height="21.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <color key="textColor" red="1" green="0.34901960780000002" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ina-bl-0AJ" firstAttribute="top" secondItem="ptO-2B-8q1" secondAttribute="top" constant="10" id="0uG-3w-8Vg"/>
+                    <constraint firstItem="Ina-bl-0AJ" firstAttribute="leading" secondItem="PYm-pw-NLn" secondAttribute="trailing" constant="16" id="DO9-uN-9vd"/>
+                    <constraint firstItem="PYm-pw-NLn" firstAttribute="centerY" secondItem="ptO-2B-8q1" secondAttribute="centerY" id="J1o-80-3ax"/>
+                    <constraint firstItem="CGb-YZ-MBA" firstAttribute="top" secondItem="Ina-bl-0AJ" secondAttribute="bottom" constant="4" id="LWB-Tq-M7M"/>
+                    <constraint firstItem="CGb-YZ-MBA" firstAttribute="leading" secondItem="PYm-pw-NLn" secondAttribute="trailing" constant="16" id="Q5n-16-5No"/>
+                    <constraint firstItem="PYm-pw-NLn" firstAttribute="leading" secondItem="ptO-2B-8q1" secondAttribute="leading" constant="8" id="VDX-WU-MOp"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KrX-jr-m0u" secondAttribute="trailing" constant="16" id="mGM-BO-Lb2"/>
+                    <constraint firstItem="KrX-jr-m0u" firstAttribute="centerY" secondItem="CGb-YZ-MBA" secondAttribute="centerY" id="mZD-4b-dzJ"/>
+                    <constraint firstAttribute="trailing" secondItem="Ina-bl-0AJ" secondAttribute="trailing" constant="8" id="v0Y-Vs-3um"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="currentPrice" destination="KrX-jr-m0u" id="JPe-db-ne4"/>
+                <outlet property="previousPrice" destination="CGb-YZ-MBA" id="Imo-Dt-kPY"/>
+                <outlet property="productImage" destination="PYm-pw-NLn" id="4eq-QT-DHd"/>
+                <outlet property="productName" destination="Ina-bl-0AJ" id="iKz-sq-Qzn"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
