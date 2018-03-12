@@ -18,10 +18,11 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var newPriceLabel: UILabel!
     @IBOutlet weak var productDetailsTextView: UITextView!
     @IBOutlet weak var detailTitleLabel: UILabel!
+    @IBOutlet weak var bookProductButton: UIButton!
     
     // MARK: - Properties
     private var selectedProduct : Product?
-    
+    private var detailsManager = DetailsManager(maxConcurrentOperationCount: 100)
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -30,13 +31,15 @@ class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadScreen()
-        setupBar()
+        setupBarAndButton()
     }
     
     // MARK: - General Methods
-    private func setupBar() {
+    private func setupBarAndButton() {
         navigationController?.navigationBar.tintColor = .white
         title = selectedProduct?.name ?? ""
+        bookProductButton.layer.cornerRadius = 10
+        bookProductButton.clipsToBounds = true
     }
     
     public func setSelectedProduct(_ product : Product?) {
@@ -71,5 +74,30 @@ class ProductDetailsViewController: UIViewController {
     }
     
     // MARK: - Actions
-
+    @IBAction func bookProduct(_ sender: UIButton) {
+        bookProductButton.isEnabled = false
+        guard let productId = selectedProduct?.id else {
+            return
+        }
+        
+        detailsManager.bookProduct(withId: productId) { (response) in
+            guard let requestResponse = response() else {
+                return
+            }
+            
+            let success = requestResponse.result == "success"
+            var messageTitle = "Produto reservado com sucesso"
+            
+            if !success {
+                messageTitle = "Por favor, tente novamente!"
+            }
+            let alertController = UIAlertController(title: messageTitle, message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true)
+            self.bookProductButton.isEnabled = true
+        }
+    }
+    
 }

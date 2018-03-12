@@ -64,4 +64,17 @@ class ProductBusiness {
         
     }
     
+    public func bookProduct(withId id : Int, completion : @escaping BookProductCallback) {
+        guard let url = URL(string: ApiProvider.productUrl + String(describing: id)) else {
+            print("Failed to get url")
+            return
+        }
+        
+        ProductApiProvider.bookProduct(url: url) { (response) in
+            completion { response() }
+        }
+        
+        
+    }
+    
 }

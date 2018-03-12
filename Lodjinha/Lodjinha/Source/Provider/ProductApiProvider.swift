@@ -11,6 +11,7 @@ import Alamofire
 
 typealias ProductsCallback = (@escaping () -> ProductList?) -> Void
 typealias ProductDetailCallback = (@escaping () -> Product?) -> Void
+typealias BookProductCallback = (@escaping () -> BookProductResponse?) -> Void
 
 class ProductApiProvider {
     
@@ -47,6 +48,25 @@ class ProductApiProvider {
             }
             
             completion { product }
+        }
+        
+    }
+    
+    static func bookProduct(url : URL, completion : @escaping BookProductCallback) {
+        
+        Alamofire.request(url, method: .post, encoding: URLEncoding.httpBody).validate().responseData { (response) in
+            guard let data = response.data else {
+                print("Failed to get data!")
+                return
+            }
+            
+            guard let bookResponse = try? JSONDecoder().decode(BookProductResponse.self, from: data) else {
+                print("Failed to parse book response!")
+                return
+            }
+            
+            completion { bookResponse }
+            
         }
         
     }

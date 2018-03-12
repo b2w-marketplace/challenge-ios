@@ -24,4 +24,12 @@ class DetailsManager : BaseManager {
         }
     }
     
+    public func bookProduct(withId id : Int, completion : @escaping BookProductCallback) {
+        addOperation {
+            self.productBusiness.bookProduct(withId: id, completion: { (response) in
+                completion(response)
+            })
+        }
+    }
+    
 }
