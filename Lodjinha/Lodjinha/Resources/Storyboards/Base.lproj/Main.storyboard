@@ -104,7 +104,7 @@
         <!--a Lodjinha-->
         <scene sceneID="9Nt-Je-A10">
             <objects>
-                <viewController id="ZkT-lJ-IHu" customClass="HomeViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="ZkT-lJ-IHu" customClass="HomeViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="psa-CR-x3t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -410,6 +410,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="SSE-kk-9WQ" secondAttribute="bottom" constant="40" id="sqa-h8-SBD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="ProductCell"/>
                                         <connections>
                                             <outlet property="newPriceLabel" destination="OYy-cf-SXY" id="Asz-NX-CAh"/>
                                             <outlet property="oldPriceLabel" destination="xp4-d1-fSD" id="pbK-jy-X1g"/>

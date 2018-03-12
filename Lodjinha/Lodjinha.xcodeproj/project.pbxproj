@@ -46,8 +46,27 @@
 		0EDEC8B02055F69500C7920B /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDEC8AF2055F69500C7920B /* ProductTableViewCell.swift */; };
 		0EDEC8B22055F7B400C7920B /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDEC8B12055F7B400C7920B /* ProductTableViewCell.xib */; };
 		0EDEC8B4205606A100C7920B /* BookProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDEC8B3205606A100C7920B /* BookProductResponse.swift */; };
+		0EDEC8BC2056113C00C7920B /* LodjinhaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDEC8BB2056113C00C7920B /* LodjinhaUITests.swift */; };
+		0EDEC8CA205614D200C7920B /* LodjinhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDEC8C9205614D200C7920B /* LodjinhaTests.swift */; };
 		CEF113B7B5C22B13C91A5802 /* Pods_Lodjinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3DA6229252F0739035CB66 /* Pods_Lodjinha.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EDEC8BE2056113C00C7920B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E8086F62051B9F3002D6167 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E8086FD2051B9F3002D6167;
+			remoteInfo = Lodjinha;
+		};
+		0EDEC8CC205614D300C7920B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E8086F62051B9F3002D6167 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E8086FD2051B9F3002D6167;
+			remoteInfo = Lodjinha;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0E140F002052C4E200CC446E /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
@@ -91,6 +110,12 @@
 		0EDEC8AF2055F69500C7920B /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		0EDEC8B12055F7B400C7920B /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		0EDEC8B3205606A100C7920B /* BookProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookProductResponse.swift; sourceTree = "<group>"; };
+		0EDEC8B92056113C00C7920B /* LodjinhaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EDEC8BB2056113C00C7920B /* LodjinhaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaUITests.swift; sourceTree = "<group>"; };
+		0EDEC8BD2056113C00C7920B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EDEC8C7205614D200C7920B /* LodjinhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EDEC8C9205614D200C7920B /* LodjinhaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaTests.swift; sourceTree = "<group>"; };
+		0EDEC8CB205614D300C7920B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62525857336BE01FBCFDDF96 /* Pods-Lodjinha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lodjinha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lodjinha/Pods-Lodjinha.debug.xcconfig"; sourceTree = "<group>"; };
 		AB3DA6229252F0739035CB66 /* Pods_Lodjinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lodjinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D9DDB5AB2D704FA0CE087F /* Pods-Lodjinha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lodjinha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lodjinha/Pods-Lodjinha.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +127,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF113B7B5C22B13C91A5802 /* Pods_Lodjinha.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EDEC8B62056113C00C7920B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EDEC8C4205614D200C7920B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +370,8 @@
 			isa = PBXGroup;
 			children = (
 				0E8087002051B9F3002D6167 /* Lodjinha */,
+				0EDEC8BA2056113C00C7920B /* LodjinhaUITests */,
+				0EDEC8C8205614D200C7920B /* LodjinhaTests */,
 				0E8086FF2051B9F3002D6167 /* Products */,
 				18F60EAB732CB8977D43F196 /* Pods */,
 				E868D3A183F90111F0134481 /* Frameworks */,
@@ -341,6 +382,8 @@
 			isa = PBXGroup;
 			children = (
 				0E8086FE2051B9F3002D6167 /* Lodjinha.app */,
+				0EDEC8B92056113C00C7920B /* LodjinhaUITests.xctest */,
+				0EDEC8C7205614D200C7920B /* LodjinhaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -405,6 +448,24 @@
 			path = ProductListByCategory;
 			sourceTree = "<group>";
 		};
+		0EDEC8BA2056113C00C7920B /* LodjinhaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0EDEC8BB2056113C00C7920B /* LodjinhaUITests.swift */,
+				0EDEC8BD2056113C00C7920B /* Info.plist */,
+			);
+			path = LodjinhaUITests;
+			sourceTree = "<group>";
+		};
+		0EDEC8C8205614D200C7920B /* LodjinhaTests */ = {
+			isa = PBXGroup;
+			children = (
+				0EDEC8C9205614D200C7920B /* LodjinhaTests.swift */,
+				0EDEC8CB205614D300C7920B /* Info.plist */,
+			);
+			path = LodjinhaTests;
+			sourceTree = "<group>";
+		};
 		18F60EAB732CB8977D43F196 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +506,42 @@
 			productReference = 0E8086FE2051B9F3002D6167 /* Lodjinha.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0EDEC8B82056113C00C7920B /* LodjinhaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EDEC8C02056113C00C7920B /* Build configuration list for PBXNativeTarget "LodjinhaUITests" */;
+			buildPhases = (
+				0EDEC8B52056113C00C7920B /* Sources */,
+				0EDEC8B62056113C00C7920B /* Frameworks */,
+				0EDEC8B72056113C00C7920B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0EDEC8BF2056113C00C7920B /* PBXTargetDependency */,
+			);
+			name = LodjinhaUITests;
+			productName = LodjinhaUITests;
+			productReference = 0EDEC8B92056113C00C7920B /* LodjinhaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		0EDEC8C6205614D200C7920B /* LodjinhaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EDEC8CE205614D300C7920B /* Build configuration list for PBXNativeTarget "LodjinhaTests" */;
+			buildPhases = (
+				0EDEC8C3205614D200C7920B /* Sources */,
+				0EDEC8C4205614D200C7920B /* Frameworks */,
+				0EDEC8C5205614D200C7920B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0EDEC8CD205614D300C7920B /* PBXTargetDependency */,
+			);
+			name = LodjinhaTests;
+			productName = LodjinhaTests;
+			productReference = 0EDEC8C7205614D200C7920B /* LodjinhaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -458,6 +555,16 @@
 					0E8086FD2051B9F3002D6167 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					0EDEC8B82056113C00C7920B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0E8086FD2051B9F3002D6167;
+					};
+					0EDEC8C6205614D200C7920B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0E8086FD2051B9F3002D6167;
 					};
 				};
 			};
@@ -475,6 +582,8 @@
 			projectRoot = "";
 			targets = (
 				0E8086FD2051B9F3002D6167 /* Lodjinha */,
+				0EDEC8B82056113C00C7920B /* LodjinhaUITests */,
+				0EDEC8C6205614D200C7920B /* LodjinhaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -491,6 +600,20 @@
 				0EDEC8A12055BB0500C7920B /* ProductDetailsViewController.xib in Resources */,
 				0E8087092051B9F3002D6167 /* Assets.xcassets in Resources */,
 				0E8087072051B9F3002D6167 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EDEC8B72056113C00C7920B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EDEC8C5205614D200C7920B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +715,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0EDEC8B52056113C00C7920B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EDEC8BC2056113C00C7920B /* LodjinhaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EDEC8C3205614D200C7920B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EDEC8CA205614D200C7920B /* LodjinhaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0EDEC8BF2056113C00C7920B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E8086FD2051B9F3002D6167 /* Lodjinha */;
+			targetProxy = 0EDEC8BE2056113C00C7920B /* PBXContainerItemProxy */;
+		};
+		0EDEC8CD205614D300C7920B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E8086FD2051B9F3002D6167 /* Lodjinha */;
+			targetProxy = 0EDEC8CC205614D300C7920B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0E8087052051B9F3002D6167 /* Main.storyboard */ = {
@@ -753,6 +905,68 @@
 			};
 			name = Release;
 		};
+		0EDEC8C12056113C00C7920B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AH86L34EQ;
+				INFOPLIST_FILE = LodjinhaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guihsoft.LodjinhaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lodjinha;
+			};
+			name = Debug;
+		};
+		0EDEC8C22056113C00C7920B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AH86L34EQ;
+				INFOPLIST_FILE = LodjinhaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guihsoft.LodjinhaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lodjinha;
+			};
+			name = Release;
+		};
+		0EDEC8CF205614D300C7920B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AH86L34EQ;
+				INFOPLIST_FILE = LodjinhaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guihsoft.LodjinhaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lodjinha.app/Lodjinha";
+			};
+			name = Debug;
+		};
+		0EDEC8D0205614D300C7920B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AH86L34EQ;
+				INFOPLIST_FILE = LodjinhaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guihsoft.LodjinhaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lodjinha.app/Lodjinha";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -770,6 +984,24 @@
 			buildConfigurations = (
 				0E8087112051B9F3002D6167 /* Debug */,
 				0E8087122051B9F3002D6167 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EDEC8C02056113C00C7920B /* Build configuration list for PBXNativeTarget "LodjinhaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EDEC8C12056113C00C7920B /* Debug */,
+				0EDEC8C22056113C00C7920B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EDEC8CE205614D300C7920B /* Build configuration list for PBXNativeTarget "LodjinhaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EDEC8CF205614D300C7920B /* Debug */,
+				0EDEC8D0205614D300C7920B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

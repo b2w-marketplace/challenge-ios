@@ -13,6 +13,12 @@ struct Category : Codable {
     var description : String
     var imageUrl : String
     
+    init() {
+        self.id = 0
+        self.description = ""
+        self.imageUrl = ""
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id
         case description = "descricao"

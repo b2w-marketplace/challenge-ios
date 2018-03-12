@@ -90,6 +90,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed9-nm-4CO">
                             <rect key="frame" x="8" y="609" width="359" height="50"/>
                             <color key="backgroundColor" red="0.43137254899999999" green="0.16862745100000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" identifier="BookProductButton"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="jFT-n8-C0Q"/>
                             </constraints>
@@ -103,6 +104,7 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov0-p7-OJ5">
                             <rect key="frame" x="12" y="222" width="351" height="30"/>
+                            <accessibility key="accessibilityConfiguration" identifier="TitleLabel"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="KQk-8N-6ws"/>
                             </constraints>

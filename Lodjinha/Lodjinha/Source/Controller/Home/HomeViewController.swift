@@ -49,7 +49,6 @@ class HomeViewController: UIViewController {
         
         navView.addSubview(imageView)
         navView.addSubview(label)
-        navView.center = navigationController!.navigationBar.center
         
         navigationItem.titleView = navView
         navView.sizeToFit()
