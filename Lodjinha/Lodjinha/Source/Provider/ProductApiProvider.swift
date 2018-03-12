@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 typealias ProductsCallback = (@escaping () -> ProductList?) -> Void
+typealias ProductDetailCallback = (@escaping () -> Product?) -> Void
 
 class ProductApiProvider {
     
@@ -28,6 +29,24 @@ class ProductApiProvider {
 
             completion { products }
 
+        }
+        
+    }
+    
+    static func getProductDetails(url : URL, completion : @escaping ProductDetailCallback) {
+        
+        Alamofire.request(url).validate().responseData { (response) in
+            guard let data = response.data else {
+                print("Failed to get data!")
+                return
+            }
+            
+            guard let product = try? JSONDecoder().decode(Product.self, from: data) else {
+                print("Failed to parse product detail!")
+                return
+            }
+            
+            completion { product }
         }
         
     }

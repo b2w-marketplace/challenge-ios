@@ -22,12 +22,16 @@ struct ApiProvider {
     
     /// product URL
     static var productUrl: String {
-        return "https://alodjinha.herokuapp.com/produto"
+        return "https://alodjinha.herokuapp.com/produto/"
     }
     
     /// top selled products URL
     static var topSelledProductsUrl: String {
         return productUrl + "/maisvendidos"
+    }
+    
+    static var productsOfCategoryUrl: String {
+        return "https://alodjinha.herokuapp.com/produto?categoriaId="
     }
     
 }

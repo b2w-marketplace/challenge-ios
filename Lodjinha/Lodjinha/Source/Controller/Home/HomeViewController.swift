@@ -11,16 +11,19 @@ import UIKit
 class HomeViewController: UIViewController {
     
     // MARK: - Properties
-    private let homeManager = HomeManager(maxConcurrentOperationCount: 200)
-    private var banners : [Banner]?
-    private var categories : [Category]?
-    private var topSelledProducts : [Product]?
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScreen()
-        loadHomeScreen()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
     }
     
     // MARK: - General Methods
@@ -50,23 +53,6 @@ class HomeViewController: UIViewController {
         
         navigationItem.titleView = navView
         navView.sizeToFit()
-    }
-    
-    private func loadHomeScreen() {
-        loadBanners()
-        loadCategories()
-    }
-    
-    private func loadBanners() {
-        homeManager.fetchBanners { (banners) in
-            self.banners = banners()?.data
-        }
-    }
-    
-    private func loadCategories() {
-        homeManager.fetchCategories { (categories) in
-            self.categories = categories()?.data
-        }
     }
     
     // MARK: - Actions

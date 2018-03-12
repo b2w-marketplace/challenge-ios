@@ -27,3 +27,13 @@ func stopLoading() {
     showActivity.removeFromSuperview()
     
 }
+
+func createGradient(frame : CGRect, forView view : UIView) {
+    let gradient = CAGradientLayer()
+    
+    gradient.frame = frame
+    gradient.locations = [0, 1]
+    gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+    
+    view.layer.insertSublayer(gradient, at: 0)
+}

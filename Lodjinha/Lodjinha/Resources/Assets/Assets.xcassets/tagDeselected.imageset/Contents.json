@@ -7,12 +7,11 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "tagDeselected@2x.png",
+      "filename" : "tagDeselected@3x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "tagDeselected@3x.png",
       "scale" : "3x"
     }
   ],

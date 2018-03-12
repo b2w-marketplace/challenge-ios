@@ -1,24 +1,38 @@
 //
-//  TopSelledProductTableViewCell.swift
+//  ProductTableViewCell.swift
 //  Lodjinha
 //
-//  Created by Guilherme Antunes on 10/03/18.
+//  Created by Guilherme Antunes on 11/03/18.
 //  Copyright © 2018 Guilherme Antunes. All rights reserved.
 //
 
 import UIKit
-import AlamofireImage
 
-class TopSelledProductTableViewCell: UITableViewCell, Identifiable {
+class ProductTableViewCell: UITableViewCell, Identifiable {
 
     // MARK: - Properties
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var oldPriceLabel: UILabel!
     @IBOutlet weak var newPriceLabel: UILabel!
+    private var product : Product?
     
     // MARK: - General Methods
     public func initWithModel(_ model : Product) {
+        product = model
+        loadScreen()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        loadScreen()
+    }
+    
+    private func loadScreen() {
+        guard let model = product else {
+            return
+        }
+        
         productNameLabel.text = model.name
         
         let attributedString = NSMutableAttributedString(string: "De: " + String(format: "%.2f", arguments: [model.oldPrice]))
