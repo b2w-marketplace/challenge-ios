@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Sobre-->
         <scene sceneID="mao-98-7uV">
             <objects>
                 <viewController id="Qnb-cZ-E6L" sceneMemberID="viewController">
@@ -20,11 +20,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Bzr-qD-Aki"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="wsL-tl-DBt"/>
+                    <tabBarItem key="tabBarItem" title="Sobre" image="About Icon" id="wsL-tl-DBt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOv-Ae-nPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="636"/>
+            <point key="canvasLocation" x="337" y="685"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="M73-Wd-X7S">
@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="-554" y="457"/>
         </scene>
-        <!--Root View Controller-->
+        <!--a Lodjinha-->
         <scene sceneID="Tn3-HI-AcH">
             <objects>
                 <tableViewController id="LYU-fJ-YLH" customClass="HomeTableViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
@@ -332,7 +332,7 @@
                             <outlet property="delegate" destination="LYU-fJ-YLH" id="cLM-5H-ZNT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="SkU-MD-EmM"/>
+                    <navigationItem key="navigationItem" title="a Lodjinha" id="SkU-MD-EmM"/>
                     <connections>
                         <outlet property="bannerActivityIndicator" destination="hY2-hL-9NL" id="zn5-6j-VDJ"/>
                         <outlet property="bannerLoadingLabel" destination="DdS-RQ-4d5" id="XIL-ir-UoM"/>
@@ -606,16 +606,17 @@
             </objects>
             <point key="canvasLocation" x="2997.5999999999999" y="-47.226386806596707"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="kbo-Of-x4g">
             <objects>
                 <navigationController id="kxz-lJ-ERx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5Zj-1s-7xu"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home Icon" id="5Zj-1s-7xu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T3y-8P-BkS">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.38823529411764707" green="0.25882352941176467" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
@@ -631,4 +632,8 @@
             <point key="canvasLocation" x="338" y="-37"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="About Icon" width="12" height="12"/>
+        <image name="Home Icon" width="12" height="11"/>
+    </resources>
 </document>

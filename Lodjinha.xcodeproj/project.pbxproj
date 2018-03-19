@@ -16,6 +16,7 @@
 		41127E2A206050ED004D2B71 /* UpperProductDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41127E29206050ED004D2B71 /* UpperProductDetailsTableViewCell.swift */; };
 		41127E2C206051C8004D2B71 /* PrincingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41127E2B206051C8004D2B71 /* PrincingTableViewCell.swift */; };
 		41127E2E2060521A004D2B71 /* BottomProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41127E2D2060521A004D2B71 /* BottomProductTableViewCell.swift */; };
+		41127E3020606F82004D2B71 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41127E2F20606D9E004D2B71 /* Pacifico-Regular.ttf */; };
 		41762241205FFA4F00B5254B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41762240205FFA4F00B5254B /* AppDelegate.swift */; };
 		41762246205FFA4F00B5254B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41762244205FFA4F00B5254B /* Main.storyboard */; };
 		41762248205FFA4F00B5254B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41762247205FFA4F00B5254B /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		41127E29206050ED004D2B71 /* UpperProductDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperProductDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		41127E2B206051C8004D2B71 /* PrincingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincingTableViewCell.swift; sourceTree = "<group>"; };
 		41127E2D2060521A004D2B71 /* BottomProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomProductTableViewCell.swift; sourceTree = "<group>"; };
+		41127E2F20606D9E004D2B71 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		4176223D205FFA4F00B5254B /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41762240205FFA4F00B5254B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41762245205FFA4F00B5254B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				417622A62060075B00B5254B /* Lodjinha-Bridging-Header.h */,
 				41762244205FFA4F00B5254B /* Main.storyboard */,
 				41762247205FFA4F00B5254B /* Assets.xcassets */,
+				41127E2F20606D9E004D2B71 /* Pacifico-Regular.ttf */,
 				41762249205FFA4F00B5254B /* LaunchScreen.storyboard */,
 				4176224C205FFA4F00B5254B /* Info.plist */,
 				4176227F205FFB1200B5254B /* LodjinhaConfig.plist */,
@@ -369,6 +372,7 @@
 				41762248205FFA4F00B5254B /* Assets.xcassets in Resources */,
 				41762246205FFA4F00B5254B /* Main.storyboard in Resources */,
 				41762280205FFB1300B5254B /* LodjinhaConfig.plist in Resources */,
+				41127E3020606F82004D2B71 /* Pacifico-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

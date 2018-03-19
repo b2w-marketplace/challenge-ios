@@ -28,7 +28,16 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavBarAppearence()
+        
         setupData()
+    }
+    
+    func setupNavBarAppearence() {
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Pacifico-Regular", size: 20.0)!, NSAttributedStringKey.foregroundColor : UIColor.white]
+        
+        let navBarLogo = UIImageView(image: UIImage(named: "Navbar Logo"))
+        self.navigationItem.titleView = navBarLogo
     }
     
     func setupData() {
