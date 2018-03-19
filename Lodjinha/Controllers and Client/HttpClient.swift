@@ -22,10 +22,9 @@ class HttpClient: NSObject {
         }
         let configuration = Configuration()
         
-        let url = URL(string: configuration.baseURL + path) as! URLConvertible
+        let url = URL(string: configuration.baseURL + path)
         
-        Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: configuration.headers).validate().responseJSON { (response) in
-            
+        Alamofire.request(url!, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: configuration.headers).validate().responseJSON { (response) in
             if response.result.isSuccess {
                 guard let JSON = response.result.value else {
                     NSLog("Request is finished but didn't found any data on it!")
@@ -34,12 +33,40 @@ class HttpClient: NSObject {
                     
                     return
                 }
-                
                 success(JSON)
                 
             } else {
                 self.errorHandling(withResult: response.result)
 
+                failure("Ocorreu um problema, tente novamente mais tarde")
+            }
+        }
+    }
+    
+    func doPOST(withPath path: String!, parameters: Parameters?, sucessBlock success: @escaping (_ response: Any) -> Void, failureBlock failure: @escaping (_ errorMessage: String) -> Void) {
+        guard let path = path else {
+            NSLog("Fatal Error, no path in a GET method")
+            
+            return
+        }
+        let configuration = Configuration()
+        
+        let url = URL(string: configuration.baseURL + path)
+        
+        Alamofire.request(url!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: configuration.headers).validate().responseJSON { (response) in
+            if response.result.isSuccess {
+                guard let JSON = response.result.value else {
+                    NSLog("Request is finished but didn't found any data on it!")
+                    
+                    failure("Ocorreu um problema, tente novamente mais tarde")
+                    
+                    return
+                }
+                success(JSON)
+                
+            } else {
+                self.errorHandling(withResult: response.result)
+                
                 failure("Ocorreu um problema, tente novamente mais tarde")
             }
         }

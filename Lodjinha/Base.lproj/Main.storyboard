@@ -515,8 +515,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="O8k-Ss-D7K">
-                                <rect key="frame" x="0.0" y="64" width="375" height="499"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="533"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Loading Cell" rowHeight="90" id="L7c-nC-pFd">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="90"/>
@@ -604,15 +604,15 @@
                                             <outlet property="price" destination="p7r-5n-Ncl" id="uQC-uh-pZI"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Bottom Product Cell" rowHeight="219" id="gJ0-2P-ksG" customClass="BottomProductTableViewCell" customModule="Lodjinha" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="385.5" width="375" height="219"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Bottom Product Cell" rowHeight="280" id="gJ0-2P-ksG" customClass="BottomProductTableViewCell" customModule="Lodjinha" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="385.5" width="375" height="280"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gJ0-2P-ksG" id="Yc3-hu-RPK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="218.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggj-u6-NZK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="218.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </webView>
                                             </subviews>
@@ -634,17 +634,36 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wop-7w-AlA">
-                                <rect key="frame" x="0.0" y="571" width="375" height="96"/>
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-0I-LUl">
-                                        <rect key="frame" x="164" y="33" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-0I-LUl">
+                                        <rect key="frame" x="10" y="10" width="355" height="50"/>
+                                        <color key="backgroundColor" red="0.38823529410000002" green="0.25882352939999997" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Reservar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="bookProduct" destination="xXG-Xm-ngz" eventType="touchUpInside" id="563-9N-Y2V"/>
+                                        </connections>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="7lO-B8-wUR">
+                                        <rect key="frame" x="326" y="25" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.79669284330000001" green="0.79669284330000001" blue="0.79669284330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="brq-eP-mUt"/>
+                                    <constraint firstItem="aCv-0I-LUl" firstAttribute="top" secondItem="wop-7w-AlA" secondAttribute="top" constant="10" id="Eg7-hl-5yf"/>
+                                    <constraint firstAttribute="bottom" secondItem="aCv-0I-LUl" secondAttribute="bottom" constant="10" id="TCg-io-lqG"/>
+                                    <constraint firstAttribute="trailing" secondItem="aCv-0I-LUl" secondAttribute="trailing" constant="10" id="bOy-5j-YIe"/>
+                                    <constraint firstAttribute="height" constant="70" id="brq-eP-mUt"/>
+                                    <constraint firstItem="aCv-0I-LUl" firstAttribute="leading" secondItem="wop-7w-AlA" secondAttribute="leading" constant="10" id="yba-a0-Vrh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -652,7 +671,7 @@
                         <constraints>
                             <constraint firstItem="aqH-fU-SNe" firstAttribute="bottom" secondItem="wop-7w-AlA" secondAttribute="bottom" id="BDl-8J-IW5"/>
                             <constraint firstItem="wop-7w-AlA" firstAttribute="leading" secondItem="aqH-fU-SNe" secondAttribute="leading" id="CI8-hC-Cre"/>
-                            <constraint firstItem="wop-7w-AlA" firstAttribute="top" secondItem="O8k-Ss-D7K" secondAttribute="bottom" constant="8" id="HI3-Yw-Yix"/>
+                            <constraint firstItem="wop-7w-AlA" firstAttribute="top" secondItem="O8k-Ss-D7K" secondAttribute="bottom" id="HI3-Yw-Yix"/>
                             <constraint firstItem="aqH-fU-SNe" firstAttribute="trailing" secondItem="wop-7w-AlA" secondAttribute="trailing" id="ciw-vp-o5R"/>
                             <constraint firstItem="aqH-fU-SNe" firstAttribute="trailing" secondItem="O8k-Ss-D7K" secondAttribute="trailing" id="oPo-Dq-rJ1"/>
                             <constraint firstItem="aqH-fU-SNe" firstAttribute="top" secondItem="O8k-Ss-D7K" secondAttribute="top" id="sNH-bb-xhF"/>
@@ -664,12 +683,13 @@
                     <connections>
                         <outlet property="bookButton" destination="aCv-0I-LUl" id="9HK-Qh-Yf6"/>
                         <outlet property="bottomView" destination="wop-7w-AlA" id="d7x-mN-yyb"/>
+                        <outlet property="buttonActivityIndicator" destination="7lO-B8-wUR" id="dlE-1h-dks"/>
                         <outlet property="tableView" destination="O8k-Ss-D7K" id="qlD-ek-J6w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3p-L1-GL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3202" y="-28"/>
+            <point key="canvasLocation" x="3200.8000000000002" y="-28.335832083958024"/>
         </scene>
         <!--Home-->
         <scene sceneID="kbo-Of-x4g">
@@ -703,6 +723,6 @@
         <image name="Home Icon" width="12" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QaN-fx-5ba"/>
+        <segue reference="XEz-Cd-Rx7"/>
     </inferredMetricsTieBreakers>
 </document>

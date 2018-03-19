@@ -57,6 +57,7 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
 
             self.setupBannerUI()
         }) { (errorMessage) in
+            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
         }
     }
 
@@ -120,7 +121,7 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
             self.innerCollectionView.reloadData()
             
         }) { (errorMessage) in
-            //alertar aqui
+            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
         }
     }
     
@@ -163,7 +164,7 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
             self.tableView.reloadSections([1], with: .automatic)
             
         }) { (errorMessage) in
-            //
+            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
         }
     }
     
@@ -220,5 +221,16 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
             productDetailsVC.productId = selectedProductId
             
         }
+    }
+}
+
+extension UIViewController {
+    func presentDefaultAlert(withTitle title: String?, andMessage message: String?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 }

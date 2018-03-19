@@ -16,6 +16,8 @@ class ProductDetailsViewController: UIViewController, UITableViewDataSource, UIT
     
     @IBOutlet weak private var bookButton: UIButton!
     
+    @IBOutlet weak private var buttonActivityIndicator: UIActivityIndicatorView!
+    
     var productId: Int?
     
     var product: Product?
@@ -38,7 +40,7 @@ class ProductDetailsViewController: UIViewController, UITableViewDataSource, UIT
                 self.tableView.reloadData()
                 
             }, failureBlock: { (errorMessage) in
-                //
+                self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
             })
         }
     }
@@ -108,5 +110,20 @@ class ProductDetailsViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     
-    
+    @IBAction func bookProduct() {
+        bookButton.isEnabled = false
+        buttonActivityIndicator.startAnimating()
+        
+        DataHandler.instance.postProduct(with: productId, sucessBlock: { (message) in
+            self.presentDefaultAlert(withTitle: "Sucesso", andMessage: message)
+            
+            self.bookButton.isEnabled = true
+            self.buttonActivityIndicator.stopAnimating()
+        }) { (errorMessage) in
+            self.bookButton.isEnabled = true
+            self.buttonActivityIndicator.stopAnimating()
+            
+            self.presentDefaultAlert(withTitle: "Falhou", andMessage: errorMessage)
+        }
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 protocol GenericObjectSerializable {
     init?(fromJSON json: NSDictionary?)
@@ -84,11 +85,47 @@ class DataHandler: NSObject {
             failure(errorMessage)
         }
     }
+    
+    func postProduct(with productId: Int?, sucessBlock success: @escaping (_ response: String?) -> Void, failureBlock failure: @escaping (_ message: String) -> Void) {
+        var path = "produto"
+        if let productId = productId {
+            path += "/" + String(productId)
+        }
+
+        post(path: path, parameters: nil, sucessBlock: { (json) in
+            if json != nil {
+                success("Reserva confirmada")
+            }
+        }) { (errorMessage) in
+            failure(errorMessage)
+        }
+    }
 }
 
 extension DataHandler {
     func get(path: String, sucessBlock success: @escaping (_ response: Any?) -> Void, failureBlock failure: @escaping (_ message: String) -> Void) {
         HttpClient.instance.doGET(withPath: path, parameters: nil, sucessBlock:{ (response) in
+            guard let json = response as? NSDictionary else {
+                return
+            }
+            
+            guard let data: NSArray = json["data"] as? NSArray else {
+                NSLog("Didnt found data in response")
+                
+                if let product: Product = Product(fromJSON: json) {
+                    success(product)
+                }
+                
+                return
+            }
+            
+            success(data)
+            
+        } , failureBlock: failure)
+    }
+    
+    func post(path: String, parameters: Parameters?, sucessBlock success: @escaping (_ response: Any?) -> Void, failureBlock failure: @escaping (_ message: String) -> Void) {
+        HttpClient.instance.doPOST(withPath: path, parameters: parameters, sucessBlock:{ (response) in
             guard let json = response as? NSDictionary else {
                 return
             }

@@ -28,7 +28,7 @@ class ProductListTableViewController: UITableViewController {
             
             self.tableView.reloadSections([0], with: .automatic) //cooler than regular reloadData
         }) { (errorMessage) in
-            //
+            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
             
         }
     }

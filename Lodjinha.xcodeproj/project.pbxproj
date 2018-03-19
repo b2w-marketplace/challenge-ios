@@ -17,6 +17,7 @@
 		41127E2C206051C8004D2B71 /* PrincingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41127E2B206051C8004D2B71 /* PrincingTableViewCell.swift */; };
 		41127E2E2060521A004D2B71 /* BottomProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41127E2D2060521A004D2B71 /* BottomProductTableViewCell.swift */; };
 		41127E3020606F82004D2B71 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41127E2F20606D9E004D2B71 /* Pacifico-Regular.ttf */; };
+		41127E33206077C4004D2B71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41127E32206077C4004D2B71 /* QuartzCore.framework */; };
 		41762241205FFA4F00B5254B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41762240205FFA4F00B5254B /* AppDelegate.swift */; };
 		41762246205FFA4F00B5254B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41762244205FFA4F00B5254B /* Main.storyboard */; };
 		41762248205FFA4F00B5254B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41762247205FFA4F00B5254B /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		41127E2B206051C8004D2B71 /* PrincingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincingTableViewCell.swift; sourceTree = "<group>"; };
 		41127E2D2060521A004D2B71 /* BottomProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomProductTableViewCell.swift; sourceTree = "<group>"; };
 		41127E2F20606D9E004D2B71 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		41127E32206077C4004D2B71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4176223D205FFA4F00B5254B /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41762240205FFA4F00B5254B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41762245205FFA4F00B5254B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41127E33206077C4004D2B71 /* QuartzCore.framework in Frameworks */,
 				4176227C205FFAF100B5254B /* Hero.framework in Frameworks */,
 				41127E2020602648004D2B71 /* AlamofireImage.framework in Frameworks */,
 				41762279205FFAEA00B5254B /* Hero.framework in Frameworks */,
@@ -145,6 +148,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41127E31206077C3004D2B71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41127E32206077C4004D2B71 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		41762234205FFA4F00B5254B = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +163,7 @@
 				41762254205FFA4F00B5254B /* LodjinhaTests */,
 				4176225F205FFA4F00B5254B /* LodjinhaUITests */,
 				4176223E205FFA4F00B5254B /* Products */,
+				41127E31206077C3004D2B71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
