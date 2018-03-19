@@ -15,6 +15,8 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
 
     @IBOutlet weak private var pageControl: UIPageControl!
     @IBOutlet weak private var scrollView: UIScrollView!
+    @IBOutlet weak private var bannerActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak private var bannerLoadingLabel: UILabel!
     @IBOutlet weak private var innerCollectionView: UICollectionView!
     
     var banners: [Banner]?
@@ -36,6 +38,8 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
     }
 
     func requestBanners() {
+        pageControl.isHidden = true
+        
         DataHandler.instance.getBanners(sucessBlock: { (bannersList) in
             self.banners = bannersList
             
@@ -52,6 +56,9 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
         guard let banners = banners else {
             return
         }
+        pageControl.isHidden = false
+        bannerActivityIndicator.stopAnimating()
+        bannerLoadingLabel.isHidden = true
         
         var frame: CGRect = CGRect(x:0, y:0, width:0, height:0)
 
