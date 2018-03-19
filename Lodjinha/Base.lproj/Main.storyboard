@@ -9,22 +9,86 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pacifico-Regular.ttf">
+            <string>Pacifico-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Sobre-->
         <scene sceneID="mao-98-7uV">
             <objects>
-                <viewController id="Qnb-cZ-E6L" sceneMemberID="viewController">
+                <viewController title="Sobre" id="Qnb-cZ-E6L" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Zk-8K-KIO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="About Logo" translatesAutoresizingMaskIntoConstraints="NO" id="rbi-Rs-bot">
+                                <rect key="frame" x="80" y="113" width="215" height="228"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="228" id="o7c-On-bBl"/>
+                                    <constraint firstAttribute="width" constant="215" id="p4p-eU-R3l"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a Lodjinha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNF-Qa-TKb">
+                                <rect key="frame" x="99" y="371" width="177" height="70.5"/>
+                                <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="40"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel Driussi Giadas Novio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pe0-1j-G9m">
+                                <rect key="frame" x="78.5" y="555" width="218" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19 de março de 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yll-4p-kgQ">
+                                <rect key="frame" x="115" y="587" width="144" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eNF-Qa-TKb" firstAttribute="top" secondItem="rbi-Rs-bot" secondAttribute="bottom" constant="30" id="5I9-SS-nA6"/>
+                            <constraint firstItem="Bzr-qD-Aki" firstAttribute="bottom" secondItem="Yll-4p-kgQ" secondAttribute="bottom" constant="13" id="DFr-AL-v80"/>
+                            <constraint firstItem="pe0-1j-G9m" firstAttribute="centerX" secondItem="Yll-4p-kgQ" secondAttribute="centerX" id="E3E-gd-qQ9"/>
+                            <constraint firstItem="eNF-Qa-TKb" firstAttribute="centerX" secondItem="rbi-Rs-bot" secondAttribute="centerX" id="Wlc-qt-rOi"/>
+                            <constraint firstItem="rbi-Rs-bot" firstAttribute="centerX" secondItem="Bzr-qD-Aki" secondAttribute="centerX" id="bJW-kF-YWN"/>
+                            <constraint firstItem="Yll-4p-kgQ" firstAttribute="top" secondItem="pe0-1j-G9m" secondAttribute="bottom" constant="11" id="bYg-aE-YHW"/>
+                            <constraint firstItem="Yll-4p-kgQ" firstAttribute="centerX" secondItem="Bzr-qD-Aki" secondAttribute="centerX" id="btG-Fm-Swz"/>
+                            <constraint firstItem="Bzr-qD-Aki" firstAttribute="top" secondItem="rbi-Rs-bot" secondAttribute="bottom" constant="-277" id="cJY-B5-H41"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bzr-qD-Aki"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sobre" image="About Icon" id="wsL-tl-DBt"/>
+                    <navigationItem key="navigationItem" id="VbU-0Y-ZDm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOv-Ae-nPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337" y="685"/>
+            <point key="canvasLocation" x="1015" y="700"/>
+        </scene>
+        <!--Sobre-->
+        <scene sceneID="I55-g2-oU4">
+            <objects>
+                <navigationController id="X5o-M6-qfR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sobre" image="About Icon" id="KV9-rL-RAv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jxd-8U-lCk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.38823529410000002" green="0.25882352939999997" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qnb-cZ-E6L" kind="relationship" relationship="rootViewController" id="a7n-uY-zT8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhh-hT-Oot" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="707"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="M73-Wd-X7S">
@@ -37,7 +101,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="kxz-lJ-ERx" kind="relationship" relationship="viewControllers" id="Rew-to-EfD"/>
-                        <segue destination="Qnb-cZ-E6L" kind="relationship" relationship="viewControllers" id="mEz-X3-hu6"/>
+                        <segue destination="X5o-M6-qfR" kind="relationship" relationship="viewControllers" id="g8N-om-uDf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0f-zE-1CT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -634,6 +698,7 @@
     </scenes>
     <resources>
         <image name="About Icon" width="12" height="12"/>
+        <image name="About Logo" width="71" height="76"/>
         <image name="Home Icon" width="12" height="11"/>
     </resources>
 </document>
