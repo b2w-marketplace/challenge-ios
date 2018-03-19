@@ -24,6 +24,7 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
     var products: [Product]?
     
     var selectedCategoryId: Int = 0
+    var selectedProductId: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -197,6 +198,15 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
         }
         return super.tableView(tableView, cellForRowAt: indexPath)
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            let selectedProduct = products![indexPath.row]
+            selectedProductId = selectedProduct.id!
+            
+            performSegue(withIdentifier: "Product Details Segue", sender: self)
+        }
+    }
 
     //MARK: Segue things
     
@@ -204,6 +214,10 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
         if segue.identifier == "Product List Segue" {
             let productListViewController = segue.destination as! ProductListTableViewController
             productListViewController.categoryId = selectedCategoryId
+            
+        } else if segue.identifier == "Product Details Segue" {
+            let productDetailsVC = segue.destination as! ProductDetailsViewController
+            productDetailsVC.productId = selectedProductId
             
         }
     }

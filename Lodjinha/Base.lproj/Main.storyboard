@@ -404,6 +404,7 @@
                         <outlet property="pageControl" destination="ksR-ip-3MP" id="0og-f0-GA9"/>
                         <outlet property="scrollView" destination="zNp-RY-TEC" id="4bV-3p-of6"/>
                         <segue destination="FCU-pX-mxG" kind="show" identifier="Product List Segue" id="iZw-Ds-cVE"/>
+                        <segue destination="xXG-Xm-ngz" kind="show" identifier="Product Details Segue" id="XEz-Cd-Rx7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JOR-Z6-pAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -413,7 +414,7 @@
         <!--Product List Table View Controller-->
         <scene sceneID="BNW-ke-1op">
             <objects>
-                <tableViewController id="FCU-pX-mxG" customClass="ProductListTableViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="FCU-pX-mxG" customClass="ProductListTableViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PYe-wj-uUy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -508,7 +509,7 @@
         <!--Product Details View Controller-->
         <scene sceneID="RHf-aj-e2Q">
             <objects>
-                <viewController id="xXG-Xm-ngz" customClass="ProductDetailsViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="xXG-Xm-ngz" customClass="ProductDetailsViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hRe-7x-org">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -668,7 +669,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3p-L1-GL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2997.5999999999999" y="-47.226386806596707"/>
+            <point key="canvasLocation" x="3202" y="-28"/>
         </scene>
         <!--Home-->
         <scene sceneID="kbo-Of-x4g">
@@ -701,4 +702,7 @@
         <image name="About Logo" width="71" height="76"/>
         <image name="Home Icon" width="12" height="11"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QaN-fx-5ba"/>
+    </inferredMetricsTieBreakers>
 </document>
