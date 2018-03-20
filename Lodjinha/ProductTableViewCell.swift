@@ -42,6 +42,8 @@ class ProductTableViewCell: UITableViewCell {
             if let formattedPrice = numberFormatter.string(from: NSNumber(value: product.price!)) {
                 price.text = "Por: R$" + formattedPrice + ",00"
             }
+            
+            productName.text = product.name
         }
     }
 

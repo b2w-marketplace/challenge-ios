@@ -44,7 +44,7 @@ class ProductDetailsViewController: UIViewController, UITableViewDataSource, UIT
                 self.tableView.reloadData()
                 
             }, failureBlock: { (errorMessage) in
-                self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
+                self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil, handler: nil)
             })
         }
     }
@@ -119,7 +119,7 @@ class ProductDetailsViewController: UIViewController, UITableViewDataSource, UIT
         buttonActivityIndicator.startAnimating()
         
         DataHandler.instance.postProduct(with: productId, sucessBlock: { (message) in
-            self.presentDefaultAlert(withTitle: "Sucesso", andMessage: message)
+            self.presentDefaultAlert(withTitle: "Sucesso", andMessage: nil, handler: nil)
             
             self.bookButton.isEnabled = true
             self.buttonActivityIndicator.stopAnimating()
@@ -127,7 +127,7 @@ class ProductDetailsViewController: UIViewController, UITableViewDataSource, UIT
             self.bookButton.isEnabled = true
             self.buttonActivityIndicator.stopAnimating()
             
-            self.presentDefaultAlert(withTitle: "Falhou", andMessage: errorMessage)
+            self.presentDefaultAlert(withTitle: "Falhou", andMessage: nil, handler: nil)
         }
     }
 }

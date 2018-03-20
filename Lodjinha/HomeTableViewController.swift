@@ -57,7 +57,7 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
 
             self.setupBannerUI()
         }) { (errorMessage) in
-            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
+            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil, handler: nil)
         }
     }
 
@@ -121,7 +121,7 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
             self.innerCollectionView.reloadData()
             
         }) { (errorMessage) in
-            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
+            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil, handler: nil)
         }
     }
     
@@ -162,7 +162,7 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
             self.tableView.reloadData()
             
         }) { (errorMessage) in
-            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
+            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil, handler: nil)
         }
     }
     
@@ -233,10 +233,11 @@ extension UINavigationItem {
 }
 
 extension UIViewController {
-    func presentDefaultAlert(withTitle title: String?, andMessage message: String?) {
+    func presentDefaultAlert(withTitle title: String?, andMessage message: String?, handler:((_: UIAlertAction) -> Void)?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+    
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: handler)
+
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true, completion: nil)

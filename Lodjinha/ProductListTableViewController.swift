@@ -15,6 +15,10 @@ class ProductListTableViewController: UITableViewController {
     var products: [Product]?
     
     var selectedProduct: Product?
+    
+    var loadingNewData: Bool = false
+    
+    var endOfItems: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +31,19 @@ class ProductListTableViewController: UITableViewController {
     }
     
     func setupData() {
-        DataHandler.instance.getProducts(with: category.id, sucessBlock: { (productList) in
+        DataHandler.instance.getProducts(withCategoryId: category.id, productOffset: 0, sucessBlock: { (productList) in
             self.products = productList
+            
+            if self.products?.count == 0 {
+                
+                self.presentDefaultAlert(withTitle: "Desculpe, não encontramos produtos para essa categoria", andMessage: nil, handler: { (action) in
+                    self.navigationController?.popToRootViewController(animated: true)
+                })
+            }
             
             self.tableView.reloadSections([0], with: .automatic) //cooler than regular reloadData
         }) { (errorMessage) in
-            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
-            
+            self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil, handler: nil)
         }
     }
     
@@ -67,6 +77,10 @@ class ProductListTableViewController: UITableViewController {
             return tableView.dequeueReusableCell(withIdentifier: "Loading Cell", for: indexPath)
         }
         
+        if loadingNewData {
+            return tableView.dequeueReusableCell(withIdentifier: "Loading Cell", for: indexPath)
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Product Cell", for: indexPath) as! ProductTableViewCell
         cell.customObject = products[indexPath.row]
 
@@ -78,13 +92,56 @@ class ProductListTableViewController: UITableViewController {
         
         performSegue(withIdentifier: "Product Details Segue", sender: self)
     }
+
+    //MARK: Load more methods
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let products = products else {
+            return
+        }
+        
+        let lastElement = products.count - 1
+        
+        if !loadingNewData && indexPath.row == lastElement && !endOfItems {
+            loadingNewData = true
+            loadMore()
+        }
+    }
+    
+    func loadMore() {
+        DataHandler.instance.getProducts(withCategoryId: category.id, productOffset: products?.count, sucessBlock: { (productList) in
+            guard let productList = productList else {
+                self.loadingNewData = false
+                self.endOfItems = true
+                
+                self.tableView.reloadData()
+                
+                return
+            }
+            
+            if productList.count > 0 {
+                self.products! += productList
+                self.loadingNewData = false
+                
+                self.tableView.reloadData()
+            } else {
+                self.loadingNewData = false
+                self.endOfItems = true
+
+                self.tableView.reloadData()
+            }
+        }) { (errorMessage) in
+            self.loadingNewData = false
+            
+            self.presentDefaultAlert(withTitle: errorMessage, andMessage: errorMessage, handler: nil)
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.navigationItem.fixBackButtonTitle()
         
         if segue.identifier == "Product Details Segue" {
             let productDetailsVC = segue.destination as! ProductDetailsViewController
-            //141 66 44
             productDetailsVC.productId = selectedProduct?.id
         }
 

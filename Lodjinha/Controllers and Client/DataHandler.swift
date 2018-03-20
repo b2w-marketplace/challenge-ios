@@ -17,12 +17,19 @@ class DataHandler: NSObject {
 
     static let instance = DataHandler()
     
-    func getProducts(with categoryId: Int?, sucessBlock success: @escaping (_ response: [Product]?) -> Void, failureBlock failure: @escaping (_ message: String) -> Void) {
+    func getProducts(withCategoryId categoryId: Int?, productOffset: Int?, sucessBlock success: @escaping (_ response: [Product]?) -> Void, failureBlock failure: @escaping (_ message: String) -> Void) {
         
-        var path = "produto?limit=20"
+        var path = "produto"
+        
+        if let productOffset = productOffset {
+            path += "?offset=" + String(productOffset)
+        }
+
         if let categoryId = categoryId {
             path += "&categoriaId=" + String(categoryId)
         }
+        
+        path += "&limit=20"
         
         get(path: path, sucessBlock: { (data) in
             if data is NSArray {
