@@ -85,7 +85,7 @@ class ProductDetailsViewController: UIViewController, UITableViewDataSource, UIT
                 return 50.0
                 
             } else if indexPath.row == 3 {
-                return 230.0
+                return 280.0
             }
         }
         
