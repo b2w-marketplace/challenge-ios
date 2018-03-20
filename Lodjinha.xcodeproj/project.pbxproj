@@ -25,11 +25,8 @@
 		41762256205FFA4F00B5254B /* LodjinhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41762255205FFA4F00B5254B /* LodjinhaTests.swift */; };
 		41762261205FFA4F00B5254B /* LodjinhaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41762260205FFA4F00B5254B /* LodjinhaUITests.swift */; };
 		41762278205FFAEA00B5254B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41762276205FFAEA00B5254B /* Alamofire.framework */; };
-		41762279205FFAEA00B5254B /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41762277205FFAEA00B5254B /* Hero.framework */; };
 		4176227A205FFAF100B5254B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41762276205FFAEA00B5254B /* Alamofire.framework */; };
 		4176227B205FFAF100B5254B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41762276205FFAEA00B5254B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4176227C205FFAF100B5254B /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41762277205FFAEA00B5254B /* Hero.framework */; };
-		4176227D205FFAF100B5254B /* Hero.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41762277205FFAEA00B5254B /* Hero.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		41762280205FFB1300B5254B /* LodjinhaConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4176227F205FFB1200B5254B /* LodjinhaConfig.plist */; };
 		417622932060017200B5254B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176228D2060017000B5254B /* Configuration.swift */; };
 		417622942060017200B5254B /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176228E2060017100B5254B /* DataHandler.swift */; };
@@ -68,7 +65,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				41127E2220602659004D2B71 /* AlamofireImage.framework in Embed Frameworks */,
-				4176227D205FFAF100B5254B /* Hero.framework in Embed Frameworks */,
 				4176227B205FFAF100B5254B /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -99,7 +95,6 @@
 		41762260205FFA4F00B5254B /* LodjinhaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaUITests.swift; sourceTree = "<group>"; };
 		41762262205FFA4F00B5254B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41762276205FFAEA00B5254B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
-		41762277205FFAEA00B5254B /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = SOURCE_ROOT; };
 		4176227F205FFB1200B5254B /* LodjinhaConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LodjinhaConfig.plist; sourceTree = "<group>"; };
 		4176228D2060017000B5254B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		4176228E2060017100B5254B /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
@@ -122,9 +117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41127E33206077C4004D2B71 /* QuartzCore.framework in Frameworks */,
-				4176227C205FFAF100B5254B /* Hero.framework in Frameworks */,
 				41127E2020602648004D2B71 /* AlamofireImage.framework in Frameworks */,
-				41762279205FFAEA00B5254B /* Hero.framework in Frameworks */,
 				41127E2120602659004D2B71 /* AlamofireImage.framework in Frameworks */,
 				4176227A205FFAF100B5254B /* Alamofire.framework in Frameworks */,
 				41762278205FFAEA00B5254B /* Alamofire.framework in Frameworks */,
@@ -220,7 +213,6 @@
 			children = (
 				41127E1F20602648004D2B71 /* AlamofireImage.framework */,
 				41762276205FFAEA00B5254B /* Alamofire.framework */,
-				41762277205FFAEA00B5254B /* Hero.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
