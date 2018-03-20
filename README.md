@@ -1,3 +1,7 @@
+# Para rodar o app:
+
+Basta clonar o projeto e rodar, não é necessária nenhuma configuração extra!
+
 # a Lodjinha
 
 Versão mínima: iOS 9</br>

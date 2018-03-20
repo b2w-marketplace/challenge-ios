@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" ~> 4.7
+github "lkzhao/Hero"
+github "Alamofire/AlamofireImage" ~> 3.3
+
