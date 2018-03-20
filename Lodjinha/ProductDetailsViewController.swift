@@ -119,7 +119,9 @@ class ProductDetailsViewController: UIViewController, UITableViewDataSource, UIT
         buttonActivityIndicator.startAnimating()
         
         DataHandler.instance.postProduct(with: productId, sucessBlock: { (message) in
-            self.presentDefaultAlert(withTitle: "Sucesso", andMessage: nil, handler: nil)
+            self.presentDefaultAlert(withTitle: "Sucesso", andMessage: nil, handler: { (action) in
+                self.navigationController?.popViewController(animated: true)
+            })
             
             self.bookButton.isEnabled = true
             self.buttonActivityIndicator.stopAnimating()
