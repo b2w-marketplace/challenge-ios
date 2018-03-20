@@ -20,8 +20,16 @@ class PrincingTableViewCell: UITableViewCell {
                 return
             }
             
-            oldPrice.text =  "De: R$" + "\(product.oldPrice.orNil)"
-            price.text = "Por: R$" + "\(product.price.orNil)"
+            let numberFormatter = NumberFormatter()
+            numberFormatter.locale = Locale.current
+            
+            if let formattedOldPrice = numberFormatter.string(from: NSNumber(value: product.oldPrice!)) {
+                oldPrice.text = "Por: R$" + formattedOldPrice + ",00"
+            }
+            
+            if let formattedPrice = numberFormatter.string(from: NSNumber(value: product.price!)) {
+                price.text = "Por: R$" + formattedPrice + ",00"
+            }
         }
     }
     

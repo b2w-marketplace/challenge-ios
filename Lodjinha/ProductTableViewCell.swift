@@ -32,9 +32,16 @@ class ProductTableViewCell: UITableViewCell {
                 })
             }
             
-            productName.text = product.name
-            oldPrice.text =  "De: R$" + "\(product.oldPrice.orNil)"
-            price.text = "Por: R$" + "\(product.price.orNil)"
+            let numberFormatter = NumberFormatter()
+            numberFormatter.locale = Locale.current
+            
+            if let formattedOldPrice = numberFormatter.string(from: NSNumber(value: product.oldPrice!)) {
+                oldPrice.text = "Por: R$" + formattedOldPrice + ",00"
+            }
+            
+            if let formattedPrice = numberFormatter.string(from: NSNumber(value: product.price!)) {
+                price.text = "Por: R$" + formattedPrice + ",00"
+            }
         }
     }
 
@@ -44,17 +51,5 @@ class ProductTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-}
-
-extension Optional { //gambeta power
-    var orNil : String {
-        if self == nil {
-            return "nil"
-        }
-        if "\(Wrapped.self)" == "String" {
-            return "\"\(self!)\""
-        }
-        return "\(self!)"
     }
 }
