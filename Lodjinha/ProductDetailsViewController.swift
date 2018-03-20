@@ -25,6 +25,8 @@ class ProductDetailsViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 17.0), NSAttributedStringKey.foregroundColor : UIColor.white]
+        
         setupData()
     }
     
@@ -36,6 +38,8 @@ class ProductDetailsViewController: UIViewController, UITableViewDataSource, UIT
                 self.product = responseProduct
                 
                 self.bookButton.isEnabled = true
+                
+                self.title = self.product?.category?.description
                 
                 self.tableView.reloadData()
                 

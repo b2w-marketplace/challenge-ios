@@ -23,7 +23,7 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
     var categories: [Category]?
     var products: [Product]?
     
-    var selectedCategoryId: Int = 0
+    var selectedCategory: Category?
     var selectedProductId: Int = 0
     
     override func viewDidLoad() {
@@ -146,12 +146,9 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let selectedCategory = categories?[indexPath.row] {
-            selectedCategoryId = selectedCategory.id!
-        }
-        
+        selectedCategory = categories?[indexPath.row]
+
         performSegue(withIdentifier: "Product List Segue", sender: self)
-        
     }
     
     //MARK: Product stuff
@@ -212,15 +209,25 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
     //MARK: Segue things
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.fixBackButtonTitle()
+        
         if segue.identifier == "Product List Segue" {
             let productListViewController = segue.destination as! ProductListTableViewController
-            productListViewController.categoryId = selectedCategoryId
+            productListViewController.category = selectedCategory
             
         } else if segue.identifier == "Product Details Segue" {
             let productDetailsVC = segue.destination as! ProductDetailsViewController
             productDetailsVC.productId = selectedProductId
             
         }
+    }
+}
+
+extension UINavigationItem {
+    func fixBackButtonTitle() {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Voltar"
+        self.backBarButtonItem = backItem
     }
 }
 

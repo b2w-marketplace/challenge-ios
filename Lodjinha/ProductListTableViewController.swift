@@ -10,7 +10,7 @@ import UIKit
 
 class ProductListTableViewController: UITableViewController {
     
-    var categoryId: Int?
+    var category: Category!
     
     var products: [Product]?
     
@@ -19,11 +19,15 @@ class ProductListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = category.description
+        
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 17.0), NSAttributedStringKey.foregroundColor : UIColor.white]
+        
         setupData()
     }
-
+    
     func setupData() {
-        DataHandler.instance.getProducts(with: categoryId, sucessBlock: { (productList) in
+        DataHandler.instance.getProducts(with: category.id, sucessBlock: { (productList) in
             self.products = productList
             
             self.tableView.reloadSections([0], with: .automatic) //cooler than regular reloadData
@@ -76,10 +80,13 @@ class ProductListTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.navigationItem.fixBackButtonTitle()
+        
         if segue.identifier == "Product Details Segue" {
             let productDetailsVC = segue.destination as! ProductDetailsViewController
-            
+            //141 66 44
             productDetailsVC.productId = selectedProduct?.id
         }
+
     }
 }

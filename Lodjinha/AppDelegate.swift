@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupGeneralAppearences() {
         UITabBar.appearance().tintColor = UIColor(red: 99.0/255.0, green: 66.0/255.0, blue: 140/255.0, alpha: 1.0)
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
