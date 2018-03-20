@@ -158,7 +158,8 @@ class HomeTableViewController: UITableViewController, UICollectionViewDelegate, 
             //
             self.products = productList
             
-            self.tableView.reloadSections([1], with: .automatic)
+//            self.tableView.reloadSections([1], with: .automatic) //this is not working in Plus devices for some weird reason...
+            self.tableView.reloadData()
             
         }) { (errorMessage) in
             self.presentDefaultAlert(withTitle: errorMessage, andMessage: nil)
