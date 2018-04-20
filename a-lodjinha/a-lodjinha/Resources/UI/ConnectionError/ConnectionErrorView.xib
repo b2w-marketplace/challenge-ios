@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ConnectionErrorView" customModule="a_lodjinha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connectionError" translatesAutoresizingMaskIntoConstraints="NO" id="xjO-YY-bWw">
+                    <rect key="frame" x="133" y="150" width="54" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="54" id="831-va-CId"/>
+                        <constraint firstAttribute="height" constant="48" id="bHP-lQ-wAR"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jH-2p-QFg">
+                    <rect key="frame" x="41" y="230" width="239.5" height="41"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Ops..  Talvez você esteja sem internet">
+                            <attributes>
+                                <font key="NSFont" metaFont="system" size="17"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDK-lG-3U0" customClass="CustomButton" customModule="a_lodjinha" customModuleProvider="target">
+                    <rect key="frame" x="30" y="410" width="260" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Dlx-Yn-Hd2"/>
+                    </constraints>
+                    <state key="normal" title="Atualizar"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xjO-YY-bWw" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="43k-lG-soD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="UDK-lG-3U0" secondAttribute="bottom" constant="20" id="7S8-jL-XVt"/>
+                <constraint firstItem="1jH-2p-QFg" firstAttribute="centerX" secondItem="xjO-YY-bWw" secondAttribute="centerX" id="8Nl-RQ-Rqv"/>
+                <constraint firstItem="UDK-lG-3U0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="INh-TE-nwC"/>
+                <constraint firstItem="xjO-YY-bWw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="130" id="dQl-f6-tvC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UDK-lG-3U0" secondAttribute="trailing" constant="30" id="oTk-es-Lhs"/>
+                <constraint firstItem="1jH-2p-QFg" firstAttribute="top" secondItem="xjO-YY-bWw" secondAttribute="bottom" constant="32" id="oup-WQ-vpa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="buttonOffline" destination="UDK-lG-3U0" id="YAQ-a7-TNU"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="51"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="connectionError" width="72" height="52"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_a_lodjinhaTests {
+  umbrella header "Pods-a-lodjinhaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
