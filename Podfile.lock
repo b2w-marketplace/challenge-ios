@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.6.0)
+  - FSPagerView (0.7.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - FSPagerView
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
+
+PODFILE CHECKSUM: 67a33ff6d35d90566a2cecfec98931acc9e4edd2
+
+COCOAPODS: 1.2.1
