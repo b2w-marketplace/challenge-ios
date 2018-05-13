@@ -1,7 +1,11 @@
-# a Lodjinha
+# a Lojinha
 
 Versão mínima: iOS 9</br>
 Linguagem: Swift</br>
+
+### Instalação
+
+-Executar Pod Install
 
 Serão consideradas funcionalidades completas se:</br>
 - O descritivo da funcionalidade for implementado completamente.</br>
