@@ -150,12 +150,13 @@
                                                 <constraint firstAttribute="bottom" secondItem="nTR-Nm-Zak" secondAttribute="bottom" constant="1.5" id="3Fs-NB-6ni"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="9yC-7d-Qfh" secondAttribute="bottom" constant="1" id="9m9-Mc-pwB"/>
                                                 <constraint firstItem="nTR-Nm-Zak" firstAttribute="leading" secondItem="5go-Jo-Rhs" secondAttribute="leading" constant="5" id="B3Q-zx-Eu1"/>
+                                                <constraint firstItem="2QE-58-lnI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5go-Jo-Rhs" secondAttribute="leading" constant="20" symbolic="YES" id="EH8-vL-eCY"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="KZt-Vf-HcS" secondAttribute="trailing" constant="8" id="F4T-EB-81E"/>
-                                                <constraint firstItem="2QE-58-lnI" firstAttribute="top" secondItem="KZt-Vf-HcS" secondAttribute="bottom" constant="1" id="Iis-5v-0Qs"/>
                                                 <constraint firstAttribute="trailing" secondItem="2QE-58-lnI" secondAttribute="trailing" constant="8" id="Rhb-Jc-kXC"/>
                                                 <constraint firstItem="9yC-7d-Qfh" firstAttribute="top" secondItem="KZt-Vf-HcS" secondAttribute="bottom" constant="3" id="apE-II-MwZ"/>
                                                 <constraint firstItem="KZt-Vf-HcS" firstAttribute="leading" secondItem="nTR-Nm-Zak" secondAttribute="trailing" constant="8" id="c6F-gp-3n9"/>
                                                 <constraint firstItem="9yC-7d-Qfh" firstAttribute="leading" secondItem="nTR-Nm-Zak" secondAttribute="trailing" constant="8" id="crP-8H-UqZ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9yC-7d-Qfh" secondAttribute="trailing" constant="20" symbolic="YES" id="t6L-h8-vdv"/>
                                                 <constraint firstItem="KZt-Vf-HcS" firstAttribute="top" secondItem="5go-Jo-Rhs" secondAttribute="topMargin" id="uFw-ve-H0q"/>
                                                 <constraint firstAttribute="bottom" secondItem="2QE-58-lnI" secondAttribute="bottom" constant="11.5" id="w9f-GM-2Fq"/>
                                                 <constraint firstItem="nTR-Nm-Zak" firstAttribute="top" secondItem="5go-Jo-Rhs" secondAttribute="top" constant="2" id="wgf-dJ-gnL"/>
