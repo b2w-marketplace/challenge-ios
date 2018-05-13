@@ -1,4 +1,4 @@
-# a Lodjinha
+# a Lojinha
 
 Versão mínima: iOS 9</br>
 Linguagem: Swift</br>
