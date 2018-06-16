@@ -1,0 +1,6 @@
+framework module Pods_desafiob2w {
+  umbrella header "Pods-desafiob2w-umbrella.h"
+
+  export *
+  module * { export * }
+}

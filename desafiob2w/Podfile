@@ -13,7 +13,7 @@ target 'desafiob2w' do
     pod 'R.swift', '~> 4.0.0'
 
 
-    target 'PodfileTests' do
+    target 'desafiob2wTests' do
         inherit! :search_paths
         # Pods for testing
         testing_pods
