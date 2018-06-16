@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC1187C320D2137000A77FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1187C220D2137000A77FC6 /* AppDelegate.swift */; };
+		EC1187C520D2137000A77FC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1187C420D2137000A77FC6 /* ViewController.swift */; };
+		EC1187C820D2137000A77FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1187C620D2137000A77FC6 /* Main.storyboard */; };
+		EC1187CA20D2137200A77FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1187C920D2137200A77FC6 /* Assets.xcassets */; };
+		EC1187CD20D2137200A77FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1187CB20D2137200A77FC6 /* LaunchScreen.storyboard */; };
+		EC1187D820D2137200A77FC6 /* desafiob2wTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1187D720D2137200A77FC6 /* desafiob2wTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC1187D420D2137200A77FC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC1187B720D2137000A77FC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC1187BE20D2137000A77FC6;
+			remoteInfo = desafiob2w;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC1187BF20D2137000A77FC6 /* desafiob2w.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafiob2w.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1187C220D2137000A77FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC1187C420D2137000A77FC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC1187C720D2137000A77FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC1187C920D2137200A77FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC1187CC20D2137200A77FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC1187CE20D2137200A77FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC1187D320D2137200A77FC6 /* desafiob2wTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafiob2wTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1187D720D2137200A77FC6 /* desafiob2wTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafiob2wTests.swift; sourceTree = "<group>"; };
+		EC1187D920D2137200A77FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC1187BC20D2137000A77FC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1187D020D2137200A77FC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC1187B620D2137000A77FC6 = {
+			isa = PBXGroup;
+			children = (
+				EC1187C120D2137000A77FC6 /* desafiob2w */,
+				EC1187D620D2137200A77FC6 /* desafiob2wTests */,
+				EC1187C020D2137000A77FC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC1187C020D2137000A77FC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC1187BF20D2137000A77FC6 /* desafiob2w.app */,
+				EC1187D320D2137200A77FC6 /* desafiob2wTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC1187C120D2137000A77FC6 /* desafiob2w */ = {
+			isa = PBXGroup;
+			children = (
+				EC1187C220D2137000A77FC6 /* AppDelegate.swift */,
+				EC1187C420D2137000A77FC6 /* ViewController.swift */,
+				EC1187C620D2137000A77FC6 /* Main.storyboard */,
+				EC1187C920D2137200A77FC6 /* Assets.xcassets */,
+				EC1187CB20D2137200A77FC6 /* LaunchScreen.storyboard */,
+				EC1187CE20D2137200A77FC6 /* Info.plist */,
+			);
+			path = desafiob2w;
+			sourceTree = "<group>";
+		};
+		EC1187D620D2137200A77FC6 /* desafiob2wTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC1187D720D2137200A77FC6 /* desafiob2wTests.swift */,
+				EC1187D920D2137200A77FC6 /* Info.plist */,
+			);
+			path = desafiob2wTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC1187BE20D2137000A77FC6 /* desafiob2w */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC1187DC20D2137200A77FC6 /* Build configuration list for PBXNativeTarget "desafiob2w" */;
+			buildPhases = (
+				EC1187BB20D2137000A77FC6 /* Sources */,
+				EC1187BC20D2137000A77FC6 /* Frameworks */,
+				EC1187BD20D2137000A77FC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = desafiob2w;
+			productName = desafiob2w;
+			productReference = EC1187BF20D2137000A77FC6 /* desafiob2w.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC1187D220D2137200A77FC6 /* desafiob2wTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC1187DF20D2137200A77FC6 /* Build configuration list for PBXNativeTarget "desafiob2wTests" */;
+			buildPhases = (
+				EC1187CF20D2137200A77FC6 /* Sources */,
+				EC1187D020D2137200A77FC6 /* Frameworks */,
+				EC1187D120D2137200A77FC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC1187D520D2137200A77FC6 /* PBXTargetDependency */,
+			);
+			name = desafiob2wTests;
+			productName = desafiob2wTests;
+			productReference = EC1187D320D2137200A77FC6 /* desafiob2wTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC1187B720D2137000A77FC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = B2w;
+				TargetAttributes = {
+					EC1187BE20D2137000A77FC6 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					EC1187D220D2137200A77FC6 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = EC1187BE20D2137000A77FC6;
+					};
+				};
+			};
+			buildConfigurationList = EC1187BA20D2137000A77FC6 /* Build configuration list for PBXProject "desafiob2w" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC1187B620D2137000A77FC6;
+			productRefGroup = EC1187C020D2137000A77FC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC1187BE20D2137000A77FC6 /* desafiob2w */,
+				EC1187D220D2137200A77FC6 /* desafiob2wTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC1187BD20D2137000A77FC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1187CD20D2137200A77FC6 /* LaunchScreen.storyboard in Resources */,
+				EC1187CA20D2137200A77FC6 /* Assets.xcassets in Resources */,
+				EC1187C820D2137000A77FC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1187D120D2137200A77FC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC1187BB20D2137000A77FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1187C520D2137000A77FC6 /* ViewController.swift in Sources */,
+				EC1187C320D2137000A77FC6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1187CF20D2137200A77FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1187D820D2137200A77FC6 /* desafiob2wTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC1187D520D2137200A77FC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC1187BE20D2137000A77FC6 /* desafiob2w */;
+			targetProxy = EC1187D420D2137200A77FC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC1187C620D2137000A77FC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC1187C720D2137000A77FC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC1187CB20D2137200A77FC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC1187CC20D2137200A77FC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC1187DA20D2137200A77FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC1187DB20D2137200A77FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC1187DD20D2137200A77FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = desafiob2w/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = B2w.desafiob2w;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC1187DE20D2137200A77FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = desafiob2w/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = B2w.desafiob2w;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC1187E020D2137200A77FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = desafiob2wTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = B2w.desafiob2wTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafiob2w.app/desafiob2w";
+			};
+			name = Debug;
+		};
+		EC1187E120D2137200A77FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = desafiob2wTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = B2w.desafiob2wTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafiob2w.app/desafiob2w";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC1187BA20D2137000A77FC6 /* Build configuration list for PBXProject "desafiob2w" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1187DA20D2137200A77FC6 /* Debug */,
+				EC1187DB20D2137200A77FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC1187DC20D2137200A77FC6 /* Build configuration list for PBXNativeTarget "desafiob2w" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1187DD20D2137200A77FC6 /* Debug */,
+				EC1187DE20D2137200A77FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC1187DF20D2137200A77FC6 /* Build configuration list for PBXNativeTarget "desafiob2wTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1187E020D2137200A77FC6 /* Debug */,
+				EC1187E120D2137200A77FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC1187B720D2137000A77FC6 /* Project object */;
+}
