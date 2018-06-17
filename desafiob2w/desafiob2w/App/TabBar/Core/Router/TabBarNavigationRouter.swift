@@ -14,7 +14,7 @@ final class TabBarNavigationRouter: TabBarRouter {
     private let navigationController: UINavigationController
     
     func root() {
-        navigationController.navigationBar.barTintColor = .red
+        navigationController.navigationBar.barTintColor = R.color.purleApp()
         navigationController.navigationBar.tintColor = .white
         navigationController.navigationBar.barStyle = .black
         window.rootViewController = navigationController

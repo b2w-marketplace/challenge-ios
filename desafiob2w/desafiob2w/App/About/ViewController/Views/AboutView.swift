@@ -17,7 +17,7 @@ final class AboutView: UIView, PresentationView {
         super.init(frame: .zero)
         setupView(parentView: parentView)
         self.setupViewConfiguration()
-        parentView.backgroundColor = .red
+        parentView.backgroundColor = .white
     }
     
     required init?(coder aDecoder: NSCoder) {

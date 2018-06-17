@@ -14,18 +14,17 @@ class TabBarController: UITabBarController {
         super.init(nibName: nil, bundle: nil)
         
         let homeViewController = HomeViewControllerFactory.make()
-        homeViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        homeViewController.tabBarItem = UITabBarItem(title: R.string.tabBarItem.home(), image: R.image.homeIcon(), tag: 0)
         
         let aboutViewController = AboutViewControllerFactory.make()
-        aboutViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
-        
+        aboutViewController.tabBarItem = UITabBarItem(title: R.string.tabBarItem.about(), image: R.image.tagIcon(), tag: 1)
+    
         viewControllers = [homeViewController, aboutViewController]
-        
+        tabBar.tintColor = R.color.purleApp()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("Erro")
     }
-    
 
 }

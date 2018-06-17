@@ -31,6 +31,8 @@
 		EC2DA46120D5F97800C03856 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA46020D5F97800C03856 /* HomeView.swift */; };
 		EC2DA46520D5F9BC00C03856 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA46420D5F9BC00C03856 /* AboutView.swift */; };
 		EC2DA46820D5FE3C00C03856 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA46720D5FE3C00C03856 /* R.generated.swift */; };
+		EC2DA46D20D6054000C03856 /* NavigationBar.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC2DA46C20D6054000C03856 /* NavigationBar.strings */; };
+		EC2DA46F20D6058E00C03856 /* TabBarItem.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC2DA46E20D6058E00C03856 /* TabBarItem.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		EC2DA46020D5F97800C03856 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EC2DA46420D5F9BC00C03856 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		EC2DA46720D5FE3C00C03856 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		EC2DA46C20D6054000C03856 /* NavigationBar.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = NavigationBar.strings; sourceTree = "<group>"; };
+		EC2DA46E20D6058E00C03856 /* TabBarItem.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TabBarItem.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +405,8 @@
 		EC2DA46920D5FEBA00C03856 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				EC2DA46C20D6054000C03856 /* NavigationBar.strings */,
+				EC2DA46E20D6058E00C03856 /* TabBarItem.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -503,7 +509,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1187CD20D2137200A77FC6 /* LaunchScreen.storyboard in Resources */,
+				EC2DA46F20D6058E00C03856 /* TabBarItem.strings in Resources */,
 				EC1187CA20D2137200A77FC6 /* Assets.xcassets in Resources */,
+				EC2DA46D20D6054000C03856 /* NavigationBar.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

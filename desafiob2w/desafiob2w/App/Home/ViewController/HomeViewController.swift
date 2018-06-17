@@ -17,6 +17,9 @@ class HomeViewController: UIViewController {
         mainView = HomeView(parentView: view)
     }
     
+    override func viewDidLoad() {
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("Erro")
     }

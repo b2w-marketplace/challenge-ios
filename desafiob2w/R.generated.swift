@@ -16,8 +16,18 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.color` struct is generated, and contains static references to 0 colors.
+  /// This `R.color` struct is generated, and contains static references to 1 colors.
   struct color {
+    /// Color `purleApp`.
+    static let purleApp = Rswift.ColorResource(bundle: R.hostingBundle, name: "purleApp")
+    
+    /// `UIColor(named: "purleApp", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func purleApp(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.purleApp, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -31,8 +41,58 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 7 images.
   struct image {
+    /// Image `fillVerticalLeft`.
+    static let fillVerticalLeft = Rswift.ImageResource(bundle: R.hostingBundle, name: "fillVerticalLeft")
+    /// Image `fillVerticalRight`.
+    static let fillVerticalRight = Rswift.ImageResource(bundle: R.hostingBundle, name: "fillVerticalRight")
+    /// Image `fillVertical`.
+    static let fillVertical = Rswift.ImageResource(bundle: R.hostingBundle, name: "fillVertical")
+    /// Image `homeIcon`.
+    static let homeIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "homeIcon")
+    /// Image `logoAbout`.
+    static let logoAbout = Rswift.ImageResource(bundle: R.hostingBundle, name: "logoAbout")
+    /// Image `logoApp`.
+    static let logoApp = Rswift.ImageResource(bundle: R.hostingBundle, name: "logoApp")
+    /// Image `tagIcon`.
+    static let tagIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "tagIcon")
+    
+    /// `UIImage(named: "fillVertical", bundle: ..., traitCollection: ...)`
+    static func fillVertical(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.fillVertical, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "fillVerticalLeft", bundle: ..., traitCollection: ...)`
+    static func fillVerticalLeft(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.fillVerticalLeft, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "fillVerticalRight", bundle: ..., traitCollection: ...)`
+    static func fillVerticalRight(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.fillVerticalRight, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "homeIcon", bundle: ..., traitCollection: ...)`
+    static func homeIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.homeIcon, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "logoAbout", bundle: ..., traitCollection: ...)`
+    static func logoAbout(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.logoAbout, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "logoApp", bundle: ..., traitCollection: ...)`
+    static func logoApp(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.logoApp, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "tagIcon", bundle: ..., traitCollection: ...)`
+    static func tagIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tagIcon, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -64,8 +124,41 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 0 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
   struct string {
+    /// This `R.string.navigationBar` struct is generated, and contains static references to 1 localization keys.
+    struct navigationBar {
+      /// Value: Sobre
+      static let about = Rswift.StringResource(key: "about", tableName: "NavigationBar", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Sobre
+      static func about(_: Void = ()) -> String {
+        return NSLocalizedString("about", tableName: "NavigationBar", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.tabBarItem` struct is generated, and contains static references to 2 localization keys.
+    struct tabBarItem {
+      /// Value: Home
+      static let home = Rswift.StringResource(key: "home", tableName: "TabBarItem", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Sobre
+      static let about = Rswift.StringResource(key: "about", tableName: "TabBarItem", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Home
+      static func home(_: Void = ()) -> String {
+        return NSLocalizedString("home", tableName: "TabBarItem", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Sobre
+      static func about(_: Void = ()) -> String {
+        return NSLocalizedString("about", tableName: "TabBarItem", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   

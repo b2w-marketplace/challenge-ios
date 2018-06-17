@@ -15,6 +15,7 @@ class AboutViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         mainView = AboutView(parentView: view)
+        title = R.string.navigationBar.about()
     }
     
     required init?(coder aDecoder: NSCoder) {
