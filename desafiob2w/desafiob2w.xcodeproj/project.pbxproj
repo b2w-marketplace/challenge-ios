@@ -10,11 +10,21 @@
 		35D5CF80532DDEACB8AADA88 /* Pods_desafiob2w.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C177003C87D5568748D6D7 /* Pods_desafiob2w.framework */; };
 		DF53E00871B153A05193B6F4 /* Pods_desafiob2wTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1AD95D9AAB180E4D560CF8 /* Pods_desafiob2wTests.framework */; };
 		EC1187C320D2137000A77FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1187C220D2137000A77FC6 /* AppDelegate.swift */; };
-		EC1187C520D2137000A77FC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1187C420D2137000A77FC6 /* ViewController.swift */; };
-		EC1187C820D2137000A77FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1187C620D2137000A77FC6 /* Main.storyboard */; };
 		EC1187CA20D2137200A77FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1187C920D2137200A77FC6 /* Assets.xcassets */; };
 		EC1187CD20D2137200A77FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1187CB20D2137200A77FC6 /* LaunchScreen.storyboard */; };
 		EC1187D820D2137200A77FC6 /* desafiob2wTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1187D720D2137200A77FC6 /* desafiob2wTests.swift */; };
+		EC2DA42620D57EA200C03856 /* RootNavigationViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA42520D57EA200C03856 /* RootNavigationViewControllerFactory.swift */; };
+		EC2DA42C20D58B5D00C03856 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA42B20D58B5D00C03856 /* TabBarController.swift */; };
+		EC2DA43020D58C5A00C03856 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA42F20D58C5A00C03856 /* TabBarRouter.swift */; };
+		EC2DA43220D58CB700C03856 /* TabBarNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43120D58CB700C03856 /* TabBarNavigationRouter.swift */; };
+		EC2DA43520D5912600C03856 /* TabBarControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43420D5912600C03856 /* TabBarControllerFactory.swift */; };
+		EC2DA43820D5C14F00C03856 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43720D5C14F00C03856 /* TabBarView.swift */; };
+		EC2DA43B20D5C22100C03856 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43A20D5C22100C03856 /* ViewConfiguration.swift */; };
+		EC2DA43F20D5C25800C03856 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43E20D5C25800C03856 /* ErrorView.swift */; };
+		EC2DA44120D5C2EB00C03856 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44020D5C2EB00C03856 /* PresentationView.swift */; };
+		EC2DA44320D5C3B300C03856 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44220D5C3B300C03856 /* LoadingView.swift */; };
+		EC2DA44520D5C47300C03856 /* ErrorViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44420D5C47300C03856 /* ErrorViewFactory.swift */; };
+		EC2DA44720D5C48900C03856 /* LoadingViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44620D5C48900C03856 /* LoadingViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +46,24 @@
 		DD7CD7046647D64C2DB5F296 /* Pods-desafiob2wTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafiob2wTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafiob2wTests/Pods-desafiob2wTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC1187BF20D2137000A77FC6 /* desafiob2w.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafiob2w.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1187C220D2137000A77FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC1187C420D2137000A77FC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC1187C720D2137000A77FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC1187C920D2137200A77FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC1187CC20D2137200A77FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC1187CE20D2137200A77FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC1187D320D2137200A77FC6 /* desafiob2wTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafiob2wTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1187D720D2137200A77FC6 /* desafiob2wTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafiob2wTests.swift; sourceTree = "<group>"; };
 		EC1187D920D2137200A77FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC2DA42520D57EA200C03856 /* RootNavigationViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewControllerFactory.swift; sourceTree = "<group>"; };
+		EC2DA42B20D58B5D00C03856 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EC2DA42F20D58C5A00C03856 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		EC2DA43120D58CB700C03856 /* TabBarNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNavigationRouter.swift; sourceTree = "<group>"; };
+		EC2DA43420D5912600C03856 /* TabBarControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerFactory.swift; sourceTree = "<group>"; };
+		EC2DA43720D5C14F00C03856 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		EC2DA43A20D5C22100C03856 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		EC2DA43E20D5C25800C03856 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		EC2DA44020D5C2EB00C03856 /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
+		EC2DA44220D5C3B300C03856 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		EC2DA44420D5C47300C03856 /* ErrorViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewFactory.swift; sourceTree = "<group>"; };
+		EC2DA44620D5C48900C03856 /* LoadingViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +118,9 @@
 		EC1187C120D2137000A77FC6 /* desafiob2w */ = {
 			isa = PBXGroup;
 			children = (
-				EC1187C220D2137000A77FC6 /* AppDelegate.swift */,
-				EC1187C420D2137000A77FC6 /* ViewController.swift */,
-				EC1187C620D2137000A77FC6 /* Main.storyboard */,
-				EC1187C920D2137200A77FC6 /* Assets.xcassets */,
-				EC1187CB20D2137200A77FC6 /* LaunchScreen.storyboard */,
-				EC1187CE20D2137200A77FC6 /* Info.plist */,
+				EC2DA42120D57BAF00C03856 /* App */,
+				EC2DA42220D57BB900C03856 /* Common */,
+				EC2DA42320D57BCA00C03856 /* Resources */,
 			);
 			path = desafiob2w;
 			sourceTree = "<group>";
@@ -115,6 +132,139 @@
 				EC1187D920D2137200A77FC6 /* Info.plist */,
 			);
 			path = desafiob2wTests;
+			sourceTree = "<group>";
+		};
+		EC2DA42120D57BAF00C03856 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA42720D57EC900C03856 /* TabBar */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EC2DA42220D57BB900C03856 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA43C20D5C24300C03856 /* Views */,
+				EC2DA43920D5C21300C03856 /* ViewConfiguration */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EC2DA42320D57BCA00C03856 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA42420D57CB900C03856 /* RootViewController */,
+				EC1187C220D2137000A77FC6 /* AppDelegate.swift */,
+				EC1187C920D2137200A77FC6 /* Assets.xcassets */,
+				EC1187CB20D2137200A77FC6 /* LaunchScreen.storyboard */,
+				EC1187CE20D2137200A77FC6 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC2DA42420D57CB900C03856 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA42520D57EA200C03856 /* RootNavigationViewControllerFactory.swift */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		EC2DA42720D57EC900C03856 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA42820D57EDF00C03856 /* ViewController */,
+				EC2DA42920D57EE700C03856 /* Core */,
+				EC2DA42A20D57EEF00C03856 /* Factories */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EC2DA42820D57EDF00C03856 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA43620D5C13B00C03856 /* Views */,
+				EC2DA42B20D58B5D00C03856 /* TabBarController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC2DA42920D57EE700C03856 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA42D20D58C3000C03856 /* Router */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EC2DA42A20D57EEF00C03856 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA43320D590B300C03856 /* ViewController */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		EC2DA42D20D58C3000C03856 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA42E20D58C3C00C03856 /* Protocol */,
+				EC2DA43120D58CB700C03856 /* TabBarNavigationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EC2DA42E20D58C3C00C03856 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA42F20D58C5A00C03856 /* TabBarRouter.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EC2DA43320D590B300C03856 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA43420D5912600C03856 /* TabBarControllerFactory.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC2DA43620D5C13B00C03856 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA43720D5C14F00C03856 /* TabBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC2DA43920D5C21300C03856 /* ViewConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA43A20D5C22100C03856 /* ViewConfiguration.swift */,
+			);
+			path = ViewConfiguration;
+			sourceTree = "<group>";
+		};
+		EC2DA43C20D5C24300C03856 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA43D20D5C24C00C03856 /* Factories */,
+				EC2DA43E20D5C25800C03856 /* ErrorView.swift */,
+				EC2DA44020D5C2EB00C03856 /* PresentationView.swift */,
+				EC2DA44220D5C3B300C03856 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC2DA43D20D5C24C00C03856 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA44420D5C47300C03856 /* ErrorViewFactory.swift */,
+				EC2DA44620D5C48900C03856 /* LoadingViewFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		FD2940945E050B0EDA46838C /* Pods */ = {
@@ -215,7 +365,6 @@
 			files = (
 				EC1187CD20D2137200A77FC6 /* LaunchScreen.storyboard in Resources */,
 				EC1187CA20D2137200A77FC6 /* Assets.xcassets in Resources */,
-				EC1187C820D2137000A77FC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,8 +467,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1187C520D2137000A77FC6 /* ViewController.swift in Sources */,
+				EC2DA44720D5C48900C03856 /* LoadingViewFactory.swift in Sources */,
 				EC1187C320D2137000A77FC6 /* AppDelegate.swift in Sources */,
+				EC2DA42C20D58B5D00C03856 /* TabBarController.swift in Sources */,
+				EC2DA43820D5C14F00C03856 /* TabBarView.swift in Sources */,
+				EC2DA44320D5C3B300C03856 /* LoadingView.swift in Sources */,
+				EC2DA43020D58C5A00C03856 /* TabBarRouter.swift in Sources */,
+				EC2DA44120D5C2EB00C03856 /* PresentationView.swift in Sources */,
+				EC2DA43220D58CB700C03856 /* TabBarNavigationRouter.swift in Sources */,
+				EC2DA43B20D5C22100C03856 /* ViewConfiguration.swift in Sources */,
+				EC2DA42620D57EA200C03856 /* RootNavigationViewControllerFactory.swift in Sources */,
+				EC2DA43F20D5C25800C03856 /* ErrorView.swift in Sources */,
+				EC2DA44520D5C47300C03856 /* ErrorViewFactory.swift in Sources */,
+				EC2DA43520D5912600C03856 /* TabBarControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,14 +502,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EC1187C620D2137000A77FC6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC1187C720D2137000A77FC6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EC1187CB20D2137200A77FC6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -481,7 +633,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = desafiob2w/Info.plist;
+				INFOPLIST_FILE = desafiob2w/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,7 +652,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = desafiob2w/Info.plist;
+				INFOPLIST_FILE = desafiob2w/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
