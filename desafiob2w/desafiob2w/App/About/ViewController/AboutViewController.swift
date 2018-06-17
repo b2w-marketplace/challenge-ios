@@ -10,11 +10,8 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
-    private var mainView: AboutView!
-    
     init() {
         super.init(nibName: nil, bundle: nil)
-        mainView = AboutView(parentView: view)
         title = R.string.navigationBar.about()
     }
     

@@ -13,26 +13,24 @@
 		EC1187CA20D2137200A77FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1187C920D2137200A77FC6 /* Assets.xcassets */; };
 		EC1187CD20D2137200A77FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1187CB20D2137200A77FC6 /* LaunchScreen.storyboard */; };
 		EC1187D820D2137200A77FC6 /* desafiob2wTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1187D720D2137200A77FC6 /* desafiob2wTests.swift */; };
-		EC2DA42620D57EA200C03856 /* RootNavigationViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA42520D57EA200C03856 /* RootNavigationViewControllerFactory.swift */; };
-		EC2DA42C20D58B5D00C03856 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA42B20D58B5D00C03856 /* TabBarController.swift */; };
-		EC2DA43020D58C5A00C03856 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA42F20D58C5A00C03856 /* TabBarRouter.swift */; };
-		EC2DA43220D58CB700C03856 /* TabBarNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43120D58CB700C03856 /* TabBarNavigationRouter.swift */; };
-		EC2DA43520D5912600C03856 /* TabBarControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43420D5912600C03856 /* TabBarControllerFactory.swift */; };
 		EC2DA43B20D5C22100C03856 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43A20D5C22100C03856 /* ViewConfiguration.swift */; };
 		EC2DA43F20D5C25800C03856 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43E20D5C25800C03856 /* ErrorView.swift */; };
-		EC2DA44120D5C2EB00C03856 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44020D5C2EB00C03856 /* PresentationView.swift */; };
 		EC2DA44320D5C3B300C03856 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44220D5C3B300C03856 /* LoadingView.swift */; };
 		EC2DA44520D5C47300C03856 /* ErrorViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44420D5C47300C03856 /* ErrorViewFactory.swift */; };
 		EC2DA44720D5C48900C03856 /* LoadingViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44620D5C48900C03856 /* LoadingViewFactory.swift */; };
-		EC2DA45820D5F7BB00C03856 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA45720D5F7BB00C03856 /* HomeViewController.swift */; };
 		EC2DA45A20D5F7CA00C03856 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA45920D5F7CA00C03856 /* AboutViewController.swift */; };
-		EC2DA45C20D5F7F000C03856 /* HomeViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA45B20D5F7F000C03856 /* HomeViewControllerFactory.swift */; };
 		EC2DA45E20D5F7FB00C03856 /* AboutViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA45D20D5F7FB00C03856 /* AboutViewControllerFactory.swift */; };
-		EC2DA46120D5F97800C03856 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA46020D5F97800C03856 /* HomeView.swift */; };
-		EC2DA46520D5F9BC00C03856 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA46420D5F9BC00C03856 /* AboutView.swift */; };
 		EC2DA46820D5FE3C00C03856 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA46720D5FE3C00C03856 /* R.generated.swift */; };
 		EC2DA46D20D6054000C03856 /* NavigationBar.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC2DA46C20D6054000C03856 /* NavigationBar.strings */; };
 		EC2DA46F20D6058E00C03856 /* TabBarItem.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC2DA46E20D6058E00C03856 /* TabBarItem.strings */; };
+		ECD810FF20D7012A007F3979 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD810FE20D7012A007F3979 /* Main.storyboard */; };
+		ECD8110120D706EF007F3979 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD8110020D706EF007F3979 /* Home.storyboard */; };
+		ECD8110320D70746007F3979 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD8110220D70746007F3979 /* About.storyboard */; };
+		ECD8110620D718AA007F3979 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8110520D718AA007F3979 /* HomeViewController.swift */; };
+		ECD8110A20D7190F007F3979 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8110820D7190F007F3979 /* ProductTableViewCell.swift */; };
+		ECD8110B20D7190F007F3979 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECD8110920D7190F007F3979 /* ProductTableViewCell.xib */; };
+		ECD8111220D71952007F3979 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8111020D71952007F3979 /* CategoryCollectionViewCell.swift */; };
+		ECD8111320D71952007F3979 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECD8111120D71952007F3979 /* CategoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,26 +58,24 @@
 		EC1187D320D2137200A77FC6 /* desafiob2wTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafiob2wTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1187D720D2137200A77FC6 /* desafiob2wTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafiob2wTests.swift; sourceTree = "<group>"; };
 		EC1187D920D2137200A77FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC2DA42520D57EA200C03856 /* RootNavigationViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewControllerFactory.swift; sourceTree = "<group>"; };
-		EC2DA42B20D58B5D00C03856 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		EC2DA42F20D58C5A00C03856 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
-		EC2DA43120D58CB700C03856 /* TabBarNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNavigationRouter.swift; sourceTree = "<group>"; };
-		EC2DA43420D5912600C03856 /* TabBarControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerFactory.swift; sourceTree = "<group>"; };
 		EC2DA43A20D5C22100C03856 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 		EC2DA43E20D5C25800C03856 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		EC2DA44020D5C2EB00C03856 /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		EC2DA44220D5C3B300C03856 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EC2DA44420D5C47300C03856 /* ErrorViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewFactory.swift; sourceTree = "<group>"; };
 		EC2DA44620D5C48900C03856 /* LoadingViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewFactory.swift; sourceTree = "<group>"; };
-		EC2DA45720D5F7BB00C03856 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EC2DA45920D5F7CA00C03856 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		EC2DA45B20D5F7F000C03856 /* HomeViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerFactory.swift; sourceTree = "<group>"; };
 		EC2DA45D20D5F7FB00C03856 /* AboutViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerFactory.swift; sourceTree = "<group>"; };
-		EC2DA46020D5F97800C03856 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		EC2DA46420D5F9BC00C03856 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		EC2DA46720D5FE3C00C03856 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		EC2DA46C20D6054000C03856 /* NavigationBar.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = NavigationBar.strings; sourceTree = "<group>"; };
 		EC2DA46E20D6058E00C03856 /* TabBarItem.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TabBarItem.strings; sourceTree = "<group>"; };
+		ECD810FE20D7012A007F3979 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ECD8110020D706EF007F3979 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		ECD8110220D70746007F3979 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		ECD8110520D718AA007F3979 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ECD8110820D7190F007F3979 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		ECD8110920D7190F007F3979 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		ECD8111020D71952007F3979 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECD8111120D71952007F3979 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +131,8 @@
 		EC1187C120D2137000A77FC6 /* desafiob2w */ = {
 			isa = PBXGroup;
 			children = (
+				ECD8110720D718E5007F3979 /* Xibs */,
+				ECD810FD20D700FD007F3979 /* Storyboard */,
 				EC2DA42120D57BAF00C03856 /* App */,
 				EC2DA42220D57BB900C03856 /* Common */,
 				EC2DA42320D57BCA00C03856 /* Resources */,
@@ -154,7 +152,6 @@
 		EC2DA42120D57BAF00C03856 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				EC2DA42720D57EC900C03856 /* TabBar */,
 				EC2DA44A20D5F70000C03856 /* Home */,
 				EC2DA44B20D5F71600C03856 /* About */,
 			);
@@ -174,80 +171,12 @@
 		EC2DA42320D57BCA00C03856 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EC2DA42420D57CB900C03856 /* RootViewController */,
 				EC1187C220D2137000A77FC6 /* AppDelegate.swift */,
 				EC1187C920D2137200A77FC6 /* Assets.xcassets */,
 				EC1187CB20D2137200A77FC6 /* LaunchScreen.storyboard */,
 				EC1187CE20D2137200A77FC6 /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		EC2DA42420D57CB900C03856 /* RootViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EC2DA42520D57EA200C03856 /* RootNavigationViewControllerFactory.swift */,
-			);
-			path = RootViewController;
-			sourceTree = "<group>";
-		};
-		EC2DA42720D57EC900C03856 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				EC2DA42820D57EDF00C03856 /* ViewController */,
-				EC2DA42920D57EE700C03856 /* Core */,
-				EC2DA42A20D57EEF00C03856 /* Factories */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		EC2DA42820D57EDF00C03856 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EC2DA42B20D58B5D00C03856 /* TabBarController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		EC2DA42920D57EE700C03856 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				EC2DA42D20D58C3000C03856 /* Router */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		EC2DA42A20D57EEF00C03856 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				EC2DA43320D590B300C03856 /* ViewController */,
-			);
-			path = Factories;
-			sourceTree = "<group>";
-		};
-		EC2DA42D20D58C3000C03856 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				EC2DA42E20D58C3C00C03856 /* Protocol */,
-				EC2DA43120D58CB700C03856 /* TabBarNavigationRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		EC2DA42E20D58C3C00C03856 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				EC2DA42F20D58C5A00C03856 /* TabBarRouter.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		EC2DA43320D590B300C03856 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EC2DA43420D5912600C03856 /* TabBarControllerFactory.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		EC2DA43920D5C21300C03856 /* ViewConfiguration */ = {
@@ -263,7 +192,6 @@
 			children = (
 				EC2DA43D20D5C24C00C03856 /* Factories */,
 				EC2DA43E20D5C25800C03856 /* ErrorView.swift */,
-				EC2DA44020D5C2EB00C03856 /* PresentationView.swift */,
 				EC2DA44220D5C3B300C03856 /* LoadingView.swift */,
 			);
 			path = Views;
@@ -301,8 +229,7 @@
 		EC2DA44D20D5F74400C03856 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EC2DA45F20D5F96B00C03856 /* Views */,
-				EC2DA45720D5F7BB00C03856 /* HomeViewController.swift */,
+				ECD8110520D718AA007F3979 /* HomeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -374,17 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				EC2DA46220D5F99A00C03856 /* Views */,
-				EC2DA45B20D5F7F000C03856 /* HomeViewControllerFactory.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		EC2DA45F20D5F96B00C03856 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				EC2DA46020D5F97800C03856 /* HomeView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		EC2DA46220D5F99A00C03856 /* Views */ = {
@@ -397,7 +315,6 @@
 		EC2DA46320D5F9AB00C03856 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EC2DA46420D5F9BC00C03856 /* AboutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -409,6 +326,27 @@
 				EC2DA46E20D6058E00C03856 /* TabBarItem.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		ECD810FD20D700FD007F3979 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				ECD810FE20D7012A007F3979 /* Main.storyboard */,
+				ECD8110020D706EF007F3979 /* Home.storyboard */,
+				ECD8110220D70746007F3979 /* About.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		ECD8110720D718E5007F3979 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8110820D7190F007F3979 /* ProductTableViewCell.swift */,
+				ECD8110920D7190F007F3979 /* ProductTableViewCell.xib */,
+				ECD8111020D71952007F3979 /* CategoryCollectionViewCell.swift */,
+				ECD8111120D71952007F3979 /* CategoryCollectionViewCell.xib */,
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 		FD2940945E050B0EDA46838C /* Pods */ = {
@@ -509,7 +447,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1187CD20D2137200A77FC6 /* LaunchScreen.storyboard in Resources */,
+				ECD8110320D70746007F3979 /* About.storyboard in Resources */,
+				ECD810FF20D7012A007F3979 /* Main.storyboard in Resources */,
 				EC2DA46F20D6058E00C03856 /* TabBarItem.strings in Resources */,
+				ECD8110120D706EF007F3979 /* Home.storyboard in Resources */,
+				ECD8110B20D7190F007F3979 /* ProductTableViewCell.xib in Resources */,
+				ECD8111320D71952007F3979 /* CategoryCollectionViewCell.xib in Resources */,
 				EC1187CA20D2137200A77FC6 /* Assets.xcassets in Resources */,
 				EC2DA46D20D6054000C03856 /* NavigationBar.strings in Resources */,
 			);
@@ -630,22 +573,15 @@
 				EC2DA44720D5C48900C03856 /* LoadingViewFactory.swift in Sources */,
 				EC1187C320D2137000A77FC6 /* AppDelegate.swift in Sources */,
 				EC2DA45E20D5F7FB00C03856 /* AboutViewControllerFactory.swift in Sources */,
-				EC2DA42C20D58B5D00C03856 /* TabBarController.swift in Sources */,
 				EC2DA45A20D5F7CA00C03856 /* AboutViewController.swift in Sources */,
+				ECD8111220D71952007F3979 /* CategoryCollectionViewCell.swift in Sources */,
 				EC2DA44320D5C3B300C03856 /* LoadingView.swift in Sources */,
+				ECD8110620D718AA007F3979 /* HomeViewController.swift in Sources */,
 				EC2DA46820D5FE3C00C03856 /* R.generated.swift in Sources */,
-				EC2DA45820D5F7BB00C03856 /* HomeViewController.swift in Sources */,
-				EC2DA43020D58C5A00C03856 /* TabBarRouter.swift in Sources */,
-				EC2DA46120D5F97800C03856 /* HomeView.swift in Sources */,
-				EC2DA44120D5C2EB00C03856 /* PresentationView.swift in Sources */,
-				EC2DA43220D58CB700C03856 /* TabBarNavigationRouter.swift in Sources */,
-				EC2DA45C20D5F7F000C03856 /* HomeViewControllerFactory.swift in Sources */,
+				ECD8110A20D7190F007F3979 /* ProductTableViewCell.swift in Sources */,
 				EC2DA43B20D5C22100C03856 /* ViewConfiguration.swift in Sources */,
-				EC2DA42620D57EA200C03856 /* RootNavigationViewControllerFactory.swift in Sources */,
 				EC2DA43F20D5C25800C03856 /* ErrorView.swift in Sources */,
-				EC2DA46520D5F9BC00C03856 /* AboutView.swift in Sources */,
 				EC2DA44520D5C47300C03856 /* ErrorViewFactory.swift in Sources */,
-				EC2DA43520D5912600C03856 /* TabBarControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
