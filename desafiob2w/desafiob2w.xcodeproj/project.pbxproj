@@ -25,6 +25,12 @@
 		EC2DA44320D5C3B300C03856 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44220D5C3B300C03856 /* LoadingView.swift */; };
 		EC2DA44520D5C47300C03856 /* ErrorViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44420D5C47300C03856 /* ErrorViewFactory.swift */; };
 		EC2DA44720D5C48900C03856 /* LoadingViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44620D5C48900C03856 /* LoadingViewFactory.swift */; };
+		EC2DA45820D5F7BB00C03856 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA45720D5F7BB00C03856 /* HomeViewController.swift */; };
+		EC2DA45A20D5F7CA00C03856 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA45920D5F7CA00C03856 /* AboutViewController.swift */; };
+		EC2DA45C20D5F7F000C03856 /* HomeViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA45B20D5F7F000C03856 /* HomeViewControllerFactory.swift */; };
+		EC2DA45E20D5F7FB00C03856 /* AboutViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA45D20D5F7FB00C03856 /* AboutViewControllerFactory.swift */; };
+		EC2DA46120D5F97800C03856 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA46020D5F97800C03856 /* HomeView.swift */; };
+		EC2DA46520D5F9BC00C03856 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA46420D5F9BC00C03856 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +70,12 @@
 		EC2DA44220D5C3B300C03856 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EC2DA44420D5C47300C03856 /* ErrorViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewFactory.swift; sourceTree = "<group>"; };
 		EC2DA44620D5C48900C03856 /* LoadingViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewFactory.swift; sourceTree = "<group>"; };
+		EC2DA45720D5F7BB00C03856 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EC2DA45920D5F7CA00C03856 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		EC2DA45B20D5F7F000C03856 /* HomeViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerFactory.swift; sourceTree = "<group>"; };
+		EC2DA45D20D5F7FB00C03856 /* AboutViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerFactory.swift; sourceTree = "<group>"; };
+		EC2DA46020D5F97800C03856 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EC2DA46420D5F9BC00C03856 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				EC2DA42720D57EC900C03856 /* TabBar */,
+				EC2DA44A20D5F70000C03856 /* Home */,
+				EC2DA44B20D5F71600C03856 /* About */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -265,6 +279,130 @@
 				EC2DA44620D5C48900C03856 /* LoadingViewFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		EC2DA44A20D5F70000C03856 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA44D20D5F74400C03856 /* ViewController */,
+				EC2DA44E20D5F75000C03856 /* Core */,
+				EC2DA44F20D5F75600C03856 /* Factories */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EC2DA44B20D5F71600C03856 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA45220D5F76F00C03856 /* ViewController */,
+				EC2DA45120D5F76B00C03856 /* Core */,
+				EC2DA45020D5F76600C03856 /* Factories */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		EC2DA44D20D5F74400C03856 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA45F20D5F96B00C03856 /* Views */,
+				EC2DA45720D5F7BB00C03856 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC2DA44E20D5F75000C03856 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EC2DA44F20D5F75600C03856 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA45620D5F79000C03856 /* ViewController */,
+				EC2DA45520D5F78D00C03856 /* Core */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		EC2DA45020D5F76600C03856 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA45320D5F77900C03856 /* ViewController */,
+				EC2DA45420D5F78500C03856 /* Core */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		EC2DA45120D5F76B00C03856 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EC2DA45220D5F76F00C03856 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA46320D5F9AB00C03856 /* Views */,
+				EC2DA45920D5F7CA00C03856 /* AboutViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC2DA45320D5F77900C03856 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA45D20D5F7FB00C03856 /* AboutViewControllerFactory.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC2DA45420D5F78500C03856 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EC2DA45520D5F78D00C03856 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EC2DA45620D5F79000C03856 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA46220D5F99A00C03856 /* Views */,
+				EC2DA45B20D5F7F000C03856 /* HomeViewControllerFactory.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC2DA45F20D5F96B00C03856 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA46020D5F97800C03856 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC2DA46220D5F99A00C03856 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC2DA46320D5F9AB00C03856 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC2DA46420D5F9BC00C03856 /* AboutView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FD2940945E050B0EDA46838C /* Pods */ = {
@@ -469,15 +607,21 @@
 			files = (
 				EC2DA44720D5C48900C03856 /* LoadingViewFactory.swift in Sources */,
 				EC1187C320D2137000A77FC6 /* AppDelegate.swift in Sources */,
+				EC2DA45E20D5F7FB00C03856 /* AboutViewControllerFactory.swift in Sources */,
 				EC2DA42C20D58B5D00C03856 /* TabBarController.swift in Sources */,
+				EC2DA45A20D5F7CA00C03856 /* AboutViewController.swift in Sources */,
 				EC2DA43820D5C14F00C03856 /* TabBarView.swift in Sources */,
 				EC2DA44320D5C3B300C03856 /* LoadingView.swift in Sources */,
+				EC2DA45820D5F7BB00C03856 /* HomeViewController.swift in Sources */,
 				EC2DA43020D58C5A00C03856 /* TabBarRouter.swift in Sources */,
+				EC2DA46120D5F97800C03856 /* HomeView.swift in Sources */,
 				EC2DA44120D5C2EB00C03856 /* PresentationView.swift in Sources */,
 				EC2DA43220D58CB700C03856 /* TabBarNavigationRouter.swift in Sources */,
+				EC2DA45C20D5F7F000C03856 /* HomeViewControllerFactory.swift in Sources */,
 				EC2DA43B20D5C22100C03856 /* ViewConfiguration.swift in Sources */,
 				EC2DA42620D57EA200C03856 /* RootNavigationViewControllerFactory.swift in Sources */,
 				EC2DA43F20D5C25800C03856 /* ErrorView.swift in Sources */,
+				EC2DA46520D5F9BC00C03856 /* AboutView.swift in Sources */,
 				EC2DA44520D5C47300C03856 /* ErrorViewFactory.swift in Sources */,
 				EC2DA43520D5912600C03856 /* TabBarControllerFactory.swift in Sources */,
 			);

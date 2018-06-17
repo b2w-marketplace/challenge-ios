@@ -31,7 +31,6 @@ extension PresentationView where Self: UIView {
     }
 
     func setupView(parentView: UIView) {
-        backgroundColor = .blue
         parentView.addSubview(self)
         translatesAutoresizingMaskIntoConstraints = false
         let safeArea = parentView.safeAreaLayoutGuide
