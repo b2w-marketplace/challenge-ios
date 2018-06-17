@@ -10,9 +10,6 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    private var mainView: TabBarView!
-    
-    
     init() {
         super.init(nibName: nil, bundle: nil)
         
