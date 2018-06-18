@@ -96,8 +96,44 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 0 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
   struct nib {
+    /// Nib `BannersView`.
+    static let bannersView = _R.nib._BannersView()
+    /// Nib `CategoriesView`.
+    static let categoriesView = _R.nib._CategoriesView()
+    /// Nib `CategoryCollectionViewCell`.
+    static let categoryCollectionViewCell = _R.nib._CategoryCollectionViewCell()
+    /// Nib `ProductTableViewCell`.
+    static let productTableViewCell = _R.nib._ProductTableViewCell()
+    /// Nib `ProductsView`.
+    static let productsView = _R.nib._ProductsView()
+    
+    /// `UINib(name: "BannersView", in: bundle)`
+    static func bannersView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.bannersView)
+    }
+    
+    /// `UINib(name: "CategoriesView", in: bundle)`
+    static func categoriesView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.categoriesView)
+    }
+    
+    /// `UINib(name: "CategoryCollectionViewCell", in: bundle)`
+    static func categoryCollectionViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.categoryCollectionViewCell)
+    }
+    
+    /// `UINib(name: "ProductTableViewCell", in: bundle)`
+    static func productTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.productTableViewCell)
+    }
+    
+    /// `UINib(name: "ProductsView", in: bundle)`
+    static func productsView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.productsView)
+    }
+    
     fileprivate init() {}
   }
   
@@ -145,8 +181,35 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 4 localization tables.
   struct string {
+    /// This `R.string.apI` struct is generated, and contains static references to 3 localization keys.
+    struct apI {
+      /// Value: https://alodjinha.herokuapp.com
+      static let baseUrl = Rswift.StringResource(key: "baseUrl", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: https://alodjinha.herokuapp.com/categoria
+      static let categories = Rswift.StringResource(key: "categories", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: https://alodjinha.herokuapp.com/produto/maisvendidos
+      static let productsBestSeller = Rswift.StringResource(key: "productsBestSeller", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: https://alodjinha.herokuapp.com
+      static func baseUrl(_: Void = ()) -> String {
+        return NSLocalizedString("baseUrl", tableName: "API", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: https://alodjinha.herokuapp.com/categoria
+      static func categories(_: Void = ()) -> String {
+        return NSLocalizedString("categories", tableName: "API", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: https://alodjinha.herokuapp.com/produto/maisvendidos
+      static func productsBestSeller(_: Void = ()) -> String {
+        return NSLocalizedString("productsBestSeller", tableName: "API", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This `R.string.navigationBar` struct is generated, and contains static references to 1 localization keys.
     struct navigationBar {
       /// Value: Sobre
@@ -155,6 +218,40 @@ struct R: Rswift.Validatable {
       /// Value: Sobre
       static func about(_: Void = ()) -> String {
         return NSLocalizedString("about", tableName: "NavigationBar", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.networkError` struct is generated, and contains static references to 4 localization keys.
+    struct networkError {
+      /// Value: An unexpected error has occurred.
+      static let other = Rswift.StringResource(key: "other", tableName: "NetworkError", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: An unexpected error occurred while communicating with the server.
+      static let mapping = Rswift.StringResource(key: "mapping", tableName: "NetworkError", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Apparently your connection is weak.
+      static let weakConnection = Rswift.StringResource(key: "weakConnection", tableName: "NetworkError", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: You are currently offline.
+      static let offline = Rswift.StringResource(key: "offline", tableName: "NetworkError", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: An unexpected error has occurred.
+      static func other(_: Void = ()) -> String {
+        return NSLocalizedString("other", tableName: "NetworkError", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: An unexpected error occurred while communicating with the server.
+      static func mapping(_: Void = ()) -> String {
+        return NSLocalizedString("mapping", tableName: "NetworkError", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Apparently your connection is weak.
+      static func weakConnection(_: Void = ()) -> String {
+        return NSLocalizedString("weakConnection", tableName: "NetworkError", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: You are currently offline.
+      static func offline(_: Void = ()) -> String {
+        return NSLocalizedString("offline", tableName: "NetworkError", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -202,6 +299,61 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
+    struct _BannersView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "BannersView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _CategoriesView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CategoriesView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _CategoryCollectionViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CategoryCollectionViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CategoryCollectionViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CategoryCollectionViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _ProductTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ProductTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ProductTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProductTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _ProductsView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ProductsView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
@@ -225,7 +377,7 @@ struct _R: Rswift.Validatable {
     }
     
     struct home: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = UIKit.UIViewController
+      typealias InitialController = HomeViewController
       
       let bundle = R.hostingBundle
       let name = "Home"
