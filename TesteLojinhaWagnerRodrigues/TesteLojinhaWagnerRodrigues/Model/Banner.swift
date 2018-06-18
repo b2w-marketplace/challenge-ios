@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct Banner: Decodable {
+
+    let id: String
+    let linkUrl: String
+    let urlImagem: String
+}
+
+

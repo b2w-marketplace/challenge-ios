@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct Category: Decodable {
+
+    let descricao: String
+    let id: String
+    let urlImagem: String
+}

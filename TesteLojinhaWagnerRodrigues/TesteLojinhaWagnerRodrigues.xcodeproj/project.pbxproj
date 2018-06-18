@@ -12,9 +12,16 @@
 		116FB27620CD6A89005FBCDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116FB27420CD6A89005FBCDC /* Main.storyboard */; };
 		116FB27820CD6A8A005FBCDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116FB27720CD6A8A005FBCDC /* Assets.xcassets */; };
 		116FB27B20CD6A8A005FBCDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116FB27920CD6A8A005FBCDC /* LaunchScreen.storyboard */; };
+		116FB28420CD7B62005FBCDC /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116FB28220CD7B62005FBCDC /* CustomTableViewCell.swift */; };
+		116FB28520CD7B62005FBCDC /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116FB28320CD7B62005FBCDC /* CustomTableViewCell.xib */; };
+		116FB29920CD8DEE005FBCDC /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116FB29820CD8DEE005FBCDC /* Banner.swift */; };
+		116FB29B20CD8E75005FBCDC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116FB29A20CD8E75005FBCDC /* Category.swift */; };
+		116FB29D20CD8E9B005FBCDC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116FB29C20CD8E9B005FBCDC /* Product.swift */; };
+		915B4F7C45F44B05D7A879EE /* Pods_TesteLojinhaWagnerRodrigues.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A930286041C4ABCD62D96C39 /* Pods_TesteLojinhaWagnerRodrigues.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02A5A8C50BFF97526ADACA0F /* Pods-TesteLojinhaWagnerRodrigues.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesteLojinhaWagnerRodrigues.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesteLojinhaWagnerRodrigues/Pods-TesteLojinhaWagnerRodrigues.release.xcconfig"; sourceTree = "<group>"; };
 		116FB26D20CD6A89005FBCDC /* TesteLojinhaWagnerRodrigues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteLojinhaWagnerRodrigues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116FB27020CD6A89005FBCDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		116FB27220CD6A89005FBCDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,14 @@
 		116FB27720CD6A8A005FBCDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		116FB27A20CD6A8A005FBCDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		116FB27C20CD6A8A005FBCDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		116FB28220CD7B62005FBCDC /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		116FB28320CD7B62005FBCDC /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		116FB29420CD8887005FBCDC /* Pacifico-Regular.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttc"; sourceTree = "<group>"; };
+		116FB29820CD8DEE005FBCDC /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		116FB29A20CD8E75005FBCDC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		116FB29C20CD8E9B005FBCDC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		82CC53B511D013018014AA9C /* Pods-TesteLojinhaWagnerRodrigues.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesteLojinhaWagnerRodrigues.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesteLojinhaWagnerRodrigues/Pods-TesteLojinhaWagnerRodrigues.debug.xcconfig"; sourceTree = "<group>"; };
+		A930286041C4ABCD62D96C39 /* Pods_TesteLojinhaWagnerRodrigues.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesteLojinhaWagnerRodrigues.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				915B4F7C45F44B05D7A879EE /* Pods_TesteLojinhaWagnerRodrigues.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +56,8 @@
 			children = (
 				116FB26F20CD6A89005FBCDC /* TesteLojinhaWagnerRodrigues */,
 				116FB26E20CD6A89005FBCDC /* Products */,
+				C68E919CA19DA2BBD6DE083A /* Pods */,
+				D41CBAC387954476ACD237A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +72,69 @@
 		116FB26F20CD6A89005FBCDC /* TesteLojinhaWagnerRodrigues */ = {
 			isa = PBXGroup;
 			children = (
+				116FB28620CD7B75005FBCDC /* View */,
+				116FB29520CD8D56005FBCDC /* Model */,
 				116FB27020CD6A89005FBCDC /* AppDelegate.swift */,
-				116FB27220CD6A89005FBCDC /* ViewController.swift */,
-				116FB27420CD6A89005FBCDC /* Main.storyboard */,
 				116FB27720CD6A8A005FBCDC /* Assets.xcassets */,
+				116FB28820CD8616005FBCDC /* Files */,
 				116FB27920CD6A8A005FBCDC /* LaunchScreen.storyboard */,
 				116FB27C20CD6A8A005FBCDC /* Info.plist */,
 			);
 			path = TesteLojinhaWagnerRodrigues;
+			sourceTree = "<group>";
+		};
+		116FB28620CD7B75005FBCDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				116FB28720CD7B86005FBCDC /* CustomCell */,
+				116FB27220CD6A89005FBCDC /* ViewController.swift */,
+				116FB27420CD6A89005FBCDC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		116FB28720CD7B86005FBCDC /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				116FB28220CD7B62005FBCDC /* CustomTableViewCell.swift */,
+				116FB28320CD7B62005FBCDC /* CustomTableViewCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		116FB28820CD8616005FBCDC /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				116FB29420CD8887005FBCDC /* Pacifico-Regular.ttc */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		116FB29520CD8D56005FBCDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				116FB29820CD8DEE005FBCDC /* Banner.swift */,
+				116FB29A20CD8E75005FBCDC /* Category.swift */,
+				116FB29C20CD8E9B005FBCDC /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C68E919CA19DA2BBD6DE083A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82CC53B511D013018014AA9C /* Pods-TesteLojinhaWagnerRodrigues.debug.xcconfig */,
+				02A5A8C50BFF97526ADACA0F /* Pods-TesteLojinhaWagnerRodrigues.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D41CBAC387954476ACD237A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A930286041C4ABCD62D96C39 /* Pods_TesteLojinhaWagnerRodrigues.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +144,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 116FB27F20CD6A8A005FBCDC /* Build configuration list for PBXNativeTarget "TesteLojinhaWagnerRodrigues" */;
 			buildPhases = (
+				478B55682AA8C4C5F7489F26 /* [CP] Check Pods Manifest.lock */,
 				116FB26920CD6A89005FBCDC /* Sources */,
 				116FB26A20CD6A89005FBCDC /* Frameworks */,
 				116FB26B20CD6A89005FBCDC /* Resources */,
@@ -124,19 +198,45 @@
 			files = (
 				116FB27B20CD6A8A005FBCDC /* LaunchScreen.storyboard in Resources */,
 				116FB27820CD6A8A005FBCDC /* Assets.xcassets in Resources */,
+				116FB28520CD7B62005FBCDC /* CustomTableViewCell.xib in Resources */,
 				116FB27620CD6A89005FBCDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		478B55682AA8C4C5F7489F26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TesteLojinhaWagnerRodrigues-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		116FB26920CD6A89005FBCDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116FB28420CD7B62005FBCDC /* CustomTableViewCell.swift in Sources */,
+				116FB29B20CD8E75005FBCDC /* Category.swift in Sources */,
+				116FB29920CD8DEE005FBCDC /* Banner.swift in Sources */,
 				116FB27320CD6A89005FBCDC /* ViewController.swift in Sources */,
 				116FB27120CD6A89005FBCDC /* AppDelegate.swift in Sources */,
+				116FB29D20CD8E9B005FBCDC /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +378,7 @@
 		};
 		116FB28020CD6A8A005FBCDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82CC53B511D013018014AA9C /* Pods-TesteLojinhaWagnerRodrigues.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +397,7 @@
 		};
 		116FB28120CD6A8A005FBCDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02A5A8C50BFF97526ADACA0F /* Pods-TesteLojinhaWagnerRodrigues.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

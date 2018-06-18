@@ -1,0 +1,6 @@
+framework module Pods_TesteLojinhaWagnerRodrigues {
+  umbrella header "Pods-TesteLojinhaWagnerRodrigues-umbrella.h"
+
+  export *
+  module * { export * }
+}

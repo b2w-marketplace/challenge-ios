@@ -55,7 +55,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u3a-OT-HpS">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCollectionViewCell" id="u3a-OT-HpS">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -64,6 +64,10 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0VO-uK-sfj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jOM-eG-mdm"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mais vendidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hd-5a-n47">
                                 <rect key="frame" x="0.0" y="323" width="110" height="21"/>
@@ -83,6 +87,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="aNM-Aq-gZo"/>
                     <connections>
+                        <outlet property="collectionView" destination="cmx-CM-Zlt" id="nP5-YR-Puc"/>
                         <outlet property="scrollView" destination="TpC-5u-aq1" id="Ntt-MK-Tov"/>
                     </connections>
                 </viewController>
