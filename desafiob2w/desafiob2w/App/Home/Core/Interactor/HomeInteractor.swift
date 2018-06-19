@@ -12,10 +12,12 @@ struct HomeInteractor {
     
     private let categoriesGateway: CategoriesGateway
     private let productsGateway: ProductsGateway
+    private let bannersGateway: BannersGateway
     
-    init(categoriesGateway: CategoriesGateway, productsGateway: ProductsGateway) {
+    init(categoriesGateway: CategoriesGateway, productsGateway: ProductsGateway, bannersGateway: BannersGateway) {
         self.categoriesGateway = categoriesGateway
         self.productsGateway = productsGateway
+        self.bannersGateway = bannersGateway
     }
     
     func fetchCategories(completion: @escaping CompletionHandler<[Category], NetworkError>) {
@@ -27,6 +29,12 @@ struct HomeInteractor {
     func fetchProductsBestSeller(completion: @escaping CompletionHandler<[Product], NetworkError>) {
         
         productsGateway.products(url: R.string.apI.productsBestSeller()) { (result) in
+            completion(result)
+        }
+    }
+    
+    func fetchBanners(completion: @escaping CompletionHandler<[Banner], NetworkError>) {
+        bannersGateway.banners(url: R.string.apI.banners()) { (result) in
             completion(result)
         }
     }

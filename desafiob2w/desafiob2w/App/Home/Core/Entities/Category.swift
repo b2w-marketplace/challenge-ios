@@ -10,5 +10,5 @@ import Foundation
 
 struct Category {
     let description: String
-    let urlImage: String
+    let urlImage: URL
 }

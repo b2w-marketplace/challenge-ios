@@ -10,49 +10,49 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    fileprivate lazy var presenter: HomePresenter = HomePresenterFactory.make(delegate: self, interactor: HomeInteractorFactory.make())
+    @IBOutlet weak var bannersView: BannersView!
+    @IBOutlet weak var categoriesView: CategoriesView!
+    @IBOutlet weak var productsView: ProductsView!
+    @IBOutlet weak var productsHeightConstraint: NSLayoutConstraint!
     
-    
-    private var categories: [Category] = [] {
-        didSet {
-            
-        }
-    }
-    
-    private var products: [Product] = [] {
-        didSet {
-            
-        }
-    }
-    
+    fileprivate lazy var presenter: HomePresenter = HomePresenterFactory.make(delegate: self)
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.getCategories()
         presenter.getProducts()
+        presenter.getBanners()
     }
 
+    private func updateProductsHeightConstraint(count: Int) {
+        productsHeightConstraint.constant = CGFloat(260 + (count * 80))
+    }
 }
 
 extension HomeViewController: HomePresentation {
+  
+    
     func onLoadingCategories() {}
     func offLoadingCategories() {}
     func offLoadingProducts() {}
     func onLoadingProducts() {}
-    
-    func onErrorCategories(error: NetworkError) {
-        
+    func onLoadingBanners() {}
+    func offLoadingBanners() {}
+    func onErrorCategories(error: NetworkError) {}
+    func onErrorProducts(error: NetworkError) {}
+    func onErrorBanners(error: NetworkError) {}
+
+    func onCategories(categories: [CategoryViewModel]) {
+        categoriesView.setupView(categories: categories)
     }
     
-    func onErrorProducts(error: NetworkError) {
-        
+    func onProducts(products: [ProductViewModel]) {
+        productsView.setupView(products: products)
+        updateProductsHeightConstraint(count: products.count)
     }
     
-    func onCategories(categories: [Category]) {
-        self.categories = categories
-    }
-    
-    func onProducts(products: [Product]) {
-        self.products = products
+    func onBanners(banners: [BannerViewModel]) {
+        bannersView.setupView(banners: banners)
     }
     
 }

@@ -9,8 +9,38 @@
 import UIKit
 
 class ProductsView: UIView {
+    
+    @IBOutlet weak var tableView: UITableView!
+    private var dataSource: TableDataSource<ProductTableViewCell, ProductViewModel>!
+    
     override func awakeFromNib() {
         loadNib()
         super.awakeFromNib()
+        configureTable()
+    }
+    
+    func setupView(products: [ProductViewModel]) {
+        setDataSource(products: products)
+    }
+    
+    private func configureTable() {
+        tableView.register(UINib(nibName: ProductTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: ProductTableViewCell.identifier)
+    }
+    
+    private func setDataSource(products: [ProductViewModel]) {
+        DispatchQueue.main.async {
+            self.dataSource = TableDataSource(items: products)
+            self.tableView.dataSource = self.dataSource
+            self.tableView.delegate = self
+            self.tableView.reloadData()
+        }
+    }
+    
+}
+
+extension ProductsView: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }

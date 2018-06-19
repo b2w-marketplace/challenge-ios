@@ -10,6 +10,6 @@ import Foundation
 
 struct HomeInteractorFactory {
     static func make() -> HomeInteractor {
-        return HomeInteractor(categoriesGateway: CategoriesNetworkGatewayFactory.make(), productsGateway: ProductsNetworkGatewayFactory.make())
+        return HomeInteractor(categoriesGateway: CategoriesNetworkGatewayFactory.make(), productsGateway: ProductsNetworkGatewayFactory.make(), bannersGateway: BannersNetworkGatewayFactory.make())
     }
 }

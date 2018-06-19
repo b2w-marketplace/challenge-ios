@@ -69,10 +69,16 @@
                         <viewLayoutGuide key="safeArea" id="Gxe-2g-PRu"/>
                     </view>
                     <size key="freeformSize" width="375" height="1250"/>
+                    <connections>
+                        <outlet property="bannersView" destination="53t-hQ-Ys0" id="OJE-BM-YMB"/>
+                        <outlet property="categoriesView" destination="jUD-ou-ccG" id="fci-YN-lAU"/>
+                        <outlet property="productsHeightConstraint" destination="ZGH-BW-M2Q" id="lqg-P9-5pd"/>
+                        <outlet property="productsView" destination="2m5-sk-e6c" id="i9Z-iZ-uoH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qig-CR-1Qv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="166.41679160419793"/>
+            <point key="canvasLocation" x="-162" y="154"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1QF-Zx-3yd">
@@ -99,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QR8-9U-BTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="167"/>
+            <point key="canvasLocation" x="631" y="-331"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="W1B-aH-cee">
@@ -240,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjW-cQ-BdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437.5999999999999" y="226.6866566716642"/>
+            <point key="canvasLocation" x="630" y="442"/>
         </scene>
     </scenes>
 </document>

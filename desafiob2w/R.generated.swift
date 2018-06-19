@@ -96,8 +96,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
   struct nib {
+    /// Nib `BannerCollectionViewCell`.
+    static let bannerCollectionViewCell = _R.nib._BannerCollectionViewCell()
     /// Nib `BannersView`.
     static let bannersView = _R.nib._BannersView()
     /// Nib `CategoriesView`.
@@ -108,6 +110,11 @@ struct R: Rswift.Validatable {
     static let productTableViewCell = _R.nib._ProductTableViewCell()
     /// Nib `ProductsView`.
     static let productsView = _R.nib._ProductsView()
+    
+    /// `UINib(name: "BannerCollectionViewCell", in: bundle)`
+    static func bannerCollectionViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.bannerCollectionViewCell)
+    }
     
     /// `UINib(name: "BannersView", in: bundle)`
     static func bannersView(_: Void = ()) -> UIKit.UINib {
@@ -137,8 +144,15 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `BannerCollectionViewCell`.
+    static let bannerCollectionViewCell: Rswift.ReuseIdentifier<BannerCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "BannerCollectionViewCell")
+    /// Reuse identifier `CategoryCollectionViewCell`.
+    static let categoryCollectionViewCell: Rswift.ReuseIdentifier<CategoryCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "CategoryCollectionViewCell")
+    /// Reuse identifier `ProductTableViewCell`.
+    static let productTableViewCell: Rswift.ReuseIdentifier<ProductTableViewCell> = Rswift.ReuseIdentifier(identifier: "ProductTableViewCell")
+    
     fileprivate init() {}
   }
   
@@ -183,10 +197,12 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 4 localization tables.
   struct string {
-    /// This `R.string.apI` struct is generated, and contains static references to 3 localization keys.
+    /// This `R.string.apI` struct is generated, and contains static references to 4 localization keys.
     struct apI {
       /// Value: https://alodjinha.herokuapp.com
       static let baseUrl = Rswift.StringResource(key: "baseUrl", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: https://alodjinha.herokuapp.com/banner
+      static let banners = Rswift.StringResource(key: "banners", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://alodjinha.herokuapp.com/categoria
       static let categories = Rswift.StringResource(key: "categories", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://alodjinha.herokuapp.com/produto/maisvendidos
@@ -195,6 +211,11 @@ struct R: Rswift.Validatable {
       /// Value: https://alodjinha.herokuapp.com
       static func baseUrl(_: Void = ()) -> String {
         return NSLocalizedString("baseUrl", tableName: "API", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: https://alodjinha.herokuapp.com/banner
+      static func banners(_: Void = ()) -> String {
+        return NSLocalizedString("banners", tableName: "API", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: https://alodjinha.herokuapp.com/categoria
@@ -299,6 +320,20 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
+    struct _BannerCollectionViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = BannerCollectionViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "BannerCollectionViewCell"
+      let name = "BannerCollectionViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> BannerCollectionViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BannerCollectionViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _BannersView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "BannersView"
@@ -321,8 +356,11 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _CategoryCollectionViewCell: Rswift.NibResourceType {
+    struct _CategoryCollectionViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = CategoryCollectionViewCell
+      
       let bundle = R.hostingBundle
+      let identifier = "CategoryCollectionViewCell"
       let name = "CategoryCollectionViewCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CategoryCollectionViewCell? {
@@ -332,8 +370,11 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _ProductTableViewCell: Rswift.NibResourceType {
+    struct _ProductTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = ProductTableViewCell
+      
       let bundle = R.hostingBundle
+      let identifier = "ProductTableViewCell"
       let name = "ProductTableViewCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ProductTableViewCell? {

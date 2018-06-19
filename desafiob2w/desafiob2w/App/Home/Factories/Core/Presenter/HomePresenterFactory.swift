@@ -9,7 +9,7 @@
 import Foundation
 
 struct HomePresenterFactory {
-    static func make(delegate: HomePresentation, interactor: HomeInteractor) -> HomePresenter {
-        return HomePresenter(delegate: delegate, interactor: interactor)
+    static func make(delegate: HomePresentation) -> HomePresenter {
+        return HomePresenter(delegate: delegate, interactor: HomeInteractorFactory.make())
     }
 }

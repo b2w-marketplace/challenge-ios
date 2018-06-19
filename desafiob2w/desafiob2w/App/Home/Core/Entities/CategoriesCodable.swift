@@ -13,7 +13,13 @@ struct CategoriesCodable: Codable {
     
     struct CategoryCodable: Codable {
         let id: Int
-        let descricao: String
-        let urlImagem: String
+        let description: String
+        let urlImagem: URL
+        
+        enum CodingKeys: String, CodingKey {
+            case id
+            case description = "descricao"
+            case urlImagem = "urlImagem"
+        }
     }
 }

@@ -12,6 +12,28 @@ final class HomePresenter {
     
     private weak var delegate: HomePresentation?
     private let interactor: HomeInteractor
+    
+    private var banners: [Banner] = [] {
+        didSet {
+            let bannersViewModel = banners.map(BannerViewModel.init)
+            self.delegate?.onBanners(banners: bannersViewModel)
+        }
+    }
+    
+    private var categories: [Category] = [] {
+        didSet {
+            let categoriesViewModel = categories.map(CategoryViewModel.init)
+            self.delegate?.onCategories(categories: categoriesViewModel)
+        }
+    }
+
+    
+    private var products: [Product] = [] {
+        didSet {
+            let productsViewModel = products.map(ProductViewModel.init)
+            self.delegate?.onProducts(products: productsViewModel)
+        }
+    }
 
     init(delegate: HomePresentation, interactor: HomeInteractor) {
         self.delegate = delegate
@@ -23,7 +45,7 @@ final class HomePresenter {
         interactor.fetchCategories { (result) in
             switch result {
             case .success(let categories):
-                self.delegate?.onCategories(categories: categories)
+                self.categories = categories
             case .fail(let error):
                 self.delegate?.onErrorCategories(error: error)
             }
@@ -36,12 +58,64 @@ final class HomePresenter {
         interactor.fetchProductsBestSeller { (result) in
             switch result {
             case .success(let products):
-                self.delegate?.onProducts(products: products)
+                self.products = products
             case .fail(let error):
                 self.delegate?.onErrorProducts(error: error)
             }
             self.delegate?.offLoadingProducts()
         }
+    }
+    
+    func getBanners() {
+        delegate?.onLoadingBanners()
+        interactor.fetchBanners { (result) in
+            switch result {
+            case .success(let banners):
+                self.banners = banners
+            case .fail(let error):
+                self.delegate?.onErrorBanners(error: error)
+            }
+            self.delegate?.offLoadingBanners()
+        }
         
+    }
+}
+
+struct CategoryViewModel {
+    let description: String
+    let urlImage: URL
+    
+    init(category: Category) {
+        self.description = category.description
+        self.urlImage = category.urlImage
+    }
+}
+
+struct ProductViewModel {
+    let name: String
+    let urlImage: URL
+    let priceFrom: NSAttributedString
+    let priceTo: String
+    
+    init(product: Product) {
+        self.name = product.name
+        self.urlImage = product.urlImage
+        self.priceFrom = NSAttributedString(
+            string: String(format: "De %.2f", product.priceFrom),
+            attributes: [
+                NSAttributedStringKey.strikethroughStyle: 2
+            ]
+        )
+        self.priceTo = String(format: "Por %.2f", product.priceFrom)
+    }
+}
+
+struct BannerViewModel {
+    let urlImagem: URL
+    let linkUrl: URL
+    
+    init(banner: Banner) {
+        self.urlImagem = banner.urlImagem
+        self.linkUrl = banner.linkUrl
     }
 }

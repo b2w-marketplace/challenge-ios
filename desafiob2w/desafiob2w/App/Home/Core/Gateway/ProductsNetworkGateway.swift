@@ -24,7 +24,7 @@ struct ProductsNetworkGateway: ProductsGateway {
     
     private func converterProducts(entity: ProductsCodable) -> [Product] {
         return entity.data.map({
-            Product.init(name: $0.nome, urlImage: $0.urlImagem, description: $0.descricao, priceFrom: $0.precoDe, priceTo: $0.precoPor, category: Category(description: $0.categoria.descricao, urlImage: $0.categoria.urlImagem))
+            Product.init(name: $0.name, urlImage: $0.urlImagem, description: $0.description, priceFrom: $0.priceFrom, priceTo: $0.priceTo, category: Category(description: $0.category.description, urlImage: $0.category.urlImagem))
         })
     }
 }

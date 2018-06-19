@@ -13,16 +13,34 @@ struct ProductsCodable: Codable {
     
     struct ProductCodable: Codable {
         let id: Int
-        let nome: String
-        let urlImagem: String
-        let descricao: String
-        let precoDe: Float
-        let precoPor: Float
-        let categoria: CategoryCodable
+        let name: String
+        let urlImagem: URL
+        let description: String
+        let priceFrom: Float
+        let priceTo: Float
+        let category: CategoryCodable
+        
+        enum CodingKeys: String, CodingKey {
+            case id
+            case name = "nome"
+            case urlImagem = "urlImagem"
+            case description = "descricao"
+            case priceFrom = "precoDe"
+            case priceTo = "precoPor"
+            case category = "categoria"
+        }
+        
         struct CategoryCodable: Codable {
             let id: Int
-            let descricao: String
-            let urlImagem: String
+            let description: String
+            let urlImagem: URL
+            
+            enum CodingKeys: String, CodingKey {
+                case id
+                case description = "descricao"
+                case urlImagem = "urlImagem"
+            }
+            
         }
     }
 }

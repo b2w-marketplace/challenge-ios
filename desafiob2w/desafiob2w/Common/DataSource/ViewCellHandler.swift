@@ -1,5 +1,5 @@
 //
-//  NSObject+ClassName.swift
+//  ViewCellHandler.swift
 //  desafiob2w
 //
 //  Created by Lázaro Lima dos Santos on 17/06/18.
@@ -8,9 +8,7 @@
 
 import Foundation
 
-extension NSObject {
-    
-    static var className: String {
-        return String(describing: self)
-    }
+protocol ViewCellHandler: Identifiable {
+    associatedtype Item
+    func setData(_ data: Item)
 }

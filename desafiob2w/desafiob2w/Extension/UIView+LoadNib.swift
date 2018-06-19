@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView: NibLoadableView { }
+extension UIView: NibLoadableView, Identifiable { }
 
 protocol NibLoadableView: class {
     static var defaultNibName: String { get }
@@ -17,7 +17,7 @@ protocol NibLoadableView: class {
 extension NibLoadableView where Self: UIView {
     
     static var defaultNibName: String {
-        return className
+        return nibName
     }
     
     static var viewFromDefaultNib: Self? {

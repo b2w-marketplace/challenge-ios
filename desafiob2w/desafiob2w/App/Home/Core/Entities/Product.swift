@@ -10,7 +10,7 @@ import Foundation
 
 struct Product {
     let name: String
-    let urlImage: String
+    let urlImage: URL
     let description: String
     let priceFrom: Float
     let priceTo: Float

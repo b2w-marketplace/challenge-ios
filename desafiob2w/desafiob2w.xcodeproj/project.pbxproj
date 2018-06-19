@@ -64,7 +64,17 @@
 		ECD8116320D749E0007F3979 /* BannersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8116220D749E0007F3979 /* BannersView.swift */; };
 		ECD8116520D749EB007F3979 /* BannersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECD8116420D749EB007F3979 /* BannersView.xib */; };
 		ECD8116820D74BD7007F3979 /* UIView+LoadNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8116720D74BD7007F3979 /* UIView+LoadNib.swift */; };
-		ECD8116A20D74DD3007F3979 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8116920D74DD3007F3979 /* NSObject+ClassName.swift */; };
+		ECD8116D20D750D4007F3979 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8116C20D750D4007F3979 /* TableDataSource.swift */; };
+		ECD8117020D75134007F3979 /* ViewCellHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8116F20D75134007F3979 /* ViewCellHandler.swift */; };
+		ECD8117320D751AA007F3979 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8117220D751AA007F3979 /* Identifiable.swift */; };
+		ECD8117520D89ABC007F3979 /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8117420D89ABC007F3979 /* CollectionDataSource.swift */; };
+		ECD8117720D8BF66007F3979 /* BannersGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8117620D8BF66007F3979 /* BannersGateway.swift */; };
+		ECD8117920D8BF72007F3979 /* BannersNetworkGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8117820D8BF72007F3979 /* BannersNetworkGateway.swift */; };
+		ECD8117B20D8BF8F007F3979 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8117A20D8BF8F007F3979 /* Banner.swift */; };
+		ECD8117D20D8BF9E007F3979 /* BannersCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8117C20D8BF9E007F3979 /* BannersCodable.swift */; };
+		ECD8117F20D8C921007F3979 /* BannersNetworkGatewayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8117E20D8C921007F3979 /* BannersNetworkGatewayFactory.swift */; };
+		ECD8118820D8CF7D007F3979 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8118620D8CF7D007F3979 /* BannerCollectionViewCell.swift */; };
+		ECD8118920D8CF7D007F3979 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECD8118720D8CF7D007F3979 /* BannerCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,7 +153,17 @@
 		ECD8116220D749E0007F3979 /* BannersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersView.swift; sourceTree = "<group>"; };
 		ECD8116420D749EB007F3979 /* BannersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannersView.xib; sourceTree = "<group>"; };
 		ECD8116720D74BD7007F3979 /* UIView+LoadNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadNib.swift"; sourceTree = "<group>"; };
-		ECD8116920D74DD3007F3979 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		ECD8116C20D750D4007F3979 /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
+		ECD8116F20D75134007F3979 /* ViewCellHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCellHandler.swift; sourceTree = "<group>"; };
+		ECD8117220D751AA007F3979 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		ECD8117420D89ABC007F3979 /* CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
+		ECD8117620D8BF66007F3979 /* BannersGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersGateway.swift; sourceTree = "<group>"; };
+		ECD8117820D8BF72007F3979 /* BannersNetworkGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersNetworkGateway.swift; sourceTree = "<group>"; };
+		ECD8117A20D8BF8F007F3979 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		ECD8117C20D8BF9E007F3979 /* BannersCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersCodable.swift; sourceTree = "<group>"; };
+		ECD8117E20D8C921007F3979 /* BannersNetworkGatewayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersNetworkGatewayFactory.swift; sourceTree = "<group>"; };
+		ECD8118620D8CF7D007F3979 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECD8118720D8CF7D007F3979 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +251,8 @@
 		EC2DA42220D57BB900C03856 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ECD8117120D7519C007F3979 /* Identifable */,
+				ECD8116B20D750BC007F3979 /* DataSource */,
 				EC2DA46920D5FEBA00C03856 /* Strings */,
 				EC2DA43C20D5C24300C03856 /* Views */,
 				EC2DA43920D5C21300C03856 /* ViewConfiguration */,
@@ -481,6 +503,8 @@
 				ECD8113320D721C0007F3979 /* Category.swift */,
 				ECD8113B20D72BF1007F3979 /* ProductsCodable.swift */,
 				ECD8113D20D72D7E007F3979 /* Product.swift */,
+				ECD8117C20D8BF9E007F3979 /* BannersCodable.swift */,
+				ECD8117A20D8BF8F007F3979 /* Banner.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -492,6 +516,8 @@
 				ECD8113920D72755007F3979 /* CategoriesNetworkGateway.swift */,
 				ECD8113F20D72EEB007F3979 /* ProductsGateway.swift */,
 				ECD8114120D72EFD007F3979 /* ProductsNetworkGateway.swift */,
+				ECD8117620D8BF66007F3979 /* BannersGateway.swift */,
+				ECD8117820D8BF72007F3979 /* BannersNetworkGateway.swift */,
 			);
 			path = Gateway;
 			sourceTree = "<group>";
@@ -534,6 +560,7 @@
 			children = (
 				ECD8115020D73B65007F3979 /* CategoriesNetworkGatewayFactory.swift */,
 				ECD8114E20D73AA4007F3979 /* ProductsNetworkGatewayFactory.swift */,
+				ECD8117E20D8C921007F3979 /* BannersNetworkGatewayFactory.swift */,
 			);
 			path = Gateway;
 			sourceTree = "<group>";
@@ -545,6 +572,8 @@
 				ECD8110920D7190F007F3979 /* ProductTableViewCell.xib */,
 				ECD8111020D71952007F3979 /* CategoryCollectionViewCell.swift */,
 				ECD8111120D71952007F3979 /* CategoryCollectionViewCell.xib */,
+				ECD8118620D8CF7D007F3979 /* BannerCollectionViewCell.swift */,
+				ECD8118720D8CF7D007F3979 /* BannerCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -566,9 +595,26 @@
 			isa = PBXGroup;
 			children = (
 				ECD8116720D74BD7007F3979 /* UIView+LoadNib.swift */,
-				ECD8116920D74DD3007F3979 /* NSObject+ClassName.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		ECD8116B20D750BC007F3979 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8116C20D750D4007F3979 /* TableDataSource.swift */,
+				ECD8117420D89ABC007F3979 /* CollectionDataSource.swift */,
+				ECD8116F20D75134007F3979 /* ViewCellHandler.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		ECD8117120D7519C007F3979 /* Identifable */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8117220D751AA007F3979 /* Identifiable.swift */,
+			);
+			path = Identifable;
 			sourceTree = "<group>";
 		};
 		FD2940945E050B0EDA46838C /* Pods */ = {
@@ -677,6 +723,7 @@
 				ECD8115D20D7496D007F3979 /* CategoriesView.xib in Resources */,
 				ECD8110120D706EF007F3979 /* Home.storyboard in Resources */,
 				ECD8116520D749EB007F3979 /* BannersView.xib in Resources */,
+				ECD8118920D8CF7D007F3979 /* BannerCollectionViewCell.xib in Resources */,
 				ECD8110B20D7190F007F3979 /* ProductTableViewCell.xib in Resources */,
 				ECD8111320D71952007F3979 /* CategoryCollectionViewCell.xib in Resources */,
 				EC1187CA20D2137200A77FC6 /* Assets.xcassets in Resources */,
@@ -810,8 +857,10 @@
 				EC2DA44720D5C48900C03856 /* LoadingViewFactory.swift in Sources */,
 				ECD8114420D731BF007F3979 /* HomeInteractor.swift in Sources */,
 				ECD8116820D74BD7007F3979 /* UIView+LoadNib.swift in Sources */,
+				ECD8117920D8BF72007F3979 /* BannersNetworkGateway.swift in Sources */,
 				ECD8111D20D71DD2007F3979 /* NetworkError.swift in Sources */,
 				ECD8113A20D72755007F3979 /* CategoriesNetworkGateway.swift in Sources */,
+				ECD8116D20D750D4007F3979 /* TableDataSource.swift in Sources */,
 				ECD8115320D73C7E007F3979 /* HomeInteractorFactory.swift in Sources */,
 				EC1187C320D2137000A77FC6 /* AppDelegate.swift in Sources */,
 				EC2DA45E20D5F7FB00C03856 /* AboutViewControllerFactory.swift in Sources */,
@@ -821,31 +870,38 @@
 				ECD8111220D71952007F3979 /* CategoryCollectionViewCell.swift in Sources */,
 				EC2DA44320D5C3B300C03856 /* LoadingView.swift in Sources */,
 				ECD8115520D73CF4007F3979 /* HomePresenterFactory.swift in Sources */,
+				ECD8117F20D8C921007F3979 /* BannersNetworkGatewayFactory.swift in Sources */,
+				ECD8117D20D8BF9E007F3979 /* BannersCodable.swift in Sources */,
+				ECD8117720D8BF66007F3979 /* BannersGateway.swift in Sources */,
 				ECD8111F20D71DF2007F3979 /* GenerateResultObjectToObject.swift in Sources */,
 				ECD8115120D73B65007F3979 /* CategoriesNetworkGatewayFactory.swift in Sources */,
 				ECD8113C20D72BF1007F3979 /* ProductsCodable.swift in Sources */,
 				ECD8114820D73457007F3979 /* HomePresenter.swift in Sources */,
 				ECD8110620D718AA007F3979 /* HomeViewController.swift in Sources */,
 				EC2DA46820D5FE3C00C03856 /* R.generated.swift in Sources */,
+				ECD8117020D75134007F3979 /* ViewCellHandler.swift in Sources */,
 				ECD8110A20D7190F007F3979 /* ProductTableViewCell.swift in Sources */,
 				ECD8112C20D71E75007F3979 /* GetRequestable.swift in Sources */,
 				ECD8112720D71E42007F3979 /* CompletionHandler.swift in Sources */,
 				ECD8114020D72EEB007F3979 /* ProductsGateway.swift in Sources */,
 				EC2DA43B20D5C22100C03856 /* ViewConfiguration.swift in Sources */,
+				ECD8118820D8CF7D007F3979 /* BannerCollectionViewCell.swift in Sources */,
 				ECD8115F20D7497B007F3979 /* CategoriesView.swift in Sources */,
 				EC2DA43F20D5C25800C03856 /* ErrorView.swift in Sources */,
 				ECD8113E20D72D7E007F3979 /* Product.swift in Sources */,
 				ECD8113420D721C0007F3979 /* Category.swift in Sources */,
 				ECD8112A20D71E5E007F3979 /* GetRequest.swift in Sources */,
-				ECD8116A20D74DD3007F3979 /* NSObject+ClassName.swift in Sources */,
 				ECD8114620D7344B007F3979 /* HomePresentation.swift in Sources */,
 				ECD8112120D71E06007F3979 /* GenerateResultObjectToArray.swift in Sources */,
+				ECD8117520D89ABC007F3979 /* CollectionDataSource.swift in Sources */,
 				ECD8113620D721DB007F3979 /* CategoriesCodable.swift in Sources */,
 				ECD8114F20D73AA4007F3979 /* ProductsNetworkGatewayFactory.swift in Sources */,
 				ECD8116320D749E0007F3979 /* BannersView.swift in Sources */,
 				ECD8115920D7490A007F3979 /* ProductsView.swift in Sources */,
+				ECD8117320D751AA007F3979 /* Identifiable.swift in Sources */,
 				EC2DA44520D5C47300C03856 /* ErrorViewFactory.swift in Sources */,
 				ECD8111B20D71DC2007F3979 /* GetRequestFactory.swift in Sources */,
+				ECD8117B20D8BF8F007F3979 /* Banner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
