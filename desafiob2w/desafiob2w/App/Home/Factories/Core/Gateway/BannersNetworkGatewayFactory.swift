@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BannersNetworkGatewayFactory {
+enum BannersNetworkGatewayFactory {
     static func make() -> BannersGateway {
         return BannersNetworkGateway(getRequest: GetRequestFactory.make())
     }

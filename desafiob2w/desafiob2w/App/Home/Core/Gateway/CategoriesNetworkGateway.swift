@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CategoriesNetworkGateway: CategoriesGateway {
+class CategoriesNetworkGateway: CategoriesGateway {
     
     private let getRequest: GetRequestable
     
@@ -25,7 +25,7 @@ struct CategoriesNetworkGateway: CategoriesGateway {
     
     private func converterCategories(entity: CategoriesCodable) -> [Category] {
         return entity.data.map ({
-            Category(description: $0.description, urlImage: $0.urlImagem)
+            Category(id: $0.id, description: $0.description, urlImage: $0.urlImagem)
         })
     }
     

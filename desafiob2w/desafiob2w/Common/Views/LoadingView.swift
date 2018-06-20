@@ -16,7 +16,6 @@ final class LoadingView: UIView {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.text = "Rodando..."
         label.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         return label
     }()

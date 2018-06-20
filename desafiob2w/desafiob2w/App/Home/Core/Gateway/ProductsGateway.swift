@@ -7,5 +7,8 @@
 //
 
 protocol ProductsGateway {
-    func products(url: String, completionHandler: @escaping CompletionHandler<[Product], NetworkError>)
+    func bestSellerProducts(url: String, completionHandler: @escaping CompletionHandler<[Product], NetworkError>)
+    func products(url: String, idCategory: Int, completionHandler: @escaping CompletionHandler<[Product], NetworkError>)
+    func product(url: String, idProduct: Int, completionHandler: @escaping CompletionHandler<Product, NetworkError>)
+    func reserveProduct(url: String, idProduct: Int,  completionHandler: @escaping CompletionHandler<Bool, NetworkError>)
 }

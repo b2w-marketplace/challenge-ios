@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct ProductsNetworkGatewayFactory {
+enum ProductsNetworkGatewayFactory {
     static func make() -> ProductsGateway {
-        return ProductsNetworkGateway(getRequest: GetRequestFactory.make())
+        return ProductsNetworkGateway(getRequest: GetRequestFactory.make(), postReuqest: PostRequestFactory.make())
     }
 }

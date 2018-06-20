@@ -75,6 +75,27 @@
 		ECD8117F20D8C921007F3979 /* BannersNetworkGatewayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8117E20D8C921007F3979 /* BannersNetworkGatewayFactory.swift */; };
 		ECD8118820D8CF7D007F3979 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8118620D8CF7D007F3979 /* BannerCollectionViewCell.swift */; };
 		ECD8118920D8CF7D007F3979 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECD8118720D8CF7D007F3979 /* BannerCollectionViewCell.xib */; };
+		ECD8119E20D9B215007F3979 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8119D20D9B215007F3979 /* ProductViewController.swift */; };
+		ECD811A020D9B234007F3979 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8119F20D9B234007F3979 /* ProductsViewController.swift */; };
+		ECD811A320D9B335007F3979 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811A220D9B335007F3979 /* Injectable.swift */; };
+		ECD811A620D9B72A007F3979 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811A520D9B72A007F3979 /* HomeRouter.swift */; };
+		ECD811A820D9B7CD007F3979 /* HomeNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811A720D9B7CD007F3979 /* HomeNavigationRouter.swift */; };
+		ECD811AB20D9BA88007F3979 /* HomeNavigationRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811AA20D9BA88007F3979 /* HomeNavigationRouterFactory.swift */; };
+		ECD811AE20D9CBBA007F3979 /* TabBarImageViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811AD20D9CBBA007F3979 /* TabBarImageViewFactory.swift */; };
+		ECD811B020D9D0AD007F3979 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811AF20D9D0AD007F3979 /* PresentationView.swift */; };
+		ECD811BA20D9F1C5007F3979 /* ProductCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811B920D9F1C5007F3979 /* ProductCodable.swift */; };
+		ECD811BC20D9F65F007F3979 /* ProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811BB20D9F65F007F3979 /* ProductInteractor.swift */; };
+		ECD811BE20D9F8D6007F3979 /* ProductPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811BD20D9F8D6007F3979 /* ProductPresentation.swift */; };
+		ECD811C120D9F933007F3979 /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811C020D9F933007F3979 /* ProductPresenter.swift */; };
+		ECD811C320D9FAD0007F3979 /* ProductInteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811C220D9FAD0007F3979 /* ProductInteractorFactory.swift */; };
+		ECD811C920D9FB7C007F3979 /* ProductPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811C820D9FB7B007F3979 /* ProductPresenterFactory.swift */; };
+		ECD811CB20DA043A007F3979 /* String+html.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811CA20DA043A007F3979 /* String+html.swift */; };
+		ECD811CD20DA0B33007F3979 /* UIButton+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811CC20DA0B33007F3979 /* UIButton+Rounded.swift */; };
+		ECD811D020DA0EA5007F3979 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811CF20DA0EA5007F3979 /* PostRequest.swift */; };
+		ECD811D220DA0EB1007F3979 /* PostRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811D120DA0EB1007F3979 /* PostRequestable.swift */; };
+		ECD811D420DA117B007F3979 /* PostRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811D320DA117B007F3979 /* PostRequestFactory.swift */; };
+		ECD811D620DA11FA007F3979 /* SuccesCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811D520DA11FA007F3979 /* SuccesCodable.swift */; };
+		ECD811D820DA16E7007F3979 /* Messages.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECD811D720DA16E7007F3979 /* Messages.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +185,27 @@
 		ECD8117E20D8C921007F3979 /* BannersNetworkGatewayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersNetworkGatewayFactory.swift; sourceTree = "<group>"; };
 		ECD8118620D8CF7D007F3979 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECD8118720D8CF7D007F3979 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		ECD8119D20D9B215007F3979 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		ECD8119F20D9B234007F3979 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		ECD811A220D9B335007F3979 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		ECD811A520D9B72A007F3979 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		ECD811A720D9B7CD007F3979 /* HomeNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationRouter.swift; sourceTree = "<group>"; };
+		ECD811AA20D9BA88007F3979 /* HomeNavigationRouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationRouterFactory.swift; sourceTree = "<group>"; };
+		ECD811AD20D9CBBA007F3979 /* TabBarImageViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarImageViewFactory.swift; sourceTree = "<group>"; };
+		ECD811AF20D9D0AD007F3979 /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
+		ECD811B920D9F1C5007F3979 /* ProductCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCodable.swift; sourceTree = "<group>"; };
+		ECD811BB20D9F65F007F3979 /* ProductInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInteractor.swift; sourceTree = "<group>"; };
+		ECD811BD20D9F8D6007F3979 /* ProductPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentation.swift; sourceTree = "<group>"; };
+		ECD811C020D9F933007F3979 /* ProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
+		ECD811C220D9FAD0007F3979 /* ProductInteractorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInteractorFactory.swift; sourceTree = "<group>"; };
+		ECD811C820D9FB7B007F3979 /* ProductPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenterFactory.swift; sourceTree = "<group>"; };
+		ECD811CA20DA043A007F3979 /* String+html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+html.swift"; sourceTree = "<group>"; };
+		ECD811CC20DA0B33007F3979 /* UIButton+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Rounded.swift"; sourceTree = "<group>"; };
+		ECD811CF20DA0EA5007F3979 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
+		ECD811D120DA0EB1007F3979 /* PostRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestable.swift; sourceTree = "<group>"; };
+		ECD811D320DA117B007F3979 /* PostRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestFactory.swift; sourceTree = "<group>"; };
+		ECD811D520DA11FA007F3979 /* SuccesCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesCodable.swift; sourceTree = "<group>"; };
+		ECD811D720DA16E7007F3979 /* Messages.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Messages.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +261,6 @@
 		EC1187C120D2137000A77FC6 /* desafiob2w */ = {
 			isa = PBXGroup;
 			children = (
-				ECD8116620D74BC0007F3979 /* Extension */,
 				EC2DA42120D57BAF00C03856 /* App */,
 				ECD810FD20D700FD007F3979 /* Storyboard */,
 				ECD8110720D718E5007F3979 /* Xibs */,
@@ -244,6 +285,8 @@
 			children = (
 				EC2DA44A20D5F70000C03856 /* Home */,
 				EC2DA44B20D5F71600C03856 /* About */,
+				ECD8119820D9B185007F3979 /* Product */,
+				ECD8119720D9B177007F3979 /* Producties */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -251,6 +294,8 @@
 		EC2DA42220D57BB900C03856 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ECD8116620D74BC0007F3979 /* Extension */,
+				ECD811A120D9B32B007F3979 /* Injectable */,
 				ECD8117120D7519C007F3979 /* Identifable */,
 				ECD8116B20D750BC007F3979 /* DataSource */,
 				EC2DA46920D5FEBA00C03856 /* Strings */,
@@ -285,6 +330,7 @@
 				EC2DA43D20D5C24C00C03856 /* Factories */,
 				EC2DA43E20D5C25800C03856 /* ErrorView.swift */,
 				EC2DA44220D5C3B300C03856 /* LoadingView.swift */,
+				ECD811AF20D9D0AD007F3979 /* PresentationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,6 +375,7 @@
 		EC2DA44E20D5F75000C03856 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ECD811A420D9B70F007F3979 /* Router */,
 				ECD8113220D721A6007F3979 /* Presenter */,
 				ECD8113120D7219F007F3979 /* Interactor */,
 				ECD8113020D72196007F3979 /* Gateway */,
@@ -340,6 +387,7 @@
 		EC2DA44F20D5F75600C03856 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				ECD811AC20D9CB95007F3979 /* View */,
 				EC2DA45520D5F78D00C03856 /* Core */,
 			);
 			path = Factories;
@@ -391,6 +439,7 @@
 				ECD8114C20D73A60007F3979 /* Presenter */,
 				ECD8114A20D73A38007F3979 /* Interactor */,
 				ECD8114D20D73A67007F3979 /* Gateway */,
+				ECD811A920D9BA73007F3979 /* Router */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -409,6 +458,7 @@
 				EC2DA46E20D6058E00C03856 /* TabBarItem.strings */,
 				ECD8112D20D72022007F3979 /* NetworkError.strings */,
 				ECD8115620D73FF9007F3979 /* API.strings */,
+				ECD811D720DA16E7007F3979 /* Messages.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -466,6 +516,7 @@
 		ECD8111720D71DA1007F3979 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				ECD811CE20DA0E95007F3979 /* POST */,
 				ECD8112820D71E52007F3979 /* GET */,
 			);
 			path = Request;
@@ -475,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				ECD8111A20D71DC2007F3979 /* GetRequestFactory.swift */,
+				ECD811D320DA117B007F3979 /* PostRequestFactory.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -505,6 +557,8 @@
 				ECD8113D20D72D7E007F3979 /* Product.swift */,
 				ECD8117C20D8BF9E007F3979 /* BannersCodable.swift */,
 				ECD8117A20D8BF8F007F3979 /* Banner.swift */,
+				ECD811B920D9F1C5007F3979 /* ProductCodable.swift */,
+				ECD811D520DA11FA007F3979 /* SuccesCodable.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -595,6 +649,8 @@
 			isa = PBXGroup;
 			children = (
 				ECD8116720D74BD7007F3979 /* UIView+LoadNib.swift */,
+				ECD811CA20DA043A007F3979 /* String+html.swift */,
+				ECD811CC20DA0B33007F3979 /* UIButton+Rounded.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -615,6 +671,149 @@
 				ECD8117220D751AA007F3979 /* Identifiable.swift */,
 			);
 			path = Identifable;
+			sourceTree = "<group>";
+		};
+		ECD8119720D9B177007F3979 /* Producties */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8119A20D9B1C2007F3979 /* ViewController */,
+			);
+			path = Producties;
+			sourceTree = "<group>";
+		};
+		ECD8119820D9B185007F3979 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8119920D9B1BA007F3979 /* ViewController */,
+				ECD811B120D9EDBE007F3979 /* Core */,
+				ECD811B220D9EDC3007F3979 /* Factories */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		ECD8119920D9B1BA007F3979 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8119D20D9B215007F3979 /* ProductViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ECD8119A20D9B1C2007F3979 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8119F20D9B234007F3979 /* ProductsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ECD811A120D9B32B007F3979 /* Injectable */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811A220D9B335007F3979 /* Injectable.swift */,
+			);
+			path = Injectable;
+			sourceTree = "<group>";
+		};
+		ECD811A420D9B70F007F3979 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811A520D9B72A007F3979 /* HomeRouter.swift */,
+				ECD811A720D9B7CD007F3979 /* HomeNavigationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		ECD811A920D9BA73007F3979 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811AA20D9BA88007F3979 /* HomeNavigationRouterFactory.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		ECD811AC20D9CB95007F3979 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811AD20D9CBBA007F3979 /* TabBarImageViewFactory.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECD811B120D9EDBE007F3979 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811B720D9EE2A007F3979 /* Router */,
+				ECD811B420D9EE0F007F3979 /* Presenter */,
+				ECD811B520D9EE17007F3979 /* Interactor */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ECD811B220D9EDC3007F3979 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811BF20D9F90F007F3979 /* Core */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		ECD811B420D9EE0F007F3979 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811BD20D9F8D6007F3979 /* ProductPresentation.swift */,
+				ECD811C020D9F933007F3979 /* ProductPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ECD811B520D9EE17007F3979 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811BB20D9F65F007F3979 /* ProductInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ECD811B720D9EE2A007F3979 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		ECD811BF20D9F90F007F3979 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811C520D9FB4C007F3979 /* Presenter */,
+				ECD811C420D9FB44007F3979 /* Interactor */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ECD811C420D9FB44007F3979 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811C220D9FAD0007F3979 /* ProductInteractorFactory.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ECD811C520D9FB4C007F3979 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811C820D9FB7B007F3979 /* ProductPresenterFactory.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ECD811CE20DA0E95007F3979 /* POST */ = {
+			isa = PBXGroup;
+			children = (
+				ECD811CF20DA0EA5007F3979 /* PostRequest.swift */,
+				ECD811D120DA0EB1007F3979 /* PostRequestable.swift */,
+			);
+			path = POST;
 			sourceTree = "<group>";
 		};
 		FD2940945E050B0EDA46838C /* Pods */ = {
@@ -714,6 +913,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD811D820DA16E7007F3979 /* Messages.strings in Resources */,
 				ECD8115720D73FF9007F3979 /* API.strings in Resources */,
 				EC1187CD20D2137200A77FC6 /* LaunchScreen.storyboard in Resources */,
 				ECD8110320D70746007F3979 /* About.storyboard in Resources */,
@@ -770,6 +970,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -777,6 +978,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -855,6 +1057,8 @@
 				ECD8113820D72745007F3979 /* CategoriesGateway.swift in Sources */,
 				ECD8112520D71E2F007F3979 /* Result.swift in Sources */,
 				EC2DA44720D5C48900C03856 /* LoadingViewFactory.swift in Sources */,
+				ECD811CD20DA0B33007F3979 /* UIButton+Rounded.swift in Sources */,
+				ECD811D620DA11FA007F3979 /* SuccesCodable.swift in Sources */,
 				ECD8114420D731BF007F3979 /* HomeInteractor.swift in Sources */,
 				ECD8116820D74BD7007F3979 /* UIView+LoadNib.swift in Sources */,
 				ECD8117920D8BF72007F3979 /* BannersNetworkGateway.swift in Sources */,
@@ -862,38 +1066,55 @@
 				ECD8113A20D72755007F3979 /* CategoriesNetworkGateway.swift in Sources */,
 				ECD8116D20D750D4007F3979 /* TableDataSource.swift in Sources */,
 				ECD8115320D73C7E007F3979 /* HomeInteractorFactory.swift in Sources */,
+				ECD811AB20D9BA88007F3979 /* HomeNavigationRouterFactory.swift in Sources */,
 				EC1187C320D2137000A77FC6 /* AppDelegate.swift in Sources */,
 				EC2DA45E20D5F7FB00C03856 /* AboutViewControllerFactory.swift in Sources */,
 				EC2DA45A20D5F7CA00C03856 /* AboutViewController.swift in Sources */,
+				ECD811D220DA0EB1007F3979 /* PostRequestable.swift in Sources */,
 				ECD8112320D71E1A007F3979 /* GenerateResultArrayToArray.swift in Sources */,
 				ECD8114220D72EFD007F3979 /* ProductsNetworkGateway.swift in Sources */,
 				ECD8111220D71952007F3979 /* CategoryCollectionViewCell.swift in Sources */,
 				EC2DA44320D5C3B300C03856 /* LoadingView.swift in Sources */,
+				ECD811B020D9D0AD007F3979 /* PresentationView.swift in Sources */,
 				ECD8115520D73CF4007F3979 /* HomePresenterFactory.swift in Sources */,
 				ECD8117F20D8C921007F3979 /* BannersNetworkGatewayFactory.swift in Sources */,
 				ECD8117D20D8BF9E007F3979 /* BannersCodable.swift in Sources */,
 				ECD8117720D8BF66007F3979 /* BannersGateway.swift in Sources */,
 				ECD8111F20D71DF2007F3979 /* GenerateResultObjectToObject.swift in Sources */,
+				ECD811C320D9FAD0007F3979 /* ProductInteractorFactory.swift in Sources */,
+				ECD811BE20D9F8D6007F3979 /* ProductPresentation.swift in Sources */,
 				ECD8115120D73B65007F3979 /* CategoriesNetworkGatewayFactory.swift in Sources */,
 				ECD8113C20D72BF1007F3979 /* ProductsCodable.swift in Sources */,
 				ECD8114820D73457007F3979 /* HomePresenter.swift in Sources */,
 				ECD8110620D718AA007F3979 /* HomeViewController.swift in Sources */,
 				EC2DA46820D5FE3C00C03856 /* R.generated.swift in Sources */,
 				ECD8117020D75134007F3979 /* ViewCellHandler.swift in Sources */,
+				ECD8119E20D9B215007F3979 /* ProductViewController.swift in Sources */,
 				ECD8110A20D7190F007F3979 /* ProductTableViewCell.swift in Sources */,
 				ECD8112C20D71E75007F3979 /* GetRequestable.swift in Sources */,
 				ECD8112720D71E42007F3979 /* CompletionHandler.swift in Sources */,
 				ECD8114020D72EEB007F3979 /* ProductsGateway.swift in Sources */,
+				ECD811A020D9B234007F3979 /* ProductsViewController.swift in Sources */,
+				ECD811A820D9B7CD007F3979 /* HomeNavigationRouter.swift in Sources */,
 				EC2DA43B20D5C22100C03856 /* ViewConfiguration.swift in Sources */,
 				ECD8118820D8CF7D007F3979 /* BannerCollectionViewCell.swift in Sources */,
+				ECD811D420DA117B007F3979 /* PostRequestFactory.swift in Sources */,
+				ECD811C920D9FB7C007F3979 /* ProductPresenterFactory.swift in Sources */,
 				ECD8115F20D7497B007F3979 /* CategoriesView.swift in Sources */,
+				ECD811D020DA0EA5007F3979 /* PostRequest.swift in Sources */,
 				EC2DA43F20D5C25800C03856 /* ErrorView.swift in Sources */,
 				ECD8113E20D72D7E007F3979 /* Product.swift in Sources */,
 				ECD8113420D721C0007F3979 /* Category.swift in Sources */,
 				ECD8112A20D71E5E007F3979 /* GetRequest.swift in Sources */,
 				ECD8114620D7344B007F3979 /* HomePresentation.swift in Sources */,
+				ECD811AE20D9CBBA007F3979 /* TabBarImageViewFactory.swift in Sources */,
+				ECD811BC20D9F65F007F3979 /* ProductInteractor.swift in Sources */,
+				ECD811C120D9F933007F3979 /* ProductPresenter.swift in Sources */,
+				ECD811CB20DA043A007F3979 /* String+html.swift in Sources */,
 				ECD8112120D71E06007F3979 /* GenerateResultObjectToArray.swift in Sources */,
 				ECD8117520D89ABC007F3979 /* CollectionDataSource.swift in Sources */,
+				ECD811A620D9B72A007F3979 /* HomeRouter.swift in Sources */,
+				ECD811BA20D9F1C5007F3979 /* ProductCodable.swift in Sources */,
 				ECD8113620D721DB007F3979 /* CategoriesCodable.swift in Sources */,
 				ECD8114F20D73AA4007F3979 /* ProductsNetworkGatewayFactory.swift in Sources */,
 				ECD8116320D749E0007F3979 /* BannersView.swift in Sources */,
@@ -902,6 +1123,7 @@
 				EC2DA44520D5C47300C03856 /* ErrorViewFactory.swift in Sources */,
 				ECD8111B20D71DC2007F3979 /* GetRequestFactory.swift in Sources */,
 				ECD8117B20D8BF8F007F3979 /* Banner.swift in Sources */,
+				ECD811A320D9B335007F3979 /* Injectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

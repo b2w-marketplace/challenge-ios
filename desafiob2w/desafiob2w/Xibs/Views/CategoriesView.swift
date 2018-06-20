@@ -9,17 +9,22 @@
 import UIKit
 
 class CategoriesView: UIView {
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
     private var dataSource: CollectionDataSource<CategoryCollectionViewCell, CategoryViewModel>!
+    
+    private var completion: ((_ indexCellSelected: Int) -> Void)?
+    
     override func awakeFromNib() {
         loadNib()
+        setupPresentation(parentView: self)
         super.awakeFromNib()
         configureCollection()
     }
     
-    func setupView(categories: [CategoryViewModel]) {
+    func setupView(categories: [CategoryViewModel], completion:@escaping (_ indexTableSelected: Int) -> Void) {
         setDataSource(categories: categories)
+        self.completion = completion
     }
     
     private func configureCollection() {
@@ -38,5 +43,7 @@ class CategoriesView: UIView {
 }
 
 extension CategoriesView: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        completion!(indexPath.row)
+    }
 }

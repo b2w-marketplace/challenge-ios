@@ -9,6 +9,7 @@
 import Foundation
 
 struct Product {
+    let id: Int
     let name: String
     let urlImage: URL
     let description: String

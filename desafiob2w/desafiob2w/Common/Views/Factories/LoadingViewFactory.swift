@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct LoadingViewFactory {
+enum LoadingViewFactory {
     static func make(parentView: UIView) -> LoadingView {
         return LoadingView(parentView: parentView)
     }

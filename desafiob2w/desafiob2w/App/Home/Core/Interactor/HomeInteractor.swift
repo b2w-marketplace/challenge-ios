@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HomeInteractor {
+class HomeInteractor {
     
     private let categoriesGateway: CategoriesGateway
     private let productsGateway: ProductsGateway
@@ -27,8 +27,8 @@ struct HomeInteractor {
     }
     
     func fetchProductsBestSeller(completion: @escaping CompletionHandler<[Product], NetworkError>) {
-        
-        productsGateway.products(url: R.string.apI.productsBestSeller()) { (result) in
+
+        productsGateway.bestSellerProducts(url: R.string.apI.productsBestSeller()) { (result) in
             completion(result)
         }
     }

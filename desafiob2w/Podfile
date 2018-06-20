@@ -15,7 +15,7 @@ target 'desafiob2w' do
     pod 'SVProgressHUD', '~> 2.2.5'
     pod 'Alamofire', '~> 4.7.2'
     pod 'Kingfisher', '~> 4.8.0'
-
+    pod 'RxSwift', '~> 4.2.0'
 
     target 'desafiob2wTests' do
         inherit! :search_paths

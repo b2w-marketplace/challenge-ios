@@ -9,19 +9,32 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    
 
     @IBOutlet weak var bannersView: BannersView!
     @IBOutlet weak var categoriesView: CategoriesView!
-    @IBOutlet weak var productsView: ProductsView!
+    @IBOutlet weak var bestSellingProductView: ProductsView!
     @IBOutlet weak var productsHeightConstraint: NSLayoutConstraint!
     
-    fileprivate lazy var presenter: HomePresenter = HomePresenterFactory.make(delegate: self)
+    
+    @IBOutlet weak var reserveButton: UIButton!
+    
+    @IBAction func reserveButtonAction(_ sender: UIButton) {
+    }
+    
+    
+    private lazy var presenter: HomePresenter = HomePresenterFactory.make(delegate: self, navigationController: self.navigationController!)
         
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.getCategories()
         presenter.getProducts()
         presenter.getBanners()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationItem.titleView = TabBarImageViewFactory.make()
     }
 
     private func updateProductsHeightConstraint(count: Int) {
@@ -30,29 +43,61 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomePresentation {
-  
     
-    func onLoadingCategories() {}
-    func offLoadingCategories() {}
-    func offLoadingProducts() {}
-    func onLoadingProducts() {}
-    func onLoadingBanners() {}
-    func offLoadingBanners() {}
-    func onErrorCategories(error: NetworkError) {}
-    func onErrorProducts(error: NetworkError) {}
-    func onErrorBanners(error: NetworkError) {}
-
+    func onLoadingBanners() {
+        bannersView.presentLoading()
+    }
+    
+    func offLoadingBanners() {
+        bannersView.dismissLoading()
+    }
+    
+    func onLoadingCategories() {
+        categoriesView.presentLoading()
+    }
+    
+    func offLoadingCategories() {
+        categoriesView.dismissLoading()
+    }
+    
+    func onLoadingProducts() {
+      //  bestSellingProductView.presentLoading()
+    }
+    
+    func offLoadingProducts() {
+     //   bestSellingProductView.dismissLoading()
+    }
+    
+    func onErrorCategories(error: NetworkError) {
+        categoriesView.presentError(error: error)
+    }
+    
+    func onErrorProducts(error: NetworkError) {
+        bestSellingProductView.presentError(error: error)
+    }
+    
+    func onErrorBanners(error: NetworkError) {
+        bannersView.presentError(error: error)
+    }
+    
     func onCategories(categories: [CategoryViewModel]) {
-        categoriesView.setupView(categories: categories)
+        categoriesView.setupView(categories: categories) { (index) in
+            self.presenter.showCategory(index: index)
+        }
     }
     
     func onProducts(products: [ProductViewModel]) {
-        productsView.setupView(products: products)
         updateProductsHeightConstraint(count: products.count)
+        bestSellingProductView.setupView(products: products) { (index) in
+            self.presenter.showProduct(index: index)
+        }
+        bestSellingProductView.dismissLoading()
     }
     
     func onBanners(banners: [BannerViewModel]) {
-        bannersView.setupView(banners: banners)
+        bannersView.setupView(banners: banners) { (index) in
+            
+        }
     }
     
 }

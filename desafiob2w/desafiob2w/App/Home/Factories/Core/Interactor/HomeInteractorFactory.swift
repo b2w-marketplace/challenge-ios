@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HomeInteractorFactory {
+enum HomeInteractorFactory {
     static func make() -> HomeInteractor {
         return HomeInteractor(categoriesGateway: CategoriesNetworkGatewayFactory.make(), productsGateway: ProductsNetworkGatewayFactory.make(), bannersGateway: BannersNetworkGatewayFactory.make())
     }

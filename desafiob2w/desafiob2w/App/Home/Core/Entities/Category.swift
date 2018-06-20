@@ -9,6 +9,7 @@
 import Foundation
 
 struct Category {
+    let id: Int
     let description: String
     let urlImage: URL
 }

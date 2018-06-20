@@ -2,3 +2,4 @@
 "categories" = "https://alodjinha.herokuapp.com/categoria";
 "productsBestSeller" = "https://alodjinha.herokuapp.com/produto/maisvendidos";
 "banners" = "https://alodjinha.herokuapp.com/banner";
+"product" = "https://alodjinha.herokuapp.com/produto/";

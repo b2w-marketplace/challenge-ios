@@ -6,7 +6,7 @@
 //  Copyright © 2018 B2w. All rights reserved.
 //
 
-struct AboutViewControllerFactory {
+enum AboutViewControllerFactory {
     static func make() -> AboutViewController {
         return AboutViewController()
     }

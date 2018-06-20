@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BannersNetworkGateway: BannersGateway {
+class BannersNetworkGateway: BannersGateway {
     
     private let getRequest: GetRequestable
     init(getRequest: GetRequestable) {

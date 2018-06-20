@@ -195,9 +195,9 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 4 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 5 localization tables.
   struct string {
-    /// This `R.string.apI` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.apI` struct is generated, and contains static references to 5 localization keys.
     struct apI {
       /// Value: https://alodjinha.herokuapp.com
       static let baseUrl = Rswift.StringResource(key: "baseUrl", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -205,6 +205,8 @@ struct R: Rswift.Validatable {
       static let banners = Rswift.StringResource(key: "banners", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://alodjinha.herokuapp.com/categoria
       static let categories = Rswift.StringResource(key: "categories", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: https://alodjinha.herokuapp.com/produto/
+      static let product = Rswift.StringResource(key: "product", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://alodjinha.herokuapp.com/produto/maisvendidos
       static let productsBestSeller = Rswift.StringResource(key: "productsBestSeller", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
       
@@ -223,9 +225,27 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("categories", tableName: "API", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: https://alodjinha.herokuapp.com/produto/
+      static func product(_: Void = ()) -> String {
+        return NSLocalizedString("product", tableName: "API", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: https://alodjinha.herokuapp.com/produto/maisvendidos
       static func productsBestSeller(_: Void = ()) -> String {
         return NSLocalizedString("productsBestSeller", tableName: "API", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.messages` struct is generated, and contains static references to 1 localization keys.
+    struct messages {
+      /// Value: Produto reservado com sucesso
+      static let reservedSuccess = Rswift.StringResource(key: "reservedSuccess", tableName: "Messages", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Produto reservado com sucesso
+      static func reservedSuccess(_: Void = ()) -> String {
+        return NSLocalizedString("reservedSuccess", tableName: "Messages", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -402,6 +422,7 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try about.validate()
       try main.validate()
+      try home.validate()
     }
     
     struct about: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -417,11 +438,26 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct home: Rswift.StoryboardResourceWithInitialControllerType {
+    struct home: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = HomeViewController
       
       let bundle = R.hostingBundle
       let name = "Home"
+      let productDetailViewController = StoryboardViewControllerResource<ProductViewController>(identifier: "ProductDetailViewController")
+      let productsViewController = StoryboardViewControllerResource<ProductsViewController>(identifier: "ProductsViewController")
+      
+      func productDetailViewController(_: Void = ()) -> ProductViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: productDetailViewController)
+      }
+      
+      func productsViewController(_: Void = ()) -> ProductsViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: productsViewController)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.home().productDetailViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'productDetailViewController' could not be loaded from storyboard 'Home' as 'ProductViewController'.") }
+        if _R.storyboard.home().productsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'productsViewController' could not be loaded from storyboard 'Home' as 'ProductsViewController'.") }
+      }
       
       fileprivate init() {}
     }

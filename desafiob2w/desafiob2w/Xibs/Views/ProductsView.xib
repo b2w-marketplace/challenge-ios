@@ -19,24 +19,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rr7-aO-aj2">
-                    <rect key="frame" x="0.0" y="61.5" width="375" height="605.5"/>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rr7-aO-aj2">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mais vendidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAp-0f-RPA">
-                    <rect key="frame" x="20" y="30" width="148" height="26.5"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                    <color key="textColor" red="0.18319270009999999" green="0.2103137672" blue="0.2850093246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="rr7-aO-aj2" firstAttribute="top" secondItem="XAp-0f-RPA" secondAttribute="bottom" constant="5" id="4ig-ZZ-8LH"/>
-                <constraint firstItem="XAp-0f-RPA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="LtP-BU-nVm"/>
+                <constraint firstItem="rr7-aO-aj2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8AA-s3-OOL"/>
                 <constraint firstItem="rr7-aO-aj2" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="i4k-ig-zIA"/>
                 <constraint firstItem="rr7-aO-aj2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="mQG-2k-NK1"/>
-                <constraint firstItem="XAp-0f-RPA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="wzT-DH-OCg"/>
                 <constraint firstItem="rr7-aO-aj2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zhh-BD-iRh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

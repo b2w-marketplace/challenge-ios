@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0Q9-wp-dYB">
-                    <rect key="frame" x="0.0" y="36.5" width="375" height="133.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ORH-70-mfE">
                         <size key="itemSize" width="105" height="110"/>
@@ -29,21 +29,13 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evM-vo-Yym">
-                    <rect key="frame" x="20" y="5" width="113.5" height="26.5"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                    <color key="textColor" red="0.18319270009999999" green="0.2103137672" blue="0.2850093246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="evM-vo-Yym" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="EJr-WP-93M"/>
-                <constraint firstItem="evM-vo-Yym" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="HAe-Vk-laF"/>
-                <constraint firstItem="0Q9-wp-dYB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="IfC-eI-lin"/>
-                <constraint firstItem="0Q9-wp-dYB" firstAttribute="top" secondItem="evM-vo-Yym" secondAttribute="bottom" constant="5" id="arY-Kd-Nn9"/>
-                <constraint firstItem="0Q9-wp-dYB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tdB-NI-cwg"/>
-                <constraint firstItem="0Q9-wp-dYB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="wAS-YJ-YIi"/>
+                <constraint firstItem="0Q9-wp-dYB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ABq-Y3-gzS"/>
+                <constraint firstItem="0Q9-wp-dYB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="AVB-vl-5zt"/>
+                <constraint firstItem="0Q9-wp-dYB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="I69-TM-Dui"/>
+                <constraint firstItem="0Q9-wp-dYB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="VGm-af-UGu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

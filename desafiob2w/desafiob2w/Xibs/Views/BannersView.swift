@@ -9,20 +9,23 @@
 import UIKit
 
 class BannersView: UIView {
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     private var dataSource: CollectionDataSource<BannerCollectionViewCell, BannerViewModel>!
+    private var completion: ((_ indexCellSelected: Int) -> Void)?
     
     override func awakeFromNib() {
         loadNib()
+        setupPresentation(parentView: self)
         super.awakeFromNib()
         configureCollection()
     }
     
-    func setupView(banners: [BannerViewModel]) {
+    func setupView(banners: [BannerViewModel], completion:@escaping (_ indexCellSelected: Int) -> Void) {
         setDataSource(banners: banners)
         pageControl.numberOfPages = banners.count
+        self.completion = completion
     }
     
     private func configureCollection() {
@@ -41,6 +44,11 @@ class BannersView: UIView {
 }
 
 extension BannersView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        completion!(indexPath.row)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: frame.size.width, height: frame.size.height)
     }

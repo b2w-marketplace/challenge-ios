@@ -40,13 +40,19 @@
         <!--Home-->
         <scene sceneID="CIv-X2-of2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hQX-lQ-kyG" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="hQX-lQ-kyG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="homeIcon" id="gOh-De-uNd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="SUu-HJ-zKM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.41568627450000001" green="0.24313725489999999" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -60,7 +66,7 @@
         <!--Sobre-->
         <scene sceneID="8ma-VM-I4Y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FeA-xA-MEV" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="FeA-xA-MEV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sobre" image="tagIcon" id="5LU-AP-KzB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="GjU-ER-OGN">
@@ -92,4 +98,5 @@
         <image name="homeIcon" width="25" height="25"/>
         <image name="tagIcon" width="25" height="25"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

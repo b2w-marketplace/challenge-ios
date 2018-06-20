@@ -6,7 +6,7 @@
 //  Copyright © 2018 B2w. All rights reserved.
 //
 
-struct GetRequestFactory {
+enum GetRequestFactory {
     static func make() -> GetRequestable {
         return GetRequest()
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct ErrorViewFactory {
+enum ErrorViewFactory {
     static func make(parentView: UIView) -> ErrorView {
         return ErrorView(parentView: parentView)
     }

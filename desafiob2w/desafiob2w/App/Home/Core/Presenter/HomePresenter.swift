@@ -6,12 +6,13 @@
 //  Copyright © 2018 B2w. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class HomePresenter {
     
     private weak var delegate: HomePresentation?
     private let interactor: HomeInteractor
+    private let router: HomeRouter
     
     private var banners: [Banner] = [] {
         didSet {
@@ -35,9 +36,10 @@ final class HomePresenter {
         }
     }
 
-    init(delegate: HomePresentation, interactor: HomeInteractor) {
+    init(delegate: HomePresentation, interactor: HomeInteractor, router: HomeRouter) {
         self.delegate = delegate
         self.interactor = interactor
+        self.router = router
     }
     
     func getCategories() {
@@ -77,8 +79,16 @@ final class HomePresenter {
             }
             self.delegate?.offLoadingBanners()
         }
-        
     }
+    
+    func showProduct(index: Int) {
+        router.goToProductDetail(productId: products[index].id)
+    }
+    
+    func showCategory(index: Int) {
+        router.goToProducts(categoryId: categories[index].id)
+    }
+
 }
 
 struct CategoryViewModel {
@@ -96,6 +106,8 @@ struct ProductViewModel {
     let urlImage: URL
     let priceFrom: NSAttributedString
     let priceTo: String
+    let description: String
+    let categoryName: String
     
     init(product: Product) {
         self.name = product.name
@@ -107,6 +119,8 @@ struct ProductViewModel {
             ]
         )
         self.priceTo = String(format: "Por %.2f", product.priceFrom)
+        self.description = product.description
+        self.categoryName = product.category.description
     }
 }
 
