@@ -1,0 +1,6 @@
+framework module Pods_desafiob2wTests {
+  umbrella header "Pods-desafiob2wTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
