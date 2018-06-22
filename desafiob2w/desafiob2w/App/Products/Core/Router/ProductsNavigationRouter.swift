@@ -1,16 +1,14 @@
 //
-//  HomeNavigationRouter.swift
+//  ProductsNavigationRouter.swift
 //  desafiob2w
 //
-//  Created by Lázaro Lima dos Santos on 19/06/18.
+//  Created by Lázaro Lima dos Santos on 22/06/18.
 //  Copyright © 2018 B2w. All rights reserved.
 //
 
 import UIKit
 
-class HomeNavigationRouter: HomeRouter {
-    
-    
+class ProductsNavigationRouter: ProductsRouter {
     private let navigationController: UINavigationController
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -20,14 +18,6 @@ class HomeNavigationRouter: HomeRouter {
         guard let viewController = R.storyboard.home.productDetailViewController() else { return}
         viewController.loadViewIfNeeded()
         viewController.inject(productId)
-        viewController.hidesBottomBarWhenPushed = true
-        navigationController.pushViewController(viewController, animated: true)
-    }
-    
-    func goToProducts(categoryId: Int, categoryName: String) {
-        guard let viewController = R.storyboard.home.productsViewController() else { return}
-        viewController.loadViewIfNeeded()
-        viewController.inject((categoryId, categoryName))
         viewController.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(viewController, animated: true)
     }

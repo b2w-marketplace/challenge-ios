@@ -13,5 +13,6 @@ protocol ProductPresentation: class {
     func offLoading()
     func onError(error: NetworkError)
     func onProduct(product: ProductViewModel)
-    func onReserved(message: String)
+    func onReserved(message: String, isSuccess: Bool)
+    
 }

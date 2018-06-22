@@ -63,7 +63,7 @@ extension PresentationView where Self: UIView {
     }
     
     func setupPresentation(parentView: UIView) {
-        backgroundColor = .white
+        backgroundColor = .red
         errorView = ErrorViewFactory.make(parentView: parentView)
         loadingView = LoadingViewFactory.make(parentView: parentView)
     }

@@ -123,20 +123,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ue0-U2-izu">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngq-b1-K6Y" customClass="ProductsView" customModule="desafiob2w" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ue0-U2-izu" firstAttribute="leading" secondItem="i9J-Mx-auh" secondAttribute="leading" id="0MV-cM-YEa"/>
-                            <constraint firstItem="i9J-Mx-auh" firstAttribute="trailing" secondItem="ue0-U2-izu" secondAttribute="trailing" id="1Y4-MF-IEi"/>
-                            <constraint firstItem="ue0-U2-izu" firstAttribute="top" secondItem="i9J-Mx-auh" secondAttribute="top" id="Zfw-EE-wRh"/>
-                            <constraint firstItem="i9J-Mx-auh" firstAttribute="bottom" secondItem="ue0-U2-izu" secondAttribute="bottom" id="ze8-cK-GNd"/>
+                            <constraint firstItem="Ngq-b1-K6Y" firstAttribute="leading" secondItem="i9J-Mx-auh" secondAttribute="leading" id="4ta-CW-aw1"/>
+                            <constraint firstItem="i9J-Mx-auh" firstAttribute="bottom" secondItem="Ngq-b1-K6Y" secondAttribute="bottom" id="Efi-oG-g11"/>
+                            <constraint firstItem="i9J-Mx-auh" firstAttribute="trailing" secondItem="Ngq-b1-K6Y" secondAttribute="trailing" id="Z48-Jl-ZEw"/>
+                            <constraint firstItem="Ngq-b1-K6Y" firstAttribute="top" secondItem="i9J-Mx-auh" secondAttribute="top" id="y86-82-rLG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i9J-Mx-auh"/>
                     </view>
+                    <connections>
+                        <outlet property="productsView" destination="Ngq-b1-K6Y" id="fXU-7d-X9s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QR8-9U-BTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

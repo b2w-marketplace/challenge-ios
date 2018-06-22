@@ -30,8 +30,8 @@ class ProductsNetworkGateway: ProductsGateway {
         }
     }
     
-    func products(url: String, idCategory: Int, completionHandler: @escaping ((Result<[Product], NetworkError>) -> Void)) {
-        getRequest.get(url: url+"\(idCategory)") { (data, error) in
+    func products(url: String, offset: Int, limit: Int, idCategory: Int, completionHandler: @escaping ((Result<[Product], NetworkError>) -> Void)) {
+        getRequest.get(url: url+"?offset=\(offset)&limit=\(limit)&categoriaId=\(idCategory)") { (data, error) in
             let result = GenerateResultObjectToArray<ProductsCodable, Product>(self.converterSellerProducts).generate(data, error)
             completionHandler(result)
         }

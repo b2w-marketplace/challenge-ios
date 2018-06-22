@@ -6,11 +6,9 @@
 //  Copyright © 2018 B2w. All rights reserved.
 //
 
-import UIKit
-
 protocol HomeRouter {
     func goToProductDetail(productId: Int)
-    func goToProducts(categoryId: Int)
+    func goToProducts(categoryId: Int, categoryName: String)
 }
 
 

@@ -13,6 +13,7 @@ struct R: Rswift.Validatable {
   fileprivate static let hostingBundle = Bundle(for: R.Class.self)
   
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
   
@@ -31,13 +32,34 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 0 files.
+  /// This `R.file` struct is generated, and contains static references to 1 files.
   struct file {
+    /// Resource file `Pacifico-Regular.ttf`.
+    static let pacificoRegularTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Pacifico-Regular", pathExtension: "ttf")
+    
+    /// `bundle.url(forResource: "Pacifico-Regular", withExtension: "ttf")`
+    static func pacificoRegularTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pacificoRegularTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.font` struct is generated, and contains static references to 0 fonts.
-  struct font {
+  /// This `R.font` struct is generated, and contains static references to 1 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `Pacifico-Regular`.
+    static let pacificoRegular = Rswift.FontResource(fontName: "Pacifico-Regular")
+    
+    /// `UIFont(name: "Pacifico-Regular", size: ...)`
+    static func pacificoRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: pacificoRegular, size: size)
+    }
+    
+    static func validate() throws {
+      if R.font.pacificoRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Pacifico-Regular' could not be loaded, is 'Pacifico-Regular.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
+    
     fileprivate init() {}
   }
   

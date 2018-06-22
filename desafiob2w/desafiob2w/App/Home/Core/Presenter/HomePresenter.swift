@@ -86,7 +86,7 @@ final class HomePresenter {
     }
     
     func showCategory(index: Int) {
-        router.goToProducts(categoryId: categories[index].id)
+        router.goToProducts(categoryId: categories[index].id, categoryName: categories[index].description)
     }
 
 }

@@ -18,7 +18,7 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var secondProductTitleLabel: UILabel!
     @IBOutlet weak var reserveButton: UIButton!
     
-    
+    private var isReserve: Bool = true
     private var productId: Int!
     
     private lazy var presenter = ProductPresenterFactory.make(delegate: self)
@@ -31,7 +31,12 @@ class ProductViewController: UIViewController {
     }
     
     @IBAction func reserveButtonAction(_ sender: UIButton) {
-        presenter.setReserveProduct()
+        if isReserve {
+            presenter.setReserveProduct()
+            isReserve = false
+            reserveButton.isEnabled = isReserve
+            reserveButton.isOpaque = !isReserve
+        }
     }
     
 }
@@ -59,11 +64,17 @@ extension ProductViewController: ProductPresentation {
         title = product.categoryName
     }
     
-    func onReserved(message: String) {
+    func onReserved(message: String, isSuccess: Bool) {
         let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (_) in
+            if isSuccess {
+                self.navigationController?.popViewController(animated: true)
+            }
+            self.isReserve = true
+        }))
         self.present(alert, animated: true)
     }
+    
 }
 
 

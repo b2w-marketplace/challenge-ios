@@ -13,6 +13,7 @@ class ProductPresenter {
     private weak var delegate: ProductPresentation?
     private let interactor: ProductInteractor
     
+    
     private var product: Product? {
         didSet {
             guard let product = product else {return}
@@ -43,11 +44,12 @@ class ProductPresenter {
             self.delegate?.onLoading()
             switch result {
             case .success(_ ):
-                self.delegate?.onReserved(message: R.string.messages.reservedSuccess())
+                self.delegate?.onReserved(message: R.string.messages.reservedSuccess(), isSuccess: true)
             case .fail(let error):
-                self.delegate?.onReserved(message: error.localizedDescription)
+                self.delegate?.onReserved(message: error.localizedDescription, isSuccess: true)
             }
             self.delegate?.offLoading()
         }
     }
+
 }

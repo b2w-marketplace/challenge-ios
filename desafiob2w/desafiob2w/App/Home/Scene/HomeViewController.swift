@@ -9,20 +9,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    
 
     @IBOutlet weak var bannersView: BannersView!
     @IBOutlet weak var categoriesView: CategoriesView!
     @IBOutlet weak var bestSellingProductView: ProductsView!
     @IBOutlet weak var productsHeightConstraint: NSLayoutConstraint!
-    
-    
-    @IBOutlet weak var reserveButton: UIButton!
-    
-    @IBAction func reserveButtonAction(_ sender: UIButton) {
-    }
-    
     
     private lazy var presenter: HomePresenter = HomePresenterFactory.make(delegate: self, navigationController: self.navigationController!)
         
@@ -61,11 +52,11 @@ extension HomeViewController: HomePresentation {
     }
     
     func onLoadingProducts() {
-      //  bestSellingProductView.presentLoading()
+        bestSellingProductView.presentLoading()
     }
     
     func offLoadingProducts() {
-     //   bestSellingProductView.dismissLoading()
+        bestSellingProductView.dismissLoading()
     }
     
     func onErrorCategories(error: NetworkError) {
@@ -91,7 +82,6 @@ extension HomeViewController: HomePresentation {
         bestSellingProductView.setupView(products: products) { (index) in
             self.presenter.showProduct(index: index)
         }
-        bestSellingProductView.dismissLoading()
     }
     
     func onBanners(banners: [BannerViewModel]) {
