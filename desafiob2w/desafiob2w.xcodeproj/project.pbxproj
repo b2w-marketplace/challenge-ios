@@ -120,6 +120,7 @@
 		ECE9555D20DE43B600BEF2D0 /* ProductsNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9555C20DE43B600BEF2D0 /* ProductsNetworkGatewayMock.swift */; };
 		ECE9555F20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9555E20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift */; };
 		ECE9556120DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9556020DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift */; };
+		ECE9556B20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9556A20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +266,7 @@
 		ECE9555C20DE43B600BEF2D0 /* ProductsNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsNetworkGatewayMock.swift; sourceTree = "<group>"; };
 		ECE9555E20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersNetworkGatewayMock.swift; sourceTree = "<group>"; };
 		ECE9556020DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNetworkGatewayMock.swift; sourceTree = "<group>"; };
+		ECE9556A20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInteractorSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1021,6 +1023,8 @@
 		ECE9555320DE283200BEF2D0 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				ECE9556320DE5EC300BEF2D0 /* Product */,
+				ECE9556220DE5EB200BEF2D0 /* Products */,
 				ECE9555420DE284A00BEF2D0 /* Home */,
 			);
 			path = App;
@@ -1075,6 +1079,69 @@
 				ECE9556020DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		ECE9556220DE5EB200BEF2D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9556720DE5EF200BEF2D0 /* Core */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		ECE9556320DE5EC300BEF2D0 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9556420DE5ECD00BEF2D0 /* Core */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		ECE9556420DE5ECD00BEF2D0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9556520DE5ED600BEF2D0 /* Presenter */,
+				ECE9556620DE5EDD00BEF2D0 /* Interactor */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ECE9556520DE5ED600BEF2D0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ECE9556620DE5EDD00BEF2D0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ECE9556720DE5EF200BEF2D0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9556820DE5EF700BEF2D0 /* Presenter */,
+				ECE9556920DE5EFD00BEF2D0 /* Interactor */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ECE9556820DE5EF700BEF2D0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ECE9556920DE5EFD00BEF2D0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9556A20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		FD2940945E050B0EDA46838C /* Pods */ = {
@@ -1479,6 +1546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECE9552620DDB40000BEF2D0 /* ProductsNetworkGatewaySpec.swift in Sources */,
+				ECE9556B20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift in Sources */,
 				ECE9554C20DDFF1A00BEF2D0 /* CategoriesNetworkGatewaySpec.swift in Sources */,
 				ECE9555A20DE433100BEF2D0 /* HomeInteractorSpec.swift in Sources */,
 				ECE9555F20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */,
