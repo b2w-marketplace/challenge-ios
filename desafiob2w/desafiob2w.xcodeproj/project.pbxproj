@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		35D5CF80532DDEACB8AADA88 /* Pods_desafiob2w.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C177003C87D5568748D6D7 /* Pods_desafiob2w.framework */; };
+		C37E43CF8E3B56B5F73A04EF /* Pods_desafiob2wUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC40E02539A096E3D5FB189 /* Pods_desafiob2wUITests.framework */; };
 		DF53E00871B153A05193B6F4 /* Pods_desafiob2wTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1AD95D9AAB180E4D560CF8 /* Pods_desafiob2wTests.framework */; };
 		EC1187C320D2137000A77FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1187C220D2137000A77FC6 /* AppDelegate.swift */; };
 		EC1187CA20D2137200A77FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1187C920D2137200A77FC6 /* Assets.xcassets */; };
 		EC1187CD20D2137200A77FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1187CB20D2137200A77FC6 /* LaunchScreen.storyboard */; };
-		EC1187D820D2137200A77FC6 /* desafiob2wTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1187D720D2137200A77FC6 /* desafiob2wTests.swift */; };
 		EC2DA43B20D5C22100C03856 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43A20D5C22100C03856 /* ViewConfiguration.swift */; };
 		EC2DA43F20D5C25800C03856 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA43E20D5C25800C03856 /* ErrorView.swift */; };
 		EC2DA44320D5C3B300C03856 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2DA44220D5C3B300C03856 /* LoadingView.swift */; };
@@ -39,7 +39,7 @@
 		ECD8112A20D71E5E007F3979 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8112920D71E5E007F3979 /* GetRequest.swift */; };
 		ECD8112C20D71E75007F3979 /* GetRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8112B20D71E75007F3979 /* GetRequestable.swift */; };
 		ECD8112E20D72022007F3979 /* NetworkError.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECD8112D20D72022007F3979 /* NetworkError.strings */; };
-		ECD8113420D721C0007F3979 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8113320D721C0007F3979 /* Category.swift */; };
+		ECD8113420D721C0007F3979 /* CategoryProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8113320D721C0007F3979 /* CategoryProduct.swift */; };
 		ECD8113620D721DB007F3979 /* CategoriesCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8113520D721DB007F3979 /* CategoriesCodable.swift */; };
 		ECD8113820D72745007F3979 /* CategoriesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8113720D72745007F3979 /* CategoriesGateway.swift */; };
 		ECD8113A20D72755007F3979 /* CategoriesNetworkGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8113920D72755007F3979 /* CategoriesNetworkGateway.swift */; };
@@ -103,6 +103,23 @@
 		ECD811EE20DD948E007F3979 /* ProductsNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811ED20DD948E007F3979 /* ProductsNavigationRouter.swift */; };
 		ECD811F120DD94EC007F3979 /* ProducstNavigationRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD811F020DD94EC007F3979 /* ProducstNavigationRouterFactory.swift */; };
 		ECD811F620DDA444007F3979 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECD811F520DDA444007F3979 /* Pacifico-Regular.ttf */; };
+		ECE9552620DDB40000BEF2D0 /* ProductsNetworkGatewaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9552520DDB40000BEF2D0 /* ProductsNetworkGatewaySpec.swift */; };
+		ECE9552920DDB6EF00BEF2D0 /* ProdutosMaisVendidos.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9552820DDB6EF00BEF2D0 /* ProdutosMaisVendidos.json */; };
+		ECE9552D20DDBD5900BEF2D0 /* Produto.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9552C20DDBD5900BEF2D0 /* Produto.json */; };
+		ECE9553D20DDC1C700BEF2D0 /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9553C20DDC1C700BEF2D0 /* HomeViewControllerSpec.swift */; };
+		ECE9554220DDF03C00BEF2D0 /* ProductsNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9554120DDF03C00BEF2D0 /* ProductsNetworkGatewayMock.swift */; };
+		ECE9554420DDF08900BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9554320DDF08900BEF2D0 /* BannersNetworkGatewayMock.swift */; };
+		ECE9554620DDF0C600BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9554520DDF0C600BEF2D0 /* CategoriesNetworkGatewayMock.swift */; };
+		ECE9554820DDF92300BEF2D0 /* Produtos.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9554720DDF92300BEF2D0 /* Produtos.json */; };
+		ECE9554A20DDFBF700BEF2D0 /* Reserva.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9554920DDFBF700BEF2D0 /* Reserva.json */; };
+		ECE9554C20DDFF1A00BEF2D0 /* CategoriesNetworkGatewaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9554B20DDFF1A00BEF2D0 /* CategoriesNetworkGatewaySpec.swift */; };
+		ECE9554E20DE21EA00BEF2D0 /* Categorias.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9554D20DE21EA00BEF2D0 /* Categorias.json */; };
+		ECE9555020DE237900BEF2D0 /* BannersNetworkGatewaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9554F20DE237900BEF2D0 /* BannersNetworkGatewaySpec.swift */; };
+		ECE9555220DE251700BEF2D0 /* Banners.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9555120DE251700BEF2D0 /* Banners.json */; };
+		ECE9555A20DE433100BEF2D0 /* HomeInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9555920DE433100BEF2D0 /* HomeInteractorSpec.swift */; };
+		ECE9555D20DE43B600BEF2D0 /* ProductsNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9555C20DE43B600BEF2D0 /* ProductsNetworkGatewayMock.swift */; };
+		ECE9555F20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9555E20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift */; };
+		ECE9556120DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9556020DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,13 +130,23 @@
 			remoteGlobalIDString = EC1187BE20D2137000A77FC6;
 			remoteInfo = desafiob2w;
 		};
+		ECE9553720DDBF8700BEF2D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC1187B720D2137000A77FC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC1187BE20D2137000A77FC6;
+			remoteInfo = desafiob2w;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040ED134D18300BCDA805FE3 /* Pods-desafiob2wUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafiob2wUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-desafiob2wUITests/Pods-desafiob2wUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		370CA1B5FC12371752D82FA4 /* Pods-desafiob2w.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafiob2w.debug.xcconfig"; path = "Pods/Target Support Files/Pods-desafiob2w/Pods-desafiob2w.debug.xcconfig"; sourceTree = "<group>"; };
+		7BC40E02539A096E3D5FB189 /* Pods_desafiob2wUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafiob2wUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD62FD03C4CEDA90726507E /* Pods-desafiob2w.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafiob2w.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafiob2w/Pods-desafiob2w.release.xcconfig"; sourceTree = "<group>"; };
 		AB1AD95D9AAB180E4D560CF8 /* Pods_desafiob2wTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafiob2wTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C177003C87D5568748D6D7 /* Pods_desafiob2w.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafiob2w.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6FCDA4E5E68C95EA6FCAC7 /* Pods-desafiob2wUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafiob2wUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafiob2wUITests/Pods-desafiob2wUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DC6A317B2E15441DDFEBF56C /* Pods-desafiob2wTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafiob2wTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-desafiob2wTests/Pods-desafiob2wTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD7CD7046647D64C2DB5F296 /* Pods-desafiob2wTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafiob2wTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafiob2wTests/Pods-desafiob2wTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC1187BF20D2137000A77FC6 /* desafiob2w.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafiob2w.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +155,6 @@
 		EC1187CC20D2137200A77FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC1187CE20D2137200A77FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC1187D320D2137200A77FC6 /* desafiob2wTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafiob2wTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC1187D720D2137200A77FC6 /* desafiob2wTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafiob2wTests.swift; sourceTree = "<group>"; };
 		EC1187D920D2137200A77FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2DA43A20D5C22100C03856 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 		EC2DA43E20D5C25800C03856 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -156,7 +182,7 @@
 		ECD8112920D71E5E007F3979 /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
 		ECD8112B20D71E75007F3979 /* GetRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestable.swift; sourceTree = "<group>"; };
 		ECD8112D20D72022007F3979 /* NetworkError.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = NetworkError.strings; sourceTree = "<group>"; };
-		ECD8113320D721C0007F3979 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		ECD8113320D721C0007F3979 /* CategoryProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProduct.swift; sourceTree = "<group>"; };
 		ECD8113520D721DB007F3979 /* CategoriesCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCodable.swift; sourceTree = "<group>"; };
 		ECD8113720D72745007F3979 /* CategoriesGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesGateway.swift; sourceTree = "<group>"; };
 		ECD8113920D72755007F3979 /* CategoriesNetworkGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNetworkGateway.swift; sourceTree = "<group>"; };
@@ -220,6 +246,25 @@
 		ECD811ED20DD948E007F3979 /* ProductsNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsNavigationRouter.swift; sourceTree = "<group>"; };
 		ECD811F020DD94EC007F3979 /* ProducstNavigationRouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducstNavigationRouterFactory.swift; sourceTree = "<group>"; };
 		ECD811F520DDA444007F3979 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		ECE9552520DDB40000BEF2D0 /* ProductsNetworkGatewaySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsNetworkGatewaySpec.swift; sourceTree = "<group>"; };
+		ECE9552820DDB6EF00BEF2D0 /* ProdutosMaisVendidos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProdutosMaisVendidos.json; sourceTree = "<group>"; };
+		ECE9552C20DDBD5900BEF2D0 /* Produto.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Produto.json; sourceTree = "<group>"; };
+		ECE9553220DDBF8700BEF2D0 /* desafiob2wUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafiob2wUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECE9553620DDBF8700BEF2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECE9553C20DDC1C700BEF2D0 /* HomeViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpec.swift; sourceTree = "<group>"; };
+		ECE9554120DDF03C00BEF2D0 /* ProductsNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsNetworkGatewayMock.swift; sourceTree = "<group>"; };
+		ECE9554320DDF08900BEF2D0 /* BannersNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersNetworkGatewayMock.swift; sourceTree = "<group>"; };
+		ECE9554520DDF0C600BEF2D0 /* CategoriesNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNetworkGatewayMock.swift; sourceTree = "<group>"; };
+		ECE9554720DDF92300BEF2D0 /* Produtos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Produtos.json; sourceTree = "<group>"; };
+		ECE9554920DDFBF700BEF2D0 /* Reserva.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Reserva.json; sourceTree = "<group>"; };
+		ECE9554B20DDFF1A00BEF2D0 /* CategoriesNetworkGatewaySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNetworkGatewaySpec.swift; sourceTree = "<group>"; };
+		ECE9554D20DE21EA00BEF2D0 /* Categorias.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Categorias.json; sourceTree = "<group>"; };
+		ECE9554F20DE237900BEF2D0 /* BannersNetworkGatewaySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersNetworkGatewaySpec.swift; sourceTree = "<group>"; };
+		ECE9555120DE251700BEF2D0 /* Banners.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Banners.json; sourceTree = "<group>"; };
+		ECE9555920DE433100BEF2D0 /* HomeInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorSpec.swift; sourceTree = "<group>"; };
+		ECE9555C20DE43B600BEF2D0 /* ProductsNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsNetworkGatewayMock.swift; sourceTree = "<group>"; };
+		ECE9555E20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersNetworkGatewayMock.swift; sourceTree = "<group>"; };
+		ECE9556020DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNetworkGatewayMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +284,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECE9552F20DDBF8700BEF2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37E43CF8E3B56B5F73A04EF /* Pods_desafiob2wUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -247,6 +300,7 @@
 			children = (
 				B8C177003C87D5568748D6D7 /* Pods_desafiob2w.framework */,
 				AB1AD95D9AAB180E4D560CF8 /* Pods_desafiob2wTests.framework */,
+				7BC40E02539A096E3D5FB189 /* Pods_desafiob2wUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -257,6 +311,7 @@
 				EC2DA46720D5FE3C00C03856 /* R.generated.swift */,
 				EC1187C120D2137000A77FC6 /* desafiob2w */,
 				EC1187D620D2137200A77FC6 /* desafiob2wTests */,
+				ECE9553320DDBF8700BEF2D0 /* desafiob2wUITests */,
 				EC1187C020D2137000A77FC6 /* Products */,
 				FD2940945E050B0EDA46838C /* Pods */,
 				397F492D1244CE488B9E6A85 /* Frameworks */,
@@ -268,6 +323,7 @@
 			children = (
 				EC1187BF20D2137000A77FC6 /* desafiob2w.app */,
 				EC1187D320D2137200A77FC6 /* desafiob2wTests.xctest */,
+				ECE9553220DDBF8700BEF2D0 /* desafiob2wUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,6 +331,7 @@
 		EC1187C120D2137000A77FC6 /* desafiob2w */ = {
 			isa = PBXGroup;
 			children = (
+				ECD8112F20D7218B007F3979 /* Entities */,
 				EC2DA42120D57BAF00C03856 /* App */,
 				ECD810FD20D700FD007F3979 /* Storyboard */,
 				ECD8110720D718E5007F3979 /* Xibs */,
@@ -288,7 +345,8 @@
 		EC1187D620D2137200A77FC6 /* desafiob2wTests */ = {
 			isa = PBXGroup;
 			children = (
-				EC1187D720D2137200A77FC6 /* desafiob2wTests.swift */,
+				ECE9555320DE283200BEF2D0 /* App */,
+				ECE9551A20DDB24900BEF2D0 /* Network */,
 				EC1187D920D2137200A77FC6 /* Info.plist */,
 			);
 			path = desafiob2wTests;
@@ -382,8 +440,6 @@
 				ECD811A420D9B70F007F3979 /* Router */,
 				ECD8113220D721A6007F3979 /* Presenter */,
 				ECD8113120D7219F007F3979 /* Interactor */,
-				ECD8113020D72196007F3979 /* Gateway */,
-				ECD8112F20D7218B007F3979 /* Entities */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -402,7 +458,6 @@
 			children = (
 				ECD8114C20D73A60007F3979 /* Presenter */,
 				ECD8114A20D73A38007F3979 /* Interactor */,
-				ECD8114D20D73A67007F3979 /* Gateway */,
 				ECD811A920D9BA73007F3979 /* Router */,
 			);
 			path = Core;
@@ -442,9 +497,10 @@
 		ECD8111420D71D7B007F3979 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				ECD8111720D71DA1007F3979 /* Request */,
-				ECD8111620D71D99007F3979 /* Result */,
-				ECD8111520D71D91007F3979 /* Factories */,
+				ECE9551E20DDB29D00BEF2D0 /* ProductsGateway */,
+				ECE9551D20DDB29800BEF2D0 /* BannersGateway */,
+				ECE9551C20DDB28D00BEF2D0 /* CategoriesGateway */,
+				ECE9551B20DDB26800BEF2D0 /* Base */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -509,7 +565,7 @@
 			isa = PBXGroup;
 			children = (
 				ECD8113520D721DB007F3979 /* CategoriesCodable.swift */,
-				ECD8113320D721C0007F3979 /* Category.swift */,
+				ECD8113320D721C0007F3979 /* CategoryProduct.swift */,
 				ECD8113B20D72BF1007F3979 /* ProductsCodable.swift */,
 				ECD8113D20D72D7E007F3979 /* Product.swift */,
 				ECD8117C20D8BF9E007F3979 /* BannersCodable.swift */,
@@ -518,19 +574,6 @@
 				ECD811D520DA11FA007F3979 /* SuccesCodable.swift */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		ECD8113020D72196007F3979 /* Gateway */ = {
-			isa = PBXGroup;
-			children = (
-				ECD8113720D72745007F3979 /* CategoriesGateway.swift */,
-				ECD8113920D72755007F3979 /* CategoriesNetworkGateway.swift */,
-				ECD8113F20D72EEB007F3979 /* ProductsGateway.swift */,
-				ECD8114120D72EFD007F3979 /* ProductsNetworkGateway.swift */,
-				ECD8117620D8BF66007F3979 /* BannersGateway.swift */,
-				ECD8117820D8BF72007F3979 /* BannersNetworkGateway.swift */,
-			);
-			path = Gateway;
 			sourceTree = "<group>";
 		};
 		ECD8113120D7219F007F3979 /* Interactor */ = {
@@ -564,16 +607,6 @@
 				ECD8115420D73CF4007F3979 /* HomePresenterFactory.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		ECD8114D20D73A67007F3979 /* Gateway */ = {
-			isa = PBXGroup;
-			children = (
-				ECD8115020D73B65007F3979 /* CategoriesNetworkGatewayFactory.swift */,
-				ECD8114E20D73AA4007F3979 /* ProductsNetworkGatewayFactory.swift */,
-				ECD8117E20D8C921007F3979 /* BannersNetworkGatewayFactory.swift */,
-			);
-			path = Gateway;
 			sourceTree = "<group>";
 		};
 		ECD8116020D749B7007F3979 /* Cells */ = {
@@ -633,7 +666,7 @@
 		ECD8119720D9B177007F3979 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ECD8119A20D9B1C2007F3979 /* ViewController */,
+				ECD8119A20D9B1C2007F3979 /* Scene */,
 				ECD811D920DA1947007F3979 /* Core */,
 				ECD811DA20DA1950007F3979 /* Factories */,
 			);
@@ -643,27 +676,27 @@
 		ECD8119820D9B185007F3979 /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				ECD8119920D9B1BA007F3979 /* ViewController */,
+				ECD8119920D9B1BA007F3979 /* Scene */,
 				ECD811B120D9EDBE007F3979 /* Core */,
 				ECD811B220D9EDC3007F3979 /* Factories */,
 			);
 			path = Product;
 			sourceTree = "<group>";
 		};
-		ECD8119920D9B1BA007F3979 /* ViewController */ = {
+		ECD8119920D9B1BA007F3979 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				ECD8119D20D9B215007F3979 /* ProductViewController.swift */,
 			);
-			path = ViewController;
+			path = Scene;
 			sourceTree = "<group>";
 		};
-		ECD8119A20D9B1C2007F3979 /* ViewController */ = {
+		ECD8119A20D9B1C2007F3979 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				ECD8119F20D9B234007F3979 /* ProductsViewController.swift */,
 			);
-			path = ViewController;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		ECD811A120D9B32B007F3979 /* Injectable */ = {
@@ -853,6 +886,197 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		ECE9551A20DDB24900BEF2D0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9552720DDB69D00BEF2D0 /* JsonAux */,
+				ECE9552320DDB39000BEF2D0 /* BannersGateway */,
+				ECE9552420DDB39F00BEF2D0 /* CategoriesGateway */,
+				ECE9552220DDB38300BEF2D0 /* ProductsGateway */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ECE9551B20DDB26800BEF2D0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8111720D71DA1007F3979 /* Request */,
+				ECD8111620D71D99007F3979 /* Result */,
+				ECD8111520D71D91007F3979 /* Factories */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ECE9551C20DDB28D00BEF2D0 /* CategoriesGateway */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9552120DDB30300BEF2D0 /* Gateway */,
+				ECD8113720D72745007F3979 /* CategoriesGateway.swift */,
+				ECD8113920D72755007F3979 /* CategoriesNetworkGateway.swift */,
+			);
+			path = CategoriesGateway;
+			sourceTree = "<group>";
+		};
+		ECE9551D20DDB29800BEF2D0 /* BannersGateway */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9552020DDB2F900BEF2D0 /* Factory */,
+				ECD8117620D8BF66007F3979 /* BannersGateway.swift */,
+				ECD8117820D8BF72007F3979 /* BannersNetworkGateway.swift */,
+			);
+			path = BannersGateway;
+			sourceTree = "<group>";
+		};
+		ECE9551E20DDB29D00BEF2D0 /* ProductsGateway */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9551F20DDB2CC00BEF2D0 /* Factory */,
+				ECD8113F20D72EEB007F3979 /* ProductsGateway.swift */,
+				ECD8114120D72EFD007F3979 /* ProductsNetworkGateway.swift */,
+			);
+			path = ProductsGateway;
+			sourceTree = "<group>";
+		};
+		ECE9551F20DDB2CC00BEF2D0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8114E20D73AA4007F3979 /* ProductsNetworkGatewayFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		ECE9552020DDB2F900BEF2D0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8117E20D8C921007F3979 /* BannersNetworkGatewayFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		ECE9552120DDB30300BEF2D0 /* Gateway */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8115020D73B65007F3979 /* CategoriesNetworkGatewayFactory.swift */,
+			);
+			path = Gateway;
+			sourceTree = "<group>";
+		};
+		ECE9552220DDB38300BEF2D0 /* ProductsGateway */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9552520DDB40000BEF2D0 /* ProductsNetworkGatewaySpec.swift */,
+			);
+			path = ProductsGateway;
+			sourceTree = "<group>";
+		};
+		ECE9552320DDB39000BEF2D0 /* BannersGateway */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9554F20DE237900BEF2D0 /* BannersNetworkGatewaySpec.swift */,
+			);
+			path = BannersGateway;
+			sourceTree = "<group>";
+		};
+		ECE9552420DDB39F00BEF2D0 /* CategoriesGateway */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9554B20DDFF1A00BEF2D0 /* CategoriesNetworkGatewaySpec.swift */,
+			);
+			path = CategoriesGateway;
+			sourceTree = "<group>";
+		};
+		ECE9552720DDB69D00BEF2D0 /* JsonAux */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9552820DDB6EF00BEF2D0 /* ProdutosMaisVendidos.json */,
+				ECE9552C20DDBD5900BEF2D0 /* Produto.json */,
+				ECE9554720DDF92300BEF2D0 /* Produtos.json */,
+				ECE9554920DDFBF700BEF2D0 /* Reserva.json */,
+				ECE9554D20DE21EA00BEF2D0 /* Categorias.json */,
+				ECE9555120DE251700BEF2D0 /* Banners.json */,
+			);
+			path = JsonAux;
+			sourceTree = "<group>";
+		};
+		ECE9553320DDBF8700BEF2D0 /* desafiob2wUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9553E20DDC39A00BEF2D0 /* GatewaysMock */,
+				ECE9553620DDBF8700BEF2D0 /* Info.plist */,
+				ECE9553C20DDC1C700BEF2D0 /* HomeViewControllerSpec.swift */,
+			);
+			path = desafiob2wUITests;
+			sourceTree = "<group>";
+		};
+		ECE9553E20DDC39A00BEF2D0 /* GatewaysMock */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9554120DDF03C00BEF2D0 /* ProductsNetworkGatewayMock.swift */,
+				ECE9554320DDF08900BEF2D0 /* BannersNetworkGatewayMock.swift */,
+				ECE9554520DDF0C600BEF2D0 /* CategoriesNetworkGatewayMock.swift */,
+			);
+			path = GatewaysMock;
+			sourceTree = "<group>";
+		};
+		ECE9555320DE283200BEF2D0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9555420DE284A00BEF2D0 /* Home */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ECE9555420DE284A00BEF2D0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9555620DE286500BEF2D0 /* Scene */,
+				ECE9555520DE285900BEF2D0 /* Core */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ECE9555520DE285900BEF2D0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9555720DE287000BEF2D0 /* Presenter */,
+				ECE9555820DE287700BEF2D0 /* Interactor */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ECE9555620DE286500BEF2D0 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		ECE9555720DE287000BEF2D0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ECE9555820DE287700BEF2D0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9555B20DE439100BEF2D0 /* Mock */,
+				ECE9555920DE433100BEF2D0 /* HomeInteractorSpec.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ECE9555B20DE439100BEF2D0 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				ECE9555C20DE43B600BEF2D0 /* ProductsNetworkGatewayMock.swift */,
+				ECE9555E20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift */,
+				ECE9556020DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		FD2940945E050B0EDA46838C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -860,6 +1084,8 @@
 				9DD62FD03C4CEDA90726507E /* Pods-desafiob2w.release.xcconfig */,
 				DC6A317B2E15441DDFEBF56C /* Pods-desafiob2wTests.debug.xcconfig */,
 				DD7CD7046647D64C2DB5F296 /* Pods-desafiob2wTests.release.xcconfig */,
+				040ED134D18300BCDA805FE3 /* Pods-desafiob2wUITests.debug.xcconfig */,
+				CE6FCDA4E5E68C95EA6FCAC7 /* Pods-desafiob2wUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -907,6 +1133,26 @@
 			productReference = EC1187D320D2137200A77FC6 /* desafiob2wTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		ECE9553120DDBF8700BEF2D0 /* desafiob2wUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECE9553920DDBF8700BEF2D0 /* Build configuration list for PBXNativeTarget "desafiob2wUITests" */;
+			buildPhases = (
+				3F6CE25B64A6A60A8089521E /* [CP] Check Pods Manifest.lock */,
+				ECE9552E20DDBF8700BEF2D0 /* Sources */,
+				ECE9552F20DDBF8700BEF2D0 /* Frameworks */,
+				ECE9553020DDBF8700BEF2D0 /* Resources */,
+				65B22820989159ACCC6760B7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECE9553820DDBF8700BEF2D0 /* PBXTargetDependency */,
+			);
+			name = desafiob2wUITests;
+			productName = desafiob2wUITests;
+			productReference = ECE9553220DDBF8700BEF2D0 /* desafiob2wUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -922,6 +1168,11 @@
 					};
 					EC1187D220D2137200A77FC6 = {
 						CreatedOnToolsVersion = 9.4;
+						TestTargetID = EC1187BE20D2137000A77FC6;
+					};
+					ECE9553120DDBF8700BEF2D0 = {
+						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 						TestTargetID = EC1187BE20D2137000A77FC6;
 					};
 				};
@@ -941,6 +1192,7 @@
 			targets = (
 				EC1187BE20D2137000A77FC6 /* desafiob2w */,
 				EC1187D220D2137200A77FC6 /* desafiob2wTests */,
+				ECE9553120DDBF8700BEF2D0 /* desafiob2wUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -974,12 +1226,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE9554A20DDFBF700BEF2D0 /* Reserva.json in Resources */,
+				ECE9552920DDB6EF00BEF2D0 /* ProdutosMaisVendidos.json in Resources */,
+				ECE9554E20DE21EA00BEF2D0 /* Categorias.json in Resources */,
+				ECE9555220DE251700BEF2D0 /* Banners.json in Resources */,
+				ECE9552D20DDBD5900BEF2D0 /* Produto.json in Resources */,
+				ECE9554820DDF92300BEF2D0 /* Produtos.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECE9553020DDBF8700BEF2D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3F6CE25B64A6A60A8089521E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-desafiob2wUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4672F3C459DA2E37C0545016 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -996,6 +1279,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65B22820989159ACCC6760B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-desafiob2wUITests/Pods-desafiob2wUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF-Quick/KIF_Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF_Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-desafiob2wUITests/Pods-desafiob2wUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		98F3806B8D5B6583A9E0046A /* [CP] Embed Pods Frameworks */ = {
@@ -1049,8 +1356,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-desafiob2wTests/Pods-desafiob2wTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
-				"${BUILT_PRODUCTS_DIR}/KIF-Quick/KIF_Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
@@ -1059,8 +1364,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF_Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
@@ -1147,7 +1450,7 @@
 				ECD811D020DA0EA5007F3979 /* PostRequest.swift in Sources */,
 				EC2DA43F20D5C25800C03856 /* ErrorView.swift in Sources */,
 				ECD8113E20D72D7E007F3979 /* Product.swift in Sources */,
-				ECD8113420D721C0007F3979 /* Category.swift in Sources */,
+				ECD8113420D721C0007F3979 /* CategoryProduct.swift in Sources */,
 				ECD8112A20D71E5E007F3979 /* GetRequest.swift in Sources */,
 				ECD8114620D7344B007F3979 /* HomePresentation.swift in Sources */,
 				ECD811AE20D9CBBA007F3979 /* TabBarImageViewFactory.swift in Sources */,
@@ -1175,7 +1478,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1187D820D2137200A77FC6 /* desafiob2wTests.swift in Sources */,
+				ECE9552620DDB40000BEF2D0 /* ProductsNetworkGatewaySpec.swift in Sources */,
+				ECE9554C20DDFF1A00BEF2D0 /* CategoriesNetworkGatewaySpec.swift in Sources */,
+				ECE9555A20DE433100BEF2D0 /* HomeInteractorSpec.swift in Sources */,
+				ECE9555F20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */,
+				ECE9555D20DE43B600BEF2D0 /* ProductsNetworkGatewayMock.swift in Sources */,
+				ECE9555020DE237900BEF2D0 /* BannersNetworkGatewaySpec.swift in Sources */,
+				ECE9556120DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECE9552E20DDBF8700BEF2D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECE9554220DDF03C00BEF2D0 /* ProductsNetworkGatewayMock.swift in Sources */,
+				ECE9554420DDF08900BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */,
+				ECE9553D20DDC1C700BEF2D0 /* HomeViewControllerSpec.swift in Sources */,
+				ECE9554620DDF0C600BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1186,6 +1506,11 @@
 			isa = PBXTargetDependency;
 			target = EC1187BE20D2137000A77FC6 /* desafiob2w */;
 			targetProxy = EC1187D420D2137200A77FC6 /* PBXContainerItemProxy */;
+		};
+		ECE9553820DDBF8700BEF2D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC1187BE20D2137000A77FC6 /* desafiob2w */;
+			targetProxy = ECE9553720DDBF8700BEF2D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1395,6 +1720,47 @@
 			};
 			name = Release;
 		};
+		ECE9553A20DDBF8700BEF2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 040ED134D18300BCDA805FE3 /* Pods-desafiob2wUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = desafiob2wUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = B2w.desafiob2wUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = desafiob2w;
+			};
+			name = Debug;
+		};
+		ECE9553B20DDBF8700BEF2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6FCDA4E5E68C95EA6FCAC7 /* Pods-desafiob2wUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = desafiob2wUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = B2w.desafiob2wUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = desafiob2w;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1421,6 +1787,15 @@
 			buildConfigurations = (
 				EC1187E020D2137200A77FC6 /* Debug */,
 				EC1187E120D2137200A77FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECE9553920DDBF8700BEF2D0 /* Build configuration list for PBXNativeTarget "desafiob2wUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECE9553A20DDBF8700BEF2D0 /* Debug */,
+				ECE9553B20DDBF8700BEF2D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

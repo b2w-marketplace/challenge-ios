@@ -260,10 +260,17 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.messages` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.messages` struct is generated, and contains static references to 2 localization keys.
     struct messages {
+      /// Value: Carregando..
+      static let loading = Rswift.StringResource(key: "Loading", tableName: "Messages", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Produto reservado com sucesso
       static let reservedSuccess = Rswift.StringResource(key: "reservedSuccess", tableName: "Messages", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Carregando..
+      static func loading(_: Void = ()) -> String {
+        return NSLocalizedString("Loading", tableName: "Messages", bundle: R.hostingBundle, comment: "")
+      }
       
       /// Value: Produto reservado com sucesso
       static func reservedSuccess(_: Void = ()) -> String {
@@ -464,9 +471,14 @@ struct _R: Rswift.Validatable {
       typealias InitialController = HomeViewController
       
       let bundle = R.hostingBundle
+      let homeViewController = StoryboardViewControllerResource<HomeViewController>(identifier: "HomeViewController")
       let name = "Home"
       let productDetailViewController = StoryboardViewControllerResource<ProductViewController>(identifier: "ProductDetailViewController")
       let productsViewController = StoryboardViewControllerResource<ProductsViewController>(identifier: "ProductsViewController")
+      
+      func homeViewController(_: Void = ()) -> HomeViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: homeViewController)
+      }
       
       func productDetailViewController(_: Void = ()) -> ProductViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: productDetailViewController)
@@ -477,6 +489,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if _R.storyboard.home().homeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'homeViewController' could not be loaded from storyboard 'Home' as 'HomeViewController'.") }
         if _R.storyboard.home().productDetailViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'productDetailViewController' could not be loaded from storyboard 'Home' as 'ProductViewController'.") }
         if _R.storyboard.home().productsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'productsViewController' could not be loaded from storyboard 'Home' as 'ProductsViewController'.") }
       }

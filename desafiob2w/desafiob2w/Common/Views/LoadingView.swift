@@ -16,6 +16,7 @@ final class LoadingView: UIView {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
+        label.text = R.string.messages.loading()
         label.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         return label
     }()
@@ -24,6 +25,7 @@ final class LoadingView: UIView {
         super.init(frame: .zero)
         setupView(parentView: parentView)
         setupViewConfiguration()
+        backgroundColor = .red
     }
     
     required init?(coder aDecoder: NSCoder) {

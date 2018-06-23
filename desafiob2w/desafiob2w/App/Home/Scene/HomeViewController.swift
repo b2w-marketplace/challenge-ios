@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var bestSellingProductView: ProductsView!
     @IBOutlet weak var productsHeightConstraint: NSLayoutConstraint!
     
-    private lazy var presenter: HomePresenter = HomePresenterFactory.make(delegate: self, navigationController: self.navigationController!)
+    lazy var presenter: HomePresenter = HomePresenterFactory.make(delegate: self, navigationController: self.navigationController!)
         
     override func viewDidLoad() {
         super.viewDidLoad()

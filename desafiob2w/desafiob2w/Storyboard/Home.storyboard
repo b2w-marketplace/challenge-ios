@@ -14,7 +14,7 @@
         <!--Home View Controller-->
         <scene sceneID="t8E-Gy-oi2">
             <objects>
-                <viewController id="hGw-d7-M84" customClass="HomeViewController" customModule="desafiob2w" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="hGw-d7-M84" customClass="HomeViewController" customModule="desafiob2w" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oy4-KJ-IJf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

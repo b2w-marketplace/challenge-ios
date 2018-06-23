@@ -21,6 +21,8 @@ class ProductsNetworkGateway: ProductsGateway {
             let result = GenerateResultObjectToArray<ProductsCodable, Product>(self.converterSellerProducts).generate(data, error)
             completionHandler(result)
         }
+        
+        
     }
     
     func product(url: String, idProduct: Int, completionHandler: @escaping ((Result<Product, NetworkError>) -> Void)) {
@@ -49,19 +51,19 @@ class ProductsNetworkGateway: ProductsGateway {
     }
     
     private func converterProduct(entity: ProductCodable) -> Product {
-        return Product(id: entity.id, name: entity.name, urlImage: entity.urlImagem, description: entity.description, priceFrom: entity.priceFrom, priceTo: entity.priceTo, category: Category(id: entity.category.id, description: entity.category.description, urlImage: entity.category.urlImagem))
+        return Product(id: entity.id, name: entity.name, urlImage: entity.urlImagem, description: entity.description, priceFrom: entity.priceFrom, priceTo: entity.priceTo, category: CategoryProduct(id: entity.category.id, description: entity.category.description, urlImage: entity.category.urlImagem))
     }
     
     private func converterProducts(entity: ProductsCodable) -> [Product] {
         
         return entity.data.map({
-            Product.init(id: $0.id, name: $0.name, urlImage: $0.urlImagem, description: $0.description, priceFrom: $0.priceFrom, priceTo: $0.priceTo, category: Category(id: $0.category.id, description: $0.category.description, urlImage: $0.category.urlImagem))
+            Product.init(id: $0.id, name: $0.name, urlImage: $0.urlImagem, description: $0.description, priceFrom: $0.priceFrom, priceTo: $0.priceTo, category: CategoryProduct(id: $0.category.id, description: $0.category.description, urlImage: $0.category.urlImagem))
         })
     }
     
     private func converterSellerProducts(entity: ProductsCodable) -> [Product] {
         return entity.data.map({
-            Product.init(id: $0.id, name: $0.name, urlImage: $0.urlImagem, description: $0.description, priceFrom: $0.priceFrom, priceTo: $0.priceTo, category: Category(id: $0.category.id, description: $0.category.description, urlImage: $0.category.urlImagem))
+            Product.init(id: $0.id, name: $0.name, urlImage: $0.urlImagem, description: $0.description, priceFrom: $0.priceFrom, priceTo: $0.priceTo, category: CategoryProduct(id: $0.category.id, description: $0.category.description, urlImage: $0.category.urlImagem))
         })
     }
 }

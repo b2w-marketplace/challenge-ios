@@ -1,5 +1,5 @@
 //
-//  Category.swift
+//  Product.swift
 //  desafiob2w
 //
 //  Created by Lázaro Lima dos Santos on 17/06/18.
@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct Category {
+struct Product {
     let id: Int
-    let description: String
+    let name: String
     let urlImage: URL
+    let description: String
+    let priceFrom: Float
+    let priceTo: Float
+    let category: CategoryProduct
 }

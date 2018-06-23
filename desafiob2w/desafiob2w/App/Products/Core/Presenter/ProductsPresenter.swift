@@ -30,7 +30,7 @@ final class ProductsPresenter {
     }
     
     func getProducts(idCategory: Int) {
-    //    delegate?.onLoading()
+        delegate?.onLoading()
         interactor.fetchProducts(idCategory: idCategory) { (result) in
             switch result {
             case .success(let products):

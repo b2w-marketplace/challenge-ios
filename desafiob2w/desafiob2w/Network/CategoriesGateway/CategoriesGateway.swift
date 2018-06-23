@@ -7,5 +7,5 @@
 //
 
 protocol CategoriesGateway {
-    func categories(url: String, completionHandler: @escaping CompletionHandler<[Category], NetworkError>)
+    func categories(url: String, completionHandler: @escaping CompletionHandler<[CategoryProduct], NetworkError>)
 }

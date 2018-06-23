@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ProductPresenter {
+final class ProductPresenter {
     
     private weak var delegate: ProductPresentation?
     private let interactor: ProductInteractor

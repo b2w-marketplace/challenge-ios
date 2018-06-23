@@ -21,7 +21,7 @@ final class HomePresenter {
         }
     }
     
-    private var categories: [Category] = [] {
+    private var categories: [CategoryProduct] = [] {
         didSet {
             let categoriesViewModel = categories.map(CategoryViewModel.init)
             self.delegate?.onCategories(categories: categoriesViewModel)
@@ -95,7 +95,7 @@ struct CategoryViewModel {
     let description: String
     let urlImage: URL
     
-    init(category: Category) {
+    init(category: CategoryProduct) {
         self.description = category.description
         self.urlImage = category.urlImage
     }

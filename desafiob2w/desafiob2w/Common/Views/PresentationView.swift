@@ -40,18 +40,15 @@ extension PresentationView where Self: UIView {
             objc_setAssociatedObject(self, &loadingViewKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
         }
     }
-
+    
     
     func presentLoading() {
-        DispatchQueue.main.async {
-            self.loadingView.isHidden = false
-        }
+        self.loadingView.isHidden = false
+        
     }
     
     func dismissLoading() {
-        DispatchQueue.main.async {
-            self.loadingView.isHidden = true
-        }
+        self.loadingView.isHidden = true
     }
     
     func presentError(error: NetworkError) {
@@ -63,7 +60,6 @@ extension PresentationView where Self: UIView {
     }
     
     func setupPresentation(parentView: UIView) {
-        backgroundColor = .red
         errorView = ErrorViewFactory.make(parentView: parentView)
         loadingView = LoadingViewFactory.make(parentView: parentView)
     }

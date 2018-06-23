@@ -40,6 +40,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.2)
+  - KIF (~> 3.7.3)
   - KIF-Quick (~> 1.1.0)
   - Kingfisher (~> 4.8.0)
   - Nimble (~> 7.1.2)
@@ -81,6 +82,6 @@ SPEC CHECKSUMS:
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: a54883edcb772dffda7ee9d01639001886b3f1c1
+PODFILE CHECKSUM: faf6e35600eab6c7d77cb1827c0e56ff1243ead6
 
 COCOAPODS: 1.5.3
