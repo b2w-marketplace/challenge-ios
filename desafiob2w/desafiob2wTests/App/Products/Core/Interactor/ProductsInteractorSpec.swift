@@ -45,7 +45,6 @@ class ProductsInteractorSpec: QuickSpec {
                             expect(error).notTo(beNil())
                         }
                     })
-                    
                 })
             })
         }

@@ -121,6 +121,7 @@
 		ECE9555F20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9555E20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift */; };
 		ECE9556120DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9556020DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift */; };
 		ECE9556B20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9556A20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift */; };
+		ECE9556D20DE623800BEF2D0 /* ProductInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9556C20DE623800BEF2D0 /* ProductInteractorSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,6 +268,7 @@
 		ECE9555E20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersNetworkGatewayMock.swift; sourceTree = "<group>"; };
 		ECE9556020DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNetworkGatewayMock.swift; sourceTree = "<group>"; };
 		ECE9556A20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInteractorSpec.swift; sourceTree = "<group>"; };
+		ECE9556C20DE623800BEF2D0 /* ProductInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInteractorSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1116,6 +1118,7 @@
 		ECE9556620DE5EDD00BEF2D0 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				ECE9556C20DE623800BEF2D0 /* ProductInteractorSpec.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -1552,6 +1555,7 @@
 				ECE9555F20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */,
 				ECE9555D20DE43B600BEF2D0 /* ProductsNetworkGatewayMock.swift in Sources */,
 				ECE9555020DE237900BEF2D0 /* BannersNetworkGatewaySpec.swift in Sources */,
+				ECE9556D20DE623800BEF2D0 /* ProductInteractorSpec.swift in Sources */,
 				ECE9556120DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
