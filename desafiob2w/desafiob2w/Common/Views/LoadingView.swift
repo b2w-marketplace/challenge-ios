@@ -34,7 +34,7 @@ final class LoadingView: UIView {
         super.init(frame: .zero)
         setupView(parentView: parentView)
         setupViewConfiguration()
-        backgroundColor = .red
+        backgroundColor = .white
     }
     
     @available(*, unavailable)

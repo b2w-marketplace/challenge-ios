@@ -23,7 +23,7 @@ class HomeViewControllerSpec: QuickSpec {
                     let bannersGateway = BannersNetworkGatewayMock()
                     let categoriesGateway = CategoriesNetworkGatewayMock()
                     let interactor = HomeInteractor(categoriesGateway: categoriesGateway, productsGateway: productsGateway, bannersGateway: bannersGateway)
-                    sut.presenter = HomePresenter(delegate: sut, interactor: interactor, router: UINavigationController() as! HomeRouter)
+                    sut.presenter = HomePresenter(delegate: sut, interactor: interactor)
                 }
                 
                 it("") {

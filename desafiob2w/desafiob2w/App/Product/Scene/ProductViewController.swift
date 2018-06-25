@@ -21,7 +21,7 @@ class ProductViewController: UIViewController {
     private var isReserve: Bool = true
     private var productId: Int!
     
-    private lazy var presenter = ProductPresenterFactory.make(delegate: self)
+    private lazy var presenter = ProductPresenterFactory.make(delegate: self, interactor: ProductInteractorFactory.make())
     
     override func viewWillAppear(_ animated: Bool) {
         assertDependencies()

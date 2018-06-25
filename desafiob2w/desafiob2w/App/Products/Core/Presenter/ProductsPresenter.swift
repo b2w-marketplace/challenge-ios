@@ -12,7 +12,6 @@ final class ProductsPresenter {
     
     private weak var delegate: ProductsPresentation?
     private let interactor: ProductsInteractor
-    private let router: ProductsRouter
 
     
     private var products: [Product] = [] {
@@ -22,11 +21,9 @@ final class ProductsPresenter {
         }
     }
     
-    init(delegate: ProductsPresentation, interactor: ProductsInteractor, router: ProductsRouter) {
+    init(delegate: ProductsPresentation, interactor: ProductsInteractor) {
         self.delegate = delegate
         self.interactor = interactor
-        self.router = router
-       
     }
     
     func getProducts(idCategory: Int) {
@@ -42,7 +39,7 @@ final class ProductsPresenter {
         }
     }
     
-    func showProduct(index: Int) {
-        router.goToProductDetail(productId: products[index].id)
+    func productIdIndex(index: Int) -> Int {
+        return products[index].id
     }
 }

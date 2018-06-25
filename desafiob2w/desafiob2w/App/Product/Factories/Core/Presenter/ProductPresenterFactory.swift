@@ -9,7 +9,7 @@
 import Foundation
 
 enum ProductPresenterFactory {
-    static func make(delegate: ProductPresentation) -> ProductPresenter {
-        return ProductPresenter(delegate: delegate, interactor: ProductInteractorFactory.make())
+    static func make(delegate: ProductPresentation, interactor: ProductInteractor) -> ProductPresenter {
+        return ProductPresenter(delegate: delegate, interactor: interactor)
     }
 }

@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var bestSellingProductView: ProductsView!
     @IBOutlet weak var productsHeightConstraint: NSLayoutConstraint!
     
-    lazy var presenter: HomePresenter = HomePresenterFactory.make(delegate: self, navigationController: self.navigationController!)
+    lazy var presenter: HomePresenter = HomePresenterFactory.make(delegate: self, interactor: HomeInteractorFactory.make())
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,14 +73,14 @@ extension HomeViewController: HomePresentation {
     
     func onCategories(categories: [CategoryViewModel]) {
         categoriesView.setupView(categories: categories) { (index) in
-            self.presenter.showCategory(index: index)
+            self.goToProducts(categoryId: self.presenter.categoryIdForIndex(index: index), categoryName: self.presenter.categoryDescriptionIndex(index: index))
         }
     }
     
     func onProducts(products: [ProductViewModel]) {
         updateProductsHeightConstraint(count: products.count)
         bestSellingProductView.setupView(products: products) { (index) in
-            self.presenter.showProduct(index: index)
+            self.goToProductDetail(productId: self.presenter.productIdForIndex(index: index))
         }
     }
     
@@ -89,4 +89,26 @@ extension HomeViewController: HomePresentation {
             
         }
     }
+}
+
+// #MARK Navigation Router
+extension HomeViewController {
+    
+    func goToProductDetail(productId: Int) {
+        guard let viewController = R.storyboard.home.productDetailViewController() else { return}
+        viewController.loadViewIfNeeded()
+        viewController.inject(productId)
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func goToProducts(categoryId: Int, categoryName: String) {
+        guard let viewController = R.storyboard.home.productsViewController() else { return}
+        viewController.loadViewIfNeeded()
+        viewController.inject((categoryId, categoryName))
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    
 }

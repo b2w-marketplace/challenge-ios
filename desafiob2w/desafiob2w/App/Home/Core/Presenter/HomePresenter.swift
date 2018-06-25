@@ -12,7 +12,6 @@ final class HomePresenter {
     
     private weak var delegate: HomePresentation?
     private let interactor: HomeInteractor
-    private let router: HomeRouter
     
     private var banners: [Banner] = [] {
         didSet {
@@ -36,10 +35,9 @@ final class HomePresenter {
         }
     }
 
-    init(delegate: HomePresentation, interactor: HomeInteractor, router: HomeRouter) {
+    init(delegate: HomePresentation, interactor: HomeInteractor) {
         self.delegate = delegate
         self.interactor = interactor
-        self.router = router
     }
     
     func getCategories() {
@@ -81,14 +79,18 @@ final class HomePresenter {
         }
     }
     
-    func showProduct(index: Int) {
-        router.goToProductDetail(productId: products[index].id)
+    func productIdForIndex(index: Int) -> Int {
+        return products[index].id
     }
     
-    func showCategory(index: Int) {
-        router.goToProducts(categoryId: categories[index].id, categoryName: categories[index].description)
+    func categoryIdForIndex(index: Int) -> Int {
+        return categories[index].id
     }
-
+    
+    func categoryDescriptionIndex(index: Int) -> String {
+        return categories[index].description
+    }
+    
 }
 
 struct CategoryViewModel {

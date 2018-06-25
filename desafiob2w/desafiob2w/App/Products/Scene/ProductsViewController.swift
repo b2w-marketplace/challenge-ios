@@ -13,7 +13,7 @@ class ProductsViewController: UIViewController {
     @IBOutlet weak var productsView: ProductsView!
     fileprivate var categoryId: Int!
     fileprivate var categoryName: String!
-    private lazy var presenter: ProductsPresenter = ProductsPresenterFactory.make(delegate: self, navigationController: self.navigationController!)
+    private lazy var presenter: ProductsPresenter = ProductsPresenterFactory.make(delegate: self, interactor: ProductsInteractorFactory.make())
     
     override func viewWillAppear(_ animated: Bool) {
         assertDependencies()
@@ -50,9 +50,19 @@ extension ProductsViewController: ProductsPresentation {
     
     func onProducts(products: [ProductViewModel]) {
         productsView.setupView(withScroll: true, withInfinite: true, products: products, completionProdructIndex: { (index) in
-            self.presenter.showProduct(index: index)
+            self.goToProductDetail(productId: self.presenter.productIdIndex(index: index))
         }) {
             self.presenter.getProducts(idCategory: self.categoryId)
         }
+    }
+}
+
+extension ProductsViewController {
+    func goToProductDetail(productId: Int) {
+        guard let viewController = R.storyboard.home.productDetailViewController() else { return}
+        viewController.loadViewIfNeeded()
+        viewController.inject(productId)
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

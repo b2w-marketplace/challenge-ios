@@ -9,22 +9,27 @@
 import Foundation
 import KIF_Quick
 import Quick
-import OHHTTPStubs
 @testable import desafiob2w
 
 class HomeViewControllerSpec: KIFSpec {
     override func spec() {
         var sut: HomeViewController!
-        describe("") {
-            context("", {
+        describe("Testa fluxo da home") {
+            context("Ao acessar a home", {
                 beforeEach {
                     sut = R.storyboard.home().instantiateInitialViewController() as! HomeViewController
+                    let productsGateway = ProductsNetworkGatewayMock()
+                    let bannersGateway = BannersNetworkGatewayMock()
+                    let categoriesGateway = CategoriesNetworkGatewayMock()
+                    
+                    let interactor = HomeInteractor(categoriesGateway: categoriesGateway, productsGateway: productsGateway, bannersGateway: bannersGateway)
+                    sut.presenter = HomePresenterFactory.make(delegate: sut, interactor: interactor)
                 }
                 
                 it("") {
+                    viewTester().usingIdentifier("HomeViewController")
                 }
             })
         }
     }
 }
-
