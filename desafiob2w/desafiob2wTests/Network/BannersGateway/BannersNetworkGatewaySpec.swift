@@ -26,43 +26,43 @@ class BannersNetworkGatewaySpec: QuickSpec {
             context("Ao buscar os banners", {
                 let bundle = Bundle(for: CategoriesNetworkGatewaySpec.self)
                 
-                it("Deve retornar uma lista de banners quando a requisição for sucesso", closure: {
-                    stub(condition: isHost(host), response: { (request) -> OHHTTPStubsResponse in
-                        let fixturePath = bundle.path(forResource: "Banners", ofType: "json")!
-                        return fixture(filePath: fixturePath, status: 200, headers: nil)
-                    })
-                    
+                context("Se a chamada for um sucesso", {
                     var banners: [Banner]?
-                    
-                    sut.banners(url: fakeApiPath, completionHandler: { (result) in
-                        switch result {
-                        case .success(let bannersResult):
-                            banners = bannersResult
-                        default: break
-                        }
+                    beforeEach {
+                        stub(condition: isHost(host), response: { (request) -> OHHTTPStubsResponse in
+                            let fixturePath = bundle.path(forResource: "Banners", ofType: "json")!
+                            return fixture(filePath: fixturePath, status: 200, headers: nil)
+                        })
+                        sut.banners(url: fakeApiPath, completionHandler: { (result) in
+                            if case let .success(newBanners) = result {
+                                banners = newBanners
+                            }
+                        })
+                    }
+                    it("Deve retornar uma lista de banners", closure: {
+                        expect(banners?.count).toEventually(equal(3))
+                        expect(banners?.first?.urlImagem).toEventually(equal(URL.init(string: "https://images-submarino.b2w.io/spacey/2017/02/06/MainTop_GAMES_FEV17.png")))
                     })
-                    
-                    expect(banners?.count).toEventually(equal(3))
-                    expect(banners?.first?.urlImagem).toEventually(equal(URL.init(string: "https://images-submarino.b2w.io/spacey/2017/02/06/MainTop_GAMES_FEV17.png")))
-                    
                 })
                 
-                it("Deve retornar um erro quando a requisição falha", closure: {
-                    stub(condition: isHost(host), response: { (request) -> OHHTTPStubsResponse in
-                        return OHHTTPStubsResponse(data:Data(), statusCode: 504, headers: nil)
-                            .responseTime(OHHTTPStubsDownloadSpeed1KBPS)
-                    })
-                    
+                context("Se a chamada falhar", {
                     var error: NetworkError?
-                    sut.banners(url: fakeApiPath, completionHandler: { (result) in
-                        switch result {
-                        case .fail(let errorResult):
-                            error = errorResult
-                        default: break
-                        }
+                    beforeEach {
+                        stub(condition: isHost(host), response: { (request) -> OHHTTPStubsResponse in
+                            return OHHTTPStubsResponse(data:Data(), statusCode: 504, headers: nil)
+                                .responseTime(OHHTTPStubsDownloadSpeed1KBPS)
+                        })
+                        sut.banners(url: fakeApiPath, completionHandler: { (result) in
+                            if case let .fail(newError) = result {
+                                error = newError
+                            }
+                        })
+                    }
+                    it("Deve retornar um erro", closure: {
+                        expect(error).toEventuallyNot(beNil())
                     })
-                    expect(error).toEventuallyNot(beNil())
                 })
+                
             })
             
         }

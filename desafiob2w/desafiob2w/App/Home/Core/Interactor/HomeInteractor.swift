@@ -27,7 +27,6 @@ class HomeInteractor {
     }
     
     func fetchProductsBestSeller(completion: @escaping CompletionHandler<[Product], NetworkError>) {
-
         productsGateway.bestSellerProducts(url: R.string.apI.productsBestSeller()) { (result) in
             completion(result)
         }

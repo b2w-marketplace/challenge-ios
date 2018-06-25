@@ -1,6 +1,6 @@
 //
 //  CategoriesNetworkGatewayMock.swift
-//  desafiob2wTests
+//  desafiob2wUiTests
 //
 //  Created by Lázaro Lima dos Santos on 23/06/18.
 //  Copyright © 2018 B2w. All rights reserved.

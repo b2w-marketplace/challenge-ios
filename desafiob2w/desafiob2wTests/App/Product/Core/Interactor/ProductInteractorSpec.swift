@@ -23,55 +23,69 @@ class ProductInteractorSpec: QuickSpec {
             
             context("Ao carregar um produto", {
                 
-                it("Deve devolver um produto quando sucesso", closure: {
-                    productsGateway.onError = false
-                    sut.fetchProduct(idProduct: 0, completion: { (result) in
-                        switch result {
-                        case .success(let product):
-                            expect(product.name).to(equal("Tv 50"))
-                        case .fail(let error):
-                            expect(error).to(beNil())
-                        }
+                context("Se a chamada for um sucesso", {
+                    var product: Product!
+                    beforeEach {
+                        productsGateway.onError = false
+                        sut.fetchProduct(idProduct: 0,completion: { (result) in
+                            if case let .success(newProduct) = result {
+                                product = newProduct
+                            }
+                        })
+                    }
+                    it("Deve devolver um produto", closure: {
+                        expect(product.name).to(equal("Tv 50"))
                     })
                 })
                 
-                it("Deve devolver um erro quando falhar", closure: {
-                    productsGateway.onError = true
-                    sut.fetchProduct(idProduct: 0, completion: { (result) in
-                        switch result {
-                        case .success(let product):
-                            expect(product).to(beNil())
-                        case .fail(let error):
-                            expect(error).notTo(beNil())
-                        }
+                context("Se a chamada falhar", {
+                    var error: NetworkError!
+                    beforeEach {
+                        productsGateway.onError = true
+                        sut.fetchProduct(idProduct: 0, completion: { (result) in
+                            if case let .fail(newError) = result {
+                                error = newError
+                            }
+                        })
+                    }
+                    it("Deve devolver um erro", closure: {
+                        expect(error).notTo(beNil())
                     })
                 })
             })
             
             context("Ao reservar um produto", {
-                it("O produto deve ser reservado quando sucesso", closure: {
-                    productsGateway.onError = false
-                    sut.submitReserveProduct(idProduct: 0, completion: { (result) in
-                        switch result {
-                        case .success(let isReserve):
-                            expect(isReserve).to(equal(true))
-                        case .fail(let error):
-                            expect(error).to(beNil())
-                        }
+                
+                context("Se a chamada for um sucesso", {
+                    var isReserve: Bool!
+                    beforeEach {
+                        productsGateway.onError = false
+                        sut.submitReserveProduct(idProduct: 0,completion: { (result) in
+                            if case let .success(newIsReserve) = result {
+                                isReserve = newIsReserve
+                            }
+                        })
+                    }
+                    it("Deve devolver uma mensagem de sucesso", closure: {
+                        expect(isReserve).to(equal(true))
                     })
                 })
                 
-                it("O produto não deve ser reservado quando falha", closure: {
-                    productsGateway.onError = true
-                    sut.submitReserveProduct(idProduct: 0, completion: { (result) in
-                        switch result {
-                        case .success(let isReserve):
-                            expect(isReserve).to(beNil())
-                        case .fail(let error):
-                            expect(error).notTo(beNil())
-                        }
+                context("Se a chamada falhar", {
+                    var error: NetworkError!
+                    beforeEach {
+                        productsGateway.onError = true
+                        sut.submitReserveProduct(idProduct: 0, completion: { (result) in
+                            if case let .fail(newError) = result {
+                                error = newError
+                            }
+                        })
+                    }
+                    it("Deve devolver um erro", closure: {
+                        expect(error).notTo(beNil())
                     })
                 })
+                
             })
         }
     }

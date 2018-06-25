@@ -25,81 +25,102 @@ class HomeInteractorSpec: QuickSpec {
             
             context("Ao chamar os produtos mais vendidos", {
                 
-                it("Deve devolver uma lista dos produtos mais vendidos quando sucesso", closure: {
-                    productsGateway.onError = false
-                    sut.fetchProductsBestSeller(completion: { (result) in
-                        switch result {
-                        case .success(let products):
-                            expect(products.count).to(equal(32))
-                        case .fail(let error):
-                            expect(error).to(beNil())
-                        }
+                context("Se a chamada for um sucesso", {
+                    var products: [Product]!
+                    beforeEach {
+                        productsGateway.onError = false
+                        sut.fetchProductsBestSeller(completion: { (result) in
+                            if case let .success(newProducts) = result {
+                                products = newProducts
+                            }
+                        })
+                    }
+                    it("Deve devolver uma lista dos produtos mais vendidos", closure: {
+                        expect(products.count).to(equal(40))
                     })
                 })
                 
-                it("Deve devolver um erro quando falhar", closure: {
-                    productsGateway.onError = true
-                    sut.fetchProductsBestSeller(completion: { (result) in
-                        switch result {
-                        case .success(let products):
-                            expect(products).to(beNil())
-                        case .fail(let error):
-                            expect(error).notTo(beNil())
-                        }
+                context("Se a chamada falhar", {
+                    
+                    var error: NetworkError!
+                    
+                    beforeEach {
+                        productsGateway.onError = true
+                        sut.fetchProductsBestSeller(completion: { (result) in
+                            if case let .fail(newError) = result {
+                                error = newError
+                            }
+                        })
+                    }
+                    it("Deve devolver um erro", closure: {
+                        expect(error).notTo(beNil())
                     })
                 })
                 
             })
             
             context("Ao chamar os banners", {
-                it("Deve devolver uma lista dos banners quando sucesso", closure: {
-                    bannersGateway.onError = false
-
-                    sut.fetchBanners(completion: { (result) in
-                        switch result {
-                        case .success(let banners):
-                            expect(banners.count).to(equal(3))
-                        case .fail(let error):
-                            expect(error).to(beNil())
-                        }
+                context("Se a chamada for um sucesso", {
+                    
+                    var banners: [Banner]!
+                    beforeEach {
+                        bannersGateway.onError = false
+                        sut.fetchBanners(completion: { (result) in
+                            if case let .success(newBanners) = result {
+                                banners = newBanners
+                            }
+                        })
+                    }
+                    it("Deve devolver uma lista dos produtos mais vendidos", closure: {
+                        expect(banners.count).to(equal(3))
                     })
                 })
-                
-                it("Deve devolver um erro quando falar ", closure: {
+                context("Se a chamada falhar", {
                     bannersGateway.onError = true
-                    sut.fetchBanners(completion: { (result) in
-                        switch result {
-                        case .success(let products):
-                            expect(products).to(beNil())
-                        case .fail(let error):
-                            expect(error).notTo(beNil())
-                        }
+                    var error: NetworkError!
+                    beforeEach {
+                        sut.fetchBanners(completion: { (result) in
+                            if case let .fail(newError) = result {
+                                error = newError
+                            }
+                        })
+                    }
+                    it("Deve devolver um erro", closure: {
+                        expect(error).notTo(beNil())
                     })
                 })
+    
             })
             
             context("Ao chamar as categorias", {
-                it("Deve devolver uma lista das categorias", closure: {
-                    categoriesGateway.onError = false
-                    sut.fetchCategories(completion: { (result) in
-                        switch result {
-                        case .success(let categories):
-                            expect(categories.count).to(equal(9))
-                        case .fail(let error):
-                            expect(error).to(beNil())
-                        }
+                context("Se a chamada for um sucesso", {
+                    
+                    var categories: [CategoryProduct]!
+                    beforeEach {
+                        categoriesGateway.onError = false
+                        sut.fetchCategories(completion: { (result) in
+                            if case let .success(newCategories) = result {
+                                categories = newCategories
+                            }
+                        })
+                    }
+                    it("Deve devolver uma lista das categorias", closure: {
+                        expect(categories.count).to(equal(9))
                     })
                 })
-                
-                it("Deve devolver um erro quando falhar", closure: {
+            
+                context("Se a chamada falhar", {
                     categoriesGateway.onError = true
-                    sut.fetchCategories(completion: { (result) in
-                        switch result {
-                        case .success(let products):
-                            expect(products).to(beNil())
-                        case .fail(let error):
-                            expect(error).notTo(beNil())
-                        }
+                    var error: NetworkError!
+                    beforeEach {
+                        sut.fetchCategories(completion: { (result) in
+                            if case let .fail(newError) = result {
+                                error = newError
+                            }
+                        })
+                    }
+                    it("Deve devolver um erro", closure: {
+                        expect(error).notTo(beNil())
                     })
                 })
             })

@@ -219,10 +219,8 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 5 localization tables.
   struct string {
-    /// This `R.string.apI` struct is generated, and contains static references to 5 localization keys.
+    /// This `R.string.apI` struct is generated, and contains static references to 4 localization keys.
     struct apI {
-      /// Value: https://alodjinha.herokuapp.com
-      static let baseUrl = Rswift.StringResource(key: "baseUrl", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://alodjinha.herokuapp.com/banner
       static let banners = Rswift.StringResource(key: "banners", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://alodjinha.herokuapp.com/categoria
@@ -231,11 +229,6 @@ struct R: Rswift.Validatable {
       static let product = Rswift.StringResource(key: "product", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://alodjinha.herokuapp.com/produto/maisvendidos
       static let productsBestSeller = Rswift.StringResource(key: "productsBestSeller", tableName: "API", bundle: R.hostingBundle, locales: [], comment: nil)
-      
-      /// Value: https://alodjinha.herokuapp.com
-      static func baseUrl(_: Void = ()) -> String {
-        return NSLocalizedString("baseUrl", tableName: "API", bundle: R.hostingBundle, comment: "")
-      }
       
       /// Value: https://alodjinha.herokuapp.com/banner
       static func banners(_: Void = ()) -> String {

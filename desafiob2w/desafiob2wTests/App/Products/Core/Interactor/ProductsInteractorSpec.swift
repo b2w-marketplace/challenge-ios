@@ -22,30 +22,53 @@ class ProductsInteractorSpec: QuickSpec {
             }
             
             context("Ao chamar a lista de produtos", {
-                it("Deve devolver uma lista produtos quando sucesso", closure: {
+                context("Ao retornar produtos") {
                     productsGateway.onError = false
-                    sut.fetchProducts(idCategory: 0, completion: { (result) in
-                        switch result {
-                        case .success(let products):
-                            expect(products.count).to(equal(32))
-                        case .fail(let error):
-                            expect(error).to(beNil())
-                        }
-                    })
-                })
-                
-                it("Deve devolver um erro quando falhar", closure: {
-                    productsGateway.onError = true
+    
+                    var products: [Product]!
+                    beforeEach {
+                        sut.fetchProducts(idCategory: 0, completion: { (result) in
+                            if case let .success(newProducts) = result {
+                                products = newProducts
+                            }
+                        })
+                    }
                     
-                    sut.fetchProducts(idCategory: 0, completion: { (result) in
-                        switch result {
-                        case .success(let products):
-                            expect(products).to(beNil())
-                        case .fail(let error):
-                            expect(error).notTo(beNil())
-                        }
+                    it("Deve devolver uma lista produtos quando sucesso", closure: {
+                        expect(products.count) == productsGateway.productsStub.count
+                        expect(productsGateway.offset) == 0
                     })
-                })
+                    
+                    context("Ao chamar a lista de produtos") {
+                        beforeEach {
+                            sut.fetchProducts(idCategory: 0, completion: { (result) in
+                                if case let .success(newProducts) = result {
+                                    products = newProducts
+                                }
+                            })
+                        }
+                        
+                        it("Deve passar o offset correto") {
+                            expect(productsGateway.offset) == productsGateway.productsStub.count
+                        }
+                    }
+                }
+                
+                context("Ao retornar erro") {
+                    var error: Error?
+                    beforeEach {
+                        productsGateway.onError = true
+                        sut.fetchProducts(idCategory: 0) { (result) in
+                            if case let .fail(newError) = result {
+                                error = newError
+                            }
+                        }
+                    }
+                    
+                    it("Deve devolver um erro quando falhar") {
+                        expect(error).notTo(beNil())
+                    }
+                }
             })
         }
     }

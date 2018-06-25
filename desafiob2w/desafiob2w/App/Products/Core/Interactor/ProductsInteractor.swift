@@ -18,11 +18,8 @@ class ProductsInteractor {
     
     func fetchProducts(idCategory: Int, completion: @escaping CompletionHandler<[Product], NetworkError>) {
         productsGateway.products(url: R.string.apI.product(), offset: productsOffset, limit: productLimit, idCategory: idCategory) { (result) in
-            
-            switch result {
-            case .success(let products):
-                self.changeOffset(offSet: products.count)
-            case .fail(_): break
+            if case let .success(products) = result {
+               self.changeOffset(offSet: products.count)
             }
             completion(result)
         }

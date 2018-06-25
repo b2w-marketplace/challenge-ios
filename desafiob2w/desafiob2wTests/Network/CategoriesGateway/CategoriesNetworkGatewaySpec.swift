@@ -26,42 +26,44 @@ class CategoriesNetworkGatewaySpec: QuickSpec {
             context("Ao buscar as categorias", {
                 let bundle = Bundle(for: CategoriesNetworkGatewaySpec.self)
                 
-                it("Deve retornar uma lista de categorias quando a requisição for sucesso", closure: {
-                    stub(condition: isHost(host), response: { (request) -> OHHTTPStubsResponse in
-                        let fixturePath = bundle.path(forResource: "Categorias", ofType: "json")!
-                        return fixture(filePath: fixturePath, status: 200, headers: nil)
-                    })
-                    
+                context("Se a chamada for um sucesso", {
                     var categorias: [CategoryProduct]?
-                    sut.categories(url: fakeApiPath, completionHandler: { (result) in
-                        switch result {
-                        case .success(let categoriesResult):
-                            categorias = categoriesResult
-                        default: break
-                        }
+                    beforeEach {
+                        stub(condition: isHost(host), response: { (request) -> OHHTTPStubsResponse in
+                            let fixturePath = bundle.path(forResource: "Categorias", ofType: "json")!
+                            return fixture(filePath: fixturePath, status: 200, headers: nil)
+                        })
+                        sut.categories(url: fakeApiPath, completionHandler: { (result) in
+                            if case let .success(newCategories) = result {
+                                categorias = newCategories
+                            }
+                        })
+                    }
+                    it("Deve retornar uma lista de categorias", closure: {
+                        expect(categorias?.count).toEventually(equal(10))
+                        expect(categorias?.first?.id).toEventually(equal(1))
+                        expect(categorias?.first?.description).toEventually(equal("Games"))
                     })
-                    expect(categorias?.count).toEventually(equal(10))
-                    expect(categorias?.first?.id).toEventually(equal(1))
-                    expect(categorias?.first?.description).toEventually(equal("Games"))
-                    
                 })
                 
-                it("Deve retornar um erro quando a requisição falha", closure: {
-                    stub(condition: isHost(host), response: { (request) -> OHHTTPStubsResponse in
-                        return OHHTTPStubsResponse(data:Data(), statusCode: 504, headers: nil)
-                            .responseTime(OHHTTPStubsDownloadSpeed1KBPS)
-                    })
-                    
+                context("Se a chamada falhar", {
                     var error: NetworkError?
-                    sut.categories(url: fakeApiPath, completionHandler: {  (result) in
-                        switch result {
-                        case .fail(let errorResult):
-                            error = errorResult
-                        default: break
-                        }
+                    beforeEach {
+                        stub(condition: isHost(host), response: { (request) -> OHHTTPStubsResponse in
+                            return OHHTTPStubsResponse(data:Data(), statusCode: 504, headers: nil)
+                                .responseTime(OHHTTPStubsDownloadSpeed1KBPS)
+                        })
+                        sut.categories(url: fakeApiPath, completionHandler: {  (result) in
+                            if case let .fail(newError) = result {
+                                error = newError
+                            }
+                        })
+                    }
+                    it("Deve retornar um erro", closure: {
+                        expect(error).toEventuallyNot(beNil())
                     })
-                    expect(error).toEventuallyNot(beNil())
                 })
+
             })
             
             

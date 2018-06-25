@@ -10,6 +10,15 @@ import UIKit
 
 final class LoadingView: UIView {
     
+    override var isHidden: Bool {
+        get {
+            return super.isHidden
+        }
+        set {
+            super.isHidden = newValue
+        }
+    }
+    
     private let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     
     private let message: UILabel = {
@@ -28,14 +37,15 @@ final class LoadingView: UIView {
         backgroundColor = .red
     }
     
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
-        fatalError("Error")
+        return nil
     }
     
     private func setupView(parentView: UIView) {
+        parentView.addSubview(self)
         parentView.bringSubview(toFront: self)
         isHidden = true
-        parentView.addSubview(self)
         translatesAutoresizingMaskIntoConstraints = false
         let safeArea = parentView.safeAreaLayoutGuide
         topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true

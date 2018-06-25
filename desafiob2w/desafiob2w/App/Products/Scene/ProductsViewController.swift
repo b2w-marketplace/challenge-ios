@@ -54,6 +54,5 @@ extension ProductsViewController: ProductsPresentation {
         }) {
             self.presenter.getProducts(idCategory: self.categoryId)
         }
-
     }
 }

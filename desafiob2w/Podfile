@@ -14,6 +14,7 @@ def ui_testing_pods
     pod 'Nimble', '~> 7.1.2'
     pod 'KIF-Quick', '~> 1.1.0'
     pod 'KIF', '~> 3.7.3'
+    pod 'OHHTTPStubs/Swift', '~> 6.1.0'
 end
 
 target 'desafiob2w' do
@@ -29,7 +30,7 @@ target 'desafiob2w' do
         testing_pods
     end
 
-    target 'desafiob2wUITests' do
+    target 'desafiob2wUiTests' do
         inherit! :search_paths
         # Pods for testing
         ui_testing_pods
