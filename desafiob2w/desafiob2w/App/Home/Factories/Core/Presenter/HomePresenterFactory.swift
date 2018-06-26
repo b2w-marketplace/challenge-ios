@@ -9,7 +9,7 @@
 import UIKit
 
 enum HomePresenterFactory {
-    static func make(delegate: HomePresentation, navigationController: UINavigationController) -> HomePresenter {
-        return HomePresenter(delegate: delegate, interactor: HomeInteractorFactory.make(), router: HomeNavigationRouterFactory.make(navigationController: navigationController))
+    static func make(delegate: HomePresentation, interactor: HomeInteractor) -> HomePresenter {
+        return HomePresenter(delegate: delegate, interactor: interactor)
     }
 }

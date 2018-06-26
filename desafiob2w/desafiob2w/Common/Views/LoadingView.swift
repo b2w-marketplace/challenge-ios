@@ -10,12 +10,22 @@ import UIKit
 
 final class LoadingView: UIView {
     
+    override var isHidden: Bool {
+        get {
+            return super.isHidden
+        }
+        set {
+            super.isHidden = newValue
+        }
+    }
+    
     private let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     
     private let message: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
+        label.text = R.string.messages.loading()
         label.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         return label
     }()
@@ -24,16 +34,18 @@ final class LoadingView: UIView {
         super.init(frame: .zero)
         setupView(parentView: parentView)
         setupViewConfiguration()
+        backgroundColor = .white
     }
     
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
-        fatalError("Error")
+        return nil
     }
     
     private func setupView(parentView: UIView) {
+        parentView.addSubview(self)
         parentView.bringSubview(toFront: self)
         isHidden = true
-        parentView.addSubview(self)
         translatesAutoresizingMaskIntoConstraints = false
         let safeArea = parentView.safeAreaLayoutGuide
         topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true

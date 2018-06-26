@@ -20,14 +20,13 @@ class HomeInteractor {
         self.bannersGateway = bannersGateway
     }
     
-    func fetchCategories(completion: @escaping CompletionHandler<[Category], NetworkError>) {
+    func fetchCategories(completion: @escaping CompletionHandler<[CategoryProduct], NetworkError>) {
         categoriesGateway.categories(url: R.string.apI.categories()) { (result) in
             completion(result)
         }
     }
     
     func fetchProductsBestSeller(completion: @escaping CompletionHandler<[Product], NetworkError>) {
-
         productsGateway.bestSellerProducts(url: R.string.apI.productsBestSeller()) { (result) in
             completion(result)
         }
