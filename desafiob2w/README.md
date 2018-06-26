@@ -23,3 +23,4 @@ Na camada de visão foi utilizado o [SVProgressHUD](https://github.com/SVProgres
 
 Para especificação das classes de testes foram utilizados o [Quick](https://github.com/Quick/Quick) e o [Nimble](https://github.com/Quick/Nimble) e para criar stubs de chamadas HTTP foi utilizado o [OHHTTPStubs/Swift](https://github.com/AliSoftware/OHHTTPStubs)
 
+Também foi utilizado o [R.swift](https://github.com/mac-cain13/R.swift) para facilitar o uso de alguns componentes  
