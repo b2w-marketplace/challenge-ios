@@ -1,0 +1,4 @@
+"mapping" = "An unexpected error occurred while communicating with the server.";
+"weakConnection" = "Apparently your connection is weak.";
+"offline" = "You are currently offline.";
+"other" = "An unexpected error has occurred.";
