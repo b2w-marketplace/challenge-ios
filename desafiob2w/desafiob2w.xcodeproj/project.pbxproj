@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		35D5CF80532DDEACB8AADA88 /* Pods_desafiob2w.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C177003C87D5568748D6D7 /* Pods_desafiob2w.framework */; };
-		5AD50589C0EDFC73410B4C0E /* Pods_desafiob2wUiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D94173531950A7922671AFE /* Pods_desafiob2wUiTests.framework */; };
 		DF53E00871B153A05193B6F4 /* Pods_desafiob2wTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1AD95D9AAB180E4D560CF8 /* Pods_desafiob2wTests.framework */; };
 		EC1187C320D2137000A77FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1187C220D2137000A77FC6 /* AppDelegate.swift */; };
 		EC1187CA20D2137200A77FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1187C920D2137200A77FC6 /* Assets.xcassets */; };
@@ -112,17 +111,6 @@
 		ECE9556120DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9556020DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift */; };
 		ECE9556B20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9556A20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift */; };
 		ECE9556D20DE623800BEF2D0 /* ProductInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9556C20DE623800BEF2D0 /* ProductInteractorSpec.swift */; };
-		ECE9557E20DF12F000BEF2D0 /* ProductsNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9557D20DF12F000BEF2D0 /* ProductsNetworkGatewayMock.swift */; };
-		ECE9558020DF13FE00BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9557F20DF13FE00BEF2D0 /* BannersNetworkGatewayMock.swift */; };
-		ECE9558220DF141700BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9558120DF141700BEF2D0 /* CategoriesNetworkGatewayMock.swift */; };
-		ECE9558520DF14E100BEF2D0 /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9558420DF14E100BEF2D0 /* HomeViewControllerSpec.swift */; };
-		ECE9558720DF1A7D00BEF2D0 /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9558620DF1A7D00BEF2D0 /* HomeViewControllerSpec.swift */; };
-		ECE9558F20DF236000BEF2D0 /* Banners.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9558920DF236000BEF2D0 /* Banners.json */; };
-		ECE9559020DF236000BEF2D0 /* Categorias.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9558A20DF236000BEF2D0 /* Categorias.json */; };
-		ECE9559120DF236000BEF2D0 /* Produto.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9558B20DF236000BEF2D0 /* Produto.json */; };
-		ECE9559220DF236000BEF2D0 /* ProdutosMaisVendidos.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9558C20DF236000BEF2D0 /* ProdutosMaisVendidos.json */; };
-		ECE9559320DF236000BEF2D0 /* Reserva.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9558D20DF236000BEF2D0 /* Reserva.json */; };
-		ECE9559420DF236000BEF2D0 /* Produtos.json in Resources */ = {isa = PBXBuildFile; fileRef = ECE9558E20DF236000BEF2D0 /* Produtos.json */; };
 		ECE9559620E096C900BEF2D0 /* ProductPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9559520E096C900BEF2D0 /* ProductPresenterSpec.swift */; };
 		ECE9559920E097B300BEF2D0 /* ProductViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9559820E097B300BEF2D0 /* ProductViewControllerMock.swift */; };
 		ECE9559C20E0A9A700BEF2D0 /* ProductsViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9559B20E0A9A700BEF2D0 /* ProductsViewControllerMock.swift */; };
@@ -133,13 +121,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		EC1187D420D2137200A77FC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC1187B720D2137000A77FC6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC1187BE20D2137000A77FC6;
-			remoteInfo = desafiob2w;
-		};
-		ECE9557720DF127700BEF2D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC1187B720D2137000A77FC6 /* Project object */;
 			proxyType = 1;
@@ -267,19 +248,6 @@
 		ECE9556020DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNetworkGatewayMock.swift; sourceTree = "<group>"; };
 		ECE9556A20DE5FF900BEF2D0 /* ProductsInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInteractorSpec.swift; sourceTree = "<group>"; };
 		ECE9556C20DE623800BEF2D0 /* ProductInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInteractorSpec.swift; sourceTree = "<group>"; };
-		ECE9557220DF127700BEF2D0 /* desafiob2wUiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafiob2wUiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECE9557620DF127700BEF2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECE9557D20DF12F000BEF2D0 /* ProductsNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductsNetworkGatewayMock.swift; path = desafiob2wUITests/GatewayMock/ProductsNetworkGatewayMock.swift; sourceTree = SOURCE_ROOT; };
-		ECE9557F20DF13FE00BEF2D0 /* BannersNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersNetworkGatewayMock.swift; sourceTree = "<group>"; };
-		ECE9558120DF141700BEF2D0 /* CategoriesNetworkGatewayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNetworkGatewayMock.swift; sourceTree = "<group>"; };
-		ECE9558420DF14E100BEF2D0 /* HomeViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewControllerSpec.swift; path = desafiob2wUITests/Scene/HomeViewControllerSpec.swift; sourceTree = SOURCE_ROOT; };
-		ECE9558620DF1A7D00BEF2D0 /* HomeViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpec.swift; sourceTree = "<group>"; };
-		ECE9558920DF236000BEF2D0 /* Banners.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Banners.json; path = desafiob2wTests/Network/JsonAux/Banners.json; sourceTree = SOURCE_ROOT; };
-		ECE9558A20DF236000BEF2D0 /* Categorias.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Categorias.json; path = desafiob2wTests/Network/JsonAux/Categorias.json; sourceTree = SOURCE_ROOT; };
-		ECE9558B20DF236000BEF2D0 /* Produto.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Produto.json; path = desafiob2wTests/Network/JsonAux/Produto.json; sourceTree = SOURCE_ROOT; };
-		ECE9558C20DF236000BEF2D0 /* ProdutosMaisVendidos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ProdutosMaisVendidos.json; path = desafiob2wTests/Network/JsonAux/ProdutosMaisVendidos.json; sourceTree = SOURCE_ROOT; };
-		ECE9558D20DF236000BEF2D0 /* Reserva.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Reserva.json; path = desafiob2wTests/Network/JsonAux/Reserva.json; sourceTree = SOURCE_ROOT; };
-		ECE9558E20DF236000BEF2D0 /* Produtos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Produtos.json; path = desafiob2wTests/Network/JsonAux/Produtos.json; sourceTree = SOURCE_ROOT; };
 		ECE9559520E096C900BEF2D0 /* ProductPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenterSpec.swift; sourceTree = "<group>"; };
 		ECE9559820E097B300BEF2D0 /* ProductViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerMock.swift; sourceTree = "<group>"; };
 		ECE9559B20E0A9A700BEF2D0 /* ProductsViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewControllerMock.swift; sourceTree = "<group>"; };
@@ -305,14 +273,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECE9556F20DF127700BEF2D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AD50589C0EDFC73410B4C0E /* Pods_desafiob2wUiTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -333,7 +293,6 @@
 				EC2DA46720D5FE3C00C03856 /* R.generated.swift */,
 				EC1187C120D2137000A77FC6 /* desafiob2w */,
 				EC1187D620D2137200A77FC6 /* desafiob2wTests */,
-				ECE9557320DF127700BEF2D0 /* desafiob2wUiTests */,
 				EC1187C020D2137000A77FC6 /* Products */,
 				FD2940945E050B0EDA46838C /* Pods */,
 				397F492D1244CE488B9E6A85 /* Frameworks */,
@@ -345,7 +304,6 @@
 			children = (
 				EC1187BF20D2137000A77FC6 /* desafiob2w.app */,
 				EC1187D320D2137200A77FC6 /* desafiob2wTests.xctest */,
-				ECE9557220DF127700BEF2D0 /* desafiob2wUiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -995,7 +953,6 @@
 		ECE9555420DE284A00BEF2D0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				ECE9555620DE286500BEF2D0 /* Scene */,
 				ECE9555520DE285900BEF2D0 /* Core */,
 			);
 			path = Home;
@@ -1008,14 +965,6 @@
 				ECE9555820DE287700BEF2D0 /* Interactor */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		ECE9555620DE286500BEF2D0 /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				ECE9558620DF1A7D00BEF2D0 /* HomeViewControllerSpec.swift */,
-			);
-			path = Scene;
 			sourceTree = "<group>";
 		};
 		ECE9555720DE287000BEF2D0 /* Presenter */ = {
@@ -1114,48 +1063,6 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		ECE9557320DF127700BEF2D0 /* desafiob2wUiTests */ = {
-			isa = PBXGroup;
-			children = (
-				ECE9558820DF234900BEF2D0 /* JsonAux */,
-				ECE9558320DF14D200BEF2D0 /* Scene */,
-				ECE9557C20DF12AC00BEF2D0 /* GatewayMock */,
-				ECE9557620DF127700BEF2D0 /* Info.plist */,
-			);
-			path = desafiob2wUiTests;
-			sourceTree = "<group>";
-		};
-		ECE9557C20DF12AC00BEF2D0 /* GatewayMock */ = {
-			isa = PBXGroup;
-			children = (
-				ECE9557D20DF12F000BEF2D0 /* ProductsNetworkGatewayMock.swift */,
-				ECE9557F20DF13FE00BEF2D0 /* BannersNetworkGatewayMock.swift */,
-				ECE9558120DF141700BEF2D0 /* CategoriesNetworkGatewayMock.swift */,
-			);
-			path = GatewayMock;
-			sourceTree = "<group>";
-		};
-		ECE9558320DF14D200BEF2D0 /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				ECE9558420DF14E100BEF2D0 /* HomeViewControllerSpec.swift */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
-		ECE9558820DF234900BEF2D0 /* JsonAux */ = {
-			isa = PBXGroup;
-			children = (
-				ECE9558920DF236000BEF2D0 /* Banners.json */,
-				ECE9558A20DF236000BEF2D0 /* Categorias.json */,
-				ECE9558B20DF236000BEF2D0 /* Produto.json */,
-				ECE9558E20DF236000BEF2D0 /* Produtos.json */,
-				ECE9558C20DF236000BEF2D0 /* ProdutosMaisVendidos.json */,
-				ECE9558D20DF236000BEF2D0 /* Reserva.json */,
-			);
-			path = JsonAux;
-			sourceTree = "<group>";
-		};
 		ECE9559720E0979A00BEF2D0 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -1238,26 +1145,6 @@
 			productReference = EC1187D320D2137200A77FC6 /* desafiob2wTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ECE9557120DF127700BEF2D0 /* desafiob2wUiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ECE9557B20DF127700BEF2D0 /* Build configuration list for PBXNativeTarget "desafiob2wUiTests" */;
-			buildPhases = (
-				7AB25079E3F82C246985CD14 /* [CP] Check Pods Manifest.lock */,
-				ECE9556E20DF127700BEF2D0 /* Sources */,
-				ECE9556F20DF127700BEF2D0 /* Frameworks */,
-				ECE9557020DF127700BEF2D0 /* Resources */,
-				DC7122B71FE640EEE4C27217 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ECE9557820DF127700BEF2D0 /* PBXTargetDependency */,
-			);
-			name = desafiob2wUiTests;
-			productName = desafiob2wUiTests;
-			productReference = ECE9557220DF127700BEF2D0 /* desafiob2wUiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1272,10 +1159,6 @@
 						CreatedOnToolsVersion = 9.4;
 					};
 					EC1187D220D2137200A77FC6 = {
-						CreatedOnToolsVersion = 9.4;
-						TestTargetID = EC1187BE20D2137000A77FC6;
-					};
-					ECE9557120DF127700BEF2D0 = {
 						CreatedOnToolsVersion = 9.4;
 						TestTargetID = EC1187BE20D2137000A77FC6;
 					};
@@ -1296,7 +1179,6 @@
 			targets = (
 				EC1187BE20D2137000A77FC6 /* desafiob2w */,
 				EC1187D220D2137200A77FC6 /* desafiob2wTests */,
-				ECE9557120DF127700BEF2D0 /* desafiob2wUiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1339,19 +1221,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECE9557020DF127700BEF2D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECE9558F20DF236000BEF2D0 /* Banners.json in Resources */,
-				ECE9559120DF236000BEF2D0 /* Produto.json in Resources */,
-				ECE9559320DF236000BEF2D0 /* Reserva.json in Resources */,
-				ECE9559020DF236000BEF2D0 /* Categorias.json in Resources */,
-				ECE9559220DF236000BEF2D0 /* ProdutosMaisVendidos.json in Resources */,
-				ECE9559420DF236000BEF2D0 /* Produtos.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1367,24 +1236,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-desafiob2wTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7AB25079E3F82C246985CD14 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-desafiob2wUiTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1459,32 +1310,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-desafiob2wTests/Pods-desafiob2wTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC7122B71FE640EEE4C27217 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-desafiob2wUiTests/Pods-desafiob2wUiTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
-				"${BUILT_PRODUCTS_DIR}/KIF-Quick/KIF_Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF_Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-desafiob2wUiTests/Pods-desafiob2wUiTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC2DA46620D5FCFE00C03856 /* ShellScript */ = {
@@ -1594,23 +1419,11 @@
 				ECE9559920E097B300BEF2D0 /* ProductViewControllerMock.swift in Sources */,
 				ECE9559620E096C900BEF2D0 /* ProductPresenterSpec.swift in Sources */,
 				ECE955A320E0C77800BEF2D0 /* HomeViewControllerMock.swift in Sources */,
-				ECE9558720DF1A7D00BEF2D0 /* HomeViewControllerSpec.swift in Sources */,
 				ECE9555F20DE43DF00BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */,
 				ECE9555D20DE43B600BEF2D0 /* ProductsNetworkGatewayMock.swift in Sources */,
 				ECE9555020DE237900BEF2D0 /* BannersNetworkGatewaySpec.swift in Sources */,
 				ECE9556D20DE623800BEF2D0 /* ProductInteractorSpec.swift in Sources */,
 				ECE9556120DE43FB00BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ECE9556E20DF127700BEF2D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECE9557E20DF12F000BEF2D0 /* ProductsNetworkGatewayMock.swift in Sources */,
-				ECE9558020DF13FE00BEF2D0 /* BannersNetworkGatewayMock.swift in Sources */,
-				ECE9558520DF14E100BEF2D0 /* HomeViewControllerSpec.swift in Sources */,
-				ECE9558220DF141700BEF2D0 /* CategoriesNetworkGatewayMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1621,11 +1434,6 @@
 			isa = PBXTargetDependency;
 			target = EC1187BE20D2137000A77FC6 /* desafiob2w */;
 			targetProxy = EC1187D420D2137200A77FC6 /* PBXContainerItemProxy */;
-		};
-		ECE9557820DF127700BEF2D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EC1187BE20D2137000A77FC6 /* desafiob2w */;
-			targetProxy = ECE9557720DF127700BEF2D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1837,46 +1645,6 @@
 			};
 			name = Release;
 		};
-		ECE9557920DF127700BEF2D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E6923B6907F656621DDC088 /* Pods-desafiob2wUiTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = desafiob2wUiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = B2w.desafiob2wUiTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafiob2w.app/desafiob2w";
-			};
-			name = Debug;
-		};
-		ECE9557A20DF127700BEF2D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71E671E7C8FA960F7B33ECAE /* Pods-desafiob2wUiTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = desafiob2wUiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = B2w.desafiob2wUiTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafiob2w.app/desafiob2w";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1903,15 +1671,6 @@
 			buildConfigurations = (
 				EC1187E020D2137200A77FC6 /* Debug */,
 				EC1187E120D2137200A77FC6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ECE9557B20DF127700BEF2D0 /* Build configuration list for PBXNativeTarget "desafiob2wUiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ECE9557920DF127700BEF2D0 /* Debug */,
-				ECE9557A20DF127700BEF2D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
