@@ -25,6 +25,9 @@
 		AE73E52820F405A5008BB3AD /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE73E52720F405A4008BB3AD /* Pacifico-Regular.ttf */; };
 		AE73E52A20F4096B008BB3AD /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E52920F4096B008BB3AD /* ProductViewModel.swift */; };
 		AE73E52C20F409A4008BB3AD /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E52B20F409A4008BB3AD /* ProductRepository.swift */; };
+		AE73E52E20F41A17008BB3AD /* apiBannerData.json in Resources */ = {isa = PBXBuildFile; fileRef = AE73E52D20F41A17008BB3AD /* apiBannerData.json */; };
+		AE73E53020F41AFF008BB3AD /* apiCategoriaData.json in Resources */ = {isa = PBXBuildFile; fileRef = AE73E52F20F41AFF008BB3AD /* apiCategoriaData.json */; };
+		AE73E53220F41C6A008BB3AD /* apiBestSellerData.json in Resources */ = {isa = PBXBuildFile; fileRef = AE73E53120F41C6A008BB3AD /* apiBestSellerData.json */; };
 		AE878D2720F3904800279382 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE878D2620F3904800279382 /* AppDelegate.swift */; };
 		AE878D2920F3904800279382 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE878D2820F3904800279382 /* ViewController.swift */; };
 		AE878D2C20F3904800279382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE878D2A20F3904800279382 /* Main.storyboard */; };
@@ -72,6 +75,9 @@
 		AE73E52720F405A4008BB3AD /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		AE73E52920F4096B008BB3AD /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		AE73E52B20F409A4008BB3AD /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		AE73E52D20F41A17008BB3AD /* apiBannerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = apiBannerData.json; sourceTree = "<group>"; };
+		AE73E52F20F41AFF008BB3AD /* apiCategoriaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = apiCategoriaData.json; sourceTree = "<group>"; };
+		AE73E53120F41C6A008BB3AD /* apiBestSellerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = apiBestSellerData.json; sourceTree = "<group>"; };
 		AE878D2320F3904800279382 /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE878D2620F3904800279382 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE878D2820F3904800279382 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +211,9 @@
 		AE878D3A20F3904900279382 /* LodjinhaTests */ = {
 			isa = PBXGroup;
 			children = (
+				AE73E53120F41C6A008BB3AD /* apiBestSellerData.json */,
+				AE73E52F20F41AFF008BB3AD /* apiCategoriaData.json */,
+				AE73E52D20F41A17008BB3AD /* apiBannerData.json */,
 				AE878D3B20F3904900279382 /* LodjinhaTests.swift */,
 				AE878D3D20F3904900279382 /* Info.plist */,
 			);
@@ -360,6 +369,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE73E52E20F41A17008BB3AD /* apiBannerData.json in Resources */,
+				AE73E53220F41C6A008BB3AD /* apiBestSellerData.json in Resources */,
+				AE73E53020F41AFF008BB3AD /* apiCategoriaData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
