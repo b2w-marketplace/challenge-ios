@@ -16,3 +16,7 @@ struct Produto: Codable {
     let urlImagem: String
     let categoria: Categoria
 }
+
+struct DataBestSeller:Codable{
+    let data : [Produto]
+}

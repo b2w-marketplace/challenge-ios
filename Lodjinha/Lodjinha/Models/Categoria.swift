@@ -13,3 +13,7 @@ struct Categoria: Codable {
     let descricao: String
     let urlImagem: String
 }
+
+struct DataCategory:Codable{
+    let data : [Categoria]
+}

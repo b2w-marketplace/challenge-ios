@@ -49,8 +49,4 @@ class BannerCollectionViewCell: UICollectionViewCell {
             })
 
     }
-    
-
-    
-
 }
