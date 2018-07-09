@@ -52,9 +52,12 @@ class ProductViewController: UIViewController {
         
     }
     @IBAction func makeReservationButtonTapped(_ sender: UIButton) {
+        sender.isEnabled = false
         if let product = product{
             let viewModel = ProudctViewModel(model: product)
             viewModel.makeReservation { (status) in
+                sender.isEnabled = true
+
                 if status{
                     self.showOkAlert(title: "Item reservado", message: "Reserva feita com sucesso!", viewController: self)
                 }else{

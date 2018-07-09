@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lodjinha/Detail/DetailViewModel.swift"
+            timestampString = "552865084.497777"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "loadItems(fromStart:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lodjinha.DetailViewModel.loadItems(fromStart: Swift.Bool, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Lodjinha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VitorFerraz/Desktop/b2w/challenge-ios/Lodjinha/Lodjinha/Detail/DetailViewModel.swift"
+                  timestampString = "552856908.8813339"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "219">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Lodjinha.Produto&gt;) -&gt; () in Lodjinha.DetailViewModel.loadItems(fromStart: Swift.Bool, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Lodjinha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VitorFerraz/Desktop/b2w/challenge-ios/Lodjinha/Lodjinha/Detail/DetailViewModel.swift"
+                  timestampString = "552856908.885235"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
