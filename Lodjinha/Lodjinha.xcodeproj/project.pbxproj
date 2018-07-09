@@ -23,6 +23,8 @@
 		AE73E52320F3E6C2008BB3AD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E52220F3E6C2008BB3AD /* DetailViewModel.swift */; };
 		AE73E52620F3F5F7008BB3AD /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E52520F3F5F7008BB3AD /* ProductViewController.swift */; };
 		AE73E52820F405A5008BB3AD /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE73E52720F405A4008BB3AD /* Pacifico-Regular.ttf */; };
+		AE73E52A20F4096B008BB3AD /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E52920F4096B008BB3AD /* ProductViewModel.swift */; };
+		AE73E52C20F409A4008BB3AD /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E52B20F409A4008BB3AD /* ProductRepository.swift */; };
 		AE878D2720F3904800279382 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE878D2620F3904800279382 /* AppDelegate.swift */; };
 		AE878D2920F3904800279382 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE878D2820F3904800279382 /* ViewController.swift */; };
 		AE878D2C20F3904800279382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE878D2A20F3904800279382 /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		AE73E52220F3E6C2008BB3AD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		AE73E52520F3F5F7008BB3AD /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		AE73E52720F405A4008BB3AD /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		AE73E52920F4096B008BB3AD /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		AE73E52B20F409A4008BB3AD /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
 		AE878D2320F3904800279382 /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE878D2620F3904800279382 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE878D2820F3904800279382 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				AE73E52520F3F5F7008BB3AD /* ProductViewController.swift */,
+				AE73E52920F4096B008BB3AD /* ProductViewModel.swift */,
+				AE73E52B20F409A4008BB3AD /* ProductRepository.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE73E52A20F4096B008BB3AD /* ProductViewModel.swift in Sources */,
 				AE73E51020F3BBDC008BB3AD /* CategoryCollectionViewCell.swift in Sources */,
 				AE878D5620F3931600279382 /* NetworkManager.swift in Sources */,
 				AE878D5820F3933100279382 /* RestManager.swift in Sources */,
@@ -431,6 +438,7 @@
 				AE73E52120F3E620008BB3AD /* DetailViewController.swift in Sources */,
 				AE878D4A20F3915700279382 /* Categoria.swift in Sources */,
 				AE878D5220F3927E00279382 /* ResponseHelper.swift in Sources */,
+				AE73E52C20F409A4008BB3AD /* ProductRepository.swift in Sources */,
 				AE73E51220F3CED6008BB3AD /* UIViewExtension.swift in Sources */,
 				AE878D5020F3925D00279382 /* ResultHelper.swift in Sources */,
 				AE73E50720F39F3E008BB3AD /* HomeViewModel.swift in Sources */,

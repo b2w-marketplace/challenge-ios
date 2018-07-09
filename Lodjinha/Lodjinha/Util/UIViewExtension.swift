@@ -8,6 +8,21 @@
 
 import UIKit
 
+extension UIViewController {
+    
+    func showOkAlert (title:String, message:String, viewController: UIViewController, completion:((UIAlertAction) -> Void)? = nil)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        //        alert.addAction(UIAlertAction(title: "CANCELAR", style: .destructive, handler: nil))
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: completion))
+        
+        
+        viewController.present(alert, animated: true, completion: nil)
+    }
+    
+}
+
 extension UIView {
     
     func rotate(_ toValue: CGFloat, duration: CFTimeInterval = 0.2) {

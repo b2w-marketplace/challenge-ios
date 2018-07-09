@@ -8,9 +8,13 @@
 
 import Foundation
 
+protocol Repository{
+    var api:NetworkManager{get}
 
-class HomeRepository{
-    private var api:NetworkManager = RestManager.get(Routes.banner.endpoint)
+}
+
+class HomeRepository:Repository{
+    internal var api:NetworkManager = RestManager.get(Routes.banner.endpoint)
     
     func getBannerList( completionHandler:@escaping ([Banner]) -> Void){
         api = RestManager.get(Routes.banner.endpoint)
