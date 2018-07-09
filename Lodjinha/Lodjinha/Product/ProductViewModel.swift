@@ -13,7 +13,7 @@ class ProudctViewModel{
     var priceLabel: String
     var titleProductLabel: String
     var discountPriceLabel: String
-    var textProduct: String
+    var textProduct: NSAttributedString
     private var model:Produto
     var repository = ProductRepository()
     init(model:Produto) {
@@ -24,7 +24,7 @@ class ProudctViewModel{
         self.priceLabel = "Por: \(model.precoPor)"
         self.discountPriceLabel = "De: \(model.precoDe)"
         self.titleProductLabel = model.nome
-        self.textProduct = model.descricao
+        self.textProduct = model.descricao.html2AttributedString!
     }
     
     func makeReservation(completionHandler:@escaping (Bool) -> Void){

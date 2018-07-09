@@ -31,7 +31,7 @@ class ProductViewController: UIViewController {
                 self.productImage.kf.setImage(with: viewModel.productImage)
                 self.priceLabel.text = viewModel.priceLabel
                 self.discountPriceLabel.text = viewModel.discountPriceLabel
-                self.textProduct.text = viewModel.textProduct
+                self.textProduct.text = viewModel.textProduct.string
                 self.titleProductLabel.text = viewModel.titleProductLabel
             }
        
