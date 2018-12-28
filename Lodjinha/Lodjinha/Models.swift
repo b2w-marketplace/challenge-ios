@@ -46,3 +46,5 @@ public struct ProdutoResponse: Decodable {
 }
 
 
+//MARK: - Empty
+public struct EmptyResponse: Decodable {}

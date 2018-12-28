@@ -6,7 +6,7 @@
 //  Copyright © 2018 Kalivos. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public func inMainAsync(_ run: @escaping () -> Void) {
     DispatchQueue.main.async {
@@ -26,4 +26,8 @@ public func moneyFormatter(_ valor: Double) -> String {
     formatter.decimalSeparator = ","
     formatter.groupingSeparator = "."
     return formatter.string(for: valor)!
+}
+
+public func footerPlaceholder(width: CGFloat) -> UIView {
+    return UIView(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.leastNonzeroMagnitude))
 }

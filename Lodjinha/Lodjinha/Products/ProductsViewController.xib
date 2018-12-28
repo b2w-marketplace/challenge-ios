@@ -10,8 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController" customModule="Lodjinha" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsViewController" customModule="Lodjinha" customModuleProvider="target">
             <connections>
+                <outlet property="productsIndicator" destination="VdH-Df-obN" id="Qdv-Id-eij"/>
                 <outlet property="productsTableView" destination="5eq-nK-a6h" id="5mQ-wl-wq0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,12 +30,18 @@
                         <outlet property="delegate" destination="-1" id="0xS-gb-oO6"/>
                     </connections>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VdH-Df-obN">
+                    <rect key="frame" x="169" y="325" width="37" height="37"/>
+                    <color key="color" red="0.41568627450000001" green="0.23921568630000001" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="VdH-Df-obN" firstAttribute="centerY" secondItem="5eq-nK-a6h" secondAttribute="centerY" id="3gO-HW-svP"/>
                 <constraint firstItem="5eq-nK-a6h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ACy-Qk-fgL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5eq-nK-a6h" secondAttribute="bottom" id="P3p-DH-2rS"/>
                 <constraint firstItem="5eq-nK-a6h" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="SB7-hD-gdO"/>
+                <constraint firstItem="VdH-Df-obN" firstAttribute="centerX" secondItem="5eq-nK-a6h" secondAttribute="centerX" id="Yiy-88-eh2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5eq-nK-a6h" secondAttribute="trailing" id="wmC-Vy-Fvy"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

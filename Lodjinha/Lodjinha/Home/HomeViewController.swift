@@ -13,8 +13,10 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
+    @IBOutlet weak var categoriesIndicator: UIActivityIndicatorView!
     @IBOutlet weak var productsTableView: UITableView!
     @IBOutlet weak var productsTableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var productsIndicator: UIActivityIndicatorView!
     
     private var products = [Produto]()
     private var categories = [Categoria]()
@@ -31,6 +33,7 @@ class HomeViewController: UIViewController {
         Network.getCategorias { (response) in
             dump(response.data)
             inMainAsync {
+                self.categoriesIndicator.stopAnimating()
                 self.categories = response.data
                 self.categoriesCollectionView.reloadData()
             }
@@ -41,6 +44,7 @@ class HomeViewController: UIViewController {
         Network.getProdutosMaisVendidos { (response) in
             dump(response.data)
             inMainAsync {
+                self.productsIndicator.stopAnimating()
                 self.products = response.data
                 self.productsTableView.reloadData()
             }
@@ -60,6 +64,7 @@ class HomeViewController: UIViewController {
         productsTableView.rowHeight = UITableView.automaticDimension
         productsTableView.estimatedRowHeight = 85
         productsTableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+        productsTableView.tableFooterView = footerPlaceholder(width: productsTableView.frame.size.width)
     }
     
     private func setupCollectionView() {
@@ -72,7 +77,8 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(CategoryViewController(titleName: "Teste"), animated: true)
+        let category = categories[indexPath.row]
+        navigationController?.pushViewController(ProductsViewController(titleName: category.descricao, categoriaId: category.id), animated: true)
     }
     
 }
@@ -102,7 +108,8 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UITableViewDelegate {
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(DetailViewController(titleName: "Teste"), animated: true)
+        let product = products[indexPath.row]
+        navigationController?.pushViewController(DetailViewController(titleName: product.nome, produtoId: product.id), animated: true)
     }
     
 }

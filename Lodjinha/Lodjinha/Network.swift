@@ -155,16 +155,16 @@ extension Network {
         }
     }
     
-    class func getProdutoPorId(produtoId: Int, onCompletion: @escaping (ProdutoResponse) -> Void) {
+    class func getProdutoDetalhes(produtoId: Int, onCompletion: @escaping (Produto) -> Void) {
         let urlString = defaultHost.appending("produto/").appending("\(produtoId)")
-        fetchGenericData(urlString: urlString) { (response: ProdutoResponse) in
+        fetchGenericData(urlString: urlString) { (response: Produto) in
             onCompletion(response)
         }
     }
     
-    class func postReservarProduto(produtoId: Int, onCompletion: @escaping (ProdutoResponse) -> Void) {
+    class func postReservarProduto(produtoId: Int, onCompletion: @escaping (EmptyResponse) -> Void) {
         let urlString = defaultHost.appending("produto/").appending("\(produtoId)")
-        fetchGenericData(urlString: urlString, httpMethod: .post) { (response: ProdutoResponse) in
+        fetchGenericData(urlString: urlString, httpMethod: .post) { (response: EmptyResponse) in
             onCompletion(response)
         }
     }
