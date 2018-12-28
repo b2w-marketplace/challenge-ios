@@ -10,6 +10,11 @@ import UIKit
 
 class ProductCell: UITableViewCell {
 
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var oldPriceLabel: UILabel!
+    @IBOutlet weak var newPriceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         accessoryType = .disclosureIndicator

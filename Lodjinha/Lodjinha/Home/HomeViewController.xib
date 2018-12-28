@@ -13,8 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Lodjinha" customModuleProvider="target">
             <connections>
                 <outlet property="bannerCollectionView" destination="nkg-6K-SSD" id="rZt-b2-Xmk"/>
-                <outlet property="bestSellersTableView" destination="YgY-c9-KHR" id="u8B-tF-t9L"/>
                 <outlet property="categoriesCollectionView" destination="EF1-Z8-2ba" id="q35-Mf-GPh"/>
+                <outlet property="productsTableView" destination="YgY-c9-KHR" id="u8B-tF-t9L"/>
+                <outlet property="productsTableViewHeight" destination="Npy-5X-nvi" id="ece-lp-zIi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,35 +27,49 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YgY-c9-KHR">
                     <rect key="frame" x="0.0" y="364" width="375" height="303"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="303" id="Npy-5X-nvi"/>
+                    </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Vcu-3G-06q"/>
                         <outlet property="delegate" destination="-1" id="nTx-bl-dT0"/>
                     </connections>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekD-md-iGd">
-                    <rect key="frame" x="14" y="162" width="85" height="20"/>
+                    <rect key="frame" x="14" y="160" width="85" height="20"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EF1-Z8-2ba">
-                    <rect key="frame" x="0.0" y="192" width="375" height="128"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nR8-1Q-BuA">
+                    <rect key="frame" x="0.0" y="189.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="G4x-d4-FUj"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EF1-Z8-2ba">
+                    <rect key="frame" x="0.0" y="190" width="375" height="130"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="a5E-7k-kd1"/>
+                        <constraint firstAttribute="height" constant="130" id="aUa-5s-njv"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n7A-da-7AD">
-                        <size key="itemSize" width="50" height="50"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n7A-da-7AD">
+                        <size key="itemSize" width="100" height="100"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="3PZ-g8-KaF"/>
+                        <outlet property="delegate" destination="-1" id="CZW-aH-Igg"/>
+                    </connections>
                 </collectionView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nkg-6K-SSD">
-                    <rect key="frame" x="0.0" y="20" width="375" height="128"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="126"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="giG-MO-BoK"/>
+                        <constraint firstAttribute="height" constant="126" id="9WR-dj-rhb"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zfk-Hn-5T5">
                         <size key="itemSize" width="50" height="50"/>
@@ -69,6 +84,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Co-63-B0V">
+                    <rect key="frame" x="0.0" y="320" width="375" height="0.5"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="vNL-Zu-ZgT"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -76,16 +98,22 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YgY-c9-KHR" secondAttribute="trailing" id="6GN-ct-oH3"/>
                 <constraint firstItem="YgY-c9-KHR" firstAttribute="top" secondItem="PCe-NF-BQP" secondAttribute="bottom" constant="10" id="BKZ-Uy-JsC"/>
                 <constraint firstItem="YgY-c9-KHR" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="EAx-Q4-iSX"/>
-                <constraint firstItem="EF1-Z8-2ba" firstAttribute="top" secondItem="ekD-md-iGd" secondAttribute="bottom" constant="10" id="Jfd-9p-ckT"/>
+                <constraint firstAttribute="trailing" secondItem="nR8-1Q-BuA" secondAttribute="trailing" id="LSg-We-AQZ"/>
+                <constraint firstItem="1Co-63-B0V" firstAttribute="top" secondItem="EF1-Z8-2ba" secondAttribute="bottom" id="MIv-vo-iiE"/>
                 <constraint firstItem="EF1-Z8-2ba" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nb8-Tv-z6F"/>
+                <constraint firstItem="EF1-Z8-2ba" firstAttribute="top" secondItem="nR8-1Q-BuA" secondAttribute="bottom" id="OKM-La-9tm"/>
+                <constraint firstItem="1Co-63-B0V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OZA-Fn-Hfa"/>
                 <constraint firstItem="ekD-md-iGd" firstAttribute="top" secondItem="nkg-6K-SSD" secondAttribute="bottom" constant="14" id="RE4-Pa-cfy"/>
                 <constraint firstItem="nkg-6K-SSD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ryh-7u-BmN"/>
-                <constraint firstItem="PCe-NF-BQP" firstAttribute="top" secondItem="EF1-Z8-2ba" secondAttribute="bottom" constant="14" id="S3R-Xd-gdh"/>
                 <constraint firstItem="PCe-NF-BQP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="aHM-fJ-4yK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EF1-Z8-2ba" secondAttribute="trailing" id="cYV-Vr-uSa"/>
+                <constraint firstItem="nR8-1Q-BuA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="e0k-ev-WGT"/>
+                <constraint firstItem="PCe-NF-BQP" firstAttribute="top" secondItem="1Co-63-B0V" secondAttribute="bottom" constant="13.5" id="lAr-gd-35h"/>
                 <constraint firstItem="ekD-md-iGd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="nl9-ML-ERO"/>
                 <constraint firstItem="YgY-c9-KHR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="p4n-N1-Jfs"/>
+                <constraint firstItem="nR8-1Q-BuA" firstAttribute="top" secondItem="ekD-md-iGd" secondAttribute="bottom" constant="9.5" id="tuc-Av-yar"/>
                 <constraint firstItem="nkg-6K-SSD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wYE-pq-Ghr"/>
+                <constraint firstAttribute="trailing" secondItem="1Co-63-B0V" secondAttribute="trailing" id="xh9-lB-TRm"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

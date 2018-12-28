@@ -6,25 +6,43 @@
 //  Copyright © 2018 Kalivos. All rights reserved.
 //
 
-import UIKit
-
-class Models: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//MARK: - Banner
+public struct Banner: Decodable {
+    var id: Int
+    var linkUrl: String
+    var urlImagem: String
 }
+
+public struct BannerResponse: Decodable {
+    var data: [Banner]
+}
+
+//MARK: - Categoria
+public struct Categoria: Decodable {
+    var id: Int
+    var descricao: String
+    var urlImagem: String
+}
+
+public struct CategoriaResponse: Decodable {
+    var data: [Categoria]
+}
+
+//MARK: - Produto
+public struct Produto: Decodable {
+    var categoria: Categoria
+    var id: Int
+    var descricao: String
+    var nome: String
+    var precoDe: Double
+    var precoPor: Double
+    var urlImagem: String
+}
+
+public struct ProdutoResponse: Decodable {
+    var data: [Produto]
+    var offset: Int?
+    var total: Int?
+}
+
+

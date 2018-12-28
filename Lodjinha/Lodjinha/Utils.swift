@@ -6,25 +6,24 @@
 //  Copyright © 2018 Kalivos. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Utils: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+public func inMainAsync(_ run: @escaping () -> Void) {
+    DispatchQueue.main.async {
+        run()
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
+public func inMainAsyncAfter(interval: DispatchTimeInterval, _ run: @escaping() -> Void) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + interval, execute: {
+        run()
+    })
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+public func moneyFormatter(_ valor: Double) -> String {
+    let formatter = NumberFormatter()
+    formatter.minimumFractionDigits = 2
+    formatter.decimalSeparator = ","
+    formatter.groupingSeparator = "."
+    return formatter.string(for: valor)!
 }
