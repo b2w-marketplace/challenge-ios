@@ -23,12 +23,12 @@
                         <rect key="frame" x="10" y="10.5" width="65" height="65"/>
                         <constraints>
                             <constraint firstAttribute="height" priority="999" constant="65" id="gtT-r8-YWv"/>
-                            <constraint firstAttribute="width" priority="999" constant="65" id="lg2-1U-iH0"/>
+                            <constraint firstAttribute="width" constant="65" id="lg2-1U-iH0"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome muito muito muito muito muito grande" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOJ-6m-jhg">
-                        <rect key="frame" x="85" y="10" width="219" height="38.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <rect key="frame" x="85" y="10" width="219" height="36"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -39,8 +39,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Por 9999,98" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YR-7W-cZJ">
-                        <rect key="frame" x="166.5" y="56" width="137.5" height="20"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <rect key="frame" x="166.5" y="52" width="137.5" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <color key="textColor" red="0.94509803920000002" green="0.31372549020000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -53,12 +53,12 @@
                     <constraint firstItem="YFT-jX-bSq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KYR-s8-2pU"/>
                     <constraint firstItem="YFT-jX-bSq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="M3I-0K-Bnb"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YFT-jX-bSq" secondAttribute="bottom" constant="9.5" id="RD0-3o-DI5"/>
+                    <constraint firstItem="2YR-7W-cZJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IOJ-6m-jhg" secondAttribute="bottom" constant="3.5" id="Uwf-rn-eVd"/>
                     <constraint firstItem="2YR-7W-cZJ" firstAttribute="leading" secondItem="9VY-RL-5Pj" secondAttribute="trailing" constant="10" id="avb-mL-UtI"/>
                     <constraint firstAttribute="trailing" secondItem="2YR-7W-cZJ" secondAttribute="trailing" constant="16" id="juc-c9-2b7"/>
                     <constraint firstAttribute="trailing" secondItem="IOJ-6m-jhg" secondAttribute="trailing" constant="16" id="lPy-3t-CeR"/>
                     <constraint firstItem="YFT-jX-bSq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pKc-Hc-qod"/>
                     <constraint firstItem="IOJ-6m-jhg" firstAttribute="leading" secondItem="YFT-jX-bSq" secondAttribute="trailing" constant="10" id="vNl-Xb-Wxs"/>
-                    <constraint firstItem="2YR-7W-cZJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IOJ-6m-jhg" secondAttribute="bottom" constant="5" id="xsx-Pq-qDc"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="tintColor" red="0.41568627450000001" green="0.23921568630000001" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

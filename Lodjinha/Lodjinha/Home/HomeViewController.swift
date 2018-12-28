@@ -13,9 +13,11 @@ import SwiftyAttributes
 class HomeViewController: UIViewController {
 
     private let BANNER_HEIGHT: CGFloat = 140.0
+    private let TABLEVIEW_HEIGHT: CGFloat = 300
 
     @IBOutlet weak var bannersScrollView: UIScrollView!
     @IBOutlet weak var bannersPageControl: UIPageControl!
+    @IBOutlet weak var bannersIndicator: UIActivityIndicatorView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var categoriesIndicator: UIActivityIndicatorView!
     @IBOutlet weak var productsTableView: UITableView!
@@ -39,6 +41,7 @@ class HomeViewController: UIViewController {
         Network.getBanners { (response) in
             dump(response.data)
             inMainAsync {
+                self.bannersIndicator.stopAnimating()
                 self.banners = response.data
                 self.setupScrollView()
             }
@@ -70,7 +73,11 @@ class HomeViewController: UIViewController {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let obj = object as? UITableView {
             if obj == productsTableView && keyPath == "contentSize" {
-                productsTableViewHeight.constant = productsTableView.contentSize.height
+                var height = productsTableView.contentSize.height
+                if round(height) == 0 {
+                    height = TABLEVIEW_HEIGHT
+                }
+                productsTableViewHeight.constant = height
             }
         }
     }

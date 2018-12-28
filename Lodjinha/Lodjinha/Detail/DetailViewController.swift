@@ -57,7 +57,8 @@ class DetailViewController: UIViewController {
             productImageView.kf.setImage(with: URL(string: product.urlImagem),
                                          placeholder: UIImage(named: "question"))
             nameLabel.text = product.nome
-            oldPriceLabel.text = "De: \(moneyFormatter(product.precoDe))"
+            let text = "De: \(moneyFormatter(product.precoDe))"
+            oldPriceLabel.attributedText = text.withStrikethroughColor(.lightGray).withStrikethroughStyle(.single)
             newPriceLabel.text =  "Por \(moneyFormatter(product.precoPor))"
             descriptionTextView.text = product.descricao.htmlToString
         }

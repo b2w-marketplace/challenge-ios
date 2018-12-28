@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Lodjinha" customModuleProvider="target">
             <connections>
+                <outlet property="bannersIndicator" destination="YZZ-yw-zoH" id="7mB-Js-NxK"/>
                 <outlet property="bannersPageControl" destination="U3i-Cc-zmo" id="IyC-oU-An4"/>
                 <outlet property="bannersScrollView" destination="AFl-4y-zqs" id="1PL-US-V5I"/>
                 <outlet property="categoriesCollectionView" destination="EF1-Z8-2ba" id="q35-Mf-GPh"/>
@@ -56,6 +57,10 @@
                     <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="currentPageIndicatorTintColor" red="1" green="0.78740368150684936" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YZZ-yw-zoH">
+                    <rect key="frame" x="169" y="71.5" width="37" height="37"/>
+                    <color key="color" red="0.41568627450000001" green="0.23921568630000001" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekD-md-iGd">
                     <rect key="frame" x="14" y="174" width="94.5" height="21.5"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -137,6 +142,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EF1-Z8-2ba" secondAttribute="trailing" id="cYV-Vr-uSa"/>
                 <constraint firstItem="nR8-1Q-BuA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="e0k-ev-WGT"/>
                 <constraint firstItem="0Z2-HD-kFw" firstAttribute="centerX" secondItem="EF1-Z8-2ba" secondAttribute="centerX" id="fdV-1A-svq"/>
+                <constraint firstItem="YZZ-yw-zoH" firstAttribute="centerX" secondItem="AFl-4y-zqs" secondAttribute="centerX" id="gXU-GD-RkM"/>
                 <constraint firstItem="AFl-4y-zqs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jPs-CV-S2C"/>
                 <constraint firstItem="PCe-NF-BQP" firstAttribute="top" secondItem="1Co-63-B0V" secondAttribute="bottom" constant="13.5" id="lAr-gd-35h"/>
                 <constraint firstItem="CNB-wE-NgU" firstAttribute="centerX" secondItem="YgY-c9-KHR" secondAttribute="centerX" id="n7D-Q4-41a"/>
@@ -144,6 +150,7 @@
                 <constraint firstItem="AFl-4y-zqs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oL6-Om-MTB"/>
                 <constraint firstItem="YgY-c9-KHR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="p4n-N1-Jfs"/>
                 <constraint firstItem="U3i-Cc-zmo" firstAttribute="bottom" secondItem="AFl-4y-zqs" secondAttribute="bottom" id="qUy-Vx-56c"/>
+                <constraint firstItem="YZZ-yw-zoH" firstAttribute="centerY" secondItem="AFl-4y-zqs" secondAttribute="centerY" id="tmn-uR-hoO"/>
                 <constraint firstItem="nR8-1Q-BuA" firstAttribute="top" secondItem="ekD-md-iGd" secondAttribute="bottom" constant="9.5" id="tuc-Av-yar"/>
                 <constraint firstItem="ekD-md-iGd" firstAttribute="top" secondItem="AFl-4y-zqs" secondAttribute="bottom" constant="14" id="vsI-Dp-CTk"/>
                 <constraint firstAttribute="trailing" secondItem="1Co-63-B0V" secondAttribute="trailing" id="xh9-lB-TRm"/>
