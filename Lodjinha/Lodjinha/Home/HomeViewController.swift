@@ -12,13 +12,17 @@ import SwiftyAttributes
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var bannerCollectionView: UICollectionView!
+    private let BANNER_HEIGHT: CGFloat = 140.0
+
+    @IBOutlet weak var bannersScrollView: UIScrollView!
+    @IBOutlet weak var bannersPageControl: UIPageControl!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var categoriesIndicator: UIActivityIndicatorView!
     @IBOutlet weak var productsTableView: UITableView!
     @IBOutlet weak var productsTableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var productsIndicator: UIActivityIndicatorView!
     
+    private var banners = [Banner]()
     private var products = [Produto]()
     private var categories = [Categoria]()
     
@@ -26,8 +30,19 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupCollectionView()
+        loadBanners()
         loadCategories()
         loadProducts()
+    }
+    
+    private func loadBanners() {
+        Network.getBanners { (response) in
+            dump(response.data)
+            inMainAsync {
+                self.banners = response.data
+                self.setupScrollView()
+            }
+        }
     }
     
     private func loadCategories() {
@@ -60,6 +75,40 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func setupScrollView() {
+        bannersPageControl.numberOfPages = banners.count
+        
+        bannersScrollView.subviews.forEach { (subview) in
+            subview.removeFromSuperview()
+        }
+        
+        let width = view.frame.width
+        bannersScrollView.contentSize = CGSize(width: width * CGFloat(banners.count), height: BANNER_HEIGHT)
+        bannersScrollView.isPagingEnabled = true
+        
+        for i in 0 ..< banners.count {
+            let frame = CGRect(x: width * CGFloat(i), y: 0, width: width, height: BANNER_HEIGHT)
+            let imageView = UIImageView(frame: frame)
+            imageView.kf.indicatorType = .activity
+            imageView.kf.setImage(with: URL(string: banners[i].urlImagem))
+            bannersScrollView.addSubview(imageView)
+        }
+        
+        let shadowSize: CGFloat = 10
+        let rect = CGRect(x: bannersScrollView.frame.origin.x - shadowSize / 2,
+                          y: bannersScrollView.frame.origin.y - shadowSize / 2,
+                          width: width * CGFloat(banners.count) + shadowSize,
+                          height: BANNER_HEIGHT + shadowSize)
+        
+        let shadowPath = UIBezierPath(roundedRect: rect, cornerRadius: 0)
+        
+        bannersScrollView.layer.masksToBounds = false
+        bannersScrollView.layer.shadowColor = UIColor.black.cgColor
+        bannersScrollView.layer.shadowOffset = CGSize.zero
+        bannersScrollView.layer.shadowOpacity = 0.5
+        bannersScrollView.layer.shadowPath = shadowPath.cgPath
+    }
+    
     private func setupTableView() {
         productsTableView.register(UINib(nibName: ProductCell.nameOfClass, bundle: nil), forCellReuseIdentifier: ProductCell.nameOfClass)
         productsTableView.rowHeight = UITableView.automaticDimension
@@ -72,6 +121,16 @@ class HomeViewController: UIViewController {
         categoriesCollectionView.register(UINib(nibName: CategoryCell.nameOfClass, bundle: nil), forCellWithReuseIdentifier: CategoryCell.nameOfClass)
     }
 
+}
+
+//MARK: - UIScrollViewDelegate
+extension HomeViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageIndex = round(scrollView.contentOffset.x / view.frame.width)
+        bannersPageControl.currentPage = Int(pageIndex)
+    }
+    
 }
 
 //MARK: - UICollectionViewDelegate
