@@ -18,6 +18,7 @@ class ProductCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         accessoryType = .disclosureIndicator
+        tintColor = .mainColor
     }
     
 }

@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
     }
     
     private func loadProduct() {
-        Network.getProdutoDetalhes(produtoId: produtoId) { (response) in
+        Network.getProdutoDetalhes(produtoId: produtoId) { [unowned self] (response) in
             dump(response)
             inMainAsync {
                 self.productIndicator.stopAnimating()
@@ -78,14 +78,31 @@ class DetailViewController: UIViewController {
         descriptionTextView.textContainer.lineFragmentPadding = 0
     }
 
-    @IBAction func reserveProduct(_ sender: Any) {
-        Network.postReservarProduto(produtoId: produtoId) { _ in
+    private func showMessage(_ message: String, success: Bool) {
+        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (alert) in
+            if success {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }))
+        self.present(alert, animated: true)
+    }
+    
+    @IBAction func reserveProduct(_ button: UIButton) {
+        productIndicator.startAnimating()
+        button.isUserInteractionEnabled = false
+        
+        Network.postReservarProduto(produtoId: produtoId, onCompletion: { (response) in
             inMainAsync {
-                let alert = UIAlertController(title: "Produto reservado com sucesso", message: nil, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (alert) in
-                    self.navigationController?.popViewController(animated: true)
-                }))
-                self.present(alert, animated: true)
+                self.productIndicator.stopAnimating()
+                button.isUserInteractionEnabled = true
+                self.showMessage("Produto reservado com sucesso", success: true)
+            }
+        }) { _ in
+             inMainAsync {
+                self.productIndicator.stopAnimating()
+                button.isUserInteractionEnabled = true
+                self.showMessage("Erro ao reservar produto", success: false)
             }
         }
     }

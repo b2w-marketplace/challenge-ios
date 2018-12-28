@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import SwiftyAttributes
 
 class HomeViewController: UIViewController {
 
@@ -30,7 +31,7 @@ class HomeViewController: UIViewController {
     }
     
     private func loadCategories() {
-        Network.getCategorias { (response) in
+        Network.getCategorias { [unowned self] (response) in
             dump(response.data)
             inMainAsync {
                 self.categoriesIndicator.stopAnimating()
@@ -41,7 +42,7 @@ class HomeViewController: UIViewController {
     }
     
     private func loadProducts() {
-        Network.getProdutosMaisVendidos { (response) in
+        Network.getProdutosMaisVendidos { [unowned self] (response) in
             dump(response.data)
             inMainAsync {
                 self.productsIndicator.stopAnimating()
@@ -129,7 +130,8 @@ extension HomeViewController: UITableViewDataSource {
         cell.iconImageView.kf.indicatorType = .activity
         cell.iconImageView.kf.setImage(with: URL(string: product.urlImagem),
                                        placeholder: UIImage(named: "question"))
-        cell.oldPriceLabel.text = "De: \(moneyFormatter(product.precoDe))"
+        let text = "De: \(moneyFormatter(product.precoDe))"
+        cell.oldPriceLabel.attributedText = text.withStrikethroughColor(.lightGray).withStrikethroughStyle(.single)
         cell.newPriceLabel.text = "Por \(moneyFormatter(product.precoPor))"
         
         return cell

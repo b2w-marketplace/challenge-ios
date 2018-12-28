@@ -38,7 +38,8 @@ class Network {
                                                       httpMethod: HttpMethod = .get,
                                                       httpHeaders: [String: String] = defaultHeaders,
                                                       params: [String: Any]? = nil,
-                                                      onCompletion: @escaping (T) -> Void) {
+                                                      onCompletion: @escaping (T) -> Void,
+                                                      onError: ((_ error: Error) -> Void)? = nil) {
         var components = URLComponents(string: urlString)!
         var httpBody: Data?
         
@@ -83,7 +84,13 @@ class Network {
         request.httpBody = httpBody
         
         fetchData(request: request, retry: 3) { (data, resp, err) in
-            guard let data = data else { return }
+            guard let data = data else {
+                if let error = err {
+                    print("Error:", error.localizedDescription)
+                    onError?(error)
+                }
+                return
+            }
             if let httpResponse = resp as? HTTPURLResponse {
                 print("Status code:", httpResponse.statusCode)
             }
@@ -126,16 +133,16 @@ extension Network {
     
     class func getBanners(onCompletion: @escaping (BannerResponse) -> Void) {
         let urlString = defaultHost.appending("banner")
-        fetchGenericData(urlString: urlString) { (response: BannerResponse) in
+        fetchGenericData(urlString: urlString, onCompletion: { (response: BannerResponse) in
             onCompletion(response)
-        }
+        })
     }
     
     class func getCategorias(onCompletion: @escaping (CategoriaResponse) -> Void) {
         let urlString = defaultHost.appending("categoria")
-        fetchGenericData(urlString: urlString) { (response: CategoriaResponse) in
+        fetchGenericData(urlString: urlString, onCompletion: { (response: CategoriaResponse) in
             onCompletion(response)
-        }
+        })
     }
     
     class func getProdutos(offset: Int, limit: Int, categoriaId: Int, onCompletion: @escaping (ProdutoResponse) -> Void) {
@@ -143,29 +150,31 @@ extension Network {
         let params: [String : Any] = ["offset": offset,
                                       "limit": limit,
                                       "categoryId": categoriaId]
-        fetchGenericData(urlString: urlString, params: params) { (response: ProdutoResponse) in
+        fetchGenericData(urlString: urlString, params: params, onCompletion: { (response: ProdutoResponse) in
             onCompletion(response)
-        }
+        })
     }
     
     class func getProdutosMaisVendidos(onCompletion: @escaping (ProdutoResponse) -> Void) {
         let urlString = defaultHost.appending("produto/maisvendidos")
-        fetchGenericData(urlString: urlString) { (response: ProdutoResponse) in
+        fetchGenericData(urlString: urlString, onCompletion: { (response: ProdutoResponse) in
             onCompletion(response)
-        }
+        })
     }
     
     class func getProdutoDetalhes(produtoId: Int, onCompletion: @escaping (Produto) -> Void) {
         let urlString = defaultHost.appending("produto/").appending("\(produtoId)")
-        fetchGenericData(urlString: urlString) { (response: Produto) in
+        fetchGenericData(urlString: urlString, onCompletion: {(response: Produto) in
             onCompletion(response)
-        }
+        })
     }
     
-    class func postReservarProduto(produtoId: Int, onCompletion: @escaping (EmptyResponse) -> Void) {
+    class func postReservarProduto(produtoId: Int, onCompletion: @escaping (EmptyResponse) -> Void, onError: ((Error) -> Void)?) {
         let urlString = defaultHost.appending("produto/").appending("\(produtoId)")
-        fetchGenericData(urlString: urlString, httpMethod: .post) { (response: EmptyResponse) in
+        fetchGenericData(urlString: urlString, httpMethod: .post, onCompletion: { (response: EmptyResponse) in
             onCompletion(response)
+        }) { (error) in
+            onError?(error)
         }
     }
     

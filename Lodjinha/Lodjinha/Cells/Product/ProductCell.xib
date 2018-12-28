@@ -61,6 +61,7 @@
                     <constraint firstItem="2YR-7W-cZJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IOJ-6m-jhg" secondAttribute="bottom" constant="5" id="xsx-Pq-qDc"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="tintColor" red="0.41568627450000001" green="0.23921568630000001" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="iconImageView" destination="YFT-jX-bSq" id="r4G-Yt-SoG"/>
