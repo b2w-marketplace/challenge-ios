@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Kingfisher
+import SwiftyAttributes
 
 class ProductCell: UITableViewCell {
 
@@ -21,4 +23,14 @@ class ProductCell: UITableViewCell {
         tintColor = .mainColor
     }
     
+    public func setupCell(_ product: Produto) {
+        nameLabel.text = product.nome
+        iconImageView.kf.indicatorType = .activity
+        iconImageView.kf.setImage(with: URL(string: product.urlImagem),
+                                  placeholder: UIImage(named: "question"))
+        let text = "De: \(moneyFormatter(product.precoDe))"
+        oldPriceLabel.attributedText = text.withStrikethroughColor(.lightGray).withStrikethroughStyle(.single)
+        newPriceLabel.text = "Por \(moneyFormatter(product.precoPor))"
+    }
+
 }

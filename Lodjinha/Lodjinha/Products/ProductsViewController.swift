@@ -42,7 +42,6 @@ class ProductsViewController: UIViewController {
     private func loadProducts() {
         let lastOffset = offset
         Network.getProdutos(offset: offset, limit: limit, categoriaId: categoriaId) { [unowned self] (response) in
-            dump(response.data)
             inMainAsync {
                 self.productsIndicator.stopAnimating()
                 self.products.append(contentsOf: response.data)
@@ -54,17 +53,10 @@ class ProductsViewController: UIViewController {
         }
     }
     
-    private func setupNavigationBar() {
-        navigationItem.title = titleName
-    }
-    
-    private func setupTableView() {
-        productsTableView.register(UINib(nibName: ProductCell.nameOfClass, bundle: nil), forCellReuseIdentifier: ProductCell.nameOfClass)
-        productsTableView.register(UINib(nibName: LoadingCell.nameOfClass, bundle: nil), forCellReuseIdentifier: LoadingCell.nameOfClass)
-        productsTableView.rowHeight = UITableView.automaticDimension
-        productsTableView.estimatedRowHeight = 85
-        productsTableView.tableFooterView = footerPlaceholder(width: productsTableView.frame.size.width)
-    }
+}
+
+//MARK: - UIScrollViewDelegate
+extension ProductsViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         contentOffsetY = scrollView.contentOffset.y
@@ -105,20 +97,26 @@ extension ProductsViewController: UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.nameOfClass) as! ProductCell
-            let product = products[indexPath.row]
-            
-            cell.nameLabel.text = product.nome
-            cell.iconImageView.kf.indicatorType = .activity
-            cell.iconImageView.kf.setImage(with: URL(string: product.urlImagem),
-                                           placeholder: UIImage(named: "question"))
-            let text = "De: \(moneyFormatter(product.precoDe))"
-            cell.oldPriceLabel.attributedText = text.withStrikethroughColor(.lightGray).withStrikethroughStyle(.single)
-            cell.newPriceLabel.text = "Por \(moneyFormatter(product.precoPor))"
-            
+            cell.setupCell(products[indexPath.row])
             return cell
         }
     }
     
-    
 }
 
+//MARK: - Setups
+extension ProductsViewController {
+    
+    private func setupNavigationBar() {
+        navigationItem.title = titleName
+    }
+    
+    private func setupTableView() {
+        productsTableView.register(UINib(nibName: ProductCell.nameOfClass, bundle: nil), forCellReuseIdentifier: ProductCell.nameOfClass)
+        productsTableView.register(UINib(nibName: LoadingCell.nameOfClass, bundle: nil), forCellReuseIdentifier: LoadingCell.nameOfClass)
+        productsTableView.rowHeight = UITableView.automaticDimension
+        productsTableView.estimatedRowHeight = 85
+        productsTableView.tableFooterView = footerPlaceholder(width: productsTableView.frame.size.width)
+    }
+    
+}

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class DetailViewController: UIViewController {
 
@@ -17,7 +18,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var reserveButton: UIButton!
     @IBOutlet weak var productIndicator: UIActivityIndicatorView!
-    
+    @IBOutlet var skeletonViews: [UIView]!
+
     private var titleName: String
     private var produtoId: Int
     private var product: Produto?
@@ -41,42 +43,24 @@ class DetailViewController: UIViewController {
     }
     
     private func loadProduct() {
+        toggleSkeletonViews(visible: false)
         Network.getProdutoDetalhes(produtoId: produtoId) { [unowned self] (response) in
-            dump(response)
             inMainAsync {
-                self.productIndicator.stopAnimating()
                 self.product = response
                 self.setupProductData()
+                self.toggleSkeletonViews(visible: true)
             }
         }
     }
     
-    private func setupProductData() {
-        if let product = self.product {
-            productImageView.kf.indicatorType = .activity
-            productImageView.kf.setImage(with: URL(string: product.urlImagem),
-                                         placeholder: UIImage(named: "question"))
-            nameLabel.text = product.nome
-            let text = "De: \(moneyFormatter(product.precoDe))"
-            oldPriceLabel.attributedText = text.withStrikethroughColor(.lightGray).withStrikethroughStyle(.single)
-            newPriceLabel.text =  "Por \(moneyFormatter(product.precoPor))"
-            descriptionTextView.text = product.descricao.htmlToString
+    private func toggleSkeletonViews(visible: Bool) {
+        skeletonViews.forEach { (view) in
+            if !visible {
+                view.showAnimatedSkeleton()
+            } else {
+                view.hideSkeleton()
+            }
         }
-    }
-    
-    private func setupNavigationBar() {
-        navigationItem.title = titleName
-    }
-    
-    private func setupButton() {
-        reserveButton.layer.cornerRadius = 5
-        reserveButton.clipsToBounds = true
-    }
-    
-    private func setupTextView() {
-        descriptionTextView.textContainer.lineBreakMode = .byWordWrapping
-        descriptionTextView.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-        descriptionTextView.textContainer.lineFragmentPadding = 0
     }
 
     private func showMessage(_ message: String, success: Bool) {
@@ -106,6 +90,39 @@ class DetailViewController: UIViewController {
                 self.showMessage("Erro ao reservar produto", success: false)
             }
         }
+    }
+    
+}
+
+//MARK: - Setups
+extension DetailViewController {
+    
+    private func setupProductData() {
+        if let product = self.product {
+            productImageView.kf.indicatorType = .activity
+            productImageView.kf.setImage(with: URL(string: product.urlImagem),
+                                         placeholder: UIImage(named: "question"))
+            nameLabel.text = product.nome
+            let text = "De: \(moneyFormatter(product.precoDe))"
+            oldPriceLabel.attributedText = text.withStrikethroughColor(.lightGray).withStrikethroughStyle(.single)
+            newPriceLabel.text =  "Por \(moneyFormatter(product.precoPor))"
+            descriptionTextView.text = product.descricao.htmlToString
+        }
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = titleName
+    }
+    
+    private func setupButton() {
+        reserveButton.layer.cornerRadius = 5
+        reserveButton.clipsToBounds = true
+    }
+    
+    private func setupTextView() {
+        descriptionTextView.textContainer.lineBreakMode = .byWordWrapping
+        descriptionTextView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        descriptionTextView.textContainer.lineFragmentPadding = 0
     }
     
 }

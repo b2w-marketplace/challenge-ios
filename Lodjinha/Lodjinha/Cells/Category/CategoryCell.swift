@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CategoryCell: UICollectionViewCell {
 
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    public func setupCell(_ category: Categoria) {
+        nameLabel.text = category.descricao
+        iconImageView.kf.indicatorType = .activity
+        iconImageView.kf.setImage(with: URL(string: category.urlImagem),
+                                  placeholder: UIImage(named: "question"))
     }
 
 }

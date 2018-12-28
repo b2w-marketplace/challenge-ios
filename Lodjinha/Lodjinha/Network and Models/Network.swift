@@ -91,9 +91,6 @@ class Network {
                 }
                 return
             }
-            if let httpResponse = resp as? HTTPURLResponse {
-                print("Status code:", httpResponse.statusCode)
-            }
             do {
                 let obj = try JSONDecoder().decode(T.self, from: data)
                 onCompletion(obj)

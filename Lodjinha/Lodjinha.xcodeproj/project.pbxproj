@@ -137,6 +137,27 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
+		EB13945321D685470016A518 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EBFE2A1821D463DE00676164 /* Pacifico-Regular.ttf */,
+				EB658DEA21D5D3A000320FE7 /* Utils.swift */,
+				EBFE2A2521D4720C00676164 /* NSObject+Utils.swift */,
+				EB95859821D57E110035D641 /* UIColor+Utils.swift */,
+				EB13944C21D649CB0016A518 /* NSString+Utils.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EB13945421D685990016A518 /* Network and Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB658DE621D5CA1F00320FE7 /* Network.swift */,
+				EB658DE821D5CCC200320FE7 /* Models.swift */,
+			);
+			path = "Network and Models";
+			sourceTree = "<group>";
+		};
 		EB658DE121D5C1F800320FE7 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,22 +228,17 @@
 			isa = PBXGroup;
 			children = (
 				EBFE29EC21D45AC400676164 /* AppDelegate.swift */,
-				EB658DE621D5CA1F00320FE7 /* Network.swift */,
-				EB658DE821D5CCC200320FE7 /* Models.swift */,
-				EB658DEA21D5D3A000320FE7 /* Utils.swift */,
+				EBFE29F321D45AC500676164 /* Assets.xcassets */,
+				EBFE29F521D45AC500676164 /* LaunchScreen.storyboard */,
+				EBFE29F821D45AC500676164 /* Info.plist */,
+				EB13945421D685990016A518 /* Network and Models */,
+				EB13945321D685470016A518 /* Resources */,
 				EBFE2A2221D46F8900676164 /* Main */,
 				EBFE2A2321D46F8E00676164 /* Home */,
 				EBFE2A2421D46F9200676164 /* About */,
 				EB658DE121D5C1F800320FE7 /* Detail */,
 				EBEB2F7D21D5BFB500F07CF5 /* Products */,
 				EB95859421D578800035D641 /* Cells */,
-				EBFE2A1821D463DE00676164 /* Pacifico-Regular.ttf */,
-				EBFE2A2521D4720C00676164 /* NSObject+Utils.swift */,
-				EB95859821D57E110035D641 /* UIColor+Utils.swift */,
-				EB13944C21D649CB0016A518 /* NSString+Utils.swift */,
-				EBFE29F321D45AC500676164 /* Assets.xcassets */,
-				EBFE29F521D45AC500676164 /* LaunchScreen.storyboard */,
-				EBFE29F821D45AC500676164 /* Info.plist */,
 			);
 			path = Lodjinha;
 			sourceTree = "<group>";
@@ -379,12 +395,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lodjinha/Pods-Lodjinha-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyAttributes/SwiftyAttributes.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyAttributes.framework",
 			);
@@ -608,7 +626,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AMWCLA9HG3;
 				INFOPLIST_FILE = Lodjinha/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.victor.takai.Lodjinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -624,7 +645,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AMWCLA9HG3;
 				INFOPLIST_FILE = Lodjinha/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.victor.takai.Lodjinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -641,7 +665,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AMWCLA9HG3;
 				INFOPLIST_FILE = LodjinhaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.victor.takai.LodjinhaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -659,7 +687,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AMWCLA9HG3;
 				INFOPLIST_FILE = LodjinhaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.victor.takai.LodjinhaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

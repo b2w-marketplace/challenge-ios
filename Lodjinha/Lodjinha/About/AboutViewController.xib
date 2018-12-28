@@ -44,7 +44,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a Lodjinha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckX-7p-hhb">
-                    <rect key="frame" x="8" y="290" width="359" height="114.5"/>
+                    <rect key="frame" x="8" y="290" width="359" height="76"/>
                     <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="65"/>
                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>

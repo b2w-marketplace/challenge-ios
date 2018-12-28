@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
-import SwiftyAttributes
 
 class HomeViewController: UIViewController {
 
@@ -39,7 +37,6 @@ class HomeViewController: UIViewController {
     
     private func loadBanners() {
         Network.getBanners { (response) in
-            dump(response.data)
             inMainAsync {
                 self.bannersIndicator.stopAnimating()
                 self.banners = response.data
@@ -50,7 +47,6 @@ class HomeViewController: UIViewController {
     
     private func loadCategories() {
         Network.getCategorias { [unowned self] (response) in
-            dump(response.data)
             inMainAsync {
                 self.categoriesIndicator.stopAnimating()
                 self.categories = response.data
@@ -61,7 +57,6 @@ class HomeViewController: UIViewController {
     
     private func loadProducts() {
         Network.getProdutosMaisVendidos { [unowned self] (response) in
-            dump(response.data)
             inMainAsync {
                 self.productsIndicator.stopAnimating()
                 self.products = response.data
@@ -81,6 +76,71 @@ class HomeViewController: UIViewController {
             }
         }
     }
+
+}
+
+//MARK: - UIScrollViewDelegate
+extension HomeViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageIndex = round(scrollView.contentOffset.x / view.frame.width)
+        bannersPageControl.currentPage = Int(pageIndex)
+    }
+    
+}
+
+//MARK: - UICollectionViewDelegate
+extension HomeViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let category = categories[indexPath.row]
+        navigationController?.pushViewController(ProductsViewController(titleName: category.descricao, categoriaId: category.id), animated: true)
+    }
+    
+}
+
+//MARK: - UICollectionViewDataSource
+extension HomeViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.nameOfClass, for: indexPath) as! CategoryCell
+        cell.setupCell(categories[indexPath.row])
+        return cell
+    }
+    
+}
+
+//MARK: - UITableViewDelegate
+extension HomeViewController: UITableViewDelegate {
+ 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = products[indexPath.row]
+        navigationController?.pushViewController(DetailViewController(titleName: product.nome, produtoId: product.id), animated: true)
+    }
+    
+}
+
+//MARK: - UITableViewDataSource
+extension HomeViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.nameOfClass) as! ProductCell
+        cell.setupCell(products[indexPath.row])
+        return cell
+    }
+    
+}
+
+//MARK: - Setups
+extension HomeViewController {
     
     private func setupScrollView() {
         bannersPageControl.numberOfPages = banners.count
@@ -127,81 +187,5 @@ class HomeViewController: UIViewController {
     private func setupCollectionView() {
         categoriesCollectionView.register(UINib(nibName: CategoryCell.nameOfClass, bundle: nil), forCellWithReuseIdentifier: CategoryCell.nameOfClass)
     }
-
-}
-
-//MARK: - UIScrollViewDelegate
-extension HomeViewController: UIScrollViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageIndex = round(scrollView.contentOffset.x / view.frame.width)
-        bannersPageControl.currentPage = Int(pageIndex)
-    }
-    
-}
-
-//MARK: - UICollectionViewDelegate
-extension HomeViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let category = categories[indexPath.row]
-        navigationController?.pushViewController(ProductsViewController(titleName: category.descricao, categoriaId: category.id), animated: true)
-    }
-    
-}
-
-//MARK: - UICollectionViewDataSource
-extension HomeViewController: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.nameOfClass, for: indexPath) as! CategoryCell
-        let category = categories[indexPath.row]
-        
-        cell.nameLabel.text = category.descricao
-        cell.iconImageView.kf.indicatorType = .activity
-        cell.iconImageView.kf.setImage(with: URL(string: category.urlImagem),
-                                       placeholder: UIImage(named: "question"))
-        
-        return cell
-    }
-    
-}
-
-//MARK: - UITableViewDelegate
-extension HomeViewController: UITableViewDelegate {
- 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let product = products[indexPath.row]
-        navigationController?.pushViewController(DetailViewController(titleName: product.nome, produtoId: product.id), animated: true)
-    }
-    
-}
-
-//MARK: - UITableViewDataSource
-extension HomeViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.nameOfClass) as! ProductCell
-        let product = products[indexPath.row]
-        
-        cell.nameLabel.text = product.nome
-        cell.iconImageView.kf.indicatorType = .activity
-        cell.iconImageView.kf.setImage(with: URL(string: product.urlImagem),
-                                       placeholder: UIImage(named: "question"))
-        let text = "De: \(moneyFormatter(product.precoDe))"
-        cell.oldPriceLabel.attributedText = text.withStrikethroughColor(.lightGray).withStrikethroughStyle(.single)
-        cell.newPriceLabel.text = "Por \(moneyFormatter(product.precoPor))"
-        
-        return cell
-    }
-    
     
 }

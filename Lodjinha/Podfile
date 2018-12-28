@@ -6,6 +6,7 @@ target 'Lodjinha' do
   pod 'SnapKit'
   pod 'Kingfisher'
   pod 'SwiftyAttributes'
+  pod 'SkeletonView'
 
   target 'LodjinhaTests' do
     inherit! :search_paths

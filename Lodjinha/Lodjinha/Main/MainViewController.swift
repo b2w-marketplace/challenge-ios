@@ -30,27 +30,6 @@ class MainViewController: UIViewController {
         setupTabBar()
     }
 
-    private func setupTabBar() {
-        tabBar.selectedItem = homeTabBarItem
-        addViewController(homeViewController)
-    }
-    
-    private func setupHomeNavigationBar() {
-        if let navigationController = self.navigationController {
-            let size = navigationController.navigationBar.frame.size
-            let margin: CGFloat = 8
-            let width = size.width
-            let height = size.height - margin
-            
-            let logoImageView = UIImageView(image: UIImage(named: "logoNavbar"))
-            logoImageView.contentMode = .scaleAspectFit
-            logoImageView.frame = CGRect(x: 0, y: margin / 2, width: width, height: height)
-            
-            navigationItem.title = "Home"
-            navigationItem.titleView = logoImageView
-        }
-    }
-
     private func addViewController(_ viewController: UIViewController) {
         if children.count > 0 {
             let childViewController = children.first!
@@ -76,6 +55,7 @@ class MainViewController: UIViewController {
 
 }
 
+//MARK: - UITabBarDelegate
 extension MainViewController: UITabBarDelegate {
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
@@ -86,6 +66,32 @@ extension MainViewController: UITabBarDelegate {
             navigationItem.titleView = nil
             navigationItem.title = "Sobre"
             addViewController(aboutViewController)
+        }
+    }
+    
+}
+
+//MARK: - Setups
+extension MainViewController {
+    
+    private func setupTabBar() {
+        tabBar.selectedItem = homeTabBarItem
+        addViewController(homeViewController)
+    }
+    
+    private func setupHomeNavigationBar() {
+        if let navigationController = self.navigationController {
+            let size = navigationController.navigationBar.frame.size
+            let margin: CGFloat = 8
+            let width = size.width
+            let height = size.height - margin
+            
+            let logoImageView = UIImageView(image: UIImage(named: "logoNavbar"))
+            logoImageView.contentMode = .scaleAspectFit
+            logoImageView.frame = CGRect(x: 0, y: margin / 2, width: width, height: height)
+            
+            navigationItem.title = "Home"
+            navigationItem.titleView = logoImageView
         }
     }
     

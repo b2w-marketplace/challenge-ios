@@ -45,6 +45,5 @@ public struct ProdutoResponse: Decodable {
     var total: Int?
 }
 
-
 //MARK: - Empty
 public struct EmptyResponse: Decodable {}
