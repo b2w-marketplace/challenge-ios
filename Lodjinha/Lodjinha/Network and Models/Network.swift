@@ -146,7 +146,7 @@ extension Network {
         let urlString = defaultHost.appending("produto")
         let params: [String : Any] = ["offset": offset,
                                       "limit": limit,
-                                      "categoryId": categoriaId]
+                                      "categoriaId": categoriaId]
         fetchGenericData(urlString: urlString, params: params, onCompletion: { (response: ProdutoResponse) in
             onCompletion(response)
         })
