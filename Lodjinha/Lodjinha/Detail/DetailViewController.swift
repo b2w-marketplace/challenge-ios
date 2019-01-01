@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var oldPriceLabel: UILabel!
     @IBOutlet weak var newPriceLabel: UILabel!
-    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var reserveButton: UIButton!
     @IBOutlet weak var productIndicator: UIActivityIndicatorView!
     @IBOutlet var skeletonViews: [UIView]!
@@ -38,13 +38,15 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupButton()
-        setupTextView()
-        loadProduct()
+        inMainAsync {
+            self.loadProduct()
+        }
     }
     
     private func loadProduct() {
         toggleSkeletonViews(visible: false)
         Network.getProdutoDetalhes(produtoId: produtoId) { [unowned self] (response) in
+            dump(response)
             inMainAsync {
                 self.product = response
                 self.setupProductData()
@@ -54,6 +56,14 @@ class DetailViewController: UIViewController {
     }
     
     private func toggleSkeletonViews(visible: Bool) {
+        if !visible {
+            nameLabel.numberOfLines = 2
+            descriptionLabel.numberOfLines = 10
+        } else {
+            nameLabel.numberOfLines = 0
+            descriptionLabel.numberOfLines = 0
+        }
+        
         skeletonViews.forEach { (view) in
             if !visible {
                 view.showAnimatedSkeleton()
@@ -106,7 +116,7 @@ extension DetailViewController {
             let text = "De: \(moneyFormatter(product.precoDe))"
             oldPriceLabel.attributedText = text.withStrikethroughColor(.lightGray).withStrikethroughStyle(.single)
             newPriceLabel.text =  "Por \(moneyFormatter(product.precoPor))"
-            descriptionTextView.text = product.descricao.htmlToString
+            descriptionLabel.text = product.descricao.htmlToString
         }
     }
     
@@ -117,12 +127,6 @@ extension DetailViewController {
     private func setupButton() {
         reserveButton.layer.cornerRadius = 5
         reserveButton.clipsToBounds = true
-    }
-    
-    private func setupTextView() {
-        descriptionTextView.textContainer.lineBreakMode = .byWordWrapping
-        descriptionTextView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        descriptionTextView.textContainer.lineFragmentPadding = 0
     }
     
 }

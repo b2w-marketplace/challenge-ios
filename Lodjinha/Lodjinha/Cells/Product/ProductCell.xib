@@ -32,14 +32,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De: 9999,99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VY-RL-5Pj">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="De: 9999,99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VY-RL-5Pj">
                         <rect key="frame" x="85" y="61.5" width="71.5" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Por 9999,98" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YR-7W-cZJ">
-                        <rect key="frame" x="166.5" y="52" width="137.5" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Por 9999,98" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YR-7W-cZJ">
+                        <rect key="frame" x="182.5" y="52" width="121.5" height="24"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <color key="textColor" red="0.94509803920000002" green="0.31372549020000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                     <constraint firstItem="YFT-jX-bSq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="M3I-0K-Bnb"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YFT-jX-bSq" secondAttribute="bottom" constant="9.5" id="RD0-3o-DI5"/>
                     <constraint firstItem="2YR-7W-cZJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IOJ-6m-jhg" secondAttribute="bottom" constant="3.5" id="Uwf-rn-eVd"/>
-                    <constraint firstItem="2YR-7W-cZJ" firstAttribute="leading" secondItem="9VY-RL-5Pj" secondAttribute="trailing" constant="10" id="avb-mL-UtI"/>
+                    <constraint firstItem="2YR-7W-cZJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9VY-RL-5Pj" secondAttribute="trailing" constant="10" id="avb-mL-UtI"/>
                     <constraint firstAttribute="trailing" secondItem="2YR-7W-cZJ" secondAttribute="trailing" constant="16" id="juc-c9-2b7"/>
                     <constraint firstAttribute="trailing" secondItem="IOJ-6m-jhg" secondAttribute="trailing" constant="16" id="lPy-3t-CeR"/>
                     <constraint firstItem="YFT-jX-bSq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pKc-Hc-qod"/>
