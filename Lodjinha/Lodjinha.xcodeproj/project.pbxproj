@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F0C527D21E55B4800520F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C527C21E55B4800520F4D /* AppDelegate.swift */; };
-		2F0C527F21E55B4800520F4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C527E21E55B4800520F4D /* ViewController.swift */; };
 		2F0C528221E55B4800520F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C528021E55B4800520F4D /* Main.storyboard */; };
 		2F0C528421E55B4900520F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C528321E55B4900520F4D /* Assets.xcassets */; };
 		2F0C528721E55B4900520F4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C528521E55B4900520F4D /* LaunchScreen.storyboard */; };
@@ -17,6 +16,33 @@
 		2F0C52AD21E55C0300520F4D /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C52AC21E55C0300520F4D /* Pacifico-Regular.ttf */; };
 		2F0C52AE21E560DF00520F4D /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C52AC21E55C0300520F4D /* Pacifico-Regular.ttf */; };
 		2F0C52AF21E560DF00520F4D /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C52AC21E55C0300520F4D /* Pacifico-Regular.ttf */; };
+		2FCA467421E75854004F7456 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467321E75854004F7456 /* AboutViewController.swift */; };
+		2FCA467521E75854004F7456 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467321E75854004F7456 /* AboutViewController.swift */; };
+		2FCA467621E75854004F7456 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467321E75854004F7456 /* AboutViewController.swift */; };
+		2FCA467821E75916004F7456 /* LodjinhaNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467721E75916004F7456 /* LodjinhaNavigationViewController.swift */; };
+		2FCA467921E75916004F7456 /* LodjinhaNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467721E75916004F7456 /* LodjinhaNavigationViewController.swift */; };
+		2FCA467A21E75916004F7456 /* LodjinhaNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467721E75916004F7456 /* LodjinhaNavigationViewController.swift */; };
+		2FCA467D21E75938004F7456 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467C21E75938004F7456 /* Constants.swift */; };
+		2FCA467E21E75938004F7456 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467C21E75938004F7456 /* Constants.swift */; };
+		2FCA467F21E75938004F7456 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467C21E75938004F7456 /* Constants.swift */; };
+		2FCA468221E759AA004F7456 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA468121E759AA004F7456 /* UIColorExtension.swift */; };
+		2FCA468321E759AA004F7456 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA468121E759AA004F7456 /* UIColorExtension.swift */; };
+		2FCA468421E759AA004F7456 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA468121E759AA004F7456 /* UIColorExtension.swift */; };
+		2FCA469521E75B9A004F7456 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA468521E75B99004F7456 /* Roboto-Medium.ttf */; };
+		2FCA469721E75B9A004F7456 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA468721E75B99004F7456 /* Roboto-Regular.ttf */; };
+		2FCA46A021E75B9A004F7456 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA469021E75B9A004F7456 /* Roboto-Light.ttf */; };
+		2FCA46A321E75B9A004F7456 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA469321E75B9A004F7456 /* Roboto-Bold.ttf */; };
+		2FCA46AF21E75E6E004F7456 /* LodjinhaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA46AE21E75E6E004F7456 /* LodjinhaTabBarController.swift */; };
+		2FCA46B021E75E6E004F7456 /* LodjinhaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA46AE21E75E6E004F7456 /* LodjinhaTabBarController.swift */; };
+		2FCA46B121E75E6E004F7456 /* LodjinhaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA46AE21E75E6E004F7456 /* LodjinhaTabBarController.swift */; };
+		2FEE870621E7744400D0E427 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE870521E7744400D0E427 /* HomeCollectionViewController.swift */; };
+		2FEE870721E7744400D0E427 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE870521E7744400D0E427 /* HomeCollectionViewController.swift */; };
+		2FEE870821E7744400D0E427 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE870521E7744400D0E427 /* HomeCollectionViewController.swift */; };
+		2FEE871221E7A7FF00D0E427 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE871121E7A7FF00D0E427 /* UIImageExtension.swift */; };
+		2FEE871321E7A7FF00D0E427 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE871121E7A7FF00D0E427 /* UIImageExtension.swift */; };
+		2FEE871421E7A7FF00D0E427 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE871121E7A7FF00D0E427 /* UIImageExtension.swift */; };
+		2FFFA96821E76CC300FB4A3F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFA96721E76CC300FB4A3F /* Font.swift */; };
+		2FFFA96921E76CC300FB4A3F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFA96721E76CC300FB4A3F /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +65,6 @@
 /* Begin PBXFileReference section */
 		2F0C527921E55B4800520F4D /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F0C527C21E55B4800520F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F0C527E21E55B4800520F4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2F0C528121E55B4800520F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F0C528321E55B4900520F4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F0C528621E55B4900520F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +77,18 @@
 		2F0C529E21E55B4900520F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F0C52AB21E55BF900520F4D /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		2F0C52AC21E55C0300520F4D /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		2FCA467321E75854004F7456 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		2FCA467721E75916004F7456 /* LodjinhaNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaNavigationViewController.swift; sourceTree = "<group>"; };
+		2FCA467C21E75938004F7456 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2FCA468121E759AA004F7456 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		2FCA468521E75B99004F7456 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		2FCA468721E75B99004F7456 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		2FCA469021E75B9A004F7456 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		2FCA469321E75B9A004F7456 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		2FCA46AE21E75E6E004F7456 /* LodjinhaTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaTabBarController.swift; sourceTree = "<group>"; };
+		2FEE870521E7744400D0E427 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		2FEE871121E7A7FF00D0E427 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		2FFFA96721E76CC300FB4A3F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +139,15 @@
 		2F0C527B21E55B4800520F4D /* Lodjinha */ = {
 			isa = PBXGroup;
 			children = (
-				2F0C52AA21E55BE100520F4D /* Fonts */,
 				2F0C527C21E55B4800520F4D /* AppDelegate.swift */,
-				2F0C527E21E55B4800520F4D /* ViewController.swift */,
-				2F0C528021E55B4800520F4D /* Main.storyboard */,
 				2F0C528321E55B4900520F4D /* Assets.xcassets */,
-				2F0C528521E55B4900520F4D /* LaunchScreen.storyboard */,
+				2FCA467B21E75923004F7456 /* Constants */,
+				2FCA466E21E757F1004F7456 /* Controllers */,
+				2FCA468021E7599D004F7456 /* Extensions */,
+				2FFFA96721E76CC300FB4A3F /* Font.swift */,
+				2F0C52AA21E55BE100520F4D /* Fonts */,
 				2F0C528821E55B4900520F4D /* Info.plist */,
+				2FCA466F21E75801004F7456 /* Storyboards */,
 			);
 			path = Lodjinha;
 			sourceTree = "<group>";
@@ -134,10 +173,51 @@
 		2F0C52AA21E55BE100520F4D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				2FCA469321E75B9A004F7456 /* Roboto-Bold.ttf */,
+				2FCA469021E75B9A004F7456 /* Roboto-Light.ttf */,
+				2FCA468521E75B99004F7456 /* Roboto-Medium.ttf */,
+				2FCA468721E75B99004F7456 /* Roboto-Regular.ttf */,
 				2F0C52AB21E55BF900520F4D /* OFL.txt */,
 				2F0C52AC21E55C0300520F4D /* Pacifico-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2FCA466E21E757F1004F7456 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2FCA467321E75854004F7456 /* AboutViewController.swift */,
+				2FCA467721E75916004F7456 /* LodjinhaNavigationViewController.swift */,
+				2FCA46AE21E75E6E004F7456 /* LodjinhaTabBarController.swift */,
+				2FEE870521E7744400D0E427 /* HomeCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2FCA466F21E75801004F7456 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2F0C528521E55B4900520F4D /* LaunchScreen.storyboard */,
+				2F0C528021E55B4800520F4D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2FCA467B21E75923004F7456 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2FCA467C21E75938004F7456 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2FCA468021E7599D004F7456 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2FCA468121E759AA004F7456 /* UIColorExtension.swift */,
+				2FEE871121E7A7FF00D0E427 /* UIImageExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +324,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FCA46A321E75B9A004F7456 /* Roboto-Bold.ttf in Resources */,
+				2FCA469521E75B9A004F7456 /* Roboto-Medium.ttf in Resources */,
+				2FCA469721E75B9A004F7456 /* Roboto-Regular.ttf in Resources */,
 				2F0C528721E55B4900520F4D /* LaunchScreen.storyboard in Resources */,
+				2FCA46A021E75B9A004F7456 /* Roboto-Light.ttf in Resources */,
 				2F0C52AD21E55C0300520F4D /* Pacifico-Regular.ttf in Resources */,
 				2F0C528421E55B4900520F4D /* Assets.xcassets in Resources */,
 				2F0C528221E55B4800520F4D /* Main.storyboard in Resources */,
@@ -274,8 +358,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F0C527F21E55B4800520F4D /* ViewController.swift in Sources */,
+				2FFFA96821E76CC300FB4A3F /* Font.swift in Sources */,
+				2FCA467421E75854004F7456 /* AboutViewController.swift in Sources */,
+				2FCA467821E75916004F7456 /* LodjinhaNavigationViewController.swift in Sources */,
+				2FEE871221E7A7FF00D0E427 /* UIImageExtension.swift in Sources */,
+				2FCA468221E759AA004F7456 /* UIColorExtension.swift in Sources */,
 				2F0C527D21E55B4800520F4D /* AppDelegate.swift in Sources */,
+				2FEE870621E7744400D0E427 /* HomeCollectionViewController.swift in Sources */,
+				2FCA467D21E75938004F7456 /* Constants.swift in Sources */,
+				2FCA46AF21E75E6E004F7456 /* LodjinhaTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +374,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FFFA96921E76CC300FB4A3F /* Font.swift in Sources */,
 				2F0C529221E55B4900520F4D /* LodjinhaTests.swift in Sources */,
+				2FCA467921E75916004F7456 /* LodjinhaNavigationViewController.swift in Sources */,
+				2FEE871321E7A7FF00D0E427 /* UIImageExtension.swift in Sources */,
+				2FCA468321E759AA004F7456 /* UIColorExtension.swift in Sources */,
+				2FCA46B021E75E6E004F7456 /* LodjinhaTabBarController.swift in Sources */,
+				2FEE870721E7744400D0E427 /* HomeCollectionViewController.swift in Sources */,
+				2FCA467521E75854004F7456 /* AboutViewController.swift in Sources */,
+				2FCA467E21E75938004F7456 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +391,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F0C529D21E55B4900520F4D /* LodjinhaUITests.swift in Sources */,
+				2FCA467A21E75916004F7456 /* LodjinhaNavigationViewController.swift in Sources */,
+				2FEE871421E7A7FF00D0E427 /* UIImageExtension.swift in Sources */,
+				2FCA468421E759AA004F7456 /* UIColorExtension.swift in Sources */,
+				2FCA46B121E75E6E004F7456 /* LodjinhaTabBarController.swift in Sources */,
+				2FEE870821E7744400D0E427 /* HomeCollectionViewController.swift in Sources */,
+				2FCA467621E75854004F7456 /* AboutViewController.swift in Sources */,
+				2FCA467F21E75938004F7456 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
