@@ -28,9 +28,17 @@ class ProductInfoViewController: UIViewController {
         NetworkService(withBaseURL: Constants.BaseUrl).reserveProduct(productId: productInfoViewModel.product.id, then: { [weak self] (result) in
             guard let `self` = self else { return }
             if result.isFailure {
-                self.displayOkMessage(text: Constants.ErrorMessage)
+                self.displayOkMessage(text: Constants.ErrorMessage, completion: { _ in
+                    DispatchQueue.main.async {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                })
             } else {
-                self.displayOkMessage(text: Constants.BookSuccessMessage)
+                self.displayOkMessage(text: Constants.BookSuccessMessage, completion: { _ in
+                    DispatchQueue.main.async {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                })
             }
             self.toggleIsLoading()
         })
@@ -80,7 +88,7 @@ class ProductInfoViewController: UIViewController {
     private func fillData() {
         titleLabel.text = productInfoViewModel.product.name
         let attributeString = NSMutableAttributedString(string: productInfoViewModel.beforePrice)
-        attributeString.addAttribute(.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+        attributeString.addAttribute(.strikethroughStyle, value: 2, range: NSRange(location: 0, length: attributeString.length))
         beforePrice.attributedText = attributeString
         afterPrice.text = productInfoViewModel.afterPrice
         descriptionView.attributedText = productInfoViewModel.product.description.convertHtml("Roboto-Regular", 18.0)

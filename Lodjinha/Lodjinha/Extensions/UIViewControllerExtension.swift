@@ -9,13 +9,13 @@
 import UIKit
 
 extension UIViewController {
-    func displayOkMessage(text: String) {
+    func displayOkMessage(text: String, completion: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: text, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: Constants.OkMessage, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: Constants.OkMessage, style: .default, handler: completion))
         self.present(alert, animated: true, completion: nil)
     }
 
-    class func displaySpinner(onView : UIView) -> UIView {
+    class func displaySpinner(onView: UIView) -> UIView {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
         let ai = UIActivityIndicatorView.init(style: .whiteLarge)

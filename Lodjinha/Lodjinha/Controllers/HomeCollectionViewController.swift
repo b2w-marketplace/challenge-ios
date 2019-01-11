@@ -21,20 +21,23 @@ class HomeCollectionViewController: UICollectionViewController {
 
         navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "logoNavbar").resized(nil, 38))
 
-        NetworkService(withBaseURL: Constants.BaseUrl).fetch(fromRoute: Routes.ProductById, productId: 2) {[weak self] (result) in
-            guard let `self` = self else { return }
-            if let product = result.value {
-                let viewModel = ProductInfoViewModel(product: product)
-                self.performSegue(withIdentifier: "ProductInfoSegue", sender: viewModel)
-            }
-        }
+//        NetworkService(withBaseURL: Constants.BaseUrl).fetch(fromRoute: Routes.ProductById, productId: 2) {[weak self] (result) in
+//            guard let `self` = self else { return }
+//            if let product = result.value {
+//                let viewModel = ProductInfoViewModel(product: product)
+//                self.performSegue(withIdentifier: "ProductInfoSegue", sender: viewModel)
+//            }
+//        }
+    }
+
+    @IBAction func go(_ sender: Any) {
+        self.performSegue(withIdentifier: "ProductListSegue", sender: 1)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
     }
-
 
     // MARK: - Navigation
 
@@ -48,9 +51,14 @@ class HomeCollectionViewController: UICollectionViewController {
                 viewController.productInfoViewModel = productViewModel
                 viewController.hidesBottomBarWhenPushed = true
             }
+        } else if segue.identifier == "ProductListSegue" {
+            if let viewController = segue.destination as? ProductListViewController,
+                let categoryId = sender as? Int {
+                viewController.categoryId = categoryId
+                viewController.hidesBottomBarWhenPushed = true
+            }
         }
     }
-
 
     // MARK: UICollectionViewDataSource
 

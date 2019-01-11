@@ -16,12 +16,22 @@
 		2F0C52AD21E55C0300520F4D /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C52AC21E55C0300520F4D /* Pacifico-Regular.ttf */; };
 		2F0C52AE21E560DF00520F4D /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C52AC21E55C0300520F4D /* Pacifico-Regular.ttf */; };
 		2F0C52AF21E560DF00520F4D /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0C52AC21E55C0300520F4D /* Pacifico-Regular.ttf */; };
+		2F82345B21E8F4AD0033F8D0 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82345A21E8F4AD0033F8D0 /* BannerCollectionViewCell.swift */; };
 		2F98DB7421E80EC700BD7CB1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7321E80EC700BD7CB1 /* UIViewExtension.swift */; };
 		2F98DB7521E80EC700BD7CB1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7321E80EC700BD7CB1 /* UIViewExtension.swift */; };
 		2F98DB7621E80EC700BD7CB1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7321E80EC700BD7CB1 /* UIViewExtension.swift */; };
 		2F98DB7821E80F6200BD7CB1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7721E80F6200BD7CB1 /* UIViewControllerExtension.swift */; };
 		2F98DB7921E80F6200BD7CB1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7721E80F6200BD7CB1 /* UIViewControllerExtension.swift */; };
 		2F98DB7A21E80F6200BD7CB1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7721E80F6200BD7CB1 /* UIViewControllerExtension.swift */; };
+		2F98DB7C21E81D1700BD7CB1 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7B21E81D1700BD7CB1 /* ProductListViewModel.swift */; };
+		2F98DB7D21E81D1700BD7CB1 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7B21E81D1700BD7CB1 /* ProductListViewModel.swift */; };
+		2F98DB7E21E81D1700BD7CB1 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7B21E81D1700BD7CB1 /* ProductListViewModel.swift */; };
+		2F98DB8021E8223800BD7CB1 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7F21E8223800BD7CB1 /* ProductTableViewCell.swift */; };
+		2F98DB8121E8223800BD7CB1 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7F21E8223800BD7CB1 /* ProductTableViewCell.swift */; };
+		2F98DB8221E8223800BD7CB1 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB7F21E8223800BD7CB1 /* ProductTableViewCell.swift */; };
+		2F98DB8421E8264D00BD7CB1 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB8321E8264D00BD7CB1 /* ProductListViewController.swift */; };
+		2F98DB8521E8264D00BD7CB1 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB8321E8264D00BD7CB1 /* ProductListViewController.swift */; };
+		2F98DB8621E8264D00BD7CB1 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98DB8321E8264D00BD7CB1 /* ProductListViewController.swift */; };
 		2FCA467421E75854004F7456 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467321E75854004F7456 /* AboutViewController.swift */; };
 		2FCA467521E75854004F7456 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467321E75854004F7456 /* AboutViewController.swift */; };
 		2FCA467621E75854004F7456 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA467321E75854004F7456 /* AboutViewController.swift */; };
@@ -123,8 +133,12 @@
 		2F0C529E21E55B4900520F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F0C52AB21E55BF900520F4D /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		2F0C52AC21E55C0300520F4D /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		2F82345A21E8F4AD0033F8D0 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F98DB7321E80EC700BD7CB1 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		2F98DB7721E80F6200BD7CB1 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		2F98DB7B21E81D1700BD7CB1 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		2F98DB7F21E8223800BD7CB1 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		2F98DB8321E8264D00BD7CB1 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		2FCA467321E75854004F7456 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		2FCA467721E75916004F7456 /* LodjinhaNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaNavigationViewController.swift; sourceTree = "<group>"; };
 		2FCA467C21E75938004F7456 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -262,6 +276,7 @@
 				2FCA46AE21E75E6E004F7456 /* LodjinhaTabBarController.swift */,
 				2FEE870521E7744400D0E427 /* HomeCollectionViewController.swift */,
 				2FEE873B21E7C95C00D0E427 /* ProductInfoViewController.swift */,
+				2F98DB8321E8264D00BD7CB1 /* ProductListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				2FEE874021E7C98100D0E427 /* ProductInfoViewModel.swift */,
+				2F98DB7B21E81D1700BD7CB1 /* ProductListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -330,6 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				2FEE874521E7CE2600D0E427 /* CachedImageView.swift */,
+				2F98DB7F21E8223800BD7CB1 /* ProductTableViewCell.swift */,
+				2F82345A21E8F4AD0033F8D0 /* BannerCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -539,13 +557,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FEE871821E7B3B200D0E427 /* NetworkService.swift in Sources */,
+				2F98DB7C21E81D1700BD7CB1 /* ProductListViewModel.swift in Sources */,
 				2FEE874621E7CE2600D0E427 /* CachedImageView.swift in Sources */,
 				2FFFA96821E76CC300FB4A3F /* Font.swift in Sources */,
 				2FEE874121E7C98100D0E427 /* ProductInfoViewModel.swift in Sources */,
 				2FCA467421E75854004F7456 /* AboutViewController.swift in Sources */,
 				2FCA467821E75916004F7456 /* LodjinhaNavigationViewController.swift in Sources */,
+				2F98DB8021E8223800BD7CB1 /* ProductTableViewCell.swift in Sources */,
 				2F98DB7421E80EC700BD7CB1 /* UIViewExtension.swift in Sources */,
 				2FEE871221E7A7FF00D0E427 /* UIImageExtension.swift in Sources */,
+				2F82345B21E8F4AD0033F8D0 /* BannerCollectionViewCell.swift in Sources */,
 				2FCA468221E759AA004F7456 /* UIColorExtension.swift in Sources */,
 				2FEE873421E7BED300D0E427 /* BannerItem.swift in Sources */,
 				2F0C527D21E55B4800520F4D /* AppDelegate.swift in Sources */,
@@ -555,6 +576,7 @@
 				2FCA46AF21E75E6E004F7456 /* LodjinhaTabBarController.swift in Sources */,
 				2FEE873C21E7C95C00D0E427 /* ProductInfoViewController.swift in Sources */,
 				2FEE871C21E7B66200D0E427 /* NetworkModels.swift in Sources */,
+				2F98DB8421E8264D00BD7CB1 /* ProductListViewController.swift in Sources */,
 				2FEE872821E7B99D00D0E427 /* ProductList.swift in Sources */,
 				2FEE872C21E7BC1900D0E427 /* BestSellers.swift in Sources */,
 				2FEE873821E7BF0200D0E427 /* BannerList.swift in Sources */,
@@ -570,11 +592,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FEE871921E7B3B200D0E427 /* NetworkService.swift in Sources */,
+				2F98DB7D21E81D1700BD7CB1 /* ProductListViewModel.swift in Sources */,
 				2FEE874721E7CE2600D0E427 /* CachedImageView.swift in Sources */,
 				2FFFA96921E76CC300FB4A3F /* Font.swift in Sources */,
 				2FEE874221E7C98100D0E427 /* ProductInfoViewModel.swift in Sources */,
 				2F0C529221E55B4900520F4D /* LodjinhaTests.swift in Sources */,
 				2FCA467921E75916004F7456 /* LodjinhaNavigationViewController.swift in Sources */,
+				2F98DB8121E8223800BD7CB1 /* ProductTableViewCell.swift in Sources */,
 				2F98DB7521E80EC700BD7CB1 /* UIViewExtension.swift in Sources */,
 				2FEE871321E7A7FF00D0E427 /* UIImageExtension.swift in Sources */,
 				2FCA468321E759AA004F7456 /* UIColorExtension.swift in Sources */,
@@ -586,6 +610,7 @@
 				2FCA467E21E75938004F7456 /* Constants.swift in Sources */,
 				2FEE873D21E7C95C00D0E427 /* ProductInfoViewController.swift in Sources */,
 				2FEE871D21E7B66200D0E427 /* NetworkModels.swift in Sources */,
+				2F98DB8521E8264D00BD7CB1 /* ProductListViewController.swift in Sources */,
 				2FEE872921E7B99D00D0E427 /* ProductList.swift in Sources */,
 				2FEE872D21E7BC1900D0E427 /* BestSellers.swift in Sources */,
 				2FEE873921E7BF0200D0E427 /* BannerList.swift in Sources */,
@@ -612,8 +637,11 @@
 				2FEE874D21E7E46F00D0E427 /* StringExtension.swift in Sources */,
 				2FCA468421E759AA004F7456 /* UIColorExtension.swift in Sources */,
 				2FEE872A21E7B99D00D0E427 /* ProductList.swift in Sources */,
+				2F98DB8221E8223800BD7CB1 /* ProductTableViewCell.swift in Sources */,
 				2FEE872621E7B81F00D0E427 /* Product.swift in Sources */,
+				2F98DB8621E8264D00BD7CB1 /* ProductListViewController.swift in Sources */,
 				2FEE871A21E7B3B200D0E427 /* NetworkService.swift in Sources */,
+				2F98DB7E21E81D1700BD7CB1 /* ProductListViewModel.swift in Sources */,
 				2FEE872E21E7BC1900D0E427 /* BestSellers.swift in Sources */,
 				2FCA46B121E75E6E004F7456 /* LodjinhaTabBarController.swift in Sources */,
 				2FEE870821E7744400D0E427 /* HomeCollectionViewController.swift in Sources */,
