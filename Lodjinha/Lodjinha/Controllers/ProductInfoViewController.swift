@@ -79,7 +79,9 @@ class ProductInfoViewController: UIViewController {
 
     private func fillData() {
         titleLabel.text = productInfoViewModel.product.name
-        beforePrice.text = productInfoViewModel.beforePrice
+        let attributeString = NSMutableAttributedString(string: productInfoViewModel.beforePrice)
+        attributeString.addAttribute(.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+        beforePrice.attributedText = attributeString
         afterPrice.text = productInfoViewModel.afterPrice
         descriptionView.attributedText = productInfoViewModel.product.description.convertHtml("Roboto-Regular", 18.0)
         bookButton.setTitle(Constants.Book, for: .normal)
