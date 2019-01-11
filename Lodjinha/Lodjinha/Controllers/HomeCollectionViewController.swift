@@ -17,19 +17,40 @@ class HomeCollectionViewController: UICollectionViewController {
 
         collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
+        title = Constants.Home
+
         navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "logoNavbar").resized(nil, 38))
 
+        NetworkService(withBaseURL: Constants.BaseUrl).fetch(fromRoute: Routes.ProductById, productId: 2) {[weak self] (result) in
+            guard let `self` = self else { return }
+            if let product = result.value {
+                let viewModel = ProductInfoViewModel(product: product)
+                self.performSegue(withIdentifier: "ProductInfoSegue", sender: viewModel)
+            }
+        }
     }
 
-    /*
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ProductInfoSegue" {
+            if let viewController = segue.destination as? ProductInfoViewController,
+                let productViewModel = sender as? ProductInfoViewModel {
+                viewController.productInfoViewModel = productViewModel
+                viewController.hidesBottomBarWhenPushed = true
+            }
+        }
     }
-    */
+
 
     // MARK: UICollectionViewDataSource
 
@@ -38,7 +59,6 @@ class HomeCollectionViewController: UICollectionViewController {
         return 0
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return 0
@@ -46,9 +66,9 @@ class HomeCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+
         // Configure the cell
-    
+
         return cell
     }
 

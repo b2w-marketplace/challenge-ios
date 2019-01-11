@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+struct BannerList: Codable {
+    let bannerItems: [BannerItem]?
+
+    enum CodingKeys: String, CodingKey {
+
+        case bannerItems = "data"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        bannerItems = try values.decodeIfPresent([BannerItem].self, forKey: .bannerItems)
+    }
+
+}

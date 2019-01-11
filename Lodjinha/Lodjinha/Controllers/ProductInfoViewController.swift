@@ -10,21 +10,83 @@ import UIKit
 
 class ProductInfoViewController: UIViewController {
 
+    var productInfoViewModel: ProductInfoViewModel!
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet weak var productImage: CachedImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var beforePrice: UILabel!
+    @IBOutlet weak var afterPrice: UILabel!
+    @IBOutlet weak var descriptionView: UITextView!
+    @IBOutlet weak var bookButtonView: UIView!
+    @IBOutlet weak var bookButton: UIButton!
+
+    var isLoading = false
+    var spinner: UIView?
+
+    @IBAction func bookAction(_ sender: Any) {
+        toggleIsLoading()
+        NetworkService(withBaseURL: Constants.BaseUrl).reserveProduct(productId: productInfoViewModel.product.id, then: { [weak self] (result) in
+            guard let `self` = self else { return }
+            if result.isFailure {
+                self.displayOkMessage(text: Constants.ErrorMessage)
+            } else {
+                self.displayOkMessage(text: Constants.BookSuccessMessage)
+            }
+            self.toggleIsLoading()
+        })
+    }
+
+    private func toggleIsLoading() {
+        isLoading.toggle()
+        bookButton.isEnabled = !isLoading
+        if let `spinner` = spinner {
+            UIViewController.removeSpinner(spinner: spinner)
+        } else {
+            spinner = UIViewController.displaySpinner(onView: view)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupViews()
+        fillData()
+        title = productInfoViewModel.product.category?.description ?? productInfoViewModel.product.name
     }
-    
 
-    /*
-    // MARK: - Navigation
+    private func setupViews() {
+        view.backgroundColor = .WhiteTwo
+        titleLabel.font = Font(.installed(.RobotoBold), size: .standard(.title)).instance
+        titleLabel.textColor = .GreyishBrown
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        beforePrice.font = Font(.installed(.RobotoMedium), size: .standard(.subtitle)).instance
+        beforePrice.textColor = .Greyish
+
+        afterPrice.font = Font(.installed(.RobotoBold), size: .standard(.title)).instance
+        afterPrice.textColor = .Tomato
+
+        descriptionView.font = Font(.installed(.RobotoMedium), size: .standard(.descriptionLarge)).instance
+        descriptionView.textColor = .Greyish
+
+        bookButtonView.backgroundColor = .WhiteTwo
+        bookButtonView.addTopBorder(color: .GreyishBrown, width: 1.0)
+
+        bookButton.backgroundColor = .WarmPurple
+        bookButton.setTitleColor(.WhiteTwo, for: .normal)
+        bookButton.titleLabel?.font = Font(.installed(.RobotoMedium), size: .standard(.descriptionLarge)).instance
+
+        bookButton.layer.cornerRadius = 10
     }
-    */
+
+    private func fillData() {
+        titleLabel.text = productInfoViewModel.product.name
+        beforePrice.text = productInfoViewModel.beforePrice
+        afterPrice.text = productInfoViewModel.afterPrice
+        descriptionView.attributedText = productInfoViewModel.product.description.convertHtml("Roboto-Regular", 18.0)
+        bookButton.setTitle(Constants.Book, for: .normal)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        productImage.loadImageFromURL(imageUrl: productInfoViewModel.product.imageUrl)
+    }
 
 }

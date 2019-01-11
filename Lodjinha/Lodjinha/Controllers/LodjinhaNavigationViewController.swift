@@ -18,6 +18,12 @@ class LodjinhaNavigationViewController: UINavigationController {
         let titleFont = Font(.installed(.RobotoBold), size: .standard(.title)).instance
         navigationBar.titleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor.WhiteTwo,
                                               NSAttributedString.Key.font: titleFont]
+
+        navigationBar.layer.masksToBounds = false
+        navigationBar.layer.shadowColor = UIColor.Greyish.cgColor
+        navigationBar.layer.shadowOpacity = 0.8
+        navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        navigationBar.layer.shadowRadius = 2
     }
 
 }

@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+struct CategoryList: Codable {
+    let categories: [Category]?
+
+    enum CodingKeys: String, CodingKey {
+
+        case categories = "data"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        categories = try values.decodeIfPresent([Category].self, forKey: .categories)
+    }
+
+}

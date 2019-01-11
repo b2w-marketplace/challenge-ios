@@ -50,7 +50,6 @@ struct Font {
         case subtitle = 12.0
     }
 
-
     var type: FontType
     var size: FontSize
 

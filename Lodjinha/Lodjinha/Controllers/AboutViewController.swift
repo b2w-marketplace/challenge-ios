@@ -16,7 +16,7 @@ class AboutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = Constants.About
+        title = Constants.About
         configureViews()
     }
 

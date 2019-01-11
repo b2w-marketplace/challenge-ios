@@ -15,7 +15,7 @@ class LodjinhaTabBarController: UITabBarController {
 
         tabBar.barTintColor = UIColor.WhiteTwo
 
-        UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.WarmPurple], for:.selected)
+        UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.WarmPurple], for: .selected)
 
         UITabBar.appearance().tintColor = .WarmPurple
 
