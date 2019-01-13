@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u0n-eW-gbN">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="K9g-lw-IHa">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="u0n-eW-gbN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CdR-KE-H1h">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.33725490200000002" green="0.16078431369999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6qT-Jz-2Zg" kind="relationship" relationship="viewControllers" id="lXO-2e-Pkc"/>
+                        <segue destination="taa-eF-bgH" kind="relationship" relationship="viewControllers" id="xk2-Tz-rlv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRo-yw-ZYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="514" y="30"/>
+        </scene>
+        <!--HomeNavID-->
+        <scene sceneID="oiP-H4-9ap">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="HomeNavID" storyboardName="Home" referencedIdentifier="HomeNavID" id="6qT-Jz-2Zg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="homeDeselected" selectedImage="homeActive" id="Sbn-Dz-yeI">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <color key="badgeColor" red="0.33725490196078434" green="0.16078431372549018" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMR-1z-zvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="-124"/>
+        </scene>
+        <!--AboutNavID-->
+        <scene sceneID="6et-a5-5PG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="About" referencedIdentifier="AboutNavID" id="taa-eF-bgH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sobre" image="tagDeselected" selectedImage="tagSelected" id="gon-rn-rw5">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeL-Xn-whj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="183"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homeActive" width="12.5" height="11.5"/>
+        <image name="homeDeselected" width="12.5" height="11.5"/>
+        <image name="tagDeselected" width="12.5" height="12.5"/>
+        <image name="tagSelected" width="12.5" height="12.5"/>
+    </resources>
+</document>

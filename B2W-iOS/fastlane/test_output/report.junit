@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='B2W-iOSUITests.xctest' tests='17' failures='0'>
+  <testsuite name='B2W_iOSTests.B2W_API_iOSTests' tests='5' failures='0'>
+    <testcase classname='B2W_iOSTests.B2W_API_iOSTests' name='testGetBanners' time='1.027'/>
+    <testcase classname='B2W_iOSTests.B2W_API_iOSTests' name='testGetBestSellers' time='0.386'/>
+    <testcase classname='B2W_iOSTests.B2W_API_iOSTests' name='testGetCategories' time='0.190'/>
+    <testcase classname='B2W_iOSTests.B2W_API_iOSTests' name='testGetProductByCategory' time='0.378'/>
+    <testcase classname='B2W_iOSTests.B2W_API_iOSTests' name='testPostReserveProduct' time='0.193'/>
+  </testsuite>
+  <testsuite name='B2W_iOSTests.B2W_LodjinhaRequest_iOSTest' tests='6' failures='0'>
+    <testcase classname='B2W_iOSTests.B2W_LodjinhaRequest_iOSTest' name='testBannerRequest' time='0.001'/>
+    <testcase classname='B2W_iOSTests.B2W_LodjinhaRequest_iOSTest' name='testBestSellersRequest' time='0.001'/>
+    <testcase classname='B2W_iOSTests.B2W_LodjinhaRequest_iOSTest' name='testProductByCategoryRequest' time='0.001'/>
+    <testcase classname='B2W_iOSTests.B2W_LodjinhaRequest_iOSTest' name='testProductCategoriesRequest' time='0.000'/>
+    <testcase classname='B2W_iOSTests.B2W_LodjinhaRequest_iOSTest' name='testReserveProductRequest' time='0.001'/>
+    <testcase classname='B2W_iOSTests.B2W_LodjinhaRequest_iOSTest' name='testServiceError' time='0.000'/>
+  </testsuite>
+  <testsuite name='B2W_iOSTests.B2W_NetworkConstants_iOSTests' tests='3' failures='0'>
+    <testcase classname='B2W_iOSTests.B2W_NetworkConstants_iOSTests' name='testBaseUrl' time='0.001'/>
+    <testcase classname='B2W_iOSTests.B2W_NetworkConstants_iOSTests' name='testContentTypes' time='0.001'/>
+    <testcase classname='B2W_iOSTests.B2W_NetworkConstants_iOSTests' name='testHTTPHeaderFields' time='0.000'/>
+  </testsuite>
+  <testsuite name='B2W_iOSUITests.B2W_iOSUITests' tests='3' failures='0'>
+    <testcase classname='B2W_iOSUITests.B2W_iOSUITests' name='testHomeViewControllerSwipes' time='24.481'/>
+    <testcase classname='B2W_iOSUITests.B2W_iOSUITests' name='testReserveProductByCategoryFlow' time='13.724'/>
+    <testcase classname='B2W_iOSUITests.B2W_iOSUITests' name='testReserveProductFlow' time='11.559'/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (4.8.0)
+  - FSPagerView (0.8.2)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
+  - SwiftGen (6.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - FSPagerView
+  - SDWebImage
+  - SwiftGen
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - FSPagerView
+    - SDWebImage
+    - SwiftGen
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
+
+PODFILE CHECKSUM: 5b83bfa02782469586000af1c30568ba320749b8
+
+COCOAPODS: 1.5.3

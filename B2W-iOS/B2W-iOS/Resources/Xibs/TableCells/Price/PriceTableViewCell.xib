@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PriceTableViewCell" customModule="B2W_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEN-rk-lpB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="4cb-M5-AIf"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDb-sy-63Y">
+                        <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="E9j-SK-eEg"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por 9999,99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02Q-8B-U7r">
+                        <rect key="frame" x="201.5" y="11" width="103.5" height="21.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wa-CW-ROR">
+                        <rect key="frame" x="15" y="17" width="54" height="12.5"/>
+                        <attributedString key="attributedText">
+                            <fragment content="De: 999,99">
+                                <attributes>
+                                    <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <font key="NSFont" size="11" name="ArialMT"/>
+                                    <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                    <integer key="NSStrikethrough" value="1"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="nDb-sy-63Y" secondAttribute="trailing" id="3KH-G2-OsZ"/>
+                    <constraint firstItem="5wa-CW-ROR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="3Tv-ZT-r67"/>
+                    <constraint firstItem="nDb-sy-63Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="AdJ-JG-i5D"/>
+                    <constraint firstItem="EEN-rk-lpB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gkf-Yg-hVz"/>
+                    <constraint firstItem="02Q-8B-U7r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5wa-CW-ROR" secondAttribute="trailing" constant="8" id="Loi-6j-LS2"/>
+                    <constraint firstItem="02Q-8B-U7r" firstAttribute="top" secondItem="EEN-rk-lpB" secondAttribute="bottom" constant="10" id="Xed-Qa-aJ8"/>
+                    <constraint firstAttribute="trailing" secondItem="EEN-rk-lpB" secondAttribute="trailing" id="kEm-f7-qul"/>
+                    <constraint firstItem="02Q-8B-U7r" firstAttribute="firstBaseline" secondItem="5wa-CW-ROR" secondAttribute="firstBaseline" id="n0C-tb-vZQ"/>
+                    <constraint firstAttribute="trailing" secondItem="02Q-8B-U7r" secondAttribute="trailing" constant="15" id="thj-LR-bXm"/>
+                    <constraint firstItem="nDb-sy-63Y" firstAttribute="top" secondItem="02Q-8B-U7r" secondAttribute="bottom" constant="10" id="uf4-d5-UcY"/>
+                    <constraint firstAttribute="bottom" secondItem="nDb-sy-63Y" secondAttribute="bottom" id="wEg-RV-dNS"/>
+                    <constraint firstItem="EEN-rk-lpB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zcw-kk-f8E"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="priceOff" destination="5wa-CW-ROR" id="cfe-vB-e57"/>
+                <outlet property="salePrice" destination="02Q-8B-U7r" id="XK2-et-vVO"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

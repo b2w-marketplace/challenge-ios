@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5yf-zV-pfE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pacifico-Regular.ttf">
+            <string>Pacifico-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--About View Controller-->
+        <scene sceneID="EJ8-9b-R56">
+            <objects>
+                <viewController id="LOe-oX-hLD" customClass="AboutViewController" customModule="B2W_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A77-aD-JyJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSobre" translatesAutoresizingMaskIntoConstraints="NO" id="X3r-L7-XOt">
+                                <rect key="frame" x="171.5" y="188" width="71" height="76"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a Lodjinha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zo1-45-VMs">
+                                <rect key="frame" x="20" y="324" width="374" height="97"/>
+                                <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="55"/>
+                                <color key="textColor" red="0.40784313729999999" green="0.40784313729999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZT-hM-bXM">
+                                <rect key="frame" x="167" y="665" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="NHu-9T-QmP"/>
+                                    <constraint firstAttribute="height" constant="80" id="fCz-cU-wYQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Renato S. Machado Filho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz9-km-JC0">
+                                <rect key="frame" x="131.5" y="765" width="151.5" height="17"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 de Janeiro de 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSj-zd-liE">
+                                <rect key="frame" x="151" y="785" width="112" height="18"/>
+                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="12"/>
+                                <color key="textColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X3r-L7-XOt" firstAttribute="centerX" secondItem="A77-aD-JyJ" secondAttribute="centerX" id="1aw-kh-7vL"/>
+                            <constraint firstItem="Rz9-km-JC0" firstAttribute="centerX" secondItem="SZT-hM-bXM" secondAttribute="centerX" id="8Sc-SX-r7U"/>
+                            <constraint firstItem="Zo1-45-VMs" firstAttribute="top" secondItem="X3r-L7-XOt" secondAttribute="bottom" constant="60" id="8WB-vP-PDc"/>
+                            <constraint firstItem="Zo1-45-VMs" firstAttribute="leading" secondItem="Dep-j5-hgk" secondAttribute="leading" constant="20" id="ERD-xe-CQ2"/>
+                            <constraint firstItem="PSj-zd-liE" firstAttribute="centerX" secondItem="Rz9-km-JC0" secondAttribute="centerX" id="MNE-mf-I7C"/>
+                            <constraint firstItem="Rz9-km-JC0" firstAttribute="top" secondItem="SZT-hM-bXM" secondAttribute="bottom" constant="20" id="X7e-V4-BEg"/>
+                            <constraint firstItem="Dep-j5-hgk" firstAttribute="trailing" secondItem="Zo1-45-VMs" secondAttribute="trailing" constant="20" id="avI-vi-vy8"/>
+                            <constraint firstItem="X3r-L7-XOt" firstAttribute="top" secondItem="Dep-j5-hgk" secondAttribute="top" constant="100" id="hgt-3t-ubs"/>
+                            <constraint firstItem="PSj-zd-liE" firstAttribute="top" secondItem="Rz9-km-JC0" secondAttribute="bottom" constant="3" id="ny5-Vc-o1q"/>
+                            <constraint firstItem="Zo1-45-VMs" firstAttribute="centerX" secondItem="X3r-L7-XOt" secondAttribute="centerX" id="uAZ-0R-GRC"/>
+                            <constraint firstItem="SZT-hM-bXM" firstAttribute="centerX" secondItem="Dep-j5-hgk" secondAttribute="centerX" id="vuR-ZF-wjN"/>
+                            <constraint firstItem="Dep-j5-hgk" firstAttribute="bottom" secondItem="PSj-zd-liE" secondAttribute="bottom" constant="10" id="ySo-xA-FeF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dep-j5-hgk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zck-dm-uQX"/>
+                    <connections>
+                        <outlet property="developerImage" destination="SZT-hM-bXM" id="gt8-N8-Jb0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNY-yL-p9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="132.58928571428572"/>
+        </scene>
+        <!--Sobre-->
+        <scene sceneID="gij-7w-FbG">
+            <objects>
+                <navigationController storyboardIdentifier="AboutNavID" automaticallyAdjustsScrollViewInsets="NO" id="5yf-zV-pfE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sobre" image="tagDeselected" selectedImage="tagSelected" id="GcM-e9-4lC">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <color key="badgeColor" red="0.33725490196078434" green="0.16078431372549018" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="op3-rv-cRS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LOe-oX-hLD" kind="relationship" relationship="rootViewController" id="fwb-EH-9JN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucd-w7-wgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logoSobre" width="71.5" height="76"/>
+        <image name="tagDeselected" width="12.5" height="12.5"/>
+        <image name="tagSelected" width="12.5" height="12.5"/>
+    </resources>
+</document>

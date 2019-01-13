@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+def shared
+   pod 'SDWebImage'
+   pod 'FSPagerView'
+   pod 'SwiftGen'
+   pod 'Alamofire'
+end
+
+
+target 'B2W-iOS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for B2W-iOS
+  shared
+  
+  target 'B2W-iOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'B2W-iOSUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
