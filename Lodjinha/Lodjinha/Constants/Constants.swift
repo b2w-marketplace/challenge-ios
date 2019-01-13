@@ -25,4 +25,6 @@ struct Constants {
 
     static let Categories = "Categorias"
     static let BestSellers = "Mais Vendidos"
+
+    static let NoProductsLabel = "Não existem produtos nesta categoria\n😢"
 }

@@ -45,6 +45,10 @@ class ProductListViewController: UIViewController {
         viewModel.fetchProducts()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.tableFooterView = UIView()
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ProductInfoSegue" {
             if let viewController = segue.destination as? ProductInfoViewController,
@@ -95,6 +99,19 @@ extension ProductListViewController: ProductListViewModelDelegate {
     }
 
     func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
+        defer {
+            if viewModel.totalCount != 0 {
+                tableView.backgroundView = nil
+            } else {
+                let noDataLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+                noDataLabel.numberOfLines = 0
+                noDataLabel.text = Constants.NoProductsLabel
+                noDataLabel.textColor = .Dark
+                noDataLabel.textAlignment = .center
+                noDataLabel.font = Font(.installed(.RobotoRegular), size: .standard(.title)).instance
+                tableView.backgroundView = noDataLabel
+            }
+        }
         guard let newIndexPathsToReload = newIndexPathsToReload else {
             indicatorView.stopAnimating()
             tableView.isHidden = false

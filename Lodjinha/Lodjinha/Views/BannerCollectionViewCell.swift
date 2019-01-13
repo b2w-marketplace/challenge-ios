@@ -30,6 +30,8 @@ class BannerCollectionViewCell: UICollectionViewCell {
     func configure(with banner: BannerItem?) {
         if let url = banner?.imageUrl {
             imageView.loadImageFromURL(imageUrl: url)
+        } else {
+            imageView.image = nil
         }
     }
 
