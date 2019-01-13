@@ -57,8 +57,8 @@ class HomeViewModel {
         }
     }
 
-    func bestSeller(at index: Int) -> Product {
-        return bestSellers[index]
+    func bestSeller(at index: Int) -> Product? {
+        return bestSellers.count > index ? bestSellers[index] : nil
     }
 
     func fetchBanners() {

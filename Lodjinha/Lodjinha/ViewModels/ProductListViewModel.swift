@@ -11,7 +11,6 @@ import Foundation
 protocol ProductListViewModelDelegate: class {
     func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?)
     func onFetchFailed(with reason: String)
-    func didUpdateTotal()
 }
 
 final class ProductListViewModel {
@@ -22,6 +21,7 @@ final class ProductListViewModel {
     private var total = 0
     private var isFetchInProgress = false
     private var categoryId: Int
+    var completed = false
 
     let request: NetworkService
 
@@ -50,21 +50,20 @@ final class ProductListViewModel {
 
         isFetchInProgress = true
 
-        request.fetch(fromRoute: Routes.Products, categoryId: categoryId, offset: currentPage, limit: currentPage + 10) {[weak self] (result) in
+        request.fetch(fromRoute: Routes.Products, categoryId: categoryId, offset: currentPage, limit: currentPage + 20) {[weak self] (result) in
             guard let `self` = self else { return }
             if result.isSuccess, let productList = result.value {
                 DispatchQueue.main.async {
                     self.isFetchInProgress = false
-                    self.total = productList.total
+                    self.total += productList.products.count
                     self.products.append(contentsOf: productList.products)
-                    if productList.products.count < 10 {
-                        self.total = self.products.count
-                        self.delegate?.didUpdateTotal()
+                    if productList.products.count < 20 {
+                        self.completed = true
                     }
 
-                    self.currentPage += 10
+                    self.currentPage += 20
 
-                    if productList.offset > 10 {
+                    if productList.offset > 20 {
                         let indexPathsToReload = self.calculateIndexPathsToReload(from: productList.products)
                         self.delegate?.onFetchCompleted(with: indexPathsToReload)
                     } else {

@@ -46,6 +46,7 @@ class BannerTableViewCell: UITableViewCell {
 
         pageControl.layer.zPosition = 1
         pageControl.hidesForSinglePage = true
+        pageControl.backgroundColor = .clear
 
     }
 
@@ -53,14 +54,14 @@ class BannerTableViewCell: UITableViewCell {
         self.banners = banners
         if banners != nil {
             pageControl.numberOfPages = banners?.count ?? 0
-            pageControl.setNeedsLayout()
-//            pageControll.alpha = 1
+            pageControl.alpha = 1
             indicatorView.stopAnimating()
         } else {
             pageControl.numberOfPages = 0
-//            pageControll.alpha = 0
+            pageControl.alpha = 0
             indicatorView.startAnimating()
         }
+        collectionView.reloadData()
     }
 }
 

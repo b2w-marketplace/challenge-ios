@@ -29,7 +29,7 @@ class BannerCollectionViewCell: UICollectionViewCell {
 
     func configure(with banner: BannerItem?) {
         if let url = banner?.imageUrl {
-            imageView.loadImageFromURL(imageUrl: url)
+            imageView.loadImageFromURL(imageUrl: url, defaultImage: #imageLiteral(resourceName: "placeholder-wide"))
         } else {
             imageView.image = nil
         }

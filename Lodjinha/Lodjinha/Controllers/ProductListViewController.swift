@@ -33,9 +33,6 @@ class ProductListViewController: UIViewController {
         tableView.rowHeight = .init(100.0)
         tableView.dataSource = self
         tableView.delegate = self
-        if #available(iOS 10.0, *) {
-            tableView.prefetchDataSource = self
-        }
 
         let request = NetworkService(withBaseURL: Constants.BaseUrl)
         viewModel = ProductListViewModel(request: request, delegate: self, categoryId: category.id)
@@ -83,20 +80,15 @@ extension ProductListViewController: UITableViewDelegate {
         }
         self.performSegue(withIdentifier: "ProductInfoSegue", sender: viewModel.product(at: indexPath.row))
     }
-}
 
-extension ProductListViewController: UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        if indexPaths.contains(where: isLoadingCell) {
-            viewModel.fetchProducts()
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.currentCount - 3 && !viewModel.completed {
+            self.viewModel.fetchProducts()
         }
     }
 }
 
 extension ProductListViewController: ProductListViewModelDelegate {
-    func didUpdateTotal() {
-        self.tableView.reloadData()
-    }
 
     func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
         defer {
@@ -118,8 +110,10 @@ extension ProductListViewController: ProductListViewModelDelegate {
             tableView.reloadData()
             return
         }
-        let indexPathsToReload = visibleIndexPathsToReload(intersecting: newIndexPathsToReload)
-        tableView.reloadRows(at: indexPathsToReload, with: .automatic)
+        // Com um total de produtos por categoria seria possível recarregar somente as novas informações.
+        _ = visibleIndexPathsToReload(intersecting: newIndexPathsToReload)
+//        tableView.reloadRows(at: indexPathsToReload, with: .automatic)
+        tableView.reloadData()
     }
 
     func onFetchFailed(with reason: String) {

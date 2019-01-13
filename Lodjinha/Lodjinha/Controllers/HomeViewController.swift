@@ -86,9 +86,9 @@ extension HomeViewController: UITableViewDelegate {
         defer {
             tableView.deselectRow(at: indexPath, animated: true)
         }
-        if indexPath.section == 2 {
+        if indexPath.section == 2, let product = viewModel.bestSeller(at: indexPath.row) {
             self.performSegue(withIdentifier: "ProductInfoSegue",
-                              sender: ProductInfoViewModel(product: viewModel.bestSeller(at: indexPath.row)))
+                              sender: ProductInfoViewModel(product: product))
         }
     }
 }
@@ -110,7 +110,7 @@ extension HomeViewController: UITableViewDataSource {
             if viewModel.isFetchingBanner {
                 cell.configure(with: nil)
             } else {
-                 cell.configure(with: viewModel.banners)
+                cell.configure(with: viewModel.banners)
             }
             return cell
         case 1:
@@ -169,7 +169,7 @@ extension HomeViewController: HomeViewModelDelegate {
     }
 
     func onBannersFetchFailed() {
-
+        print("ErrorFetchingBanners")
     }
 
     func onCategoriesFetchCompleted() {
@@ -177,7 +177,7 @@ extension HomeViewController: HomeViewModelDelegate {
     }
 
     func onCategoriesFetchFailed() {
-
+        print("ErrorFetchingCategories")
     }
 
     func onBestSellersFetchCompleted() {
@@ -185,6 +185,6 @@ extension HomeViewController: HomeViewModelDelegate {
     }
 
     func onBestSellersFetchFailed() {
-
+        print("ErrorFetchingBestSellers")
     }
 }

@@ -52,7 +52,7 @@ class ProductTableViewCell: UITableViewCell {
             titleLabel.alpha = 1
             beforePrice.alpha = 1
             afterPrice.alpha = 1
-            productImage.loadImageFromURL(imageUrl: product.imageUrl)
+            productImage.loadImageFromURL(imageUrl: product.imageUrl, defaultImage: #imageLiteral(resourceName: "placeholder"))
             accessoryType = .disclosureIndicator
             indicatorView.stopAnimating()
         } else {
