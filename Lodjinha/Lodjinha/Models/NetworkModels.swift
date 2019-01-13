@@ -17,7 +17,7 @@ struct Routes {
 
     static let Products = Route<ProductList>(endpoint: "produto")
 
-    static let BestSelling = Route<BestSellers>(endpoint: "produto/maisvendidos")
+    static let BestSellers = Route<BestSellers>(endpoint: "produto/maisvendidos")
 
     static let Categories = Route<CategoryList>(endpoint: "categoria")
 

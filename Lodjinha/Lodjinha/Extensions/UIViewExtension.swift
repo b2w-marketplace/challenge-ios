@@ -21,4 +21,17 @@ extension UIView {
             topBorderView.heightAnchor.constraint(equalToConstant: width)
             ])
     }
+
+    func addBottomBorder(color: UIColor, width: CGFloat) {
+        let bottomBorderView = UIView(frame: CGRect.zero)
+        bottomBorderView.backgroundColor = color
+        self.addSubview(bottomBorderView)
+        bottomBorderView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            bottomBorderView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            bottomBorderView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            bottomBorderView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            bottomBorderView.heightAnchor.constraint(equalToConstant: width)
+            ])
+    }
 }

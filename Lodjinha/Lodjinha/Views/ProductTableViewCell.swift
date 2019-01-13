@@ -36,9 +36,6 @@ class ProductTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        accessoryType = .disclosureIndicator
-        accessoryView?.tintColor = .WarmPurple
-
         indicatorView.hidesWhenStopped = true
         indicatorView.color = .WarmPurple
 
@@ -56,12 +53,14 @@ class ProductTableViewCell: UITableViewCell {
             beforePrice.alpha = 1
             afterPrice.alpha = 1
             productImage.loadImageFromURL(imageUrl: product.imageUrl)
+            accessoryType = .disclosureIndicator
             indicatorView.stopAnimating()
         } else {
             titleLabel.alpha = 0
             beforePrice.alpha = 0
             afterPrice.alpha = 0
             productImage.image = nil
+            accessoryType = .none
             indicatorView.startAnimating()
         }
     }

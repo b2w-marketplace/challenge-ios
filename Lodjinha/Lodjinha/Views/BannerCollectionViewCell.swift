@@ -10,6 +10,13 @@ import UIKit
 
 class BannerCollectionViewCell: UICollectionViewCell {
 
+    let imageView: CachedImageView = {
+        let imageView = CachedImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+
     override func prepareForReuse() {
         super.prepareForReuse()
 
@@ -17,10 +24,24 @@ class BannerCollectionViewCell: UICollectionViewCell {
     }
 
     override func awakeFromNib() {
-
+        setupLayout()
     }
 
-    private func configure(with banner: BannerList?) {
-
+    func configure(with banner: BannerItem?) {
+        if let url = banner?.imageUrl {
+            imageView.loadImageFromURL(imageUrl: url)
+        }
     }
+
+    private func setupLayout() {
+        addSubview(imageView)
+
+        NSLayoutConstraint.activate([
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            imageView.topAnchor.constraint(equalTo: topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            ])
+    }
+
 }

@@ -22,4 +22,7 @@ struct Constants {
     static let OkMessage = "OK"
     static let ErrorMessage = "Ocorreu um erro ao realizar seu pedido, Tente novamente mais tarde"
     static let BookSuccessMessage = "Produto reservado com sucesso"
+
+    static let Categories = "Categorias"
+    static let BestSellers = "Mais Vendidos"
 }

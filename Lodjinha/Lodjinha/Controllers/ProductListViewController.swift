@@ -16,7 +16,7 @@ class ProductListViewController: UIViewController {
     @IBOutlet var indicatorView: UIActivityIndicatorView!
     @IBOutlet var tableView: UITableView!
 
-    var categoryId: Int!
+    var category: Category!
 
     private var viewModel: ProductListViewModel!
 
@@ -38,7 +38,9 @@ class ProductListViewController: UIViewController {
         }
 
         let request = NetworkService(withBaseURL: Constants.BaseUrl)
-        viewModel = ProductListViewModel(request: request, delegate: self, categoryId: categoryId)
+        viewModel = ProductListViewModel(request: request, delegate: self, categoryId: category.id)
+
+        title = category.description
 
         viewModel.fetchProducts()
     }

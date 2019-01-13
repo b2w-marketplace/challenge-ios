@@ -15,7 +15,7 @@ class CachedImageView: UIImageView {
 
     var imageName: String?
 
-    func loadImageFromURL(imageUrl: String, defaultImage: UIImage? = nil, circleImage: Bool = false ) {
+    func loadImageFromURL(imageUrl: String, defaultImage: UIImage? = nil, circleImage: Bool = false) {
 
         if circleImage {
             self.layer.cornerRadius = self.frame.size.width/2
