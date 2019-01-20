@@ -8,6 +8,7 @@ target 'Challange-iOS' do
   pod 'Moya'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Kingfisher', '~> 4.0'
 
   # Pods for Challange-iOS
 

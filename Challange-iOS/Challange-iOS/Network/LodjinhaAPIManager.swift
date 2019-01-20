@@ -55,7 +55,14 @@ extension LodjinhaAPIManager {
         switch result {
         case let .success(response):
             if response.responseClass == .success { return true }
-            else { return false }
+            do {
+                let errorModel = try response.map(ErrorModel.self)
+                if let message = errorModel.mensagem {
+                    failure?(message)
+                }
+            } catch {
+               failure?(nil) 
+            }
             
         case let .failure(error):
             guard let error = error as? CustomStringConvertible else {
@@ -79,13 +86,13 @@ extension LodjinhaAPIManager {
 
 protocol LodjinhaAPICalls {
     
-    func callAPI<T: Decodable>(failure: @escaping ErrorBlock, completion: @escaping (T?) -> Void)
+    func banners(failure: @escaping ErrorBlock, completion: @escaping (BannerModel?) -> Void)
 }
 
 extension LodjinhaAPIManager: LodjinhaAPICalls {
     
-    func callAPI<T: Decodable>(failure: @escaping ErrorBlock, completion: @escaping (T?) -> Void) {
-        request(.banner, type: T.self, failure: failure, completion: completion)
+    func banners(failure: @escaping ErrorBlock, completion: @escaping (BannerModel?) -> Void) {
+        request(.banner, type: BannerModel.self, failure: failure, completion: completion)
     }
 
 }
