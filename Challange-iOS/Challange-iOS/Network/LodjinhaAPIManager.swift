@@ -87,12 +87,22 @@ extension LodjinhaAPIManager {
 protocol LodjinhaAPICalls {
     
     func banners(failure: @escaping ErrorBlock, completion: @escaping (BannerModel?) -> Void)
+    func categories(failure: @escaping ErrorBlock, completion: @escaping (CategoryModel?) -> Void)
+    func mostSold(failure: @escaping ErrorBlock, completion: @escaping (ProductModel?) -> Void)
 }
 
 extension LodjinhaAPIManager: LodjinhaAPICalls {
     
     func banners(failure: @escaping ErrorBlock, completion: @escaping (BannerModel?) -> Void) {
         request(.banner, type: BannerModel.self, failure: failure, completion: completion)
+    }
+    
+    func categories(failure: @escaping ErrorBlock, completion: @escaping (CategoryModel?) -> Void) {
+        request(.category, type: CategoryModel.self, failure: failure, completion: completion)
+    }
+    
+    func mostSold(failure: @escaping ErrorBlock, completion: @escaping (ProductModel?) -> Void) {
+        request(.mostSold, type: ProductModel.self, failure: failure, completion: completion)
     }
 
 }

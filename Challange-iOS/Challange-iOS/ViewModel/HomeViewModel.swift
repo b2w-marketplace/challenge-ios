@@ -15,26 +15,32 @@ import Kingfisher
 class HomeViewModel {
     
     let banners = BehaviorRelay<[Banner]>(value: [])
-    let isSuccess = BehaviorRelay<Bool>(value: false)
     let isLoading = BehaviorRelay<Bool>(value: false)
     let errorMsg = BehaviorRelay<String>(value: "")
+    
+    let categories = BehaviorRelay<[Category]>(value: [])
+    let isLoadingCategories = BehaviorRelay<Bool>(value: false)
+    let errorMsgCategories = BehaviorRelay<String>(value: "")
+    
+    let mostSold = BehaviorRelay<[Products]>(value: [])
+    let isLoadingMostSold = BehaviorRelay<Bool>(value: false)
+    let errorMsgMostSold = BehaviorRelay<String>(value: "")
     
     let pageIndex = BehaviorRelay<Int>(value: 0)
     
     func getBanners() {
         
         isLoading.accept(true)
-        isSuccess.accept(true)
         errorMsg.accept("")
         
         LodjinhaAPIManager.shared.banners(failure: { (error) in
-            self.isSuccess.accept(false)
             self.isLoading.accept(false)
             self.errorMsg.accept(error ?? "Algo deu errado")
         }) { (result) in
             if let banners = result?.data {
                 self.banners.accept(banners)
             }
+            self.isLoading.accept(false)
         }
     }
     
@@ -51,6 +57,38 @@ class HomeViewModel {
             }
         }
         return bannerViews
+    }
+    
+    func getCategories() {
+        
+        isLoadingCategories.accept(true)
+        errorMsgCategories.accept("")
+        
+        LodjinhaAPIManager.shared.categories(failure: { (error) in
+            self.isLoadingCategories.accept(false)
+            self.errorMsgCategories.accept(error ?? "Algo deu errado")
+        }) { (result) in
+            if let categories = result?.data {
+                self.categories.accept(categories)
+            }
+             self.isLoadingCategories.accept(false)
+        }
+    }
+    
+    func getMostSold() {
+        
+        isLoadingMostSold.accept(true)
+        errorMsgMostSold.accept("")
+        
+        LodjinhaAPIManager.shared.mostSold(failure: { (error) in
+            self.isLoadingMostSold.accept(false)
+            self.errorMsgMostSold.accept(error ?? "Algo deu errado")
+        }) { (result) in
+            if let mostSold = result?.data {
+                self.mostSold.accept(mostSold)
+            }
+            self.isLoadingMostSold.accept(false)
+        }
     }
     
 }
