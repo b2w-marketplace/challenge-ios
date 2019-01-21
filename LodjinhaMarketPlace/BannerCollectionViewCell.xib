@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCell" id="gTV-IL-0wX" customClass="BannerCollectionViewCell" customModule="LodjinhaMarketPlace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiA-oZ-cTb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="Ron-GX-1LK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ron-GX-1LK" firstAttribute="leading" secondItem="ZiA-oZ-cTb" secondAttribute="leading" id="SNl-xq-rv6"/>
+                            <constraint firstItem="Ron-GX-1LK" firstAttribute="top" secondItem="ZiA-oZ-cTb" secondAttribute="top" id="SqS-Da-pDO"/>
+                            <constraint firstAttribute="bottom" secondItem="Ron-GX-1LK" secondAttribute="bottom" id="Y9m-mx-qIh"/>
+                            <constraint firstAttribute="trailing" secondItem="Ron-GX-1LK" secondAttribute="trailing" id="sbz-Iy-36N"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ZiA-oZ-cTb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Dcv-jI-SQK"/>
+                <constraint firstItem="ZiA-oZ-cTb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Hgc-1G-WeK"/>
+                <constraint firstAttribute="trailing" secondItem="ZiA-oZ-cTb" secondAttribute="trailing" id="Phn-GX-saa"/>
+                <constraint firstAttribute="bottom" secondItem="ZiA-oZ-cTb" secondAttribute="bottom" id="yOd-Y3-WaS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="bannerContainerView" destination="ZiA-oZ-cTb" id="hWw-6K-evZ"/>
+                <outlet property="bannerImageView" destination="Ron-GX-1LK" id="wtT-vM-zpY"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Banner" width="324" height="231"/>
+    </resources>
+</document>
