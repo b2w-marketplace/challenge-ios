@@ -21,3 +21,7 @@ struct Products: Decodable {
     let urlImagem: String?
     let categoria: Category?
 }
+
+struct BookResult: Decodable {
+    let result: String?
+}

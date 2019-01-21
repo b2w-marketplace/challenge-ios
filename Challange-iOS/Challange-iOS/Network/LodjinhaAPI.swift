@@ -15,6 +15,7 @@ enum LodjinhaAPI {
     case banner
     case products
     case mostSold
+    case productsByCategory(offset: Int, categoryID: Int)
     case product(productID: Int)
     case saveProduct(productID: Int)
     
@@ -23,7 +24,13 @@ enum LodjinhaAPI {
 extension LodjinhaAPI : TargetType {
     
     var baseURL: URL {
-        return URL(string: Config.Server.url)!
+        switch self {
+        case .productsByCategory(let offset, let categoryID):
+            return URL(string: Config.Server.url+"produto?offset=\(offset)&limit=20&categoriaId=\(categoryID)")!
+        default:
+            return URL(string: Config.Server.url)!
+        }
+        
     }
     
     var path: String {
@@ -36,18 +43,20 @@ extension LodjinhaAPI : TargetType {
             return "produto"
         case .mostSold:
             return "produto/maisvendidos"
+        case .productsByCategory:
+            return ""
         case .product(let productID), .saveProduct(let productID):
             return "produto/\(productID)"
+        
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .saveProduct(let produtcID):
+        case .saveProduct:
             return .post
         default:
             return .get
-            
         }
     }
     
@@ -66,11 +75,19 @@ extension LodjinhaAPI : TargetType {
         
     }
     
+    var parameterEncoding: ParameterEncoding {
+        switch self {
+        case .productsByCategory:
+            return URLEncoding.queryString
+        default:
+            return JSONEncoding.default
+        }
+    }
+
     var headers: [String : String]? {
         let headers: [String : String] = [
             "Content-Type": "application/json"
         ]
-        
         return headers
     }
     

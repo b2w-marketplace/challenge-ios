@@ -89,6 +89,9 @@ protocol LodjinhaAPICalls {
     func banners(failure: @escaping ErrorBlock, completion: @escaping (BannerModel?) -> Void)
     func categories(failure: @escaping ErrorBlock, completion: @escaping (CategoryModel?) -> Void)
     func mostSold(failure: @escaping ErrorBlock, completion: @escaping (ProductModel?) -> Void)
+    func productsByCategory(byOffset offset: Int, andCategory categoryID: Int, failure: @escaping ErrorBlock, completion: @escaping (ProductModel?) -> Void)
+    func product(byId productID: Int, failure: @escaping ErrorBlock, completion: @escaping (Products?) -> Void)
+    func bookProduct(byId productID: Int, failure: @escaping ErrorBlock, completion: @escaping (BookResult?) -> Void)
 }
 
 extension LodjinhaAPIManager: LodjinhaAPICalls {
@@ -103,6 +106,18 @@ extension LodjinhaAPIManager: LodjinhaAPICalls {
     
     func mostSold(failure: @escaping ErrorBlock, completion: @escaping (ProductModel?) -> Void) {
         request(.mostSold, type: ProductModel.self, failure: failure, completion: completion)
+    }
+    
+    func productsByCategory(byOffset offset: Int, andCategory categoryID: Int, failure: @escaping ErrorBlock, completion: @escaping (ProductModel?) -> Void) {
+        request(.productsByCategory(offset: offset, categoryID: categoryID), type: ProductModel.self, failure: failure, completion: completion)
+    }
+    
+    func product(byId productID: Int, failure: @escaping ErrorBlock, completion: @escaping (Products?) -> Void) {
+        request(.product(productID: productID), type: Products.self, failure: failure, completion: completion)
+    }
+
+    func bookProduct(byId productID: Int, failure: @escaping ErrorBlock, completion: @escaping (BookResult?) -> Void) {
+        request(.saveProduct(productID: productID), type: BookResult.self, failure: failure, completion: completion)
     }
 
 }

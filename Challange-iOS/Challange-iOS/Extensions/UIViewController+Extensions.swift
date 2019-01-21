@@ -20,7 +20,7 @@ extension UIViewController {
         title.center = view.center
         title.textAlignment = NSTextAlignment.center
         title.textColor = UIColor.white
-        title.font = UIFont(name: "Pacifico", size: 17.0)
+        title.font = UIFont(name: "Pacifico-Regular", size: 17.0)
         
         
         let imageAspect = imageView.image!.size.width/imageView.image!.size.height
@@ -31,6 +31,14 @@ extension UIViewController {
         view.addSubview(imageView)
         
         return view
+    }
+    
+    func presentMessage(_ message: String) {
+        let alertController = UIAlertController(title: "Alerta",
+                                                message: message,
+                                                preferredStyle: .alert)
+        alertController.addAction(.init(title: "OK", style: .default))
+        self.present(alertController, animated: true)
     }
    
 }

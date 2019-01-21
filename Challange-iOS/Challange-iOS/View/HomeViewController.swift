@@ -35,6 +35,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UITableVie
         bindTableView()
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
 
     func setupNavigation() {
         self.navigationItem.titleView = self.setupNavigationView()
@@ -75,7 +80,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UITableVie
         collectionView.rx
             .modelSelected(Category.self)
             .subscribe(onNext:  { value in
-
+                if let categoryID = value.id {
+                    self.callProductsViewController(withCategoryID: categoryID)
+                }
             })
             .disposed(by: disposeBag)
     }
@@ -97,9 +104,25 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UITableVie
         tableView.rx
             .modelSelected(Products.self)
             .subscribe(onNext:  { value in
-                
+                if let productId = value.id {
+                    self.callProductDetailViewController(withProductID: productId)
+                }
             })
             .disposed(by: disposeBag)
+    }
+    
+    func callProductsViewController(withCategoryID categoryID: Int) {
+        let storyboard = UIStoryboard(storyboard: .main)
+        let viewController: ProductsViewController = storyboard.instantiateViewController(withIdentifier: "ProductsViewController") as! ProductsViewController
+        viewController.viewModel.category.accept(categoryID)
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func callProductDetailViewController(withProductID productID: Int) {
+        let storyboard = UIStoryboard(storyboard: .main)
+        let viewController: ProductDetailViewController = storyboard.instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
+        viewController.productID = productID
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
