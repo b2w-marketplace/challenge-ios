@@ -13,6 +13,10 @@ Serão considerados bônus:</br>
 - UI Testing </br>
 - Unit Testing
 
+## PRÉ-REQUISITO
+
+Após executar um clone ou merge, executar o comando `pod install` dentro do diretório para instalar as dependências.
+ 
 ## DESAFIO
 
 ### 1 - Home
