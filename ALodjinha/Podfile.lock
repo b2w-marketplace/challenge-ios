@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Kingfisher (4.10.0)
+  - ObjectMapper (3.3.0)
+  - PKHUD (5.2.1)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - ObjectMapper
+  - "PKHUD (from `git@github.com:pkluz/PKHUD.git`)"
+  - RxCocoa
+  - RxSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - ObjectMapper
+    - RxCocoa
+    - RxSwift
+
+EXTERNAL SOURCES:
+  PKHUD:
+    :git: "git@github.com:pkluz/PKHUD.git"
+
+CHECKOUT OPTIONS:
+  PKHUD:
+    :commit: ec32e5b75adc51393e774be01e2b25313bed969a
+    :git: "git@github.com:pkluz/PKHUD.git"
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+
+PODFILE CHECKSUM: bd796f4c561bbee04dc8bad33512374110963b7e
+
+COCOAPODS: 1.5.3
