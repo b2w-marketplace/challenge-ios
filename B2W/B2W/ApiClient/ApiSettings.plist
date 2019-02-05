@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>baseImageURL</key>
+	<string>https://images-submarino.b2w.io/</string>
+	<key>apiKey</key>
+	<string>8223ce8d0796ea2cce505644afa87501</string>
+	<key>version</key>
+	<string>3/</string>
+	<key>baseURL</key>
+	<string>https://alodjinha.herokuapp.com/</string>
+</dict>
+</plist>
