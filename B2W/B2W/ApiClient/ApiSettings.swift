@@ -31,7 +31,7 @@ class ApiSettings: NSObject {
         return stylesheet.object(forKey: item)! as AnyObject
     }
     
-    //MARK: - Settings of The Movie DB
+    //MARK: - Settings, more option just to show...
     
     func loadAllItens() {
         self.version = (self.getApiSettingsItem("version") as! String)

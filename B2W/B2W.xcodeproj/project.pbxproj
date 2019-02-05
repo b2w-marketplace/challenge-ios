@@ -18,6 +18,16 @@
 		8744B78F22092F7000C77456 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B78E22092F7000C77456 /* ApiClient.swift */; };
 		8744B791220932A200C77456 /* BannerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B790220932A200C77456 /* BannerClient.swift */; };
 		8744B794220933D600C77456 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B793220933D600C77456 /* Banner.swift */; };
+		8744B797220939B400C77456 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B796220939B400C77456 /* MainTabBar.swift */; };
+		8744B79922093AC700C77456 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B79822093AC700C77456 /* TabBarPresenter.swift */; };
+		8744B79C22093C1D00C77456 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B79B22093C1D00C77456 /* MainRouter.swift */; };
+		8744B7A122093E4200C77456 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B79F22093E4200C77456 /* HomeVC.swift */; };
+		8744B7A222093E4200C77456 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8744B7A022093E4200C77456 /* HomeVC.xib */; };
+		8744B7A522093E6000C77456 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B7A322093E6000C77456 /* AboutVC.swift */; };
+		8744B7A622093E6000C77456 /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8744B7A422093E6000C77456 /* AboutVC.xib */; };
+		8744B7A822093E8000C77456 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B7A722093E8000C77456 /* AboutPresenter.swift */; };
+		8744B7AA22093E9200C77456 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B7A922093E9200C77456 /* HomePresenter.swift */; };
+		8744B7AC220941D500C77456 /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8744B7AB220941D400C77456 /* TabBar.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +66,16 @@
 		8744B78E22092F7000C77456 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		8744B790220932A200C77456 /* BannerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerClient.swift; sourceTree = "<group>"; };
 		8744B793220933D600C77456 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		8744B796220939B400C77456 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		8744B79822093AC700C77456 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		8744B79B22093C1D00C77456 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		8744B79F22093E4200C77456 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = B2W/TabBar/Home/HomeVC.swift; sourceTree = SOURCE_ROOT; };
+		8744B7A022093E4200C77456 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeVC.xib; path = B2W/TabBar/Home/HomeVC.xib; sourceTree = SOURCE_ROOT; };
+		8744B7A322093E6000C77456 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		8744B7A422093E6000C77456 /* AboutVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
+		8744B7A722093E8000C77456 /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		8744B7A922093E9200C77456 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		8744B7AB220941D400C77456 /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBar.xcassets; sourceTree = "<group>"; };
 		BFF98ABEBB85F4B5E5C5185E /* Pods-B2W.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2W.debug.xcconfig"; path = "Pods/Target Support Files/Pods-B2W/Pods-B2W.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,10 +140,12 @@
 			children = (
 				8744B78922092B4C00C77456 /* ApiClient */,
 				8744B7922209339600C77456 /* Models */,
-				8744B7852209270000C77456 /* Resource */,
 				8744B7572209264200C77456 /* AppDelegate.swift */,
 				8744B7602209264400C77456 /* LaunchScreen.storyboard */,
 				8744B7632209264400C77456 /* Info.plist */,
+				8744B79A22093C0A00C77456 /* Router */,
+				8744B7952209395300C77456 /* TabBar */,
+				8744B7852209270000C77456 /* Resource */,
 			);
 			path = B2W;
 			sourceTree = "<group>";
@@ -150,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				8744B7862209270000C77456 /* AppIcon.xcassets */,
+				8744B7AB220941D400C77456 /* TabBar.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -173,6 +196,45 @@
 			name = Models;
 			path = B2W/Models;
 			sourceTree = SOURCE_ROOT;
+		};
+		8744B7952209395300C77456 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8744B796220939B400C77456 /* MainTabBar.swift */,
+				8744B79822093AC700C77456 /* TabBarPresenter.swift */,
+				8744B79E22093DC300C77456 /* About */,
+				8744B79D22093DBB00C77456 /* Home */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		8744B79A22093C0A00C77456 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8744B79B22093C1D00C77456 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8744B79D22093DBB00C77456 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8744B79F22093E4200C77456 /* HomeVC.swift */,
+				8744B7A022093E4200C77456 /* HomeVC.xib */,
+				8744B7A922093E9200C77456 /* HomePresenter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8744B79E22093DC300C77456 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				8744B7A322093E6000C77456 /* AboutVC.swift */,
+				8744B7A422093E6000C77456 /* AboutVC.xib */,
+				8744B7A722093E8000C77456 /* AboutPresenter.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
 		};
 		9924EB291C797F9966A76F4D /* Pods */ = {
 			isa = PBXGroup;
@@ -290,8 +352,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8744B7872209270000C77456 /* AppIcon.xcassets in Resources */,
+				8744B7A222093E4200C77456 /* HomeVC.xib in Resources */,
 				8744B7622209264400C77456 /* LaunchScreen.storyboard in Resources */,
 				8744B78B22092B8000C77456 /* ApiSettings.plist in Resources */,
+				8744B7A622093E6000C77456 /* AboutVC.xib in Resources */,
+				8744B7AC220941D500C77456 /* TabBar.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,8 +424,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8744B797220939B400C77456 /* MainTabBar.swift in Sources */,
+				8744B79C22093C1D00C77456 /* MainRouter.swift in Sources */,
+				8744B79922093AC700C77456 /* TabBarPresenter.swift in Sources */,
+				8744B7AA22093E9200C77456 /* HomePresenter.swift in Sources */,
+				8744B7A822093E8000C77456 /* AboutPresenter.swift in Sources */,
+				8744B7A122093E4200C77456 /* HomeVC.swift in Sources */,
 				8744B7582209264200C77456 /* AppDelegate.swift in Sources */,
 				8744B78D22092E3600C77456 /* ApiSettings.swift in Sources */,
+				8744B7A522093E6000C77456 /* AboutVC.swift in Sources */,
 				8744B794220933D600C77456 /* Banner.swift in Sources */,
 				8744B791220932A200C77456 /* BannerClient.swift in Sources */,
 				8744B78F22092F7000C77456 /* ApiClient.swift in Sources */,
