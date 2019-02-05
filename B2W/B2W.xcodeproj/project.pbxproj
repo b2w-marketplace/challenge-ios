@@ -16,6 +16,8 @@
 		8744B78B22092B8000C77456 /* ApiSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8744B78A22092B8000C77456 /* ApiSettings.plist */; };
 		8744B78D22092E3600C77456 /* ApiSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B78C22092E3600C77456 /* ApiSettings.swift */; };
 		8744B78F22092F7000C77456 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B78E22092F7000C77456 /* ApiClient.swift */; };
+		8744B791220932A200C77456 /* BannerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B790220932A200C77456 /* BannerClient.swift */; };
+		8744B794220933D600C77456 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B793220933D600C77456 /* Banner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		8744B78A22092B8000C77456 /* ApiSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiSettings.plist; sourceTree = "<group>"; };
 		8744B78C22092E3600C77456 /* ApiSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSettings.swift; sourceTree = "<group>"; };
 		8744B78E22092F7000C77456 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		8744B790220932A200C77456 /* BannerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerClient.swift; sourceTree = "<group>"; };
+		8744B793220933D600C77456 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		BFF98ABEBB85F4B5E5C5185E /* Pods-B2W.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2W.debug.xcconfig"; path = "Pods/Target Support Files/Pods-B2W/Pods-B2W.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				8744B78922092B4C00C77456 /* ApiClient */,
+				8744B7922209339600C77456 /* Models */,
 				8744B7852209270000C77456 /* Resource */,
 				8744B7572209264200C77456 /* AppDelegate.swift */,
 				8744B7602209264400C77456 /* LaunchScreen.storyboard */,
@@ -155,9 +160,19 @@
 				8744B78A22092B8000C77456 /* ApiSettings.plist */,
 				8744B78C22092E3600C77456 /* ApiSettings.swift */,
 				8744B78E22092F7000C77456 /* ApiClient.swift */,
+				8744B790220932A200C77456 /* BannerClient.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
+		};
+		8744B7922209339600C77456 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8744B793220933D600C77456 /* Banner.swift */,
+			);
+			name = Models;
+			path = B2W/Models;
+			sourceTree = SOURCE_ROOT;
 		};
 		9924EB291C797F9966A76F4D /* Pods */ = {
 			isa = PBXGroup;
@@ -346,6 +361,8 @@
 			files = (
 				8744B7582209264200C77456 /* AppDelegate.swift in Sources */,
 				8744B78D22092E3600C77456 /* ApiSettings.swift in Sources */,
+				8744B794220933D600C77456 /* Banner.swift in Sources */,
+				8744B791220932A200C77456 /* BannerClient.swift in Sources */,
 				8744B78F22092F7000C77456 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

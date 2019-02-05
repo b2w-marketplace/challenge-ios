@@ -16,17 +16,19 @@ class ApiClient: NSObject {
     
     //MARK: - Create Request
     
-    func createRequest(_ url: String, method: HTTPMethod, parameters: [String]) -> URLRequest{
+    func createRequest(_ url: String, method: HTTPMethod, parameters: [String:String]) -> URLRequest{
         let fullURL = hostUrl + url
         var requestURL : URL!
         
-        //for example with dictionary parameters
-        //var mutableParameters = parameters
-        //mutableParameters["api_key"] = ApiSettings.sharedInstance.apiKey
-        //let parameterString = mutableParameters.stringFromHttpParameters()
-        //requestURL = URL(string:"\(fullURL)?\(parameterString)")!
+        let mutableParameters = parameters
         
-        requestURL = URL(string:"\(fullURL)\(parameters.split(separator: "/"))")!
+        //for example, with a fixed parameter
+        
+        //var mutableParameters = parameters
+        //mutableParameters["api_key"] = TMDBApiSettings.sharedInstance.apiKey
+        
+        let parameterString = mutableParameters.stringFromHttpParameters()
+        requestURL = URL(string:"\(fullURL)?\(parameterString)")!
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = method.rawValue

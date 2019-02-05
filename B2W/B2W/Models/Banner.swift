@@ -9,5 +9,17 @@
 import UIKit
 
 class Banner: NSObject {
-
+    var id: String?
+    var urlImagem: String?
+    var linkUrl: String?
+    
+    init(data: NSDictionary){
+        super.init()
+        
+        if let id = data.object(forKey: "id") {
+            self.id = String(describing: id)
+        }
+        self.urlImagem = data.object(forKey: "urlImagem") as? String
+        self.linkUrl = data.object(forKey: "linkUrl") as? String
+    }
 }
