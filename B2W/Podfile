@@ -1,0 +1,15 @@
+# Podfile
+
+platform :ios, '9.0'
+use_frameworks!
+
+# My other pods
+
+def frameworks_pods
+    pod 'Alamofire'
+    pod 'SDWebImage/WebP'
+end
+
+target ‘B2W’ do
+    frameworks_pods
+end
