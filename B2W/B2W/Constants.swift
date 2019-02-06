@@ -12,3 +12,8 @@ import Foundation
 
 let kAbout = "SOBRE"
 let kHome = "Home"
+
+//MARK: - Cell Keys
+
+let kBannerCell = "BannerCell"
+let kCategoryCell = "CategoryCell"

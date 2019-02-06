@@ -11,7 +11,7 @@ import UIKit
 class CategoryClient: NSObject {
     //MARK: - Category List
     
-    func getBanner(successHandler: @escaping (_ responseObject: Array<Category>?) -> (), errorHandler: @escaping (_ errorObject: NSError?, _ isCancelled: Bool) -> ()) -> URLSessionTask
+    func getCategoryList(successHandler: @escaping (_ responseObject: Array<Category>?) -> (), errorHandler: @escaping (_ errorObject: NSError?, _ isCancelled: Bool) -> ()) -> URLSessionTask
     {
         let url = "categoria"
         let parameters: [String: String] = [:]

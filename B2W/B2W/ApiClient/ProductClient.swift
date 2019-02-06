@@ -11,20 +11,20 @@ import UIKit
 class ProductClient: NSObject {
     //MARK: - Best Seller List
     
-    func getBestSellerProducts(successHandler: @escaping (_ responseObject: Array<Category>?) -> (), errorHandler: @escaping (_ errorObject: NSError?, _ isCancelled: Bool) -> ()) -> URLSessionTask
+    func getBestSellerProducts(successHandler: @escaping (_ responseObject: Array<Product>?) -> (), errorHandler: @escaping (_ errorObject: NSError?, _ isCancelled: Bool) -> ()) -> URLSessionTask
     {
-        let url = "produto"
+        let url = "produto/maisvendidos"
         let parameters: [String: String] = [:]
         
         let request = ApiClient().createRequest(url, method: .get, parameters: parameters)
         return ApiClient().executeWithHandler(request, successHandler: { data in
-            successHandler(CategoryClient.parseCategoryList(data: data as! NSDictionary))
+            successHandler(ProductClient.parseProductList(data: data as! NSDictionary))
         }, errorHandler: errorHandler)
     }
     
     //MARK: - Parse Product List
     
-    class func parseCategoryList(data: NSDictionary) -> Array<Product>?{
+    class func parseProductList(data: NSDictionary) -> Array<Product>?{
         var productList = [Product]()
         
         let arrayProduct: NSArray = data.object(forKey: "data") as! NSArray
