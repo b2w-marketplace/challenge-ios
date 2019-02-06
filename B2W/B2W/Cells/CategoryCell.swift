@@ -17,7 +17,7 @@ class CategoryCell: UICollectionViewCell {
     func bind(category: Category){
         if let stringUrl = category.urlImagem{
             if let url = URL(string: stringUrl){
-                self.categoryImage.sd_setImage(with: url, completed: nil)
+                categoryImage.sd_setImage(with: url, completed: nil)
             }
         }
         

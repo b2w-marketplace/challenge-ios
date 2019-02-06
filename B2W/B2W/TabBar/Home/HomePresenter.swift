@@ -25,14 +25,19 @@ class HomePresenter: NSObject, UICollectionViewDelegate, UICollectionViewDataSou
         
         homeView.categoryCollection.delegate = self
         homeView.categoryCollection.dataSource = self
+        
+        homeView.productCollection.delegate = self
+        homeView.productCollection.dataSource = self
     }
     
     func didLoad(){
         registerCollectionDelegate()
         
         homeInteractor.loadHomeContent {
+            sleep(2)
             self.homeView.bannerCollection.reloadData()
             self.homeView.categoryCollection.reloadData()
+            self.homeView.productCollection.reloadData()
         }
     }
     
@@ -45,14 +50,13 @@ class HomePresenter: NSObject, UICollectionViewDelegate, UICollectionViewDataSou
         case homeView.categoryCollection:
             return homeInteractor.categoryList.count
         case homeView.productCollection:
-            return homeInteractor.productList.count
+            return homeInteractor.productList.count > 0 ? homeView.limitProducts : 0
         default:
             return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         switch collectionView {
         case homeView.bannerCollection:
             let cell: BannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: kBannerCell, for: indexPath) as! BannerCell
@@ -69,10 +73,10 @@ class HomePresenter: NSObject, UICollectionViewDelegate, UICollectionViewDataSou
             
             return cell
         case homeView.productCollection:
-            let cell: BannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: kBannerCell, for: indexPath) as! BannerCell
+            let cell: ProductCell = collectionView.dequeueReusableCell(withReuseIdentifier: kProductCell, for: indexPath) as! ProductCell
             
-            let banner = homeInteractor.bannerList[indexPath.row]
-            cell.bind(banner: banner)
+            let product = homeInteractor.productList[indexPath.row]
+            cell.bind(product: product)
             
             return cell
         default:
@@ -103,7 +107,7 @@ class HomePresenter: NSObject, UICollectionViewDelegate, UICollectionViewDataSou
         case homeView.categoryCollection:
             return CGSize(width: homeView.categoryCollection.frame.height * 0.8, height: homeView.categoryCollection.frame.height)
         case homeView.productCollection:
-            return homeView.bannerCollection.frame.size
+            return CGSize(width: homeView.productCollection.frame.width, height: homeView.productCollection.frame.height / CGFloat(homeView.limitProducts))
         default:
             return CGSize(width: 0.0, height: 0.0)
         }

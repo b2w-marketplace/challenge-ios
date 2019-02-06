@@ -15,6 +15,8 @@ protocol HomeVCDelegate {
 class HomeVC: UIViewController {
     var delegate: HomeVCDelegate?
 
+    let limitProducts = UIDevice.current.userInterfaceIdiom == .pad ? 6 : 4
+    
     @IBOutlet weak var bannerPageControl: UIPageControl!
     
     @IBOutlet weak var bannerCollection: UICollectionView!
@@ -26,10 +28,19 @@ class HomeVC: UIViewController {
         
         registerCells()
         delegate?.didLoad()
+        
+        if #available(iOS 11.0, *) {
+            bannerCollection.contentInsetAdjustmentBehavior = .never
+        }
+        
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.tabBarController?.tabBar.isTranslucent = false
     }
     
     func registerCells(){
         bannerCollection.register(UINib(nibName: kBannerCell, bundle: nil), forCellWithReuseIdentifier: kBannerCell)
         categoryCollection.register(UINib(nibName: kCategoryCell, bundle: nil), forCellWithReuseIdentifier: kCategoryCell)
+        productCollection.register(UINib(nibName: kProductCell, bundle: nil), forCellWithReuseIdentifier: kProductCell)
     }
 }

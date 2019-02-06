@@ -15,7 +15,7 @@ class BannerCell: UICollectionViewCell {
     func bind(banner: Banner){
         if let stringUrl = banner.urlImagem{
             if let url = URL(string: stringUrl){
-                self.bannerImage.sd_setImage(with: url, completed: nil)
+                bannerImage.sd_setImage(with: url, completed: nil)
             }
         }
     }

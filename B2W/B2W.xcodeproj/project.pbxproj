@@ -40,6 +40,8 @@
 		8771E2C5220A856600E98B36 /* BannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8771E2C3220A856600E98B36 /* BannerCell.xib */; };
 		8771E2C8220A96C600E98B36 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8771E2C6220A96C600E98B36 /* CategoryCell.swift */; };
 		8771E2C9220A96C600E98B36 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8771E2C7220A96C600E98B36 /* CategoryCell.xib */; };
+		8771E2CC220A9DB000E98B36 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8771E2CA220A9DB000E98B36 /* ProductCell.swift */; };
+		8771E2CD220A9DB000E98B36 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8771E2CB220A9DB000E98B36 /* ProductCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		8771E2C3220A856600E98B36 /* BannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCell.xib; sourceTree = "<group>"; };
 		8771E2C6220A96C600E98B36 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		8771E2C7220A96C600E98B36 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		8771E2CA220A9DB000E98B36 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		8771E2CB220A9DB000E98B36 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		BFF98ABEBB85F4B5E5C5185E /* Pods-B2W.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2W.debug.xcconfig"; path = "Pods/Target Support Files/Pods-B2W/Pods-B2W.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,8 @@
 				8771E2C3220A856600E98B36 /* BannerCell.xib */,
 				8771E2C6220A96C600E98B36 /* CategoryCell.swift */,
 				8771E2C7220A96C600E98B36 /* CategoryCell.xib */,
+				8771E2CA220A9DB000E98B36 /* ProductCell.swift */,
+				8771E2CB220A9DB000E98B36 /* ProductCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				87381A91220A1FB600EE43D9 /* Home.xcassets in Resources */,
 				8771E2C5220A856600E98B36 /* BannerCell.xib in Resources */,
 				8744B7A622093E6000C77456 /* AboutVC.xib in Resources */,
+				8771E2CD220A9DB000E98B36 /* ProductCell.xib in Resources */,
 				8771E2C9220A96C600E98B36 /* CategoryCell.xib in Resources */,
 				8744B7AC220941D500C77456 /* TabBar.xcassets in Resources */,
 			);
@@ -472,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8744B797220939B400C77456 /* MainTabBar.swift in Sources */,
+				8771E2CC220A9DB000E98B36 /* ProductCell.swift in Sources */,
 				8771E2C4220A856600E98B36 /* BannerCell.swift in Sources */,
 				8744B79C22093C1D00C77456 /* MainRouter.swift in Sources */,
 				8744B79922093AC700C77456 /* TabBarPresenter.swift in Sources */,

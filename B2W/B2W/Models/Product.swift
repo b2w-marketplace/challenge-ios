@@ -20,8 +20,12 @@ class Product: BaseContent {
         
         name = data.object(forKey: "nome") as? String
         productDescription = data.object(forKey: "descricao") as? String
-        price = data.object(forKey: "precoDe") as? String
-        discoutedPrice = data.object(forKey: "precoPor") as? String
+        if let price = data.object(forKey: "precoDe") {
+            self.price = String(describing: price)
+        }
+        if let discoutedPrice = data.object(forKey: "precoPor") {
+            self.discoutedPrice = String(describing: discoutedPrice)
+        }
         if let category = data.object(forKey: "categoria") as? NSDictionary{
             self.category = Category.init(data: category)
         }

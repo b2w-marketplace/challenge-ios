@@ -17,3 +17,4 @@ let kHome = "Home"
 
 let kBannerCell = "BannerCell"
 let kCategoryCell = "CategoryCell"
+let kProductCell = "ProductCell"
