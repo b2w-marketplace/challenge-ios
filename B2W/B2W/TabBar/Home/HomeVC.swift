@@ -17,7 +17,6 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Home"
         
         delegate?.didLoad()
     }

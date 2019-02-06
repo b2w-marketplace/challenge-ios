@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		71F92B16C3879B00AE2A3BB0 /* Pods_B2W.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 861D26E3693435B2D4E4044C /* Pods_B2W.framework */; };
+		87381A8D220A14FD00EE43D9 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87381A8C220A14FD00EE43D9 /* HomeInteractor.swift */; };
+		87381A8F220A1F0400EE43D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87381A8E220A1F0400EE43D9 /* Constants.swift */; };
+		87381A91220A1FB600EE43D9 /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87381A90220A1FB600EE43D9 /* Home.xcassets */; };
+		87381A93220A213E00EE43D9 /* CategoryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87381A92220A213E00EE43D9 /* CategoryClient.swift */; };
+		87381A95220A21A000EE43D9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87381A94220A21A000EE43D9 /* Category.swift */; };
+		87381A97220A223900EE43D9 /* BaseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87381A96220A223900EE43D9 /* BaseContent.swift */; };
+		87381A99220A24AE00EE43D9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87381A98220A24AE00EE43D9 /* Product.swift */; };
+		87381A9B220A2BDA00EE43D9 /* ProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87381A9A220A2BDA00EE43D9 /* ProductClient.swift */; };
 		8744B7582209264200C77456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B7572209264200C77456 /* AppDelegate.swift */; };
 		8744B7622209264400C77456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8744B7602209264400C77456 /* LaunchScreen.storyboard */; };
 		8744B76D2209264400C77456 /* B2WTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B76C2209264400C77456 /* B2WTests.swift */; };
@@ -50,6 +58,14 @@
 /* Begin PBXFileReference section */
 		84B08B98100B584D3348528E /* Pods-B2W.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2W.release.xcconfig"; path = "Pods/Target Support Files/Pods-B2W/Pods-B2W.release.xcconfig"; sourceTree = "<group>"; };
 		861D26E3693435B2D4E4044C /* Pods_B2W.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_B2W.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87381A8C220A14FD00EE43D9 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		87381A8E220A1F0400EE43D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		87381A90220A1FB600EE43D9 /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
+		87381A92220A213E00EE43D9 /* CategoryClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryClient.swift; sourceTree = "<group>"; };
+		87381A94220A21A000EE43D9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		87381A96220A223900EE43D9 /* BaseContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContent.swift; sourceTree = "<group>"; };
+		87381A98220A24AE00EE43D9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		87381A9A220A2BDA00EE43D9 /* ProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
 		8744B7542209264200C77456 /* B2W.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = B2W.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8744B7572209264200C77456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8744B7612209264400C77456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -146,6 +162,7 @@
 				8744B79A22093C0A00C77456 /* Router */,
 				8744B7952209395300C77456 /* TabBar */,
 				8744B7852209270000C77456 /* Resource */,
+				87381A8E220A1F0400EE43D9 /* Constants.swift */,
 			);
 			path = B2W;
 			sourceTree = "<group>";
@@ -173,6 +190,7 @@
 			children = (
 				8744B7862209270000C77456 /* AppIcon.xcassets */,
 				8744B7AB220941D400C77456 /* TabBar.xcassets */,
+				87381A90220A1FB600EE43D9 /* Home.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -184,6 +202,8 @@
 				8744B78C22092E3600C77456 /* ApiSettings.swift */,
 				8744B78E22092F7000C77456 /* ApiClient.swift */,
 				8744B790220932A200C77456 /* BannerClient.swift */,
+				87381A92220A213E00EE43D9 /* CategoryClient.swift */,
+				87381A9A220A2BDA00EE43D9 /* ProductClient.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -191,7 +211,10 @@
 		8744B7922209339600C77456 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				87381A96220A223900EE43D9 /* BaseContent.swift */,
 				8744B793220933D600C77456 /* Banner.swift */,
+				87381A94220A21A000EE43D9 /* Category.swift */,
+				87381A98220A24AE00EE43D9 /* Product.swift */,
 			);
 			name = Models;
 			path = B2W/Models;
@@ -222,6 +245,7 @@
 				8744B79F22093E4200C77456 /* HomeVC.swift */,
 				8744B7A022093E4200C77456 /* HomeVC.xib */,
 				8744B7A922093E9200C77456 /* HomePresenter.swift */,
+				87381A8C220A14FD00EE43D9 /* HomeInteractor.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -355,6 +379,7 @@
 				8744B7A222093E4200C77456 /* HomeVC.xib in Resources */,
 				8744B7622209264400C77456 /* LaunchScreen.storyboard in Resources */,
 				8744B78B22092B8000C77456 /* ApiSettings.plist in Resources */,
+				87381A91220A1FB600EE43D9 /* Home.xcassets in Resources */,
 				8744B7A622093E6000C77456 /* AboutVC.xib in Resources */,
 				8744B7AC220941D500C77456 /* TabBar.xcassets in Resources */,
 			);
@@ -428,14 +453,21 @@
 				8744B79C22093C1D00C77456 /* MainRouter.swift in Sources */,
 				8744B79922093AC700C77456 /* TabBarPresenter.swift in Sources */,
 				8744B7AA22093E9200C77456 /* HomePresenter.swift in Sources */,
+				87381A97220A223900EE43D9 /* BaseContent.swift in Sources */,
 				8744B7A822093E8000C77456 /* AboutPresenter.swift in Sources */,
 				8744B7A122093E4200C77456 /* HomeVC.swift in Sources */,
 				8744B7582209264200C77456 /* AppDelegate.swift in Sources */,
+				87381A95220A21A000EE43D9 /* Category.swift in Sources */,
+				87381A8D220A14FD00EE43D9 /* HomeInteractor.swift in Sources */,
 				8744B78D22092E3600C77456 /* ApiSettings.swift in Sources */,
+				87381A9B220A2BDA00EE43D9 /* ProductClient.swift in Sources */,
+				87381A99220A24AE00EE43D9 /* Product.swift in Sources */,
 				8744B7A522093E6000C77456 /* AboutVC.swift in Sources */,
 				8744B794220933D600C77456 /* Banner.swift in Sources */,
+				87381A8F220A1F0400EE43D9 /* Constants.swift in Sources */,
 				8744B791220932A200C77456 /* BannerClient.swift in Sources */,
 				8744B78F22092F7000C77456 /* ApiClient.swift in Sources */,
+				87381A93220A213E00EE43D9 /* CategoryClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

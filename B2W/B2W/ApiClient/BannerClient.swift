@@ -9,9 +9,10 @@
 import UIKit
 
 class BannerClient: NSObject {
+    
     //MARK: - Banner List
     
-    func getBanner(genreId: String, successHandler: @escaping (_ responseObject: Array<Banner>?) -> (), errorHandler: @escaping (_ errorObject: NSError?, _ isCancelled: Bool) -> ()) -> URLSessionTask
+    func getBanner(successHandler: @escaping (_ responseObject: Array<Banner>?) -> (), errorHandler: @escaping (_ errorObject: NSError?, _ isCancelled: Bool) -> ()) -> URLSessionTask
     {
         let url = "banner"
         let parameters: [String: String] = [:]

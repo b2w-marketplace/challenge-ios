@@ -10,6 +10,7 @@ import UIKit
 
 class HomePresenter: NSObject, HomeVCDelegate {
     let homeView = HomeVC(nibName: "HomeVC", bundle: Bundle.main)
+    let homeInteractor = HomeInteractor()
     
     override init() {
         super.init()
@@ -17,6 +18,10 @@ class HomePresenter: NSObject, HomeVCDelegate {
     }
     
     func didLoad(){
-        
+        homeInteractor.getBannerList(successHandler: { bannerList in
+            
+        }) { error, isCancelled in
+            
+        }
     }
 }

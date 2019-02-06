@@ -1,5 +1,5 @@
 //
-//  Banner.swift
+//  Category.swift
 //  B2W
 //
 //  Created by Nicholas Matos on 2/5/19.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-class Banner: BaseContent {
-    var linkUrl: String?
+class Category: BaseContent {
+    var categoryDescription: String?
     
     override init(data: NSDictionary){
         super.init(data: data)
-        
-        linkUrl = data.object(forKey: "linkUrl") as? String
+    
+        categoryDescription = data.object(forKey: "descricao") as? String
     }
+
 }

@@ -12,6 +12,5 @@ class AboutVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Sobre"
     }
 }
