@@ -20,7 +20,6 @@
 		8744B7622209264400C77456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8744B7602209264400C77456 /* LaunchScreen.storyboard */; };
 		8744B76D2209264400C77456 /* B2WTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B76C2209264400C77456 /* B2WTests.swift */; };
 		8744B7782209264400C77456 /* B2WUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B7772209264400C77456 /* B2WUITests.swift */; };
-		8744B7872209270000C77456 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8744B7862209270000C77456 /* AppIcon.xcassets */; };
 		8744B78B22092B8000C77456 /* ApiSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8744B78A22092B8000C77456 /* ApiSettings.plist */; };
 		8744B78D22092E3600C77456 /* ApiSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B78C22092E3600C77456 /* ApiSettings.swift */; };
 		8744B78F22092F7000C77456 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744B78E22092F7000C77456 /* ApiClient.swift */; };
@@ -42,6 +41,7 @@
 		8771E2C9220A96C600E98B36 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8771E2C7220A96C600E98B36 /* CategoryCell.xib */; };
 		8771E2CC220A9DB000E98B36 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8771E2CA220A9DB000E98B36 /* ProductCell.swift */; };
 		8771E2CD220A9DB000E98B36 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8771E2CB220A9DB000E98B36 /* ProductCell.xib */; };
+		87AA6366220CCAB000D09052 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87AA6365220CCAB000D09052 /* AppIcon.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,6 @@
 		8744B7732209264400C77456 /* B2WUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = B2WUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8744B7772209264400C77456 /* B2WUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B2WUITests.swift; sourceTree = "<group>"; };
 		8744B7792209264400C77456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8744B7862209270000C77456 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		8744B78A22092B8000C77456 /* ApiSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiSettings.plist; sourceTree = "<group>"; };
 		8744B78C22092E3600C77456 /* ApiSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSettings.swift; sourceTree = "<group>"; };
 		8744B78E22092F7000C77456 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		8771E2C7220A96C600E98B36 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		8771E2CA220A9DB000E98B36 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		8771E2CB220A9DB000E98B36 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		87AA6365220CCAB000D09052 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		BFF98ABEBB85F4B5E5C5185E /* Pods-B2W.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2W.debug.xcconfig"; path = "Pods/Target Support Files/Pods-B2W/Pods-B2W.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,7 +214,7 @@
 		8744B7852209270000C77456 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				8744B7862209270000C77456 /* AppIcon.xcassets */,
+				87AA6365220CCAB000D09052 /* AppIcon.xcassets */,
 				8744B7AB220941D400C77456 /* TabBar.xcassets */,
 				87381A90220A1FB600EE43D9 /* Home.xcassets */,
 			);
@@ -401,7 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8744B7872209270000C77456 /* AppIcon.xcassets in Resources */,
+				87AA6366220CCAB000D09052 /* AppIcon.xcassets in Resources */,
 				8744B7A222093E4200C77456 /* HomeVC.xib in Resources */,
 				8744B7622209264400C77456 /* LaunchScreen.storyboard in Resources */,
 				8744B78B22092B8000C77456 /* ApiSettings.plist in Resources */,

@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         barAppearace.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
         
         UINavigationBar.appearance().tintColor = .white
-        
         UINavigationBar.appearance().barTintColor = .purple
         
         MainRouter().intialView()
