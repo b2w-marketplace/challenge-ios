@@ -34,7 +34,6 @@ class HomePresenter: NSObject, UICollectionViewDelegate, UICollectionViewDataSou
         registerCollectionDelegate()
         
         homeInteractor.loadHomeContent {
-            sleep(2)
             self.homeView.bannerCollection.reloadData()
             self.homeView.categoryCollection.reloadData()
             self.homeView.productCollection.reloadData()
@@ -87,8 +86,16 @@ class HomePresenter: NSObject, UICollectionViewDelegate, UICollectionViewDataSou
     //MARK: - UI Collection View Delegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let content = self.movies[indexPath.row]
-        //MainRouter().showMovieDetail(movie: content)
+        switch collectionView {
+        case homeView.categoryCollection:
+            let category = homeInteractor.categoryList[indexPath.row]
+            MainRouter().showProductsByCategory(category: category)
+        case homeView.productCollection:
+            let product = homeInteractor.productList[indexPath.row]
+            MainRouter().showProductDetail(product: product)
+        default:
+            return
+        }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

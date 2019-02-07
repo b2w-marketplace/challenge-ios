@@ -30,4 +30,8 @@ class Product: BaseContent {
             self.category = Category.init(data: category)
         }
     }
+    
+    func getProductDescriptionString() -> String{
+        return "\(self.name ?? "") - \(self.productDescription ?? "")"
+    }
 }

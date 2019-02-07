@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let barAppearace = UIBarButtonItem.appearance()
         barAppearace.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
         
-        UINavigationBar.appearance().tintColor = .white
-        UINavigationBar.appearance().barTintColor = .purple
+        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().barTintColor = UIColor.init(netHex: kAppColor)
         
         MainRouter().intialView()
         

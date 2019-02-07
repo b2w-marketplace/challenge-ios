@@ -29,6 +29,8 @@ class HomeVC: UIViewController {
         registerCells()
         delegate?.didLoad()
         
+        bannerPageControl.currentPageIndicatorTintColor = UIColor.init(netHex: kAppColor)
+        
         if #available(iOS 11.0, *) {
             bannerCollection.contentInsetAdjustmentBehavior = .never
         }

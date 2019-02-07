@@ -23,7 +23,7 @@ class ProductCell: UICollectionViewCell {
             }
         }
         
-        productDescription.text = product.productDescription
+        productDescription.text = product.getProductDescriptionString()
         productPrice.text = product.price
         productDiscoutedPrice.text = product.discoutedPrice
     }

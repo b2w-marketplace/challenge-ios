@@ -20,4 +20,28 @@ class MainRouter: NSObject {
         appDelegate.window?.rootViewController = UINavigationController(rootViewController: tabBarPresenter.tabBar)
         appDelegate.window?.makeKeyAndVisible()
     }
+    
+    //MARK: - Show Products by Category
+    
+    func showProductsByCategory(category: Category){
+        let categoryPresenter = CategoryPresenter()
+        categoryPresenter.category = category
+        categoryPresenter.registerDelegate()
+        
+        if let navigation = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+            navigation.pushViewController(categoryPresenter.productList, animated: true)
+        }
+    }
+    
+    //MARK: - Show Products Detail
+    
+    func showProductDetail(product: Product){
+        let productDetailPresenter = ProductDetailPresenter()
+        productDetailPresenter.product = product
+        productDetailPresenter.registerDelegate()
+        
+        if let navigation = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+            navigation.pushViewController(productDetailPresenter.productDetail, animated: true)
+        }
+    }
 }
