@@ -10,8 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    private let BANNER_HEIGHT: CGFloat = 140.0
-    private let TABLEVIEW_HEIGHT: CGFloat = 300
+    private let bannerHeight: CGFloat = 140.0
+    private let tableViewHeight: CGFloat = 300
 
     @IBOutlet weak var bannersScrollView: UIScrollView!
     @IBOutlet weak var bannersPageControl: UIPageControl!
@@ -36,44 +36,51 @@ class HomeViewController: UIViewController {
     }
     
     private func loadBanners() {
-        Network.getBanners { (response) in
-            inMainAsync {
+        APIManager.getBanners { (response) in
+            switch response {
+            case .success(_, let result):
                 self.bannersIndicator.stopAnimating()
-                self.banners = response.data
+                self.banners = result.data
                 self.setupScrollView()
+            case .error(let message):
+                print(message)
             }
         }
     }
     
     private func loadCategories() {
-        Network.getCategorias { [unowned self] (response) in
-            inMainAsync {
+        APIManager.getCategorias { [unowned self] (response) in
+            switch response {
+            case .success(_, let result):
                 self.categoriesIndicator.stopAnimating()
-                self.categories = response.data
+                self.categories = result.data
                 self.categoriesCollectionView.reloadData()
+            case .error(let message):
+                print(message)
             }
         }
     }
     
     private func loadProducts() {
-        Network.getProdutosMaisVendidos { [unowned self] (response) in
-            inMainAsync {
+        APIManager.getProdutosMaisVendidos { [unowned self] (response) in
+            switch response {
+            case .success(_, let result):
                 self.productsIndicator.stopAnimating()
-                self.products = response.data
+                self.products = result.data
                 self.productsTableView.reloadData()
+            case .error(let message):
+                print(message)
             }
         }
     }
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if let obj = object as? UITableView {
-            if obj == productsTableView && keyPath == "contentSize" {
-                var height = productsTableView.contentSize.height
-                if round(height) == 0 {
-                    height = TABLEVIEW_HEIGHT
-                }
-                productsTableViewHeight.constant = height
+        if let obj = object as? UITableView, obj == productsTableView, keyPath == "contentSize" {
+            var height = productsTableView.contentSize.height
+            if round(height) == 0 {
+                height = tableViewHeight
             }
+            productsTableViewHeight.constant = height
         }
     }
 
@@ -150,11 +157,11 @@ extension HomeViewController {
         }
         
         let width = view.frame.width
-        bannersScrollView.contentSize = CGSize(width: width * CGFloat(banners.count), height: BANNER_HEIGHT)
+        bannersScrollView.contentSize = CGSize(width: width * CGFloat(banners.count), height: bannerHeight)
         bannersScrollView.isPagingEnabled = true
         
         for i in 0 ..< banners.count {
-            let frame = CGRect(x: width * CGFloat(i), y: 0, width: width, height: BANNER_HEIGHT)
+            let frame = CGRect(x: width * CGFloat(i), y: 0, width: width, height: bannerHeight)
             let imageView = UIImageView(frame: frame)
             imageView.kf.indicatorType = .activity
             imageView.kf.setImage(with: URL(string: banners[i].urlImagem))
@@ -165,7 +172,7 @@ extension HomeViewController {
         let rect = CGRect(x: bannersScrollView.frame.origin.x - shadowSize / 2,
                           y: bannersScrollView.frame.origin.y - shadowSize / 2,
                           width: width * CGFloat(banners.count) + shadowSize,
-                          height: BANNER_HEIGHT + shadowSize)
+                          height: bannerHeight + shadowSize)
         
         let shadowPath = UIBezierPath(roundedRect: rect, cornerRadius: 0)
         

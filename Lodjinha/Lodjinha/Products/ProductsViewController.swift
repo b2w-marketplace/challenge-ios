@@ -41,14 +41,17 @@ class ProductsViewController: UIViewController {
     
     private func loadProducts() {
         let lastOffset = offset
-        Network.getProdutos(offset: offset, limit: limit, categoriaId: categoriaId) { [unowned self] (response) in
-            inMainAsync {
+        APIManager.getProdutos(offset: offset, limit: limit, categoriaId: categoriaId) { [unowned self] (response) in
+            switch response {
+            case .success(_, let result):
                 self.productsIndicator.stopAnimating()
-                self.products.append(contentsOf: response.data)
+                self.products.append(contentsOf: result.data)
                 self.offset = self.products.count
                 self.shouldLoadMore = self.offset != lastOffset
                 self.productsTableView.reloadData()
                 self.productsTableView.setContentOffset(CGPoint(x: 0, y: self.contentOffsetY), animated: false)
+            case .error(let message):
+                print(message)
             }
         }
     }

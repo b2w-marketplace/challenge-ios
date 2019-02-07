@@ -45,12 +45,14 @@ class DetailViewController: UIViewController {
     
     private func loadProduct() {
         toggleSkeletonViews(visible: false)
-        Network.getProdutoDetalhes(produtoId: produtoId) { [unowned self] (response) in
-            dump(response)
-            inMainAsync {
-                self.product = response
+        APIManager.getProdutoDetalhes(produtoId: produtoId) { [unowned self] (response) in
+            switch response {
+            case .success(_, let result):
+                self.product = result
                 self.setupProductData()
                 self.toggleSkeletonViews(visible: true)
+            case .error(let message):
+                print(message)
             }
         }
     }
@@ -87,19 +89,16 @@ class DetailViewController: UIViewController {
         productIndicator.startAnimating()
         button.isUserInteractionEnabled = false
         
-        Network.postReservarProduto(produtoId: produtoId, onCompletion: { (response) in
-            inMainAsync {
-                self.productIndicator.stopAnimating()
-                button.isUserInteractionEnabled = true
+        APIManager.postReservarProduto(produtoId: produtoId, onCompletion: { (response) in
+            self.productIndicator.stopAnimating()
+            button.isUserInteractionEnabled = true
+            switch response {
+            case .success:
                 self.showMessage("Produto reservado com sucesso", success: true)
-            }
-        }) { _ in
-             inMainAsync {
-                self.productIndicator.stopAnimating()
-                button.isUserInteractionEnabled = true
+            case .error:
                 self.showMessage("Erro ao reservar produto", success: false)
             }
-        }
+        })
     }
     
 }

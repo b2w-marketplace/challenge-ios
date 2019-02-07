@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Network {
+class Networking {
     
     static let timeoutInterval: Double = 30.0
     
@@ -23,30 +23,34 @@ class Network {
         case json = "application/json"
     }
     
+    public enum Result<T> {
+        case success(Int, T)
+        case error(String)
+    }
+    
     enum HttpMethod: String {
         case get = "GET"
         case post = "POST"
         case put = "PUT"
         case delete = "DELETE"
     }
-
+    
     class private func isContentTypeUrlEncoded(_ httpHeaders: [String: String]) -> Bool {
         return httpHeaders.contains(where: { $0 == "content-type" && $1 == ContentType.urlEncoded.rawValue })
     }
     
-    class private func fetchGenericData<T: Decodable>(urlString: String,
-                                                      httpMethod: HttpMethod = .get,
-                                                      httpHeaders: [String: String] = defaultHeaders,
-                                                      params: [String: Any]? = nil,
-                                                      onCompletion: @escaping (T) -> Void,
-                                                      onError: ((_ error: Error) -> Void)? = nil) {
+    class func fetchGenericData<T: Decodable>(urlString: String,
+                                              httpMethod: HttpMethod = .get,
+                                              httpHeaders: [String: String] = defaultHeaders,
+                                              params: [String: Any]? = nil,
+                                              onCompletion: @escaping (Result<T>) -> Void) -> URLSessionDataTask? {
         var components = URLComponents(string: urlString)!
         var httpBody: Data?
         
         if let params = params {
             print("\nParams:")
             dump(params)
-     
+            
             if httpMethod == .get || isContentTypeUrlEncoded(httpHeaders) {
                 components.queryItems = [URLQueryItem]()
                 params.forEach { (key, value) in
@@ -62,7 +66,7 @@ class Network {
                     httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
                 } catch let error {
                     print(error.localizedDescription)
-                    return
+                    return nil
                 }
             }
         }
@@ -83,24 +87,45 @@ class Network {
         request.httpMethod = httpMethod.rawValue
         request.httpBody = httpBody
         
-        fetchData(request: request, retry: 3) { (data, resp, err) in
-            guard let data = data else {
-                if let error = err {
-                    print("Error:", error.localizedDescription)
-                    onError?(error)
+        let task = fetchData(request: request, retry: 3) { (data, resp, err) in
+            if let error = err {
+                let message = error.localizedDescription
+                let result = Result<T>.error(message)
+                inMainAsync {
+                    onCompletion(result)
                 }
                 return
             }
+            
+            guard let data = data else {
+                let result = Result<T>.error("Invalid response data")
+                inMainAsync {
+                    onCompletion(result)
+                }
+                return
+            }
+            
             do {
                 let obj = try JSONDecoder().decode(T.self, from: data)
-                onCompletion(obj)
+                if let response = resp as? HTTPURLResponse {
+                    let result = Result<T>.success(response.statusCode, obj)
+                    dump(obj)
+                    inMainAsync {
+                        onCompletion(result)
+                    }
+                }
             } catch {
                 print("Failed to decode json:", error)
-                if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
-                    print("Returned json:", json)
+                let result = Result<T>.error(error.localizedDescription)
+                inMainAsync {
+                    onCompletion(result)
                 }
             }
-            }.resume()
+        }
+        
+        task.resume()
+        
+        return task
     }
     
     @discardableResult
@@ -123,56 +148,4 @@ class Network {
         return task
     }
 
-}
-
-//MARK: - Endpoints
-extension Network {
-    
-    class func getBanners(onCompletion: @escaping (BannerResponse) -> Void) {
-        let urlString = defaultHost.appending("banner")
-        fetchGenericData(urlString: urlString, onCompletion: { (response: BannerResponse) in
-            onCompletion(response)
-        })
-    }
-    
-    class func getCategorias(onCompletion: @escaping (CategoriaResponse) -> Void) {
-        let urlString = defaultHost.appending("categoria")
-        fetchGenericData(urlString: urlString, onCompletion: { (response: CategoriaResponse) in
-            onCompletion(response)
-        })
-    }
-    
-    class func getProdutos(offset: Int, limit: Int, categoriaId: Int, onCompletion: @escaping (ProdutoResponse) -> Void) {
-        let urlString = defaultHost.appending("produto")
-        let params: [String : Any] = ["offset": offset,
-                                      "limit": limit,
-                                      "categoriaId": categoriaId]
-        fetchGenericData(urlString: urlString, params: params, onCompletion: { (response: ProdutoResponse) in
-            onCompletion(response)
-        })
-    }
-    
-    class func getProdutosMaisVendidos(onCompletion: @escaping (ProdutoResponse) -> Void) {
-        let urlString = defaultHost.appending("produto/maisvendidos")
-        fetchGenericData(urlString: urlString, onCompletion: { (response: ProdutoResponse) in
-            onCompletion(response)
-        })
-    }
-    
-    class func getProdutoDetalhes(produtoId: Int, onCompletion: @escaping (Produto) -> Void) {
-        let urlString = defaultHost.appending("produto/").appending("\(produtoId)")
-        fetchGenericData(urlString: urlString, onCompletion: {(response: Produto) in
-            onCompletion(response)
-        })
-    }
-    
-    class func postReservarProduto(produtoId: Int, onCompletion: @escaping (EmptyResponse) -> Void, onError: ((Error) -> Void)?) {
-        let urlString = defaultHost.appending("produto/").appending("\(produtoId)")
-        fetchGenericData(urlString: urlString, httpMethod: .post, onCompletion: { (response: EmptyResponse) in
-            onCompletion(response)
-        }) { (error) in
-            onError?(error)
-        }
-    }
-    
 }
