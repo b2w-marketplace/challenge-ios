@@ -16,40 +16,34 @@ class HomeInteractor: NSObject {
     var productList: Array<Product> = []
     let totalOfRequests = 3
     var finishedRequests = 0
+    let loading = LoadingPresenter()
     
     func getBannerList(successHandler: @escaping (_ responseObject: Array<Banner>?) -> ()){
         BannerClient().getBannerList(successHandler: { bannerList in
-            //loading.hideLoading()
             successHandler(bannerList)
         }) { error, isCancelled in
-           // loading.hideLoading()
-            
+            //Handler banner error
         }
     }
     
     func getCategoryList(successHandler: @escaping (_ responseObject: Array<Category>?) -> ()){
         CategoryClient().getCategoryList(successHandler: { categoryList in
-            //loading.hideLoading()
             successHandler(categoryList)
         }) { error, isCancelled in
-            // loading.hideLoading()
-            
+            //Handler category error
         }
     }
     
     func getProductList(successHandler: @escaping (_ responseObject: Array<Product>?) -> ()){
         ProductClient().getBestSellerProducts(successHandler: { productList in
-            //loading.hideLoading()
             successHandler(productList)
         }) { error, isCancelled in
-            // loading.hideLoading()
-            
+            //Handler product error
         }
     }
     
-    //
-    
     func loadHomeContent(complitionHomeContent: @escaping () -> ()){
+        loading.showLoading()
         
         self.complitionHomeContent = complitionHomeContent
         
@@ -73,6 +67,7 @@ class HomeInteractor: NSObject {
         finishedRequests = finishedRequests + 1
         
         if finishedRequests == totalOfRequests{
+            loading.hideLoading()
             self.complitionHomeContent?()
         }
     }

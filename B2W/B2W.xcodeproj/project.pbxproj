@@ -42,6 +42,9 @@
 		8771E2CC220A9DB000E98B36 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8771E2CA220A9DB000E98B36 /* ProductCell.swift */; };
 		8771E2CD220A9DB000E98B36 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8771E2CB220A9DB000E98B36 /* ProductCell.xib */; };
 		87AA6366220CCAB000D09052 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87AA6365220CCAB000D09052 /* AppIcon.xcassets */; };
+		87AA636A220CCBE500D09052 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA6368220CCBE500D09052 /* LoadingView.swift */; };
+		87AA636B220CCBE500D09052 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87AA6369220CCBE500D09052 /* LoadingView.xib */; };
+		87AA636D220CCBFF00D09052 /* LoadingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA636C220CCBFF00D09052 /* LoadingPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 		8771E2CA220A9DB000E98B36 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		8771E2CB220A9DB000E98B36 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		87AA6365220CCAB000D09052 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
+		87AA6368220CCBE500D09052 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		87AA6369220CCBE500D09052 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		87AA636C220CCBFF00D09052 /* LoadingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPresenter.swift; sourceTree = "<group>"; };
 		BFF98ABEBB85F4B5E5C5185E /* Pods-B2W.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2W.debug.xcconfig"; path = "Pods/Target Support Files/Pods-B2W/Pods-B2W.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +193,7 @@
 				87381A8E220A1F0400EE43D9 /* Constants.swift */,
 				8744B79A22093C0A00C77456 /* Router */,
 				8744B7952209395300C77456 /* TabBar */,
+				87AA6367220CCBB500D09052 /* Loading */,
 				8744B7852209270000C77456 /* Resource */,
 				87381A9C220A77C800EE43D9 /* Cells */,
 			);
@@ -284,6 +291,16 @@
 				8744B7A722093E8000C77456 /* AboutPresenter.swift */,
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		87AA6367220CCBB500D09052 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				87AA6368220CCBE500D09052 /* LoadingView.swift */,
+				87AA6369220CCBE500D09052 /* LoadingView.xib */,
+				87AA636C220CCBFF00D09052 /* LoadingPresenter.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		9924EB291C797F9966A76F4D /* Pods */ = {
@@ -410,6 +427,7 @@
 				8744B7A622093E6000C77456 /* AboutVC.xib in Resources */,
 				8771E2CD220A9DB000E98B36 /* ProductCell.xib in Resources */,
 				8771E2C9220A96C600E98B36 /* CategoryCell.xib in Resources */,
+				87AA636B220CCBE500D09052 /* LoadingView.xib in Resources */,
 				8744B7AC220941D500C77456 /* TabBar.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +518,8 @@
 				8744B791220932A200C77456 /* BannerClient.swift in Sources */,
 				8744B78F22092F7000C77456 /* ApiClient.swift in Sources */,
 				87381A93220A213E00EE43D9 /* CategoryClient.swift in Sources */,
+				87AA636A220CCBE500D09052 /* LoadingView.swift in Sources */,
+				87AA636D220CCBFF00D09052 /* LoadingPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
