@@ -112,9 +112,9 @@ extension DetailViewController {
             productImageView.kf.setImage(with: URL(string: product.urlImagem),
                                          placeholder: UIImage(named: "question"))
             nameLabel.text = product.nome
-            let text = "De: \(moneyFormatter(product.precoDe))"
+            let text = "De: \(moneyFormatter(product.precoDe) ?? "-")"
             oldPriceLabel.attributedText = text.withStrikethroughColor(.lightGray).withStrikethroughStyle(.single)
-            newPriceLabel.text =  "Por \(moneyFormatter(product.precoPor))"
+            newPriceLabel.text =  "Por \(moneyFormatter(product.precoPor) ?? "-")"
             descriptionLabel.text = product.descricao.htmlToString
         }
     }

@@ -20,12 +20,13 @@ public func inMainAsyncAfter(interval: DispatchTimeInterval, _ run: @escaping() 
     })
 }
 
-public func moneyFormatter(_ valor: Double) -> String {
+public func moneyFormatter(_ valor: Double) -> String? {
     let formatter = NumberFormatter()
+    formatter.minimumIntegerDigits = 1
     formatter.minimumFractionDigits = 2
     formatter.decimalSeparator = ","
     formatter.groupingSeparator = "."
-    return formatter.string(for: valor)!
+    return formatter.string(for: valor)
 }
 
 public func footerPlaceholder(width: CGFloat) -> UIView {

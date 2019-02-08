@@ -28,9 +28,9 @@ class ProductCell: UITableViewCell {
         iconImageView.kf.indicatorType = .activity
         iconImageView.kf.setImage(with: URL(string: product.urlImagem),
                                   placeholder: UIImage(named: "question"))
-        let text = "De: \(moneyFormatter(product.precoDe))"
+        let text = "De: \(moneyFormatter(product.precoDe) ?? "-")"
         oldPriceLabel.attributedText = text.withStrikethroughColor(.lightGray).withStrikethroughStyle(.single)
-        newPriceLabel.text = "Por \(moneyFormatter(product.precoPor))"
+        newPriceLabel.text = "Por \(moneyFormatter(product.precoPor) ?? "-")"
     }
 
 }

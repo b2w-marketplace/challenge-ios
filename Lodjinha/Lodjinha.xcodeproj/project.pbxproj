@@ -12,6 +12,7 @@
 		EB13944D21D649CB0016A518 /* NSString+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13944C21D649CB0016A518 /* NSString+Utils.swift */; };
 		EB13945121D652260016A518 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13944F21D652260016A518 /* LoadingCell.swift */; };
 		EB13945221D652260016A518 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB13945021D652260016A518 /* LoadingCell.xib */; };
+		EB2B2746220D0832008DE02C /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2B2745220D0832008DE02C /* UtilsTests.swift */; };
 		EB658DE421D5C21B00320FE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB658DE221D5C21B00320FE7 /* DetailViewController.swift */; };
 		EB658DE521D5C21B00320FE7 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB658DE321D5C21B00320FE7 /* DetailViewController.xib */; };
 		EB658DE721D5CA1F00320FE7 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB658DE621D5CA1F00320FE7 /* Networking.swift */; };
@@ -24,7 +25,7 @@
 		EBFE29ED21D45AC400676164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE29EC21D45AC400676164 /* AppDelegate.swift */; };
 		EBFE29F421D45AC500676164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFE29F321D45AC500676164 /* Assets.xcassets */; };
 		EBFE29F721D45AC500676164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBFE29F521D45AC500676164 /* LaunchScreen.storyboard */; };
-		EBFE2A0221D45AC500676164 /* LodjinhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE2A0121D45AC500676164 /* LodjinhaTests.swift */; };
+		EBFE2A0221D45AC500676164 /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE2A0121D45AC500676164 /* APIManagerTests.swift */; };
 		EBFE2A0E21D45B5100676164 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE2A0C21D45B5100676164 /* MainViewController.swift */; };
 		EBFE2A0F21D45B5100676164 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFE2A0D21D45B5100676164 /* MainViewController.xib */; };
 		EBFE2A1221D45E9100676164 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE2A1021D45E9100676164 /* HomeViewController.swift */; };
@@ -59,6 +60,7 @@
 		EB13944C21D649CB0016A518 /* NSString+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+Utils.swift"; sourceTree = "<group>"; };
 		EB13944F21D652260016A518 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		EB13945021D652260016A518 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		EB2B2745220D0832008DE02C /* UtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTests.swift; sourceTree = "<group>"; };
 		EB658DE221D5C21B00320FE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EB658DE321D5C21B00320FE7 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		EB658DE621D5CA1F00320FE7 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -74,7 +76,7 @@
 		EBFE29F621D45AC500676164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBFE29F821D45AC500676164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBFE29FD21D45AC500676164 /* LodjinhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBFE2A0121D45AC500676164 /* LodjinhaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaTests.swift; sourceTree = "<group>"; };
+		EBFE2A0121D45AC500676164 /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
 		EBFE2A0321D45AC500676164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBFE2A0C21D45B5100676164 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EBFE2A0D21D45B5100676164 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -257,7 +259,8 @@
 		EBFE2A0021D45AC500676164 /* LodjinhaTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBFE2A0121D45AC500676164 /* LodjinhaTests.swift */,
+				EBFE2A0121D45AC500676164 /* APIManagerTests.swift */,
+				EB2B2745220D0832008DE02C /* UtilsTests.swift */,
 				EBFE2A0321D45AC500676164 /* Info.plist */,
 			);
 			path = LodjinhaTests;
@@ -488,7 +491,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBFE2A0221D45AC500676164 /* LodjinhaTests.swift in Sources */,
+				EBFE2A0221D45AC500676164 /* APIManagerTests.swift in Sources */,
+				EB2B2746220D0832008DE02C /* UtilsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
