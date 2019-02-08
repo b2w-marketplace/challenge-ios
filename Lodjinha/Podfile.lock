@@ -1,0 +1,28 @@
+PODS:
+  - Kingfisher (4.10.1)
+  - SkeletonView (1.4.1)
+  - SnapKit (4.2.0)
+  - SwiftyAttributes (5.0.0)
+
+DEPENDENCIES:
+  - Kingfisher
+  - SkeletonView
+  - SnapKit
+  - SwiftyAttributes
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
+    - SkeletonView
+    - SnapKit
+    - SwiftyAttributes
+
+SPEC CHECKSUMS:
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyAttributes: a6e7bbac1e9a9f5c0b42e4055563ca091dda03ad
+
+PODFILE CHECKSUM: 9cd91186d1deb0f6e86df41ab00c7bf8c0430bdc
+
+COCOAPODS: 1.5.3

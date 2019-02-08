@@ -1,0 +1,15 @@
+platform :ios, '9.0'
+
+target 'Lodjinha' do
+  use_frameworks!
+
+  pod 'SnapKit'
+  pod 'Kingfisher'
+  pod 'SwiftyAttributes'
+  pod 'SkeletonView'
+
+  target 'LodjinhaTests' do
+    inherit! :search_paths
+  end
+
+end
