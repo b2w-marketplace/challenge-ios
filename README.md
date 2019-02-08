@@ -1,4 +1,4 @@
-# Passo a passo
+# Instalação
 
 Este projeto faz uso de algumas libraries através do gerenciador de dependências CocoaPods, para executá-lo é necessário seguir o seguintes passos:
 
