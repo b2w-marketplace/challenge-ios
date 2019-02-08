@@ -56,6 +56,7 @@
 		87AA6389220CE2C600D09052 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA6388220CE2C600D09052 /* ColorUtils.swift */; };
 		87AA638B220CEBBD00D09052 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA638A220CEBBD00D09052 /* StringUtils.swift */; };
 		87AA638D220CF1B100D09052 /* ProductDetailVC~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87AA638C220CF1B100D09052 /* ProductDetailVC~iphone.xib */; };
+		87AA638F220CFBBD00D09052 /* About.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87AA638E220CFBBD00D09052 /* About.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		87AA6388220CE2C600D09052 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		87AA638A220CEBBD00D09052 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		87AA638C220CF1B100D09052 /* ProductDetailVC~iphone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ProductDetailVC~iphone.xib"; sourceTree = "<group>"; };
+		87AA638E220CFBBD00D09052 /* About.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = About.xcassets; sourceTree = "<group>"; };
 		BFF98ABEBB85F4B5E5C5185E /* Pods-B2W.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2W.debug.xcconfig"; path = "Pods/Target Support Files/Pods-B2W/Pods-B2W.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +251,7 @@
 				87AA6365220CCAB000D09052 /* AppIcon.xcassets */,
 				8744B7AB220941D400C77456 /* TabBar.xcassets */,
 				87381A90220A1FB600EE43D9 /* Home.xcassets */,
+				87AA638E220CFBBD00D09052 /* About.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				8744B7A222093E4200C77456 /* HomeVC.xib in Resources */,
 				8744B7622209264400C77456 /* LaunchScreen.storyboard in Resources */,
 				8744B78B22092B8000C77456 /* ApiSettings.plist in Resources */,
+				87AA638F220CFBBD00D09052 /* About.xcassets in Resources */,
 				87381A91220A1FB600EE43D9 /* Home.xcassets in Resources */,
 				8771E2C5220A856600E98B36 /* BannerCell.xib in Resources */,
 				8744B7A622093E6000C77456 /* AboutVC.xib in Resources */,

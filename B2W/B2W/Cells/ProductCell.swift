@@ -24,7 +24,7 @@ class ProductCell: UICollectionViewCell {
         }
         
         productDescription.text = product.getProductDescriptionString()
-        productPrice.text = product.price
-        productDiscoutedPrice.text = product.discoutedPrice
+        productPrice.text = product.getProductOldPriceString()
+        productDiscoutedPrice.text = product.getProductNewPriceString()
     }
 }

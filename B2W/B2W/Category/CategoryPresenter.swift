@@ -46,7 +46,8 @@ class CategoryPresenter: NSObject, UICollectionViewDelegate, UICollectionViewDat
     //MARK: - UI Collection View Delegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        let product = categoryInteractor.productList[indexPath.row]
+        MainRouter().showProductDetail(product: product)
     }
     
     //MARK: - UI Collection View Delegate Flow Layout

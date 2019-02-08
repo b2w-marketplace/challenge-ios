@@ -47,8 +47,8 @@ class ProductDetailVC: UIViewController {
         }
         
         productTitle.text = product?.getProductDescriptionString()
-        productPrice.text = product?.price
-        productDiscouted.text = product?.discoutedPrice
+        productPrice.text = product?.getProductOldPriceString()
+        productDiscouted.text = product?.getProductNewPriceString()
         productDescription.text = product?.productDescription?.htmlToString
     }
     

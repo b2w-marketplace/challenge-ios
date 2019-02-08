@@ -11,8 +11,8 @@ import UIKit
 class Product: BaseContent {
     var name: String?
     var productDescription: String?
-    var price: String?
-    var discoutedPrice: String?
+    var price: Int?
+    var discoutedPrice: Int?
     var category: Category?
     
     override init(data: NSDictionary) {
@@ -20,12 +20,19 @@ class Product: BaseContent {
         
         name = data.object(forKey: "nome") as? String
         productDescription = data.object(forKey: "descricao") as? String
-        if let price = data.object(forKey: "precoDe") {
-            self.price = String(describing: price)
+        
+        if let oldPrice = data.object(forKey: "precoDe") as? Double{
+            price = Int(oldPrice)
+        }else{
+            price = data.object(forKey: "precoDe") as? Int
         }
-        if let discoutedPrice = data.object(forKey: "precoPor") {
-            self.discoutedPrice = String(describing: discoutedPrice)
+        
+        if let discouted = data.object(forKey: "precoPor") as? Double{
+            discoutedPrice = Int(discouted)
+        }else{
+            discoutedPrice = data.object(forKey: "precoPor") as? Int
         }
+
         if let category = data.object(forKey: "categoria") as? NSDictionary{
             self.category = Category.init(data: category)
         }
@@ -33,5 +40,21 @@ class Product: BaseContent {
     
     func getProductDescriptionString() -> String{
         return "\(self.name ?? "") - \(self.productDescription ?? "")"
+    }
+    
+    func getProductOldPriceString() -> String{
+        if let price = self.price{
+            return "De: \(String(price))"
+        }
+        
+        return ""
+    }
+    
+    func getProductNewPriceString() -> String{
+        if let discoutedPrice = self.discoutedPrice{
+            return "Por: \(String(discoutedPrice))"
+        }
+        
+        return ""
     }
 }

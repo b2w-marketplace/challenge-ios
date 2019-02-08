@@ -14,6 +14,12 @@ import UIKit
 let kAbout = "SOBRE"
 let kHome = "HOME"
 
+//MARK: - About
+
+let kAboutDocumentationLink = "https://gist.github.com/nicholasmatos/15190d2cec62192c5847846cc40ee9bc"
+
+let kAboutPortfolioLink = "http://cargocollective.com/nicholascarvalho"
+
 //MARK: - Cell Keys
 
 let kBannerCell = "BannerCell"
