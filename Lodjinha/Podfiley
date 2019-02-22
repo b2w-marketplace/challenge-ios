@@ -1,0 +1,15 @@
+platform :ios, '9.0'
+
+target 'Lodjinha' do
+  use_frameworks!
+
+  pod 'Cartography'
+
+  target 'LodjinhaTests' do
+    inherit! :search_paths
+    
+    pod 'Nimble'
+    pod 'Quick'
+  end
+
+end
