@@ -10,6 +10,33 @@
 		2BE622FC221F97A000FD3F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE622FB221F97A000FD3F31 /* AppDelegate.swift */; };
 		2BE62303221F97A100FD3F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE62302221F97A100FD3F31 /* Assets.xcassets */; };
 		2BE62306221F97A100FD3F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE62304221F97A100FD3F31 /* LaunchScreen.storyboard */; };
+		2BE6232A221F9C0F00FD3F31 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62324221F9C0F00FD3F31 /* RootViewController.swift */; };
+		2BE62333221F9D9900FD3F31 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6232D221F9D9900FD3F31 /* HomePresenter.swift */; };
+		2BE62334221F9D9900FD3F31 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6232E221F9D9900FD3F31 /* HomeWorker.swift */; };
+		2BE62335221F9D9900FD3F31 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6232F221F9D9900FD3F31 /* HomeRouter.swift */; };
+		2BE62336221F9D9900FD3F31 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62330221F9D9900FD3F31 /* HomeModels.swift */; };
+		2BE62337221F9D9900FD3F31 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62331221F9D9900FD3F31 /* HomeViewController.swift */; };
+		2BE62338221F9D9900FD3F31 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62332221F9D9900FD3F31 /* HomeInteractor.swift */; };
+		2BE6233A221F9F2A00FD3F31 /* UIImage+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62339221F9F2A00FD3F31 /* UIImage+Home.swift */; };
+		2BE6233C221F9FED00FD3F31 /* String+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6233B221F9FED00FD3F31 /* String+Home.swift */; };
+		2BE6233F221FA00300FD3F31 /* String+Lodjinha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6233E221FA00300FD3F31 /* String+Lodjinha.swift */; };
+		2BE62341221FA01300FD3F31 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62340221FA01300FD3F31 /* String+Localized.swift */; };
+		2BE62343221FA03500FD3F31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BE62342221FA03500FD3F31 /* Localizable.strings */; };
+		2BE62345221FA16B00FD3F31 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62344221FA16B00FD3F31 /* HomeView.swift */; };
+		2BE62347221FAA8100FD3F31 /* UIColor+Lodjinha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62346221FAA8100FD3F31 /* UIColor+Lodjinha.swift */; };
+		2BE62349221FAB1A00FD3F31 /* UIImage+Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62348221FAB1A00FD3F31 /* UIImage+Root.swift */; };
+		2BE6234B22208BFA00FD3F31 /* HomeBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6234A22208BFA00FD3F31 /* HomeBannerCell.swift */; };
+		2BE6234E22208C9000FD3F31 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6234D22208C9000FD3F31 /* BannerView.swift */; };
+		2BE6235122217E7100FD3F31 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6235022217E7100FD3F31 /* HTTPService.swift */; };
+		2BE6235322217EC200FD3F31 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6235222217EC200FD3F31 /* HTTPError.swift */; };
+		2BE6235522217EE500FD3F31 /* String+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6235422217EE500FD3F31 /* String+Services.swift */; };
+		2BE6235822217FCF00FD3F31 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6235722217FCF00FD3F31 /* URLImageView.swift */; };
+		2BE6235A2221802B00FD3F31 /* ImageNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE623592221802B00FD3F31 /* ImageNetworking.swift */; };
+		2BE6235C2221805F00FD3F31 /* ImageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6235B2221805F00FD3F31 /* ImageWorker.swift */; };
+		2BE6235E2221857400FD3F31 /* ALodjinhaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6235D2221857400FD3F31 /* ALodjinhaAPI.swift */; };
+		2BE62362222185F100FD3F31 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62361222185F100FD3F31 /* Banner.swift */; };
+		2BE623662221890C00FD3F31 /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE623652221890C00FD3F31 /* UITableViewCell+ReuseIdentifier.swift */; };
+		2BE623682221906E00FD3F31 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE623672221906E00FD3F31 /* DataContainer.swift */; };
 		3B99543A4ED3927C4211D3F9 /* Pods_Lodjinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA639E00BB5CBA10DB53779 /* Pods_Lodjinha.framework */; };
 		9344D0CA9522ECF741284957 /* Pods_LodjinhaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB51B21C3DAA3B352D52DE34 /* Pods_LodjinhaTests.framework */; };
 /* End PBXBuildFile section */
@@ -33,6 +60,33 @@
 		2BE62307221F97A100FD3F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BE6230C221F97A100FD3F31 /* LodjinhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE62312221F97A100FD3F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BE62324221F9C0F00FD3F31 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		2BE6232D221F9D9900FD3F31 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		2BE6232E221F9D9900FD3F31 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		2BE6232F221F9D9900FD3F31 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		2BE62330221F9D9900FD3F31 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		2BE62331221F9D9900FD3F31 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2BE62332221F9D9900FD3F31 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		2BE62339221F9F2A00FD3F31 /* UIImage+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Home.swift"; sourceTree = "<group>"; };
+		2BE6233B221F9FED00FD3F31 /* String+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Home.swift"; sourceTree = "<group>"; };
+		2BE6233E221FA00300FD3F31 /* String+Lodjinha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Lodjinha.swift"; sourceTree = "<group>"; };
+		2BE62340221FA01300FD3F31 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		2BE62342221FA03500FD3F31 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		2BE62344221FA16B00FD3F31 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2BE62346221FAA8100FD3F31 /* UIColor+Lodjinha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Lodjinha.swift"; sourceTree = "<group>"; };
+		2BE62348221FAB1A00FD3F31 /* UIImage+Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Root.swift"; sourceTree = "<group>"; };
+		2BE6234A22208BFA00FD3F31 /* HomeBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCell.swift; sourceTree = "<group>"; };
+		2BE6234D22208C9000FD3F31 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		2BE6235022217E7100FD3F31 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
+		2BE6235222217EC200FD3F31 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		2BE6235422217EE500FD3F31 /* String+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Services.swift"; sourceTree = "<group>"; };
+		2BE6235722217FCF00FD3F31 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
+		2BE623592221802B00FD3F31 /* ImageNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworking.swift; sourceTree = "<group>"; };
+		2BE6235B2221805F00FD3F31 /* ImageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWorker.swift; sourceTree = "<group>"; };
+		2BE6235D2221857400FD3F31 /* ALodjinhaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALodjinhaAPI.swift; sourceTree = "<group>"; };
+		2BE62361222185F100FD3F31 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		2BE623652221890C00FD3F31 /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		2BE623672221906E00FD3F31 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		3661A71481EBF3A63CF6FED1 /* Pods-LodjinhaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaTests.debug.xcconfig"; path = "Target Support Files/Pods-LodjinhaTests/Pods-LodjinhaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BA639E00BB5CBA10DB53779 /* Pods_Lodjinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lodjinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB51B21C3DAA3B352D52DE34 /* Pods_LodjinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LodjinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				2BE6231B221F97C200FD3F31 /* Application */,
+				2BE6231E221F9BF800FD3F31 /* Scenes */,
+				2BE6233D221F9FF700FD3F31 /* Shared */,
 				2BE6231C221F97CB00FD3F31 /* Resources */,
 			);
 			path = Lodjinha;
@@ -111,8 +167,105 @@
 			children = (
 				2BE62302221F97A100FD3F31 /* Assets.xcassets */,
 				2BE62304221F97A100FD3F31 /* LaunchScreen.storyboard */,
+				2BE62342221FA03500FD3F31 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2BE6231E221F9BF800FD3F31 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2BE6231F221F9C0000FD3F31 /* Root */,
+				2BE6232C221F9D8900FD3F31 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2BE6231F221F9C0000FD3F31 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				2BE62324221F9C0F00FD3F31 /* RootViewController.swift */,
+				2BE62348221FAB1A00FD3F31 /* UIImage+Root.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		2BE6232C221F9D8900FD3F31 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2BE62332221F9D9900FD3F31 /* HomeInteractor.swift */,
+				2BE62330221F9D9900FD3F31 /* HomeModels.swift */,
+				2BE6232D221F9D9900FD3F31 /* HomePresenter.swift */,
+				2BE6232F221F9D9900FD3F31 /* HomeRouter.swift */,
+				2BE6232E221F9D9900FD3F31 /* HomeWorker.swift */,
+				2BE62331221F9D9900FD3F31 /* HomeViewController.swift */,
+				2BE62344221FA16B00FD3F31 /* HomeView.swift */,
+				2BE6234A22208BFA00FD3F31 /* HomeBannerCell.swift */,
+				2BE62339221F9F2A00FD3F31 /* UIImage+Home.swift */,
+				2BE6233B221F9FED00FD3F31 /* String+Home.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2BE6233D221F9FF700FD3F31 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2BE6234C22208C8800FD3F31 /* Views */,
+				2BE62360222185E900FD3F31 /* Models */,
+				2BE62363222186BE00FD3F31 /* Workers */,
+				2BE6234F22217E5A00FD3F31 /* Services */,
+				2BE62364222188FE00FD3F31 /* Helpers */,
+				2BE62340221FA01300FD3F31 /* String+Localized.swift */,
+				2BE6233E221FA00300FD3F31 /* String+Lodjinha.swift */,
+				2BE62346221FAA8100FD3F31 /* UIColor+Lodjinha.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2BE6234C22208C8800FD3F31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2BE6234D22208C9000FD3F31 /* BannerView.swift */,
+				2BE6235722217FCF00FD3F31 /* URLImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2BE6234F22217E5A00FD3F31 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2BE6235022217E7100FD3F31 /* HTTPService.swift */,
+				2BE6235222217EC200FD3F31 /* HTTPError.swift */,
+				2BE6235D2221857400FD3F31 /* ALodjinhaAPI.swift */,
+				2BE623592221802B00FD3F31 /* ImageNetworking.swift */,
+				2BE6235422217EE500FD3F31 /* String+Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2BE62360222185E900FD3F31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BE62361222185F100FD3F31 /* Banner.swift */,
+				2BE623672221906E00FD3F31 /* DataContainer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2BE62363222186BE00FD3F31 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				2BE6235B2221805F00FD3F31 /* ImageWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		2BE62364222188FE00FD3F31 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2BE623652221890C00FD3F31 /* UITableViewCell+ReuseIdentifier.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		DF068EBE398BEFEEB6173F32 /* Frameworks */ = {
@@ -222,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BE62306221F97A100FD3F31 /* LaunchScreen.storyboard in Resources */,
+				2BE62343221FA03500FD3F31 /* Localizable.strings in Resources */,
 				2BE62303221F97A100FD3F31 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +505,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE62333221F9D9900FD3F31 /* HomePresenter.swift in Sources */,
+				2BE6235E2221857400FD3F31 /* ALodjinhaAPI.swift in Sources */,
+				2BE6232A221F9C0F00FD3F31 /* RootViewController.swift in Sources */,
+				2BE62345221FA16B00FD3F31 /* HomeView.swift in Sources */,
+				2BE6235A2221802B00FD3F31 /* ImageNetworking.swift in Sources */,
+				2BE62334221F9D9900FD3F31 /* HomeWorker.swift in Sources */,
+				2BE6233F221FA00300FD3F31 /* String+Lodjinha.swift in Sources */,
+				2BE62338221F9D9900FD3F31 /* HomeInteractor.swift in Sources */,
+				2BE62347221FAA8100FD3F31 /* UIColor+Lodjinha.swift in Sources */,
+				2BE623662221890C00FD3F31 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
+				2BE6235C2221805F00FD3F31 /* ImageWorker.swift in Sources */,
+				2BE6235322217EC200FD3F31 /* HTTPError.swift in Sources */,
 				2BE622FC221F97A000FD3F31 /* AppDelegate.swift in Sources */,
+				2BE62349221FAB1A00FD3F31 /* UIImage+Root.swift in Sources */,
+				2BE62341221FA01300FD3F31 /* String+Localized.swift in Sources */,
+				2BE6233C221F9FED00FD3F31 /* String+Home.swift in Sources */,
+				2BE62336221F9D9900FD3F31 /* HomeModels.swift in Sources */,
+				2BE62337221F9D9900FD3F31 /* HomeViewController.swift in Sources */,
+				2BE6235822217FCF00FD3F31 /* URLImageView.swift in Sources */,
+				2BE6233A221F9F2A00FD3F31 /* UIImage+Home.swift in Sources */,
+				2BE623682221906E00FD3F31 /* DataContainer.swift in Sources */,
+				2BE6234B22208BFA00FD3F31 /* HomeBannerCell.swift in Sources */,
+				2BE6235122217E7100FD3F31 /* HTTPService.swift in Sources */,
+				2BE6234E22208C9000FD3F31 /* BannerView.swift in Sources */,
+				2BE62362222185F100FD3F31 /* Banner.swift in Sources */,
+				2BE6235522217EE500FD3F31 /* String+Services.swift in Sources */,
+				2BE62335221F9D9900FD3F31 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +696,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilsongil.Lodjinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -536,7 +716,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilsongil.Lodjinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
