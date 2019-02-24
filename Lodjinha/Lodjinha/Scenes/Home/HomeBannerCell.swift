@@ -15,18 +15,27 @@ struct HomeBannerCellViewModel {
 }
 
 protocol HomeBannerCellLogic: class {
+  var delegate: HomeBannerCellDelegate? { get set }
+
   func update(viewModel: HomeBannerCellViewModel)
 }
 
+protocol HomeBannerCellDelegate: class {
+  func didTap(at page: Int)
+}
+
 final class HomeBannerCell: UITableViewCell {
-  private let bannerView: BannerView = {
+  private lazy var bannerView: BannerView = {
     let bannerView = BannerView()
     bannerView.layer.masksToBounds = false
     bannerView.layer.shadowOffset = CGSize(width: -1, height: 2)
     bannerView.layer.shadowRadius = 5
     bannerView.layer.shadowOpacity = 0.3
+    bannerView.delegate = self
     return bannerView
   }()
+
+  weak var delegate: HomeBannerCellDelegate?
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -58,5 +67,12 @@ extension HomeBannerCell: HomeBannerCellLogic {
   func update(viewModel: HomeBannerCellViewModel) {
     let imageUrls = viewModel.displayedBanners.compactMap { $0.stringUrl }
     bannerView.setImageUrls(imageUrls)
+  }
+}
+
+// MARK: - BannerView Delegate
+extension HomeBannerCell: BannerViewDelegate {
+  func didTap(at page: Int) {
+    delegate?.didTap(at: page)
   }
 }

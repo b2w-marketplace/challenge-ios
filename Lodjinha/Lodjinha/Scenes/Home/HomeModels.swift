@@ -27,6 +27,16 @@ enum Home {
     }
   }
 
+  enum PresentBannerLink {
+    struct Request {}
+    struct Response {
+      let banner: Banner
+    }
+    struct ViewModel {
+      let link: String
+    }
+  }
+
   enum FetchCategories {
     struct DisplayedCategory {
       let description: String

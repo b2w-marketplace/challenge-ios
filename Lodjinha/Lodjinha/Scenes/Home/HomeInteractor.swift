@@ -14,6 +14,7 @@ import UIKit
 
 protocol HomeBusinessLogic {
   func fetchBanner()
+  func didTapBanner(at index: Int)
   func fetchCategories()
   func fetchBestsellers()
 }
@@ -42,6 +43,12 @@ final class HomeInteractor: HomeBusinessLogic, HomeDataStore {
         self?.presenter?.presentError(error)
       }
     }
+  }
+
+  func didTapBanner(at index: Int) {
+    let banner = banners[index]
+    let response = Home.PresentBannerLink.Response(banner: banner)
+    presenter?.presentBanner(response: response)
   }
 
   func fetchCategories() {
