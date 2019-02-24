@@ -10,6 +10,10 @@ import UIKit
 
 import Cartography
 
+protocol BannerViewDelegate: class {
+  func didTap(at page: Int)
+}
+
 final class BannerView: UIView {
   private lazy var scrollView: UIScrollView = {
     let scrollView = UIScrollView()
@@ -30,6 +34,8 @@ final class BannerView: UIView {
 
   private var linkTimestamp: CFTimeInterval?
 
+  weak var delegate: BannerViewDelegate?
+
   init() {
     super.init(frame: .zero)
     setup()
@@ -42,6 +48,7 @@ final class BannerView: UIView {
   private func setup() {
     addSubviews()
     addConstraints()
+    addTargets()
   }
 
   private func addSubviews() {
@@ -60,6 +67,11 @@ final class BannerView: UIView {
       pageControl.bottom == view.bottom
       pageControl.centerX == view.centerX
     }
+  }
+
+  private func addTargets() {
+    let tap = UITapGestureRecognizer(target: self, action: #selector(didTap(gesture:)))
+    scrollView.addGestureRecognizer(tap)
   }
 
   override func didMoveToSuperview() {
@@ -135,6 +147,11 @@ private extension BannerView {
   func resetTimer() {
     linkTimestamp = displayLink?.timestamp
     displayLink?.isPaused = false
+  }
+
+  @objc
+  func didTap(gesture: UITapGestureRecognizer) {
+    delegate?.didTap(at: pageControl.currentPage)
   }
 }
 

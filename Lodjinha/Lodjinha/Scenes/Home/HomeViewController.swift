@@ -10,6 +10,7 @@
 //  see http://clean-swift.com
 //
 
+import SafariServices
 import UIKit
 
 protocol HomeDisplayLogic: class {
@@ -17,6 +18,7 @@ protocol HomeDisplayLogic: class {
   func displayBanners(viewModel: Home.FetchBanner.ViewModel)
   func displayCategories(viewModel: Home.FetchCategories.ViewModel)
   func displayBestsellers(viewModel: Home.FetchBestsellers.ViewModel)
+  func displayBannerLink(viewModel: Home.PresentBannerLink.ViewModel)
 }
 
 final class HomeViewController: UIViewController {
@@ -135,6 +137,14 @@ extension HomeViewController: HomeDisplayLogic {
     }
   }
 
+  func displayBannerLink(viewModel: Home.PresentBannerLink.ViewModel) {
+    DispatchQueue.main.async {
+      guard let url = URL(string: viewModel.link) else { return }
+      let safari = SFSafariViewController(url: url)
+      self.present(safari, animated: true, completion: nil)
+    }
+  }
+
   func displayCategories(viewModel: Home.FetchCategories.ViewModel) {
     DispatchQueue.main.async {
       self.displayedCategories = viewModel.displayedCategories
@@ -177,6 +187,7 @@ extension HomeViewController: UITableViewDataSource {
       if let bannerCell = cell as? HomeBannerCellLogic {
         let viewModel = HomeBannerCellViewModel(displayedBanners: displayedBanners ?? [])
         bannerCell.update(viewModel: viewModel)
+        bannerCell.delegate = self
       }
     case 1:
       cell = tableView.dequeueReusableCell(withIdentifier: HomeCategoriesCell.reuseIdentifier, for: indexPath)
@@ -245,5 +256,12 @@ extension HomeViewController: UITableViewDelegate {
       homeHeader.update(viewModel: viewModel)
     }
     return header
+  }
+}
+
+// MARK: - HomeBannerCell Delegate
+extension HomeViewController: HomeBannerCellDelegate {
+  func didTap(at page: Int) {
+    interactor?.didTapBanner(at: page)
   }
 }
