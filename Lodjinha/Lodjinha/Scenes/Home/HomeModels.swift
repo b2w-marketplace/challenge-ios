@@ -26,4 +26,19 @@ enum Home {
       let displayedBanners: [DisplayedBanner]
     }
   }
+
+  enum FetchCategories {
+    struct DisplayedCategory {
+      let description: String
+      let imageUrl: String
+    }
+
+    struct Request {}
+    struct Response {
+      let categories: [Category]
+    }
+    struct ViewModel {
+      let displayedCategories: [DisplayedCategory]
+    }
+  }
 }

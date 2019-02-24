@@ -24,6 +24,7 @@ struct ALodjinhaAPI {
 
   enum Endpoints: String {
     case banner = "/banner"
+    case categories = "/categoria"
   }
 
   static func getBanner(completion: @escaping (() throws -> [Banner]) -> Void) {
@@ -33,6 +34,20 @@ struct ALodjinhaAPI {
       do {
         let data = try callback()
         let container = try JSONDecoder().decode(DataContainer<[Banner]>.self, from: data)
+        completion { container.data }
+      } catch {
+        completion { throw error }
+      }
+    }
+  }
+
+  static func getCategories(completion: @escaping (() throws -> [Category]) -> Void) {
+    let method = Method.get
+    let path = Endpoints.categories.rawValue
+    HTTPService.request(method: method, baseUrl: baseUrl, path: path, parameters: nil) { callback in
+      do {
+        let data = try callback()
+        let container = try JSONDecoder().decode(DataContainer<[Category]>.self, from: data)
         completion { container.data }
       } catch {
         completion { throw error }

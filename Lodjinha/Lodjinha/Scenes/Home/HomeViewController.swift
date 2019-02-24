@@ -15,6 +15,7 @@ import UIKit
 protocol HomeDisplayLogic: class {
   func displayError(_ error: Error)
   func displayBanners(viewModel: Home.FetchBanner.ViewModel)
+  func displayCategories(viewModel: Home.FetchCategories.ViewModel)
 }
 
 final class HomeViewController: UIViewController {
@@ -22,6 +23,7 @@ final class HomeViewController: UIViewController {
   var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
   var homeView: HomeViewLogic?
   var displayedBanners: [Home.FetchBanner.DisplayedBanner]?
+  var displayedCategories: [Home.FetchCategories.DisplayedCategory]?
 
   // MARK: - Object lifecycle
 
@@ -67,6 +69,7 @@ final class HomeViewController: UIViewController {
     super.viewDidLoad()
     setupTableView()
     fetchBanner()
+    fetchCategories()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -83,6 +86,9 @@ final class HomeViewController: UIViewController {
   func setupTableView() {
     homeView?.tableView.register(HomeBannerCell.self,
                                  forCellReuseIdentifier: HomeBannerCell.reuseIdentifier)
+    homeView?.tableView.register(HomeCategoriesCell.self,
+                                 forCellReuseIdentifier: HomeCategoriesCell.reuseIdentifier)
+    homeView?.tableView.register(HomeHeader.self, forHeaderFooterViewReuseIdentifier: HomeHeader.reuseIdentifier)
     homeView?.tableView.dataSource = self
     homeView?.tableView.delegate = self
   }
@@ -91,6 +97,12 @@ final class HomeViewController: UIViewController {
 
   func fetchBanner() {
     interactor?.fetchBanner()
+  }
+
+  // MARK: - Fetch Categories
+
+  func fetchCategories() {
+    interactor?.fetchCategories()
   }
 }
 
@@ -112,6 +124,14 @@ extension HomeViewController: HomeDisplayLogic {
       self.homeView?.tableView.reloadSections(firstSection, with: .none)
     }
   }
+
+  func displayCategories(viewModel: Home.FetchCategories.ViewModel) {
+    DispatchQueue.main.async {
+      self.displayedCategories = viewModel.displayedCategories
+      let secondSection = IndexSet(integer: 1)
+      self.homeView?.tableView.reloadSections(secondSection, with: .none)
+    }
+  }
 }
 
 // MARK: - UITableView DataSource
@@ -123,7 +143,9 @@ extension HomeViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     switch section {
     case 0:
-      return displayedBanners != nil ? 1 : 0
+      return 1
+    case 1:
+      return 1
     default:
       return 0
     }
@@ -138,6 +160,12 @@ extension HomeViewController: UITableViewDataSource {
         let viewModel = HomeBannerCellViewModel(displayedBanners: displayedBanners ?? [])
         bannerCell.update(viewModel: viewModel)
       }
+    case 1:
+      cell = tableView.dequeueReusableCell(withIdentifier: HomeCategoriesCell.reuseIdentifier, for: indexPath)
+      if let categoriesCell = cell as? HomeCategoriesCellLogic {
+        let viewModel = HomeCategoriesCellViewModel(displayedCategories: displayedCategories ?? [])
+        categoriesCell.update(viewModel: viewModel)
+      }
     default:
       cell = UITableViewCell()
     }
@@ -151,8 +179,34 @@ extension HomeViewController: UITableViewDelegate {
     switch indexPath.section {
     case 0:
       return 120
+    case 1:
+      return 140
     default:
       return 0
     }
+  }
+
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    switch section {
+    case 1:
+      return 40
+    default:
+      return 0
+    }
+  }
+
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let viewModel: HomeHeaderViewModel?
+    switch section {
+    case 1:
+      viewModel = HomeHeaderViewModel(title: String.Home.categories)
+    default:
+      viewModel = nil
+    }
+    let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HomeHeader.reuseIdentifier)
+    if let viewModel = viewModel, let homeHeader = header as? HomeHeaderLogic {
+      homeHeader.update(viewModel: viewModel)
+    }
+    return header
   }
 }

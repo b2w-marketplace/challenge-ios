@@ -15,6 +15,7 @@ import UIKit
 protocol HomePresentationLogic {
   func presentError(_ error: Error)
   func presentBanners(response: Home.FetchBanner.Response)
+  func presentCategories(response: Home.FetchCategories.Response)
 }
 
 final class HomePresenter: HomePresentationLogic {
@@ -28,5 +29,13 @@ final class HomePresenter: HomePresentationLogic {
     let displayedBanners = response.banners.compactMap { Home.FetchBanner.DisplayedBanner(stringUrl: $0.imageUrl) }
     let viewModel = Home.FetchBanner.ViewModel(displayedBanners: displayedBanners)
     viewController?.displayBanners(viewModel: viewModel)
+  }
+
+  func presentCategories(response: Home.FetchCategories.Response) {
+    let displayedCategories = response.categories.compactMap {
+      Home.FetchCategories.DisplayedCategory(description: $0.description, imageUrl: $0.imageUrl)
+    }
+    let viewModel = Home.FetchCategories.ViewModel(displayedCategories: displayedCategories)
+    viewController?.displayCategories(viewModel: viewModel)
   }
 }

@@ -16,4 +16,8 @@ final class HomeWorker {
   func fetchBanner(completion: @escaping (() throws -> [Banner]) -> Void) {
     ALodjinhaAPI.getBanner(completion: completion)
   }
+
+  func fetchCategories(completion: @escaping (() throws -> [Category]) -> Void) {
+    ALodjinhaAPI.getCategories(completion: completion)
+  }
 }
