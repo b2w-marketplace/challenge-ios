@@ -16,6 +16,7 @@ protocol HomeDisplayLogic: class {
   func displayError(_ error: Error)
   func displayBanners(viewModel: Home.FetchBanner.ViewModel)
   func displayCategories(viewModel: Home.FetchCategories.ViewModel)
+  func displayBestsellers(viewModel: Home.FetchBestsellers.ViewModel)
 }
 
 final class HomeViewController: UIViewController {
@@ -24,6 +25,7 @@ final class HomeViewController: UIViewController {
   var homeView: HomeViewLogic?
   var displayedBanners: [Home.FetchBanner.DisplayedBanner]?
   var displayedCategories: [Home.FetchCategories.DisplayedCategory]?
+  var displayedBestsellers: [Home.FetchBestsellers.DisplayedProduct]?
 
   // MARK: - Object lifecycle
 
@@ -70,6 +72,7 @@ final class HomeViewController: UIViewController {
     setupTableView()
     fetchBanner()
     fetchCategories()
+    fetchBestsellers()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -88,6 +91,8 @@ final class HomeViewController: UIViewController {
                                  forCellReuseIdentifier: HomeBannerCell.reuseIdentifier)
     homeView?.tableView.register(HomeCategoriesCell.self,
                                  forCellReuseIdentifier: HomeCategoriesCell.reuseIdentifier)
+    homeView?.tableView.register(ProductCell.self,
+                                 forCellReuseIdentifier: ProductCell.reuseIdentifier)
     homeView?.tableView.register(HomeHeader.self, forHeaderFooterViewReuseIdentifier: HomeHeader.reuseIdentifier)
     homeView?.tableView.dataSource = self
     homeView?.tableView.delegate = self
@@ -103,6 +108,12 @@ final class HomeViewController: UIViewController {
 
   func fetchCategories() {
     interactor?.fetchCategories()
+  }
+
+  // MARK: - Fetch Categories
+
+  func fetchBestsellers() {
+    interactor?.fetchBestsellers()
   }
 }
 
@@ -120,16 +131,21 @@ extension HomeViewController: HomeDisplayLogic {
   func displayBanners(viewModel: Home.FetchBanner.ViewModel) {
     DispatchQueue.main.async {
       self.displayedBanners = viewModel.displayedBanners
-      let firstSection = IndexSet(integer: 0)
-      self.homeView?.tableView.reloadSections(firstSection, with: .none)
+      self.homeView?.tableView.reloadData()
     }
   }
 
   func displayCategories(viewModel: Home.FetchCategories.ViewModel) {
     DispatchQueue.main.async {
       self.displayedCategories = viewModel.displayedCategories
-      let secondSection = IndexSet(integer: 1)
-      self.homeView?.tableView.reloadSections(secondSection, with: .none)
+      self.homeView?.tableView.reloadData()
+    }
+  }
+
+  func displayBestsellers(viewModel: Home.FetchBestsellers.ViewModel) {
+    DispatchQueue.main.async {
+      self.displayedBestsellers = viewModel.displayedProducts
+      self.homeView?.tableView.reloadData()
     }
   }
 }
@@ -146,6 +162,8 @@ extension HomeViewController: UITableViewDataSource {
       return 1
     case 1:
       return 1
+    case 2:
+      return displayedBestsellers?.count ?? 0
     default:
       return 0
     }
@@ -166,6 +184,12 @@ extension HomeViewController: UITableViewDataSource {
         let viewModel = HomeCategoriesCellViewModel(displayedCategories: displayedCategories ?? [])
         categoriesCell.update(viewModel: viewModel)
       }
+    case 2:
+      cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseIdentifier, for: indexPath)
+      if let productCell = cell as? ProductCellLogic, let product = displayedBestsellers?[indexPath.row] {
+        let viewModel = ProductCellViewModel(displayedProduct: product)
+        productCell.update(viewModel: viewModel)
+      }
     default:
       cell = UITableViewCell()
     }
@@ -175,12 +199,23 @@ extension HomeViewController: UITableViewDataSource {
 
 // MARK: - UITableView Delegate
 extension HomeViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    switch indexPath.section {
+    case 2:
+      return 100
+    default:
+      return 0
+    }
+  }
+
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     switch indexPath.section {
     case 0:
       return 120
     case 1:
       return 140
+    case 2:
+      return UITableView.automaticDimension
     default:
       return 0
     }
@@ -188,10 +223,10 @@ extension HomeViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     switch section {
-    case 1:
-      return 40
-    default:
+    case 0:
       return 0
+    default:
+      return 40
     }
   }
 
@@ -200,6 +235,8 @@ extension HomeViewController: UITableViewDelegate {
     switch section {
     case 1:
       viewModel = HomeHeaderViewModel(title: String.Home.categories)
+    case 2:
+      viewModel = HomeHeaderViewModel(title: String.Home.bestsellers)
     default:
       viewModel = nil
     }

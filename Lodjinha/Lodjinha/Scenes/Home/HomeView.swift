@@ -17,7 +17,7 @@ protocol HomeViewLogic: class {
 final class HomeView: UIView {
   public private(set) lazy var tableView: UITableView = {
     let tableView = UITableView()
-    tableView.separatorStyle = .none
+    tableView.separatorInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
     return tableView
   }()
 

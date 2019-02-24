@@ -20,4 +20,8 @@ final class HomeWorker {
   func fetchCategories(completion: @escaping (() throws -> [Category]) -> Void) {
     ALodjinhaAPI.getCategories(completion: completion)
   }
+
+  func fetchBestsellers(completion: @escaping (() throws -> [Product]) -> Void) {
+    ALodjinhaAPI.getBestsellers(completion: completion)
+  }
 }

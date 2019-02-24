@@ -41,4 +41,21 @@ enum Home {
       let displayedCategories: [DisplayedCategory]
     }
   }
+
+  enum FetchBestsellers {
+    struct DisplayedProduct {
+      let imageUrl: String
+      let name: String
+      let fromPrice: String
+      let toPrice: String
+    }
+
+    struct Request {}
+    struct Response {
+      let products: [Product]
+    }
+    struct ViewModel {
+      let displayedProducts: [DisplayedProduct]
+    }
+  }
 }

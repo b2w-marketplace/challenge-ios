@@ -15,11 +15,13 @@ import UIKit
 protocol HomeBusinessLogic {
   func fetchBanner()
   func fetchCategories()
+  func fetchBestsellers()
 }
 
 protocol HomeDataStore {
   var banners: [Banner] { get set }
   var categories: [Category] { get set }
+  var bestsellers: [Product] { get set }
 }
 
 final class HomeInteractor: HomeBusinessLogic, HomeDataStore {
@@ -27,6 +29,7 @@ final class HomeInteractor: HomeBusinessLogic, HomeDataStore {
   lazy var worker: HomeWorker? = { HomeWorker() }()
   var banners: [Banner] = []
   var categories: [Category] = []
+  var bestsellers: [Product] = []
 
   func fetchBanner() {
     worker?.fetchBanner { [weak self] callback in
@@ -48,6 +51,19 @@ final class HomeInteractor: HomeBusinessLogic, HomeDataStore {
         self?.categories = categories
         let response = Home.FetchCategories.Response(categories: categories)
         self?.presenter?.presentCategories(response: response)
+      } catch {
+        self?.presenter?.presentError(error)
+      }
+    }
+  }
+
+  func fetchBestsellers() {
+    worker?.fetchBestsellers { [weak self] callback in
+      do {
+        let bestsellers = try callback()
+        self?.bestsellers = bestsellers
+        let response = Home.FetchBestsellers.Response(products: bestsellers)
+        self?.presenter?.presentBestsellers(response: response)
       } catch {
         self?.presenter?.presentError(error)
       }

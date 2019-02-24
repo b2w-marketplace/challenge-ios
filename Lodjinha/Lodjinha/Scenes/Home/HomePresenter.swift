@@ -16,6 +16,7 @@ protocol HomePresentationLogic {
   func presentError(_ error: Error)
   func presentBanners(response: Home.FetchBanner.Response)
   func presentCategories(response: Home.FetchCategories.Response)
+  func presentBestsellers(response: Home.FetchBestsellers.Response)
 }
 
 final class HomePresenter: HomePresentationLogic {
@@ -37,5 +38,18 @@ final class HomePresenter: HomePresentationLogic {
     }
     let viewModel = Home.FetchCategories.ViewModel(displayedCategories: displayedCategories)
     viewController?.displayCategories(viewModel: viewModel)
+  }
+
+  func presentBestsellers(response: Home.FetchBestsellers.Response) {
+    let displayedBestsellers: [Home.FetchBestsellers.DisplayedProduct] = response.products.compactMap {
+      let fromPrice = String(format: "%@%.2f", arguments: [String.Home.priceFrom, $0.fromPrice])
+      let toPrice = String(format: "%@%.2f", arguments: [String.Home.priceTo, $0.toPrice])
+      return Home.FetchBestsellers.DisplayedProduct(imageUrl: $0.imageUrl,
+                                                    name: $0.name,
+                                                    fromPrice: fromPrice,
+                                                    toPrice: toPrice)
+    }
+    let viewModel = Home.FetchBestsellers.ViewModel(displayedProducts: displayedBestsellers)
+    viewController?.displayBestsellers(viewModel: viewModel)
   }
 }
