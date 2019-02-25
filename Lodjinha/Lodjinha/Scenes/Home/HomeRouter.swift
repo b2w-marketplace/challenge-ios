@@ -12,7 +12,8 @@
 
 import UIKit
 
-@objc protocol HomeRoutingLogic {
+protocol HomeRoutingLogic {
+  func routeToCategory(with category: Category)
 }
 
 protocol HomeDataPassing {
@@ -22,4 +23,24 @@ protocol HomeDataPassing {
 final class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
   weak var viewController: HomeViewController?
   var dataStore: HomeDataStore?
+
+  func routeToCategory(with category: Category) {
+    let viewController = CategoryViewController()
+    guard let homeViewController = self.viewController,
+      var destinationDataStore = viewController.router?.dataStore else { return }
+    passDataToCategory(category: category, destination: &destinationDataStore)
+    navigateToCategory(source: homeViewController, destination: viewController)
+  }
+
+  // MARK: Navigation
+
+  func navigateToCategory(source: HomeViewController, destination: CategoryViewController) {
+    source.navigationController?.pushViewController(destination, animated: true)
+  }
+
+  // MARK: Passing data
+
+  func passDataToCategory(category: Category, destination: inout CategoryDataStore) {
+    destination.category = category
+  }
 }

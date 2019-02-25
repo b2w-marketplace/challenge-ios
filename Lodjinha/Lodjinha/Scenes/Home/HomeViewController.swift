@@ -15,10 +15,14 @@ import UIKit
 
 protocol HomeDisplayLogic: class {
   func displayError(_ error: Error)
+
   func displayBanners(viewModel: Home.FetchBanner.ViewModel)
-  func displayCategories(viewModel: Home.FetchCategories.ViewModel)
-  func displayBestsellers(viewModel: Home.FetchBestsellers.ViewModel)
   func displayBannerLink(viewModel: Home.PresentBannerLink.ViewModel)
+
+  func displayCategories(viewModel: Home.FetchCategories.ViewModel)
+  func displayCategory(viewModel: Home.PresentCategory.ViewModel)
+
+  func displayBestsellers(viewModel: Home.FetchBestsellers.ViewModel)
 }
 
 final class HomeViewController: UIViewController {
@@ -27,7 +31,7 @@ final class HomeViewController: UIViewController {
   var homeView: HomeViewLogic?
   var displayedBanners: [Home.FetchBanner.DisplayedBanner]?
   var displayedCategories: [Home.FetchCategories.DisplayedCategory]?
-  var displayedBestsellers: [Home.FetchBestsellers.DisplayedProduct]?
+  var displayedBestsellers: [DisplayedProduct]?
 
   // MARK: - Object lifecycle
 
@@ -84,6 +88,8 @@ final class HomeViewController: UIViewController {
     let imageView = UIImageView(frame: CGRect(origin: .zero, size: image.size))
     imageView.image = image
     parent?.navigationItem.titleView = imageView
+
+    parent?.navigationItem.title = String.Home.tabBar
   }
 
   // MARK: - TableView
@@ -152,6 +158,12 @@ extension HomeViewController: HomeDisplayLogic {
     }
   }
 
+  func displayCategory(viewModel: Home.PresentCategory.ViewModel) {
+    DispatchQueue.main.async {
+      self.router?.routeToCategory(with: viewModel.category)
+    }
+  }
+
   func displayBestsellers(viewModel: Home.FetchBestsellers.ViewModel) {
     DispatchQueue.main.async {
       self.displayedBestsellers = viewModel.displayedProducts
@@ -194,6 +206,7 @@ extension HomeViewController: UITableViewDataSource {
       if let categoriesCell = cell as? HomeCategoriesCellLogic {
         let viewModel = HomeCategoriesCellViewModel(displayedCategories: displayedCategories ?? [])
         categoriesCell.update(viewModel: viewModel)
+        categoriesCell.delegate = self
       }
     case 2:
       cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseIdentifier, for: indexPath)
@@ -263,5 +276,12 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: HomeBannerCellDelegate {
   func didTap(at page: Int) {
     interactor?.didTapBanner(at: page)
+  }
+}
+
+// MARK: - HomeCategoriesCell Delegate
+extension HomeViewController: HomeCategoriesCellDelegate {
+  func didTapCategory(at index: Int) {
+    interactor?.didTapCategory(at: index)
   }
 }

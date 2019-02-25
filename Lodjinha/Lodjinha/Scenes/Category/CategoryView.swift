@@ -1,8 +1,8 @@
 //
-//  HomeView.swift
+//  CategoryView.swift
 //  Lodjinha
 //
-//  Created by Gilson Gil on 22/02/19.
+//  Created by Gilson Gil on 24/02/19.
 //  Copyright © 2019 Gilson Gil. All rights reserved.
 //
 
@@ -10,11 +10,11 @@ import UIKit
 
 import Cartography
 
-protocol HomeViewLogic: class {
+protocol CategoryViewLogic: class {
   var tableView: UITableView { get }
 }
 
-final class HomeView: UIView {
+final class CategoryView: UIView {
   public private(set) lazy var tableView: UITableView = {
     let tableView = UITableView()
     tableView.separatorInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
@@ -49,5 +49,5 @@ final class HomeView: UIView {
   }
 }
 
-extension HomeView: HomeViewLogic {
+extension CategoryView: CategoryViewLogic {
 }

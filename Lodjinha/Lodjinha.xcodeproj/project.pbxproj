@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B2B6C7D222486DC00242A9C /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B6C7C222486DC00242A9C /* LoadingCell.swift */; };
 		2BE622FC221F97A000FD3F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE622FB221F97A000FD3F31 /* AppDelegate.swift */; };
 		2BE62303221F97A100FD3F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE62302221F97A100FD3F31 /* Assets.xcassets */; };
 		2BE62306221F97A100FD3F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE62304221F97A100FD3F31 /* LaunchScreen.storyboard */; };
@@ -43,6 +44,14 @@
 		2BE6237322222E9100FD3F31 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6237222222E9100FD3F31 /* HomeHeader.swift */; };
 		2BE62375222234CF00FD3F31 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62374222234CF00FD3F31 /* Product.swift */; };
 		2BE62377222241AC00FD3F31 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62376222241AC00FD3F31 /* ProductCell.swift */; };
+		2BE6237F222255E900FD3F31 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62379222255E900FD3F31 /* CategoryPresenter.swift */; };
+		2BE62380222255E900FD3F31 /* CategoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6237A222255E900FD3F31 /* CategoryWorker.swift */; };
+		2BE62381222255E900FD3F31 /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6237B222255E900FD3F31 /* CategoryRouter.swift */; };
+		2BE62382222255E900FD3F31 /* CategoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6237C222255E900FD3F31 /* CategoryModels.swift */; };
+		2BE62383222255E900FD3F31 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6237D222255E900FD3F31 /* CategoryViewController.swift */; };
+		2BE62384222255E900FD3F31 /* CategoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6237E222255E900FD3F31 /* CategoryInteractor.swift */; };
+		2BE623862222570200FD3F31 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE623852222570200FD3F31 /* CategoryView.swift */; };
+		2BE623882222E60000FD3F31 /* DisplayedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE623872222E60000FD3F31 /* DisplayedProduct.swift */; };
 		3B99543A4ED3927C4211D3F9 /* Pods_Lodjinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA639E00BB5CBA10DB53779 /* Pods_Lodjinha.framework */; };
 		9344D0CA9522ECF741284957 /* Pods_LodjinhaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB51B21C3DAA3B352D52DE34 /* Pods_LodjinhaTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		28D23D8DE67AE99C701E02DB /* Pods-LodjinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaTests.release.xcconfig"; path = "Target Support Files/Pods-LodjinhaTests/Pods-LodjinhaTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B2B6C7C222486DC00242A9C /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		2BE622F8221F97A000FD3F31 /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE622FB221F97A000FD3F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BE62302221F97A100FD3F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +109,14 @@
 		2BE6237222222E9100FD3F31 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		2BE62374222234CF00FD3F31 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2BE62376222241AC00FD3F31 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		2BE62379222255E900FD3F31 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
+		2BE6237A222255E900FD3F31 /* CategoryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryWorker.swift; sourceTree = "<group>"; };
+		2BE6237B222255E900FD3F31 /* CategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
+		2BE6237C222255E900FD3F31 /* CategoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModels.swift; sourceTree = "<group>"; };
+		2BE6237D222255E900FD3F31 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		2BE6237E222255E900FD3F31 /* CategoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInteractor.swift; sourceTree = "<group>"; };
+		2BE623852222570200FD3F31 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		2BE623872222E60000FD3F31 /* DisplayedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayedProduct.swift; sourceTree = "<group>"; };
 		3661A71481EBF3A63CF6FED1 /* Pods-LodjinhaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaTests.debug.xcconfig"; path = "Target Support Files/Pods-LodjinhaTests/Pods-LodjinhaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BA639E00BB5CBA10DB53779 /* Pods_Lodjinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lodjinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB51B21C3DAA3B352D52DE34 /* Pods_LodjinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LodjinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +207,7 @@
 			children = (
 				2BE6231F221F9C0000FD3F31 /* Root */,
 				2BE6232C221F9D8900FD3F31 /* Home */,
+				2BE62378222255CF00FD3F31 /* Category */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -243,6 +262,7 @@
 				2BE6234D22208C9000FD3F31 /* BannerView.swift */,
 				2BE6235722217FCF00FD3F31 /* URLImageView.swift */,
 				2BE62376222241AC00FD3F31 /* ProductCell.swift */,
+				2B2B6C7C222486DC00242A9C /* LoadingCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +285,7 @@
 				2BE62361222185F100FD3F31 /* Banner.swift */,
 				2BE623692221A78800FD3F31 /* Category.swift */,
 				2BE62374222234CF00FD3F31 /* Product.swift */,
+				2BE623872222E60000FD3F31 /* DisplayedProduct.swift */,
 				2BE623672221906E00FD3F31 /* DataContainer.swift */,
 			);
 			path = Models;
@@ -284,6 +305,20 @@
 				2BE6237022222B3800FD3F31 /* ReuseIdentifiable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2BE62378222255CF00FD3F31 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2BE6237E222255E900FD3F31 /* CategoryInteractor.swift */,
+				2BE6237C222255E900FD3F31 /* CategoryModels.swift */,
+				2BE62379222255E900FD3F31 /* CategoryPresenter.swift */,
+				2BE6237B222255E900FD3F31 /* CategoryRouter.swift */,
+				2BE6237A222255E900FD3F31 /* CategoryWorker.swift */,
+				2BE6237D222255E900FD3F31 /* CategoryViewController.swift */,
+				2BE623852222570200FD3F31 /* CategoryView.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		DF068EBE398BEFEEB6173F32 /* Frameworks */ = {
@@ -525,8 +560,11 @@
 			files = (
 				2BE62333221F9D9900FD3F31 /* HomePresenter.swift in Sources */,
 				2BE6235E2221857400FD3F31 /* ALodjinhaAPI.swift in Sources */,
+				2BE62381222255E900FD3F31 /* CategoryRouter.swift in Sources */,
 				2BE6232A221F9C0F00FD3F31 /* RootViewController.swift in Sources */,
 				2BE6236C2221A8CC00FD3F31 /* HomeCategoriesCell.swift in Sources */,
+				2BE6237F222255E900FD3F31 /* CategoryPresenter.swift in Sources */,
+				2BE62382222255E900FD3F31 /* CategoryModels.swift in Sources */,
 				2BE62345221FA16B00FD3F31 /* HomeView.swift in Sources */,
 				2BE6235A2221802B00FD3F31 /* ImageNetworking.swift in Sources */,
 				2BE62334221F9D9900FD3F31 /* HomeWorker.swift in Sources */,
@@ -534,26 +572,32 @@
 				2BE6233F221FA00300FD3F31 /* String+Lodjinha.swift in Sources */,
 				2BE62375222234CF00FD3F31 /* Product.swift in Sources */,
 				2BE62338221F9D9900FD3F31 /* HomeInteractor.swift in Sources */,
+				2BE623862222570200FD3F31 /* CategoryView.swift in Sources */,
 				2BE62347221FAA8100FD3F31 /* UIColor+Lodjinha.swift in Sources */,
 				2BE62377222241AC00FD3F31 /* ProductCell.swift in Sources */,
 				2BE6235C2221805F00FD3F31 /* ImageWorker.swift in Sources */,
+				2B2B6C7D222486DC00242A9C /* LoadingCell.swift in Sources */,
 				2BE6235322217EC200FD3F31 /* HTTPError.swift in Sources */,
 				2BE622FC221F97A000FD3F31 /* AppDelegate.swift in Sources */,
 				2BE62349221FAB1A00FD3F31 /* UIImage+Root.swift in Sources */,
 				2BE62341221FA01300FD3F31 /* String+Localized.swift in Sources */,
 				2BE6233C221F9FED00FD3F31 /* String+Home.swift in Sources */,
+				2BE62383222255E900FD3F31 /* CategoryViewController.swift in Sources */,
 				2BE62336221F9D9900FD3F31 /* HomeModels.swift in Sources */,
+				2BE62380222255E900FD3F31 /* CategoryWorker.swift in Sources */,
 				2BE6237122222B3800FD3F31 /* ReuseIdentifiable.swift in Sources */,
 				2BE62337221F9D9900FD3F31 /* HomeViewController.swift in Sources */,
 				2BE6235822217FCF00FD3F31 /* URLImageView.swift in Sources */,
 				2BE6236E2221ABEA00FD3F31 /* HomeCategoryCell.swift in Sources */,
 				2BE6233A221F9F2A00FD3F31 /* UIImage+Home.swift in Sources */,
+				2BE623882222E60000FD3F31 /* DisplayedProduct.swift in Sources */,
 				2BE623682221906E00FD3F31 /* DataContainer.swift in Sources */,
 				2BE6234B22208BFA00FD3F31 /* HomeBannerCell.swift in Sources */,
 				2BE6235122217E7100FD3F31 /* HTTPService.swift in Sources */,
 				2BE6234E22208C9000FD3F31 /* BannerView.swift in Sources */,
 				2BE62362222185F100FD3F31 /* Banner.swift in Sources */,
 				2BE6235522217EE500FD3F31 /* String+Services.swift in Sources */,
+				2BE62384222255E900FD3F31 /* CategoryInteractor.swift in Sources */,
 				2BE62335221F9D9900FD3F31 /* HomeRouter.swift in Sources */,
 				2BE6236A2221A78800FD3F31 /* Category.swift in Sources */,
 			);

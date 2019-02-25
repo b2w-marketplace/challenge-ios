@@ -17,6 +17,7 @@ protocol HomePresentationLogic {
   func presentBanners(response: Home.FetchBanner.Response)
   func presentBanner(response: Home.PresentBannerLink.Response)
   func presentCategories(response: Home.FetchCategories.Response)
+  func presentCategory(response: Home.PresentCategory.Response)
   func presentBestsellers(response: Home.FetchBestsellers.Response)
 }
 
@@ -47,14 +48,20 @@ final class HomePresenter: HomePresentationLogic {
     viewController?.displayCategories(viewModel: viewModel)
   }
 
+  func presentCategory(response: Home.PresentCategory.Response) {
+    let category = response.category
+    let viewModel = Home.PresentCategory.ViewModel(category: category)
+    viewController?.displayCategory(viewModel: viewModel)
+  }
+
   func presentBestsellers(response: Home.FetchBestsellers.Response) {
-    let displayedBestsellers: [Home.FetchBestsellers.DisplayedProduct] = response.products.compactMap {
+    let displayedBestsellers: [DisplayedProduct] = response.products.compactMap {
       let fromPrice = String(format: "%@%.2f", arguments: [String.Home.priceFrom, $0.fromPrice])
       let toPrice = String(format: "%@%.2f", arguments: [String.Home.priceTo, $0.toPrice])
-      return Home.FetchBestsellers.DisplayedProduct(imageUrl: $0.imageUrl,
-                                                    name: $0.name,
-                                                    fromPrice: fromPrice,
-                                                    toPrice: toPrice)
+      return DisplayedProduct(imageUrl: $0.imageUrl,
+                              name: $0.name,
+                              fromPrice: fromPrice,
+                              toPrice: toPrice)
     }
     let viewModel = Home.FetchBestsellers.ViewModel(displayedProducts: displayedBestsellers)
     viewController?.displayBestsellers(viewModel: viewModel)

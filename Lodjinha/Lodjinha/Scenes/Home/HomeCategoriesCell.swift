@@ -16,7 +16,12 @@ struct HomeCategoriesCellViewModel {
 
 protocol HomeCategoriesCellLogic: class {
   var collectionView: UICollectionView { get }
+  var delegate: HomeCategoriesCellDelegate? { get set }
   func update(viewModel: HomeCategoriesCellViewModel)
+}
+
+protocol HomeCategoriesCellDelegate: class {
+  func didTapCategory(at index: Int)
 }
 
 final class HomeCategoriesCell: UITableViewCell {
@@ -32,6 +37,8 @@ final class HomeCategoriesCell: UITableViewCell {
   }()
 
   var displayedCategories: [Home.FetchCategories.DisplayedCategory] = []
+
+  weak var delegate: HomeCategoriesCellDelegate?
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -89,5 +96,9 @@ extension HomeCategoriesCell: UICollectionViewDelegateFlowLayout {
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: 100, height: 140)
+  }
+
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    delegate?.didTapCategory(at: indexPath.item)
   }
 }

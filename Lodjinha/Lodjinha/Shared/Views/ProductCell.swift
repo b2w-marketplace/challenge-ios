@@ -11,7 +11,7 @@ import UIKit
 import Cartography
 
 struct ProductCellViewModel {
-  let displayedProduct: Home.FetchBestsellers.DisplayedProduct
+  let displayedProduct: DisplayedProduct
 }
 
 protocol ProductCellLogic: class {

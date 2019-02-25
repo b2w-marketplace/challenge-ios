@@ -52,14 +52,17 @@ enum Home {
     }
   }
 
-  enum FetchBestsellers {
-    struct DisplayedProduct {
-      let imageUrl: String
-      let name: String
-      let fromPrice: String
-      let toPrice: String
+  enum PresentCategory {
+    struct Request {}
+    struct Response {
+      let category: Category
     }
+    struct ViewModel {
+      let category: Category
+    }
+  }
 
+  enum FetchBestsellers {
     struct Request {}
     struct Response {
       let products: [Product]

@@ -41,7 +41,10 @@ final class RootViewController: UINavigationController {
   // MARK: - Setup
 
   private func setup() {
+    view.backgroundColor = .white
     navigationBar.barTintColor = .purple
+    navigationBar.tintColor = .white
+    navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     UITabBar.appearance().tintColor = .purple
   }
 }
