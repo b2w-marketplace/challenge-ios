@@ -16,4 +16,8 @@ extension UIColor {
   static var purple: UIColor {
     return UIColor(100, 66, 140)
   }
+
+  static var dark: UIColor {
+    return UIColor(38, 38, 38)
+  }
 }
