@@ -10,6 +10,16 @@ import Foundation
 
 enum ALodjinhaError: LocalizedError {
   case endReached
+  case custom(String)
+
+  var errorDescription: String? {
+    switch self {
+    case .custom(let message):
+      return message
+    default:
+      return localizedDescription
+    }
+  }
 }
 
 struct ALodjinhaAPI {
@@ -27,6 +37,7 @@ struct ALodjinhaAPI {
     case categories = "/categoria"
     case bestsellers = "/produto/maisvendidos"
     case products = "/produto"
+    case reserve = "/produto/%d"
   }
 
   struct Parameters {
@@ -99,6 +110,24 @@ struct ALodjinhaAPI {
           completion { throw ALodjinhaError.endReached }
         } else {
           completion { container.data }
+        }
+      } catch {
+        completion { throw error }
+      }
+    }
+  }
+
+  static func reserveProducts(with productId: Int, completion: @escaping (() throws -> Void) -> Void) {
+    let method = Method.post
+    let path = String(format: Endpoints.reserve.rawValue, arguments: [productId])
+    HTTPService.request(method: method, baseUrl: baseUrl, path: path) { callback in
+      do {
+        let data = try callback()
+        let result = try JSONDecoder().decode(APIResult.self, from: data)
+        if let message = result.message {
+          completion { throw ALodjinhaError.custom(message) }
+        } else {
+          completion {}
         }
       } catch {
         completion { throw error }

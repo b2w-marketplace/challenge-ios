@@ -15,6 +15,7 @@ import UIKit
 protocol ProductDetailsBusinessLogic {
   func getProduct(request: ProductDetails.DisplayProduct.Request)
   func getNavigationTitle(request: ProductDetails.DisplayTitle.Request)
+  func didTapReserve(request: ProductDetails.ReserveProduct.Request)
 }
 
 protocol ProductDetailsDataStore {
@@ -23,7 +24,7 @@ protocol ProductDetailsDataStore {
 
 final class ProductDetailsInteractor: ProductDetailsBusinessLogic, ProductDetailsDataStore {
   var presenter: ProductDetailsPresentationLogic?
-  var worker: ProductDetailsWorker?
+  lazy var worker: ProductDetailsWorker? = { ProductDetailsWorker() }()
   var product: Product?
 
   func getProduct(request: ProductDetails.DisplayProduct.Request) {
@@ -36,5 +37,18 @@ final class ProductDetailsInteractor: ProductDetailsBusinessLogic, ProductDetail
     guard let product = product else { return }
     let response = ProductDetails.DisplayTitle.Response(product: product)
     presenter?.presentTitle(response: response)
+  }
+
+  func didTapReserve(request: ProductDetails.ReserveProduct.Request) {
+    guard let identifier = product?.identifier else { return }
+    worker?.reserveProduct(with: identifier) { [weak self] callback in
+      do {
+        _ = try callback()
+        let response = ProductDetails.ReserveProduct.Response(message: String.ProductDetails.successMessage)
+        self?.presenter?.presentReserveSuccess(response: response)
+      } catch {
+        self?.presenter?.presentError(error)
+      }
+    }
   }
 }

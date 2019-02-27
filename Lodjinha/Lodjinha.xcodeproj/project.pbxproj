@@ -19,6 +19,8 @@
 		2B2B6C902224A3B900242A9C /* ProductImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B6C8F2224A3B900242A9C /* ProductImageCell.swift */; };
 		2B2B6C922224A4D500242A9C /* ProductPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B6C912224A4D500242A9C /* ProductPriceCell.swift */; };
 		2B2B6C942224A5D400242A9C /* ProductDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B6C932224A5D400242A9C /* ProductDescriptionCell.swift */; };
+		2B2B6C982227070B00242A9C /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B6C972227070B00242A9C /* APIResult.swift */; };
+		2B2B6C9A22270C2000242A9C /* UIButton+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B6C9922270C2000242A9C /* UIButton+Loading.swift */; };
 		2BE622FC221F97A000FD3F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE622FB221F97A000FD3F31 /* AppDelegate.swift */; };
 		2BE62303221F97A100FD3F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE62302221F97A100FD3F31 /* Assets.xcassets */; };
 		2BE62306221F97A100FD3F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE62304221F97A100FD3F31 /* LaunchScreen.storyboard */; };
@@ -91,6 +93,8 @@
 		2B2B6C8F2224A3B900242A9C /* ProductImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCell.swift; sourceTree = "<group>"; };
 		2B2B6C912224A4D500242A9C /* ProductPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPriceCell.swift; sourceTree = "<group>"; };
 		2B2B6C932224A5D400242A9C /* ProductDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDescriptionCell.swift; sourceTree = "<group>"; };
+		2B2B6C972227070B00242A9C /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		2B2B6C9922270C2000242A9C /* UIButton+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Loading.swift"; sourceTree = "<group>"; };
 		2BE622F8221F97A000FD3F31 /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE622FB221F97A000FD3F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BE62302221F97A100FD3F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 				2BE6235722217FCF00FD3F31 /* URLImageView.swift */,
 				2BE62376222241AC00FD3F31 /* ProductCell.swift */,
 				2B2B6C7C222486DC00242A9C /* LoadingCell.swift */,
+				2B2B6C9922270C2000242A9C /* UIButton+Loading.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				2BE62374222234CF00FD3F31 /* Product.swift */,
 				2BE623872222E60000FD3F31 /* DisplayedProduct.swift */,
 				2BE623672221906E00FD3F31 /* DataContainer.swift */,
+				2B2B6C972227070B00242A9C /* APIResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -632,6 +638,7 @@
 				2BE62383222255E900FD3F31 /* CategoryViewController.swift in Sources */,
 				2BE62336221F9D9900FD3F31 /* HomeModels.swift in Sources */,
 				2BE62380222255E900FD3F31 /* CategoryWorker.swift in Sources */,
+				2B2B6C9A22270C2000242A9C /* UIButton+Loading.swift in Sources */,
 				2B2B6C922224A4D500242A9C /* ProductPriceCell.swift in Sources */,
 				2BE6237122222B3800FD3F31 /* ReuseIdentifiable.swift in Sources */,
 				2BE62337221F9D9900FD3F31 /* HomeViewController.swift in Sources */,
@@ -644,6 +651,7 @@
 				2BE6234B22208BFA00FD3F31 /* HomeBannerCell.swift in Sources */,
 				2BE6235122217E7100FD3F31 /* HTTPService.swift in Sources */,
 				2BE6234E22208C9000FD3F31 /* BannerView.swift in Sources */,
+				2B2B6C982227070B00242A9C /* APIResult.swift in Sources */,
 				2BE62362222185F100FD3F31 /* Banner.swift in Sources */,
 				2B2B6C8A2224977100242A9C /* ProductDetailsInteractor.swift in Sources */,
 				2BE6235522217EE500FD3F31 /* String+Services.swift in Sources */,

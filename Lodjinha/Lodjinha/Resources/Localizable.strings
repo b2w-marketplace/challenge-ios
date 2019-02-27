@@ -7,6 +7,7 @@
 */
 
 "SHARED_CLOSE" = "Fechar";
+"SHARED_OK" = "OK";
 
 "HOME_TABBAR" = "Home";
 "HOME_CATEGORIES" = "Categorias";
@@ -15,5 +16,6 @@
 "HOME_PRICETO" = "Por ";
 
 "PRODUCTDETAILS_BUTTON_RESERVE" = "Reservar";
+"PRODUCTDETAILS_SUCCESSMESSAGE" = "Produto reservado com sucesso";
 
 "SERVICES_ERROR_UNKNOWN" = "Ops! Um erro inexperado ocorreu! Favor tentar novamente!";

@@ -13,5 +13,9 @@ extension String {
     static var reserveButton: String {
       return "PRODUCTDETAILS_BUTTON_RESERVE".localized
     }
+
+    static var successMessage: String {
+      return "PRODUCTDETAILS_SUCCESSMESSAGE".localized
+    }
   }
 }

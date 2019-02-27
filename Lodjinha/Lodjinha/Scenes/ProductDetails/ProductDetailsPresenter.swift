@@ -13,8 +13,10 @@
 import UIKit
 
 protocol ProductDetailsPresentationLogic {
+  func presentError(_ error: Error)
   func presentProductDetails(response: ProductDetails.DisplayProduct.Response)
   func presentTitle(response: ProductDetails.DisplayTitle.Response)
+  func presentReserveSuccess(response: ProductDetails.ReserveProduct.Response)
 }
 
 final class ProductDetailsPresenter: ProductDetailsPresentationLogic {
@@ -38,5 +40,14 @@ final class ProductDetailsPresenter: ProductDetailsPresentationLogic {
     let title = product.category.description
     let viewModel = ProductDetails.DisplayTitle.ViewModel(title: title)
     viewController?.displayNavigationTitle(viewModel: viewModel)
+  }
+
+  func presentError(_ error: Error) {
+    viewController?.displayError(error)
+  }
+
+  func presentReserveSuccess(response: ProductDetails.ReserveProduct.Response) {
+    let viewModel = ProductDetails.ReserveProduct.ViewModel(message: response.message)
+    viewController?.displaySuccess(viewModel: viewModel)
   }
 }

@@ -34,4 +34,14 @@ enum ProductDetails {
       let title: String
     }
   }
+
+  enum ReserveProduct {
+    struct Request {}
+    struct Response {
+      let message: String
+    }
+    struct ViewModel {
+      let message: String
+    }
+  }
 }

@@ -16,6 +16,7 @@ protocol ProductDetailsDisplayLogic: class {
   func displayError(_ error: Error)
   func displayProduct(viewModel: ProductDetails.DisplayProduct.ViewModel)
   func displayNavigationTitle(viewModel: ProductDetails.DisplayTitle.ViewModel)
+  func displaySuccess(viewModel: ProductDetails.ReserveProduct.ViewModel)
 }
 
 final class ProductDetailsViewController: UIViewController {
@@ -91,12 +92,19 @@ final class ProductDetailsViewController: UIViewController {
     let request = ProductDetails.DisplayTitle.Request()
     interactor?.getNavigationTitle(request: request)
   }
+
+  // MARK: - Pop View Controller
+
+  func popViewController() {
+    navigationController?.popViewController(animated: true)
+  }
 }
 
 // MARK: - ProductDetailsViewLogic
 extension ProductDetailsViewController: ProductDetailsDisplayLogic {
   func displayError(_ error: Error) {
     DispatchQueue.main.async {
+      self.productDetailsView?.button.stopLoading()
       let alert = UIAlertController(title: error.localizedDescription, message: nil, preferredStyle: .alert)
       let okAction = UIAlertAction(title: String.Lodjinha.close, style: .default, handler: nil)
       alert.addAction(okAction)
@@ -114,6 +122,18 @@ extension ProductDetailsViewController: ProductDetailsDisplayLogic {
   func displayNavigationTitle(viewModel: ProductDetails.DisplayTitle.ViewModel) {
     DispatchQueue.main.async {
       self.navigationItem.title = viewModel.title
+    }
+  }
+
+  func displaySuccess(viewModel: ProductDetails.ReserveProduct.ViewModel) {
+    DispatchQueue.main.async {
+      self.productDetailsView?.button.stopLoading()
+      let alert = UIAlertController(title: viewModel.message, message: nil, preferredStyle: .alert)
+      let okAction = UIAlertAction(title: String.Lodjinha.okay, style: .default) { [weak self] _ in
+        self?.popViewController()
+      }
+      alert.addAction(okAction)
+      self.present(alert, animated: true, completion: nil)
     }
   }
 }
@@ -155,5 +175,7 @@ extension ProductDetailsViewController: UITableViewDataSource {
 // MARK: - ProductDetailsView Delegate
 extension ProductDetailsViewController: ProductDetailsViewDelegate {
   func didTapReserve() {
+    let request = ProductDetails.ReserveProduct.Request()
+    interactor?.didTapReserve(request: request)
   }
 }

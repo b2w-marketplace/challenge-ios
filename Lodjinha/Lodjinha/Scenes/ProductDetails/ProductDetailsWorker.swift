@@ -13,4 +13,7 @@
 import UIKit
 
 final class ProductDetailsWorker {
+  func reserveProduct(with productId: Int, completion: @escaping (() throws -> Void) -> Void) {
+    ALodjinhaAPI.reserveProducts(with: productId, completion: completion)
+  }
 }

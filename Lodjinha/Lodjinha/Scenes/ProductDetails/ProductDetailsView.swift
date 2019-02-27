@@ -12,6 +12,7 @@ import Cartography
 
 protocol ProductDetailsViewLogic: class {
   var tableView: UITableView { get }
+  var button: UIButton { get }
 }
 
 protocol ProductDetailsViewDelegate: class {
@@ -36,13 +37,14 @@ final class ProductDetailsView: UIView {
     return view
   }()
 
-  private lazy var button: UIButton = {
+  public private(set) lazy var button: UIButton = {
     let button = UIButton()
     button.backgroundColor = .purple
     button.setTitle(String.ProductDetails.reserveButton, for: .normal)
     button.setTitleColor(.white, for: .normal)
     button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
     button.layer.cornerRadius = 8
+    button.addTarget(self, action: #selector(reserveTapped), for: .touchUpInside)
     return button
   }()
 
@@ -101,6 +103,7 @@ final class ProductDetailsView: UIView {
 @objc
 extension ProductDetailsView {
   func reserveTapped() {
+    button.startLoading()
     delegate?.didTapReserve()
   }
 }

@@ -13,5 +13,9 @@ extension String {
     static var close: String {
       return "SHARED_CLOSE".localized
     }
+
+    static var okay: String {
+      return "SHARED_OK".localized
+    }
   }
 }
