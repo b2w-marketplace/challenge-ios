@@ -15,7 +15,7 @@ import UIKit
 final class RootViewController: UINavigationController {
   private let tabController: UITabBarController = {
     let tabController = UITabBarController()
-    tabController.viewControllers = [HomeViewController()]
+    tabController.viewControllers = [HomeViewController(), AboutViewController()]
     return tabController
   }()
 

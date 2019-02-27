@@ -18,4 +18,6 @@
 "PRODUCTDETAILS_BUTTON_RESERVE" = "Reservar";
 "PRODUCTDETAILS_SUCCESSMESSAGE" = "Produto reservado com sucesso";
 
+"ABOUT_TABBAR" = "Sobre";
+
 "SERVICES_ERROR_UNKNOWN" = "Ops! Um erro inexperado ocorreu! Favor tentar novamente!";
