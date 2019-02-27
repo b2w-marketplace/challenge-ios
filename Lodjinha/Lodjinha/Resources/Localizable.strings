@@ -14,4 +14,6 @@
 "HOME_PRICEFROM" = "De: ";
 "HOME_PRICETO" = "Por ";
 
+"PRODUCTDETAILS_BUTTON_RESERVE" = "Reservar";
+
 "SERVICES_ERROR_UNKNOWN" = "Ops! Um erro inexperado ocorreu! Favor tentar novamente!";

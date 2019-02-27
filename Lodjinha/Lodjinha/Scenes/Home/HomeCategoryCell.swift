@@ -30,6 +30,7 @@ final class HomeCategoryCell: UICollectionViewCell {
     label.numberOfLines = 2
     label.font = UIFont.systemFont(ofSize: 12)
     label.textAlignment = .center
+    label.setContentCompressionResistancePriority(.required, for: .vertical)
     return label
   }()
 

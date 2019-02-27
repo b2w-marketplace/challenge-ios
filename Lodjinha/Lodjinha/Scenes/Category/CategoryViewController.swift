@@ -16,6 +16,7 @@ protocol CategoryDisplayLogic: class {
   func displayError(_ error: Error)
   func displayNavigationTitle(viewModel: CategoryScene.DisplayTitle.ViewModel)
   func displayProducts(viewModel: CategoryScene.FetchProducts.ViewModel)
+  func displayProduct(viewModel: CategoryScene.PresentProduct.ViewModel)
 }
 
 final class CategoryViewController: UIViewController {
@@ -67,6 +68,11 @@ final class CategoryViewController: UIViewController {
     getNavigationTitle()
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    resetTableView(animated)
+  }
+
   // MARK: - TableView
 
   func setupTableView() {
@@ -74,6 +80,11 @@ final class CategoryViewController: UIViewController {
     categoryView?.tableView.register(LoadingCell.self, forCellReuseIdentifier: LoadingCell.reuseIdentifier)
     categoryView?.tableView.dataSource = self
     categoryView?.tableView.delegate = self
+  }
+
+  func resetTableView(_ animated: Bool) {
+    guard let indexPath = categoryView?.tableView.indexPathForSelectedRow else { return }
+    categoryView?.tableView.deselectRow(at: indexPath, animated: animated)
   }
 
   // MARK: - Fetch Products
@@ -112,6 +123,12 @@ extension CategoryViewController: CategoryDisplayLogic {
       self.displayedProducts = viewModel.displayedProducts
       self.shouldLoadMore = viewModel.shouldLoadMore
       self.categoryView?.tableView.reloadData()
+    }
+  }
+
+  func displayProduct(viewModel: CategoryScene.PresentProduct.ViewModel) {
+    DispatchQueue.main.async {
+      self.router?.routeToProductDetail(with: viewModel.product)
     }
   }
 }
@@ -153,6 +170,8 @@ extension CategoryViewController: UITableViewDataSource {
 // MARK: - UITableView Delegate
 extension CategoryViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let request = CategoryScene.PresentProduct.Request(index: indexPath.row)
+    interactor?.didTapProduct(request: request)
   }
 }
 

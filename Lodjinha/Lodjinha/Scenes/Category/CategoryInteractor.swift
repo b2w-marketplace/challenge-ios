@@ -14,6 +14,7 @@ import UIKit
 
 protocol CategoryBusinessLogic {
   func fetchProducts(request: CategoryScene.FetchProducts.Request)
+  func didTapProduct(request: CategoryScene.PresentProduct.Request)
   func getNavigationTitle(request: CategoryScene.DisplayTitle.Request)
 }
 
@@ -61,5 +62,11 @@ extension CategoryInteractor: CategoryBusinessLogic {
       }
       self.isLoading = false
     }
+  }
+
+  func didTapProduct(request: CategoryScene.PresentProduct.Request) {
+    let product = products[request.index]
+    let response = CategoryScene.PresentProduct.Response(product: product)
+    presenter?.presentProduct(response: response)
   }
 }

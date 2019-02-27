@@ -19,6 +19,7 @@ protocol HomePresentationLogic {
   func presentCategories(response: Home.FetchCategories.Response)
   func presentCategory(response: Home.PresentCategory.Response)
   func presentBestsellers(response: Home.FetchBestsellers.Response)
+  func presentBestseller(response: Home.PresentBestsellers.Response)
 }
 
 final class HomePresenter: HomePresentationLogic {
@@ -65,5 +66,11 @@ final class HomePresenter: HomePresentationLogic {
     }
     let viewModel = Home.FetchBestsellers.ViewModel(displayedProducts: displayedBestsellers)
     viewController?.displayBestsellers(viewModel: viewModel)
+  }
+
+  func presentBestseller(response: Home.PresentBestsellers.Response) {
+    let product = response.product
+    let viewModel = Home.PresentBestsellers.ViewModel(product: product)
+    viewController?.displayBestseller(viewModel: viewModel)
   }
 }

@@ -13,4 +13,13 @@ struct DisplayedProduct {
   let name: String
   let fromPrice: String
   let toPrice: String
+  let description: String
+
+  init(imageUrl: String, name: String, fromPrice: String, toPrice: String, description: String = "") {
+    self.imageUrl = imageUrl
+    self.name = name
+    self.fromPrice = fromPrice
+    self.toPrice = toPrice
+    self.description = description
+  }
 }
