@@ -34,4 +34,16 @@ enum CategoryScene {
       let shouldLoadMore: Bool
     }
   }
+
+  enum PresentProduct {
+    struct Request {
+      let index: Int
+    }
+    struct Response {
+      let product: Product
+    }
+    struct ViewModel {
+      let product: Product
+    }
+  }
 }

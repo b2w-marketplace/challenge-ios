@@ -71,4 +71,14 @@ enum Home {
       let displayedProducts: [DisplayedProduct]
     }
   }
+
+  enum PresentBestsellers {
+    struct Request {}
+    struct Response {
+      let product: Product
+    }
+    struct ViewModel {
+      let product: Product
+    }
+  }
 }

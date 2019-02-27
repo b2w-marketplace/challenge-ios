@@ -17,9 +17,16 @@ final class URLImageView: UIImageView {
 
   private func fetchImage(from urlString: String?) {
     guard let urlString = urlString else { return }
+    if image == nil {
+      image = #imageLiteral(resourceName: "placeholder")
+    }
     ImageWorker.shared.image(from: urlString) { [weak self] result in
       DispatchQueue.main.async {
-        self?.image = result?.1
+        if result?.1 == nil {
+          self?.image = #imageLiteral(resourceName: "placeholder")
+        } else {
+          self?.image = result?.1
+        }
       }
     }
   }

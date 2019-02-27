@@ -12,7 +12,8 @@
 
 import UIKit
 
-@objc protocol CategoryRoutingLogic {
+protocol CategoryRoutingLogic {
+  func routeToProductDetail(with product: Product)
 }
 
 protocol CategoryDataPassing {
@@ -22,4 +23,24 @@ protocol CategoryDataPassing {
 final class CategoryRouter: NSObject, CategoryRoutingLogic, CategoryDataPassing {
   weak var viewController: CategoryViewController?
   var dataStore: CategoryDataStore?
+
+  func routeToProductDetail(with product: Product) {
+    let viewController = ProductDetailsViewController()
+    guard let categoryViewController = self.viewController,
+      var destinationDataStore = viewController.router?.dataStore else { return }
+    passDataToProductDetails(product: product, destination: &destinationDataStore)
+    navigateToProductDetails(source: categoryViewController, destination: viewController)
+  }
+
+  // MARK: Navigation
+
+  func navigateToProductDetails(source: CategoryViewController, destination: ProductDetailsViewController) {
+    source.navigationController?.pushViewController(destination, animated: true)
+  }
+
+  // MARK: Passing data
+
+  func passDataToProductDetails(product: Product, destination: inout ProductDetailsDataStore) {
+    destination.product = product
+  }
 }

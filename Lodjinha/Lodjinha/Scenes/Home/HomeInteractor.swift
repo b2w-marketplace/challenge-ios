@@ -18,6 +18,7 @@ protocol HomeBusinessLogic {
   func fetchCategories()
   func didTapCategory(at index: Int)
   func fetchBestsellers()
+  func didTapBestseller(at index: Int)
 }
 
 protocol HomeDataStore {
@@ -82,5 +83,11 @@ final class HomeInteractor: HomeBusinessLogic, HomeDataStore {
         self?.presenter?.presentError(error)
       }
     }
+  }
+
+  func didTapBestseller(at index: Int) {
+    let product = bestsellers[index]
+    let response = Home.PresentBestsellers.Response(product: product)
+    presenter?.presentBestseller(response: response)
   }
 }

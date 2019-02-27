@@ -23,6 +23,7 @@ protocol HomeDisplayLogic: class {
   func displayCategory(viewModel: Home.PresentCategory.ViewModel)
 
   func displayBestsellers(viewModel: Home.FetchBestsellers.ViewModel)
+  func displayBestseller(viewModel: Home.PresentBestsellers.ViewModel)
 }
 
 final class HomeViewController: UIViewController {
@@ -84,12 +85,8 @@ final class HomeViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
-    let image = UIImage.Root.logo
-    let imageView = UIImageView(frame: CGRect(origin: .zero, size: image.size))
-    imageView.image = image
-    parent?.navigationItem.titleView = imageView
-
-    parent?.navigationItem.title = String.Home.tabBar
+    setupNavigationBar()
+    resetTableView(animated)
   }
 
   // MARK: - TableView
@@ -104,6 +101,22 @@ final class HomeViewController: UIViewController {
     homeView?.tableView.register(HomeHeader.self, forHeaderFooterViewReuseIdentifier: HomeHeader.reuseIdentifier)
     homeView?.tableView.dataSource = self
     homeView?.tableView.delegate = self
+  }
+
+  func resetTableView(_ animated: Bool) {
+    guard let indexPath = homeView?.tableView.indexPathForSelectedRow else { return }
+    homeView?.tableView.deselectRow(at: indexPath, animated: animated)
+  }
+
+  // MARK: - Navigation Bar
+
+  func setupNavigationBar() {
+    let image = UIImage.Root.logo
+    let imageView = UIImageView(frame: CGRect(origin: .zero, size: image.size))
+    imageView.image = image
+    parent?.navigationItem.titleView = imageView
+
+    parent?.navigationItem.title = String.Home.tabBar
   }
 
   // MARK: - Fetch Banner
@@ -168,6 +181,12 @@ extension HomeViewController: HomeDisplayLogic {
     DispatchQueue.main.async {
       self.displayedBestsellers = viewModel.displayedProducts
       self.homeView?.tableView.reloadData()
+    }
+  }
+
+  func displayBestseller(viewModel: Home.PresentBestsellers.ViewModel) {
+    DispatchQueue.main.async {
+      self.router?.routeToProductDetails(with: viewModel.product)
     }
   }
 }
@@ -269,6 +288,11 @@ extension HomeViewController: UITableViewDelegate {
       homeHeader.update(viewModel: viewModel)
     }
     return header
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard indexPath.section == 2 else { return }
+    interactor?.didTapBestseller(at: indexPath.row)
   }
 }
 

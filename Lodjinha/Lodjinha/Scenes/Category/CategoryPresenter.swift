@@ -16,6 +16,7 @@ protocol CategoryPresentationLogic {
   func presentError(_ error: Error)
   func presentNavigationTitle(response: CategoryScene.DisplayTitle.Response)
   func presentProducts(response: CategoryScene.FetchProducts.Response)
+  func presentProduct(response: CategoryScene.PresentProduct.Response)
 }
 
 final class CategoryPresenter: CategoryPresentationLogic {
@@ -42,5 +43,10 @@ final class CategoryPresenter: CategoryPresentationLogic {
     let viewModel = CategoryScene.FetchProducts.ViewModel(displayedProducts: displayedProducts,
                                                           shouldLoadMore: response.shouldLoadMore)
     viewController?.displayProducts(viewModel: viewModel)
+  }
+
+  func presentProduct(response: CategoryScene.PresentProduct.Response) {
+    let viewModel = CategoryScene.PresentProduct.ViewModel(product: response.product)
+    viewController?.displayProduct(viewModel: viewModel)
   }
 }
