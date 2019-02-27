@@ -160,6 +160,9 @@ extension HomeViewController: HomeDisplayLogic {
     DispatchQueue.main.async {
       guard let url = URL(string: viewModel.link) else { return }
       let safari = SFSafariViewController(url: url)
+      if #available(iOS 10.0, *) {
+        safari.preferredBarTintColor = .purple
+      }
       self.present(safari, animated: true, completion: nil)
     }
   }
