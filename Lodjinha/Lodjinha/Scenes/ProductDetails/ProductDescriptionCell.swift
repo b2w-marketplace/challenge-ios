@@ -19,7 +19,7 @@ protocol ProductDescriptionCellLogic: class {
 }
 
 final class ProductDescriptionCell: UITableViewCell {
-  private let textView: UITextView = {
+  public private(set) var textView: UITextView = {
     let textView = UITextView()
     textView.isEditable = false
     textView.isSelectable = false
