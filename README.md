@@ -1,3 +1,10 @@
+# Gilson Gil
+Para executar o projeto rode primeiramente o comando `pod install` na pasta do projeto no terminal para instalação das dependências.
+Em seguida rode os testes unitários com o comando no xcode Product -> Test.
+E execute o aplicativo com o comando no xcode Product -> Run.
+Obrigado!
+
+
 # a Lodjinha
 
 Versão mínima: iOS 9</br>
