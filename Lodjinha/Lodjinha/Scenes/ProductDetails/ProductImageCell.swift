@@ -25,7 +25,7 @@ final class ProductImageCell: UITableViewCell {
     return imageView
   }()
 
-  private let nameLabel: UILabel = {
+  public private(set) var nameLabel: UILabel = {
     let label = UILabel()
     label.numberOfLines = 0
     label.font = UIFont.boldSystemFont(ofSize: 16)

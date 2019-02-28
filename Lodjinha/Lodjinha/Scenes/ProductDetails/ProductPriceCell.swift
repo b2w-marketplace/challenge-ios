@@ -19,14 +19,14 @@ protocol ProductPriceCellLogic: class {
 }
 
 final class ProductPriceCell: UITableViewCell {
-  private let fromLabel: UILabel = {
+  public private(set) var fromLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 12)
     label.textColor = .lightGray
     return label
   }()
 
-  private let toLabel: UILabel = {
+  public private(set) var toLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.boldSystemFont(ofSize: 18)
     label.textColor = .red
