@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Lodjinha
+
+  Created by Gilson Gil on 22/02/19.
+  Copyright © 2019 Gilson Gil. All rights reserved.
+*/
+
+"SHARED_CLOSE" = "Fechar";
+"SHARED_OK" = "OK";
+
+"HOME_TABBAR" = "Home";
+"HOME_CATEGORIES" = "Categorias";
+"HOME_BESTSELLERS" = "Mais vendidos";
+"HOME_PRICEFROM" = "De: ";
+"HOME_PRICETO" = "Por ";
+
+"PRODUCTDETAILS_BUTTON_RESERVE" = "Reservar";
+"PRODUCTDETAILS_SUCCESSMESSAGE" = "Produto reservado com sucesso";
+
+"ABOUT_TABBAR" = "Sobre";
+
+"SERVICES_ERROR_UNKNOWN" = "Ops! Um erro inexperado ocorreu! Favor tentar novamente!";
