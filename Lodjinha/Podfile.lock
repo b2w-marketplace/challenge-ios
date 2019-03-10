@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.1)
+  - Kingfisher (4.10.1)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya/Core (12.0.1):
@@ -9,22 +10,25 @@ PODS:
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
+  - Kingfisher
   - Moya
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Kingfisher
     - Moya
     - Result
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 75eca77d1b03190f850815d2805ba24feb90d3d3
+PODFILE CHECKSUM: 7f7d1605c6923520103fdb1c815912805a642ace
 
 COCOAPODS: 1.6.1

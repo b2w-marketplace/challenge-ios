@@ -8,4 +8,5 @@ target 'Lodjinha' do
   # Pods for Lodjinha
   pod 'Moya'
   pod 'SwiftyJSON'
+  pod 'Kingfisher'
 end

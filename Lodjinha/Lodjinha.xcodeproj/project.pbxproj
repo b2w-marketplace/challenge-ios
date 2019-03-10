@@ -15,6 +15,9 @@
 		ECEB17C322355C0A00D36453 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17C122355C0A00D36453 /* APIServices.swift */; };
 		ECEB17C422355C0A00D36453 /* returnSample.json in Resources */ = {isa = PBXBuildFile; fileRef = ECEB17C222355C0A00D36453 /* returnSample.json */; };
 		ECEB17C622355EB000D36453 /* LodjinhaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17C522355EB000D36453 /* LodjinhaAPI.swift */; };
+		ECEB17C922356ECF00D36453 /* BannersPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17C822356ECF00D36453 /* BannersPageController.swift */; };
+		ECEB17CC223570DD00D36453 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17CB223570DD00D36453 /* BannerModel.swift */; };
+		ECEB17CE22357CC200D36453 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17CD22357CC200D36453 /* BannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		ECEB17C122355C0A00D36453 /* APIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		ECEB17C222355C0A00D36453 /* returnSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = returnSample.json; sourceTree = "<group>"; };
 		ECEB17C522355EB000D36453 /* LodjinhaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaAPI.swift; sourceTree = "<group>"; };
+		ECEB17C822356ECF00D36453 /* BannersPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersPageController.swift; sourceTree = "<group>"; };
+		ECEB17CB223570DD00D36453 /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		ECEB17CD22357CC200D36453 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +88,11 @@
 		EC5D644F22354CF4006F268E /* Lodjinha */ = {
 			isa = PBXGroup;
 			children = (
+				ECEB17CA223570B200D36453 /* Model */,
 				ECEB17C022355BDC00D36453 /* API */,
 				EC5D645022354CF4006F268E /* AppDelegate.swift */,
 				EC5D645422354CF4006F268E /* Main.storyboard */,
+				ECEB17C722356EA600D36453 /* Home */,
 				EC5D646222354D2D006F268E /* SupportFiles */,
 			);
 			path = Lodjinha;
@@ -108,6 +116,23 @@
 				ECEB17C222355C0A00D36453 /* returnSample.json */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		ECEB17C722356EA600D36453 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ECEB17C822356ECF00D36453 /* BannersPageController.swift */,
+				ECEB17CD22357CC200D36453 /* BannerViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		ECEB17CA223570B200D36453 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECEB17CB223570DD00D36453 /* BannerModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +237,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Lodjinha/Pods-Lodjinha-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -221,6 +247,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -237,9 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEB17CE22357CC200D36453 /* BannerViewController.swift in Sources */,
+				ECEB17C922356ECF00D36453 /* BannersPageController.swift in Sources */,
 				ECEB17C622355EB000D36453 /* LodjinhaAPI.swift in Sources */,
 				ECEB17C322355C0A00D36453 /* APIServices.swift in Sources */,
 				EC5D645122354CF4006F268E /* AppDelegate.swift in Sources */,
+				ECEB17CC223570DD00D36453 /* BannerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
