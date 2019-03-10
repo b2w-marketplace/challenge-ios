@@ -38,4 +38,31 @@ struct LodjinhaAPI {
             }
         }
     }
+    
+    
+    static func getHomeCategories(completion: @escaping (_ categories: [CategoryModel]?)->Void) {
+        provider.request(.getCategories) { (result) in
+            switch result {
+            case .success(let response):
+                do {
+                    let fileteredResponse = try response.filterSuccessfulStatusCodes()
+                    let categoriesJson = try JSON(data: fileteredResponse.data)
+                    
+                    let categoriesList = categoriesJson["data"]
+                    let categoriesListData = try categoriesList.rawData()
+                    
+                    let categories = try JSONDecoder().decode([CategoryModel].self, from: categoriesListData)
+                    completion(categories)
+                }
+                catch {
+                    print("Status code problem: " + error.localizedDescription)
+                    completion(nil)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(nil)
+            }
+        }
+    }
 }

@@ -19,6 +19,9 @@
 		ECEB17CC223570DD00D36453 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17CB223570DD00D36453 /* BannerModel.swift */; };
 		ECEB17CE22357CC200D36453 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17CD22357CC200D36453 /* BannerViewController.swift */; };
 		ECEB17D22235997600D36453 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17D12235997600D36453 /* HomeViewController.swift */; };
+		ECEB17D52235A34F00D36453 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17D42235A34F00D36453 /* HomePresenter.swift */; };
+		ECEB17D72235A37600D36453 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17D62235A37600D36453 /* CategoryModel.swift */; };
+		ECEB17D92235AA6900D36453 /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17D82235AA6900D36453 /* CategoryCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		ECEB17CB223570DD00D36453 /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		ECEB17CD22357CC200D36453 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		ECEB17D12235997600D36453 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ECEB17D42235A34F00D36453 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		ECEB17D62235A37600D36453 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		ECEB17D82235AA6900D36453 /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				ECEB17D12235997600D36453 /* HomeViewController.swift */,
-				ECEB17C822356ECF00D36453 /* BannersPageController.swift */,
-				ECEB17CD22357CC200D36453 /* BannerViewController.swift */,
+				ECEB17D42235A34F00D36453 /* HomePresenter.swift */,
+				ECEB17D82235AA6900D36453 /* CategoryCollectionCell.swift */,
+				ECEB17D32235A24B00D36453 /* Banner */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -134,8 +141,18 @@
 			isa = PBXGroup;
 			children = (
 				ECEB17CB223570DD00D36453 /* BannerModel.swift */,
+				ECEB17D62235A37600D36453 /* CategoryModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ECEB17D32235A24B00D36453 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				ECEB17C822356ECF00D36453 /* BannersPageController.swift */,
+				ECEB17CD22357CC200D36453 /* BannerViewController.swift */,
+			);
+			name = Banner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +289,11 @@
 				ECEB17C622355EB000D36453 /* LodjinhaAPI.swift in Sources */,
 				ECEB17C322355C0A00D36453 /* APIServices.swift in Sources */,
 				EC5D645122354CF4006F268E /* AppDelegate.swift in Sources */,
+				ECEB17D92235AA6900D36453 /* CategoryCollectionCell.swift in Sources */,
 				ECEB17D22235997600D36453 /* HomeViewController.swift in Sources */,
 				ECEB17CC223570DD00D36453 /* BannerModel.swift in Sources */,
+				ECEB17D72235A37600D36453 /* CategoryModel.swift in Sources */,
+				ECEB17D52235A34F00D36453 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
