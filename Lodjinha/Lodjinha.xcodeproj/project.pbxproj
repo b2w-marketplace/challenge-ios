@@ -12,6 +12,9 @@
 		EC5D645622354CF4006F268E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5D645422354CF4006F268E /* Main.storyboard */; };
 		EC5D645822354CF8006F268E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5D645722354CF8006F268E /* Assets.xcassets */; };
 		EC5D645B22354CF8006F268E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5D645922354CF8006F268E /* LaunchScreen.storyboard */; };
+		ECEB17C322355C0A00D36453 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17C122355C0A00D36453 /* APIServices.swift */; };
+		ECEB17C422355C0A00D36453 /* returnSample.json in Resources */ = {isa = PBXBuildFile; fileRef = ECEB17C222355C0A00D36453 /* returnSample.json */; };
+		ECEB17C622355EB000D36453 /* LodjinhaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17C522355EB000D36453 /* LodjinhaAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		EC5D645722354CF8006F268E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC5D645A22354CF8006F268E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC5D645C22354CF8006F268E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECEB17C122355C0A00D36453 /* APIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		ECEB17C222355C0A00D36453 /* returnSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = returnSample.json; sourceTree = "<group>"; };
+		ECEB17C522355EB000D36453 /* LodjinhaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 		EC5D644F22354CF4006F268E /* Lodjinha */ = {
 			isa = PBXGroup;
 			children = (
+				ECEB17C022355BDC00D36453 /* API */,
 				EC5D645022354CF4006F268E /* AppDelegate.swift */,
 				EC5D645422354CF4006F268E /* Main.storyboard */,
 				EC5D646222354D2D006F268E /* SupportFiles */,
@@ -93,6 +100,16 @@
 			path = SupportFiles;
 			sourceTree = "<group>";
 		};
+		ECEB17C022355BDC00D36453 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				ECEB17C522355EB000D36453 /* LodjinhaAPI.swift */,
+				ECEB17C122355C0A00D36453 /* APIServices.swift */,
+				ECEB17C222355C0A00D36453 /* returnSample.json */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,6 +121,7 @@
 				EC5D644922354CF4006F268E /* Sources */,
 				EC5D644A22354CF4006F268E /* Frameworks */,
 				EC5D644B22354CF4006F268E /* Resources */,
+				EE8C16EC201273190BF68146 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +173,7 @@
 				EC5D645B22354CF8006F268E /* LaunchScreen.storyboard in Resources */,
 				EC5D645822354CF8006F268E /* Assets.xcassets in Resources */,
 				EC5D645622354CF4006F268E /* Main.storyboard in Resources */,
+				ECEB17C422355C0A00D36453 /* returnSample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +202,34 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EE8C16EC201273190BF68146 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lodjinha/Pods-Lodjinha-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lodjinha/Pods-Lodjinha-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -190,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEB17C622355EB000D36453 /* LodjinhaAPI.swift in Sources */,
+				ECEB17C322355C0A00D36453 /* APIServices.swift in Sources */,
 				EC5D645122354CF4006F268E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

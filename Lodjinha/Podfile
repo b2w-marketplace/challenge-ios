@@ -6,5 +6,6 @@ target 'Lodjinha' do
   use_frameworks!
 
   # Pods for Lodjinha
-
+  pod 'Moya'
+  pod 'SwiftyJSON'
 end
