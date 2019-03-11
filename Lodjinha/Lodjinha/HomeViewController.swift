@@ -96,7 +96,7 @@ extension HomeViewController: UITableViewDataSource {
         
         cell.photoIv.kf.setImage(with: productInfo.photo)
         cell.nameLbl.text = productInfo.name
-        cell.priceBeforeLbl.text = productInfo.oldPrice
+        cell.priceBeforeLbl.attributedText = productInfo.oldPrice
         cell.priceNowLbl.text = productInfo.newPrice
         
         return cell

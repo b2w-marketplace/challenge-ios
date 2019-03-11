@@ -62,8 +62,14 @@ extension HomePresenter {
         return mostSoldProd.count
     }
     
-    func productInfo(atIndex index: IndexPath) -> (photo: URL, name: String, oldPrice: String, newPrice: String) {
+    func productInfo(atIndex index: IndexPath) -> (photo: URL, name: String, oldPrice: NSAttributedString, newPrice: String) {
         let product = self.mostSoldProd[index.item]
-        return (product.imageUrl, product.name, "De \(product.oldPrice)", "Por \(product.newPrice)")
+        
+        let oldPriceText = String(format: "De %.2f", product.oldPrice)
+        let oldPriceAttrString = NSAttributedString(string: oldPriceText, attributes: [.strikethroughStyle : NSUnderlineStyle.single.rawValue])
+        
+        let newPriceString = String(format: "Por %.2f", product.newPrice)
+        
+        return (product.imageUrl, product.name, oldPriceAttrString, newPriceString)
     }
 }
