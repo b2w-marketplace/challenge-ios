@@ -65,4 +65,30 @@ struct LodjinhaAPI {
             }
         }
     }
+    
+    static func getMostSoldProducts(completion: @escaping (_ products: [ProductModel]?)->Void) {
+        provider.request(.getMostSoldProducts) { (result) in
+            switch result {
+            case .success(let response):
+                do {
+                    let fileteredResponse = try response.filterSuccessfulStatusCodes()
+                    let productsJson = try JSON(data: fileteredResponse.data)
+                    
+                    let productsList = productsJson["data"]
+                    let productsListData = try productsList.rawData()
+                    
+                    let products = try JSONDecoder().decode([ProductModel].self, from: productsListData)
+                    completion(products)
+                }
+                catch {
+                    print("Status code problem: " + error.localizedDescription)
+                    completion(nil)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(nil)
+            }
+        }
+    }
 }

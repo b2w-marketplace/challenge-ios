@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
+    @IBOutlet weak var productsTableView: UITableView!
     
     let presenter = HomePresenter()
     
@@ -29,7 +30,14 @@ class HomeViewController: UIViewController {
     private func configCategoriesCollection() {
         if let flowLayout = self.categoriesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 100, height: 80)
+            flowLayout.sectionInset.left = 10.0
+            flowLayout.sectionInset.right = 10.0
         }
+    }
+    
+    func configureProductsTable() {
+        self.productsTableView.estimatedRowHeight = 100.0
+        self.productsTableView.rowHeight = UITableView.automaticDimension
     }
 
     /*
@@ -46,6 +54,10 @@ class HomeViewController: UIViewController {
 
 // MARK: - Presenter Delegate
 extension HomeViewController: HomePresenterDelegate {
+    func reloadProducts() {
+        self.productsTableView.reloadData()
+    }
+    
     func reloadCategories() {
         self.categoriesCollectionView.reloadData()
     }
@@ -63,6 +75,29 @@ extension HomeViewController: UICollectionViewDataSource {
         
         cell.categoryIv.kf.setImage(with: categoryInfo.image)
         cell.nameLbl.text = categoryInfo.name
+        
+        return cell
+    }
+}
+
+// MARK: - Products
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Mais vendidos"
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.presenter.mostSoldProductsNumber
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableCell
+        let productInfo = self.presenter.productInfo(atIndex: indexPath)
+        
+        cell.photoIv.kf.setImage(with: productInfo.photo)
+        cell.nameLbl.text = productInfo.name
+        cell.priceBeforeLbl.text = productInfo.oldPrice
+        cell.priceNowLbl.text = productInfo.newPrice
         
         return cell
     }

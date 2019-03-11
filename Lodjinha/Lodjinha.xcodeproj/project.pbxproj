@@ -22,6 +22,8 @@
 		ECEB17D52235A34F00D36453 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17D42235A34F00D36453 /* HomePresenter.swift */; };
 		ECEB17D72235A37600D36453 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17D62235A37600D36453 /* CategoryModel.swift */; };
 		ECEB17D92235AA6900D36453 /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17D82235AA6900D36453 /* CategoryCollectionCell.swift */; };
+		ECEB17DB2235B97500D36453 /* ProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17DA2235B97500D36453 /* ProductTableCell.swift */; };
+		ECEB17DD2235B9DB00D36453 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17DC2235B9DB00D36453 /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		ECEB17D42235A34F00D36453 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		ECEB17D62235A37600D36453 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		ECEB17D82235AA6900D36453 /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
+		ECEB17DA2235B97500D36453 /* ProductTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableCell.swift; sourceTree = "<group>"; };
+		ECEB17DC2235B9DB00D36453 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 				ECEB17D12235997600D36453 /* HomeViewController.swift */,
 				ECEB17D42235A34F00D36453 /* HomePresenter.swift */,
 				ECEB17D82235AA6900D36453 /* CategoryCollectionCell.swift */,
+				ECEB17DA2235B97500D36453 /* ProductTableCell.swift */,
 				ECEB17D32235A24B00D36453 /* Banner */,
 			);
 			name = Home;
@@ -142,6 +147,7 @@
 			children = (
 				ECEB17CB223570DD00D36453 /* BannerModel.swift */,
 				ECEB17D62235A37600D36453 /* CategoryModel.swift */,
+				ECEB17DC2235B9DB00D36453 /* ProductModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,9 +297,11 @@
 				EC5D645122354CF4006F268E /* AppDelegate.swift in Sources */,
 				ECEB17D92235AA6900D36453 /* CategoryCollectionCell.swift in Sources */,
 				ECEB17D22235997600D36453 /* HomeViewController.swift in Sources */,
+				ECEB17DD2235B9DB00D36453 /* ProductModel.swift in Sources */,
 				ECEB17CC223570DD00D36453 /* BannerModel.swift in Sources */,
 				ECEB17D72235A37600D36453 /* CategoryModel.swift in Sources */,
 				ECEB17D52235A34F00D36453 /* HomePresenter.swift in Sources */,
+				ECEB17DB2235B97500D36453 /* ProductTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
