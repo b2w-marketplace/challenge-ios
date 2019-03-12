@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
         self.setNavigationTitle()
         self.presenter.delegate = self
         
+        self.configCategoriesCollection()
+        self.configureProductsTable()
     }
     
     private func setNavigationTitle() {
@@ -30,7 +32,6 @@ class HomeViewController: UIViewController {
     
     private func configCategoriesCollection() {
         if let flowLayout = self.categoriesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: 100, height: 80)
             flowLayout.sectionInset.left = 10.0
             flowLayout.sectionInset.right = 10.0
         }
@@ -39,18 +40,18 @@ class HomeViewController: UIViewController {
     func configureProductsTable() {
         self.productsTableView.estimatedRowHeight = 100.0
         self.productsTableView.rowHeight = UITableView.automaticDimension
+        
+        let cellNib = UINib(nibName: "ProductTableCell", bundle: nil)
+        self.productsTableView.register(cellNib, forCellReuseIdentifier: "ProductCell")
     }
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let categoryController = segue.destination as? CategoryViewController, let index = sender as? IndexPath {
+            let categoryId = self.presenter.categoryId(forIndexPath: index)
+            categoryController.presenter.loadCategory(categoryId: categoryId)
+        }
     }
-    */
-
 }
 
 // MARK: - Presenter Delegate
@@ -65,7 +66,7 @@ extension HomeViewController: HomePresenterDelegate {
 }
 
 // MARK: - Categories
-extension HomeViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.presenter.numberOfCategories
     }
@@ -78,6 +79,10 @@ extension HomeViewController: UICollectionViewDataSource {
         cell.nameLbl.text = categoryInfo.name
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "CategorySegue", sender: indexPath)
     }
 }
 

@@ -13,9 +13,9 @@ enum APIServices {
     case getBanners
     case getCategories
     case getMostSoldProducts
-    case getCategoryProducts(categoryId: String)
-    case getProduct(productId: String)
-    case reserveProduct(productId: String)
+    case getCategoryProducts(categoryId: Int, limit: Int?, offset: Int?)
+    case getProduct(productId: Int)
+    case reserveProduct(productId: Int)
 }
 
 extension APIServices: TargetType {

@@ -54,6 +54,11 @@ extension HomePresenter {
         let category = self.categories[index.item]
         return (category.imageUrl, category.description)
     }
+    
+    func categoryId(forIndexPath index: IndexPath) -> Int {
+        let category = self.categories[index.item]
+        return category.id
+    }
 }
 
 // MARK: - Products

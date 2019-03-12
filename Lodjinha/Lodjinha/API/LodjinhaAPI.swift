@@ -91,4 +91,32 @@ struct LodjinhaAPI {
             }
         }
     }
+    
+    static func getCategoryProducts(categoryId: Int, limit: Int?, offset: Int?, completion: @escaping (_ products: [ProductModel]?, _ total: Int)->Void) {
+        provider.request(.getCategoryProducts(categoryId: categoryId, limit: limit, offset: offset)) { (result) in
+            switch result {
+            case .success(let response):
+                do {
+                    let fileteredResponse = try response.filterSuccessfulStatusCodes()
+                    let productsJson = try JSON(data: fileteredResponse.data)
+                    
+                    let productsList = productsJson["data"]
+                    let productsListData = try productsList.rawData()
+                    
+                    let products = try JSONDecoder().decode([ProductModel].self, from: productsListData)
+                    
+                    let total = productsJson["total"].intValue
+                    completion(products, total)
+                }
+                catch {
+                    print("Status code problem: " + error.localizedDescription)
+                    completion(nil, 0)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(nil, 0)
+            }
+        }
+    }
 }

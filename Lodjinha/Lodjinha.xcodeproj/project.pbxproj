@@ -24,6 +24,9 @@
 		ECEB17D92235AA6900D36453 /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17D82235AA6900D36453 /* CategoryCollectionCell.swift */; };
 		ECEB17DB2235B97500D36453 /* ProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17DA2235B97500D36453 /* ProductTableCell.swift */; };
 		ECEB17DD2235B9DB00D36453 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17DC2235B9DB00D36453 /* ProductModel.swift */; };
+		ECEB17E2223748D500D36453 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17E1223748D500D36453 /* CategoryViewController.swift */; };
+		ECEB17E42237494E00D36453 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17E32237494E00D36453 /* CategoryPresenter.swift */; };
+		ECEB17EB22375A9D00D36453 /* ProductTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECEB17EA22375A9D00D36453 /* ProductTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		ECEB17D82235AA6900D36453 /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
 		ECEB17DA2235B97500D36453 /* ProductTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableCell.swift; sourceTree = "<group>"; };
 		ECEB17DC2235B9DB00D36453 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		ECEB17E1223748D500D36453 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		ECEB17E32237494E00D36453 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
+		ECEB17EA22375A9D00D36453 /* ProductTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,11 +139,10 @@
 		ECEB17C722356EA600D36453 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				ECEB17D12235997600D36453 /* HomeViewController.swift */,
-				ECEB17D42235A34F00D36453 /* HomePresenter.swift */,
-				ECEB17D82235AA6900D36453 /* CategoryCollectionCell.swift */,
 				ECEB17DA2235B97500D36453 /* ProductTableCell.swift */,
-				ECEB17D32235A24B00D36453 /* Banner */,
+				ECEB17EA22375A9D00D36453 /* ProductTableCell.xib */,
+				ECEB17E522374F5200D36453 /* Initial */,
+				ECEB17E02237488400D36453 /* Category */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -159,6 +164,26 @@
 				ECEB17CD22357CC200D36453 /* BannerViewController.swift */,
 			);
 			name = Banner;
+			sourceTree = "<group>";
+		};
+		ECEB17E02237488400D36453 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				ECEB17E1223748D500D36453 /* CategoryViewController.swift */,
+				ECEB17E32237494E00D36453 /* CategoryPresenter.swift */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		ECEB17E522374F5200D36453 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				ECEB17D12235997600D36453 /* HomeViewController.swift */,
+				ECEB17D42235A34F00D36453 /* HomePresenter.swift */,
+				ECEB17D82235AA6900D36453 /* CategoryCollectionCell.swift */,
+				ECEB17D32235A24B00D36453 /* Banner */,
+			);
+			name = Initial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +248,7 @@
 			files = (
 				EC5D645B22354CF8006F268E /* LaunchScreen.storyboard in Resources */,
 				EC5D645822354CF8006F268E /* Assets.xcassets in Resources */,
+				ECEB17EB22375A9D00D36453 /* ProductTableCell.xib in Resources */,
 				EC5D645622354CF4006F268E /* Main.storyboard in Resources */,
 				ECEB17C422355C0A00D36453 /* returnSample.json in Resources */,
 			);
@@ -290,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEB17E42237494E00D36453 /* CategoryPresenter.swift in Sources */,
 				ECEB17CE22357CC200D36453 /* BannerViewController.swift in Sources */,
 				ECEB17C922356ECF00D36453 /* BannersPageController.swift in Sources */,
 				ECEB17C622355EB000D36453 /* LodjinhaAPI.swift in Sources */,
@@ -300,6 +327,7 @@
 				ECEB17DD2235B9DB00D36453 /* ProductModel.swift in Sources */,
 				ECEB17CC223570DD00D36453 /* BannerModel.swift in Sources */,
 				ECEB17D72235A37600D36453 /* CategoryModel.swift in Sources */,
+				ECEB17E2223748D500D36453 /* CategoryViewController.swift in Sources */,
 				ECEB17D52235A34F00D36453 /* HomePresenter.swift in Sources */,
 				ECEB17DB2235B97500D36453 /* ProductTableCell.swift in Sources */,
 			);
