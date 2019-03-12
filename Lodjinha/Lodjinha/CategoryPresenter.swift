@@ -78,4 +78,8 @@ extension CategoryPresenter {
         
         return (product.imageUrl, product.name, oldPriceAttrString, newPriceString)
     }
+    
+    func productAtIndex(indexPath: IndexPath) -> ProductModel {
+        return self.categoryProducts[indexPath.row]
+    }
 }
