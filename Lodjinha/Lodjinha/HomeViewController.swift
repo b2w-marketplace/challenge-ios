@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var productsTableView: UITableView!
+    @IBOutlet weak var productsHeaderView: UIView!
     
     let presenter = HomePresenter()
     
@@ -82,10 +83,6 @@ extension HomeViewController: UICollectionViewDataSource {
 
 // MARK: - Products
 extension HomeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Mais vendidos"
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.presenter.mostSoldProductsNumber
     }
@@ -100,5 +97,15 @@ extension HomeViewController: UITableViewDataSource {
         cell.priceNowLbl.text = productInfo.newPrice
         
         return cell
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return self.productsHeaderView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40.0
     }
 }
