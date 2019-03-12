@@ -10,6 +10,8 @@ import UIKit
 
 class ProductInfoViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var loadingView: UIView!
+    
     @IBOutlet weak var photoIv: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var oldPriceLbl: UILabel!
@@ -23,6 +25,9 @@ class ProductInfoViewController: UIViewController {
         super.viewDidLoad()
         self.setTexts()
         self.adjustLayouts()
+        
+        self.title = self.presenter.productName
+        self.presenter.delegate = self
     }
     
     private func setTexts() {
@@ -39,5 +44,26 @@ class ProductInfoViewController: UIViewController {
     }
     
     @IBAction func reservePressed(_ sender: UIButton) {
+        self.presenter.reserveProduct()
     }
+}
+
+// MARK: - Presenter Delegate
+extension ProductInfoViewController: ProductInfoPresenterDelegate {
+    func setLoading(loading: Bool) {
+        self.loadingView.isHidden = !loading
+    }
+    
+    func showReserveAlert(reserved: Bool, message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (action) in
+            if reserved {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
 }

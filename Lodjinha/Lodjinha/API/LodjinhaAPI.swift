@@ -119,4 +119,25 @@ struct LodjinhaAPI {
             }
         }
     }
+    
+    static func reserveProduct(productId: Int, completion: @escaping (_ success: Bool)->Void) {
+        provider.request(.reserveProduct(productId: productId)) { (result) in
+            switch result {
+            case .success(let response):
+                do {
+                    let filteredResponse = try response.filterSuccessfulStatusCodes()
+                    print(filteredResponse.debugDescription)
+                    completion(true)
+                }
+                catch {
+                    print("Status code problem: " + error.localizedDescription)
+                    completion(false)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(false)
+            }
+        }
+    }
 }

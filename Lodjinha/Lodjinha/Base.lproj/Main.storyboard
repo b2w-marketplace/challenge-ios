@@ -407,7 +407,7 @@
                                     <constraint firstItem="ehq-T3-ee8" firstAttribute="width" secondItem="41c-MB-QiC" secondAttribute="width" id="pnC-fL-6ph"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXb-Yz-x3k">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXb-Yz-x3k" userLabel="ReservarContent">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swo-YO-4eM">
@@ -441,21 +441,39 @@
                                     <constraint firstItem="swo-YO-4eM" firstAttribute="top" secondItem="IXb-Yz-x3k" secondAttribute="top" id="plD-as-L1L"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buv-6M-2ps">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="eSi-ib-7hV">
+                                        <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="eSi-ib-7hV" firstAttribute="centerY" secondItem="buv-6M-2ps" secondAttribute="centerY" id="KYl-hV-V3e"/>
+                                    <constraint firstItem="eSi-ib-7hV" firstAttribute="centerX" secondItem="buv-6M-2ps" secondAttribute="centerX" id="gms-qY-LbL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rhn-4S-chv" firstAttribute="bottom" secondItem="41c-MB-QiC" secondAttribute="bottom" id="EIo-aT-shw"/>
                             <constraint firstItem="rhn-4S-chv" firstAttribute="trailing" secondItem="IXb-Yz-x3k" secondAttribute="trailing" id="LNB-vT-tCo"/>
+                            <constraint firstAttribute="bottom" secondItem="buv-6M-2ps" secondAttribute="bottom" id="Pfm-ix-65n"/>
                             <constraint firstItem="41c-MB-QiC" firstAttribute="leading" secondItem="rhn-4S-chv" secondAttribute="leading" id="VoI-EJ-hMv"/>
+                            <constraint firstItem="rhn-4S-chv" firstAttribute="trailing" secondItem="buv-6M-2ps" secondAttribute="trailing" id="VqG-mp-st2"/>
                             <constraint firstItem="rhn-4S-chv" firstAttribute="trailing" secondItem="41c-MB-QiC" secondAttribute="trailing" id="hjf-6P-nYO"/>
                             <constraint firstItem="41c-MB-QiC" firstAttribute="top" secondItem="rhn-4S-chv" secondAttribute="top" id="htM-fH-wXv"/>
+                            <constraint firstItem="buv-6M-2ps" firstAttribute="leading" secondItem="rhn-4S-chv" secondAttribute="leading" id="mke-aA-IUO"/>
                             <constraint firstItem="IXb-Yz-x3k" firstAttribute="leading" secondItem="rhn-4S-chv" secondAttribute="leading" id="oA6-vZ-XL8"/>
                             <constraint firstItem="rhn-4S-chv" firstAttribute="bottom" secondItem="IXb-Yz-x3k" secondAttribute="bottom" id="piS-bZ-UIg"/>
+                            <constraint firstItem="buv-6M-2ps" firstAttribute="top" secondItem="rhn-4S-chv" secondAttribute="top" id="ugb-ee-d3h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rhn-4S-chv"/>
                     </view>
                     <connections>
                         <outlet property="descriptionLbl" destination="YAS-qR-nGR" id="Srz-Zf-Cio"/>
+                        <outlet property="loadingView" destination="buv-6M-2ps" id="y5J-V9-hnE"/>
                         <outlet property="nameLbl" destination="KsF-uS-9Xm" id="bY9-0D-jtm"/>
                         <outlet property="newPriceLbl" destination="Hha-63-R25" id="mNL-CE-P7i"/>
                         <outlet property="oldPriceLbl" destination="PQW-u0-d4W" id="N0o-lJ-5QQ"/>

@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol ProductInfoPresenterDelegate: class {
+    func setLoading(loading: Bool)
+    func showReserveAlert(reserved: Bool, message: String)
+}
+
 class ProductInfoPresenter: NSObject {
     var product: ProductModel?
+    weak var delegate: ProductInfoPresenterDelegate?
     
     var photoUrl: URL? {
         return product?.imageUrl
@@ -45,5 +51,21 @@ class ProductInfoPresenter: NSObject {
         let htmlString = try? NSAttributedString(data: htmlStringData, options: [.documentType : NSAttributedString.DocumentType.html], documentAttributes: nil)
         
         return htmlString
+    }
+    
+    
+    // MARK: - Reserve
+    func reserveProduct() {
+        guard let productId = self.product?.id else {
+            return
+        }
+        
+        self.delegate?.setLoading(loading: true)
+        LodjinhaAPI.reserveProduct(productId: productId) {[weak self] (success) in
+            self?.delegate?.setLoading(loading: false)
+            
+            let message = success ? "Produto reservado com sucesso!" : "Problemas ao realizar a reserva do produto. Tente novamente mais tarde."
+            self?.delegate?.showReserveAlert(reserved: success, message: message)
+        }
     }
 }
