@@ -29,6 +29,7 @@
 		ECEB17EB22375A9D00D36453 /* ProductTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECEB17EA22375A9D00D36453 /* ProductTableCell.xib */; };
 		ECEB17EE2237695C00D36453 /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17ED2237695C00D36453 /* ProductInfoViewController.swift */; };
 		ECEB17F02237697800D36453 /* ProductInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB17EF2237697800D36453 /* ProductInfoPresenter.swift */; };
+		ECEB17F22237841F00D36453 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECEB17F12237841F00D36453 /* Pacifico-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		ECEB17EA22375A9D00D36453 /* ProductTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableCell.xib; sourceTree = "<group>"; };
 		ECEB17ED2237695C00D36453 /* ProductInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
 		ECEB17EF2237697800D36453 /* ProductInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoPresenter.swift; sourceTree = "<group>"; };
+		ECEB17F12237841F00D36453 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				EC5D645722354CF8006F268E /* Assets.xcassets */,
+				ECEB17F12237841F00D36453 /* Pacifico-Regular.ttf */,
 				EC5D645922354CF8006F268E /* LaunchScreen.storyboard */,
 				EC5D645C22354CF8006F268E /* Info.plist */,
 			);
@@ -263,6 +266,7 @@
 				EC5D645B22354CF8006F268E /* LaunchScreen.storyboard in Resources */,
 				EC5D645822354CF8006F268E /* Assets.xcassets in Resources */,
 				ECEB17EB22375A9D00D36453 /* ProductTableCell.xib in Resources */,
+				ECEB17F22237841F00D36453 /* Pacifico-Regular.ttf in Resources */,
 				EC5D645622354CF4006F268E /* Main.storyboard in Resources */,
 				ECEB17C422355C0A00D36453 /* returnSample.json in Resources */,
 			);
