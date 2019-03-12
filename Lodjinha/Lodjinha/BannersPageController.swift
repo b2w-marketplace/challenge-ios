@@ -10,16 +10,41 @@ import UIKit
 
 class BannersPageController: UIPageViewController {
     private var bannerControllers = [UIViewController]()
-    private var currentIndex = 0
+    private weak var scrollTimer: Timer?
+    
+    deinit {
+        scrollTimer?.invalidate()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
+        self.delegate = self
         
         LodjinhaAPI.getHomeBanners { (banners) in
             if let bannersList = banners {
                 self.reloadControllers(forBanners: bannersList)
             }
+        }
+    }
+    
+    private func scheduleScrollTimer() {
+        self.scrollTimer?.invalidate()
+        guard !bannerControllers.isEmpty else {
+            return
+        }
+        self.scrollTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(moveToNextController), userInfo: nil, repeats: true)
+    }
+    
+    @objc private func moveToNextController() {
+        guard let controller = self.viewControllers?.first, var index = self.bannerControllers.firstIndex(of: controller) else {
+            return
+        }
+        
+        let newIndex = (index + 1).quotientAndRemainder(dividingBy: bannerControllers.count).remainder
+        if newIndex != index {
+            let newController = self.bannerControllers[newIndex]
+            self.setViewControllers([newController], direction: .forward, animated: true, completion: nil)
         }
     }
     
@@ -35,11 +60,12 @@ class BannersPageController: UIPageViewController {
         self.bannerControllers = controllers
         if let firstBannerController = controllers.first {
             self.setViewControllers([firstBannerController], direction: .forward, animated: false, completion: nil)
-            self.currentIndex = 0
         }
+        self.scheduleScrollTimer()
     }
 }
 
+// MARK: Datasource
 extension BannersPageController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard self.bannerControllers.count > 1, var index = self.bannerControllers.firstIndex(of: viewController) else {
@@ -47,7 +73,6 @@ extension BannersPageController: UIPageViewControllerDataSource {
         }
         
         index = (index-1 >= 0) ? index-1 : self.bannerControllers.count-1
-        currentIndex = index
         return self.bannerControllers[index]
     }
     
@@ -57,15 +82,17 @@ extension BannersPageController: UIPageViewControllerDataSource {
         }
         
         index = (index+1 >= self.bannerControllers.count) ? 0 : index+1
-        currentIndex = index
         return self.bannerControllers[index]
     }
+}
+
+// MARK: Delegate
+extension BannersPageController: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        self.scrollTimer?.invalidate()
+    }
     
-//    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-//        return self.bannerControllers.count
-//    }
-//    
-//    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-//        return currentIndex
-//    }
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        self.scheduleScrollTimer()
+    }
 }
