@@ -10,6 +10,7 @@ import UIKit
 
 protocol CategoryPresenterDelegate: class {
     func reloadCategoryProducts()
+    func showNoResults()
 }
 
 class CategoryPresenter: NSObject {
@@ -24,10 +25,13 @@ class CategoryPresenter: NSObject {
         self.categoryId = categoryId
         
         LodjinhaAPI.getCategoryProducts(categoryId: categoryId, limit: nil, offset: nil) {[weak self] (products, total) in
-            if let categoryProducts = products {
+            if let categoryProducts = products, !categoryProducts.isEmpty {
                 self?.categoryProducts = categoryProducts
                 self?.totalProducts = total
                 self?.delegate?.reloadCategoryProducts()
+            }
+            else {
+                self?.delegate?.showNoResults()
             }
         }
     }

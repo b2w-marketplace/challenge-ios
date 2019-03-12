@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var productsTableView: UITableView!
     @IBOutlet weak var productsHeaderView: UIView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     let presenter = HomePresenter()
     
@@ -65,6 +66,7 @@ extension HomeViewController: HomePresenterDelegate {
     }
     
     func reloadCategories() {
+        self.loadingIndicator.stopAnimating()
         self.categoriesCollectionView.reloadData()
     }
 }

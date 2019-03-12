@@ -8,7 +8,11 @@
 
 import UIKit
 
-class CategoryViewController: UITableViewController {
+class CategoryViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var noResultsLbl: UILabel!
+    
     let presenter = CategoryPresenter()
     
     override func viewDidLoad() {
@@ -18,18 +22,27 @@ class CategoryViewController: UITableViewController {
         self.tableView.register(cellNib, forCellReuseIdentifier: "ProductCell")
         self.presenter.delegate = self
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productVc = segue.destination as? ProductInfoViewController, let index = sender as? IndexPath {
+            productVc.presenter.product = self.presenter.productAtIndex(indexPath: index)
+        }
+    }
+}
 
-    // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
+// MARK: - Table view data source
+extension CategoryViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     // MARK: - Products
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.presenter.productsNumber
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableCell
         let productInfo = self.presenter.productInfo(atIndex: indexPath)
         
@@ -41,22 +54,27 @@ class CategoryViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "ProductSegue", sender: indexPath)
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1.0
     }
     
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let productVc = segue.destination as? ProductInfoViewController, let index = sender as? IndexPath {
-            productVc.presenter.product = self.presenter.productAtIndex(indexPath: index)
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "ProductSegue", sender: indexPath)
     }
 }
 
 
 // MARK: - Presenter Delegate
 extension CategoryViewController: CategoryPresenterDelegate {
+    func showNoResults() {
+        self.noResultsLbl.isHidden = false
+        self.loadingIndicator.stopAnimating()
+    }
+    
     func reloadCategoryProducts() {
+        self.loadingIndicator.stopAnimating()
+        self.tableView.isHidden = false
         self.tableView.reloadData()
     }
 }

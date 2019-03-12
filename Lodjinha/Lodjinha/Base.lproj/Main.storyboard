@@ -77,6 +77,7 @@
                                     <subviews>
                                         <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdD-rg-O7C">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="95" id="1sp-8c-gip"/>
                                             </constraints>
@@ -145,14 +146,20 @@
                                                         <outlet property="delegate" destination="uV0-Mt-PnK" id="lFy-RD-r97"/>
                                                     </connections>
                                                 </collectionView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="SRo-Kf-FDq">
+                                                    <rect key="frame" x="169" y="70" width="37" height="37"/>
+                                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="tQB-8l-TCs" firstAttribute="leading" secondItem="RRn-q3-WGF" secondAttribute="leading" constant="15" id="4jH-ZX-oHl"/>
                                                 <constraint firstAttribute="trailing" secondItem="HYy-oC-2Jk" secondAttribute="trailing" id="EaI-ol-ZTZ"/>
                                                 <constraint firstItem="HYy-oC-2Jk" firstAttribute="leading" secondItem="RRn-q3-WGF" secondAttribute="leading" id="L7g-2i-hvM"/>
+                                                <constraint firstItem="SRo-Kf-FDq" firstAttribute="centerX" secondItem="HYy-oC-2Jk" secondAttribute="centerX" id="NxC-w3-I0W"/>
                                                 <constraint firstAttribute="bottom" secondItem="HYy-oC-2Jk" secondAttribute="bottom" id="Pvu-HL-O5O"/>
                                                 <constraint firstItem="HYy-oC-2Jk" firstAttribute="top" secondItem="tQB-8l-TCs" secondAttribute="bottom" constant="5" id="UwX-wM-FbH"/>
+                                                <constraint firstItem="SRo-Kf-FDq" firstAttribute="centerY" secondItem="HYy-oC-2Jk" secondAttribute="centerY" id="drd-w9-fvU"/>
                                                 <constraint firstItem="tQB-8l-TCs" firstAttribute="top" secondItem="RRn-q3-WGF" secondAttribute="top" constant="5" id="g1Q-sE-gfb"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tQB-8l-TCs" secondAttribute="trailing" constant="20" symbolic="YES" id="vUO-Th-NOA"/>
                                             </constraints>
@@ -202,10 +209,11 @@
                     <navigationItem key="navigationItem" title="Home" id="xQF-ch-78l"/>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="HYy-oC-2Jk" id="Mz1-IH-JMD"/>
+                        <outlet property="loadingIndicator" destination="SRo-Kf-FDq" id="Z4t-JG-pBs"/>
                         <outlet property="productsHeaderView" destination="yfc-vf-n6e" id="FLY-3D-wY5"/>
                         <outlet property="productsTableView" destination="4G4-OH-VUB" id="4Jm-8k-jtN"/>
-                        <segue destination="YY0-Ax-NqB" kind="show" identifier="CategorySegue" id="tTW-B7-3E5"/>
                         <segue destination="6f7-jg-02q" kind="show" identifier="ProductSegue" id="r5T-GB-9Yw"/>
+                        <segue destination="XYk-Dd-zpH" kind="show" identifier="CategorySegue" id="fkD-8M-VJB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UH-aa-WI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -282,25 +290,57 @@
             <point key="canvasLocation" x="2086" y="-1505"/>
         </scene>
         <!--Category View Controller-->
-        <scene sceneID="cut-4O-Zcr">
+        <scene sceneID="Sk6-Ra-fgz">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="YY0-Ax-NqB" customClass="CategoryViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="1" id="2Mk-LH-UCG">
+                <viewController id="XYk-Dd-zpH" customClass="CategoryViewController" customModule="Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KTE-Z0-TaF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7bo-q3-lXy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XYk-Dd-zpH" id="S06-xg-mo1"/>
+                                    <outlet property="delegate" destination="XYk-Dd-zpH" id="1E8-4G-QVX"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Og3-bi-g7b">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nenhum produto encontrado nesta categoria" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxH-9q-Uev">
+                                <rect key="frame" x="87.5" y="301.5" width="200" height="64.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Z5F-23-VQw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <connections>
-                            <outlet property="dataSource" destination="YY0-Ax-NqB" id="H50-Gz-1Jx"/>
-                            <outlet property="delegate" destination="YY0-Ax-NqB" id="wbr-Px-Ej5"/>
-                        </connections>
-                    </tableView>
+                        <constraints>
+                            <constraint firstItem="7bo-q3-lXy" firstAttribute="top" secondItem="F0M-Ry-b2X" secondAttribute="top" id="RDX-mD-u6m"/>
+                            <constraint firstItem="gxH-9q-Uev" firstAttribute="centerX" secondItem="KTE-Z0-TaF" secondAttribute="centerX" id="fKe-za-S1g"/>
+                            <constraint firstItem="gxH-9q-Uev" firstAttribute="centerY" secondItem="KTE-Z0-TaF" secondAttribute="centerY" id="npe-4a-zMO"/>
+                            <constraint firstItem="F0M-Ry-b2X" firstAttribute="bottom" secondItem="7bo-q3-lXy" secondAttribute="bottom" id="q5l-MJ-eZX"/>
+                            <constraint firstItem="F0M-Ry-b2X" firstAttribute="trailing" secondItem="7bo-q3-lXy" secondAttribute="trailing" id="uwb-9P-bWS"/>
+                            <constraint firstItem="7bo-q3-lXy" firstAttribute="leading" secondItem="F0M-Ry-b2X" secondAttribute="leading" id="xn4-0h-pyo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F0M-Ry-b2X"/>
+                    </view>
                     <connections>
-                        <segue destination="6f7-jg-02q" kind="show" identifier="ProductSegue" id="7bp-Qo-sr4"/>
+                        <outlet property="loadingIndicator" destination="Og3-bi-g7b" id="alb-gc-qby"/>
+                        <outlet property="noResultsLbl" destination="gxH-9q-Uev" id="l1c-ds-egU"/>
+                        <outlet property="tableView" destination="7bo-q3-lXy" id="MeM-kT-tQa"/>
+                        <segue destination="6f7-jg-02q" kind="show" identifier="ProductSegue" id="Aq3-To-xGM"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3wd-FD-8V4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sE-X5-rsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417" y="-826"/>
+            <point key="canvasLocation" x="1450" y="-826"/>
         </scene>
         <!--Product Info View Controller-->
         <scene sceneID="Csi-dl-1Kb">
@@ -513,6 +553,6 @@
         <image name="tab_home" width="19" height="17.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r5T-GB-9Yw"/>
+        <segue reference="Aq3-To-xGM"/>
     </inferredMetricsTieBreakers>
 </document>
