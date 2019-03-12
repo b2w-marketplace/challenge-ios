@@ -50,6 +50,7 @@ class HomeViewController: UIViewController {
         if let categoryController = segue.destination as? CategoryViewController, let index = sender as? IndexPath {
             let categoryId = self.presenter.categoryId(forIndexPath: index)
             categoryController.presenter.loadCategory(categoryId: categoryId)
+            categoryController.title = self.presenter.categoryInfo(atIndex: index).name
         }
     }
 }
