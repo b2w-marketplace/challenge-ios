@@ -52,6 +52,9 @@ class HomeViewController: UIViewController {
             categoryController.presenter.loadCategory(categoryId: categoryId)
             categoryController.title = self.presenter.categoryInfo(atIndex: index).name
         }
+        else if let productVc = segue.destination as? ProductInfoViewController, let index = sender as? IndexPath {
+            productVc.presenter.product = self.presenter.productAtIndex(indexPath: index)
+        }
     }
 }
 
@@ -113,5 +116,10 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "ProductSegue", sender: indexPath)
     }
 }

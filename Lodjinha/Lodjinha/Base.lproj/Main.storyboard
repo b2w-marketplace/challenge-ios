@@ -205,7 +205,7 @@
                         <outlet property="productsHeaderView" destination="yfc-vf-n6e" id="FLY-3D-wY5"/>
                         <outlet property="productsTableView" destination="4G4-OH-VUB" id="4Jm-8k-jtN"/>
                         <segue destination="YY0-Ax-NqB" kind="show" identifier="CategorySegue" id="tTW-B7-3E5"/>
-                        <segue destination="6f7-jg-02q" kind="show" id="r5T-GB-9Yw"/>
+                        <segue destination="6f7-jg-02q" kind="show" identifier="ProductSegue" id="r5T-GB-9Yw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UH-aa-WI5" userLabel="First Responder" sceneMemberID="firstResponder"/>

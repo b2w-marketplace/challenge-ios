@@ -77,4 +77,8 @@ extension HomePresenter {
         
         return (product.imageUrl, product.name, oldPriceAttrString, newPriceString)
     }
+    
+    func productAtIndex(indexPath: IndexPath) -> ProductModel {
+        return self.mostSoldProd[indexPath.row]
+    }
 }
