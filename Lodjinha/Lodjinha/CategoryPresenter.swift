@@ -16,6 +16,7 @@ class CategoryPresenter: NSObject {
     private var categoryId: Int?
     private var categoryProducts = [ProductModel]()
     private var totalProducts = 0
+    private var loadingMoreItems = false
     
     weak var delegate: CategoryPresenterDelegate?
     
@@ -30,6 +31,33 @@ class CategoryPresenter: NSObject {
             }
         }
     }
+    
+    private func loadMoreProductsIfNeeded(afterIndex index: Int) {
+        guard !loadingMoreItems, self.categoryProducts.count < self.totalProducts else {
+            return
+        }
+        
+        // LoadMore Window
+        let window = max(0, self.categoryProducts.count - 5)
+        guard index > window, let categoryId = self.categoryId else {
+            return
+        }
+        
+        self.loadingMoreItems = true
+        LodjinhaAPI.getCategoryProducts(categoryId: categoryId, limit: nil, offset: self.categoryProducts.count) {[weak self] (products, total) in
+            self?.loadingMoreItems = false
+            if let newProducts = products, !newProducts.isEmpty {
+                self?.categoryProducts.append(contentsOf: newProducts)
+                self?.totalProducts = total
+                self?.delegate?.reloadCategoryProducts()
+            }
+            else {
+                // API está retornando "total" inconsistent
+                // Esta linha garante a parada do load more em caso de nao retornar mais resultados
+                self?.totalProducts = self?.categoryProducts.count ?? 0
+            }
+        }
+    }
 }
 
 // MARK: - Products
@@ -39,6 +67,8 @@ extension CategoryPresenter {
     }
     
     func productInfo(atIndex index: IndexPath) -> (photo: URL, name: String, oldPrice: NSAttributedString, newPrice: String) {
+        self.loadMoreProductsIfNeeded(afterIndex: index.item)
+        
         let product = self.categoryProducts[index.item]
         
         let oldPriceText = String(format: "De %.2f", product.oldPrice)

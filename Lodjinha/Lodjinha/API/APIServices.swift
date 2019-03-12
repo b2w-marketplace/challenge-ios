@@ -82,7 +82,20 @@ extension APIServices: TargetType {
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+        case let .getCategoryProducts(categoryId, limit, offset):
+            var params = ["categoriaId": categoryId]
+            if let limitParam = limit {
+                params["limit"] = limitParam
+            }
+            if let offsetParam = offset {
+                params["offset"] = offsetParam
+            }
+            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
+            
+        default:
+            return .requestPlain
+        }
     }
     
     var headers: [String : String]? {
