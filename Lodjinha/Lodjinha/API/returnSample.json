@@ -1,0 +1,69 @@
+{
+  "banners": {
+    "data": [
+      {
+        "descricao": "string",
+        "id": 0,
+        "urlImagem": "string"
+      }
+    ]
+  },
+  "categories": {
+    "data": [
+      {
+        "descricao": "string",
+        "id": 0,
+        "urlImagem": "string"
+      }
+    ]
+  },
+  "productsList": {
+    "data": [
+      {
+        "categoria": {
+          "descricao": "string",
+          "id": 0,
+          "urlImagem": "string"
+        },
+        "descricao": "string",
+        "id": 0,
+        "nome": "string",
+        "precoDe": 0,
+        "precoPor": 0,
+        "urlImagem": "string"
+      }
+    ],
+    "offset": 0,
+    "total": 0
+  },
+  "mostSold": {
+    "data": [
+      {
+        "categoria": {
+          "descricao": "string",
+          "id": 0,
+          "urlImagem": "string"
+        },
+        "descricao": "string",
+        "id": 0,
+        "nome": "string",
+        "precoDe": 0,
+        "precoPor": 0,
+        "urlImagem": "string"
+      }
+    ]
+  },
+  "product": {
+    "categoria": {
+      "descricao": "string",
+      "id": 0,
+      "urlImagem": "string"
+    },
+    "descricao": "string",
+    "id": 0,
+    "nome": "string",
+    "precoDe": 0,
+    "precoPor": 0,
+    "urlImagem": "string"
+  }
+}
