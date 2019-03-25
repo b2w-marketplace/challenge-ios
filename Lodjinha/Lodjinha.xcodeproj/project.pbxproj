@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A5DDB5832248745F0019550E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDB5822248745F0019550E /* AppDelegate.swift */; };
-		A5DDB5852248745F0019550E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDB5842248745F0019550E /* ViewController.swift */; };
-		A5DDB5882248745F0019550E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB5862248745F0019550E /* Main.storyboard */; };
 		A5DDB58A224874600019550E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB589224874600019550E /* Assets.xcassets */; };
 		A5DDB58D224874600019550E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB58B224874600019550E /* LaunchScreen.storyboard */; };
 		A5DDB5A3224877E30019550E /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDB5A2224877E30019550E /* HomeViewControllerTests.swift */; };
+		A5DDB5B0224898FA0019550E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDB5AF224898FA0019550E /* HomeViewController.swift */; };
+		A5DDB5B22248996E0019550E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB5B12248996E0019550E /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +28,14 @@
 /* Begin PBXFileReference section */
 		A5DDB57F2248745F0019550E /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DDB5822248745F0019550E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5DDB5842248745F0019550E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A5DDB5872248745F0019550E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5DDB589224874600019550E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5DDB58C224874600019550E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5DDB58E224874600019550E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5DDB593224874600019550E /* LodjinhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DDB599224874600019550E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5DDB5A2224877E30019550E /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		A5DDB5AF224898FA0019550E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A5DDB5B12248996E0019550E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				A5DDB5822248745F0019550E /* AppDelegate.swift */,
-				A5DDB5842248745F0019550E /* ViewController.swift */,
-				A5DDB5862248745F0019550E /* Main.storyboard */,
 				A5DDB589224874600019550E /* Assets.xcassets */,
 				A5DDB58B224874600019550E /* LaunchScreen.storyboard */,
 				A5DDB58E224874600019550E /* Info.plist */,
+				A5DDB5AF224898FA0019550E /* HomeViewController.swift */,
+				A5DDB5B12248996E0019550E /* HomeViewController.xib */,
 			);
 			path = Lodjinha;
 			sourceTree = "<group>";
@@ -180,7 +180,7 @@
 			files = (
 				A5DDB58D224874600019550E /* LaunchScreen.storyboard in Resources */,
 				A5DDB58A224874600019550E /* Assets.xcassets in Resources */,
-				A5DDB5882248745F0019550E /* Main.storyboard in Resources */,
+				A5DDB5B22248996E0019550E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,8 +198,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5DDB5852248745F0019550E /* ViewController.swift in Sources */,
 				A5DDB5832248745F0019550E /* AppDelegate.swift in Sources */,
+				A5DDB5B0224898FA0019550E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,14 +222,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A5DDB5862248745F0019550E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5DDB5872248745F0019550E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A5DDB58B224874600019550E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
