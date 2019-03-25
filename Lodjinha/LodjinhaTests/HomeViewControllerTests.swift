@@ -16,6 +16,10 @@ protocol CategoriesLoader {
     func load(completion: @escaping (([String]) -> Void))
 }
 
+protocol TopSellingProductsLoader {
+    func load(completion: @escaping (([String]) -> Void))
+}
+
 class RemoteBannerLoader: BannersLoader {
     func load(completion: @escaping (([String]) -> Void)) {
         //Api Call
@@ -32,18 +36,29 @@ class RemoteCategoriesLoader: CategoriesLoader {
     }
 }
 
+class RemoteTopSellingProductsLoader: TopSellingProductsLoader {
+    func load(completion: @escaping (([String]) -> Void)) {
+        //Api Call
+        let products: [String] = ["Product1", "Product2", "Product3"]
+        completion(products)
+    }
+}
+
 class HomeViewController: UIViewController {
     
     var bannerLoader: BannersLoader!
     var categoriesLoader: CategoriesLoader!
+    var topSellingProductsLoader: TopSellingProductsLoader!
     
     var banners: [String] = []
     var categories: [String] = []
+    var topSellingProducts: [String] = []
     
-    convenience init(bannerLoader: BannersLoader, categoriesLoader: CategoriesLoader) {
+    convenience init(bannerLoader: BannersLoader, categoriesLoader: CategoriesLoader, topSellingProductsLoader: TopSellingProductsLoader) {
         self.init()
         self.bannerLoader = bannerLoader
         self.categoriesLoader = categoriesLoader
+        self.topSellingProductsLoader = topSellingProductsLoader
     }
     
     override func viewDidLoad() {
@@ -56,6 +71,10 @@ class HomeViewController: UIViewController {
         categoriesLoader?.load { (categories) in
             self.categories = categories
         }
+        
+        topSellingProductsLoader?.load { (products) in
+            self.topSellingProducts = products
+        }
     }
     
 }
@@ -63,15 +82,20 @@ class HomeViewController: UIViewController {
 class HomeViewControllerTests: XCTestCase {
 
     func test_homeViewController_shouldHaveBannersToShow_afterLoadingView() {
-        let sut = HomeViewController(bannerLoader: RemoteBannerLoader(), categoriesLoader: RemoteCategoriesLoader())
+        let sut = HomeViewController(bannerLoader: RemoteBannerLoader(), categoriesLoader: RemoteCategoriesLoader(), topSellingProductsLoader: RemoteTopSellingProductsLoader())
         sut.loadViewIfNeeded()
         XCTAssertTrue(sut.banners.count > 0)
     }
     
     func test_homeViewController_shoulHaveCategoriesToShow_afterLoadingView() {
-        let sut = HomeViewController(bannerLoader: RemoteBannerLoader(), categoriesLoader: RemoteCategoriesLoader())
+        let sut = HomeViewController(bannerLoader: RemoteBannerLoader(), categoriesLoader: RemoteCategoriesLoader(), topSellingProductsLoader: RemoteTopSellingProductsLoader())
         sut.loadViewIfNeeded()
         XCTAssertTrue(sut.categories.count > 0)
     }
     
+    func test_homeViewController_shouldHaveTopSellingProductsToShow_afterLoadingView() {
+        let sut = HomeViewController(bannerLoader: RemoteBannerLoader(), categoriesLoader: RemoteCategoriesLoader(), topSellingProductsLoader: RemoteTopSellingProductsLoader())
+        sut.loadViewIfNeeded()
+        XCTAssertTrue(sut.topSellingProducts.count > 0)
+    }
 }
