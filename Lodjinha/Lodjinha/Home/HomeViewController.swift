@@ -38,11 +38,11 @@ class HomeViewController: UIViewController {
     
     private(set) var homeinfoLoader: HomeInfoLoader!
     
-    var banners: [String] = []
     var categories: [String] = []
     var topSellingProducts: [String] = []
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bannersView: HomeBannersView!
     
     convenience init(homeInfoLoader: HomeInfoLoader) {
         self.init(nibName: String(describing: HomeViewController.self), bundle: Bundle.main)
@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         homeinfoLoader?.loadBanners { (banners) in
-            self.banners = banners
+            self.bannersView.updateBanners(banners: banners)
         }
         
         homeinfoLoader?.loadCategories { (categories) in

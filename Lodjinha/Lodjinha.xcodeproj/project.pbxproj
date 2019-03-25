@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A56343B7224997F700251BFA /* HomeBannersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56343B6224997F700251BFA /* HomeBannersView.swift */; };
+		A56343BA224999F600251BFA /* HomeBannersViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56343B9224999F600251BFA /* HomeBannersViewTests.swift */; };
 		A5DDB5832248745F0019550E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDB5822248745F0019550E /* AppDelegate.swift */; };
 		A5DDB58A224874600019550E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB589224874600019550E /* Assets.xcassets */; };
 		A5DDB58D224874600019550E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB58B224874600019550E /* LaunchScreen.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A56343B6224997F700251BFA /* HomeBannersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersView.swift; sourceTree = "<group>"; };
+		A56343B9224999F600251BFA /* HomeBannersViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersViewTests.swift; sourceTree = "<group>"; };
 		A5DDB57F2248745F0019550E /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DDB5822248745F0019550E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5DDB589224874600019550E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +60,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A56343B4224997D000251BFA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A5DDB5AF224898FA0019550E /* HomeViewController.swift */,
+				A5DDB5B12248996E0019550E /* HomeViewController.xib */,
+				A56343B6224997F700251BFA /* HomeBannersView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A56343B5224997DE00251BFA /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A5DDB5822248745F0019550E /* AppDelegate.swift */,
+				A5DDB589224874600019550E /* Assets.xcassets */,
+				A5DDB58B224874600019550E /* LaunchScreen.storyboard */,
+				A5DDB58E224874600019550E /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A56343B8224999DF00251BFA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A5DDB5A2224877E30019550E /* HomeViewControllerTests.swift */,
+				A56343B9224999F600251BFA /* HomeBannersViewTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		A5DDB5762248745E0019550E = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +111,8 @@
 		A5DDB5812248745F0019550E /* Lodjinha */ = {
 			isa = PBXGroup;
 			children = (
-				A5DDB5822248745F0019550E /* AppDelegate.swift */,
-				A5DDB589224874600019550E /* Assets.xcassets */,
-				A5DDB58B224874600019550E /* LaunchScreen.storyboard */,
-				A5DDB58E224874600019550E /* Info.plist */,
-				A5DDB5AF224898FA0019550E /* HomeViewController.swift */,
-				A5DDB5B12248996E0019550E /* HomeViewController.xib */,
+				A56343B4224997D000251BFA /* Home */,
+				A56343B5224997DE00251BFA /* SupportingFiles */,
 			);
 			path = Lodjinha;
 			sourceTree = "<group>";
@@ -90,8 +120,8 @@
 		A5DDB596224874600019550E /* LodjinhaTests */ = {
 			isa = PBXGroup;
 			children = (
+				A56343B8224999DF00251BFA /* Home */,
 				A5DDB599224874600019550E /* Info.plist */,
-				A5DDB5A2224877E30019550E /* HomeViewControllerTests.swift */,
 			);
 			path = LodjinhaTests;
 			sourceTree = "<group>";
@@ -198,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56343B7224997F700251BFA /* HomeBannersView.swift in Sources */,
 				A5DDB5832248745F0019550E /* AppDelegate.swift in Sources */,
 				A5DDB5B0224898FA0019550E /* HomeViewController.swift in Sources */,
 			);
@@ -208,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5DDB5A3224877E30019550E /* HomeViewControllerTests.swift in Sources */,
+				A56343BA224999F600251BFA /* HomeBannersViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Lodjinha/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Lodjinha/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -372,7 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Lodjinha/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Lodjinha/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

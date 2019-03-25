@@ -14,7 +14,11 @@ class HomeViewControllerTests: XCTestCase {
     func test_homeViewController_shouldHaveBannersToShow_afterLoadingView() {
         let sut = HomeViewController(homeInfoLoader: RemoteHomeInfoLoader())
         sut.loadViewIfNeeded()
-        XCTAssertTrue(sut.banners.count > 0)
+        
+        XCTAssertNotNil(sut.tableView.tableHeaderView)
+        XCTAssertTrue(sut.tableView.tableHeaderView!.isKind(of: HomeBannersView.self))
+        let banners = sut.tableView.tableHeaderView as! HomeBannersView
+        XCTAssertTrue(banners.bannersCount > 0)
     }
     
     func test_homeViewController_shoulHaveCategoriesToShow_afterLoadingView() {
