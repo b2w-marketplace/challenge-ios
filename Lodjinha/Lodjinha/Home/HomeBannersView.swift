@@ -11,9 +11,97 @@ import UIKit
 class HomeBannersView: UIView {
 
     private(set) var bannersCount: Int = 0
- 
+    private(set) var currentBanner = 0
+    var collectionView: UICollectionView!
+    weak var bannersXIB: HomeBannersViewXIB!
+    
     func updateBanners(banners: [String]) {
         bannersCount = banners.count
+        collectionView.reloadData()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupNib()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupNib()
+    }
+    
+    private func setupNib() {
+        let nib = UINib(nibName: "HomeBannersView", bundle: Bundle(for: HomeBannersView.self))
+        let xib = nib.instantiate(withOwner: nil, options: nil).first as! HomeBannersViewXIB
+        xib.frame = bounds
+        xib.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
+        insertSubview(xib, at: 0)
+        bannersXIB = xib
+        collectionView = bannersXIB.collectionView
+        setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView.collectionViewLayout = layout
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "bannerCell")
+    }
+    let colors: [UIColor] = [.red, .green, .blue]
+}
+
+extension HomeBannersView: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return bannersCount
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerCell", for: indexPath)
+        cell.backgroundColor = colors[indexPath.item]
+        return cell
+    }
+}
+
+extension HomeBannersView: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.bounds.height)
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        print(scrollView.contentOffset)
+        let index = currentIndexForOffset(offset: scrollView.contentOffset, inContentSize: scrollView.contentSize)
+        collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
+    }
+    
+    private func currentIndexForOffset(offset: CGPoint, inContentSize contentSize: CGSize) -> Int {
+        
+        let flow = (collectionView.collectionViewLayout as! UICollectionViewFlowLayout)
+        let cellWidth = (contentSize.width - ((CGFloat(bannersCount) - 1) * flow.minimumLineSpacing)) / CGFloat(bannersCount)
+        let currentCellSpace: CGFloat = cellWidth * CGFloat(currentBanner + 1)
+        let lowerBound = CGFloat(currentBanner) * cellWidth
+        
+        if offset.x < lowerBound  {
+            if offset.x.distance(to: lowerBound) > (currentCellSpace - lowerBound) / 5 {
+                currentBanner = currentBanner == 0 ? 0 : currentBanner - 1
+            }
+            return currentBanner
+        } else if offset.x < ((currentCellSpace - lowerBound) / 5) {
+            return currentBanner
+        } else {
+            if currentBanner == bannersCount - 1 {
+                currentBanner = bannersCount - 1
+            } else {
+                currentBanner += 1
+            }
+            return currentBanner
+        }
+        
     }
     
 }

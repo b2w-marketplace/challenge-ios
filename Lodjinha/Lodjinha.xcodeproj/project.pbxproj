@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A56343B7224997F700251BFA /* HomeBannersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56343B6224997F700251BFA /* HomeBannersView.swift */; };
 		A56343BA224999F600251BFA /* HomeBannersViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56343B9224999F600251BFA /* HomeBannersViewTests.swift */; };
+		A56343BC2249A20E00251BFA /* HomeBannersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56343BB2249A20E00251BFA /* HomeBannersView.xib */; };
+		A56343C02249AF6400251BFA /* HomeBannersViewXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56343BF2249AF6400251BFA /* HomeBannersViewXIB.swift */; };
 		A5DDB5832248745F0019550E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDB5822248745F0019550E /* AppDelegate.swift */; };
 		A5DDB58A224874600019550E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB589224874600019550E /* Assets.xcassets */; };
 		A5DDB58D224874600019550E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB58B224874600019550E /* LaunchScreen.storyboard */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		A56343B6224997F700251BFA /* HomeBannersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersView.swift; sourceTree = "<group>"; };
 		A56343B9224999F600251BFA /* HomeBannersViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersViewTests.swift; sourceTree = "<group>"; };
+		A56343BB2249A20E00251BFA /* HomeBannersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannersView.xib; sourceTree = "<group>"; };
+		A56343BF2249AF6400251BFA /* HomeBannersViewXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersViewXIB.swift; sourceTree = "<group>"; };
 		A5DDB57F2248745F0019550E /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DDB5822248745F0019550E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5DDB589224874600019550E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				A5DDB5AF224898FA0019550E /* HomeViewController.swift */,
 				A5DDB5B12248996E0019550E /* HomeViewController.xib */,
 				A56343B6224997F700251BFA /* HomeBannersView.swift */,
+				A56343BB2249A20E00251BFA /* HomeBannersView.xib */,
+				A56343BF2249AF6400251BFA /* HomeBannersViewXIB.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5DDB58D224874600019550E /* LaunchScreen.storyboard in Resources */,
+				A56343BC2249A20E00251BFA /* HomeBannersView.xib in Resources */,
 				A5DDB58A224874600019550E /* Assets.xcassets in Resources */,
 				A5DDB5B22248996E0019550E /* HomeViewController.xib in Resources */,
 			);
@@ -231,6 +238,7 @@
 				A56343B7224997F700251BFA /* HomeBannersView.swift in Sources */,
 				A5DDB5832248745F0019550E /* AppDelegate.swift in Sources */,
 				A5DDB5B0224898FA0019550E /* HomeViewController.swift in Sources */,
+				A56343C02249AF6400251BFA /* HomeBannersViewXIB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
