@@ -17,6 +17,7 @@
 		A5DDB5A3224877E30019550E /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDB5A2224877E30019550E /* HomeViewControllerTests.swift */; };
 		A5DDB5B0224898FA0019550E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDB5AF224898FA0019550E /* HomeViewController.swift */; };
 		A5DDB5B22248996E0019550E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB5B12248996E0019550E /* HomeViewController.xib */; };
+		A5E32189224B1C1800B95E37 /* HomeBannersViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E32188224B1C1800B95E37 /* HomeBannersViewCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A5DDB5A2224877E30019550E /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		A5DDB5AF224898FA0019550E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A5DDB5B12248996E0019550E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		A5E32188224B1C1800B95E37 /* HomeBannersViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersViewCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +69,9 @@
 		A56343B4224997D000251BFA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A5E32187224B1BCF00B95E37 /* BannersView */,
 				A5DDB5AF224898FA0019550E /* HomeViewController.swift */,
 				A5DDB5B12248996E0019550E /* HomeViewController.xib */,
-				A56343B6224997F700251BFA /* HomeBannersView.swift */,
-				A56343BB2249A20E00251BFA /* HomeBannersView.xib */,
-				A56343BF2249AF6400251BFA /* HomeBannersViewXIB.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -92,6 +92,7 @@
 			children = (
 				A5DDB5A2224877E30019550E /* HomeViewControllerTests.swift */,
 				A56343B9224999F600251BFA /* HomeBannersViewTests.swift */,
+				A5E32188224B1C1800B95E37 /* HomeBannersViewCellTests.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -130,6 +131,16 @@
 				A5DDB599224874600019550E /* Info.plist */,
 			);
 			path = LodjinhaTests;
+			sourceTree = "<group>";
+		};
+		A5E32187224B1BCF00B95E37 /* BannersView */ = {
+			isa = PBXGroup;
+			children = (
+				A56343B6224997F700251BFA /* HomeBannersView.swift */,
+				A56343BB2249A20E00251BFA /* HomeBannersView.xib */,
+				A56343BF2249AF6400251BFA /* HomeBannersViewXIB.swift */,
+			);
+			path = BannersView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E32189224B1C1800B95E37 /* HomeBannersViewCellTests.swift in Sources */,
 				A5DDB5A3224877E30019550E /* HomeViewControllerTests.swift in Sources */,
 				A56343BA224999F600251BFA /* HomeBannersViewTests.swift in Sources */,
 			);
