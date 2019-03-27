@@ -48,6 +48,10 @@ class HomeBannersView: UIView {
         collectionView = bannersXIB.collectionView
         pageControl = bannersXIB.pageControll
         setupCollectionView()
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 1, height: 5)
+        layer.shadowRadius = 5
+        layer.shadowOpacity = 0.25
     }
     
     private func setupCollectionView() {
@@ -58,7 +62,7 @@ class HomeBannersView: UIView {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         collectionView.collectionViewLayout = layout
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "bannerCell")
+        collectionView.register(HomeBannerViewCell.self, forCellWithReuseIdentifier: "bannerCell")
     }
     
     private func setupPageControl() {
@@ -66,7 +70,11 @@ class HomeBannersView: UIView {
         pageControl.numberOfPages = bannersCount
     }
     
-    let colors: [UIColor] = [.red, .green, .blue]
+    let banners: [String] = [
+        "https://images-submarino.b2w.io/spacey/2017/02/06/MainTop_GAMES_FEV17.png",
+        "https://images-submarino.b2w.io/spacey/2017/02/06/DESTAQUE_FULL_CARTAO_CASA_FEV.png",
+        "https://images-submarino.b2w.io/spacey/2017/02/03/sub-home-dest-full-655x328-touch-play.png"
+    ]
 }
 
 extension HomeBannersView: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -76,8 +84,8 @@ extension HomeBannersView: UICollectionViewDataSource, UICollectionViewDelegate 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerCell", for: indexPath)
-        cell.backgroundColor = colors[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerCell", for: indexPath) as! HomeBannerViewCell
+        cell.configure(imageDownloader: BannerImageDownloader(), banner: Banner(imageUrl: banners[indexPath.item]))
         return cell
     }
     

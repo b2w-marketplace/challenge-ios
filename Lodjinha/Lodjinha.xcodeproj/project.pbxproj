@@ -18,6 +18,7 @@
 		A5DDB5B0224898FA0019550E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDB5AF224898FA0019550E /* HomeViewController.swift */; };
 		A5DDB5B22248996E0019550E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB5B12248996E0019550E /* HomeViewController.xib */; };
 		A5E32189224B1C1800B95E37 /* HomeBannersViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E32188224B1C1800B95E37 /* HomeBannersViewCellTests.swift */; };
+		A5E89196224B34150000EC0C /* HomeBannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E89195224B34150000EC0C /* HomeBannerViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		A5DDB5AF224898FA0019550E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A5DDB5B12248996E0019550E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		A5E32188224B1C1800B95E37 /* HomeBannersViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersViewCellTests.swift; sourceTree = "<group>"; };
+		A5E89195224B34150000EC0C /* HomeBannerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				A56343B6224997F700251BFA /* HomeBannersView.swift */,
 				A56343BB2249A20E00251BFA /* HomeBannersView.xib */,
 				A56343BF2249AF6400251BFA /* HomeBannersViewXIB.swift */,
+				A5E89195224B34150000EC0C /* HomeBannerViewCell.swift */,
 			);
 			path = BannersView;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				A5DDB5832248745F0019550E /* AppDelegate.swift in Sources */,
 				A5DDB5B0224898FA0019550E /* HomeViewController.swift in Sources */,
 				A56343C02249AF6400251BFA /* HomeBannersViewXIB.swift in Sources */,
+				A5E89196224B34150000EC0C /* HomeBannerViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
