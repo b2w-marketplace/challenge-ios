@@ -11,7 +11,12 @@ import UIKit
 class HomeBannersView: UIView {
 
     private(set) var bannersCount: Int = 0
-    private(set) var currentBanner = 0
+    var currentBanner = 0 {
+        didSet {
+            collectionView.scrollToItem(at: IndexPath(item: currentBanner, section: 0), at: .centeredHorizontally, animated: true)
+        }
+    }
+    
     var collectionView: UICollectionView!
     weak var bannersXIB: HomeBannersViewXIB!
     
@@ -65,6 +70,7 @@ extension HomeBannersView: UICollectionViewDataSource, UICollectionViewDelegate 
         cell.backgroundColor = colors[indexPath.item]
         return cell
     }
+    
 }
 
 extension HomeBannersView: UICollectionViewDelegateFlowLayout {
@@ -76,7 +82,7 @@ extension HomeBannersView: UICollectionViewDelegateFlowLayout {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         print(scrollView.contentOffset)
         let index = currentIndexForOffset(offset: scrollView.contentOffset, inContentSize: scrollView.contentSize)
-        collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
+        currentBanner = index
     }
     
     private func currentIndexForOffset(offset: CGPoint, inContentSize contentSize: CGSize) -> Int {
@@ -85,21 +91,22 @@ extension HomeBannersView: UICollectionViewDelegateFlowLayout {
         let cellWidth = (contentSize.width - ((CGFloat(bannersCount) - 1) * flow.minimumLineSpacing)) / CGFloat(bannersCount)
         let currentCellSpace: CGFloat = cellWidth * CGFloat(currentBanner + 1)
         let lowerBound = CGFloat(currentBanner) * cellWidth
+        var index = currentBanner
         
         if offset.x < lowerBound  {
-            if offset.x.distance(to: lowerBound) > (currentCellSpace - lowerBound) / 5 {
-                currentBanner = currentBanner == 0 ? 0 : currentBanner - 1
+            if offset.x.distance(to: lowerBound) >= (currentCellSpace - lowerBound) / 5 {
+                index = currentBanner == 0 ? 0 : currentBanner - 1
             }
-            return currentBanner
+            return index
         } else if offset.x < ((currentCellSpace - lowerBound) / 5) {
-            return currentBanner
+            return index
         } else {
-            if currentBanner == bannersCount - 1 {
-                currentBanner = bannersCount - 1
+            if index == bannersCount - 1 {
+                index = bannersCount - 1
             } else {
-                currentBanner += 1
+                index += 1
             }
-            return currentBanner
+            return index
         }
         
     }

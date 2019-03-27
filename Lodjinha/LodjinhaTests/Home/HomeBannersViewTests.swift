@@ -13,13 +13,13 @@ class HomeBannersViewTests: XCTestCase {
 
     var sut: HomeBannersView!
     
-    func test_BannersViewUpdateBannersWithBannersData_UpdateBannersCount() {
+    func test_UpdateBannersWithBannersData_UpdateBannersCount() {
         sut = HomeBannersView(frame: CGRect.zero)
         sut.updateBanners(banners: ["Banner1", "Banner2", "Banner3"])
         XCTAssertTrue(sut.bannersCount > 0)
     }
     
-    func test_BannersViewUpdateBannersWithBannersData_reloadsCollectionView() {
+    func test_UpdateBannersWithBannersData_reloadsCollectionView() {
         sut = HomeBannersView(frame: CGRect.zero)
         sut.updateBanners(banners: ["Banner1", "Banner2", "Banner3"])
         XCTAssertTrue(sut.collectionView.numberOfItems(inSection: 0) == sut.bannersCount)
@@ -32,25 +32,65 @@ class HomeBannersViewTests: XCTestCase {
         XCTAssertEqual(cell.frame.width, sut.collectionView.frame.width)
     }
     
-    func test_BannersViewCollectionView_ShouldScrollHorizontally() {
+    func test_ShouldScrollHorizontally() {
         sut = HomeBannersView(frame: CGRect.zero)
         sut.updateBanners(banners: ["Banner1", "Banner2", "Banner3"])
         XCTAssertTrue(sut.collectionView.collectionViewLayout.isKind(of: UICollectionViewFlowLayout.self))
         XCTAssertEqual((sut.collectionView.collectionViewLayout as! UICollectionViewFlowLayout).scrollDirection, .horizontal)
     }
     
-    func test_BannersViewCollectionView_shouldGoToNextItem_WhenScrollingAtLeastTwentyPercentOfTheCurrentItem() {
-        sut = HomeBannersView(frame: CGRect.zero)
+    func test_shouldGoToNextItem_WhenScrollingAtLeastTwentyPercentOfTheCurrentItem() {
+        sut = HomeBannersView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
         sut.updateBanners(banners: ["Banner1", "Banner2", "Banner3"])
-        let rectScrolled = CGRect(x: sut.collectionView.frame.width / 5, y: 0, width: sut.collectionView.frame.width, height: sut.collectionView.frame.height)
-
-        sut.collectionView.setContentOffset(rectScrolled.origin, animated: true)
+        sut.layoutIfNeeded()
+    
+        let cellWidth = sut.collectionView.frame.width
+        let lowerBound = cellWidth * CGFloat(sut.currentBanner)
+        
+        let rectScrolled = CGRect(x: lowerBound + (cellWidth / 5), y: 0, width: sut.collectionView.frame.width, height: sut.collectionView.frame.height)
+        let currentBanner = sut.currentBanner
+        
+        sut.collectionView.setContentOffset(rectScrolled.origin, animated: false)
         let dele = sut.collectionView.delegate
         dele!.scrollViewDidEndDragging!(sut.collectionView, willDecelerate: false)
         
-        let cells = sut.collectionView.visibleCells
-        let cell2 = sut.collectionView(sut.collectionView, cellForItemAt: IndexPath(item: 1, section: 0))
-//        XCTAssertTrue(cells.count == 1)
-//        XCTAssertTrue(cells.first == cell2)
+        XCTAssertTrue(sut.currentBanner == currentBanner + 1)
+    }
+    
+    func test_shouldStayInCurrentItem_WhenScrollingAtLeastTwentyPercentOfTheCurrentItem_andTheCurrentItemIsTheLastItem() {
+        sut = HomeBannersView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
+        sut.updateBanners(banners: ["Banner1", "Banner2", "Banner3"])
+        sut.layoutIfNeeded()
+        sut.currentBanner = sut.bannersCount - 1
+        let lastBanner = sut.currentBanner
+
+        let cellWidth = sut.collectionView.frame.width
+        let lowerBound = cellWidth * CGFloat(sut.currentBanner)
+        let rectScrolled = CGRect(x: lowerBound + (cellWidth  / 5), y: 0, width: sut.collectionView.frame.width, height: sut.collectionView.frame.height)
+        sut.collectionView.setContentOffset(rectScrolled.origin, animated: false)
+        let dele = sut.collectionView.delegate
+        dele!.scrollViewDidEndDragging!(sut.collectionView, willDecelerate: false)
+        
+        XCTAssertTrue(sut.currentBanner == lastBanner)
+    }
+    
+    func test_shouldGoToPreviousItem_WhenScrollingAtLeastTwentyPercentBackIntTheCurrentItem() {
+        sut = HomeBannersView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
+        sut.updateBanners(banners: ["Banner1", "Banner2", "Banner3"])
+        sut.layoutIfNeeded()
+        
+        sut.currentBanner = 1
+        let lastBanner = sut.currentBanner
+        
+        let cellWidth = sut.collectionView.frame.width
+        let lowerBound = cellWidth * CGFloat(sut.currentBanner)
+        
+        let rectScrolled = CGRect(x: lowerBound - (cellWidth / 5), y: 0, width: sut.collectionView.frame.width, height: sut.collectionView.frame.height)
+        
+        sut.collectionView.setContentOffset(rectScrolled.origin, animated: false)
+        let dele = sut.collectionView.delegate
+        dele!.scrollViewDidEndDragging!(sut.collectionView, willDecelerate: false)
+        
+        XCTAssertTrue(sut.currentBanner == lastBanner - 1)
     }
 }
