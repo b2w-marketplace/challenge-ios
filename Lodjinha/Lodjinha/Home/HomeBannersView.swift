@@ -14,15 +14,18 @@ class HomeBannersView: UIView {
     var currentBanner = 0 {
         didSet {
             collectionView.scrollToItem(at: IndexPath(item: currentBanner, section: 0), at: .centeredHorizontally, animated: true)
+            pageControl.currentPage = currentBanner
         }
     }
     
     var collectionView: UICollectionView!
+    var pageControl: UIPageControl!
     weak var bannersXIB: HomeBannersViewXIB!
     
     func updateBanners(banners: [String]) {
         bannersCount = banners.count
         collectionView.reloadData()
+        setupPageControl()
     }
     
     override init(frame: CGRect) {
@@ -43,6 +46,7 @@ class HomeBannersView: UIView {
         insertSubview(xib, at: 0)
         bannersXIB = xib
         collectionView = bannersXIB.collectionView
+        pageControl = bannersXIB.pageControll
         setupCollectionView()
     }
     
@@ -56,6 +60,12 @@ class HomeBannersView: UIView {
         collectionView.collectionViewLayout = layout
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "bannerCell")
     }
+    
+    private func setupPageControl() {
+        pageControl.currentPage = currentBanner
+        pageControl.numberOfPages = bannersCount
+    }
+    
     let colors: [UIColor] = [.red, .green, .blue]
 }
 
@@ -80,7 +90,6 @@ extension HomeBannersView: UICollectionViewDelegateFlowLayout {
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        print(scrollView.contentOffset)
         let index = currentIndexForOffset(offset: scrollView.contentOffset, inContentSize: scrollView.contentSize)
         currentBanner = index
     }
@@ -98,7 +107,7 @@ extension HomeBannersView: UICollectionViewDelegateFlowLayout {
                 index = currentBanner == 0 ? 0 : currentBanner - 1
             }
             return index
-        } else if offset.x < ((currentCellSpace - lowerBound) / 5) {
+        } else if (offset.x - lowerBound) < ((currentCellSpace - lowerBound) / 5) {
             return index
         } else {
             if index == bannersCount - 1 {
@@ -108,7 +117,11 @@ extension HomeBannersView: UICollectionViewDelegateFlowLayout {
             }
             return index
         }
-        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = currentIndexForOffset(offset: scrollView.contentOffset, inContentSize: scrollView.contentSize)
+        currentBanner = index
     }
     
 }

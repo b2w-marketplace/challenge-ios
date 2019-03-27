@@ -11,5 +11,5 @@ import UIKit
 class HomeBannersViewXIB: UIView {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var pageControll: UIPageControl!
 }

@@ -25,17 +25,26 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Eff-qX-WBb">
+                    <rect key="frame" x="168" y="176" width="39" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Hdv-hQ-azz"/>
+                    </constraints>
+                </pageControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="OJX-cc-t2a" secondAttribute="bottom" id="1Uv-zy-gDP"/>
+                <constraint firstAttribute="bottom" secondItem="Eff-qX-WBb" secondAttribute="bottom" constant="4" id="4vJ-oD-WFJ"/>
                 <constraint firstItem="OJX-cc-t2a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6q2-NZ-bef"/>
                 <constraint firstAttribute="trailing" secondItem="OJX-cc-t2a" secondAttribute="trailing" id="90N-J1-BEH"/>
+                <constraint firstItem="Eff-qX-WBb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PwE-uF-8Th"/>
                 <constraint firstItem="OJX-cc-t2a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lft-vp-cvs"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="collectionView" destination="OJX-cc-t2a" id="ZTu-nO-F3s"/>
+                <outlet property="pageControll" destination="Eff-qX-WBb" id="ZCe-U2-R9J"/>
             </connections>
             <point key="canvasLocation" x="53.600000000000001" y="48.575712143928037"/>
         </view>

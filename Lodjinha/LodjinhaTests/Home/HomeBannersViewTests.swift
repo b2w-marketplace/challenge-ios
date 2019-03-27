@@ -93,4 +93,32 @@ class HomeBannersViewTests: XCTestCase {
         
         XCTAssertTrue(sut.currentBanner == lastBanner - 1)
     }
+    
+    func test_shouldUpdatePageControl_whenCurrentBannerChanges() {
+        sut = HomeBannersView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
+        sut.updateBanners(banners: ["Banner1", "Banner2", "Banner3"])
+        sut.layoutIfNeeded()
+        
+        sut.currentBanner = 1
+        
+        XCTAssertTrue(sut.pageControl.currentPage == sut.currentBanner)
+    }
+
+    func test_shouldUpdatePageControl_whenScrollEndsDecelerating() {
+        sut = HomeBannersView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
+        sut.updateBanners(banners: ["Banner1", "Banner2", "Banner3"])
+        sut.layoutIfNeeded()
+        
+        let cellWidth = sut.collectionView.frame.width
+        let lowerBound = cellWidth * CGFloat(sut.currentBanner)
+        
+        let rectScrolled = CGRect(x: lowerBound + (cellWidth * 2), y: 0, width: sut.collectionView.frame.width, height: sut.collectionView.frame.height)
+        
+        sut.collectionView.setContentOffset(rectScrolled.origin, animated: false)
+        let dele = sut.collectionView.delegate
+        dele!.scrollViewDidEndDecelerating!(sut.collectionView)
+        
+        XCTAssertTrue(sut.pageControl.currentPage == sut.currentBanner)
+    }
+    
 }
