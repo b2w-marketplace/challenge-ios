@@ -19,6 +19,8 @@
 		A5DDB5B22248996E0019550E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DDB5B12248996E0019550E /* HomeViewController.xib */; };
 		A5E32189224B1C1800B95E37 /* HomeBannersViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E32188224B1C1800B95E37 /* HomeBannersViewCellTests.swift */; };
 		A5E89196224B34150000EC0C /* HomeBannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E89195224B34150000EC0C /* HomeBannerViewCell.swift */; };
+		A5E89199224B3BDC0000EC0C /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E89198224B3BDC0000EC0C /* ImageDownloader.swift */; };
+		A5E8919D224B3C690000EC0C /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8919C224B3C690000EC0C /* Banner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		A5DDB5B12248996E0019550E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		A5E32188224B1C1800B95E37 /* HomeBannersViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersViewCellTests.swift; sourceTree = "<group>"; };
 		A5E89195224B34150000EC0C /* HomeBannerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerViewCell.swift; sourceTree = "<group>"; };
+		A5E89198224B3BDC0000EC0C /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		A5E8919C224B3C690000EC0C /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 		A5DDB5812248745F0019550E /* Lodjinha */ = {
 			isa = PBXGroup;
 			children = (
+				A5E8919A224B3C490000EC0C /* UseCases */,
+				A5E89197224B3AB30000EC0C /* ApiGateway */,
 				A56343B4224997D000251BFA /* Home */,
 				A56343B5224997DE00251BFA /* SupportingFiles */,
 			);
@@ -144,6 +150,30 @@
 				A5E89195224B34150000EC0C /* HomeBannerViewCell.swift */,
 			);
 			path = BannersView;
+			sourceTree = "<group>";
+		};
+		A5E89197224B3AB30000EC0C /* ApiGateway */ = {
+			isa = PBXGroup;
+			children = (
+				A5E89198224B3BDC0000EC0C /* ImageDownloader.swift */,
+			);
+			path = ApiGateway;
+			sourceTree = "<group>";
+		};
+		A5E8919A224B3C490000EC0C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8919B224B3C570000EC0C /* Entities */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		A5E8919B224B3C570000EC0C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8919C224B3C690000EC0C /* Banner.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +283,8 @@
 				A5DDB5832248745F0019550E /* AppDelegate.swift in Sources */,
 				A5DDB5B0224898FA0019550E /* HomeViewController.swift in Sources */,
 				A56343C02249AF6400251BFA /* HomeBannersViewXIB.swift in Sources */,
+				A5E8919D224B3C690000EC0C /* Banner.swift in Sources */,
+				A5E89199224B3BDC0000EC0C /* ImageDownloader.swift in Sources */,
 				A5E89196224B34150000EC0C /* HomeBannerViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
