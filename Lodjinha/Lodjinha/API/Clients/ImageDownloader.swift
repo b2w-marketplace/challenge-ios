@@ -8,17 +8,30 @@
 
 import UIKit
 
+let imageCache = NSCache<AnyObject, AnyObject>()
+
 protocol ImageDownloader {
     func downloadImage(from url: String, completion: @escaping (UIImage?,Error?) -> Void)
 }
 
-class BannerImageDownloader: ImageDownloader {
+class LodjinhaImageDownloader: ImageDownloader {
+    
     func downloadImage(from url: String, completion: @escaping (UIImage?, Error?) -> Void) {
-        guard let url = URL(string: url) else {
+        guard let imageUrl = URL(string: url) else {
+            let error = NSError(domain: "Lodjinha.ImageDownloader", code: 200, userInfo: [NSLocalizedDescriptionKey: "could not transform urlString:\(url) into URL type"])
+            completion(nil, error)
             return
         }
         
-        var request = URLRequest(url: url)
+        let stringObject = NSString(string: url)
+
+        // check cache for image first
+        if let cacheImage = imageCache.object(forKey: stringObject) as? UIImage {
+            completion(cacheImage, nil)
+            return
+        }
+        
+        var request = URLRequest(url: imageUrl)
         request.httpMethod = "GET"
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
@@ -32,7 +45,14 @@ class BannerImageDownloader: ImageDownloader {
                 return
             }
             
-            completion(UIImage(data: imageData), nil)
+            guard let image = UIImage(data: imageData) else {
+                let error = NSError(domain: "Lodjinha.ImageDownloader", code: 210, userInfo: [NSLocalizedDescriptionKey: "could generate image from imageData"])
+                completion(nil, error)
+                return
+            }
+            
+            completion(image, nil)
+            imageCache.setObject(image, forKey: stringObject)
             
             }.resume()
     }

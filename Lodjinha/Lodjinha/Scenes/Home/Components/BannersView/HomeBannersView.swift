@@ -80,7 +80,7 @@ extension HomeBannersView: UICollectionViewDataSource, UICollectionViewDelegate 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerCell", for: indexPath) as! HomeBannerViewCell
-        cell.configure(imageDownloader: BannerImageDownloader(), banner: banners[indexPath.item])
+        cell.configure(banner: banners[indexPath.item])
         return cell
     }
     

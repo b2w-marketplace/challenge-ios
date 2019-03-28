@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(CategoriesCarouselTableViewCell.self, forCellReuseIdentifier: "categoriesCell")
         configurator.configure(viewController: self)
         
         viewModel.loadBanners()
@@ -59,7 +60,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let homeSection = viewModel.homeSections[section]
         switch homeSection {
         case .categories:
-            return viewModel.categories.count
+            return 1
         case .topSellingProducts:
             return viewModel.topSellingProducts.count
         }
@@ -69,8 +70,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let homeSection = viewModel.homeSections[indexPath.section]
         switch homeSection {
         case .categories:
-            let cell = UITableViewCell()
-            cell.textLabel?.text = viewModel.categories[indexPath.row].description
+            let cell = tableView.dequeueReusableCell(withIdentifier: "categoriesCell", for: indexPath) as! CategoriesCarouselTableViewCell
+            cell.configure(with: viewModel.categories)
             return cell
         case .topSellingProducts:
             let cell = UITableViewCell()
@@ -87,6 +88,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         case .topSellingProducts:
             return "Mais Vendidos"
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let homeSection = viewModel.homeSections[indexPath.section]
+        switch homeSection {
+        case .categories:
+            return 100
+        default:
+            return UITableView.automaticDimension
+        }
+        
     }
     
 }
