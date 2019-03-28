@@ -1,5 +1,5 @@
 //
-//  Banner.swift
+//  ApiRequest.swift
 //  Lodjinha
 //
 //  Created by Douglas da Silva Santos on 27/03/19.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Banner {
-    let imageUrl: String
+protocol ApiRequest {
+    var urlRequest: URLRequest { get }
 }

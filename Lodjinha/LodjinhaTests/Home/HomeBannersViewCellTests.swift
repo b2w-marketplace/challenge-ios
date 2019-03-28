@@ -16,7 +16,7 @@ class HomeBannersViewCellTests: XCTestCase {
     func test_configureCellWithBanner_setsImageView() {
         sut = HomeBannerViewCell()
         let stub = ImageDownloaderStub()
-        sut.configure(imageDownloader: stub, banner: Banner(imageUrl: ""))
+        sut.configure(imageDownloader: stub, banner: Banner(id: 1, imageUrl: "", linkUrl: ""))
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             XCTAssertNotNil(self.sut.imageView.image)
         }

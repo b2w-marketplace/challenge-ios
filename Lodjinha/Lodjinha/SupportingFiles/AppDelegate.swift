@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
         window = UIWindow(frame: UIScreen.main.bounds)
-        let home = HomeViewController(homeInfoLoader: RemoteHomeInfoLoader())
+        let configurator = HomeConfigurator()
+        let home = HomeViewController()
+        home.configurator = configurator
         window?.rootViewController = home
         window?.makeKeyAndVisible()
         
