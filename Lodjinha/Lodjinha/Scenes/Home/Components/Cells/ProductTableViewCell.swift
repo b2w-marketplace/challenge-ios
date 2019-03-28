@@ -1,5 +1,5 @@
 //
-//  TopSellingProductTableViewCell.swift
+//  ProductTableViewCell.swift
 //  Lodjinha
 //
 //  Created by Douglas da Silva Santos on 28/03/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TopSellingProductTableViewCell: UITableViewCell {
+class ProductTableViewCell: UITableViewCell {
 
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!

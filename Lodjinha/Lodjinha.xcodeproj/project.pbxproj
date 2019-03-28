@@ -31,8 +31,8 @@
 		A56DDF67224C819300C340BF /* CategoriesCarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DDF66224C819300C340BF /* CategoriesCarouselTableViewCell.swift */; };
 		A56DDF69224C81E700C340BF /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DDF68224C81E700C340BF /* CategoryCollectionViewCell.swift */; };
 		A56DDF6D224C891A00C340BF /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DDF6C224C891A00C340BF /* UIImageView+Extensions.swift */; };
-		A56DDF70224C8F0A00C340BF /* TopSellingProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DDF6E224C8F0A00C340BF /* TopSellingProductTableViewCell.swift */; };
-		A56DDF71224C8F0A00C340BF /* TopSellingProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56DDF6F224C8F0A00C340BF /* TopSellingProductTableViewCell.xib */; };
+		A56DDF70224C8F0A00C340BF /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DDF6E224C8F0A00C340BF /* ProductTableViewCell.swift */; };
+		A56DDF71224C8F0A00C340BF /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56DDF6F224C8F0A00C340BF /* ProductTableViewCell.xib */; };
 		A58D348F224CFBAE00D79DA3 /* LodjinhaTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D348E224CFBAE00D79DA3 /* LodjinhaTabBarViewController.swift */; };
 		A5BD5D54224D0B22004DC834 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD5D52224D0B22004DC834 /* AboutViewController.swift */; };
 		A5BD5D55224D0B22004DC834 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BD5D53224D0B22004DC834 /* AboutViewController.xib */; };
@@ -87,8 +87,8 @@
 		A56DDF66224C819300C340BF /* CategoriesCarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCarouselTableViewCell.swift; sourceTree = "<group>"; };
 		A56DDF68224C81E700C340BF /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A56DDF6C224C891A00C340BF /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
-		A56DDF6E224C8F0A00C340BF /* TopSellingProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSellingProductTableViewCell.swift; sourceTree = "<group>"; };
-		A56DDF6F224C8F0A00C340BF /* TopSellingProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopSellingProductTableViewCell.xib; sourceTree = "<group>"; };
+		A56DDF6E224C8F0A00C340BF /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		A56DDF6F224C8F0A00C340BF /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		A58D348E224CFBAE00D79DA3 /* LodjinhaTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaTabBarViewController.swift; sourceTree = "<group>"; };
 		A5BD5D52224D0B22004DC834 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A5BD5D53224D0B22004DC834 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -268,8 +268,8 @@
 		A5BD5D56224D2068004DC834 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A56DDF6E224C8F0A00C340BF /* TopSellingProductTableViewCell.swift */,
-				A56DDF6F224C8F0A00C340BF /* TopSellingProductTableViewCell.xib */,
+				A56DDF6E224C8F0A00C340BF /* ProductTableViewCell.swift */,
+				A56DDF6F224C8F0A00C340BF /* ProductTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -460,7 +460,7 @@
 				A5BD5D61224D265F004DC834 /* Pacifico-Regular.ttf in Resources */,
 				A5BD5D5B224D2145004DC834 /* HomeTableHeaderView.xib in Resources */,
 				A5DDB58D224874600019550E /* LaunchScreen.storyboard in Resources */,
-				A56DDF71224C8F0A00C340BF /* TopSellingProductTableViewCell.xib in Resources */,
+				A56DDF71224C8F0A00C340BF /* ProductTableViewCell.xib in Resources */,
 				A56343BC2249A20E00251BFA /* HomeBannersView.xib in Resources */,
 				A5DDB58A224874600019550E /* Assets.xcassets in Resources */,
 				A5BD5D55224D0B22004DC834 /* AboutViewController.xib in Resources */,
@@ -505,7 +505,7 @@
 				A56DDF62224C74AC00C340BF /* TopSellingProductsRequest.swift in Sources */,
 				A56DDF5E224C6FA200C340BF /* CategoriesApiRequest.swift in Sources */,
 				A5E8919D224B3C690000EC0C /* Banner.swift in Sources */,
-				A56DDF70224C8F0A00C340BF /* TopSellingProductTableViewCell.swift in Sources */,
+				A56DDF70224C8F0A00C340BF /* ProductTableViewCell.swift in Sources */,
 				A5E89199224B3BDC0000EC0C /* ImageDownloader.swift in Sources */,
 				A5E89196224B34150000EC0C /* HomeBannerViewCell.swift in Sources */,
 				A56DDF60224C6FD900C340BF /* ApiCategoriesResponse.swift in Sources */,
@@ -679,7 +679,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.douglas.santos.Lodjinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -697,7 +697,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.douglas.santos.Lodjinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

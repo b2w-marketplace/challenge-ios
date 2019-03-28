@@ -22,22 +22,29 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(CategoriesCarouselTableViewCell.self, forCellReuseIdentifier: "categoriesCell")
-        tableView.register(UINib(nibName: "TopSellingProductTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "TopSellingProductCell")
-        tableView.register(UINib(nibName: "HomeTableHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HomeTableHeaderView")
-        tableView.estimatedRowHeight = 100
-        tableView.separatorStyle = .none
-        let titleV = UILabel(frame: CGRect(x: view.frame.width / 4, y: 0, width: view.frame.width / 2, height: 44))
-        titleV.text = "Title View"
-        titleV.backgroundColor = UIColor.lightGray
-        self.navigationItem.titleView = titleV
         
         configurator.configure(viewController: self)
+        configTableView()
+        
         viewModel.loadBanners()
         viewModel.loadCategories()
         viewModel.loadTopSellingProducts()
+    }
+    
+    private func configTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CategoriesCarouselTableViewCell.self, forCellReuseIdentifier: "CategoriesCarouselTableViewCell")
+        tableView.register(UINib(nibName: "ProductTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "ProductTableViewCell")
+        tableView.register(UINib(nibName: "HomeTableHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HomeTableHeaderView")
+        tableView.estimatedRowHeight = 100
+        tableView.separatorStyle = .none
+        
+        let img = UIImage(named: "logoNavbar")
+        let titleV = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width / 2, height: 28))
+        titleV.image = img
+        titleV.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = titleV
     }
     
 }
@@ -49,11 +56,20 @@ extension HomeViewController: HomeServicesDelegate {
     }
     
     func didLoadCategories() {
-        tableView.reloadSections(IndexSet(0..<1), with: UITableView.RowAnimation.fade)
+//        tableView.reloadData()
+        tableView.beginUpdates()
+        tableView.deleteSections(IndexSet(0..<1), with: UITableView.RowAnimation.fade)
+        tableView.insertSections(IndexSet(0..<1), with: UITableView.RowAnimation.fade)
+        tableView.endUpdates()
+        
     }
     
     func didLoadTopSellingProducts() {
-        tableView.reloadSections(IndexSet(1..<2), with: UITableView.RowAnimation.fade)
+//        tableView.reloadData()
+        tableView.beginUpdates()
+        tableView.deleteSections(IndexSet(1..<2), with: UITableView.RowAnimation.fade)
+        tableView.insertSections(IndexSet(1..<2), with: UITableView.RowAnimation.fade)
+        tableView.endUpdates()
     }
     
 }
@@ -78,11 +94,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let homeSection = viewModel.homeSections[indexPath.section]
         switch homeSection {
         case .categories:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "categoriesCell", for: indexPath) as! CategoriesCarouselTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCarouselTableViewCell", for: indexPath) as! CategoriesCarouselTableViewCell
             cell.configure(with: viewModel.categories)
             return cell
         case .topSellingProducts:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TopSellingProductCell", for: indexPath) as! TopSellingProductTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
             cell.configure(withProduct: viewModel.topSellingProducts[indexPath.row], isLastIndex: indexPath.row == viewModel.topSellingProducts.count - 1)
             return cell
         }

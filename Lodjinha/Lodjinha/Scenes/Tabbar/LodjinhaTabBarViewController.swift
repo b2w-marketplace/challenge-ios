@@ -19,13 +19,20 @@ class LodjinhaTabBarViewController: UITabBarController {
         let homeVC = HomeViewController()
         homeVC.configurator = configurator
         let home = UINavigationController(rootViewController: homeVC)
-        home.navigationBar.tintColor = UIColor(red: 99/255, green: 66/255, blue: 140/255, alpha: 1)
+//        home.navigationBar.tintColor = UIColor(red: 99/255, green: 66/255, blue: 140/255, alpha: 1)
+        home.navigationBar.tintColor = UIColor.white
         home.navigationBar.barTintColor = UIColor(red: 99/255, green: 66/255, blue: 140/255, alpha: 1)
         home.navigationBar.isTranslucent = false
         home.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "homeDeselected")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "homeActive")?.withRenderingMode(.alwaysOriginal))
         
-        let about = AboutViewController()
-        about.tabBarItem = UITabBarItem(title: "Sobre", image: UIImage(named: "tagDeselected")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tagSelected")?.withRenderingMode(.alwaysOriginal))
+        let aboutVC = AboutViewController()
+        let about = UINavigationController(rootViewController: aboutVC)
+        about.navigationBar.tintColor = UIColor.white
+        about.navigationBar.barTintColor = UIColor(red: 99/255, green: 66/255, blue: 140/255, alpha: 1)
+        about.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white];
+        
+        about.navigationBar.isTranslucent = false
+        aboutVC.tabBarItem = UITabBarItem(title: "Sobre", image: UIImage(named: "tagDeselected")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tagSelected")?.withRenderingMode(.alwaysOriginal))
         
         return [home, about]
     }()
