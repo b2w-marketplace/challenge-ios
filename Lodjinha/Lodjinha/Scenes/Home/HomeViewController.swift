@@ -26,9 +26,15 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(CategoriesCarouselTableViewCell.self, forCellReuseIdentifier: "categoriesCell")
         tableView.register(UINib(nibName: "TopSellingProductTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "TopSellingProductCell")
+        tableView.register(UINib(nibName: "HomeTableHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HomeTableHeaderView")
         tableView.estimatedRowHeight = 100
-        configurator.configure(viewController: self)
+        tableView.separatorStyle = .none
+        let titleV = UILabel(frame: CGRect(x: view.frame.width / 4, y: 0, width: view.frame.width / 2, height: 44))
+        titleV.text = "Title View"
+        titleV.backgroundColor = UIColor.lightGray
+        self.navigationItem.titleView = titleV
         
+        configurator.configure(viewController: self)
         viewModel.loadBanners()
         viewModel.loadCategories()
         viewModel.loadTopSellingProducts()
@@ -77,20 +83,27 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case .topSellingProducts:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TopSellingProductCell", for: indexPath) as! TopSellingProductTableViewCell
-            cell.tintColor = UIColor.purple
-            cell.configure(withProduct: viewModel.topSellingProducts[indexPath.row])
+            cell.configure(withProduct: viewModel.topSellingProducts[indexPath.row], isLastIndex: indexPath.row == viewModel.topSellingProducts.count - 1)
             return cell
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let homeSection = viewModel.homeSections[section]
         switch homeSection {
         case .categories:
-            return "Categorias"
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeTableHeaderView") as! HomeTableHeaderView
+            header.headerLabel.text = "Categorias"
+            return header
         case .topSellingProducts:
-            return "Mais Vendidos"
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeTableHeaderView") as! HomeTableHeaderView
+            header.headerLabel.text = "Mais Vendidos"
+            return header
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

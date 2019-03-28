@@ -15,11 +15,13 @@ class TopSellingProductTableViewCell: UITableViewCell {
     @IBOutlet weak var productPriceBefore: UILabel!
     @IBOutlet weak var productPriceNow: UILabel!
     
+    @IBOutlet weak var separatorView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configure(withProduct product: Product) {
+    func configure(withProduct product: Product, isLastIndex: Bool) {
         let numberFormatter = NumberFormatter()
         numberFormatter.maximumFractionDigits = 2
         numberFormatter.currencyDecimalSeparator = ","
@@ -27,6 +29,7 @@ class TopSellingProductTableViewCell: UITableViewCell {
         productName.text = product.name
         productPriceBefore.text = "De \(numberFormatter.string(from: NSNumber(value: product.priceBefore))!)"
         productPriceNow.text = "Por \(numberFormatter.string(from: NSNumber(value: product.priceNow))!)"
+        separatorView.isHidden = isLastIndex
     }
     
 }

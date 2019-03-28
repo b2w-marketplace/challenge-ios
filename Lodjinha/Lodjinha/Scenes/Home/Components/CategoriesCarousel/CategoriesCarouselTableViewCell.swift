@@ -32,6 +32,20 @@ class CategoriesCarouselTableViewCell: UITableViewCell {
         return collectionView
     }()
     
+    var topSeparator: UIView = {
+        let separator = UIView()
+        separator.translatesAutoresizingMaskIntoConstraints = false
+        separator.backgroundColor = UIColor.lightGray
+        return separator
+    }()
+    
+    var bottomSeparator: UIView = {
+        let separator = UIView()
+        separator.translatesAutoresizingMaskIntoConstraints = false
+        separator.backgroundColor = UIColor.lightGray
+        return separator
+    }()
+    
     var categories: [ProductCategory] = []
     
     func configure(with categories: [ProductCategory]) {
@@ -40,19 +54,32 @@ class CategoriesCarouselTableViewCell: UITableViewCell {
         shortcutsCollectionView.reloadData()
     }
     
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        addSubview(shortcutsCollectionView)
+        addSubview(topSeparator)
+        addSubview(bottomSeparator)
+        shortcutsCollectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "categoryCell")
+        setupLayout()
+    }
+    
     func setupLayout() {
         shortcutsCollectionView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: cellMarginSpace).isActive = true
         shortcutsCollectionView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -cellMarginSpace).isActive = true
         shortcutsCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: cellMarginSpace).isActive = true
         shortcutsCollectionView.topAnchor.constraint(equalTo: self.topAnchor, constant: -cellMarginSpace).isActive = true
-    }
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        addSubview(shortcutsCollectionView)
-        shortcutsCollectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "categoryCell")
-        setupLayout()
+        topSeparator.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        topSeparator.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        topSeparator.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        topSeparator.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        
+        bottomSeparator.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        bottomSeparator.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        bottomSeparator.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        bottomSeparator.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
