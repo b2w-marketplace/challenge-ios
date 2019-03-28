@@ -10,15 +10,23 @@ import UIKit
 
 class TopSellingProductTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productPriceBefore: UILabel!
+    @IBOutlet weak var productPriceNow: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configure(withProduct product: Product) {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.maximumFractionDigits = 2
+        numberFormatter.currencyDecimalSeparator = ","
+        productImage.setImage(fromUrl: product.imageUrl, withIndicator: nil)
+        productName.text = product.name
+        productPriceBefore.text = "De \(numberFormatter.string(from: NSNumber(value: product.priceBefore))!)"
+        productPriceNow.text = "Por \(numberFormatter.string(from: NSNumber(value: product.priceNow))!)"
     }
     
 }

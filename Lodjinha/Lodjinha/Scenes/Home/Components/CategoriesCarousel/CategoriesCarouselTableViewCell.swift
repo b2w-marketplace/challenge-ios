@@ -58,25 +58,6 @@ class CategoriesCarouselTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) not implement")
     }
-    
-//    fileprivate func calculateCellWith() -> CGFloat {
-//
-//        let insetsDiff = cellHorizontalInsetSpace / 3
-//        let marginDiff = categories.count.toCGFloat * cellMarginSpace
-//        let cellCount =  categories.count.toCGFloat
-//        let frameWidth = shortcutsCollectionView.frame.width
-//        let width = Int((frameWidth - insetsDiff) / cellCount)
-//        let finalWidth = width.toCGFloat -  marginDiff
-//        return finalWidth
-//    }
-    
-//    fileprivate func cellsFitIntFrame() -> Bool {
-//        if calculateCellWith() >= defaultCellWidth {
-//            return true
-//        }
-//        return false
-//    }
-    
 }
 
 

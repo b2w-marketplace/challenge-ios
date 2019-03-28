@@ -25,6 +25,8 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CategoriesCarouselTableViewCell.self, forCellReuseIdentifier: "categoriesCell")
+        tableView.register(UINib(nibName: "TopSellingProductTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "TopSellingProductCell")
+        tableView.estimatedRowHeight = 100
         configurator.configure(viewController: self)
         
         viewModel.loadBanners()
@@ -74,8 +76,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             cell.configure(with: viewModel.categories)
             return cell
         case .topSellingProducts:
-            let cell = UITableViewCell()
-            cell.textLabel?.text = viewModel.topSellingProducts[indexPath.row].name
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TopSellingProductCell", for: indexPath) as! TopSellingProductTableViewCell
+            cell.tintColor = UIColor.purple
+            cell.configure(withProduct: viewModel.topSellingProducts[indexPath.row])
             return cell
         }
     }
@@ -96,7 +99,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         case .categories:
             return 100
         default:
-            return UITableView.automaticDimension
+            return 100
         }
         
     }
