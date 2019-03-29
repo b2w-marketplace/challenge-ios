@@ -7,3 +7,26 @@
 //
 
 import Foundation
+
+protocol CategoryProductsListConfiguratorProtocol {
+    func configure(viewController: CategoryProductsListViewController)
+}
+
+class CategoryProductsListConfigurator: CategoryProductsListConfiguratorProtocol {
+    
+    let category: ProductCategory
+    
+    init(category: ProductCategory) {
+        self.category = category
+    }
+    func configure(viewController: CategoryProductsListViewController) {
+        viewController.title = category.description
+        
+        let categoryProductsServiceGateway = CategoryProductsService(api: ApiServiceClient(urlSessionConfiguration: URLSessionConfiguration.default, completionHandlerQueue: OperationQueue.main))
+        
+        let viewModel = CategoryProductsListViewModel(service: categoryProductsServiceGateway, category: category)
+        viewModel.categoryProductsListServicesDelegate = viewController
+        viewController.viewModel = viewModel
+    }
+    
+}

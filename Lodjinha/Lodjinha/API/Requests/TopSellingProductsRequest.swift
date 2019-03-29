@@ -10,7 +10,7 @@ import Foundation
 
 struct TopSellingProductsRequest: ApiRequest {
     var urlRequest: URLRequest {
-        let url = URL(string: "https://alodjinha.herokuapp.com/produto/maisvendidos")!
+        let url = URL(string: "\(baseUrl)/produto/maisvendidos")!
         let request = URLRequest(url: url)
         return request
     }

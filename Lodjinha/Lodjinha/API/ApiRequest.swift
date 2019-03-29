@@ -9,5 +9,14 @@
 import Foundation
 
 protocol ApiRequest {
+    var baseUrl: String { get }
     var urlRequest: URLRequest { get }
+}
+
+extension ApiRequest {
+    
+    var baseUrl: String {
+        return "https://alodjinha.herokuapp.com"
+    }
+    
 }

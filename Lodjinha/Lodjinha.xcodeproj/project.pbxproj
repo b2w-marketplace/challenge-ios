@@ -38,6 +38,9 @@
 		A5ABB71E224DABFA00132E2F /* CategoryProductsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5ABB71C224DABFA00132E2F /* CategoryProductsListViewController.xib */; };
 		A5ABB720224DAC0F00132E2F /* CategoryProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB71F224DAC0F00132E2F /* CategoryProductsListViewModel.swift */; };
 		A5ABB722224DAC1B00132E2F /* CategoryProductsListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB721224DAC1B00132E2F /* CategoryProductsListConfigurator.swift */; };
+		A5ABB724224DC97900132E2F /* CategoryProductsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB723224DC97900132E2F /* CategoryProductsGateway.swift */; };
+		A5ABB726224DCA3600132E2F /* CategoryProductsApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB725224DCA3600132E2F /* CategoryProductsApiRequest.swift */; };
+		A5ABB728224DD17100132E2F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB727224DD17100132E2F /* HomeRouter.swift */; };
 		A5BD5D54224D0B22004DC834 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD5D52224D0B22004DC834 /* AboutViewController.swift */; };
 		A5BD5D55224D0B22004DC834 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BD5D53224D0B22004DC834 /* AboutViewController.xib */; };
 		A5BD5D59224D20E2004DC834 /* HomeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD5D58224D20E2004DC834 /* HomeTableHeaderView.swift */; };
@@ -98,6 +101,9 @@
 		A5ABB71C224DABFA00132E2F /* CategoryProductsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryProductsListViewController.xib; sourceTree = "<group>"; };
 		A5ABB71F224DAC0F00132E2F /* CategoryProductsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsListViewModel.swift; sourceTree = "<group>"; };
 		A5ABB721224DAC1B00132E2F /* CategoryProductsListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsListConfigurator.swift; sourceTree = "<group>"; };
+		A5ABB723224DC97900132E2F /* CategoryProductsGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsGateway.swift; sourceTree = "<group>"; };
+		A5ABB725224DCA3600132E2F /* CategoryProductsApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsApiRequest.swift; sourceTree = "<group>"; };
+		A5ABB727224DD17100132E2F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		A5BD5D52224D0B22004DC834 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A5BD5D53224D0B22004DC834 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		A5BD5D58224D20E2004DC834 /* HomeTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableHeaderView.swift; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 				A5DDB5B12248996E0019550E /* HomeViewController.xib */,
 				A56DDF3F224C5A5000C340BF /* HomeViewModel.swift */,
 				A56DDF5B224C65F500C340BF /* HomeConfigurator.swift */,
+				A5ABB727224DD17100132E2F /* HomeRouter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				A56DDF53224C5C0700C340BF /* HomeServiceGateway.swift */,
+				A5ABB723224DC97900132E2F /* CategoryProductsGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 				A56DDF4E224C5B9700C340BF /* BannersApiRequest.swift */,
 				A56DDF5D224C6FA200C340BF /* CategoriesApiRequest.swift */,
 				A56DDF61224C74AC00C340BF /* TopSellingProductsRequest.swift */,
+				A5ABB725224DCA3600132E2F /* CategoryProductsApiRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -523,10 +532,13 @@
 				A56DDF44224C5AB600C340BF /* Result.swift in Sources */,
 				A56DDF5A224C60C500C340BF /* Product.swift in Sources */,
 				A56DDF4F224C5B9700C340BF /* BannersApiRequest.swift in Sources */,
+				A5ABB726224DCA3600132E2F /* CategoryProductsApiRequest.swift in Sources */,
 				A5BD5D59224D20E2004DC834 /* HomeTableHeaderView.swift in Sources */,
+				A5ABB724224DC97900132E2F /* CategoryProductsGateway.swift in Sources */,
 				A56DDF67224C819300C340BF /* CategoriesCarouselTableViewCell.swift in Sources */,
 				A56DDF62224C74AC00C340BF /* TopSellingProductsRequest.swift in Sources */,
 				A56DDF5E224C6FA200C340BF /* CategoriesApiRequest.swift in Sources */,
+				A5ABB728224DD17100132E2F /* HomeRouter.swift in Sources */,
 				A5E8919D224B3C690000EC0C /* Banner.swift in Sources */,
 				A56DDF70224C8F0A00C340BF /* ProductTableViewCell.swift in Sources */,
 				A5ABB720224DAC0F00132E2F /* CategoryProductsListViewModel.swift in Sources */,

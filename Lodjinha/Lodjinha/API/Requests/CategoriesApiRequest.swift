@@ -11,7 +11,7 @@ import Foundation
 struct CategoriesApiRequest: ApiRequest {
     
     var urlRequest: URLRequest {
-        let url = URL(string: "https://alodjinha.herokuapp.com/categoria")!
+        let url = URL(string: "\(baseUrl)/categoria")!
         let request = URLRequest(url: url)
         return request
     }

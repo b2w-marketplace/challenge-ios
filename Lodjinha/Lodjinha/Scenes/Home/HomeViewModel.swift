@@ -14,9 +14,6 @@ enum HomeSection {
 }
 
 protocol HomeServicesDelegate: class {
-//    func didLoadBanners()
-//    func didLoadCategories()
-//    func didLoadTopSellingProducts()
     func finishLoadingHome()
     func loadingData(loading: Bool)
 }
@@ -27,10 +24,14 @@ protocol HomeViewModelType {
     var categories: [ProductCategory] { get set }
     var topSellingProducts: [Product] { get set }
     var homeSections: [HomeSection] { get }
+    
+    var hasError: Bool { get set }
     var numberOfSections: Int { get }
     func numberOfRowsInSection(section: HomeSection) -> Int
     
     func loadHome()
+    func select(category: ProductCategory)
+    func select(product: Product)
     
     var homeServicesDelegate: HomeServicesDelegate? { get set }
 }
@@ -40,6 +41,8 @@ class HomeViewModel: HomeViewModelType {
     var banners: [Banner] = []
     var categories: [ProductCategory] = []
     var topSellingProducts: [Product] = []
+    
+    var hasError: Bool = false
     
     // Categories and TopSellingProducts sections
     var homeSections: [HomeSection] = [.categories, .topSellingProducts]
@@ -67,8 +70,10 @@ class HomeViewModel: HomeViewModelType {
     weak var homeServicesDelegate: HomeServicesDelegate?
     
     var service: HomeServiceGateway!
-    init(service: HomeServiceGateway) {
+    var router: HomeRouterProtocol
+    init(service: HomeServiceGateway, router: HomeRouterProtocol) {
         self.service = service
+        self.router = router
     }
     
     func loadHome() {
@@ -81,7 +86,7 @@ class HomeViewModel: HomeViewModelType {
             case .success(let banners):
                 self.banners = banners
             case .failure(_):
-                break
+                self.hasError = true
             }
         }
         
@@ -91,9 +96,8 @@ class HomeViewModel: HomeViewModelType {
             switch result {
             case .success(let categories):
                 self.categories = categories
-                break
             case .failure(_):
-                break
+                self.hasError = true
             }
         }
         
@@ -103,9 +107,8 @@ class HomeViewModel: HomeViewModelType {
             switch result {
             case .success(let products):
                 self.topSellingProducts = products
-                break
             case .failure(_):
-                break
+                self.hasError = true
             }
         }
         
@@ -116,5 +119,11 @@ class HomeViewModel: HomeViewModelType {
         
     }
     
+    func select(product: Product) {
+        
+    }
     
+    func select(category: ProductCategory) {
+        router.presentCategoryProducts(forCategory: category)
+    }
 }

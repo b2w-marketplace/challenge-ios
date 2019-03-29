@@ -11,7 +11,7 @@ import Foundation
 struct BannersApiRequest: ApiRequest {
     
     var urlRequest: URLRequest {
-        let url = URL(string: "https://alodjinha.herokuapp.com/banner")!
+        let url = URL(string: "\(baseUrl)/banner")!
         let request = URLRequest(url: url)
         return request
     }

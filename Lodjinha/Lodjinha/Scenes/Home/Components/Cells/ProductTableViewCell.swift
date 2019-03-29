@@ -29,7 +29,7 @@ class ProductTableViewCell: UITableViewCell {
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.locale = Locale(identifier: "pt-BR")
         productImage.setImage(fromUrl: product.imageUrl, withIndicator: nil)
-        productName.text = product.name + product.name + product.name + product.name + product.name
+        productName.text = product.name
         
         //Attributed Text
         let text = "De \(numberFormatter.string(from: NSNumber(value: product.priceBefore))!)"

@@ -44,7 +44,10 @@ class HomeViewController: UIViewController {
     
     private func tableViewBackgroundView() -> UIView {
         let reloadButton = UIButton(type: UIButton.ButtonType.custom)
-        reloadButton.setTitle("Tentar novamente", for: UIControl.State.normal)
+        let buttonTitle = viewModel.hasError ? "Tentar novamente" : "Nenhum produto encontrado"
+        reloadButton.setTitle(buttonTitle, for: UIControl.State.normal)
+        reloadButton.titleLabel?.numberOfLines = 0
+        reloadButton.titleLabel?.textAlignment = .center
         reloadButton.setTitleColor(UIColor.darkGray, for: UIControl.State.normal)
         reloadButton.addTarget(self, action: #selector(reloadInfo), for: UIControl.Event.touchUpInside)
         let backView = UIView(frame: tableView.frame)
@@ -98,11 +101,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let homeSection = viewModel.homeSections[indexPath.section]
         switch homeSection {
         case .categories:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCarouselTableViewCell", for: indexPath) as! CategoriesCarouselTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: CategoriesCarouselTableViewCell.identifier, for: indexPath) as! CategoriesCarouselTableViewCell
+            cell.delegate = self
             cell.configure(with: viewModel.categories)
             return cell
         case .topSellingProducts:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
             cell.configure(withProduct: viewModel.topSellingProducts[indexPath.row], isLastIndex: indexPath.row == viewModel.topSellingProducts.count - 1)
             return cell
         }
@@ -112,11 +116,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let homeSection = viewModel.homeSections[section]
         switch homeSection {
         case .categories:
-            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeTableHeaderView") as! HomeTableHeaderView
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HomeTableHeaderView.identifier) as! HomeTableHeaderView
             header.headerLabel.text = "Categorias"
             return header
         case .topSellingProducts:
-            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeTableHeaderView") as! HomeTableHeaderView
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HomeTableHeaderView.identifier) as! HomeTableHeaderView
             header.headerLabel.text = "Mais Vendidos"
             return header
         }
@@ -137,4 +141,18 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 0 { return }
+        
+        viewModel.select(product: viewModel.topSellingProducts[indexPath.row])
+    }
+    
+}
+
+extension HomeViewController: CategoriesCarouselDelegate {
+    func categoriesCarousel(carousel: CategoriesCarouselTableViewCell, didTapCategory category: ProductCategory, atIndex index: IndexPath) {
+        
+        viewModel.select(category: category)
+    }
 }

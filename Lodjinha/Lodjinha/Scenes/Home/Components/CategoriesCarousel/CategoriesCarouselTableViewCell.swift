@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CategoriesCarouselDelegate:class {
+    func categoriesCarousel(carousel: CategoriesCarouselTableViewCell, didTapCategory category: ProductCategory, atIndex index: IndexPath)
+}
+
 class CategoriesCarouselTableViewCell: UITableViewCell {
     
     static let identifier: String = "CategoriesCarouselTableViewCell"
@@ -49,6 +53,7 @@ class CategoriesCarouselTableViewCell: UITableViewCell {
     }()
     
     var categories: [ProductCategory] = []
+    weak var delegate: CategoriesCarouselDelegate?
     
     func configure(with categories: [ProductCategory]) {
         self.categories = categories
@@ -105,6 +110,10 @@ extension CategoriesCarouselTableViewCell: UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: defaultCellWidth, height: defaultCellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.categoriesCarousel(carousel: self, didTapCategory: categories[indexPath.item], atIndex: indexPath)
     }
     
 }

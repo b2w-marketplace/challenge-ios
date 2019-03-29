@@ -15,9 +15,12 @@ protocol HomeConfiguratorProtocol {
 class HomeConfigurator: HomeConfiguratorProtocol {
     
     func configure(viewController: HomeViewController) {
-        
+        viewController.title = "Home"
         let homeServiceGateway = HomeService(api: ApiServiceClient(urlSessionConfiguration: URLSessionConfiguration.default, completionHandlerQueue: OperationQueue.main))
-        let viewModel = HomeViewModel(service: homeServiceGateway)
+        
+        let router = HomeRouter(homeViewController: viewController)
+        let viewModel = HomeViewModel(service: homeServiceGateway, router: router)
+        
         viewModel.homeServicesDelegate = viewController
         viewController.viewModel = viewModel
     }
