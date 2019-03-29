@@ -46,34 +46,49 @@ class ProductDetailsViewController: UIViewController {
         reservationButtonContainerView.layer.borderWidth = 1
         reservationButtonContainerView.layer.borderColor = UIColor.lightGray.cgColor
         
+        reservationButton.layer.cornerRadius = 8
+        
         productNameLabel.text = viewModel.productName()
-        if let attribute = viewModel.productPriceBeforeAttributed() {
-            fromPriceLabel.attributedText = attribute
+        if let nameAttributeText = viewModel.productPriceBeforeAttributed() {
+            fromPriceLabel.attributedText = nameAttributeText
         } else {
             fromPriceLabel.text = viewModel.productPriceBefore()
         }
         
         toPriceLabel.text = viewModel.productPriceNow()
         
-        descriptionTextView.text = viewModel.productDescription()
+        if let descriptionAttributedText = viewModel.productAttributedDescription() {
+            descriptionTextView.attributedText = descriptionAttributedText
+        } else {
+            descriptionTextView.text = viewModel.productDescription()
+        }
         
         productImageView.setImage(fromUrl: viewModel.productImageUrl(), withIndicator: nil)
     }
 
     @IBAction func reservationAction(_ sender: Any) {
-        
+        viewModel.reserveProduct()
     }
-    
     
 }
 
 extension ProductDetailsViewController: ProductDetailsServicesDelegate {
     func performingReservation(loading: Bool) {
-        
+        reservationButton.isEnabled = !loading
+        loading ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
     }
     
     func reservationFinished() {
+        let message = viewModel.reservation?.message ?? "Produto reservado com sucesso"
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertController.Style.alert)
         
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { [weak self] (action: UIAlertAction) in
+            guard let strongSelf = self else { return }
+            strongSelf.navigationController?.popViewController(animated: true)
+        }
+        
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

@@ -21,9 +21,11 @@ protocol ProductDetailsViewModelType {
     func productPriceBeforeAttributed() -> NSAttributedString?
     func productPriceNow() -> String
     func productDescription() -> String
+    func productAttributedDescription() -> NSAttributedString?
     func productImageUrl() -> String
     func productName() -> String
     
+    func reserveProduct()
     var productDetailsServicesDelegate: ProductDetailsServicesDelegate? { get set }
 }
 
@@ -72,6 +74,17 @@ class ProductDetailsViewModel: ProductDetailsViewModelType {
         return product.description
     }
     
+    func productAttributedDescription() -> NSAttributedString? {
+        let text = product.description
+        guard let textData = text.data(using: String.Encoding.unicode) else {
+            return nil
+        }
+        let options = [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html]
+        let attributedString = try? NSAttributedString(data: textData, options: options, documentAttributes: nil)
+        
+        return attributedString
+    }
+    
     func productImageUrl() -> String {
         return product.imageUrl
     }
@@ -88,6 +101,8 @@ class ProductDetailsViewModel: ProductDetailsViewModelType {
             case .failure(_):
                 strongSelf.reservation = nil
             }
+            
+            strongSelf.productDetailsServicesDelegate?.reservationFinished()
         }
     }
     
