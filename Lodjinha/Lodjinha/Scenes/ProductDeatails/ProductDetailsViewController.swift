@@ -63,7 +63,7 @@ class ProductDetailsViewController: UIViewController {
             descriptionTextView.text = viewModel.productDescription()
         }
         
-        productImageView.setImage(fromUrl: viewModel.productImageUrl(), withIndicator: nil)
+        productImageView.setImage(fromUrl: viewModel.productImageUrl(), withIndicator: nil, defaultImage: UIImage(named: "downloadImageDefault"))
     }
 
     @IBAction func reservationAction(_ sender: Any) {

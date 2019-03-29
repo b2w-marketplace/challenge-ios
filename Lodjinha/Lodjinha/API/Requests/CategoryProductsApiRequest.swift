@@ -23,7 +23,8 @@ struct CategoryProductsApiRequest: ApiRequest {
     var urlRequest: URLRequest {
         
         let url = URL(string: "\(baseUrl)/produto?offset=\(offset)&limit=\(limit)&categoriaId=\(categoryId)")!
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.timeoutInterval = timeout
         
         return request
     }

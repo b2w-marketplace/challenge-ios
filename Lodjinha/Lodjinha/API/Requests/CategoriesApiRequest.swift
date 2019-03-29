@@ -12,7 +12,8 @@ struct CategoriesApiRequest: ApiRequest {
     
     var urlRequest: URLRequest {
         let url = URL(string: "\(baseUrl)/categoria")!
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.timeoutInterval = timeout
         return request
     }
     

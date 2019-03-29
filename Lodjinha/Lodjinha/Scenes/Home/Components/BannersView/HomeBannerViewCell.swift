@@ -50,7 +50,7 @@ class HomeBannerViewCell: UICollectionViewCell {
         
 //        self.imageDownloader = imageDownloader
 //        activityIndicator.startAnimating()
-        self.imageView.setImage(fromUrl: banner.imageUrl, withIndicator: activityIndicator)
+        self.imageView.setImage(fromUrl: banner.imageUrl, withIndicator: activityIndicator, defaultImage: UIImage(named: "downloadImageDefault"))
 //        self.imageDownloader.downloadImage(from: banner.imageUrl) { (image, error) in
 //            DispatchQueue.main.async {
 //                self.activityIndicator.stopAnimating()

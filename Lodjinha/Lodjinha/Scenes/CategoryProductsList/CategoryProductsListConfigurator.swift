@@ -24,7 +24,9 @@ class CategoryProductsListConfigurator: CategoryProductsListConfiguratorProtocol
         
         let categoryProductsServiceGateway = CategoryProductsService(api: ApiServiceClient(urlSessionConfiguration: URLSessionConfiguration.default, completionHandlerQueue: OperationQueue.main))
         
-        let viewModel = CategoryProductsListViewModel(service: categoryProductsServiceGateway, category: category)
+        let router = CategoriesRouter(categoriesViewController: viewController)
+        let viewModel = CategoryProductsListViewModel(service: categoryProductsServiceGateway, category: category, router: router)
+        
         viewModel.categoryProductsListServicesDelegate = viewController
         viewController.viewModel = viewModel
     }

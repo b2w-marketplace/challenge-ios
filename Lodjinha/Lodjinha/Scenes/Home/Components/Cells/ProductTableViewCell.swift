@@ -28,7 +28,7 @@ class ProductTableViewCell: UITableViewCell {
         numberFormatter.maximumFractionDigits = 2
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.locale = Locale(identifier: "pt-BR")
-        productImage.setImage(fromUrl: product.imageUrl, withIndicator: nil)
+        productImage.setImage(fromUrl: product.imageUrl, withIndicator: nil, defaultImage: UIImage(named: "downloadImageDefault"))
         productName.text = product.name
         
         //Attributed Text

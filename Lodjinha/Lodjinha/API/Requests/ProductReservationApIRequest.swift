@@ -19,6 +19,7 @@ struct ProductReservationApiRequest:ApiRequest {
         let url = URL(string: "\(baseUrl)/produto/\(productId)")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        request.timeoutInterval = timeout
         return request
     }
     

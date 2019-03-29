@@ -29,8 +29,15 @@ class CategoryProductsListViewController: UIViewController {
         viewModel.loadProducts()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.tableHeaderView?.isHidden = true
+        tableFooterViewLoadIndicator.stopAnimating()
+    }
+    
     private func configTableView() {
         tableView.delegate = self
+        
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: ProductTableViewCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: ProductTableViewCell.identifier)
@@ -38,7 +45,7 @@ class CategoryProductsListViewController: UIViewController {
         tableView.rowHeight = 100
         tableView.separatorStyle = .none
         tableView.backgroundView = tableViewBackgroundView()
-        tableView.tableFooterView = tableFooterViewLoadIndicator()
+        tableView.tableFooterView = tableFooterViewLoadIndicator
         tableView.tableFooterView?.isHidden = true
     }
     
@@ -57,13 +64,14 @@ class CategoryProductsListViewController: UIViewController {
         return backView
     }
     
-    private func tableFooterViewLoadIndicator() -> UIActivityIndicatorView {
+    lazy var tableFooterViewLoadIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .gray)
         indicator.startAnimating()
+        indicator.hidesWhenStopped = true
         indicator.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 44)
 
         return indicator
-    }
+    }()
     
     @objc private func reloadInfo() {
         viewModel.loadProducts()
@@ -108,6 +116,10 @@ extension CategoryProductsListViewController: UITableViewDataSource, UITableView
                 viewModel.loadMore()
             }
         }
-        tableView.tableHeaderView?.isHidden = true
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        viewModel.select(product: viewModel.products[indexPath.row])
     }
 }

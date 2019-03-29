@@ -11,7 +11,8 @@ import Foundation
 struct TopSellingProductsRequest: ApiRequest {
     var urlRequest: URLRequest {
         let url = URL(string: "\(baseUrl)/produto/maisvendidos")!
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.timeoutInterval = timeout
         return request
     }
 }

@@ -66,7 +66,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with category: ProductCategory) {
-        cellImage.setImage(fromUrl: category.imageUrl, withIndicator: nil)
+        cellImage.setImage(fromUrl: category.imageUrl, withIndicator: nil, defaultImage: UIImage(named: "downloadImageDefault"))
         cellLabel.text = category.description
     }
     

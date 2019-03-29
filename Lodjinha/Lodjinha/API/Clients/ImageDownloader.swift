@@ -33,6 +33,7 @@ class LodjinhaImageDownloader: ImageDownloader {
         
         var request = URLRequest(url: imageUrl)
         request.httpMethod = "GET"
+        request.timeoutInterval = 5
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             if error != nil {
@@ -47,6 +48,7 @@ class LodjinhaImageDownloader: ImageDownloader {
             
             guard let image = UIImage(data: imageData) else {
                 let error = NSError(domain: "Lodjinha.ImageDownloader", code: 210, userInfo: [NSLocalizedDescriptionKey: "could generate image from imageData"])
+                imageCache.setObject(UIImage(named: "downloadImageDefault")!, forKey: stringObject)
                 completion(nil, error)
                 return
             }

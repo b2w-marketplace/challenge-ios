@@ -49,6 +49,7 @@
 		A5ABB735224DEA4600132E2F /* ProductReservationApIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB734224DEA4600132E2F /* ProductReservationApIRequest.swift */; };
 		A5ABB737224E35F400132E2F /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB736224E35F400132E2F /* Reservation.swift */; };
 		A5ABB739224E369F00132E2F /* ApiReservationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB738224E369F00132E2F /* ApiReservationResponse.swift */; };
+		A5BB01F8224E575400A71B37 /* CategoryProductsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB01F7224E575400A71B37 /* CategoryProductsListRouter.swift */; };
 		A5BD5D54224D0B22004DC834 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD5D52224D0B22004DC834 /* AboutViewController.swift */; };
 		A5BD5D55224D0B22004DC834 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BD5D53224D0B22004DC834 /* AboutViewController.xib */; };
 		A5BD5D59224D20E2004DC834 /* HomeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD5D58224D20E2004DC834 /* HomeTableHeaderView.swift */; };
@@ -120,6 +121,7 @@
 		A5ABB734224DEA4600132E2F /* ProductReservationApIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductReservationApIRequest.swift; sourceTree = "<group>"; };
 		A5ABB736224E35F400132E2F /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		A5ABB738224E369F00132E2F /* ApiReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiReservationResponse.swift; sourceTree = "<group>"; };
+		A5BB01F7224E575400A71B37 /* CategoryProductsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsListRouter.swift; sourceTree = "<group>"; };
 		A5BD5D52224D0B22004DC834 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A5BD5D53224D0B22004DC834 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		A5BD5D58224D20E2004DC834 /* HomeTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableHeaderView.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				A5ABB71C224DABFA00132E2F /* CategoryProductsListViewController.xib */,
 				A5ABB71F224DAC0F00132E2F /* CategoryProductsListViewModel.swift */,
 				A5ABB721224DAC1B00132E2F /* CategoryProductsListConfigurator.swift */,
+				A5BB01F7224E575400A71B37 /* CategoryProductsListRouter.swift */,
 			);
 			path = CategoryProductsList;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				A5ABB731224DE83E00132E2F /* ProductDetailsConfigurator.swift in Sources */,
 				A56DDF5E224C6FA200C340BF /* CategoriesApiRequest.swift in Sources */,
 				A5ABB735224DEA4600132E2F /* ProductReservationApIRequest.swift in Sources */,
+				A5BB01F8224E575400A71B37 /* CategoryProductsListRouter.swift in Sources */,
 				A5ABB728224DD17100132E2F /* HomeRouter.swift in Sources */,
 				A5E8919D224B3C690000EC0C /* Banner.swift in Sources */,
 				A56DDF70224C8F0A00C340BF /* ProductTableViewCell.swift in Sources */,

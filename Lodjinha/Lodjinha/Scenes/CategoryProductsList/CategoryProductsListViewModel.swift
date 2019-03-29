@@ -26,6 +26,7 @@ protocol CategoryProductsListViewModelType {
     func numberOfRowsInSection(section: Int) -> Int
     func loadProducts()
     func loadMore()
+    func select(product: Product)
     
     var categoryProductsListServicesDelegate: CategoryProductsListServicesDelegate? { get set }
 }
@@ -46,10 +47,12 @@ class CategoryProductsListViewModel: CategoryProductsListViewModelType {
     
     var service: CategoryProductsGateway!
     var category: ProductCategory
+    var router: CategoriesRouterProtocol!
     
-    init(service: CategoryProductsGateway, category: ProductCategory) {
+    init(service: CategoryProductsGateway, category: ProductCategory, router: CategoriesRouterProtocol) {
         self.service = service
         self.category = category
+        self.router = router
     }
     
     func loadProducts() {
@@ -94,6 +97,10 @@ class CategoryProductsListViewModel: CategoryProductsListViewModelType {
     
     func numberOfRowsInSection(section: Int) -> Int {
         return products.count
+    }
+    
+    func select(product: Product) {
+        router.presentProductDetails(forProduct: product)
     }
     
 }

@@ -11,12 +11,17 @@ import Foundation
 protocol ApiRequest {
     var baseUrl: String { get }
     var urlRequest: URLRequest { get }
+    var timeout: TimeInterval { get }
 }
 
 extension ApiRequest {
     
     var baseUrl: String {
         return "https://alodjinha.herokuapp.com"
+    }
+    
+    var timeout: TimeInterval {
+        return 5
     }
     
 }
