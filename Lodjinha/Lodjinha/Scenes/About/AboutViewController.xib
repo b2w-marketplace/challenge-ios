@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pacifico-Regular.ttf">
+            <string>Pacifico-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController" customModule="Lodjinha" customModuleProvider="target">
             <connections>
@@ -20,19 +24,45 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99k-cz-Jtt">
-                    <rect key="frame" x="164.5" y="323" width="46" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a Lodjinha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99k-cz-Jtt">
+                    <rect key="frame" x="20" y="286" width="335" height="95"/>
+                    <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="54"/>
+                    <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSobre" translatesAutoresizingMaskIntoConstraints="NO" id="ewk-ec-MRt">
+                    <rect key="frame" x="116" y="80" width="143" height="186"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Douglas da silva santos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9n-K4-gzo">
+                    <rect key="frame" x="94" y="602.5" width="187" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 de março de 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfI-IG-CeE">
+                    <rect key="frame" x="123" y="631" width="129" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="99k-cz-Jtt" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="42l-ks-7we"/>
+                <constraint firstItem="i9n-K4-gzo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4Dn-pd-CVx"/>
+                <constraint firstAttribute="trailing" secondItem="99k-cz-Jtt" secondAttribute="trailing" constant="20" id="9Oz-Rg-JMZ"/>
+                <constraint firstItem="ewk-ec-MRt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="JNs-fU-aym"/>
+                <constraint firstItem="ewk-ec-MRt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ODz-97-S0p"/>
+                <constraint firstItem="99k-cz-Jtt" firstAttribute="top" secondItem="ewk-ec-MRt" secondAttribute="bottom" constant="20" id="PBn-iH-pps"/>
                 <constraint firstItem="99k-cz-Jtt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TeW-R2-cBo"/>
+                <constraint firstItem="99k-cz-Jtt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="d7N-jq-613"/>
+                <constraint firstItem="jfI-IG-CeE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dT4-X6-xBb"/>
+                <constraint firstItem="jfI-IG-CeE" firstAttribute="top" secondItem="i9n-K4-gzo" secondAttribute="bottom" constant="8" id="iH0-I4-WUd"/>
+                <constraint firstAttribute="bottom" secondItem="jfI-IG-CeE" secondAttribute="bottom" constant="20" id="oxT-3i-ZK8"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="logoSobre" width="143" height="152"/>
+    </resources>
 </document>
