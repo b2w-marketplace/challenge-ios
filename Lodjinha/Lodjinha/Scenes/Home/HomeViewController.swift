@@ -86,6 +86,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         tableView.backgroundView?.isHidden = viewModel.numberOfSections != 0
+        tableView.tableHeaderView?.isHidden = viewModel.numberOfSections == 0
         return viewModel.numberOfSections
     }
     

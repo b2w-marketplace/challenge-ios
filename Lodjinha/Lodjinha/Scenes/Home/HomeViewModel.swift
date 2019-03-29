@@ -81,7 +81,7 @@ class HomeViewModel: HomeViewModelType {
             case .success(let banners):
                 self.banners = banners
             case .failure(_):
-                self.banners = []
+                break
             }
         }
         
@@ -115,5 +115,6 @@ class HomeViewModel: HomeViewModelType {
         }
         
     }
-        
+    
+    
 }

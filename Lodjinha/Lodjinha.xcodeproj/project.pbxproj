@@ -34,6 +34,10 @@
 		A56DDF70224C8F0A00C340BF /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DDF6E224C8F0A00C340BF /* ProductTableViewCell.swift */; };
 		A56DDF71224C8F0A00C340BF /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56DDF6F224C8F0A00C340BF /* ProductTableViewCell.xib */; };
 		A58D348F224CFBAE00D79DA3 /* LodjinhaTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D348E224CFBAE00D79DA3 /* LodjinhaTabBarViewController.swift */; };
+		A5ABB71D224DABFA00132E2F /* CategoryProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB71B224DABFA00132E2F /* CategoryProductsListViewController.swift */; };
+		A5ABB71E224DABFA00132E2F /* CategoryProductsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5ABB71C224DABFA00132E2F /* CategoryProductsListViewController.xib */; };
+		A5ABB720224DAC0F00132E2F /* CategoryProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB71F224DAC0F00132E2F /* CategoryProductsListViewModel.swift */; };
+		A5ABB722224DAC1B00132E2F /* CategoryProductsListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB721224DAC1B00132E2F /* CategoryProductsListConfigurator.swift */; };
 		A5BD5D54224D0B22004DC834 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD5D52224D0B22004DC834 /* AboutViewController.swift */; };
 		A5BD5D55224D0B22004DC834 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BD5D53224D0B22004DC834 /* AboutViewController.xib */; };
 		A5BD5D59224D20E2004DC834 /* HomeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD5D58224D20E2004DC834 /* HomeTableHeaderView.swift */; };
@@ -90,6 +94,10 @@
 		A56DDF6E224C8F0A00C340BF /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		A56DDF6F224C8F0A00C340BF /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		A58D348E224CFBAE00D79DA3 /* LodjinhaTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaTabBarViewController.swift; sourceTree = "<group>"; };
+		A5ABB71B224DABFA00132E2F /* CategoryProductsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsListViewController.swift; sourceTree = "<group>"; };
+		A5ABB71C224DABFA00132E2F /* CategoryProductsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryProductsListViewController.xib; sourceTree = "<group>"; };
+		A5ABB71F224DAC0F00132E2F /* CategoryProductsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsListViewModel.swift; sourceTree = "<group>"; };
+		A5ABB721224DAC1B00132E2F /* CategoryProductsListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsListConfigurator.swift; sourceTree = "<group>"; };
 		A5BD5D52224D0B22004DC834 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A5BD5D53224D0B22004DC834 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		A5BD5D58224D20E2004DC834 /* HomeTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableHeaderView.swift; sourceTree = "<group>"; };
@@ -205,8 +213,9 @@
 		A56DDF55224C5C6A00C340BF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A5BD5D51224D0B0B004DC834 /* About */,
+				A5ABB71A224DABA400132E2F /* CategoryProductsList */,
 				A58D348D224CFB9000D79DA3 /* Tabbar */,
+				A5BD5D51224D0B0B004DC834 /* About */,
 				A56343B4224997D000251BFA /* Home */,
 			);
 			path = Scenes;
@@ -254,6 +263,17 @@
 				A58D348E224CFBAE00D79DA3 /* LodjinhaTabBarViewController.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		A5ABB71A224DABA400132E2F /* CategoryProductsList */ = {
+			isa = PBXGroup;
+			children = (
+				A5ABB71B224DABFA00132E2F /* CategoryProductsListViewController.swift */,
+				A5ABB71C224DABFA00132E2F /* CategoryProductsListViewController.xib */,
+				A5ABB71F224DAC0F00132E2F /* CategoryProductsListViewModel.swift */,
+				A5ABB721224DAC1B00132E2F /* CategoryProductsListConfigurator.swift */,
+			);
+			path = CategoryProductsList;
 			sourceTree = "<group>";
 		};
 		A5BD5D51224D0B0B004DC834 /* About */ = {
@@ -465,6 +485,7 @@
 				A5DDB58A224874600019550E /* Assets.xcassets in Resources */,
 				A5BD5D55224D0B22004DC834 /* AboutViewController.xib in Resources */,
 				A5BD5D60224D265F004DC834 /* OFL.txt in Resources */,
+				A5ABB71E224DABFA00132E2F /* CategoryProductsListViewController.xib in Resources */,
 				A5DDB5B22248996E0019550E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,12 +511,14 @@
 				A56343B7224997F700251BFA /* HomeBannersView.swift in Sources */,
 				A56DDF5C224C65F500C340BF /* HomeConfigurator.swift in Sources */,
 				A56DDF58224C60B800C340BF /* ProductCategory.swift in Sources */,
+				A5ABB722224DAC1B00132E2F /* CategoryProductsListConfigurator.swift in Sources */,
 				A5DDB5832248745F0019550E /* AppDelegate.swift in Sources */,
 				A56DDF42224C5A9100C340BF /* ApiClient.swift in Sources */,
 				A56DDF64224C751000C340BF /* ApiProductsResponse.swift in Sources */,
 				A5DDB5B0224898FA0019550E /* HomeViewController.swift in Sources */,
 				A56DDF4A224C5B4500C340BF /* ApiError.swift in Sources */,
 				A56DDF40224C5A5000C340BF /* HomeViewModel.swift in Sources */,
+				A5ABB71D224DABFA00132E2F /* CategoryProductsListViewController.swift in Sources */,
 				A56343C02249AF6400251BFA /* HomeBannersViewXIB.swift in Sources */,
 				A56DDF44224C5AB600C340BF /* Result.swift in Sources */,
 				A56DDF5A224C60C500C340BF /* Product.swift in Sources */,
@@ -506,6 +529,7 @@
 				A56DDF5E224C6FA200C340BF /* CategoriesApiRequest.swift in Sources */,
 				A5E8919D224B3C690000EC0C /* Banner.swift in Sources */,
 				A56DDF70224C8F0A00C340BF /* ProductTableViewCell.swift in Sources */,
+				A5ABB720224DAC0F00132E2F /* CategoryProductsListViewModel.swift in Sources */,
 				A5E89199224B3BDC0000EC0C /* ImageDownloader.swift in Sources */,
 				A5E89196224B34150000EC0C /* HomeBannerViewCell.swift in Sources */,
 				A56DDF60224C6FD900C340BF /* ApiCategoriesResponse.swift in Sources */,

@@ -26,10 +26,16 @@ class ProductTableViewCell: UITableViewCell {
     func configure(withProduct product: Product, isLastIndex: Bool) {
         let numberFormatter = NumberFormatter()
         numberFormatter.maximumFractionDigits = 2
-        numberFormatter.currencyDecimalSeparator = ","
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.locale = Locale(identifier: "pt-BR")
         productImage.setImage(fromUrl: product.imageUrl, withIndicator: nil)
         productName.text = product.name
-        productPriceBefore.text = "De \(numberFormatter.string(from: NSNumber(value: product.priceBefore))!)"
+        
+        //Attributed Text
+        let text = "De \(numberFormatter.string(from: NSNumber(value: product.priceBefore))!)"
+        let attributedString = NSAttributedString(string: text, attributes: [NSAttributedString.Key.strikethroughStyle : 1])
+        productPriceBefore.attributedText = attributedString
+        
         productPriceNow.text = "Por \(numberFormatter.string(from: NSNumber(value: product.priceNow))!)"
         separatorView.isHidden = isLastIndex
     }
