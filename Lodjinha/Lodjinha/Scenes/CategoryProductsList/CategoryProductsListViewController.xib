@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryProductsListViewController" customModule="Lodjinha" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="SnB-9Y-LWa" id="bC9-3j-x2c"/>
+                <outlet property="tableView" destination="iHg-Ww-OMP" id="R9D-XS-clD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iHg-Ww-OMP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-9Y-LWa">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SnB-9Y-LWa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2p5-GD-dUv"/>
+                <constraint firstItem="iHg-Ww-OMP" firstAttribute="leading" secondItem="F2A-zs-m5P" secondAttribute="leading" id="GnR-fw-YdO"/>
+                <constraint firstItem="iHg-Ww-OMP" firstAttribute="trailing" secondItem="F2A-zs-m5P" secondAttribute="trailing" id="KHB-0c-w3d"/>
+                <constraint firstItem="SnB-9Y-LWa" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Oxk-ja-aoR"/>
+                <constraint firstItem="iHg-Ww-OMP" firstAttribute="bottom" secondItem="F2A-zs-m5P" secondAttribute="bottom" id="YKC-9m-dBB"/>
+                <constraint firstItem="iHg-Ww-OMP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="l5E-yi-nLk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="F2A-zs-m5P"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+</document>
