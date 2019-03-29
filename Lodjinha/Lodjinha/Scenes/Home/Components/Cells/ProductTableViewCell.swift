@@ -10,6 +10,8 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
 
+    static let identifier: String = "ProductTableViewCell"
+    
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPriceBefore: UILabel!

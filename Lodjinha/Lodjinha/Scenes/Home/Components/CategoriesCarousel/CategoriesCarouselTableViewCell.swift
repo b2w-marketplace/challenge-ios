@@ -10,6 +10,8 @@ import UIKit
 
 class CategoriesCarouselTableViewCell: UITableViewCell {
     
+    static let identifier: String = "CategoriesCarouselTableViewCell"
+    
     let defaultCellWidth: CGFloat = 80
     let defaultCellHeight: CGFloat = 80
     let cellMarginSpace: CGFloat = 10

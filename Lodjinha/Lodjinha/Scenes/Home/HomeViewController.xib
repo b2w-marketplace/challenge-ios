@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Lodjinha" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="j4f-3J-xij" id="O5X-iK-Ogi"/>
                 <outlet property="bannersView" destination="3X7-XZ-Ihg" id="oiX-Yp-Wfc"/>
                 <outlet property="tableView" destination="LcX-aX-Sys" id="Jew-ZQ-rom"/>
                 <outlet property="view" destination="iN0-l3-epB" id="7Sa-5r-o7e"/>
@@ -30,10 +31,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-3J-xij">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <color key="color" red="0.40784313729999999" green="0.28235294119999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="LcX-aX-Sys" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="4vQ-VJ-BZl"/>
+                <constraint firstItem="j4f-3J-xij" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GSv-ib-Alo"/>
+                <constraint firstItem="j4f-3J-xij" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RKB-ZG-ZyM"/>
                 <constraint firstItem="LcX-aX-Sys" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="Wrz-wr-MgJ"/>
                 <constraint firstItem="LcX-aX-Sys" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l0O-9b-iRV"/>
                 <constraint firstItem="LcX-aX-Sys" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zI0-Ze-qIf"/>

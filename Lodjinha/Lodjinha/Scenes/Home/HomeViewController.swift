@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var bannersView: HomeBannersView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var viewModel: HomeViewModelType!
     var configurator: HomeConfiguratorProtocol!
@@ -26,50 +27,57 @@ class HomeViewController: UIViewController {
         configurator.configure(viewController: self)
         configTableView()
         
-        viewModel.loadBanners()
-        viewModel.loadCategories()
-        viewModel.loadTopSellingProducts()
+        viewModel.loadHome()
     }
     
     private func configTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(CategoriesCarouselTableViewCell.self, forCellReuseIdentifier: "CategoriesCarouselTableViewCell")
-        tableView.register(UINib(nibName: "ProductTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "ProductTableViewCell")
-        tableView.register(UINib(nibName: "HomeTableHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HomeTableHeaderView")
+        tableView.register(CategoriesCarouselTableViewCell.self, forCellReuseIdentifier: CategoriesCarouselTableViewCell.identifier)
+        tableView.register(UINib(nibName: ProductTableViewCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: ProductTableViewCell.identifier)
+        tableView.register(UINib(nibName: HomeTableHeaderView.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: HomeTableHeaderView.identifier)
         tableView.estimatedRowHeight = 100
         tableView.separatorStyle = .none
-        
-        let img = UIImage(named: "logoNavbar")
-        let titleV = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width / 2, height: 28))
-        titleV.image = img
-        titleV.contentMode = .scaleAspectFit
-        self.navigationItem.titleView = titleV
+        tableView.backgroundView = tableViewBackgroundView()
+        configNavBarLogo()
+    }
+    
+    private func tableViewBackgroundView() -> UIView {
+        let reloadButton = UIButton(type: UIButton.ButtonType.custom)
+        reloadButton.setTitle("Tentar novamente", for: UIControl.State.normal)
+        reloadButton.setTitleColor(UIColor.darkGray, for: UIControl.State.normal)
+        reloadButton.addTarget(self, action: #selector(reloadInfo), for: UIControl.Event.touchUpInside)
+        let backView = UIView(frame: tableView.frame)
+        reloadButton.frame = CGRect(x: 0, y: 0, width: backView.frame.width / 2, height: 44)
+        reloadButton.center = backView.center
+        backView.addSubview(reloadButton)
+        return backView
+    }
+    
+    @objc private func reloadInfo() {
+        viewModel.loadHome()
+    }
+    
+    private func configNavBarLogo() {
+        let image = UIImage(named: "logoNavbar")
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width / 2, height: 28))
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
     }
     
 }
 
 extension HomeViewController: HomeServicesDelegate {
-    
-    func didLoadBanners() {
+ 
+    func finishLoadingHome() {
         bannersView.updateBanners(banners: viewModel.banners)
+        tableView.reloadData()
     }
     
-    func didLoadCategories() {
-//        tableView.reloadData()
-        tableView.beginUpdates()
-        tableView.deleteSections(IndexSet(0..<1), with: UITableView.RowAnimation.fade)
-        tableView.insertSections(IndexSet(0..<1), with: UITableView.RowAnimation.fade)
-        tableView.endUpdates()
-        
-    }
-    
-    func didLoadTopSellingProducts() {
-//        tableView.reloadData()
-        tableView.beginUpdates()
-        tableView.deleteSections(IndexSet(1..<2), with: UITableView.RowAnimation.fade)
-        tableView.insertSections(IndexSet(1..<2), with: UITableView.RowAnimation.fade)
-        tableView.endUpdates()
+    func loadingData(loading: Bool) {
+        tableView.isHidden = loading
+        loading ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
     }
     
 }
@@ -77,17 +85,12 @@ extension HomeViewController: HomeServicesDelegate {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.homeSections.count
+        tableView.backgroundView?.isHidden = viewModel.numberOfSections != 0
+        return viewModel.numberOfSections
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let homeSection = viewModel.homeSections[section]
-        switch homeSection {
-        case .categories:
-            return 1
-        case .topSellingProducts:
-            return viewModel.topSellingProducts.count
-        }
+        return viewModel.numberOfRowsInSection(section: viewModel.homeSections[section])
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

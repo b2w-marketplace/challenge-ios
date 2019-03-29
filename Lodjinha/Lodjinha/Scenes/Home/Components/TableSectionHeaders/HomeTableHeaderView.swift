@@ -18,6 +18,7 @@ class HomeTableHeaderView: UITableViewHeaderFooterView {
     }
     */
 
+    static let identifier: String = "HomeTableHeaderView"
     @IBOutlet weak var headerLabel: UILabel!
     
     

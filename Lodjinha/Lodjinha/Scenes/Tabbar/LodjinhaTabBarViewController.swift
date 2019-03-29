@@ -15,11 +15,12 @@ class LodjinhaTabBarViewController: UITabBarController {
     }
     
     let defaultControllers: [UIViewController] = {
+        
         let configurator = HomeConfigurator()
         let homeVC = HomeViewController()
         homeVC.configurator = configurator
+        
         let home = UINavigationController(rootViewController: homeVC)
-//        home.navigationBar.tintColor = UIColor(red: 99/255, green: 66/255, blue: 140/255, alpha: 1)
         home.navigationBar.tintColor = UIColor.white
         home.navigationBar.barTintColor = UIColor(red: 99/255, green: 66/255, blue: 140/255, alpha: 1)
         home.navigationBar.isTranslucent = false
