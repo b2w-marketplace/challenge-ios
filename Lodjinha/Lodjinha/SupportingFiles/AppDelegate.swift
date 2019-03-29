@@ -17,9 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
         window = UIWindow(frame: UIScreen.main.bounds)
-//        let configurator = HomeConfigurator()
-//        let home = HomeViewController()
-//        home.configurator = configurator
         let tabbar = LodjinhaTabBarViewController(viewControllers: nil)
         window?.rootViewController = tabbar
         window?.makeKeyAndVisible()

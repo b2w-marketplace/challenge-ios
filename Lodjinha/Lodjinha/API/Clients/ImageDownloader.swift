@@ -33,7 +33,7 @@ class LodjinhaImageDownloader: ImageDownloader {
         
         var request = URLRequest(url: imageUrl)
         request.httpMethod = "GET"
-        request.timeoutInterval = 5
+        request.timeoutInterval = 10
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             if error != nil {

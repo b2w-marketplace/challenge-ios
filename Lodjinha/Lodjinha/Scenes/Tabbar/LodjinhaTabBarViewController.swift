@@ -14,27 +14,9 @@ class LodjinhaTabBarViewController: UITabBarController {
         super.viewDidLoad()
     }
     
-    let defaultControllers: [UIViewController] = {
-        
-        let configurator = HomeConfigurator()
-        let homeVC = HomeViewController()
-        homeVC.configurator = configurator
-        
-        let home = UINavigationController(rootViewController: homeVC)
-        home.navigationBar.tintColor = UIColor.white
-        home.navigationBar.barTintColor = UIColor(red: 99/255, green: 66/255, blue: 140/255, alpha: 1)
-        home.navigationBar.isTranslucent = false
-        home.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "homeDeselected")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "homeActive")?.withRenderingMode(.alwaysOriginal))
-        
-        let aboutVC = AboutViewController()
-        let about = UINavigationController(rootViewController: aboutVC)
-        about.navigationBar.tintColor = UIColor.white
-        about.navigationBar.barTintColor = UIColor(red: 99/255, green: 66/255, blue: 140/255, alpha: 1)
-        about.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white];
-        
-        about.navigationBar.isTranslucent = false
-        aboutVC.tabBarItem = UITabBarItem(title: "Sobre", image: UIImage(named: "tagDeselected")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tagSelected")?.withRenderingMode(.alwaysOriginal))
-        
+    lazy var defaultControllers: [UIViewController] = {
+        let home = homeNavigation
+        let about = aboutNavigation
         return [home, about]
     }()
     
@@ -58,4 +40,31 @@ class LodjinhaTabBarViewController: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    let homeNavigation: UINavigationController = {
+        let configurator = HomeConfigurator()
+        let homeVC = HomeViewController()
+        homeVC.configurator = configurator
+        
+        let home = UINavigationController(rootViewController: homeVC)
+        home.navigationBar.tintColor = UIColor.white
+        home.navigationBar.barTintColor = UIColor(red: 99/255, green: 66/255, blue: 140/255, alpha: 1)
+        home.navigationBar.isTranslucent = false
+        home.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "homeDeselected")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "homeActive")?.withRenderingMode(.alwaysOriginal))
+        
+        return home
+    }()
+    
+    let aboutNavigation: UINavigationController = {
+        let aboutVC = AboutViewController()
+        let about = UINavigationController(rootViewController: aboutVC)
+        about.navigationBar.tintColor = UIColor.white
+        about.navigationBar.barTintColor = UIColor(red: 99/255, green: 66/255, blue: 140/255, alpha: 1)
+        about.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white];
+        
+        about.navigationBar.isTranslucent = false
+        aboutVC.tabBarItem = UITabBarItem(title: "Sobre", image: UIImage(named: "tagDeselected")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tagSelected")?.withRenderingMode(.alwaysOriginal))
+        return about
+    }()
+    
+    
 }

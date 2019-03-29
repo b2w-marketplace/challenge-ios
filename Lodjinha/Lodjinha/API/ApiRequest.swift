@@ -21,7 +21,7 @@ extension ApiRequest {
     }
     
     var timeout: TimeInterval {
-        return 5
+        return 10
     }
     
 }

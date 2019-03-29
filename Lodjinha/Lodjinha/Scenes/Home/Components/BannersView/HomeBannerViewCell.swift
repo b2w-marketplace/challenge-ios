@@ -10,7 +10,6 @@ import UIKit
 
 class HomeBannerViewCell: UICollectionViewCell {
     
-//    var imageDownloader: ImageDownloader!
     var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,16 +46,7 @@ class HomeBannerViewCell: UICollectionViewCell {
     }
     
     func configure(banner: Banner) {
-        
-//        self.imageDownloader = imageDownloader
-//        activityIndicator.startAnimating()
         self.imageView.setImage(fromUrl: banner.imageUrl, withIndicator: activityIndicator, defaultImage: UIImage(named: "downloadImageDefault"))
-//        self.imageDownloader.downloadImage(from: banner.imageUrl) { (image, error) in
-//            DispatchQueue.main.async {
-//                self.activityIndicator.stopAnimating()
-//                self.imageView.image = image
-//            }
-//        }
     }
 
     
