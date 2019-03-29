@@ -29,7 +29,7 @@ class ProductTableViewCell: UITableViewCell {
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.locale = Locale(identifier: "pt-BR")
         productImage.setImage(fromUrl: product.imageUrl, withIndicator: nil)
-        productName.text = product.name
+        productName.text = product.name + product.name + product.name + product.name + product.name
         
         //Attributed Text
         let text = "De \(numberFormatter.string(from: NSNumber(value: product.priceBefore))!)"
@@ -40,4 +40,29 @@ class ProductTableViewCell: UITableViewCell {
         separatorView.isHidden = isLastIndex
     }
     
+}
+
+@IBDesignable
+class SwiftDisclosureIndicator: UIView {
+    @IBInspectable var color = UIColor.purple {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    override func draw(_ rect: CGRect) {
+        let context = UIGraphicsGetCurrentContext()
+        
+        let x = self.bounds.maxX - 4
+        let y = self.bounds.midY
+        let R = CGFloat(2.5)
+        context?.move(to: CGPoint(x: x - R*2, y: y - R*2))
+        context?.addLine(to: CGPoint(x: x, y: y))
+        context?.addLine(to: CGPoint(x: x - R*2, y: y + R*2))
+        context?.setLineCap(.square)
+        context?.setLineJoin(.miter)
+        context?.setLineWidth(2)
+        color.setStroke()
+        context?.strokePath()
+    }
 }
