@@ -10,6 +10,7 @@ import Foundation
 
 protocol HomeRouterProtocol {
     func presentCategoryProducts(forCategory category: ProductCategory)
+    func presentProductDetails(forProduct product: Product)
 }
 
 class HomeRouter: HomeRouterProtocol {
@@ -26,6 +27,14 @@ class HomeRouter: HomeRouterProtocol {
         categoryProductsVC.configurator = CategoryProductsListConfigurator(category: category)
         
         homeViewController?.navigationController?.pushViewController(categoryProductsVC, animated: true)
+    }
+    
+    func presentProductDetails(forProduct product: Product) {
+        let productDetailsVC = ProductDetailsViewController()
+        productDetailsVC.hidesBottomBarWhenPushed = true
+        productDetailsVC.configurator = ProductsDetailsConfigurator(product: product)
+        
+        homeViewController?.navigationController?.pushViewController(productDetailsVC, animated: true)
     }
     
 }

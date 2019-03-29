@@ -46,7 +46,6 @@ class CategoryProductsListViewModel: CategoryProductsListViewModelType {
     
     var service: CategoryProductsGateway!
     var category: ProductCategory
-//    var lastOffset: Int = 0
     
     init(service: CategoryProductsGateway, category: ProductCategory) {
         self.service = service

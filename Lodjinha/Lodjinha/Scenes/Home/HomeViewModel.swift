@@ -120,7 +120,7 @@ class HomeViewModel: HomeViewModelType {
     }
     
     func select(product: Product) {
-        
+        router.presentProductDetails(forProduct: product)
     }
     
     func select(category: ProductCategory) {

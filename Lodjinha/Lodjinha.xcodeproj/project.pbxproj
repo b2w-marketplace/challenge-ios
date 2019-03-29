@@ -41,6 +41,14 @@
 		A5ABB724224DC97900132E2F /* CategoryProductsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB723224DC97900132E2F /* CategoryProductsGateway.swift */; };
 		A5ABB726224DCA3600132E2F /* CategoryProductsApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB725224DCA3600132E2F /* CategoryProductsApiRequest.swift */; };
 		A5ABB728224DD17100132E2F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB727224DD17100132E2F /* HomeRouter.swift */; };
+		A5ABB72C224DE7FC00132E2F /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB72A224DE7FC00132E2F /* ProductDetailsViewController.swift */; };
+		A5ABB72D224DE7FC00132E2F /* ProductDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5ABB72B224DE7FC00132E2F /* ProductDetailsViewController.xib */; };
+		A5ABB72F224DE82E00132E2F /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB72E224DE82E00132E2F /* ProductDetailsViewModel.swift */; };
+		A5ABB731224DE83E00132E2F /* ProductDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB730224DE83E00132E2F /* ProductDetailsConfigurator.swift */; };
+		A5ABB733224DE98600132E2F /* ProductDetailsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB732224DE98600132E2F /* ProductDetailsGateway.swift */; };
+		A5ABB735224DEA4600132E2F /* ProductReservationApIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB734224DEA4600132E2F /* ProductReservationApIRequest.swift */; };
+		A5ABB737224E35F400132E2F /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB736224E35F400132E2F /* Reservation.swift */; };
+		A5ABB739224E369F00132E2F /* ApiReservationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABB738224E369F00132E2F /* ApiReservationResponse.swift */; };
 		A5BD5D54224D0B22004DC834 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD5D52224D0B22004DC834 /* AboutViewController.swift */; };
 		A5BD5D55224D0B22004DC834 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BD5D53224D0B22004DC834 /* AboutViewController.xib */; };
 		A5BD5D59224D20E2004DC834 /* HomeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD5D58224D20E2004DC834 /* HomeTableHeaderView.swift */; };
@@ -104,6 +112,14 @@
 		A5ABB723224DC97900132E2F /* CategoryProductsGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsGateway.swift; sourceTree = "<group>"; };
 		A5ABB725224DCA3600132E2F /* CategoryProductsApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsApiRequest.swift; sourceTree = "<group>"; };
 		A5ABB727224DD17100132E2F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		A5ABB72A224DE7FC00132E2F /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		A5ABB72B224DE7FC00132E2F /* ProductDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsViewController.xib; sourceTree = "<group>"; };
+		A5ABB72E224DE82E00132E2F /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		A5ABB730224DE83E00132E2F /* ProductDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsConfigurator.swift; sourceTree = "<group>"; };
+		A5ABB732224DE98600132E2F /* ProductDetailsGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsGateway.swift; sourceTree = "<group>"; };
+		A5ABB734224DEA4600132E2F /* ProductReservationApIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductReservationApIRequest.swift; sourceTree = "<group>"; };
+		A5ABB736224E35F400132E2F /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		A5ABB738224E369F00132E2F /* ApiReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiReservationResponse.swift; sourceTree = "<group>"; };
 		A5BD5D52224D0B22004DC834 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A5BD5D53224D0B22004DC834 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		A5BD5D58224D20E2004DC834 /* HomeTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableHeaderView.swift; sourceTree = "<group>"; };
@@ -185,6 +201,7 @@
 			children = (
 				A56DDF53224C5C0700C340BF /* HomeServiceGateway.swift */,
 				A5ABB723224DC97900132E2F /* CategoryProductsGateway.swift */,
+				A5ABB732224DE98600132E2F /* ProductDetailsGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -205,6 +222,7 @@
 				A56DDF5D224C6FA200C340BF /* CategoriesApiRequest.swift */,
 				A56DDF61224C74AC00C340BF /* TopSellingProductsRequest.swift */,
 				A5ABB725224DCA3600132E2F /* CategoryProductsApiRequest.swift */,
+				A5ABB734224DEA4600132E2F /* ProductReservationApIRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -215,6 +233,7 @@
 				A56DDF51224C5BC600C340BF /* ApiBannerResponse.swift */,
 				A56DDF5F224C6FD900C340BF /* ApiCategoriesResponse.swift */,
 				A56DDF63224C751000C340BF /* ApiProductsResponse.swift */,
+				A5ABB738224E369F00132E2F /* ApiReservationResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -222,6 +241,7 @@
 		A56DDF55224C5C6A00C340BF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A5ABB729224DE7E100132E2F /* ProductDeatails */,
 				A5ABB71A224DABA400132E2F /* CategoryProductsList */,
 				A58D348D224CFB9000D79DA3 /* Tabbar */,
 				A5BD5D51224D0B0B004DC834 /* About */,
@@ -283,6 +303,17 @@
 				A5ABB721224DAC1B00132E2F /* CategoryProductsListConfigurator.swift */,
 			);
 			path = CategoryProductsList;
+			sourceTree = "<group>";
+		};
+		A5ABB729224DE7E100132E2F /* ProductDeatails */ = {
+			isa = PBXGroup;
+			children = (
+				A5ABB72A224DE7FC00132E2F /* ProductDetailsViewController.swift */,
+				A5ABB72B224DE7FC00132E2F /* ProductDetailsViewController.xib */,
+				A5ABB72E224DE82E00132E2F /* ProductDetailsViewModel.swift */,
+				A5ABB730224DE83E00132E2F /* ProductDetailsConfigurator.swift */,
+			);
+			path = ProductDeatails;
 			sourceTree = "<group>";
 		};
 		A5BD5D51224D0B0B004DC834 /* About */ = {
@@ -400,6 +431,7 @@
 				A5E8919C224B3C690000EC0C /* Banner.swift */,
 				A56DDF57224C60B800C340BF /* ProductCategory.swift */,
 				A56DDF59224C60C500C340BF /* Product.swift */,
+				A5ABB736224E35F400132E2F /* Reservation.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -496,6 +528,7 @@
 				A5BD5D60224D265F004DC834 /* OFL.txt in Resources */,
 				A5ABB71E224DABFA00132E2F /* CategoryProductsListViewController.xib in Resources */,
 				A5DDB5B22248996E0019550E /* HomeViewController.xib in Resources */,
+				A5ABB72D224DE7FC00132E2F /* ProductDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +549,7 @@
 				A56DDF6D224C891A00C340BF /* UIImageView+Extensions.swift in Sources */,
 				A56DDF4D224C5B7B00C340BF /* ApiRequest.swift in Sources */,
 				A56DDF69224C81E700C340BF /* CategoryCollectionViewCell.swift in Sources */,
+				A5ABB72C224DE7FC00132E2F /* ProductDetailsViewController.swift in Sources */,
 				A56DDF48224C5B2000C340BF /* ApiResponse.swift in Sources */,
 				A56343B7224997F700251BFA /* HomeBannersView.swift in Sources */,
 				A56DDF5C224C65F500C340BF /* HomeConfigurator.swift in Sources */,
@@ -535,9 +569,15 @@
 				A5ABB726224DCA3600132E2F /* CategoryProductsApiRequest.swift in Sources */,
 				A5BD5D59224D20E2004DC834 /* HomeTableHeaderView.swift in Sources */,
 				A5ABB724224DC97900132E2F /* CategoryProductsGateway.swift in Sources */,
+				A5ABB733224DE98600132E2F /* ProductDetailsGateway.swift in Sources */,
+				A5ABB72F224DE82E00132E2F /* ProductDetailsViewModel.swift in Sources */,
 				A56DDF67224C819300C340BF /* CategoriesCarouselTableViewCell.swift in Sources */,
+				A5ABB737224E35F400132E2F /* Reservation.swift in Sources */,
 				A56DDF62224C74AC00C340BF /* TopSellingProductsRequest.swift in Sources */,
+				A5ABB739224E369F00132E2F /* ApiReservationResponse.swift in Sources */,
+				A5ABB731224DE83E00132E2F /* ProductDetailsConfigurator.swift in Sources */,
 				A56DDF5E224C6FA200C340BF /* CategoriesApiRequest.swift in Sources */,
+				A5ABB735224DEA4600132E2F /* ProductReservationApIRequest.swift in Sources */,
 				A5ABB728224DD17100132E2F /* HomeRouter.swift in Sources */,
 				A5E8919D224B3C690000EC0C /* Banner.swift in Sources */,
 				A56DDF70224C8F0A00C340BF /* ProductTableViewCell.swift in Sources */,
