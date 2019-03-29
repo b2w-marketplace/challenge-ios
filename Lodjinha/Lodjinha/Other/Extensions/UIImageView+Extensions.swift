@@ -8,12 +8,15 @@
 
 import UIKit
 
-extension UIImageView {
+@objc protocol UrlSettableImageView {
+    @objc func setImage(fromUrl url: String, withIndicator indicator: UIActivityIndicatorView?, defaultImage: UIImage?)
+}
+
+extension UIImageView: UrlSettableImageView {
     
     func setImage(fromUrl url: String, withIndicator indicator: UIActivityIndicatorView?, defaultImage: UIImage? = nil) {
         indicator?.startAnimating()
-        let imageDownloader = LodjinhaImageDownloader()
-        imageDownloader.downloadImage(from: url) { (image, error) in
+        LodjinhaImageDownloader().downloadImage(from: url) { (image, error) in
             DispatchQueue.main.async { [unowned self] in
                 if let downloadedImage = image {
                     self.image = downloadedImage

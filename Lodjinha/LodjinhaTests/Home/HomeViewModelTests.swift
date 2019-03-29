@@ -15,25 +15,44 @@ class HomeViewModelTests: XCTestCase {
     
     func test_viewModel_shouldHaveAtLeastOneBannerAfterSuccessLoadingBannersFromAPI() {
         let service = StubSuccessHomeService()
-        sut = HomeViewModel(service: service)
-        
-        sut.loadBanners()
+        sut = HomeViewModel(service: service, router: HomeRouterSpy())
+
+        sut.loadHome()
         
         XCTAssertTrue(sut.banners.count > 0)
     }
     
     func test_viewModel_shouldHaveZeroBannersAfterFailingToLoadBannersFromAPI() {
         let service = StubFailureHomeService()
-        sut = HomeViewModel(service: service)
+        sut = HomeViewModel(service: service, router: HomeRouterSpy())
         
-        sut.loadBanners()
+        sut.loadHome()
         
         XCTAssertTrue(sut.banners.count == 0)
     }
     
 }
 
+class HomeRouterSpy: HomeRouterProtocol {
+    func presentCategoryProducts(forCategory category: ProductCategory) {
+        
+    }
+    
+    func presentProductDetails(forProduct product: Product) {
+        
+    }
+    
+}
+
 class StubSuccessHomeService: HomeServiceGateway {
+    func loadCategories(completion: @escaping (Result<[ProductCategory]>) -> Void) {
+        
+    }
+    
+    func loadTopSellingProducts(completion: @escaping (Result<[Product]>) -> Void) {
+        
+    }
+    
     
     var banners = [Banner(id: 1, imageUrl: "", linkUrl: "")]
     func loadBanners(completion: @escaping (Result<[Banner]>) -> Void) {
@@ -42,6 +61,14 @@ class StubSuccessHomeService: HomeServiceGateway {
 }
 
 class StubFailureHomeService: HomeServiceGateway {
+    func loadCategories(completion: @escaping (Result<[ProductCategory]>) -> Void) {
+        
+    }
+    
+    func loadTopSellingProducts(completion: @escaping (Result<[Product]>) -> Void) {
+        
+    }
+    
     
     let lodjinhaError = NSError(domain: "Banners.Lodjinha", code: 100, userInfo: [NSLocalizedDescriptionKey : "Could not fetch banners from api"])
     func loadBanners(completion: @escaping (Result<[Banner]>) -> Void) {

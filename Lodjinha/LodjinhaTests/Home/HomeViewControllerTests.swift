@@ -10,34 +10,18 @@ import XCTest
 @testable import Lodjinha
 
 class HomeViewControllerTests: XCTestCase {
+    override func setUp() {
+        super.setUp()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+    }
+}
 
-    func test_homeViewController_shouldHaveBannersToShow_afterLoadingView() {
-        let sut = HomeViewController(homeInfoLoader: RemoteHomeInfoLoader())
+class HomeConfiguratorMock: HomeConfiguratorProtocol {
+    
+    func configure(viewController: HomeViewController) {
         
-        sut.loadViewIfNeeded()
-        
-        XCTAssertNotNil(sut.tableView.tableHeaderView)
-        XCTAssertTrue(sut.tableView.tableHeaderView!.isKind(of: HomeBannersView.self))
-        let banners = sut.tableView.tableHeaderView as! HomeBannersView
-        XCTAssertTrue(banners.bannersCount > 0)
     }
-    
-    func test_homeViewController_shoulHaveCategoriesToShow_afterLoadingView() {
-        let sut = HomeViewController(homeInfoLoader: RemoteHomeInfoLoader())
-        sut.loadViewIfNeeded()
-        XCTAssertTrue(sut.categories.count > 0)
-    }
-    
-    func test_homeViewController_shouldHaveTopSellingProductsToShow_afterLoadingView() {
-        let sut = HomeViewController(homeInfoLoader: RemoteHomeInfoLoader())
-        sut.loadViewIfNeeded()
-        XCTAssertTrue(sut.topSellingProducts.count > 0)
-    }
- 
-    func test_homeViewController_shouldHaveTableViewOutletInitialized_afterLoadingView() {
-        let sut = HomeViewController(homeInfoLoader: RemoteHomeInfoLoader())
-        sut.loadViewIfNeeded()
-        XCTAssertNotNil(sut.tableView)
-    }
-    
 }

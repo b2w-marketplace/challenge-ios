@@ -11,7 +11,7 @@ import UIKit
 class HomeBannerViewCell: UICollectionViewCell {
     
 //    var imageDownloader: ImageDownloader!
-    let imageView: UIImageView = {
+    var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView

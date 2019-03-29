@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A56343B7224997F700251BFA /* HomeBannersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56343B6224997F700251BFA /* HomeBannersView.swift */; };
-		A56343BA224999F600251BFA /* HomeBannersViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56343B9224999F600251BFA /* HomeBannersViewTests.swift */; };
 		A56343BC2249A20E00251BFA /* HomeBannersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56343BB2249A20E00251BFA /* HomeBannersView.xib */; };
 		A56343C02249AF6400251BFA /* HomeBannersViewXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56343BF2249AF6400251BFA /* HomeBannersViewXIB.swift */; };
 		A56DDF3E224C312C00C340BF /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DDF3D224C312C00C340BF /* HomeViewModelTests.swift */; };
@@ -80,7 +79,6 @@
 
 /* Begin PBXFileReference section */
 		A56343B6224997F700251BFA /* HomeBannersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersView.swift; sourceTree = "<group>"; };
-		A56343B9224999F600251BFA /* HomeBannersViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersViewTests.swift; sourceTree = "<group>"; };
 		A56343BB2249A20E00251BFA /* HomeBannersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannersView.xib; sourceTree = "<group>"; };
 		A56343BF2249AF6400251BFA /* HomeBannersViewXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannersViewXIB.swift; sourceTree = "<group>"; };
 		A56DDF3D224C312C00C340BF /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				A5DDB5A2224877E30019550E /* HomeViewControllerTests.swift */,
-				A56343B9224999F600251BFA /* HomeBannersViewTests.swift */,
 				A5E32188224B1C1800B95E37 /* HomeBannersViewCellTests.swift */,
 				A56DDF3D224C312C00C340BF /* HomeViewModelTests.swift */,
 			);
@@ -602,7 +599,6 @@
 			files = (
 				A5E32189224B1C1800B95E37 /* HomeBannersViewCellTests.swift in Sources */,
 				A5DDB5A3224877E30019550E /* HomeViewControllerTests.swift in Sources */,
-				A56343BA224999F600251BFA /* HomeBannersViewTests.swift in Sources */,
 				A56DDF3E224C312C00C340BF /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

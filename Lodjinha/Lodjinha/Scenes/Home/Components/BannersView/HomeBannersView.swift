@@ -19,9 +19,13 @@ class HomeBannersView: UIView {
         }
     }
     
-    private var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     private var pageControl: UIPageControl!
     private weak var bannersXIB: HomeBannersViewXIB!
+    
+    var bannersCount: Int {
+        return banners.count
+    }
     
     func updateBanners(banners: [Banner]) {
         self.banners = banners
