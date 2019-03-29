@@ -76,7 +76,7 @@ class CategoryProductsListViewController: UIViewController {
     @objc private func reloadInfo() {
         viewModel.loadProducts()
     }
-    
+
 }
 
 extension CategoryProductsListViewController: CategoryProductsListServicesDelegate {

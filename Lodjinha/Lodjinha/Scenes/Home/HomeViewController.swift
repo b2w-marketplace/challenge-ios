@@ -68,7 +68,6 @@ class HomeViewController: UIViewController {
         imageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imageView
     }
-    
 }
 
 extension HomeViewController: HomeServicesDelegate {

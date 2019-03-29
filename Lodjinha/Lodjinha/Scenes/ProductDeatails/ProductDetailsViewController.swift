@@ -69,7 +69,7 @@ class ProductDetailsViewController: UIViewController {
     @IBAction func reservationAction(_ sender: Any) {
         viewModel.reserveProduct()
     }
-    
+
 }
 
 extension ProductDetailsViewController: ProductDetailsServicesDelegate {
