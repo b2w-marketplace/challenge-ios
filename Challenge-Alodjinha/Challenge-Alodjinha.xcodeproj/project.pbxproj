@@ -13,6 +13,7 @@
 		7524C9D72266065500AAAA54 /* Challenge_AlodjinhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524C9D62266065500AAAA54 /* Challenge_AlodjinhaTests.swift */; };
 		75FB08782266494600B59B28 /* BannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08772266494600B59B28 /* BannerResponse.swift */; };
 		75FB087A2266496B00B59B28 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08792266496B00B59B28 /* Banner.swift */; };
+		75FB087C22664A6100B59B28 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB087B22664A6100B59B28 /* BaseAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		7524C9D82266065500AAAA54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75FB08772266494600B59B28 /* BannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerResponse.swift; sourceTree = "<group>"; };
 		75FB08792266496B00B59B28 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		75FB087B22664A6100B59B28 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		75FB08732266484900B59B28 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				75FB087B22664A6100B59B28 /* BaseAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75FB08782266494600B59B28 /* BannerResponse.swift in Sources */,
+				75FB087C22664A6100B59B28 /* BaseAPI.swift in Sources */,
 				7524C9C22266065400AAAA54 /* AppDelegate.swift in Sources */,
 				75FB087A2266496B00B59B28 /* Banner.swift in Sources */,
 			);
