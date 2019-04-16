@@ -14,6 +14,7 @@
 		75FB08782266494600B59B28 /* BannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08772266494600B59B28 /* BannerResponse.swift */; };
 		75FB087A2266496B00B59B28 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08792266496B00B59B28 /* Banner.swift */; };
 		75FB087C22664A6100B59B28 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB087B22664A6100B59B28 /* BaseAPI.swift */; };
+		75FB087F22664AFA00B59B28 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB087E22664AFA00B59B28 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		75FB08772266494600B59B28 /* BannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerResponse.swift; sourceTree = "<group>"; };
 		75FB08792266496B00B59B28 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		75FB087B22664A6100B59B28 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		75FB087E22664AFA00B59B28 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		75FB08732266484900B59B28 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				75FB087D22664AED00B59B28 /* Request */,
 				75FB087B22664A6100B59B28 /* BaseAPI.swift */,
 			);
 			path = Network;
@@ -153,6 +156,14 @@
 			children = (
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		75FB087D22664AED00B59B28 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				75FB087E22664AFA00B59B28 /* APIRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 				75FB08782266494600B59B28 /* BannerResponse.swift in Sources */,
 				75FB087C22664A6100B59B28 /* BaseAPI.swift in Sources */,
 				7524C9C22266065400AAAA54 /* AppDelegate.swift in Sources */,
+				75FB087F22664AFA00B59B28 /* APIRequest.swift in Sources */,
 				75FB087A2266496B00B59B28 /* Banner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
