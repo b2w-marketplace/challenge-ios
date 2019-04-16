@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7524C9C22266065400AAAA54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524C9C12266065400AAAA54 /* AppDelegate.swift */; };
+		7524C9C92266065500AAAA54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7524C9C82266065500AAAA54 /* Assets.xcassets */; };
+		7524C9CC2266065500AAAA54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7524C9CA2266065500AAAA54 /* LaunchScreen.storyboard */; };
+		7524C9D72266065500AAAA54 /* Challenge_AlodjinhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524C9D62266065500AAAA54 /* Challenge_AlodjinhaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7524C9D32266065500AAAA54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7524C9B62266065400AAAA54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7524C9BD2266065400AAAA54;
+			remoteInfo = "Challenge-Alodjinha";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7524C9BE2266065400AAAA54 /* Challenge-Alodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge-Alodjinha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7524C9C12266065400AAAA54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7524C9C82266065500AAAA54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7524C9CB2266065500AAAA54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7524C9CD2266065500AAAA54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7524C9D22266065500AAAA54 /* Challenge-AlodjinhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Challenge-AlodjinhaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7524C9D62266065500AAAA54 /* Challenge_AlodjinhaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_AlodjinhaTests.swift; sourceTree = "<group>"; };
+		7524C9D82266065500AAAA54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7524C9BB2266065400AAAA54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7524C9CF2266065500AAAA54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7524C9B52266065400AAAA54 = {
+			isa = PBXGroup;
+			children = (
+				7524C9C02266065400AAAA54 /* Challenge-Alodjinha */,
+				7524C9D52266065500AAAA54 /* Challenge-AlodjinhaTests */,
+				7524C9BF2266065400AAAA54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7524C9BF2266065400AAAA54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7524C9BE2266065400AAAA54 /* Challenge-Alodjinha.app */,
+				7524C9D22266065500AAAA54 /* Challenge-AlodjinhaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7524C9C02266065400AAAA54 /* Challenge-Alodjinha */ = {
+			isa = PBXGroup;
+			children = (
+				7524C9E32266135C00AAAA54 /* AppDelegate */,
+				7524C9E22266135600AAAA54 /* Base */,
+				7524C9E12266135000AAAA54 /* Other */,
+				7524C9CD2266065500AAAA54 /* Info.plist */,
+			);
+			path = "Challenge-Alodjinha";
+			sourceTree = "<group>";
+		};
+		7524C9D52266065500AAAA54 /* Challenge-AlodjinhaTests */ = {
+			isa = PBXGroup;
+			children = (
+				7524C9D62266065500AAAA54 /* Challenge_AlodjinhaTests.swift */,
+				7524C9D82266065500AAAA54 /* Info.plist */,
+			);
+			path = "Challenge-AlodjinhaTests";
+			sourceTree = "<group>";
+		};
+		7524C9E12266135000AAAA54 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7524C9CA2266065500AAAA54 /* LaunchScreen.storyboard */,
+				7524C9C82266065500AAAA54 /* Assets.xcassets */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		7524C9E22266135600AAAA54 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7524C9E32266135C00AAAA54 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7524C9C12266065400AAAA54 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7524C9BD2266065400AAAA54 /* Challenge-Alodjinha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7524C9DB2266065500AAAA54 /* Build configuration list for PBXNativeTarget "Challenge-Alodjinha" */;
+			buildPhases = (
+				7524C9BA2266065400AAAA54 /* Sources */,
+				7524C9BB2266065400AAAA54 /* Frameworks */,
+				7524C9BC2266065400AAAA54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Challenge-Alodjinha";
+			productName = "Challenge-Alodjinha";
+			productReference = 7524C9BE2266065400AAAA54 /* Challenge-Alodjinha.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7524C9D12266065500AAAA54 /* Challenge-AlodjinhaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7524C9DE2266065500AAAA54 /* Build configuration list for PBXNativeTarget "Challenge-AlodjinhaTests" */;
+			buildPhases = (
+				7524C9CE2266065500AAAA54 /* Sources */,
+				7524C9CF2266065500AAAA54 /* Frameworks */,
+				7524C9D02266065500AAAA54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7524C9D42266065500AAAA54 /* PBXTargetDependency */,
+			);
+			name = "Challenge-AlodjinhaTests";
+			productName = "Challenge-AlodjinhaTests";
+			productReference = 7524C9D22266065500AAAA54 /* Challenge-AlodjinhaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7524C9B62266065400AAAA54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Luis Ferreira";
+				TargetAttributes = {
+					7524C9BD2266065400AAAA54 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7524C9D12266065500AAAA54 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 7524C9BD2266065400AAAA54;
+					};
+				};
+			};
+			buildConfigurationList = 7524C9B92266065400AAAA54 /* Build configuration list for PBXProject "Challenge-Alodjinha" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7524C9B52266065400AAAA54;
+			productRefGroup = 7524C9BF2266065400AAAA54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7524C9BD2266065400AAAA54 /* Challenge-Alodjinha */,
+				7524C9D12266065500AAAA54 /* Challenge-AlodjinhaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7524C9BC2266065400AAAA54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7524C9CC2266065500AAAA54 /* LaunchScreen.storyboard in Resources */,
+				7524C9C92266065500AAAA54 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7524C9D02266065500AAAA54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7524C9BA2266065400AAAA54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7524C9C22266065400AAAA54 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7524C9CE2266065500AAAA54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7524C9D72266065500AAAA54 /* Challenge_AlodjinhaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7524C9D42266065500AAAA54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7524C9BD2266065400AAAA54 /* Challenge-Alodjinha */;
+			targetProxy = 7524C9D32266065500AAAA54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7524C9CA2266065500AAAA54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7524C9CB2266065500AAAA54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7524C9D92266065500AAAA54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7524C9DA2266065500AAAA54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7524C9DC2266065500AAAA54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AQ2VR4HU3;
+				INFOPLIST_FILE = "Challenge-Alodjinha/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luisferreira.Challenge-Alodjinha";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7524C9DD2266065500AAAA54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AQ2VR4HU3;
+				INFOPLIST_FILE = "Challenge-Alodjinha/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luisferreira.Challenge-Alodjinha";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7524C9DF2266065500AAAA54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AQ2VR4HU3;
+				INFOPLIST_FILE = "Challenge-AlodjinhaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luisferreira.Challenge-AlodjinhaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge-Alodjinha.app/Challenge-Alodjinha";
+			};
+			name = Debug;
+		};
+		7524C9E02266065500AAAA54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AQ2VR4HU3;
+				INFOPLIST_FILE = "Challenge-AlodjinhaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luisferreira.Challenge-AlodjinhaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge-Alodjinha.app/Challenge-Alodjinha";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7524C9B92266065400AAAA54 /* Build configuration list for PBXProject "Challenge-Alodjinha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7524C9D92266065500AAAA54 /* Debug */,
+				7524C9DA2266065500AAAA54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7524C9DB2266065500AAAA54 /* Build configuration list for PBXNativeTarget "Challenge-Alodjinha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7524C9DC2266065500AAAA54 /* Debug */,
+				7524C9DD2266065500AAAA54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7524C9DE2266065500AAAA54 /* Build configuration list for PBXNativeTarget "Challenge-AlodjinhaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7524C9DF2266065500AAAA54 /* Debug */,
+				7524C9E02266065500AAAA54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7524C9B62266065400AAAA54 /* Project object */;
+}
