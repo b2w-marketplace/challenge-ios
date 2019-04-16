@@ -81,4 +81,23 @@ class APIRequest {
             }.resume()
     }
     
+    func loadProduct(id: Int, completion: @escaping (ProductIdResponse?) -> Void) {
+        session.dataTask(with: BaseAPI().searchURL(id: id, endpoint: .product)) { (data, response, error) in
+            guard let data = data else {return}
+            guard let response = response as? HTTPURLResponse else {return}
+            if response.statusCode == 200 {
+                do {
+                    let product = try JSONDecoder().decode(ProductIdResponse.self, from: data)
+                    completion(product)
+                    return
+                } catch {
+                    print(error.localizedDescription)
+                    completion(nil)
+                    return
+                }
+            } else {
+                print("Response Status: \(response.statusCode)")
+            }
+        }.resume()
+    }
 }
