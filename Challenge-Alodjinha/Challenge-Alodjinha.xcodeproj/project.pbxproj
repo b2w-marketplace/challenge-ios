@@ -22,6 +22,8 @@
 		75FB088822664E3A00B59B28 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB088722664E3A00B59B28 /* Protocols.swift */; };
 		75FB08922266601000B59B28 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08912266601000B59B28 /* BannerView.swift */; };
 		75FB08942266601B00B59B28 /* BannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08932266601B00B59B28 /* BannerView.xib */; };
+		75FB08962266829D00B59B28 /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08952266829D00B59B28 /* CategoryResponse.swift */; };
+		75FB0898226682BE00B59B28 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB0897226682BE00B59B28 /* Category.swift */; };
 		E2B36C27995C01E1CBA74DC8 /* Pods_Challenge_Alodjinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		75FB088722664E3A00B59B28 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		75FB08912266601000B59B28 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		75FB08932266601B00B59B28 /* BannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerView.xib; sourceTree = "<group>"; };
+		75FB08952266829D00B59B28 /* CategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResponse.swift; sourceTree = "<group>"; };
+		75FB0897226682BE00B59B28 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		855405F06AB83AC86EC0BE50 /* Pods_Challenge_AlodjinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_AlodjinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_Alodjinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5365083FD04ECCD825D9A43 /* Pods-Challenge-AlodjinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-AlodjinhaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 			children = (
 				75FB08772266494600B59B28 /* BannerResponse.swift */,
 				75FB08792266496B00B59B28 /* Banner.swift */,
+				75FB08952266829D00B59B28 /* CategoryResponse.swift */,
+				75FB0897226682BE00B59B28 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -441,11 +447,13 @@
 				75FB088622664D6E00B59B28 /* HomeView.swift in Sources */,
 				75FB088422664D5D00B59B28 /* HomeViewModel.swift in Sources */,
 				75FB087C22664A6100B59B28 /* BaseAPI.swift in Sources */,
+				75FB08962266829D00B59B28 /* CategoryResponse.swift in Sources */,
 				7524C9C22266065400AAAA54 /* AppDelegate.swift in Sources */,
 				75FB08922266601000B59B28 /* BannerView.swift in Sources */,
 				75FB087F22664AFA00B59B28 /* APIRequest.swift in Sources */,
 				75FB087A2266496B00B59B28 /* Banner.swift in Sources */,
 				75FB088822664E3A00B59B28 /* Protocols.swift in Sources */,
+				75FB0898226682BE00B59B28 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
