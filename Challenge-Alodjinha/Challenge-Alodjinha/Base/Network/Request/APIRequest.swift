@@ -61,4 +61,24 @@ class APIRequest {
         }.resume()
     }
     
+    func loadCategory(completion: @escaping (CategoryResponse?) -> Void) {
+        session.dataTask(with: BaseAPI().searchURL(endpoint: .category)) { (data, response, error) in
+            guard let data = data else {return}
+            guard let response = response as? HTTPURLResponse else {return}
+            if response.statusCode == 200 {
+                do {
+                    let category = try JSONDecoder().decode(CategoryResponse.self, from: data)
+                    completion(category)
+                    return
+                } catch {
+                    print(error.localizedDescription)
+                    completion(nil)
+                    return
+                }
+            } else {
+                print("Response Status: \(response.statusCode)")
+            }
+            }.resume()
+    }
+    
 }
