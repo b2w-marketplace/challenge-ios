@@ -41,4 +41,24 @@ class APIRequest {
         }.resume()
     }
     
+    func loadBestSeller(completion: @escaping (ProductResponse?) -> Void) {
+        session.dataTask(with: BaseAPI().searchURL(endpoint: .bestSeller)) { (data, response, error) in
+            guard let data = data else {return}
+            guard let response = response as? HTTPURLResponse else {return}
+            if response.statusCode == 200 {
+                do {
+                    let bestSeller = try JSONDecoder().decode(ProductResponse.self, from: data)
+                    completion(bestSeller)
+                    return
+                } catch {
+                    print(error.localizedDescription)
+                    completion(nil)
+                    return
+                }
+            } else {
+                print("Response Status: \(response.statusCode)")
+            }
+        }.resume()
+    }
+    
 }
