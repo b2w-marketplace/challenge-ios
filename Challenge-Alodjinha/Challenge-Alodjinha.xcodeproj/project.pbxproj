@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4C4461C8E7256B14732DAA /* Pods_Challenge_AlodjinhaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855405F06AB83AC86EC0BE50 /* Pods_Challenge_AlodjinhaTests.framework */; };
 		7524C9C22266065400AAAA54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524C9C12266065400AAAA54 /* AppDelegate.swift */; };
 		7524C9C92266065500AAAA54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7524C9C82266065500AAAA54 /* Assets.xcassets */; };
 		7524C9CC2266065500AAAA54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7524C9CA2266065500AAAA54 /* LaunchScreen.storyboard */; };
@@ -18,6 +19,10 @@
 		75FB088222664C8E00B59B28 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75FB088122664C8E00B59B28 /* HomeView.storyboard */; };
 		75FB088422664D5D00B59B28 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB088322664D5D00B59B28 /* HomeViewModel.swift */; };
 		75FB088622664D6E00B59B28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB088522664D6E00B59B28 /* HomeView.swift */; };
+		75FB088822664E3A00B59B28 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB088722664E3A00B59B28 /* Protocols.swift */; };
+		75FB08922266601000B59B28 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08912266601000B59B28 /* BannerView.swift */; };
+		75FB08942266601B00B59B28 /* BannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08932266601B00B59B28 /* BannerView.xib */; };
+		E2B36C27995C01E1CBA74DC8 /* Pods_Challenge_Alodjinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39C1103B9499573845ABC1DB /* Pods-Challenge-AlodjinhaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-AlodjinhaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57F894E05CEA7BC710E82BA7 /* Pods-Challenge-Alodjinha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Alodjinha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha.debug.xcconfig"; sourceTree = "<group>"; };
 		7524C9BE2266065400AAAA54 /* Challenge-Alodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge-Alodjinha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7524C9C12266065400AAAA54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7524C9C82266065500AAAA54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +53,13 @@
 		75FB088122664C8E00B59B28 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		75FB088322664D5D00B59B28 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		75FB088522664D6E00B59B28 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		75FB088722664E3A00B59B28 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		75FB08912266601000B59B28 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		75FB08932266601B00B59B28 /* BannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerView.xib; sourceTree = "<group>"; };
+		855405F06AB83AC86EC0BE50 /* Pods_Challenge_AlodjinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_AlodjinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_Alodjinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5365083FD04ECCD825D9A43 /* Pods-Challenge-AlodjinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-AlodjinhaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests.release.xcconfig"; sourceTree = "<group>"; };
+		E5EE4A64D788E374237EE1FF /* Pods-Challenge-Alodjinha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Alodjinha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B36C27995C01E1CBA74DC8 /* Pods_Challenge_Alodjinha.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,18 +75,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4C4461C8E7256B14732DAA /* Pods_Challenge_AlodjinhaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		620A20863EA887DCCA1C0B97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57F894E05CEA7BC710E82BA7 /* Pods-Challenge-Alodjinha.debug.xcconfig */,
+				E5EE4A64D788E374237EE1FF /* Pods-Challenge-Alodjinha.release.xcconfig */,
+				39C1103B9499573845ABC1DB /* Pods-Challenge-AlodjinhaTests.debug.xcconfig */,
+				E5365083FD04ECCD825D9A43 /* Pods-Challenge-AlodjinhaTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		66DD00E0E725057100C66E49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */,
+				855405F06AB83AC86EC0BE50 /* Pods_Challenge_AlodjinhaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7524C9B52266065400AAAA54 = {
 			isa = PBXGroup;
 			children = (
 				7524C9C02266065400AAAA54 /* Challenge-Alodjinha */,
 				7524C9D52266065500AAAA54 /* Challenge-AlodjinhaTests */,
 				7524C9BF2266065400AAAA54 /* Products */,
+				620A20863EA887DCCA1C0B97 /* Pods */,
+				66DD00E0E725057100C66E49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,11 +214,30 @@
 		75FB088022664C8100B59B28 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				75FB088922664F6300B59B28 /* Components */,
 				75FB088122664C8E00B59B28 /* HomeView.storyboard */,
 				75FB088522664D6E00B59B28 /* HomeView.swift */,
 				75FB088322664D5D00B59B28 /* HomeViewModel.swift */,
+				75FB088722664E3A00B59B28 /* Protocols.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		75FB088922664F6300B59B28 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				75FB088A22664F6A00B59B28 /* Banner */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		75FB088A22664F6A00B59B28 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				75FB08912266601000B59B28 /* BannerView.swift */,
+				75FB08932266601B00B59B28 /* BannerView.xib */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7524C9DB2266065500AAAA54 /* Build configuration list for PBXNativeTarget "Challenge-Alodjinha" */;
 			buildPhases = (
+				DA97ACC48E02C23F6BCDADC9 /* [CP] Check Pods Manifest.lock */,
 				7524C9BA2266065400AAAA54 /* Sources */,
 				7524C9BB2266065400AAAA54 /* Frameworks */,
 				7524C9BC2266065400AAAA54 /* Resources */,
+				1FC125722BA86C2097D0DC60 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7524C9DE2266065500AAAA54 /* Build configuration list for PBXNativeTarget "Challenge-AlodjinhaTests" */;
 			buildPhases = (
+				919E4A6EA6DD1B0CB87D648D /* [CP] Check Pods Manifest.lock */,
 				7524C9CE2266065500AAAA54 /* Sources */,
 				7524C9CF2266065500AAAA54 /* Frameworks */,
 				7524C9D02266065500AAAA54 /* Resources */,
+				2FB2A6CA98A3279F141E39AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75FB08942266601B00B59B28 /* BannerView.xib in Resources */,
 				75FB088222664C8E00B59B28 /* HomeView.storyboard in Resources */,
 				7524C9CC2266065500AAAA54 /* LaunchScreen.storyboard in Resources */,
 				7524C9C92266065500AAAA54 /* Assets.xcassets in Resources */,
@@ -279,6 +341,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FC125722BA86C2097D0DC60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FB2A6CA98A3279F141E39AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		919E4A6EA6DD1B0CB87D648D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Challenge-AlodjinhaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA97ACC48E02C23F6BCDADC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Challenge-Alodjinha-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7524C9BA2266065400AAAA54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -289,8 +442,10 @@
 				75FB088422664D5D00B59B28 /* HomeViewModel.swift in Sources */,
 				75FB087C22664A6100B59B28 /* BaseAPI.swift in Sources */,
 				7524C9C22266065400AAAA54 /* AppDelegate.swift in Sources */,
+				75FB08922266601000B59B28 /* BannerView.swift in Sources */,
 				75FB087F22664AFA00B59B28 /* APIRequest.swift in Sources */,
 				75FB087A2266496B00B59B28 /* Banner.swift in Sources */,
+				75FB088822664E3A00B59B28 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +597,7 @@
 		};
 		7524C9DC2266065500AAAA54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57F894E05CEA7BC710E82BA7 /* Pods-Challenge-Alodjinha.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,12 +610,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.luisferreira.Challenge-Alodjinha";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7524C9DD2266065500AAAA54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5EE4A64D788E374237EE1FF /* Pods-Challenge-Alodjinha.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,12 +629,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.luisferreira.Challenge-Alodjinha";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		7524C9DF2266065500AAAA54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39C1103B9499573845ABC1DB /* Pods-Challenge-AlodjinhaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -499,6 +657,7 @@
 		};
 		7524C9E02266065500AAAA54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5365083FD04ECCD825D9A43 /* Pods-Challenge-AlodjinhaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
