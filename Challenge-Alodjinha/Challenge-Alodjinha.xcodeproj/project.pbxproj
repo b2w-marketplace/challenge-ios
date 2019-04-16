@@ -26,6 +26,7 @@
 		75FB0898226682BE00B59B28 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB0897226682BE00B59B28 /* Category.swift */; };
 		75FB089A2266830900B59B28 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08992266830900B59B28 /* ProductResponse.swift */; };
 		75FB089C2266832400B59B28 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB089B2266832400B59B28 /* Product.swift */; };
+		75FB089E226683F400B59B28 /* ProductIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB089D226683F400B59B28 /* ProductIdResponse.swift */; };
 		E2B36C27995C01E1CBA74DC8 /* Pods_Challenge_Alodjinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		75FB0897226682BE00B59B28 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		75FB08992266830900B59B28 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		75FB089B2266832400B59B28 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		75FB089D226683F400B59B28 /* ProductIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductIdResponse.swift; sourceTree = "<group>"; };
 		855405F06AB83AC86EC0BE50 /* Pods_Challenge_AlodjinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_AlodjinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_Alodjinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5365083FD04ECCD825D9A43 /* Pods-Challenge-AlodjinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-AlodjinhaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				75FB0897226682BE00B59B28 /* Category.swift */,
 				75FB08992266830900B59B28 /* ProductResponse.swift */,
 				75FB089B2266832400B59B28 /* Product.swift */,
+				75FB089D226683F400B59B28 /* ProductIdResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				75FB087F22664AFA00B59B28 /* APIRequest.swift in Sources */,
 				75FB087A2266496B00B59B28 /* Banner.swift in Sources */,
 				75FB088822664E3A00B59B28 /* Protocols.swift in Sources */,
+				75FB089E226683F400B59B28 /* ProductIdResponse.swift in Sources */,
 				75FB0898226682BE00B59B28 /* Category.swift in Sources */,
 				75FB089C2266832400B59B28 /* Product.swift in Sources */,
 			);
