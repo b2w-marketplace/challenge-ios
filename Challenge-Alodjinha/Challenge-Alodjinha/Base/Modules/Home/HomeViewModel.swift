@@ -33,7 +33,7 @@ class HomeViewModel {
     }
     
     func numberOfSection() -> Int {
-        return 2
+        return 1
     }
     
     func titleForHeaderInSection() -> [String] {

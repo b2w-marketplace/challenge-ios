@@ -56,36 +56,17 @@ extension HomeView: UITableViewDataSource {
         return viewModel.numberOfSection()
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return viewModel.titleForHeaderInSection()[0]
-        default:
-            return viewModel.titleForHeaderInSection()[1]
-        }
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else {
-            return viewModel.numberOfRowsBestSeller()
-        }
+        return viewModel.numberOfRowsBestSeller()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let section = indexPath.section
-        
-        if section == 0 {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: BestSellerString.cell, for: indexPath) as? ProductViewCell else {
             return ProductViewCell()
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: BestSellerString.cell, for: indexPath) as? ProductViewCell else {
-                return ProductViewCell()
-            }
-            
-            cell.fill(dto: viewModel.dtoForRowBestSellet(index: indexPath.row))
-            return cell
         }
+            
+        cell.fill(dto: viewModel.dtoForRowBestSellet(index: indexPath.row))
+        return cell
     }
 }
 

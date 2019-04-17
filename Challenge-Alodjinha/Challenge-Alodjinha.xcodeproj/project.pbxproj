@@ -252,6 +252,7 @@
 		75FB088922664F6300B59B28 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				75FB08AD2266BCD400B59B28 /* Category */,
 				75FB088A22664F6A00B59B28 /* Banner */,
 			);
 			path = Components;
@@ -273,6 +274,13 @@
 				75FB08A62266A9E200B59B28 /* ProductViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		75FB08AD2266BCD400B59B28 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
