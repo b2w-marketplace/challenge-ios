@@ -1,0 +1,65 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - CodableAlamofire (1.1.1):
+    - Alamofire (~> 4.0)
+  - KeychainAccess (3.2.0)
+  - Realm (3.14.1):
+    - Realm/Headers (= 3.14.1)
+  - Realm/Headers (3.14.1)
+  - RealmSwift (3.14.1):
+    - Realm (= 3.14.1)
+  - RSReactiveRequest (1.0.0):
+    - Alamofire
+    - AlamofireImage
+    - CodableAlamofire
+    - RxSwift
+  - RSRealmHelper (1.0.1):
+    - KeychainAccess
+    - RealmSwift
+  - RxAtomic (4.4.2)
+  - RxSwift (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
+
+DEPENDENCIES:
+  - RSReactiveRequest (from `https://github.com/redspark-io/RSReactiveRequest.git`)
+  - RSRealmHelper (~> 1.0.0)
+  - RxSwift (~> 4.4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - CodableAlamofire
+    - KeychainAccess
+    - Realm
+    - RealmSwift
+    - RSRealmHelper
+    - RxAtomic
+    - RxSwift
+
+EXTERNAL SOURCES:
+  RSReactiveRequest:
+    :git: https://github.com/redspark-io/RSReactiveRequest.git
+
+CHECKOUT OPTIONS:
+  RSReactiveRequest:
+    :commit: 0b9a11777579395f5b613e356a316be0e858904e
+    :git: https://github.com/redspark-io/RSReactiveRequest.git
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  CodableAlamofire: b587c1198562824abb1f468aed34feb00d6cecd8
+  KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
+  Realm: e12c9c2387d05c5bba3a9c394838f5870e85763b
+  RealmSwift: a82eab9b04c3e1616082c7e17aa300740847769c
+  RSReactiveRequest: aa5ca72d2c9ee41052a01f70a4598fe4e3cfae3f
+  RSRealmHelper: 82faaebbafc4e3c25ad5de3859908e48998c3c82
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+
+PODFILE CHECKSUM: 37936029d782ed6548bc498513fd9f84a9e3bd5b
+
+COCOAPODS: 1.6.1
