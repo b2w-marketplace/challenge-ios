@@ -53,7 +53,7 @@ class HomeViewModel {
     func dtoForRowBestSellet(index: Int) -> ProductCellDTO {
         let bestSeller = self.product[index]
         return ProductCellDTO(image: URL(string: bestSeller.urlImagem),
-                              name: bestSeller.descricao,
+                              name: bestSeller.nome,
                               oldValue: bestSeller.precoDe,
                               newValue: bestSeller.precoPor)
     }

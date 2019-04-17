@@ -22,10 +22,13 @@ class HomeView: UIViewController {
         bannerView.isHidden = true
         viewModel.loadBanner()
         viewModel.loadBestSeller()
+        tableView.dataSource = self
+        registerCells()
     }
     
     private func registerCells() {
-        
+        let bestSellerNib = UINib(nibName: "ProductViewCell", bundle: nil)
+        tableView.register(bestSellerNib, forCellReuseIdentifier: BestSellerString.cell)
     }
     
     private func addBanner() {
