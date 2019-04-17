@@ -11,6 +11,7 @@ import Foundation
 class HomeViewModel {
     
     private var banner: [Banner] = []
+    private var product: [Product] = []
     
     var banners: [Banner] {
         return self.banner
@@ -34,5 +35,26 @@ class HomeViewModel {
     func dtoForImage(index: Int) -> BannerViewDTO {
         let bannerView = self.banner[index]
         return BannerViewDTO(image: URL(string: bannerView.urlImagem))
+    }
+    
+    func loadBestSeller() {
+        APIRequest().loadBestSeller { response in
+            if let response = response {
+                self.product = response.data
+            }
+            self.delegate?.didLoad()
+        }
+    }
+    
+    func numberOfRowsBestSeller() -> Int {
+        return self.product.count
+    }
+    
+    func dtoForRowBestSellet(index: Int) -> ProductCellDTO {
+        let bestSeller = self.product[index]
+        return ProductCellDTO(image: URL(string: bestSeller.urlImagem),
+                              name: bestSeller.descricao,
+                              oldValue: bestSeller.precoDe,
+                              newValue: bestSeller.precoPor)
     }
 }

@@ -21,9 +21,14 @@ class HomeView: UIViewController {
         super.viewDidLoad()
         bannerView.isHidden = true
         viewModel.loadBanner()
+        viewModel.loadBestSeller()
     }
     
-    func addBanner() {
+    private func registerCells() {
+        
+    }
+    
+    private func addBanner() {
         DispatchQueue.main.async {
             self.bannerScrollView.contentSize.width = self.view.bounds.width * CGFloat(self.viewModel.banners.count)
             
@@ -41,9 +46,26 @@ class HomeView: UIViewController {
     }
 }
 
+extension HomeView: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsBestSeller()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: BestSellerString.cell, for: indexPath) as? ProductViewCell else {
+            return ProductViewCell()
+        }
+        
+        cell.fill(dto: viewModel.dtoForRowBestSellet(index: indexPath.row))
+        return cell
+    }
+}
+
 extension HomeView: LoadContent {
     func didLoad() {
         DispatchQueue.main.async {
+            self.tableView.reloadData()
             self.addBanner()
         }
     }
