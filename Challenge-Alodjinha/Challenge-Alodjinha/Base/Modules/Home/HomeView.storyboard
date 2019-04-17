@@ -32,10 +32,11 @@
         <scene sceneID="qKu-Q8-Ren">
             <objects>
                 <navigationController id="4Am-9q-ptQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wdP-Tw-r1N"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="homeActive2" id="wdP-Tw-r1N"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="som-hG-CNH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.38823529410000002" green="0.25098039220000001" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="aI9-YO-ArQ" kind="relationship" relationship="rootViewController" id="MtT-7h-BTT"/>
@@ -61,7 +62,7 @@
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfZ-gv-gHo">
                                 <rect key="frame" x="0.0" y="64" width="375" height="120"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.38823529411764707" green="0.25098039215686274" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="OCz-iM-Ks1"/>
                                 </constraints>
@@ -182,10 +183,11 @@
         <scene sceneID="6ET-5j-lAz">
             <objects>
                 <navigationController id="3u7-WK-2TJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cGZ-Ef-Eqp"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="tagSelected2" id="cGZ-Ef-Eqp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yns-cS-s8b">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.38823529410000002" green="0.25098039220000001" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="76W-kD-45T" kind="relationship" relationship="rootViewController" id="enh-gr-Rvg"/>
@@ -195,5 +197,25 @@
             </objects>
             <point key="canvasLocation" x="812" y="503"/>
         </scene>
+        <!--DetailView-->
+        <scene sceneID="KVm-WR-BdG">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="detailView" storyboardName="DetailView" id="gLg-Zo-1eA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NSi-qX-4PH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2436" y="-687"/>
+        </scene>
+        <!--ListProductsView-->
+        <scene sceneID="Shn-HQ-pXl">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="listProductsView" storyboardName="ListProductsView" id="H4U-RM-tYk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCQ-Q2-GNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2490" y="-601"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="homeActive2" width="25" height="23"/>
+        <image name="tagSelected2" width="25" height="25"/>
+    </resources>
 </document>

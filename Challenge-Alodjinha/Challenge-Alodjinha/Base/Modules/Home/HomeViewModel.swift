@@ -18,6 +18,14 @@ class HomeViewModel {
         return self.banner
     }
     
+    var transporterCategory: ResultTransporterCategory {
+        return ResultTransporterCategory(category: category)
+    }
+    
+    var transporterProducts: ResultTransporterProduct {
+        return ResultTransporterProduct(product: product)
+    }
+    
     private weak var delegate: LoadContent?
     
     init(delegate: LoadContent?) {

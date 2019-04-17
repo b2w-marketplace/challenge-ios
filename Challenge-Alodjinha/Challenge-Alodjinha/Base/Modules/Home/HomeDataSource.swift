@@ -19,3 +19,11 @@ struct BestSellerString {
 struct CategoryString {
     static let cell = "categoryCell"
 }
+
+struct ResultTransporterCategory {
+    var category = [Category]()
+}
+
+struct ResultTransporterProduct {
+    var product = [Product]()
+}

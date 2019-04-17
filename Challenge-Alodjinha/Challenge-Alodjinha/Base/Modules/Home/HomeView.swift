@@ -26,9 +26,12 @@ class HomeView: UIViewController {
         viewModel.loadBestSeller()
         viewModel.loadCategory()
         collectionView.dataSource = self
+        collectionView.delegate = self
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.tableFooterView = UIView()
         registerCells()
+        drawNavigation()
     }
     
     private func registerCells() {
@@ -55,9 +58,33 @@ class HomeView: UIViewController {
             self.bannerPageControl.numberOfPages = self.viewModel.banners.count
         }
     }
+    
+    private func drawNavigation() {
+        let navigation = UIView()
+        let text = UILabel()
+        text.text = "  "
+        text.font = UIFont(name: "Pacifico-Regular", size: 20)
+        text.textColor = UIColor.white
+        text.sizeToFit()
+        text.center = navigation.center
+        text.textAlignment = NSTextAlignment.center
+        
+        let image = UIImageView()
+        image.image = UIImage(named: "logoNavbar")
+        let imageAspect = image.image!.size.width/image.image!.size.height
+        image.frame = CGRect(x: text.frame.origin.x-text.frame.size.height*imageAspect, y: text.frame.origin.y, width: text.frame.size.height*imageAspect, height: text.frame.size.height)
+        image.contentMode = UIView.ContentMode.scaleAspectFill
+        
+        navigation.addSubview(text)
+        navigation.addSubview(image)
+        
+        self.navigationItem.titleView = navigation
+        
+        navigation.sizeToFit()
+    }
 }
 
-extension HomeView: UITableViewDataSource {
+extension HomeView: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSection()
@@ -75,9 +102,16 @@ extension HomeView: UITableViewDataSource {
         cell.fill(dto: viewModel.dtoForRowBestSellet(index: indexPath.row))
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let detailView = storyboard?.instantiateViewController(withIdentifier: "detailView") as? DetailView {
+            detailView.setup(transporter: viewModel.transporterProducts, index: indexPath.row)
+            navigationController?.pushViewController(detailView, animated: true)
+        }
+    }
 }
 
-extension HomeView: UICollectionViewDataSource {
+extension HomeView: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfRowsCategory()
@@ -90,6 +124,13 @@ extension HomeView: UICollectionViewDataSource {
         
         cell.fill(dto: viewModel.dtoForRowCategory(index: indexPath.row))
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let listProductsView = storyboard?.instantiateViewController(withIdentifier: "listProductsView") as? ListProductsView {
+            listProductsView.setup(transporter: viewModel.transporterCategory, index: indexPath.row)
+            navigationController?.pushViewController(listProductsView, animated: true)
+        }
     }
 }
 
