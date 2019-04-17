@@ -14,6 +14,7 @@ class HomeView: UIViewController {
     @IBOutlet weak var bannerPageControl: UIPageControl!
     @IBOutlet weak var bannerView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     private lazy var viewModel: HomeViewModel = HomeViewModel(delegate: self)
     
@@ -22,6 +23,8 @@ class HomeView: UIViewController {
         bannerView.isHidden = true
         viewModel.loadBanner()
         viewModel.loadBestSeller()
+        viewModel.loadCategory()
+        collectionView.dataSource = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         registerCells()
@@ -30,6 +33,9 @@ class HomeView: UIViewController {
     private func registerCells() {
         let bestSellerNib = UINib(nibName: "ProductViewCell", bundle: nil)
         tableView.register(bestSellerNib, forCellReuseIdentifier: BestSellerString.cell)
+        
+        let categoryNib = UINib(nibName: "CategoryCollectionCell", bundle: nil)
+        collectionView.register(categoryNib, forCellWithReuseIdentifier: CategoryString.cell)
     }
     
     private func addBanner() {
@@ -70,10 +76,27 @@ extension HomeView: UITableViewDataSource {
     }
 }
 
+extension HomeView: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsCategory()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryString.cell, for: indexPath) as? CategoryCollectionCell else {
+            return CategoryCollectionCell()
+        }
+        
+        cell.fill(dto: viewModel.dtoForRowCategory(index: indexPath.row))
+        return cell
+    }
+}
+
 extension HomeView: LoadContent {
     func didLoad() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.collectionView.reloadData()
             self.addBanner()
         }
     }

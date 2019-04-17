@@ -13,5 +13,9 @@ struct BannerString {
 }
 
 struct BestSellerString {
-    static let cell = "cell"
+    static let cell = "productCell"
+}
+
+struct CategoryString {
+    static let cell = "categoryCell"
 }

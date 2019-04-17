@@ -12,6 +12,7 @@ class HomeViewModel {
     
     private var banner: [Banner] = []
     private var product: [Product] = []
+    private var category: [Category] = []
     
     var banners: [Banner] {
         return self.banner
@@ -34,10 +35,6 @@ class HomeViewModel {
     
     func numberOfSection() -> Int {
         return 1
-    }
-    
-    func titleForHeaderInSection() -> [String] {
-        return ["Categorias","Mais Vendidos"]
     }
     
     func dtoForImage(index: Int) -> BannerViewDTO {
@@ -64,5 +61,24 @@ class HomeViewModel {
                               name: bestSeller.nome,
                               oldValue: bestSeller.precoDe,
                               newValue: bestSeller.precoPor)
+    }
+    
+    func loadCategory() {
+        APIRequest().loadCategory { response in
+            if let response = response {
+                self.category = response.data
+            }
+            self.delegate?.didLoad()
+        }
+    }
+    
+    func numberOfRowsCategory() -> Int {
+        return self.category.count
+    }
+    
+    func dtoForRowCategory(index: Int) -> CategoryCellDTO {
+        let categories = self.category[index]
+        return CategoryCellDTO(image: URL(string: categories.urlImagem),
+                               description: categories.descricao)
     }
 }

@@ -70,7 +70,7 @@
                                 <rect key="frame" x="0.0" y="359" width="375" height="259"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="dYV-6U-V29">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" id="dYV-6U-V29">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dYV-6U-V29" id="j9Q-V0-9mi">
@@ -102,7 +102,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uXU-Qb-XDP">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="uXU-Qb-XDP">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="84"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -154,6 +154,7 @@
                         <outlet property="bannerPageControl" destination="gfZ-5J-WH8" id="W4r-mk-yIy"/>
                         <outlet property="bannerScrollView" destination="od2-So-fHn" id="XyC-up-595"/>
                         <outlet property="bannerView" destination="UfZ-gv-gHo" id="fQZ-Jq-icb"/>
+                        <outlet property="collectionView" destination="ezu-IQ-hkw" id="Ic7-Wh-HJ9"/>
                         <outlet property="tableView" destination="qec-Pg-e4Y" id="rMW-qz-YVC"/>
                     </connections>
                 </viewController>
