@@ -23,6 +23,7 @@ class HomeView: UIViewController {
         viewModel.loadBanner()
         viewModel.loadBestSeller()
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         registerCells()
     }
     
@@ -51,17 +52,40 @@ class HomeView: UIViewController {
 
 extension HomeView: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSection()
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return viewModel.titleForHeaderInSection()[0]
+        default:
+            return viewModel.titleForHeaderInSection()[1]
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRowsBestSeller()
+        if section == 0 {
+            return 1
+        } else {
+            return viewModel.numberOfRowsBestSeller()
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: BestSellerString.cell, for: indexPath) as? ProductViewCell else {
-            return ProductViewCell()
-        }
+        let section = indexPath.section
         
-        cell.fill(dto: viewModel.dtoForRowBestSellet(index: indexPath.row))
-        return cell
+        if section == 0 {
+            return ProductViewCell()
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: BestSellerString.cell, for: indexPath) as? ProductViewCell else {
+                return ProductViewCell()
+            }
+            
+            cell.fill(dto: viewModel.dtoForRowBestSellet(index: indexPath.row))
+            return cell
+        }
     }
 }
 

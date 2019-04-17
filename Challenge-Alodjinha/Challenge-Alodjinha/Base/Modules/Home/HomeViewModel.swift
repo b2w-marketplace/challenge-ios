@@ -32,6 +32,14 @@ class HomeViewModel {
         }
     }
     
+    func numberOfSection() -> Int {
+        return 2
+    }
+    
+    func titleForHeaderInSection() -> [String] {
+        return ["Categorias","Mais Vendidos"]
+    }
+    
     func dtoForImage(index: Int) -> BannerViewDTO {
         let bannerView = self.banner[index]
         return BannerViewDTO(image: URL(string: bannerView.urlImagem))
