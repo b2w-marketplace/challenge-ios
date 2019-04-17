@@ -31,8 +31,8 @@
 		75FB08A82266A9E200B59B28 /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08A62266A9E200B59B28 /* ProductViewCell.xib */; };
 		75FB08AA2266AA9200B59B28 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08A92266AA9200B59B28 /* HomeDataSource.swift */; };
 		75FB08AC2266B3B400B59B28 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08AB2266B3B400B59B28 /* Extension+String.swift */; };
-		75FB08B82266C73C00B59B28 /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08B62266C73C00B59B28 /* CategoryCollectionCell.swift */; };
-		75FB08B92266C73C00B59B28 /* CategoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08B72266C73C00B59B28 /* CategoryCollectionCell.xib */; };
+		CD8EBA9F2267341A0048232B /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8EBA9D2267341A0048232B /* CategoryViewCell.swift */; };
+		CD8EBAA02267341A0048232B /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8EBA9E2267341A0048232B /* CategoryViewCell.xib */; };
 		E2B36C27995C01E1CBA74DC8 /* Pods_Challenge_Alodjinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,10 +76,10 @@
 		75FB08A62266A9E200B59B28 /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
 		75FB08A92266AA9200B59B28 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		75FB08AB2266B3B400B59B28 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
-		75FB08B62266C73C00B59B28 /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
-		75FB08B72266C73C00B59B28 /* CategoryCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionCell.xib; sourceTree = "<group>"; };
 		855405F06AB83AC86EC0BE50 /* Pods_Challenge_AlodjinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_AlodjinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_Alodjinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD8EBA9D2267341A0048232B /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
+		CD8EBA9E2267341A0048232B /* CategoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewCell.xib; sourceTree = "<group>"; };
 		E5365083FD04ECCD825D9A43 /* Pods-Challenge-AlodjinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-AlodjinhaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests.release.xcconfig"; sourceTree = "<group>"; };
 		E5EE4A64D788E374237EE1FF /* Pods-Challenge-Alodjinha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Alodjinha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,8 +283,8 @@
 		75FB08AD2266BCD400B59B28 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				75FB08B62266C73C00B59B28 /* CategoryCollectionCell.swift */,
-				75FB08B72266C73C00B59B28 /* CategoryCollectionCell.xib */,
+				CD8EBA9D2267341A0048232B /* CategoryViewCell.swift */,
+				CD8EBA9E2267341A0048232B /* CategoryViewCell.xib */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -374,8 +374,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8EBAA02267341A0048232B /* CategoryViewCell.xib in Resources */,
 				75FB08A82266A9E200B59B28 /* ProductViewCell.xib in Resources */,
-				75FB08B92266C73C00B59B28 /* CategoryCollectionCell.xib in Resources */,
 				75FB08942266601B00B59B28 /* BannerView.xib in Resources */,
 				75FB088222664C8E00B59B28 /* HomeView.storyboard in Resources */,
 				7524C9CC2266065500AAAA54 /* LaunchScreen.storyboard in Resources */,
@@ -401,7 +401,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -412,7 +412,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2FB2A6CA98A3279F141E39AC /* [CP] Embed Pods Frameworks */ = {
@@ -423,7 +423,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -434,7 +434,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		919E4A6EA6DD1B0CB87D648D /* [CP] Check Pods Manifest.lock */ = {
@@ -497,7 +497,6 @@
 				75FB087C22664A6100B59B28 /* BaseAPI.swift in Sources */,
 				75FB08962266829D00B59B28 /* CategoryResponse.swift in Sources */,
 				7524C9C22266065400AAAA54 /* AppDelegate.swift in Sources */,
-				75FB08B82266C73C00B59B28 /* CategoryCollectionCell.swift in Sources */,
 				75FB08922266601000B59B28 /* BannerView.swift in Sources */,
 				75FB08A72266A9E200B59B28 /* ProductViewCell.swift in Sources */,
 				75FB087F22664AFA00B59B28 /* APIRequest.swift in Sources */,
@@ -505,6 +504,7 @@
 				75FB088822664E3A00B59B28 /* Protocols.swift in Sources */,
 				75FB089E226683F400B59B28 /* ProductIdResponse.swift in Sources */,
 				75FB0898226682BE00B59B28 /* Category.swift in Sources */,
+				CD8EBA9F2267341A0048232B /* CategoryViewCell.swift in Sources */,
 				75FB089C2266832400B59B28 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

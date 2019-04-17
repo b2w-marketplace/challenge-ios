@@ -16,6 +16,7 @@ class HomeView: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
     private lazy var viewModel: HomeViewModel = HomeViewModel(delegate: self)
     
     override func viewDidLoad() {
@@ -34,7 +35,7 @@ class HomeView: UIViewController {
         let bestSellerNib = UINib(nibName: "ProductViewCell", bundle: nil)
         tableView.register(bestSellerNib, forCellReuseIdentifier: BestSellerString.cell)
         
-        let categoryNib = UINib(nibName: "CategoryCollectionCell", bundle: nil)
+        let categoryNib = UINib(nibName: "CategoryViewCell", bundle: nil)
         collectionView.register(categoryNib, forCellWithReuseIdentifier: CategoryString.cell)
     }
     
@@ -83,8 +84,8 @@ extension HomeView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryString.cell, for: indexPath) as? CategoryCollectionCell else {
-            return CategoryCollectionCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryString.cell, for: indexPath) as? CategoryViewCell else {
+            return CategoryViewCell()
         }
         
         cell.fill(dto: viewModel.dtoForRowCategory(index: indexPath.row))

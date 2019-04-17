@@ -1,8 +1,8 @@
 //
-//  CategoryCollectionCell.swift
+//  CategoryViewCell.swift
 //  Challenge-Alodjinha
 //
-//  Created by Luis Ferreira on 16/04/19.
+//  Created by Luis Henrique Tavares Ferreira on 17/04/19.
 //  Copyright © 2019 Luis Ferreira. All rights reserved.
 //
 
@@ -14,11 +14,11 @@ struct CategoryCellDTO {
     var description: String
 }
 
-class CategoryCollectionCell: UICollectionViewCell {
+class CategoryViewCell: UICollectionViewCell {
 
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
-
+    
     func fill(dto: CategoryCellDTO) {
         descriptionLabel.text = dto.description
         
