@@ -30,6 +30,7 @@
 		75FB08A72266A9E200B59B28 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08A52266A9E200B59B28 /* ProductViewCell.swift */; };
 		75FB08A82266A9E200B59B28 /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08A62266A9E200B59B28 /* ProductViewCell.xib */; };
 		75FB08AA2266AA9200B59B28 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08A92266AA9200B59B28 /* HomeDataSource.swift */; };
+		75FB08AC2266B3B400B59B28 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08AB2266B3B400B59B28 /* Extension+String.swift */; };
 		E2B36C27995C01E1CBA74DC8 /* Pods_Challenge_Alodjinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		75FB08A52266A9E200B59B28 /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
 		75FB08A62266A9E200B59B28 /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
 		75FB08A92266AA9200B59B28 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		75FB08AB2266B3B400B59B28 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		855405F06AB83AC86EC0BE50 /* Pods_Challenge_AlodjinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_AlodjinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_Alodjinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5365083FD04ECCD825D9A43 /* Pods-Challenge-AlodjinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-AlodjinhaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				75FB08A42266A9C500B59B28 /* Cell */,
+				75FB08AB2266B3B400B59B28 /* Extension+String.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				75FB089A2266830900B59B28 /* ProductResponse.swift in Sources */,
 				75FB08782266494600B59B28 /* BannerResponse.swift in Sources */,
 				75FB088622664D6E00B59B28 /* HomeView.swift in Sources */,
+				75FB08AC2266B3B400B59B28 /* Extension+String.swift in Sources */,
 				75FB08AA2266AA9200B59B28 /* HomeDataSource.swift in Sources */,
 				75FB088422664D5D00B59B28 /* HomeViewModel.swift in Sources */,
 				75FB087C22664A6100B59B28 /* BaseAPI.swift in Sources */,

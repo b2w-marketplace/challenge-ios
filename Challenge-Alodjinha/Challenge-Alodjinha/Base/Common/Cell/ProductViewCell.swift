@@ -24,8 +24,8 @@ class ProductViewCell: UITableViewCell {
     
     func fill(dto: ProductCellDTO) {
         nameLabel.text = dto.name
-        oldValueLabel.text = String(dto.oldValue)
-        newValueLabel.text = String(dto.newValue)
+        oldValueLabel.text = "De R$\(String.doubleToString(dto.oldValue))"
+        newValueLabel.text = "Por R$\(String.doubleToString(dto.newValue))"
         
         if let url = dto.image {
             productImage.kf.setImage(with: url)
