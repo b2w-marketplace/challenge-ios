@@ -20,6 +20,15 @@ final class TabBarViewController: UITabBarController, TabBarViewProtocol {
         applyStyle()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+  
     // MARK: - Setup Methods
     private func setupAccessibilityIdentifiers() {
         
@@ -30,7 +39,7 @@ final class TabBarViewController: UITabBarController, TabBarViewProtocol {
     }
     
     private func applyStyle() {
-        
+        //Style.apply(onNavigationBarWithImageTitle: navigationController)
     }
     
 }

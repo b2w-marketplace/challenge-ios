@@ -16,6 +16,7 @@ extension UIImage {
         case homeDeselected
         case tagSelected
         case tagDeselected
+        case logoNavbar
     }
     
     convenience init?(identifier: Identifier) {

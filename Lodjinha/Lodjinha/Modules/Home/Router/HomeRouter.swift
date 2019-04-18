@@ -44,7 +44,7 @@ extension HomeRouter: TabBarViewControllerProtocol {
     }
     
     var tabTitle: String {
-        return String(identifier: .tabBarItemTitleHome)
+        return String(identifier: .home)
     }
     
     func configuredViewController() -> UIViewController {

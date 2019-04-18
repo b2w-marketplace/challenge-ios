@@ -16,9 +16,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupAccessibilityIdentifiers()
         applyLanguage()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         applyStyle()
     }
-
     
     // MARK: - Setup Methods
     private func setupAccessibilityIdentifiers() {
@@ -30,7 +34,7 @@ class HomeViewController: UIViewController {
     }
     
     private func applyStyle() {
-        
+        Style.apply(onNavigationBarWithImageTitle: navigationItem)
     }
 
 }

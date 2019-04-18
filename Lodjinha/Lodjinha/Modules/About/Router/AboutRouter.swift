@@ -43,7 +43,7 @@ extension AboutRouter: TabBarViewControllerProtocol {
     }
     
     var tabTitle: String {
-        return String(identifier: .tabBarItemTitleAbout)
+        return String(identifier: .about)
     }
     
     func configuredViewController() -> UIViewController {

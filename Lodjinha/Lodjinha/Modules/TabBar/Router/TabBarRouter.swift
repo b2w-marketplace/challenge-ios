@@ -40,7 +40,6 @@ final class TabBarRouter: TabBarRouterProtocol, Storyboarded {
             navigationController.tabBarItem = tabBarItem
             navigationController.setNavigationBarHidden(true, animated: false)
             navigationController.tabBarController?.tabBar.isHidden = false
-            navigationController.title = view.tabTitle
             viewControllers.append(navigationController)
         }
         

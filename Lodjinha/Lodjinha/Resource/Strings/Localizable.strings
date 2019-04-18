@@ -7,5 +7,6 @@
 */
 
 // MARK: - TabBar
-tabBarItemTitleHome = "Home";
-tabBarItemTitleAbout = "Sobre";
+home = "Home";
+about = "Sobre";
+theLodjinha = "a Lodjinha";

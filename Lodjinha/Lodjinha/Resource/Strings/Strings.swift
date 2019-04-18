@@ -12,9 +12,10 @@ extension String {
     
     enum Identifier: String {
         
-        // MARK: - TabBar
-        case tabBarItemTitleHome
-        case tabBarItemTitleAbout
+        // MARK: - Common
+        case home
+        case about
+        case theLodjinha
         
     }
     
