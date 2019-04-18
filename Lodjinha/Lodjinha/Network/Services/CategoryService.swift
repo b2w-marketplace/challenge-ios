@@ -10,6 +10,12 @@ import Foundation
 import RSReactiveRequest
 import RxSwift
 
+protocol CategoryServiceProtocol: class {
+    
+    func fetchCategories(scheduler: ImmediateSchedulerType?) -> Single<CategoryDataDecodable>
+    
+}
+
 final class CategoryService: CategoryServiceProtocol {
     
     private enum API: String, ServiceApi {

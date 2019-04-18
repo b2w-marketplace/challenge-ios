@@ -10,6 +10,12 @@ import Foundation
 import RSReactiveRequest
 import RxSwift
 
+protocol BannerServiceProtocol: class {
+    
+    func fetchBannes(scheduler: ImmediateSchedulerType?) -> Single<BannerDataDecodable>
+    
+}
+
 final class BannerService: BannerServiceProtocol {
     
     private enum API: String, ServiceApi {

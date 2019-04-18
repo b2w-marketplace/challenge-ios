@@ -10,12 +10,21 @@ import Foundation
 import RSReactiveRequest
 import RxSwift
 
+protocol ProductServiceProtocol: class {
+    
+    func fetchProducts(productEncodable: ProductEncodable, scheduler: ImmediateSchedulerType?) -> Single<ProductDataDecodable>
+    func fetchTopSellingProducts(scheduler: ImmediateSchedulerType?) -> Single<ProductDataDecodable>
+    func fetchProductDetail(productId: Int, scheduler: ImmediateSchedulerType?) -> Single<ProductDecodable>
+    func productReservation(productId: Int, scheduler: ImmediateSchedulerType?) -> Completable
+    
+}
+
 final class ProductService: ProductServiceProtocol {
     
     private enum API: String, ServiceApi {
         case product = "produto"
         case topSellingProducts = "produto/maisvendidos"
-        case productDetail = "produto/{produtoId}"
+        case productId = "produto/{produtoId}"
     }
     
     private let requestManager: RequestManagerProtocol
@@ -35,8 +44,13 @@ final class ProductService: ProductServiceProtocol {
     }
     
     func fetchProductDetail(productId: Int, scheduler: ImmediateSchedulerType?) -> Single<ProductDecodable> {
-        let endpoint = Endpoint(method: .get, api: API.productDetail, resource: String(describing: productId))
+        let endpoint = Endpoint(method: .get, api: API.productId, resource: String(describing: productId))
         return requestManager.request(endpoint: endpoint).asSingle()
+    }
+    
+    func productReservation(productId: Int, scheduler: ImmediateSchedulerType?) -> Completable {
+        let endpoint = Endpoint(method: .post, api: API.productId, resource: String(describing: productId))
+        return requestManager.request(endpoint: endpoint).asCompletable()
     }
     
 }
