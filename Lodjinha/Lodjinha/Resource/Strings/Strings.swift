@@ -16,6 +16,11 @@ extension String {
         case home
         case about
         case theLodjinha
+        case devName
+        case serviceErrorMessage
+        case buttonOk
+        case titleAlert
+
         
     }
     

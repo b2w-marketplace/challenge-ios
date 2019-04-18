@@ -19,6 +19,8 @@ final class HomeRouter: HomeRouterProtocol, Storyboarded {
         let view: HomeViewController = storyboard.instantiateViewController()
         let presenter = HomePresenter()
         let router = HomeRouter()
+        let remoteDataManager = HomeRemoteDataManager()
+        let interactor = HomeInteractor(remoteDataManager: remoteDataManager)
         
         view.presenter = presenter
         
@@ -26,6 +28,7 @@ final class HomeRouter: HomeRouterProtocol, Storyboarded {
         
         presenter.view = view
         presenter.router = router
+        presenter.interactor = interactor
         
         return view
     }

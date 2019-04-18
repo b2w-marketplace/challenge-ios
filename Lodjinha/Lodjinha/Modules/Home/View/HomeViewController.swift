@@ -12,10 +12,16 @@ class HomeViewController: UIViewController {
 
     var presenter: HomePresenterProtocol!
     
+    private var bannerList: [Banner] = []
+    private var categoryList: [Category] = []
+    private var topSellingProductList: [Product] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAccessibilityIdentifiers()
         applyLanguage()
+        
+        presenter.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,8 +48,20 @@ class HomeViewController: UIViewController {
 // MARK: - HomeViewProtocol
 extension HomeViewController: HomeViewProtocol {
     
+    func setup(bannerList: [Banner]) {
+        self.bannerList = bannerList
+    }
+    
+    func setup(categoryList: [Category]) {
+        self.categoryList = categoryList
+    }
+    
+    func setup(topSellingProductList: [Product]) {
+        self.topSellingProductList = topSellingProductList
+    }
+    
     func showAlert(message: String) {
-        
+        presentAlert(message: message)
     }
     
 }

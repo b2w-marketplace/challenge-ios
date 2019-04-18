@@ -8,12 +8,40 @@
 
 import Foundation
 import UIKit
+import RxSwift
+
+// MARK: - DataManager
+protocol HomeRemoteDataManagerProtocol: class {
+    
+    var categoriesObservable: Single<[Category]> { get }
+    var bannesObservable: Single<[Banner]> { get }
+    var topSellingProductListObservable: Single<[Product]> { get }
+    
+    func fetchProducts(productEncodable: ProductEncodable) -> Single<[Product]>
+    func fetchProductDetail(productId: Int) -> Single<Product>
+    
+}
+
+// MARK: - Interactor
+protocol HomeInteractorProtocol: class {
+    
+    var categoriesObservable: Single<[Category]> { get }
+    var bannesObservable: Single<[Banner]> { get }
+    var topSellingProductListObservable: Single<[Product]> { get }
+    
+    func fetchProducts(offset: Int, limit: Int, categoriaId: Int) -> Single<[Product]>
+    func fetchProductDetail(productId: Int) -> Single<Product>
+    
+}
 
 // MARK: - Presenter
 protocol HomePresenterProtocol: class {
 
     var view: HomeViewProtocol! { get set }
     var router: HomeRouterProtocol! { get set }
+    var interactor: HomeInteractorProtocol! { get set }
+    
+    func viewDidLoad()
     
 }
 
@@ -22,6 +50,9 @@ protocol HomeViewProtocol: class {
     
     var presenter: HomePresenterProtocol! { get set }
     
+    func setup(bannerList: [Banner])
+    func setup(categoryList: [Category])
+    func setup(topSellingProductList: [Product])
     func showAlert(message: String)
     
 }

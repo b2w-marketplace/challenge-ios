@@ -10,3 +10,8 @@
 home = "Home";
 about = "Sobre";
 theLodjinha = "a Lodjinha";
+devName = "Marcos Alessandro da Fonseca";
+serviceErrorMessage = "O serviço não está disponível no momento, por favor tente mais tarde.";
+buttonOk = "OK";
+titleAlert = "Alerta";
+
