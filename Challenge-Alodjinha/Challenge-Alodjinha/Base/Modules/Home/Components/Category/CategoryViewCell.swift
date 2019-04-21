@@ -24,7 +24,7 @@ class CategoryViewCell: UICollectionViewCell {
         
         if let url = dto.image {
             categoryImage.contentMode = .scaleAspectFill
-            categoryImage.kf.setImage(with: url)
+            categoryImage.kf.setImage(with: ImageResource(downloadURL: url), placeholder: UIImage(named: "empty"))
         }
     }
 }

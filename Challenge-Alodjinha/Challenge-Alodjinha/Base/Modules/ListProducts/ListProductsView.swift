@@ -18,6 +18,7 @@ class ListProductsView: UITableViewController {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
         viewModel.listProductsLoad()
+        tableView.tableFooterView = UIView()
         registerCells()
     }
     
@@ -27,7 +28,9 @@ class ListProductsView: UITableViewController {
     
     private func setupNavBar() {
         self.navigationController?.view.tintColor = UIColor.white
-        self.navigationItem.title = "\(self.viewModel.product[0].categoria.descricao)"
+        if self.viewModel.product.count > 1 {
+            self.navigationItem.title = "\(self.viewModel.product[0].categoria.descricao)"
+        }
     }
     
     private func registerCells() {
@@ -42,7 +45,13 @@ class ListProductsView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows()
+        if viewModel.numberOfRows() != 0 {
+            return viewModel.numberOfRows()
+    
+        } else {
+            self.showAlert(withTitle: "", message: "Não existe produtos para essa categoria!")
+            return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -28,7 +28,8 @@ class ProductViewCell: UITableViewCell {
         newValueLabel.text = "Por R$\(String.doubleToString(dto.newValue))"
         
         if let url = dto.image {
-            productImage.kf.setImage(with: url)
+            productImage.contentMode = .scaleAspectFill
+            productImage.kf.setImage(with: ImageResource(downloadURL: url), placeholder: UIImage(named: "empty"))
         }
     }
     
