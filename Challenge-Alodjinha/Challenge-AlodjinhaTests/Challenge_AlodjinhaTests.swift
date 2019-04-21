@@ -12,6 +12,7 @@ import XCTest
 class Challenge_AlodjinhaTests: XCTestCase {
     
     private var viewModel: HomeViewModel?
+    private var viewModelList: ListProductsViewModel?
     
     private func loadBannerMock() -> BannerResponse {
         let json = try! Data(contentsOf: Bundle.main.url(forResource: "BannerMock", withExtension: "json")!)
@@ -43,6 +44,17 @@ class Challenge_AlodjinhaTests: XCTestCase {
         } catch {
             print(error.localizedDescription)
             return CategoryResponse()
+        }
+    }
+    
+    private func loadProductMock() -> ProductIdResponse {
+        let json = try! Data(contentsOf: Bundle.main.url(forResource: "ProductMock", withExtension: "json")!)
+        do {
+            let product = try JSONDecoder().decode(ProductIdResponse.self, from: json)
+            return product
+        } catch {
+            print(error.localizedDescription)
+            return ProductIdResponse()
         }
     }
     
@@ -122,5 +134,38 @@ class Challenge_AlodjinhaTests: XCTestCase {
         let viewModel = HomeViewModel(delegate: nil, banner: nil, product: loadBestSellerMock(), category: nil)
         XCTAssertEqual(viewModel.transporterProducts.product.count, 11)
     }
-
+    
+    func testShouldValidadeNumberOfSectionList() {
+        let viewModelList = ListProductsViewModel(delegate: nil, category: nil, product: loadProductMock())
+        XCTAssertEqual(viewModelList.numberOfSection(), 1)
+    }
+    
+    func testShouldValidadeNumberOfRows() {
+        let viewModelList = ListProductsViewModel(delegate: nil, category: nil, product: loadProductMock())
+        XCTAssertEqual(viewModelList.numberOfRows(), 25)
+    }
+    
+    func testShouldValidadeDtoForRowsList() {
+        let viewModelList = ListProductsViewModel(delegate: nil, category: nil, product: loadProductMock())
+        let dto = viewModelList.dtoForRow(index: 0)
+        XCTAssertEqual(dto.name, "Game Horizon Zero Down")
+        XCTAssertEqual(String.doubleToString(dto.newValue), "119,99")
+        XCTAssertEqual(String.doubleToString(dto.oldValue), "299,00")
+        XCTAssertEqual(dto.image, URL(string: "https://images-submarino.b2w.io/produtos/01/00/item/130836/1/130836199P1.jpg"))
+    }
+    
+    func testShouldValidateProducts() {
+        let viewModelList = ListProductsViewModel(delegate: nil, category: nil, product: loadProductMock())
+        XCTAssertEqual(viewModelList.product.count, 25)
+    }
+    
+    func testShouldValidadeTransporterList() {
+        let viewModelList = ListProductsViewModel(delegate: nil, category: nil, product: loadProductMock())
+        XCTAssertEqual(viewModelList.transporterProducts.product.count, 25)
+    }
+    
+    func testShouldValidadeCategory() {
+        let viewModelList = ListProductsViewModel(delegate: nil, category: loadCategoryMock(), product: nil)
+        XCTAssertEqual(viewModelList.categories.count, 10)
+    }
 }

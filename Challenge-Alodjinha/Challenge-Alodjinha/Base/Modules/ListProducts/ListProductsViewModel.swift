@@ -10,31 +10,41 @@ import Foundation
 
 class ListProductsViewModel {
     
-    private var category = [Category]()
-    private var products = [Product]()
+    private var category = CategoryResponse()
+    private var products = ProductIdResponse()
     
     var product: [Product] {
-        return self.products
+        return self.products.data
+    }
+    
+    var categories: [Category] {
+        return self.category.data
     }
     
     private weak var delegate: LoadContent?
     
-    init(delegate: LoadContent?) {
+    init(delegate: LoadContent?, category: CategoryResponse? = nil, product: ProductIdResponse? = nil) {
         self.delegate = delegate
+        if let category = category {
+            self.category = category
+        }
+        if let product = product {
+            self.products = product
+        }
     }
     
     var transporterProducts: ResultTransporterProduct {
-        return ResultTransporterProduct(product: products)
+        return ResultTransporterProduct(product: products.data)
     }
     
     func setup(transporter: ResultTransporterCategory, index: Int) {
-        self.category = [transporter.category[index]]
+        self.category.data = [transporter.category[index]]
     }
     
     func listProductsLoad() {
-        APIRequest().loadProduct(id: category[0].id) { response in
+        APIRequest().loadProduct(id: category.data[0].id) { response in
             if let response = response {
-                self.products = response.data
+                self.products.data = response.data
             }
             self.delegate?.didLoad()
         }
@@ -45,11 +55,11 @@ class ListProductsViewModel {
     }
     
     func numberOfRows() -> Int {
-        return products.count
+        return products.data.count
     }
     
     func dtoForRow(index: Int) -> ProductCellDTO {
-        let product = self.products[index]
+        let product = self.products.data[index]
         return ProductCellDTO(image: URL(string: product.urlImagem),
                               name: product.nome,
                               oldValue: product.precoDe,

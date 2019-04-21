@@ -36,6 +36,7 @@
 		75FB08C1226CED6E00B59B28 /* BannerMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08C0226CED6E00B59B28 /* BannerMock.json */; };
 		75FB08C3226CEDD200B59B28 /* CategoryMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08C2226CEDD200B59B28 /* CategoryMock.json */; };
 		75FB08C5226CEE4900B59B28 /* BestSellerMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08C4226CEE4900B59B28 /* BestSellerMock.json */; };
+		75FB08C7226D1F6700B59B28 /* ProductMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08C6226D1F6700B59B28 /* ProductMock.json */; };
 		CD8EBA9F2267341A0048232B /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8EBA9D2267341A0048232B /* CategoryViewCell.swift */; };
 		CD8EBAA02267341A0048232B /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8EBA9E2267341A0048232B /* CategoryViewCell.xib */; };
 		CD8EBAA3226738FA0048232B /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8EBAA2226738FA0048232B /* DetailView.storyboard */; };
@@ -91,6 +92,7 @@
 		75FB08C0226CED6E00B59B28 /* BannerMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BannerMock.json; sourceTree = "<group>"; };
 		75FB08C2226CEDD200B59B28 /* CategoryMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CategoryMock.json; sourceTree = "<group>"; };
 		75FB08C4226CEE4900B59B28 /* BestSellerMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BestSellerMock.json; sourceTree = "<group>"; };
+		75FB08C6226D1F6700B59B28 /* ProductMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProductMock.json; sourceTree = "<group>"; };
 		855405F06AB83AC86EC0BE50 /* Pods_Challenge_AlodjinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_AlodjinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_Alodjinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8EBA9D2267341A0048232B /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				75FB08C0226CED6E00B59B28 /* BannerMock.json */,
 				75FB08C2226CEDD200B59B28 /* CategoryMock.json */,
 				75FB08C4226CEE4900B59B28 /* BestSellerMock.json */,
+				75FB08C6226D1F6700B59B28 /* ProductMock.json */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD8EBAA02267341A0048232B /* CategoryViewCell.xib in Resources */,
+				75FB08C7226D1F6700B59B28 /* ProductMock.json in Resources */,
 				75FB08A82266A9E200B59B28 /* ProductViewCell.xib in Resources */,
 				75FB08C3226CEDD200B59B28 /* CategoryMock.json in Resources */,
 				CD8EBAA3226738FA0048232B /* DetailView.storyboard in Resources */,

@@ -9,7 +9,7 @@
 import Foundation
 
 struct ProductIdResponse: Codable {
-    var data: [Product]
-    var offset: Int
-    var total: Int
+    var data: [Product] = []
+    var offset: Int = 0
+    var total: Int = 0
 }
