@@ -72,7 +72,7 @@ class HomeView: UIViewController {
     private func drawNavigation() {
         let navigation = UIView()
         let text = UILabel()
-        text.text = " "
+        text.text = " A Lodjinha"
         text.font = UIFont(name: "Pacifico-Regular", size: 20)
         text.textColor = UIColor.white
         text.sizeToFit()
@@ -80,7 +80,7 @@ class HomeView: UIViewController {
         text.textAlignment = NSTextAlignment.center
 
         let image = UIImageView()
-        image.image = UIImage(named: "logoNavbar")
+        image.image = UIImage(named: "logoAbout")
         let imageAspect = image.image!.size.width/image.image!.size.height
         image.frame = CGRect(x: text.frame.origin.x-text.frame.size.height*imageAspect,
                              y: text.frame.origin.y, width: text.frame.size.height*imageAspect,

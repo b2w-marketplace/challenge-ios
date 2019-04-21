@@ -457,7 +457,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -468,7 +468,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-Alodjinha/Pods-Challenge-Alodjinha-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2FB2A6CA98A3279F141E39AC /* [CP] Embed Pods Frameworks */ = {
@@ -479,7 +479,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -490,7 +490,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-AlodjinhaTests/Pods-Challenge-AlodjinhaTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		919E4A6EA6DD1B0CB87D648D /* [CP] Check Pods Manifest.lock */ = {
