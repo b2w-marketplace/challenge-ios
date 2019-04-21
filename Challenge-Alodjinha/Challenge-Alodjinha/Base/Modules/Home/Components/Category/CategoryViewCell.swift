@@ -23,6 +23,7 @@ class CategoryViewCell: UICollectionViewCell {
         descriptionLabel.text = dto.description
         
         if let url = dto.image {
+            categoryImage.contentMode = .scaleAspectFill
             categoryImage.kf.setImage(with: url)
         }
     }
