@@ -46,11 +46,16 @@ extension UITableView {
         return cell
     }
     
+    final func registerForHeaderFooter<T: UITableViewHeaderFooterView & NibReusable>(headerFooterType: T.Type) {
+        register(headerFooterType.nib, forHeaderFooterViewReuseIdentifier: headerFooterType.reuseIdentifier)
+    }
+    
     final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView & Reusable>() -> T {
-        guard let cell = dequeueReusableHeaderFooterView(withIdentifier: T.reuseIdentifier) as? T else {
-            fatalError("Failed to dequeue reusable cell with identifier '\(T.reuseIdentifier)'. Did you forget to register the cell first?")
+        let identifier = T.reuseIdentifier
+        guard let headerFooterView = dequeueReusableHeaderFooterView(withIdentifier: identifier) as? T else {
+            fatalError("Failed to dequeue reusable headerFooterView with identifier '\(T.reuseIdentifier)'. Did you forget to register the headerFooterView first?")
         }
-        return cell
+        return headerFooterView
     }
     
 }

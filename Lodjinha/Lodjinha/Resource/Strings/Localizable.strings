@@ -14,4 +14,8 @@ devName = "Marcos Alessandro da Fonseca";
 serviceErrorMessage = "O serviço não está disponível no momento, por favor tente mais tarde.";
 buttonOk = "OK";
 titleAlert = "Alerta";
+categories = "Categorias";
+topSelling = "Mais Vendidos";
+from = "De";
+to = "Por";
 

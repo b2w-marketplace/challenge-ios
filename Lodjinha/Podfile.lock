@@ -23,6 +23,7 @@ PODS:
     - RxAtomic (>= 4.4.2, ~> 4.4)
 
 DEPENDENCIES:
+  - AlamofireImage (~> 3.5)
   - RSReactiveRequest (from `https://github.com/redspark-io/RSReactiveRequest.git`)
   - RSRealmHelper (~> 1.0.0)
   - RxSwift (~> 4.4.0)
@@ -60,6 +61,6 @@ SPEC CHECKSUMS:
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
 
-PODFILE CHECKSUM: 37936029d782ed6548bc498513fd9f84a9e3bd5b
+PODFILE CHECKSUM: dce4e9a67e3c6e88faa25f0fdb8c8cbe81962c1d
 
 COCOAPODS: 1.6.1

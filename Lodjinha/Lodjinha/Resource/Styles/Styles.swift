@@ -27,7 +27,7 @@ extension StyleBuilder {
         navigationBar.isTranslucent = true
         
         navigationBar.titleTextAttributes = [
-            .foregroundColor: Palette.Common.white.color,
+            .foregroundColor: UIColor.white,
             .font: UIFont.pacifico(style: .regular, size: 18)
         ]
     }
@@ -47,9 +47,18 @@ extension StyleBuilder {
     
     func apply(onTextButton button: UIButton) {
         Style.text(font: UIFont.pacifico(style: .regular, size: 18),
-                   color: Palette.Common.white.color,
+                   color: UIColor.white,
                    alignment: .left)
             .apply(on: button)
+    }
+    
+    func apply(onShadow view: UIView) {
+        view.layer.shadowRadius = 1
+        view.layer.cornerRadius = 5
+        view.layer.shadowOpacity = 0.3
+        view.layer.masksToBounds = false
+        view.layer.shadowColor = UIColor.gray.cgColor
+        view.layer.shadowOffset = CGSize(width: 3, height: 3)
     }
     
 }

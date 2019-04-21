@@ -20,6 +20,10 @@ extension String {
         case serviceErrorMessage
         case buttonOk
         case titleAlert
+        case categories
+        case topSelling
+        case from
+        case to
 
         
     }

@@ -14,7 +14,9 @@ class HomeViewController: UIViewController {
     
     var presenter: HomePresenterProtocol!
     
-    private var datasource: [[String: Array<Any>]] = []
+    private var bannerList: [Banner] = []
+    private var categoryList: [Category] = []
+    private var topSellingProductList: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +47,15 @@ class HomeViewController: UIViewController {
     }
 
     private func setupTableView() {
-        //tableView.register(cellType: MessagePopupCell.self)
+        tableView.register(cellType: BannerCell.self)
+        tableView.register(cellType: ProductCell.self)
+        tableView.register(cellType: CategoriesCell.self)
+        tableView.registerForHeaderFooter(headerFooterType: HomeTableHeaderView.self)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 24
-        tableView.bounces = false
-        tableView.isScrollEnabled = false
+        //tableView.bounces = true
+        //tableView.isScrollEnabled = false
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -60,15 +65,36 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return datasource.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datasource[section].count
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 1
+        default:
+            return topSellingProductList.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        switch indexPath.section {
+        case 0:
+            let cell: BannerCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.setup(bannerList: bannerList)
+            return cell
+        case 1:
+            let cell: CategoriesCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.setup(categoryList: categoryList)
+            return cell
+        default:
+            let cell: ProductCell = tableView.dequeueReusableCell(for: indexPath)
+            let product = topSellingProductList[indexPath.row]
+            cell.setup(product: product)
+            return cell
+        }
     }
     
 }
@@ -76,23 +102,45 @@ extension HomeViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView: HomeTableHeaderView = tableView.dequeueReusableHeaderFooterView()
+        switch section {
+        case 0:
+            headerView.setup(title: String())
+        case 1:
+            headerView.setup(title: String(identifier: .categories))
+        default:
+            headerView.setup(title: String(identifier: .topSelling))
+        }
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 0.0
+        default:
+            return 36.0
+        }
+    }
+    
 }
 
 // MARK: - HomeViewProtocol
 extension HomeViewController: HomeViewProtocol {
     
     func setup(bannerList: [Banner]) {
-        datasource.append(["banners": bannerList])
+        self.bannerList = bannerList
         tableView.reloadData()
     }
     
     func setup(categoryList: [Category]) {
-        datasource.append(["categories": categoryList])
+        self.categoryList = categoryList
         tableView.reloadData()
     }
     
     func setup(topSellingProductList: [Product]) {
-        datasource.append(["products": topSellingProductList])
+        self.topSellingProductList = topSellingProductList
         tableView.reloadData()
     }
     

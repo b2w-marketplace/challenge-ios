@@ -10,13 +10,8 @@ import Foundation
 
 enum Palette {
     
-    enum Common: String {
-        case black = "#000000"
-        case white = "#FFFFFF"
-    }
-    
     enum Gray: String {
-        case main = "#4A4A4A"
+        case main = "#1E1E1E"
         case light = "#5B5B5B"
     }
     

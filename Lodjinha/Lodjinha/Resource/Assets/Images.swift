@@ -17,6 +17,7 @@ extension UIImage {
         case tagSelected
         case tagDeselected
         case logoNavbar
+        case placeholder
     }
     
     convenience init?(identifier: Identifier) {
