@@ -10,18 +10,24 @@ import UIKit
 
 class ListProductsView: UITableViewController {
 
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     private lazy var viewModel = ListProductsViewModel(delegate: self)
+    var selected: ProductResponse?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
         viewModel.listProductsLoad()
         registerCells()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Valtar", style: .plain, target: nil, action: nil)
     }
     
     func setup(transporter: ResultTransporterCategory, index: Int) {
         viewModel.setup(transporter: transporter, index: index)
+    }
+    
+    private func setupNavBar() {
+        self.navigationController?.view.tintColor = UIColor.white
+        self.navigationItem.title = "\(self.viewModel.product[0].categoria.descricao)"
     }
     
     private func registerCells() {
@@ -47,12 +53,20 @@ class ListProductsView: UITableViewController {
         cell.fill(dto: viewModel.dtoForRow(index: indexPath.row))
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let detailView = storyboard?.instantiateViewController(withIdentifier: "detailView") as? DetailView {
+            detailView.setup(transporter: viewModel.transporterProducts, index: indexPath.row)
+            navigationController?.pushViewController(detailView, animated: true)
+        }
+    }
 }
 
 extension ListProductsView: LoadContent {
     func didLoad() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.setupNavBar()
         }
     }
 }

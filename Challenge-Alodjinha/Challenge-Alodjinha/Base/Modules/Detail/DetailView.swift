@@ -23,6 +23,7 @@ class DetailView: UIViewController {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
         fill()
+        setupNavBar()
     }
     
     func setup(transporter: ResultTransporterProduct, index: Int) {
@@ -37,6 +38,10 @@ class DetailView: UIViewController {
         if let url = URL(string: products[0].urlImagem) {
             productImage.kf.setImage(with: url)
         }
+    }
+    
+    private func setupNavBar() {
+        self.navigationItem.title = "\(self.products[0].categoria.descricao)"
     }
     
     @IBAction func reserve() {

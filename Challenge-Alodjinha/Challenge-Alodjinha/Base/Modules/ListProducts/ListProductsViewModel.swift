@@ -13,10 +13,18 @@ class ListProductsViewModel {
     private var category = [Category]()
     private var products = [Product]()
     
+    var product: [Product] {
+        return self.products
+    }
+    
     private weak var delegate: LoadContent?
     
     init(delegate: LoadContent?) {
         self.delegate = delegate
+    }
+    
+    var transporterProducts: ResultTransporterProduct {
+        return ResultTransporterProduct(product: products)
     }
     
     func setup(transporter: ResultTransporterCategory, index: Int) {

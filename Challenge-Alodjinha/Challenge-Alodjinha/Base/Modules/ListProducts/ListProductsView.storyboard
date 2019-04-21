@@ -37,5 +37,13 @@
             </objects>
             <point key="canvasLocation" x="334" y="153"/>
         </scene>
+        <!--DetailView-->
+        <scene sceneID="kQu-l8-oFP">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="detailView" storyboardName="DetailView" id="p2h-vg-7Hq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKe-8R-EgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973" y="128"/>
+        </scene>
     </scenes>
 </document>

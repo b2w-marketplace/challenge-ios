@@ -37,7 +37,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="som-hG-CNH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.32369780539999998" green="0.0" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="aI9-YO-ArQ" kind="relationship" relationship="rootViewController" id="MtT-7h-BTT"/>
@@ -47,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="812" y="-556"/>
         </scene>
-        <!--Home View-->
+        <!--Home-->
         <scene sceneID="BeZ-U5-Rcq">
             <objects>
                 <viewController id="aI9-YO-ArQ" customClass="HomeView" customModule="Challenge_Alodjinha" customModuleProvider="target" sceneMemberID="viewController">
@@ -156,7 +160,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HO3-RC-62x"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ebr-eN-6VG"/>
+                    <navigationItem key="navigationItem" title="Home" id="Ebr-eN-6VG"/>
                     <connections>
                         <outlet property="bannerPageControl" destination="gfZ-5J-WH8" id="W4r-mk-yIy"/>
                         <outlet property="bannerScrollView" destination="od2-So-fHn" id="XyC-up-595"/>
