@@ -12,6 +12,11 @@ class ListProductsViewModel {
     
     private var category = CategoryResponse()
     private var products = ProductIdResponse()
+    private var flag = 0
+    
+    var flags: Int {
+        return self.flag
+    }
     
     var product: [Product] {
         return self.products.data
@@ -44,6 +49,9 @@ class ListProductsViewModel {
     func listProductsLoad() {
         APIRequest().loadProduct(id: category.data[0].id) { response in
             if let response = response {
+                if response.data.count == 0 {
+                    self.flag = 1
+                }
                 self.products.data = response.data
             }
             self.delegate?.didLoad()

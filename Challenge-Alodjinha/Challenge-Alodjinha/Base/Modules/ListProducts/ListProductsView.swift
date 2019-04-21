@@ -43,6 +43,9 @@ class ListProductsView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.viewModel.flags == 1 {
+            self.showAlert(withTitle: "", message: "Não existe produtos para essa categoria!")
+        }
         return viewModel.numberOfRows()
     }
     
