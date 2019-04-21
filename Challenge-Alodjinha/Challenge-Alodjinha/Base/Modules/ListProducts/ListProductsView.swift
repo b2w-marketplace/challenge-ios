@@ -10,7 +10,6 @@ import UIKit
 
 class ListProductsView: UITableViewController {
 
-    @IBOutlet weak var loading: UIActivityIndicatorView!
     private lazy var viewModel = ListProductsViewModel(delegate: self)
     var selected: ProductResponse?
     
@@ -32,26 +31,19 @@ class ListProductsView: UITableViewController {
             self.navigationItem.title = "\(self.viewModel.product[0].categoria.descricao)"
         }
     }
-    
+
     private func registerCells() {
         let bestSellerNib = UINib(nibName: "ProductViewCell", bundle: nil)
         self.tableView.register(bestSellerNib, forCellReuseIdentifier: "productCell")
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSection()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if viewModel.numberOfRows() != 0 {
-            return viewModel.numberOfRows()
-    
-        } else {
-            self.showAlert(withTitle: "", message: "Não existe produtos para essa categoria!")
-            return 0
-        }
+        return viewModel.numberOfRows()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
