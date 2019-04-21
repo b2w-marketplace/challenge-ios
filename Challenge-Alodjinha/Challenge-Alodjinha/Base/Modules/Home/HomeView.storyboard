@@ -18,6 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.32369780539999998" green="0.0" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="4Am-9q-ptQ" kind="relationship" relationship="viewControllers" id="Sz0-JC-7CD"/>
@@ -36,7 +37,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="som-hG-CNH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.38823529410000002" green="0.25098039220000001" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.32369780539999998" green="0.0" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="aI9-YO-ArQ" kind="relationship" relationship="rootViewController" id="MtT-7h-BTT"/>
@@ -54,7 +55,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od2-So-fHn">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="od2-So-fHn">
                                 <rect key="frame" x="0.0" y="64" width="375" height="120"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gfZ-5J-WH8">
@@ -62,7 +63,6 @@
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfZ-gv-gHo">
                                 <rect key="frame" x="0.0" y="64" width="375" height="120"/>
-                                <color key="backgroundColor" red="0.38823529411764707" green="0.25098039215686274" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="OCz-iM-Ks1"/>
                                 </constraints>
@@ -122,6 +122,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CIz-Fc-WeK">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.32369780539999998" green="0.0" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -136,6 +140,7 @@
                             <constraint firstItem="HO3-RC-62x" firstAttribute="trailing" secondItem="UfZ-gv-gHo" secondAttribute="trailing" id="J6H-cr-8xJ"/>
                             <constraint firstItem="od2-So-fHn" firstAttribute="width" secondItem="UfZ-gv-gHo" secondAttribute="width" id="Jne-Lx-bGo"/>
                             <constraint firstItem="XHh-b4-51m" firstAttribute="top" secondItem="od2-So-fHn" secondAttribute="bottom" constant="8" id="Lbl-9x-xF0"/>
+                            <constraint firstItem="CIz-Fc-WeK" firstAttribute="centerY" secondItem="Ecv-cM-5AG" secondAttribute="centerY" id="MnK-tT-IrY"/>
                             <constraint firstItem="XHh-b4-51m" firstAttribute="leading" secondItem="HO3-RC-62x" secondAttribute="leading" constant="8" id="Q4g-9h-WV9"/>
                             <constraint firstItem="UfZ-gv-gHo" firstAttribute="top" secondItem="HO3-RC-62x" secondAttribute="top" id="Zfa-ZO-ool"/>
                             <constraint firstItem="od2-So-fHn" firstAttribute="top" secondItem="UfZ-gv-gHo" secondAttribute="top" id="cFT-XU-w1X"/>
@@ -145,6 +150,7 @@
                             <constraint firstItem="uKX-rt-RMK" firstAttribute="top" secondItem="78K-TE-Qrz" secondAttribute="bottom" constant="8" id="fpA-rR-Cny"/>
                             <constraint firstItem="UfZ-gv-gHo" firstAttribute="leading" secondItem="HO3-RC-62x" secondAttribute="leading" id="iML-Wh-tNV"/>
                             <constraint firstItem="od2-So-fHn" firstAttribute="centerX" secondItem="gfZ-5J-WH8" secondAttribute="centerX" id="mDX-dw-wJ6"/>
+                            <constraint firstItem="CIz-Fc-WeK" firstAttribute="centerX" secondItem="Ecv-cM-5AG" secondAttribute="centerX" id="xLk-xo-Zhy"/>
                             <constraint firstItem="gfZ-5J-WH8" firstAttribute="top" secondItem="HO3-RC-62x" secondAttribute="top" constant="86" id="ybS-iW-2XE"/>
                             <constraint firstItem="od2-So-fHn" firstAttribute="leading" secondItem="UfZ-gv-gHo" secondAttribute="leading" id="zEM-Qz-HYo"/>
                         </constraints>
@@ -156,6 +162,7 @@
                         <outlet property="bannerScrollView" destination="od2-So-fHn" id="XyC-up-595"/>
                         <outlet property="bannerView" destination="UfZ-gv-gHo" id="fQZ-Jq-icb"/>
                         <outlet property="collectionView" destination="78K-TE-Qrz" id="87W-0d-2vL"/>
+                        <outlet property="loading" destination="CIz-Fc-WeK" id="ZiY-JF-MjD"/>
                         <outlet property="tableView" destination="qec-Pg-e4Y" id="rMW-qz-YVC"/>
                     </connections>
                 </viewController>

@@ -17,6 +17,7 @@ class ListProductsView: UITableViewController {
         self.tabBarController?.tabBar.isHidden = true
         viewModel.listProductsLoad()
         registerCells()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Valtar", style: .plain, target: nil, action: nil)
     }
     
     func setup(transporter: ResultTransporterCategory, index: Int) {

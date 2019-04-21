@@ -38,5 +38,9 @@ class DetailView: UIViewController {
             productImage.kf.setImage(with: url)
         }
     }
+    
+    @IBAction func reserve() {
+        self.showAlert(withTitle: "", message: "Produto Reservado com sucesso!")
+    }
 
 }

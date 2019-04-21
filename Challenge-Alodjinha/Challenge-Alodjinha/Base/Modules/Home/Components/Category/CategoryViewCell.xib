@@ -13,39 +13,42 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryViewCell" customModule="Challenge_Alodjinha" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="222" height="204"/>
+            <rect key="frame" x="0.0" y="0.0" width="170" height="251"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="222" height="204"/>
+                <rect key="frame" x="0.0" y="0.0" width="170" height="251"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Le1-iD-HSk">
-                        <rect key="frame" x="8" y="8" width="206" height="164"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Le1-iD-HSk">
+                        <rect key="frame" x="8" y="8" width="154" height="187"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTC-hS-xeC">
-                        <rect key="frame" x="8" y="180" width="206" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tTC-hS-xeC">
+                        <rect key="frame" x="8" y="203" width="154" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="OEg-cs-IOD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="tTC-hS-xeC" secondAttribute="bottom" constant="8" id="2cu-im-LXQ"/>
-                <constraint firstItem="tTC-hS-xeC" firstAttribute="top" secondItem="Le1-iD-HSk" secondAttribute="bottom" constant="8" id="FfS-Xb-meM"/>
-                <constraint firstItem="tTC-hS-xeC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="T77-W7-UFR"/>
-                <constraint firstItem="Le1-iD-HSk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="VxW-zl-QL7"/>
-                <constraint firstItem="Le1-iD-HSk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="f9w-8Q-u6f"/>
-                <constraint firstAttribute="trailing" secondItem="Le1-iD-HSk" secondAttribute="trailing" constant="8" id="k78-9B-5SE"/>
-                <constraint firstAttribute="trailing" secondItem="tTC-hS-xeC" secondAttribute="trailing" constant="8" id="owe-kL-qAG"/>
+                <constraint firstAttribute="trailing" secondItem="Le1-iD-HSk" secondAttribute="trailing" constant="8" id="3wH-re-MFW"/>
+                <constraint firstItem="tTC-hS-xeC" firstAttribute="top" secondItem="Le1-iD-HSk" secondAttribute="bottom" constant="8" id="5eb-22-lza"/>
+                <constraint firstItem="Le1-iD-HSk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Eyw-uz-GXK"/>
+                <constraint firstAttribute="trailing" secondItem="tTC-hS-xeC" secondAttribute="trailing" constant="8" id="F1x-hG-LzM"/>
+                <constraint firstItem="tTC-hS-xeC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Htq-HZ-NLu"/>
+                <constraint firstItem="Le1-iD-HSk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="VhQ-md-yVS"/>
+                <constraint firstAttribute="bottom" secondItem="tTC-hS-xeC" secondAttribute="bottom" constant="8" id="Wez-gj-0ce"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="222" height="204"/>
+            <size key="customSize" width="170" height="251"/>
             <connections>
                 <outlet property="categoryImage" destination="Le1-iD-HSk" id="rlC-Gq-BNa"/>
                 <outlet property="descriptionLabel" destination="tTC-hS-xeC" id="DoZ-1g-Ijq"/>
             </connections>
-            <point key="canvasLocation" x="275.19999999999999" y="223.98800599700152"/>
+            <point key="canvasLocation" x="200" y="237.93103448275863"/>
         </collectionViewCell>
     </objects>
 </document>
