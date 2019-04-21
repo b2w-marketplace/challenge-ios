@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIViewControllert {
+extension UIViewController {
     func showAlert(withTitle title: String, message: String) {
         let attributedText = NSMutableAttributedString(string: message, attributes: [NSAttributedString.Key.font: UIFont(name:".SFUIText-BoldItalic", size: 14)!])
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
