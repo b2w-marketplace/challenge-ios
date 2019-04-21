@@ -9,5 +9,5 @@
 import Foundation
 
 struct CategoryResponse: Codable {
-    var data: [Category]
+    var data: [Category] = []
 }

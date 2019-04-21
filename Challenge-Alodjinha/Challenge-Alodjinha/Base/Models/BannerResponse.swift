@@ -9,5 +9,5 @@
 import Foundation
 
 struct BannerResponse: Codable {
-    var data: [Banner]
+    var data: [Banner] = []
 }

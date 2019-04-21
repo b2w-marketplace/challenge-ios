@@ -33,6 +33,9 @@
 		75FB08AC2266B3B400B59B28 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08AB2266B3B400B59B28 /* Extension+String.swift */; };
 		75FB08BB2268000200B59B28 /* Pacifico-Regular.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08BA2268000200B59B28 /* Pacifico-Regular.ttc */; };
 		75FB08BD2268070500B59B28 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB08BC2268070400B59B28 /* Extension+UIViewController.swift */; };
+		75FB08C1226CED6E00B59B28 /* BannerMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08C0226CED6E00B59B28 /* BannerMock.json */; };
+		75FB08C3226CEDD200B59B28 /* CategoryMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08C2226CEDD200B59B28 /* CategoryMock.json */; };
+		75FB08C5226CEE4900B59B28 /* BestSellerMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75FB08C4226CEE4900B59B28 /* BestSellerMock.json */; };
 		CD8EBA9F2267341A0048232B /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8EBA9D2267341A0048232B /* CategoryViewCell.swift */; };
 		CD8EBAA02267341A0048232B /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8EBA9E2267341A0048232B /* CategoryViewCell.xib */; };
 		CD8EBAA3226738FA0048232B /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8EBAA2226738FA0048232B /* DetailView.storyboard */; };
@@ -85,6 +88,9 @@
 		75FB08AB2266B3B400B59B28 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		75FB08BA2268000200B59B28 /* Pacifico-Regular.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttc"; sourceTree = "<group>"; };
 		75FB08BC2268070400B59B28 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		75FB08C0226CED6E00B59B28 /* BannerMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BannerMock.json; sourceTree = "<group>"; };
+		75FB08C2226CEDD200B59B28 /* CategoryMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CategoryMock.json; sourceTree = "<group>"; };
+		75FB08C4226CEE4900B59B28 /* BestSellerMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BestSellerMock.json; sourceTree = "<group>"; };
 		855405F06AB83AC86EC0BE50 /* Pods_Challenge_AlodjinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_AlodjinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FA5A17FD4E28AD8F04ECAB /* Pods_Challenge_Alodjinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_Alodjinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8EBA9D2267341A0048232B /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
@@ -184,6 +190,9 @@
 				75FB08BA2268000200B59B28 /* Pacifico-Regular.ttc */,
 				7524C9CA2266065500AAAA54 /* LaunchScreen.storyboard */,
 				7524C9C82266065500AAAA54 /* Assets.xcassets */,
+				75FB08C0226CED6E00B59B28 /* BannerMock.json */,
+				75FB08C2226CEDD200B59B28 /* CategoryMock.json */,
+				75FB08C4226CEE4900B59B28 /* BestSellerMock.json */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -413,12 +422,15 @@
 			files = (
 				CD8EBAA02267341A0048232B /* CategoryViewCell.xib in Resources */,
 				75FB08A82266A9E200B59B28 /* ProductViewCell.xib in Resources */,
+				75FB08C3226CEDD200B59B28 /* CategoryMock.json in Resources */,
 				CD8EBAA3226738FA0048232B /* DetailView.storyboard in Resources */,
+				75FB08C1226CED6E00B59B28 /* BannerMock.json in Resources */,
 				75FB08BB2268000200B59B28 /* Pacifico-Regular.ttc in Resources */,
 				75FB08942266601B00B59B28 /* BannerView.xib in Resources */,
 				75FB088222664C8E00B59B28 /* HomeView.storyboard in Resources */,
 				CD8EBAA822673FE60048232B /* ListProductsView.storyboard in Resources */,
 				7524C9CC2266065500AAAA54 /* LaunchScreen.storyboard in Resources */,
+				75FB08C5226CEE4900B59B28 /* BestSellerMock.json in Resources */,
 				7524C9C92266065500AAAA54 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
