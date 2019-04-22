@@ -15,9 +15,6 @@ final class TabBarViewController: UITabBarController, TabBarViewProtocol {
     // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAccessibilityIdentifiers()
-        applyLanguage()
-        applyStyle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,18 +25,5 @@ final class TabBarViewController: UITabBarController, TabBarViewProtocol {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-  
-    // MARK: - Setup Methods
-    private func setupAccessibilityIdentifiers() {
-        
-    }
-    
-    private func applyLanguage() {
-        
-    }
-    
-    private func applyStyle() {
-        //Style.apply(onNavigationBarWithImageTitle: navigationController)
-    }
-    
+      
 }

@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAccessibilityIdentifiers()
-        applyLanguage()
+        applyStyle()
         setupTableView()
         
         presenter.viewDidLoad()
@@ -30,16 +30,13 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+        setupTabBar()
         applyStyle()
     }
     
     // MARK: - Setup Methods
     private func setupAccessibilityIdentifiers() {
-        
-    }
-    
-    private func applyLanguage() {
-        
+        tableView.accessibilityIdentifier = "tableView"
     }
     
     private func applyStyle() {
@@ -54,11 +51,14 @@ class HomeViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 24
-        //tableView.bounces = true
-        //tableView.isScrollEnabled = false
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    private func setupTabBar() {
+        tabBarController?.tabBar.isHidden = false
+    }
+    
 }
 
 // MARK: - UITableViewDataSource
@@ -87,6 +87,7 @@ extension HomeViewController: UITableViewDataSource {
             return cell
         case 1:
             let cell: CategoriesCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             cell.setup(categoryList: categoryList)
             return cell
         default:
@@ -124,6 +125,16 @@ extension HomeViewController: UITableViewDelegate {
         }
     }
     
+}
+
+// MARK: - CategoriesCellDelegate
+extension HomeViewController: CategoriesCellDelegate {
+    
+    func categoriesCell(cell: CategoriesCell, didSelectItemAt indexPath: IndexPath) {
+        let category = categoryList[indexPath.row]
+        presenter.didSelectCategory(category: category)
+    }
+
 }
 
 // MARK: - HomeViewProtocol

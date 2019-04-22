@@ -56,4 +56,8 @@ final class HomePresenter: HomePresenterProtocol {
             .disposed(by: disposeBag)
     }
     
+    func didSelectCategory(category: Category) {
+        router.presentProductListScreen(category: category)
+    }
+    
 }

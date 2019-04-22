@@ -14,10 +14,16 @@ struct ProductEncodable: Encodable {
     let limit: Int
     let categoriaId: Int
     
-    init(offset: Int = 0, limit: Int = 10, categoriaId: Int) {
+    init(categoriaId: Int, offset: Int = 0, limit: Int = 10) {
         self.offset = offset
         self.limit = limit
         self.categoriaId = categoriaId
+    }
+    
+    init(productFilter: ProductFilter) {
+        offset = productFilter.offset
+        limit = productFilter.limit
+        categoriaId = productFilter.categoriaId
     }
     
 }

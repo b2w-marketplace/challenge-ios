@@ -9,11 +9,9 @@
 import UIKit
 import AlamofireImage
 
-class BannerCell: UITableViewCell, NibReusable {
+final class BannerCell: UITableViewCell, NibReusable {
 
     @IBOutlet private weak var scrollViewBanners: UIScrollView!
-    
-    @IBOutlet private weak var backgroundViewShadow: UIView!
     
     @IBOutlet private weak var pageControl: UIPageControl!
     
@@ -27,10 +25,12 @@ class BannerCell: UITableViewCell, NibReusable {
 
     private func setupAccessibilityIdentifiers() {
         scrollViewBanners.accessibilityIdentifier = "scrollViewBanners"
+        
+        pageControl.accessibilityIdentifier = "pageControl"
     }
     
     private func applyStyle() {
-        Style.apply(onShadow: backgroundViewShadow)
+        Style.apply(onShadow: scrollViewBanners)
     }
     
     private func setupSlides() {
@@ -40,10 +40,10 @@ class BannerCell: UITableViewCell, NibReusable {
             if let url = URL(string: bannerList[i].urlImagem) {
                 imageView.af_setImage(withURL: url)
             }
-            imageView.frame = CGRect(x: frame.width * CGFloat(i),
+            imageView.frame = CGRect(x: scrollViewBanners.frame.width * CGFloat(i),
                                      y: 0,
-                                     width: frame.width,
-                                     height: frame.height)
+                                     width: scrollViewBanners.frame.width,
+                                     height: scrollViewBanners.frame.height)
             scrollViewBanners.addSubview(imageView)
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(gesture:)))
             imageView.isUserInteractionEnabled = true

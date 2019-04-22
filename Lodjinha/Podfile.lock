@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.8.2)
   - AlamofireImage (3.5.2):
     - Alamofire (~> 4.8)
+  - CCBottomRefreshControl (0.5.2)
   - CodableAlamofire (1.1.1):
     - Alamofire (~> 4.0)
   - KeychainAccess (3.2.0)
@@ -24,6 +25,7 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage (~> 3.5)
+  - CCBottomRefreshControl (~> 0.5.2)
   - RSReactiveRequest (from `https://github.com/redspark-io/RSReactiveRequest.git`)
   - RSRealmHelper (~> 1.0.0)
   - RxSwift (~> 4.4.0)
@@ -32,6 +34,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - CCBottomRefreshControl
     - CodableAlamofire
     - KeychainAccess
     - Realm
@@ -52,6 +55,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
   CodableAlamofire: b587c1198562824abb1f468aed34feb00d6cecd8
   KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
   Realm: e12c9c2387d05c5bba3a9c394838f5870e85763b
@@ -61,6 +65,6 @@ SPEC CHECKSUMS:
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
 
-PODFILE CHECKSUM: dce4e9a67e3c6e88faa25f0fdb8c8cbe81962c1d
+PODFILE CHECKSUM: acaf2fb02b8cbaab8d0b895a471338a4217901f6
 
 COCOAPODS: 1.6.1

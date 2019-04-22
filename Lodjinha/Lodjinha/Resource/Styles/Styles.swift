@@ -53,12 +53,12 @@ extension StyleBuilder {
     }
     
     func apply(onShadow view: UIView) {
-        view.layer.shadowRadius = 1
+        view.layer.shadowRadius = 2
         view.layer.cornerRadius = 5
-        view.layer.shadowOpacity = 0.3
+        view.layer.shadowOpacity = 0.5
         view.layer.masksToBounds = false
         view.layer.shadowColor = UIColor.gray.cgColor
-        view.layer.shadowOffset = CGSize(width: 3, height: 3)
+        view.layer.shadowOffset = CGSize(width: 3, height: 5)
     }
     
 }

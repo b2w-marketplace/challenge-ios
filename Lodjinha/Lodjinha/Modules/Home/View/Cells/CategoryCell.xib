@@ -13,24 +13,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryCell" customModule="Lodjinha" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="94" height="90"/>
+            <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="94" height="90"/>
+                <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lQq-O1-OzA">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UBi-a2-wn9">
                         <rect key="frame" x="11" y="0.0" width="72" height="62"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="72" id="a2Q-Ay-M32"/>
-                            <constraint firstAttribute="height" constant="62" id="c9k-ek-gy3"/>
-                        </constraints>
-                    </imageView>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lQq-O1-OzA">
+                                <rect key="frame" x="0.0" y="0.0" width="72" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="AZp-y8-AB6"/>
+                                    <constraint firstAttribute="width" constant="72" id="bjF-Bs-ski"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pB-4d-M9b">
-                        <rect key="frame" x="0.0" y="61" width="94" height="29"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="29" id="ZBD-Tp-T02"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="62" width="94" height="32"/>
                         <string key="text">Label
 Label</string>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -40,12 +42,12 @@ Label</string>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="lQq-O1-OzA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Anq-31-LAB"/>
-                <constraint firstAttribute="trailing" secondItem="lQq-O1-OzA" secondAttribute="trailing" constant="11" id="Oo6-E5-AGj"/>
-                <constraint firstItem="lQq-O1-OzA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="11" id="cHi-WC-gca"/>
-                <constraint firstAttribute="bottom" secondItem="5pB-4d-M9b" secondAttribute="bottom" id="kfN-g2-H7z"/>
-                <constraint firstItem="5pB-4d-M9b" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qf4-mD-Mzq"/>
-                <constraint firstAttribute="trailing" secondItem="5pB-4d-M9b" secondAttribute="trailing" id="rL1-aC-1VT"/>
+                <constraint firstItem="UBi-a2-wn9" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="34v-wj-0Tb"/>
+                <constraint firstItem="5pB-4d-M9b" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3XV-Se-7SM"/>
+                <constraint firstItem="UBi-a2-wn9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4Ju-NW-yBN"/>
+                <constraint firstAttribute="bottom" secondItem="5pB-4d-M9b" secondAttribute="bottom" id="Bwr-kp-IsQ"/>
+                <constraint firstAttribute="trailing" secondItem="5pB-4d-M9b" secondAttribute="trailing" id="V2c-Sx-hwX"/>
+                <constraint firstItem="5pB-4d-M9b" firstAttribute="top" secondItem="UBi-a2-wn9" secondAttribute="bottom" id="qzO-gE-FDf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>

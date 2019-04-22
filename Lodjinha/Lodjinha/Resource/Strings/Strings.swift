@@ -24,7 +24,7 @@ extension String {
         case topSelling
         case from
         case to
-
+        case emptyState
         
     }
     

@@ -17,9 +17,6 @@ protocol HomeRemoteDataManagerProtocol: class {
     var bannesObservable: Single<[Banner]> { get }
     var topSellingProductListObservable: Single<[Product]> { get }
     
-    func fetchProducts(productEncodable: ProductEncodable) -> Single<[Product]>
-    func fetchProductDetail(productId: Int) -> Single<Product>
-    
 }
 
 // MARK: - Interactor
@@ -28,9 +25,6 @@ protocol HomeInteractorProtocol: class {
     var categoriesObservable: Single<[Category]> { get }
     var bannesObservable: Single<[Banner]> { get }
     var topSellingProductListObservable: Single<[Product]> { get }
-    
-    func fetchProducts(offset: Int, limit: Int, categoriaId: Int) -> Single<[Product]>
-    func fetchProductDetail(productId: Int) -> Single<Product>
     
 }
 
@@ -42,6 +36,7 @@ protocol HomePresenterProtocol: class {
     var interactor: HomeInteractorProtocol! { get set }
     
     func viewDidLoad()
+    func didSelectCategory(category: Category)
     
 }
 
@@ -61,5 +56,7 @@ protocol HomeViewProtocol: class {
 protocol HomeRouterProtocol: class {
     
     var viewController: UIViewController! { get set }
+    
+    func presentProductListScreen(category: Category)
     
 }

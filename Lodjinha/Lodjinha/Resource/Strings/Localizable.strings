@@ -18,4 +18,5 @@ categories = "Categorias";
 topSelling = "Mais Vendidos";
 from = "De";
 to = "Por";
+emptyState = "Não existem produtos com essa categoria.";
 

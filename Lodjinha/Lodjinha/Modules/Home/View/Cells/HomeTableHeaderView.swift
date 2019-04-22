@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeTableHeaderView: UITableViewHeaderFooterView, NibReusable {
+final class HomeTableHeaderView: UITableViewHeaderFooterView, NibReusable {
 
     @IBOutlet private weak var labelTitle: UILabel!
     

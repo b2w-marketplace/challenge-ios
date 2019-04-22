@@ -19,12 +19,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQr-3V-hJT">
-                        <rect key="frame" x="0.0" y="-1" width="375" height="130"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUO-ek-cP3">
                         <rect key="frame" x="0.0" y="-1" width="375" height="130"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="XcJ-P2-VUH"/>
                         </constraints>
@@ -39,10 +36,6 @@
                     </pageControl>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="iQr-3V-hJT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1vY-kh-BDa"/>
-                    <constraint firstItem="iQr-3V-hJT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-1" id="4TJ-eK-Hvy"/>
-                    <constraint firstAttribute="trailing" secondItem="iQr-3V-hJT" secondAttribute="trailing" id="AWX-AH-rsi"/>
-                    <constraint firstAttribute="bottom" secondItem="iQr-3V-hJT" secondAttribute="bottom" constant="10.5" id="CbG-Ar-rr0"/>
                     <constraint firstAttribute="bottom" secondItem="cUO-ek-cP3" secondAttribute="bottom" constant="10.5" id="F4o-wP-oRB"/>
                     <constraint firstItem="cUO-ek-cP3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-1" id="IKD-un-NtL"/>
                     <constraint firstItem="jZZ-Za-gHY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="OYS-mc-etB"/>
@@ -53,8 +46,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="backgroundView" destination="iQr-3V-hJT" id="5wp-rC-Xsm"/>
-                <outlet property="backgroundViewShadow" destination="iQr-3V-hJT" id="Zmx-HY-j7L"/>
                 <outlet property="pageControl" destination="jZZ-Za-gHY" id="1Fq-bf-OHA"/>
                 <outlet property="scrollViewBanners" destination="cUO-ek-cP3" id="kez-UN-pIo"/>
             </connections>

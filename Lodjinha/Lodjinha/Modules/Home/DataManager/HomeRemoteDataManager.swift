@@ -41,15 +41,10 @@ final class HomeRemoteDataManager: HomeRemoteDataManagerProtocol {
         return productService.fetchTopSellingProducts(scheduler: scheduler)
             .map{ ProductData(productDataDecodable: $0).data }
     }
-
-    func fetchProducts(productEncodable: ProductEncodable) -> Single<[Product]> {
-        return productService.fetchProducts(productEncodable: productEncodable, scheduler: scheduler)
-            .map{ ProductData(productDataDecodable: $0).data }
-    }
     
-    func fetchProductDetail(productId: Int) -> Single<Product> {
-        return productService.fetchProductDetail(productId: productId, scheduler: scheduler)
-            .map{ Product(productDecodable: $0) }
-    }
+//    func fetchProductDetail(productId: Int) -> Single<Product> {
+//        return productService.fetchProductDetail(productId: productId, scheduler: scheduler)
+//            .map{ Product(productDecodable: $0) }
+//    }
 
 }

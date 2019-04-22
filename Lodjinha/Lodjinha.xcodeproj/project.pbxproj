@@ -84,6 +84,23 @@
 		8DB5CAC7226CEE5F0064FA8A /* NumberFormatter+CurrencyPtBr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5CAC6226CEE5F0064FA8A /* NumberFormatter+CurrencyPtBr.swift */; };
 		8DB5CAC9226CF07F0064FA8A /* Float+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5CAC8226CF07F0064FA8A /* Float+Currency.swift */; };
 		8DB5CACB226CF4B60064FA8A /* String+Strikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5CACA226CF4B60064FA8A /* String+Strikethrough.swift */; };
+		8DD3ACFD226E123A00BBE6BA /* ProducList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD3ACF4226E123A00BBE6BA /* ProducList.storyboard */; };
+		8DD3ACFE226E123A00BBE6BA /* ProducListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3ACF5226E123A00BBE6BA /* ProducListInteractor.swift */; };
+		8DD3AD00226E123A00BBE6BA /* ProducListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3ACF7226E123A00BBE6BA /* ProducListPresenter.swift */; };
+		8DD3AD01226E123A00BBE6BA /* ProducListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3ACF8226E123A00BBE6BA /* ProducListProtocols.swift */; };
+		8DD3AD02226E123A00BBE6BA /* ProducListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3ACF9226E123A00BBE6BA /* ProducListRemoteDataManager.swift */; };
+		8DD3AD03226E123A00BBE6BA /* ProducListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3ACFA226E123A00BBE6BA /* ProducListRepository.swift */; };
+		8DD3AD04226E123A00BBE6BA /* ProducListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3ACFB226E123A00BBE6BA /* ProducListRouter.swift */; };
+		8DD3AD05226E123A00BBE6BA /* ProducListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3ACFC226E123A00BBE6BA /* ProducListViewController.swift */; };
+		8DD3AD0E226E14CB00BBE6BA /* ProductFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3AD0D226E14CB00BBE6BA /* ProductFilter.swift */; };
+		8DD3AD10226E2A7000BBE6BA /* UINavigationController+BackButtonTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3AD0F226E2A7000BBE6BA /* UINavigationController+BackButtonTitle.swift */; };
+		8DD3AD19226E2DB500BBE6BA /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD3AD12226E2DB500BBE6BA /* ProductDetail.storyboard */; };
+		8DD3AD1A226E2DB500BBE6BA /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3AD13226E2DB500BBE6BA /* ProductDetailInteractor.swift */; };
+		8DD3AD1B226E2DB500BBE6BA /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3AD14226E2DB500BBE6BA /* ProductDetailPresenter.swift */; };
+		8DD3AD1C226E2DB500BBE6BA /* ProductDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3AD15226E2DB500BBE6BA /* ProductDetailProtocols.swift */; };
+		8DD3AD1D226E2DB500BBE6BA /* ProductDetailRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3AD16226E2DB500BBE6BA /* ProductDetailRemoteDataManager.swift */; };
+		8DD3AD1E226E2DB500BBE6BA /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3AD17226E2DB500BBE6BA /* ProductDetailRouter.swift */; };
+		8DD3AD1F226E2DB500BBE6BA /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3AD18226E2DB500BBE6BA /* ProductDetailViewController.swift */; };
 		AD8F8A7E4212512C8BAE2D04 /* Pods_Lodjinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2D3D63F3F68F6D1F99191F /* Pods_Lodjinha.framework */; };
 		BBEFE1A878CDBCF4F0ADA5CA /* Pods_LodjinhaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2DE125469BBE8CD408570B /* Pods_LodjinhaUITests.framework */; };
 		DB86E25ADA3580F6BF7E12A5 /* Pods_LodjinhaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1094047C957A5B419F62C87 /* Pods_LodjinhaTests.framework */; };
@@ -194,6 +211,23 @@
 		8DB5CAC6226CEE5F0064FA8A /* NumberFormatter+CurrencyPtBr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+CurrencyPtBr.swift"; sourceTree = "<group>"; };
 		8DB5CAC8226CF07F0064FA8A /* Float+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Currency.swift"; sourceTree = "<group>"; };
 		8DB5CACA226CF4B60064FA8A /* String+Strikethrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Strikethrough.swift"; sourceTree = "<group>"; };
+		8DD3ACF4226E123A00BBE6BA /* ProducList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProducList.storyboard; sourceTree = "<group>"; };
+		8DD3ACF5226E123A00BBE6BA /* ProducListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducListInteractor.swift; sourceTree = "<group>"; };
+		8DD3ACF7226E123A00BBE6BA /* ProducListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducListPresenter.swift; sourceTree = "<group>"; };
+		8DD3ACF8226E123A00BBE6BA /* ProducListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducListProtocols.swift; sourceTree = "<group>"; };
+		8DD3ACF9226E123A00BBE6BA /* ProducListRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducListRemoteDataManager.swift; sourceTree = "<group>"; };
+		8DD3ACFA226E123A00BBE6BA /* ProducListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducListRepository.swift; sourceTree = "<group>"; };
+		8DD3ACFB226E123A00BBE6BA /* ProducListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducListRouter.swift; sourceTree = "<group>"; };
+		8DD3ACFC226E123A00BBE6BA /* ProducListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducListViewController.swift; sourceTree = "<group>"; };
+		8DD3AD0D226E14CB00BBE6BA /* ProductFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilter.swift; sourceTree = "<group>"; };
+		8DD3AD0F226E2A7000BBE6BA /* UINavigationController+BackButtonTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+BackButtonTitle.swift"; sourceTree = "<group>"; };
+		8DD3AD12226E2DB500BBE6BA /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
+		8DD3AD13226E2DB500BBE6BA /* ProductDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailInteractor.swift; sourceTree = "<group>"; };
+		8DD3AD14226E2DB500BBE6BA /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
+		8DD3AD15226E2DB500BBE6BA /* ProductDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailProtocols.swift; sourceTree = "<group>"; };
+		8DD3AD16226E2DB500BBE6BA /* ProductDetailRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRemoteDataManager.swift; sourceTree = "<group>"; };
+		8DD3AD17226E2DB500BBE6BA /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
+		8DD3AD18226E2DB500BBE6BA /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		94E371E2C0488C1D18660CEA /* Pods-LodjinhaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaTests/Pods-LodjinhaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1094047C957A5B419F62C87 /* Pods_LodjinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LodjinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BF0EDE3C656E608712E843 /* Pods-Lodjinha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lodjinha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lodjinha/Pods-Lodjinha.debug.xcconfig"; sourceTree = "<group>"; };
@@ -392,6 +426,8 @@
 		8D8890AC2267B9DD00E75E29 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8DD3AD11226E2D8400BBE6BA /* ProductDetail */,
+				8DD3ACF3226E121500BBE6BA /* ProducList */,
 				8D54D1F42267D6C200EF97E2 /* Common */,
 				8D8890D02267D00000E75E29 /* Intro */,
 				8D54D1F32267D56000EF97E2 /* TabBar */,
@@ -464,6 +500,7 @@
 				8D8890C02267C96800E75E29 /* UIStoryboard+Instantiate.swift */,
 				8DB5CA562268AB150064FA8A /* UIColor+Hex.swift */,
 				8DB5CA932268F9B60064FA8A /* UIViewController+Alerts.swift */,
+				8DD3AD0F226E2A7000BBE6BA /* UINavigationController+BackButtonTitle.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -559,10 +596,10 @@
 			isa = PBXGroup;
 			children = (
 				8DB5CAC3226CC9C70064FA8A /* Enuns */,
+				8D8890B92267C5D100E75E29 /* Extensions */,
+				8DB5CA5B2268ABF90064FA8A /* Frameworks */,
 				8DB5CA972268FB470064FA8A /* Managers */,
 				8DB5CA892268EE9C0064FA8A /* Models */,
-				8DB5CA5B2268ABF90064FA8A /* Frameworks */,
-				8D8890B92267C5D100E75E29 /* Extensions */,
 				8D8890AC2267B9DD00E75E29 /* Modules */,
 				8D8890A92267B99800E75E29 /* Network */,
 				8D8890AE2267BA1800E75E29 /* Resources */,
@@ -709,6 +746,7 @@
 				8DB5CA9E2268FFA10064FA8A /* CategoryData.swift */,
 				8DB5CA8E2268EEBE0064FA8A /* Banner.swift */,
 				8DB5CA9A2268FC8C0064FA8A /* BannerData.swift */,
+				8DD3AD0D226E14CB00BBE6BA /* ProductFilter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -745,6 +783,139 @@
 				8DB5CAC4226CC9CF0064FA8A /* NodeType.swift */,
 			);
 			path = Enuns;
+			sourceTree = "<group>";
+		};
+		8DD3ACF3226E121500BBE6BA /* ProducList */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3AD0C226E126500BBE6BA /* DataManager */,
+				8DD3AD0B226E125E00BBE6BA /* Repository */,
+				8DD3AD0A226E125900BBE6BA /* Interactor */,
+				8DD3AD09226E125200BBE6BA /* Presenter */,
+				8DD3AD08226E124800BBE6BA /* Protocols */,
+				8DD3AD07226E124300BBE6BA /* Router */,
+				8DD3AD06226E123E00BBE6BA /* View */,
+			);
+			path = ProducList;
+			sourceTree = "<group>";
+		};
+		8DD3AD06226E123E00BBE6BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3ACF4226E123A00BBE6BA /* ProducList.storyboard */,
+				8DD3ACFC226E123A00BBE6BA /* ProducListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DD3AD07226E124300BBE6BA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3ACFB226E123A00BBE6BA /* ProducListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8DD3AD08226E124800BBE6BA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3ACF8226E123A00BBE6BA /* ProducListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8DD3AD09226E125200BBE6BA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3ACF7226E123A00BBE6BA /* ProducListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8DD3AD0A226E125900BBE6BA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3ACF5226E123A00BBE6BA /* ProducListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8DD3AD0B226E125E00BBE6BA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3ACFA226E123A00BBE6BA /* ProducListRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8DD3AD0C226E126500BBE6BA /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3ACF9226E123A00BBE6BA /* ProducListRemoteDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		8DD3AD11226E2D8400BBE6BA /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3AD24226E2DD800BBE6BA /* DataManager */,
+				8DD3AD22226E2DC500BBE6BA /* Interactor */,
+				8DD3AD23226E2DC900BBE6BA /* Presenter */,
+				8DD3AD25226E2DF100BBE6BA /* Protocols */,
+				8DD3AD21226E2DC000BBE6BA /* Router */,
+				8DD3AD20226E2DBC00BBE6BA /* View */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		8DD3AD20226E2DBC00BBE6BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3AD12226E2DB500BBE6BA /* ProductDetail.storyboard */,
+				8DD3AD18226E2DB500BBE6BA /* ProductDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DD3AD21226E2DC000BBE6BA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3AD17226E2DB500BBE6BA /* ProductDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8DD3AD22226E2DC500BBE6BA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3AD13226E2DB500BBE6BA /* ProductDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8DD3AD23226E2DC900BBE6BA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3AD14226E2DB500BBE6BA /* ProductDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8DD3AD24226E2DD800BBE6BA /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3AD16226E2DB500BBE6BA /* ProductDetailRemoteDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		8DD3AD25226E2DF100BBE6BA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3AD15226E2DB500BBE6BA /* ProductDetailProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		C5058A9415DDF19E999E91CD /* Pods */ = {
@@ -883,8 +1054,10 @@
 				8D8890B52267BDE500E75E29 /* Images.xcassets in Resources */,
 				8D83DDB62267DC3C00F81CAA /* About.storyboard in Resources */,
 				8D8890D42267D02100E75E29 /* LaunchScreen.storyboard in Resources */,
+				8DD3AD19226E2DB500BBE6BA /* ProductDetail.storyboard in Resources */,
 				8DB5CAC0226CC1A60064FA8A /* HomeTableHeaderView.xib in Resources */,
 				8DB5CA652268C1270064FA8A /* Pacifico-Regular.ttf in Resources */,
+				8DD3ACFD226E123A00BBE6BA /* ProducList.storyboard in Resources */,
 				8DB5CAB8226CB5750064FA8A /* CategoryCell.xib in Resources */,
 				8DB5CAA82269115F0064FA8A /* BannerCell.xib in Resources */,
 				8D83DDC52267DDA800F81CAA /* TabBar.storyboard in Resources */,
@@ -937,6 +1110,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Lodjinha/Pods-Lodjinha-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/CCBottomRefreshControl/CCBottomRefreshControl.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/RSReactiveRequest/RSReactiveRequest.framework",
@@ -950,6 +1124,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCBottomRefreshControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSReactiveRequest.framework",
@@ -1009,16 +1184,22 @@
 			files = (
 				8DB5CA642268ACA30064FA8A /* UIControlState+Hashable.swift in Sources */,
 				8DB5CAA1226900640064FA8A /* ProductData.swift in Sources */,
+				8DD3AD05226E123A00BBE6BA /* ProducListViewController.swift in Sources */,
 				8DB5CA5A2268AB630064FA8A /* Styles.swift in Sources */,
+				8DD3AD1D226E2DB500BBE6BA /* ProductDetailRemoteDataManager.swift in Sources */,
 				8DB5CAB7226CB5750064FA8A /* CategoryCell.swift in Sources */,
 				8D83DDB82267DC3C00F81CAA /* AboutProtocols.swift in Sources */,
 				8DB5CA732268E1400064FA8A /* CategoryService.swift in Sources */,
 				8DB5CAAF2269118E0064FA8A /* ProductCell.swift in Sources */,
 				8DB5CA512268A9D60064FA8A /* Palette.swift in Sources */,
 				8DB5CA822268E9040064FA8A /* CategoryDecodable.swift in Sources */,
+				8DD3AD1C226E2DB500BBE6BA /* ProductDetailProtocols.swift in Sources */,
 				8D8FB49D2267AE73009926BB /* HomeViewController.swift in Sources */,
+				8DD3AD02226E123A00BBE6BA /* ProducListRemoteDataManager.swift in Sources */,
 				8DB5CA802268E8930064FA8A /* ProductDecodable.swift in Sources */,
 				8D54D1FA2267D84100EF97E2 /* Images.swift in Sources */,
+				8DD3AD1E226E2DB500BBE6BA /* ProductDetailRouter.swift in Sources */,
+				8DD3AD1F226E2DB500BBE6BA /* ProductDetailViewController.swift in Sources */,
 				8DB5CA752268E18A0064FA8A /* ProductService.swift in Sources */,
 				8D8890C92267CAF000E75E29 /* NibReusable.swift in Sources */,
 				8D83DDC92267DDA800F81CAA /* TabBarViewController.swift in Sources */,
@@ -1032,6 +1213,7 @@
 				8D83DDB72267DC3C00F81CAA /* AboutPresenter.swift in Sources */,
 				8DB5CA8D2268EEB80064FA8A /* Category.swift in Sources */,
 				8DB5CABE226CC19D0064FA8A /* HomeTableHeaderView.swift in Sources */,
+				8DD3ACFE226E123A00BBE6BA /* ProducListInteractor.swift in Sources */,
 				8DB5CA6F2268E0630064FA8A /* HomeRemoteDataManager.swift in Sources */,
 				8DB5CA6C2268DFAE0064FA8A /* HomeInteractor.swift in Sources */,
 				8D8890C42267CA2B00E75E29 /* CustomIdentifier.swift in Sources */,
@@ -1049,11 +1231,17 @@
 				8DB5CAA32269008F0064FA8A /* ProductDataDecodable.swift in Sources */,
 				8DB5CAA72269115F0064FA8A /* BannerCell.swift in Sources */,
 				8D8890BC2267C60A00E75E29 /* UIWindow+SetRoot.swift in Sources */,
+				8DD3AD00226E123A00BBE6BA /* ProducListPresenter.swift in Sources */,
+				8DD3AD04226E123A00BBE6BA /* ProducListRouter.swift in Sources */,
 				8D54D1FD2267D95900EF97E2 /* Strings.swift in Sources */,
 				8DB5CA9F2268FFA10064FA8A /* CategoryData.swift in Sources */,
 				8DB5CAC7226CEE5F0064FA8A /* NumberFormatter+CurrencyPtBr.swift in Sources */,
 				8D8890CD2267CC0700E75E29 /* HomeProtocols.swift in Sources */,
+				8DD3AD10226E2A7000BBE6BA /* UINavigationController+BackButtonTitle.swift in Sources */,
 				8DB5CA8B2268EEB00064FA8A /* Product.swift in Sources */,
+				8DD3AD1A226E2DB500BBE6BA /* ProductDetailInteractor.swift in Sources */,
+				8DD3AD0E226E14CB00BBE6BA /* ProductFilter.swift in Sources */,
+				8DD3AD1B226E2DB500BBE6BA /* ProductDetailPresenter.swift in Sources */,
 				8D83DDC82267DDA800F81CAA /* TabBarRouter.swift in Sources */,
 				8D83DDC72267DDA800F81CAA /* TabBarProtocols.swift in Sources */,
 				8DB5CABB226CB58A0064FA8A /* CategoriesCell.swift in Sources */,
@@ -1062,11 +1250,13 @@
 				8DB5CA942268F9B60064FA8A /* UIViewController+Alerts.swift in Sources */,
 				8D8FB49B2267AE73009926BB /* AppDelegate.swift in Sources */,
 				8D8890CB2267CBAC00E75E29 /* HomeRouter.swift in Sources */,
+				8DD3AD03226E123A00BBE6BA /* ProducListRepository.swift in Sources */,
 				8DB5CA782268E5E90064FA8A /* BannerDecodable.swift in Sources */,
 				8DB5CA712268E0EE0064FA8A /* BannerService.swift in Sources */,
 				8DB5CA9B2268FC8C0064FA8A /* BannerData.swift in Sources */,
 				8D8890C12267C96800E75E29 /* UIStoryboard+Instantiate.swift in Sources */,
 				8DB5CA692268DC230064FA8A /* Date+Format.swift in Sources */,
+				8DD3AD01226E123A00BBE6BA /* ProducListProtocols.swift in Sources */,
 				8D8890C72267CAD000E75E29 /* Storyboarded.swift in Sources */,
 				8DB5CA7E2268E77B0064FA8A /* ProductEncodable.swift in Sources */,
 				8DB5CACB226CF4B60064FA8A /* String+Strikethrough.swift in Sources */,

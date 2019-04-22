@@ -29,15 +29,15 @@ final class HomeInteractor: HomeInteractorProtocol {
         return remoteDataManager.topSellingProductListObservable
     }
     
-    func fetchProducts(offset: Int, limit: Int, categoriaId: Int) -> Single<[Product]> {
-        let productEncodable = ProductEncodable(offset: offset,
-                                                limit: limit,
-                                                categoriaId: categoriaId)
-        return remoteDataManager.fetchProducts(productEncodable: productEncodable)
-    }
+//    func fetchProducts(offset: Int, limit: Int, categoriaId: Int) -> Single<[Product]> {
+//        let productEncodable = ProductEncodable(offset: offset,
+//                                                limit: limit,
+//                                                categoriaId: categoriaId)
+//        return remoteDataManager.fetchProducts(productEncodable: productEncodable)
+//    }
     
-    func fetchProductDetail(productId: Int) -> Single<Product> {
-        return remoteDataManager.fetchProductDetail(productId: productId)
-    }
+//    func fetchProductDetail(productId: Int) -> Single<Product> {
+//        return remoteDataManager.fetchProductDetail(productId: productId)
+//    }
     
 }

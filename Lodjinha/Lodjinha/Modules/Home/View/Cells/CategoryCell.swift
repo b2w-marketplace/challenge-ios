@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class CategoryCell: UICollectionViewCell, NibReusable {
+final class CategoryCell: UICollectionViewCell, NibReusable {
 
     @IBOutlet private weak var labelDescription: UILabel!
     

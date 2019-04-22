@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductCell: UITableViewCell, NibReusable {
+final class ProductCell: UITableViewCell, NibReusable {
 
     @IBOutlet weak var imageViewProduct: UIImageView!
     
