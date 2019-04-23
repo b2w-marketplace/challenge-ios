@@ -38,6 +38,11 @@ final class HomeRouter: HomeRouterProtocol, Storyboarded {
         viewController.navigationController?.pushViewController(productListViewController, animated: true)
     }
     
+    func presentProductDetailScreen(product: Product) {
+        let productDetailRouterViewController = ProductDetailRouter.assembleModule(product: product)
+        viewController.navigationController?.pushViewController(productDetailRouterViewController, animated: true)
+    }
+    
 }
 
 // MARK: - TabBarViewControllerProtocol

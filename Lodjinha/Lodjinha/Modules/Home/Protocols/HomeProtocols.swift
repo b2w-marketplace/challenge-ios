@@ -37,6 +37,7 @@ protocol HomePresenterProtocol: class {
     
     func viewDidLoad()
     func didSelectCategory(category: Category)
+    func didSelectProduct(product: Product)
     
 }
 
@@ -49,6 +50,8 @@ protocol HomeViewProtocol: class {
     func setup(categoryList: [Category])
     func setup(topSellingProductList: [Product])
     func showAlert(message: String)
+    func showActiveIndicator()
+    func hideActiveIndicator()
     
 }
 
@@ -58,5 +61,6 @@ protocol HomeRouterProtocol: class {
     var viewController: UIViewController! { get set }
     
     func presentProductListScreen(category: Category)
+    func presentProductDetailScreen(product: Product)
     
 }

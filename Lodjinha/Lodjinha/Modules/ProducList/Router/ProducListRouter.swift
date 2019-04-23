@@ -32,5 +32,10 @@ final class ProducListRouter: ProducListRouterProtocol, Storyboarded {
 
         return view
     }
+    
+    func presentProductDetailScreen(product: Product) {
+        let productDetailRouterViewController = ProductDetailRouter.assembleModule(product: product)
+        viewController.navigationController?.pushViewController(productDetailRouterViewController, animated: true)
+    }
 
 }

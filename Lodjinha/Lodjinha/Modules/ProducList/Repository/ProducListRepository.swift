@@ -33,7 +33,9 @@ final class ProducListRepository: ProducListRepositoryProtocol {
                 if filter.offset == 0 {
                     self?.productList = productList
                 } else {
-                    self?.productList.append(contentsOf: productList)
+                    if productList.count > 0 {
+                        self?.productList.append(contentsOf: productList)
+                    }
                 }
             })
     }

@@ -60,4 +60,8 @@ final class HomePresenter: HomePresenterProtocol {
         router.presentProductListScreen(category: category)
     }
     
+    func didSelectProduct(product: Product) {
+        router.presentProductDetailScreen(product: product)
+    }
+    
 }

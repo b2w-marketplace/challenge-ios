@@ -14,12 +14,12 @@ final class ProductDetailRouter: ProductDetailRouterProtocol, Storyboarded {
     
     weak var viewController: UIViewController!
     
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(product: Product) -> UIViewController {
         let view: ProductDetailViewController = storyboard.instantiateViewController()
         let presenter = ProductDetailPresenter()
         let router = ProductDetailRouter()
         let remoteDataManager = ProductDetailRemoteDataManager()
-        let interactor = ProductDetailInteractor(remoteDataManager: remoteDataManager)
+        let interactor = ProductDetailInteractor(product: product, remoteDataManager: remoteDataManager)
         
         view.presenter = presenter
         
@@ -30,6 +30,10 @@ final class ProductDetailRouter: ProductDetailRouterProtocol, Storyboarded {
         presenter.router = router
 
         return view
+    }
+    
+    func presentPreviousScreen() {
+        viewController.navigationController?.popViewController(animated: true)
     }
 
 }

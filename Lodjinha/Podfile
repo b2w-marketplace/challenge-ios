@@ -10,6 +10,7 @@ target 'Lodjinha' do
   pod 'RxSwift', '~> 4.4.0'
   pod 'AlamofireImage', '~> 3.5'
   pod 'CCBottomRefreshControl', '~> 0.5.2'
+  pod 'NVActivityIndicatorView/AppExtension', '~> 4.0.0'
   pod 'RSReactiveRequest', :git => 'https://github.com/redspark-io/RSReactiveRequest.git'
 
   target 'LodjinhaTests' do

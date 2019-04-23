@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class HomeViewController: UIViewController {
     
@@ -17,6 +18,12 @@ class HomeViewController: UIViewController {
     private var bannerList: [Banner] = []
     private var categoryList: [Category] = []
     private var topSellingProductList: [Product] = []
+    
+    private var activityIndicator: NVActivityIndicatorView {
+        return NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 120, height: 120),
+                                       type: NVActivityIndicatorType.ballBeat,
+                                       color: Palette.Purple.main.color)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,6 +132,13 @@ extension HomeViewController: UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 {
+            let product = topSellingProductList[indexPath.row]
+            presenter.didSelectProduct(product: product)
+        }
+    }
+    
 }
 
 // MARK: - CategoriesCellDelegate
@@ -157,6 +171,14 @@ extension HomeViewController: HomeViewProtocol {
     
     func showAlert(message: String) {
         presentAlert(message: message)
+    }
+    
+    func showActiveIndicator() {
+        activityIndicator.startAnimating()
+    }
+    
+    func hideActiveIndicator() {
+        activityIndicator.stopAnimating()
     }
     
 }

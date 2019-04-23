@@ -43,7 +43,7 @@ final class ProducListViewController: UIViewController {
     private func applyLanguage() {
         title = presenter.title
         navigationController?.addBackButton(title: String(identifier: .home))
-        labelEmptyState.text = String(identifier: .emptyState)
+        labelEmptyState.text = String(identifier: .emptyStateCategory)
     }
     
     private func applyStyle() {
@@ -65,19 +65,13 @@ final class ProducListViewController: UIViewController {
         tableView.registerForHeaderFooter(headerFooterType: HomeTableHeaderView.self)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
-        tableView.estimatedRowHeight = 24
+        tableView.estimatedRowHeight = 1
         tableView.dataSource = self
         tableView.delegate = self
     }
     
     private func setupTabBar() {
         tabBarController?.tabBar.isHidden = true
-    }
-    
-    @objc private func refresh() {
-        let currentFilter = presenter.currentFilter
-        currentFilter.offset = 0
-        presenter.fetchProducts(withFilter: currentFilter)
     }
     
     @objc private func loadMore() {
@@ -109,7 +103,7 @@ extension ProducListViewController: UITableViewDataSource {
 extension ProducListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter.didSelectProduct(at: indexPath.row)
     }
     
 }

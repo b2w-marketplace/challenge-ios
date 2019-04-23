@@ -32,6 +32,10 @@
 		8D8890CD2267CC0700E75E29 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8890CC2267CC0700E75E29 /* HomeProtocols.swift */; };
 		8D8890CF2267CD7B00E75E29 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8890CE2267CD7B00E75E29 /* HomePresenter.swift */; };
 		8D8890D42267D02100E75E29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8890D32267D02100E75E29 /* LaunchScreen.storyboard */; };
+		8D8BBD13226F5C5D007084A6 /* String+Html2String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BBD12226F5C5D007084A6 /* String+Html2String.swift */; };
+		8D8BBD15226F5DE3007084A6 /* String+IsNotEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BBD14226F5DE3007084A6 /* String+IsNotEmpty.swift */; };
+		8D8BBD17226F5E11007084A6 /* Array+IsNotEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BBD16226F5E11007084A6 /* Array+IsNotEmpty.swift */; };
+		8D8BBD19226F5E55007084A6 /* Collection+IsNotEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BBD18226F5E55007084A6 /* Collection+IsNotEmpty.swift */; };
 		8D8FB49B2267AE73009926BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8FB49A2267AE73009926BB /* AppDelegate.swift */; };
 		8D8FB49D2267AE73009926BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8FB49C2267AE73009926BB /* HomeViewController.swift */; };
 		8D8FB4A02267AE73009926BB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8FB49E2267AE73009926BB /* Home.storyboard */; };
@@ -152,6 +156,10 @@
 		8D8890CC2267CC0700E75E29 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		8D8890CE2267CD7B00E75E29 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		8D8890D32267D02100E75E29 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D8BBD12226F5C5D007084A6 /* String+Html2String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Html2String.swift"; sourceTree = "<group>"; };
+		8D8BBD14226F5DE3007084A6 /* String+IsNotEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IsNotEmpty.swift"; sourceTree = "<group>"; };
+		8D8BBD16226F5E11007084A6 /* Array+IsNotEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+IsNotEmpty.swift"; sourceTree = "<group>"; };
+		8D8BBD18226F5E55007084A6 /* Collection+IsNotEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+IsNotEmpty.swift"; sourceTree = "<group>"; };
 		8D8FB4972267AE73009926BB /* Lodjinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodjinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8FB49A2267AE73009926BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D8FB49C2267AE73009926BB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -661,6 +669,10 @@
 				8DB5CAC6226CEE5F0064FA8A /* NumberFormatter+CurrencyPtBr.swift */,
 				8DB5CAC8226CF07F0064FA8A /* Float+Currency.swift */,
 				8DB5CACA226CF4B60064FA8A /* String+Strikethrough.swift */,
+				8D8BBD12226F5C5D007084A6 /* String+Html2String.swift */,
+				8D8BBD14226F5DE3007084A6 /* String+IsNotEmpty.swift */,
+				8D8BBD16226F5E11007084A6 /* Array+IsNotEmpty.swift */,
+				8D8BBD18226F5E55007084A6 /* Collection+IsNotEmpty.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1113,6 +1125,7 @@
 				"${BUILT_PRODUCTS_DIR}/CCBottomRefreshControl/CCBottomRefreshControl.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/RSReactiveRequest/RSReactiveRequest.framework",
 				"${BUILT_PRODUCTS_DIR}/RSRealmHelper/RSRealmHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -1127,6 +1140,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCBottomRefreshControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSReactiveRequest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSRealmHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -1182,6 +1196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8BBD15226F5DE3007084A6 /* String+IsNotEmpty.swift in Sources */,
 				8DB5CA642268ACA30064FA8A /* UIControlState+Hashable.swift in Sources */,
 				8DB5CAA1226900640064FA8A /* ProductData.swift in Sources */,
 				8DD3AD05226E123A00BBE6BA /* ProducListViewController.swift in Sources */,
@@ -1206,6 +1221,7 @@
 				8DB5CAC9226CF07F0064FA8A /* Float+Currency.swift in Sources */,
 				8DB5CA602268AC6E0064FA8A /* Stylable.swift in Sources */,
 				8DB5CA9D2268FF180064FA8A /* CategoryDataDecodable.swift in Sources */,
+				8D8BBD17226F5E11007084A6 /* Array+IsNotEmpty.swift in Sources */,
 				8DB5CA992268FB580064FA8A /* LocalizationManager.swift in Sources */,
 				8DB5CA622268AC870064FA8A /* TextStylable.swift in Sources */,
 				8DB5CA962268FA750064FA8A /* String+Localized.swift in Sources */,
@@ -1225,6 +1241,7 @@
 				8D83DDC62267DDA800F81CAA /* TabBarPresenter.swift in Sources */,
 				8DB5CAC5226CC9CF0064FA8A /* NodeType.swift in Sources */,
 				8D83DDB92267DC3C00F81CAA /* AboutRouter.swift in Sources */,
+				8D8BBD13226F5C5D007084A6 /* String+Html2String.swift in Sources */,
 				8DB5CA8F2268EEBE0064FA8A /* Banner.swift in Sources */,
 				8DB5CA552268AAC40064FA8A /* RawRepresentable+Color.swift in Sources */,
 				8D83DDBA2267DC3C00F81CAA /* AboutViewController.swift in Sources */,
@@ -1242,6 +1259,7 @@
 				8DD3AD1A226E2DB500BBE6BA /* ProductDetailInteractor.swift in Sources */,
 				8DD3AD0E226E14CB00BBE6BA /* ProductFilter.swift in Sources */,
 				8DD3AD1B226E2DB500BBE6BA /* ProductDetailPresenter.swift in Sources */,
+				8D8BBD19226F5E55007084A6 /* Collection+IsNotEmpty.swift in Sources */,
 				8D83DDC82267DDA800F81CAA /* TabBarRouter.swift in Sources */,
 				8D83DDC72267DDA800F81CAA /* TabBarProtocols.swift in Sources */,
 				8DB5CABB226CB58A0064FA8A /* CategoriesCell.swift in Sources */,

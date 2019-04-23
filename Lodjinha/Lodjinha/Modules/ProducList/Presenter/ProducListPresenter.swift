@@ -46,13 +46,13 @@ final class ProducListPresenter: ProducListPresenterProtocol {
         interactor.fetchProducts(withFilter: filter)
             .observeOn(MainScheduler.instance)
             .subscribe(onSuccess: { [weak self] productList in
-                if productList.count == 0 {
+                if self?.numberOfProducts == 0 {
                     self?.view.showEmptyState()
                 } else {
                     self?.view.hideEmptyState()
+                    self?.view.updateView()
                 }
                 self?.view.hideActiveIndicator()
-                self?.view.updateView()
             }, onError: { [weak self] error in
                 self?.view.hideEmptyState()
                 self?.view.hideActiveIndicator()
@@ -63,6 +63,11 @@ final class ProducListPresenter: ProducListPresenterProtocol {
     
     func product(at index: Int) -> Product {
         return interactor.product(at: index)
+    }
+    
+    func didSelectProduct(at index: Int) {
+        let product = interactor.product(at: index)
+        router.presentProductDetailScreen(product: product)
     }
     
 }

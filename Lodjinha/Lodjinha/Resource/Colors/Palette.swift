@@ -12,6 +12,7 @@ enum Palette {
     
     enum Gray: String {
         case main = "#1E1E1E"
+        case dark = "#313544"
         case light = "#5B5B5B"
     }
     

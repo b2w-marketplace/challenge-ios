@@ -44,12 +44,14 @@ final class ProductService: ProductServiceProtocol {
     }
     
     func fetchProductDetail(productId: Int, scheduler: ImmediateSchedulerType?) -> Single<ProductDecodable> {
-        let endpoint = Endpoint(method: .get, api: API.productId, resource: String(describing: productId))
+        let pathParameters = ["produtoId": String(describing: productId)]
+        let endpoint = Endpoint(method: .get, api: API.productId, pathParameters: pathParameters)
         return requestManager.request(endpoint: endpoint).asSingle()
     }
     
     func productReservation(productId: Int, scheduler: ImmediateSchedulerType?) -> Completable {
-        let endpoint = Endpoint(method: .post, api: API.productId, resource: String(describing: productId))
+        let pathParameters = ["produtoId": String(describing: productId)]
+        let endpoint = Endpoint(method: .post, api: API.productId, pathParameters: pathParameters)
         return requestManager.request(endpoint: endpoint).asCompletable()
     }
     

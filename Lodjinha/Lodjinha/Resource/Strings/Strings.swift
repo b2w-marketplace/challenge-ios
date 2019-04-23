@@ -18,13 +18,17 @@ extension String {
         case theLodjinha
         case devName
         case serviceErrorMessage
+        case serviceErrorMessageReservation
+        case successReservation
         case buttonOk
         case titleAlert
         case categories
         case topSelling
         case from
         case to
-        case emptyState
+        case emptyStateCategory
+        case emptyStateProductDetail
+        case back
         
     }
     

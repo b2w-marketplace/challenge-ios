@@ -6,6 +6,7 @@ PODS:
   - CodableAlamofire (1.1.1):
     - Alamofire (~> 4.0)
   - KeychainAccess (3.2.0)
+  - NVActivityIndicatorView/AppExtension (4.0.1)
   - Realm (3.14.1):
     - Realm/Headers (= 3.14.1)
   - Realm/Headers (3.14.1)
@@ -26,6 +27,7 @@ PODS:
 DEPENDENCIES:
   - AlamofireImage (~> 3.5)
   - CCBottomRefreshControl (~> 0.5.2)
+  - NVActivityIndicatorView/AppExtension (~> 4.0.0)
   - RSReactiveRequest (from `https://github.com/redspark-io/RSReactiveRequest.git`)
   - RSRealmHelper (~> 1.0.0)
   - RxSwift (~> 4.4.0)
@@ -37,6 +39,7 @@ SPEC REPOS:
     - CCBottomRefreshControl
     - CodableAlamofire
     - KeychainAccess
+    - NVActivityIndicatorView
     - Realm
     - RealmSwift
     - RSRealmHelper
@@ -58,6 +61,7 @@ SPEC CHECKSUMS:
   CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
   CodableAlamofire: b587c1198562824abb1f468aed34feb00d6cecd8
   KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
+  NVActivityIndicatorView: 77ed6d7b571643e24899e7858bf9ae2ee4c21f31
   Realm: e12c9c2387d05c5bba3a9c394838f5870e85763b
   RealmSwift: a82eab9b04c3e1616082c7e17aa300740847769c
   RSReactiveRequest: aa5ca72d2c9ee41052a01f70a4598fe4e3cfae3f
@@ -65,6 +69,6 @@ SPEC CHECKSUMS:
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
 
-PODFILE CHECKSUM: acaf2fb02b8cbaab8d0b895a471338a4217901f6
+PODFILE CHECKSUM: 41ca9c16aeafb45d21874cca4e94eac9c2810c4e
 
 COCOAPODS: 1.6.1

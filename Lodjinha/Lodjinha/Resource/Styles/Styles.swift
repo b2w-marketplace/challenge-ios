@@ -13,8 +13,12 @@ extension StyleBuilder {
     
     // MARK: - Buttons
     func apply(onPrimaryButton stylable: Stylable) {
-        stylable.applyBackgroundColor(Palette.Purple.main.color)
-        stylable.applyBorderWidth(5.0)
+        if let button = stylable as? UIButton {
+            button.backgroundColor = Palette.Purple.main.color
+            button.setTitleColor(UIColor.white, for: .normal)
+            button.layer.cornerRadius = 8.0
+            Style.apply(onTextButton: button)
+        }
     }
     
     func apply(onNavigationBar navigationBar: UINavigationBar) {
@@ -46,9 +50,9 @@ extension StyleBuilder {
     }
     
     func apply(onTextButton button: UIButton) {
-        Style.text(font: UIFont.pacifico(style: .regular, size: 18),
+        Style.text(font: UIFont.boldSystemFont(ofSize: 15),
                    color: UIColor.white,
-                   alignment: .left)
+                   alignment: .center)
             .apply(on: button)
     }
     
@@ -71,7 +75,6 @@ extension StyleBuilder {
         style.setupNavigationBar()
         style.setupTabBar()
         style.setupTabBarItem()
-        style.setupBarButtonItem()
     }
     
     private func setupNavigationBar() {
@@ -92,11 +95,6 @@ extension StyleBuilder {
     private func setupTabBarItem() {
         let appearance = UITabBarItem.appearance()
         appearance.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 14)], for: .normal)
-    }
-    
-    private func setupBarButtonItem() {
-        //let appearance = UIBarButtonItem.appearance()
-        //appearance.setBackButtonTitlePositionAdjustment(UIOffset.init(horizontal: -200, vertical: 0), for: .default)
     }
     
 }

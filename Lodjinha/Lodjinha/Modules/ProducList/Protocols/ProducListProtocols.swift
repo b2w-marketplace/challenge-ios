@@ -50,6 +50,7 @@ protocol ProducListPresenterProtocol: class {
     func viewDidLoad()
     func fetchProducts(withFilter filter: ProductFilter)
     func product(at index: Int) -> Product
+    func didSelectProduct(at index: Int)
     
 }
 
@@ -71,6 +72,8 @@ protocol ProducListViewProtocol: class {
 protocol ProducListRouterProtocol: class {
     
     var viewController: UIViewController! { get set }
+    
+    func presentProductDetailScreen(product: Product)
     
 }
 
