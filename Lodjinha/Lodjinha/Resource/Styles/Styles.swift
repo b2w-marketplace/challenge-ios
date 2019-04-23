@@ -89,12 +89,12 @@ extension StyleBuilder {
     
     private func setupTabBar() {
         let appearance = UITabBar.appearance()
-        appearance.shadowImage = UIImage()
+        appearance.tintColor = Palette.Purple.main.color
     }
     
     private func setupTabBarItem() {
-        let appearance = UITabBarItem.appearance()
-        appearance.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 14)], for: .normal)
+        //let appearance = UITabBarItem.appearance()
+        //appearance.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 12)], for: .normal)
     }
     
 }
