@@ -1,5 +1,7 @@
 # a Lodjinha
 
+Esta versão possui blbliotecas cocoapods, para executar o projeto corretamente será necessário aplicar o comando pod install
+
 Versão mínima: iOS 9</br>
 Linguagem: Swift</br>
 

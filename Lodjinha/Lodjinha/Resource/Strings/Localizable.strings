@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Lodjinha
+
+  Created by Marcos on 17/04/19.
+  Copyright © 2019 Alessandro. All rights reserved.
+*/
+
+// MARK: - TabBar
+home = "Home";
+about = "Sobre";
+theLodjinha = "a Lodjinha";
+devName = "Marcos Alessandro da Fonseca";
+serviceErrorMessage = "O serviço não está disponível no momento, por favor tente mais tarde.";
+serviceErrorMessageReservation = "Não foi possível reservar o produto selecionado, por favor tente mais tarde.";
+successReservation = "Produto reservado com sucesso";
+buttonOk = "OK";
+titleAlert = "Alerta";
+categories = "Categorias";
+topSelling = "Mais Vendidos";
+from = "De";
+to = "Por";
+emptyStateCategory = "Não existem produtos com essa categoria.";
+emptyStateProductDetail = "Não há informações para o produto selecionado.";
+back = "Voltar";
+
