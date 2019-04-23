@@ -147,6 +147,23 @@
                                 <color key="textColor" red="0.19215686269999999" green="0.20784313730000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9X-CU-VbB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spF-RG-Q7d" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="119.5" y="243.5" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="C8J-u9-BRw"/>
+                                            <constraint firstAttribute="width" constant="80" id="cLY-Pl-H82"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="spF-RG-Q7d" firstAttribute="centerY" secondItem="D9X-CU-VbB" secondAttribute="centerY" id="L4A-xR-ND8"/>
+                                    <constraint firstItem="spF-RG-Q7d" firstAttribute="centerX" secondItem="D9X-CU-VbB" secondAttribute="centerX" id="roy-mF-bFX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -156,18 +173,24 @@
                             <constraint firstItem="aXq-9p-Cmq" firstAttribute="trailing" secondItem="FCh-2d-0jC" secondAttribute="trailing" constant="16" id="Cvz-vo-pgr"/>
                             <constraint firstItem="aXq-9p-Cmq" firstAttribute="bottom" secondItem="FCh-2d-0jC" secondAttribute="bottom" constant="16" id="GLT-qi-Bli"/>
                             <constraint firstAttribute="trailing" secondItem="ibS-yW-8Ys" secondAttribute="trailing" id="HEU-07-LX4"/>
+                            <constraint firstAttribute="bottom" secondItem="D9X-CU-VbB" secondAttribute="bottom" id="Q2d-37-MWj"/>
                             <constraint firstItem="FCh-2d-0jC" firstAttribute="top" secondItem="ibS-yW-8Ys" secondAttribute="bottom" constant="16" id="TGX-s9-FrV"/>
                             <constraint firstItem="DcC-31-LGJ" firstAttribute="top" secondItem="QGW-aA-myz" secondAttribute="top" id="U4J-kG-VUN"/>
                             <constraint firstItem="ibS-yW-8Ys" firstAttribute="top" secondItem="DcC-31-LGJ" secondAttribute="bottom" id="UdE-4r-psE"/>
                             <constraint firstItem="aXq-9p-Cmq" firstAttribute="trailing" secondItem="hER-pr-vr0" secondAttribute="trailing" constant="16" id="XPm-3v-92F"/>
                             <constraint firstItem="hER-pr-vr0" firstAttribute="leading" secondItem="aXq-9p-Cmq" secondAttribute="leading" constant="16" id="XjV-yX-KTf"/>
                             <constraint firstItem="FCh-2d-0jC" firstAttribute="leading" secondItem="aXq-9p-Cmq" secondAttribute="leading" constant="16" id="dlR-Df-eRc"/>
+                            <constraint firstItem="D9X-CU-VbB" firstAttribute="leading" secondItem="QGW-aA-myz" secondAttribute="leading" id="iUf-3v-kCW"/>
                             <constraint firstItem="hER-pr-vr0" firstAttribute="centerX" secondItem="QGW-aA-myz" secondAttribute="centerX" id="jOk-q1-sUZ"/>
                             <constraint firstItem="DcC-31-LGJ" firstAttribute="trailing" secondItem="aXq-9p-Cmq" secondAttribute="trailing" id="jtd-RD-ZpP"/>
+                            <constraint firstAttribute="trailing" secondItem="D9X-CU-VbB" secondAttribute="trailing" id="rp0-ib-VrH"/>
+                            <constraint firstItem="D9X-CU-VbB" firstAttribute="top" secondItem="QGW-aA-myz" secondAttribute="top" id="tId-oc-0Ir"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aXq-9p-Cmq"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorContainerView" destination="D9X-CU-VbB" id="WdP-Dv-qDI"/>
+                        <outlet property="activityIndicatorView" destination="spF-RG-Q7d" id="YPb-hi-8ZL"/>
                         <outlet property="buttonReservation" destination="FCh-2d-0jC" id="qH2-mf-MGg"/>
                         <outlet property="imageViewProduct" destination="ZLd-bP-4PD" id="6ZR-Dg-PpS"/>
                         <outlet property="labelDescription" destination="kCp-zj-VfF" id="6sI-ZN-s1p"/>

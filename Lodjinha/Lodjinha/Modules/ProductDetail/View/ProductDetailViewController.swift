@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 final class ProductDetailViewController: UIViewController {
     
@@ -22,6 +23,10 @@ final class ProductDetailViewController: UIViewController {
     @IBOutlet private weak var labelEmptyState: UILabel!
     
     @IBOutlet private weak var buttonReservation: UIButton!
+    
+    @IBOutlet private weak var activityIndicatorContainerView: UIView!
+    
+    @IBOutlet private weak var activityIndicatorView: NVActivityIndicatorView!
     
     var presenter: ProductDetailPresenterProtocol!
     
@@ -49,6 +54,9 @@ final class ProductDetailViewController: UIViewController {
         labelDescription.accessibilityIdentifier = "labelDescription"
         labelEmptyState.accessibilityIdentifier = "labelEmptyState"
         
+        activityIndicatorContainerView.accessibilityIdentifier = "activityIndicatorContainerView"
+        
+        activityIndicatorView.accessibilityIdentifier = "activityIndicatorView"
     }
     
     private func applyLanguage() {
@@ -95,6 +103,8 @@ final class ProductDetailViewController: UIViewController {
             .apply(on: labelEmptyState)
         
         Style.apply(onPrimaryButton: buttonReservation)
+        activityIndicatorView.type = .ballRotateChase
+        activityIndicatorView.color = Palette.Purple.main.color
     }
     
     private func setupTabBar() {
@@ -142,11 +152,13 @@ extension ProductDetailViewController: ProductDetailViewProtocol {
     }
     
     func showActiveIndicator() {
-        
+        activityIndicatorContainerView.isHidden = false
+        activityIndicatorView.startAnimating()
     }
     
     func hideActiveIndicator() {
-        
+        activityIndicatorContainerView.isHidden = true
+        activityIndicatorView.stopAnimating()
     }
     
 }

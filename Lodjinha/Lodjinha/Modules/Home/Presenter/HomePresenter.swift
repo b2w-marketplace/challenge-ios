@@ -17,43 +17,42 @@ final class HomePresenter: HomePresenterProtocol {
     
     private let disposeBag = DisposeBag()
     
+    var bannerList: [Banner] {
+        return interactor.bannerList
+    }
+    
+    var categoryList: [Category] {
+        return interactor.categoryList
+    }
+    
+    var numberOfProducts: Int {
+        return interactor.numberOfProducts
+    }
+    
     func viewDidLoad() {
-        loadBanners()
-        loadCategories()
-        loadTopSellingProductListObservable()
+        loadData()
     }
     
-    func loadBanners() {
-        interactor.bannesObservable
+    func loadData() {
+        view.showActiveIndicator()
+        interactor.loadData()
             .observeOn(MainScheduler.instance)
-            .subscribe(onSuccess: { [weak self] bannerList in
-                self?.view.setup(bannerList: bannerList)
+            .subscribe(onCompleted: { [weak self] in
+                self?.view.hideActiveIndicator()
+                self?.view.updateView()
             }, onError: { [weak self] error in
+                self?.view.hideActiveIndicator()
                 self?.view.showAlert(message: String(identifier: .serviceErrorMessage))
             })
             .disposed(by: disposeBag)
     }
     
-    func loadCategories() {
-        interactor.categoriesObservable
-            .observeOn(MainScheduler.instance)
-            .subscribe(onSuccess: { [weak self] categoryList in
-                self?.view.setup(categoryList: categoryList)
-            }, onError: { [weak self] error in
-                self?.view.showAlert(message: String(identifier: .serviceErrorMessage))
-            })
-            .disposed(by: disposeBag)
+    func category(at index: Int) -> Category {
+        return categoryList[index]
     }
     
-    func loadTopSellingProductListObservable() {
-        interactor.topSellingProductListObservable
-            .observeOn(MainScheduler.instance)
-            .subscribe(onSuccess: { [weak self] topSellingProductList in
-                self?.view.setup(topSellingProductList: topSellingProductList)
-            }, onError: { [weak self] error in
-                self?.view.showAlert(message: String(identifier: .serviceErrorMessage))
-            })
-            .disposed(by: disposeBag)
+    func product(at index: Int) -> Product {
+        return interactor.product(at: index)
     }
     
     func didSelectCategory(category: Category) {

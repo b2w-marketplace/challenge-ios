@@ -13,17 +13,11 @@ class HomeViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
+    @IBOutlet private weak var activityIndicatorContainerView: UIView!
+    
+    @IBOutlet private weak var activityIndicatorView: NVActivityIndicatorView!
+    
     var presenter: HomePresenterProtocol!
-    
-    private var bannerList: [Banner] = []
-    private var categoryList: [Category] = []
-    private var topSellingProductList: [Product] = []
-    
-    private var activityIndicator: NVActivityIndicatorView {
-        return NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 120, height: 120),
-                                       type: NVActivityIndicatorType.ballBeat,
-                                       color: Palette.Purple.main.color)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +38,15 @@ class HomeViewController: UIViewController {
     // MARK: - Setup Methods
     private func setupAccessibilityIdentifiers() {
         tableView.accessibilityIdentifier = "tableView"
+        
+        activityIndicatorContainerView.accessibilityIdentifier = "activityIndicatorContainerView"
+        
+        activityIndicatorView.accessibilityIdentifier = "activityIndicatorView"
     }
     
     private func applyStyle() {
+        activityIndicatorView.type = .ballRotateChase
+        activityIndicatorView.color = Palette.Purple.main.color
         Style.apply(onNavigationBarWithImageTitle: navigationItem)
     }
 
@@ -82,7 +82,7 @@ extension HomeViewController: UITableViewDataSource {
         case 1:
             return 1
         default:
-            return topSellingProductList.count
+            return presenter.numberOfProducts
         }
     }
     
@@ -90,16 +90,16 @@ extension HomeViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell: BannerCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.setup(bannerList: bannerList)
+            cell.setup(bannerList: presenter.bannerList)
             return cell
         case 1:
             let cell: CategoriesCell = tableView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
-            cell.setup(categoryList: categoryList)
+            cell.setup(categoryList: presenter.categoryList)
             return cell
         default:
             let cell: ProductCell = tableView.dequeueReusableCell(for: indexPath)
-            let product = topSellingProductList[indexPath.row]
+            let product = presenter.product(at: indexPath.row)
             cell.setup(product: product)
             return cell
         }
@@ -134,7 +134,7 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 2 {
-            let product = topSellingProductList[indexPath.row]
+            let product = presenter.product(at: indexPath.row)
             presenter.didSelectProduct(product: product)
         }
     }
@@ -145,7 +145,7 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: CategoriesCellDelegate {
     
     func categoriesCell(cell: CategoriesCell, didSelectItemAt indexPath: IndexPath) {
-        let category = categoryList[indexPath.row]
+        let category = presenter.category(at: indexPath.row)
         presenter.didSelectCategory(category: category)
     }
 
@@ -154,18 +154,7 @@ extension HomeViewController: CategoriesCellDelegate {
 // MARK: - HomeViewProtocol
 extension HomeViewController: HomeViewProtocol {
     
-    func setup(bannerList: [Banner]) {
-        self.bannerList = bannerList
-        tableView.reloadData()
-    }
-    
-    func setup(categoryList: [Category]) {
-        self.categoryList = categoryList
-        tableView.reloadData()
-    }
-    
-    func setup(topSellingProductList: [Product]) {
-        self.topSellingProductList = topSellingProductList
+    func updateView() {
         tableView.reloadData()
     }
     
@@ -174,11 +163,15 @@ extension HomeViewController: HomeViewProtocol {
     }
     
     func showActiveIndicator() {
-        activityIndicator.startAnimating()
+        tableView.isHidden = true
+        activityIndicatorContainerView.isHidden = false
+        activityIndicatorView.startAnimating()
     }
     
     func hideActiveIndicator() {
-        activityIndicator.stopAnimating()
+        tableView.isHidden = false
+        activityIndicatorContainerView.isHidden = true
+        activityIndicatorView.stopAnimating()
     }
     
 }

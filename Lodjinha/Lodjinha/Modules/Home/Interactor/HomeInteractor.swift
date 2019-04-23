@@ -17,16 +17,24 @@ final class HomeInteractor: HomeInteractorProtocol {
         self.remoteDataManager = remoteDataManager
     }
     
-    var categoriesObservable: Single<[Category]> {
-        return remoteDataManager.categoriesObservable
+    func loadData() -> Completable {
+        return remoteDataManager.loadData()
     }
     
-    var bannesObservable: Single<[Banner]> {
-        return remoteDataManager.bannesObservable
+    var bannerList: [Banner] {
+        return remoteDataManager.bannerList
     }
     
-    var topSellingProductListObservable: Single<[Product]> {
-        return remoteDataManager.topSellingProductListObservable
+    var numberOfProducts: Int {
+        return remoteDataManager.productList.count
+    }
+    
+    var categoryList: [Category] {
+        return remoteDataManager.categoryList
+    }
+    
+    func product(at index: Int) -> Product {
+        return remoteDataManager.productList[index]
     }
     
 }

@@ -22,10 +22,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfC-MS-FBw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVI-8F-3ej" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="147" y="293" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Xg2-wc-daH"/>
+                                            <constraint firstAttribute="width" constant="80" id="oii-Bx-Hsp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xVI-8F-3ej" firstAttribute="centerY" secondItem="JfC-MS-FBw" secondAttribute="centerY" id="9Pp-Qn-bZG"/>
+                                    <constraint firstItem="xVI-8F-3ej" firstAttribute="centerX" secondItem="JfC-MS-FBw" secondAttribute="centerX" id="lYf-dY-gVC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="JfC-MS-FBw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VrY-LZ-6Wi"/>
+                            <constraint firstItem="JfC-MS-FBw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bV6-tG-Omy"/>
+                            <constraint firstItem="JfC-MS-FBw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="c1A-DS-FGL"/>
                             <constraint firstItem="WNW-lh-p8J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="d1V-EB-kcs"/>
+                            <constraint firstItem="JfC-MS-FBw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oPE-aQ-K0x"/>
                             <constraint firstItem="WNW-lh-p8J" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sK1-8K-V5v"/>
                             <constraint firstItem="WNW-lh-p8J" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xYN-Ue-IfJ"/>
                             <constraint firstItem="WNW-lh-p8J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zHe-ZG-aZL"/>
@@ -33,6 +54,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorContainerView" destination="JfC-MS-FBw" id="N7N-41-WDf"/>
+                        <outlet property="activityIndicatorView" destination="xVI-8F-3ej" id="bKs-lg-un9"/>
                         <outlet property="tableView" destination="WNW-lh-p8J" id="MHk-e2-V6V"/>
                     </connections>
                 </viewController>

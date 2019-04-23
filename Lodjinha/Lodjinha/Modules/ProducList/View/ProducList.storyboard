@@ -28,6 +28,23 @@
                                 <color key="textColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nr-Vg-Pt2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kne-Ye-qwS" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="147" y="293" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="MM4-s3-Zzs"/>
+                                            <constraint firstAttribute="height" constant="80" id="zPx-8z-uAS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kne-Ye-qwS" firstAttribute="centerX" secondItem="9nr-Vg-Pt2" secondAttribute="centerX" id="Lpc-6S-Ocw"/>
+                                    <constraint firstItem="kne-Ye-qwS" firstAttribute="centerY" secondItem="9nr-Vg-Pt2" secondAttribute="centerY" id="Sgs-aG-D4p"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -35,14 +52,20 @@
                             <constraint firstItem="aXq-9p-Cmq" firstAttribute="trailing" secondItem="H95-Az-FdH" secondAttribute="trailing" constant="16" id="6cC-hV-NNL"/>
                             <constraint firstItem="odx-bA-87F" firstAttribute="top" secondItem="QGW-aA-myz" secondAttribute="top" id="6iC-sg-ZW8"/>
                             <constraint firstItem="H95-Az-FdH" firstAttribute="leading" secondItem="aXq-9p-Cmq" secondAttribute="leading" constant="16" id="ARb-Oq-Jsk"/>
+                            <constraint firstItem="9nr-Vg-Pt2" firstAttribute="leading" secondItem="aXq-9p-Cmq" secondAttribute="leading" id="Cel-FQ-rQ0"/>
                             <constraint firstItem="odx-bA-87F" firstAttribute="leading" secondItem="aXq-9p-Cmq" secondAttribute="leading" id="Pe6-yp-5YX"/>
+                            <constraint firstAttribute="bottom" secondItem="9nr-Vg-Pt2" secondAttribute="bottom" id="Ub7-wr-5Hf"/>
                             <constraint firstItem="H95-Az-FdH" firstAttribute="centerY" secondItem="QGW-aA-myz" secondAttribute="centerY" id="WQn-A6-eYz"/>
                             <constraint firstItem="odx-bA-87F" firstAttribute="bottom" secondItem="aXq-9p-Cmq" secondAttribute="bottom" id="dOr-6S-quk"/>
+                            <constraint firstItem="9nr-Vg-Pt2" firstAttribute="top" secondItem="QGW-aA-myz" secondAttribute="top" id="mzB-vw-Svc"/>
+                            <constraint firstAttribute="trailing" secondItem="9nr-Vg-Pt2" secondAttribute="trailing" id="ten-Wq-WZd"/>
                             <constraint firstItem="H95-Az-FdH" firstAttribute="centerX" secondItem="QGW-aA-myz" secondAttribute="centerX" id="vXT-dV-ZBY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aXq-9p-Cmq"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorContainerView" destination="9nr-Vg-Pt2" id="mJZ-K7-NJE"/>
+                        <outlet property="activityIndicatorView" destination="kne-Ye-qwS" id="8SI-Lb-RAK"/>
                         <outlet property="labelEmptyState" destination="H95-Az-FdH" id="QIS-Yx-QHm"/>
                         <outlet property="tableView" destination="odx-bA-87F" id="Weg-lS-Tu5"/>
                     </connections>

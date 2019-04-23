@@ -13,18 +13,23 @@ import RxSwift
 // MARK: - DataManager
 protocol HomeRemoteDataManagerProtocol: class {
     
-    var categoriesObservable: Single<[Category]> { get }
-    var bannesObservable: Single<[Banner]> { get }
-    var topSellingProductListObservable: Single<[Product]> { get }
+    var bannerList: [Banner] { get }
+    var categoryList: [Category] { get }
+    var productList: [Product] { get }
+    
+    func loadData() -> Completable
     
 }
 
 // MARK: - Interactor
 protocol HomeInteractorProtocol: class {
     
-    var categoriesObservable: Single<[Category]> { get }
-    var bannesObservable: Single<[Banner]> { get }
-    var topSellingProductListObservable: Single<[Product]> { get }
+    var bannerList: [Banner] { get }
+    var categoryList: [Category] { get }
+    var numberOfProducts: Int { get }
+    
+    func loadData() -> Completable
+    func product(at index: Int) -> Product
     
 }
 
@@ -35,7 +40,13 @@ protocol HomePresenterProtocol: class {
     var router: HomeRouterProtocol! { get set }
     var interactor: HomeInteractorProtocol! { get set }
     
+    var bannerList: [Banner] { get }
+    var categoryList: [Category] { get }
+    var numberOfProducts: Int { get }
+
     func viewDidLoad()
+    func category(at index: Int) -> Category
+    func product(at index: Int) -> Product
     func didSelectCategory(category: Category)
     func didSelectProduct(product: Product)
     
@@ -46,9 +57,7 @@ protocol HomeViewProtocol: class {
     
     var presenter: HomePresenterProtocol! { get set }
     
-    func setup(bannerList: [Banner])
-    func setup(categoryList: [Category])
-    func setup(topSellingProductList: [Product])
+    func updateView()
     func showAlert(message: String)
     func showActiveIndicator()
     func hideActiveIndicator()

@@ -8,12 +8,17 @@
 
 import UIKit
 import CCBottomRefreshControl
+import NVActivityIndicatorView
 
 final class ProducListViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
     @IBOutlet private weak var labelEmptyState: UILabel!
+    
+    @IBOutlet private weak var activityIndicatorContainerView: UIView!
+    
+    @IBOutlet private weak var activityIndicatorView: NVActivityIndicatorView!
     
     var presenter: ProducListPresenterProtocol!
     
@@ -38,6 +43,10 @@ final class ProducListViewController: UIViewController {
         tableView.accessibilityIdentifier = "tableView"
         
         labelEmptyState.accessibilityIdentifier = "labelEmptyState"
+        
+        activityIndicatorContainerView.accessibilityIdentifier = "activityIndicatorContainerView"
+        
+        activityIndicatorView.accessibilityIdentifier = "activityIndicatorView"
     }
     
     private func applyLanguage() {
@@ -47,6 +56,9 @@ final class ProducListViewController: UIViewController {
     }
     
     private func applyStyle() {
+        activityIndicatorView.type = .ballRotateChase
+        activityIndicatorView.color = Palette.Purple.main.color
+        
         Style.text(font: UIFont.systemFont(ofSize: 14),
                    color: Palette.Gray.main.color,
                    alignment: .center)
@@ -129,11 +141,13 @@ extension ProducListViewController: ProducListViewProtocol {
     }
     
     func showActiveIndicator() {
-        
+        activityIndicatorContainerView.isHidden = false
+        activityIndicatorView.startAnimating()
     }
     
     func hideActiveIndicator() {
-        
+        activityIndicatorContainerView.isHidden = true
+        activityIndicatorView.stopAnimating()
     }
 
 }
