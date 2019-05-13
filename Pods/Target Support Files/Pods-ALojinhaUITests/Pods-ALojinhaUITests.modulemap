@@ -1,0 +1,6 @@
+framework module Pods_ALojinhaUITests {
+  umbrella header "Pods-ALojinhaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
