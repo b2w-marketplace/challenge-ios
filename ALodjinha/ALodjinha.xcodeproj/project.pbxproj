@@ -11,6 +11,9 @@
 		75428A0C2305E00C00F0812C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75428A0B2305E00C00F0812C /* Assets.xcassets */; };
 		75428A0F2305E00C00F0812C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75428A0D2305E00C00F0812C /* LaunchScreen.storyboard */; };
 		75428A1A2305E00C00F0812C /* ALodjinhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75428A192305E00C00F0812C /* ALodjinhaTests.swift */; };
+		75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CD42321D28D001B0E31 /* Coordinatable.swift */; };
+		75BF0CD72321D2A8001B0E31 /* NavigationCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CD62321D2A8001B0E31 /* NavigationCoordinatable.swift */; };
+		75BF0CD92321D314001B0E31 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CD82321D314001B0E31 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,9 @@
 		75428A152305E00C00F0812C /* ALodjinhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALodjinhaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75428A192305E00C00F0812C /* ALodjinhaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALodjinhaTests.swift; sourceTree = "<group>"; };
 		75428A1B2305E00C00F0812C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75BF0CD42321D28D001B0E31 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		75BF0CD62321D2A8001B0E31 /* NavigationCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinatable.swift; sourceTree = "<group>"; };
+		75BF0CD82321D314001B0E31 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +116,27 @@
 			isa = PBXGroup;
 			children = (
 				75428A042305E00B00F0812C /* AppDelegate.swift */,
+				75BF0CD22321D271001B0E31 /* Coordinator */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		75BF0CD22321D271001B0E31 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0CD82321D314001B0E31 /* AppCoordinator.swift */,
+				75BF0CD32321D27B001B0E31 /* Protocols */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		75BF0CD32321D27B001B0E31 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0CD42321D28D001B0E31 /* Coordinatable.swift */,
+				75BF0CD62321D2A8001B0E31 /* NavigationCoordinatable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BF0CD92321D314001B0E31 /* AppCoordinator.swift in Sources */,
 				75428A052305E00B00F0812C /* AppDelegate.swift in Sources */,
+				75BF0CD72321D2A8001B0E31 /* NavigationCoordinatable.swift in Sources */,
+				75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
