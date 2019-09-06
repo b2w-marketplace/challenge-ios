@@ -22,6 +22,8 @@
 		75BF0CEC2321E92E001B0E31 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CEB2321E92E001B0E31 /* ProductResponse.swift */; };
 		75BF0CEE2321E9A5001B0E31 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CED2321E9A5001B0E31 /* Product.swift */; };
 		75BF0CF02321EAF9001B0E31 /* BestSellerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CEF2321EAF9001B0E31 /* BestSellerResponse.swift */; };
+		75BF0CF52321ECB6001B0E31 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CF42321ECB6001B0E31 /* APIConfiguration.swift */; };
+		75BF0CF82321ECDE001B0E31 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CF72321ECDE001B0E31 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		75BF0CEB2321E92E001B0E31 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		75BF0CED2321E9A5001B0E31 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		75BF0CEF2321EAF9001B0E31 /* BestSellerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerResponse.swift; sourceTree = "<group>"; };
+		75BF0CF42321ECB6001B0E31 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		75BF0CF72321ECDE001B0E31 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				75428A262305E03F00F0812C /* Application */,
 				75BF0CDA2321E543001B0E31 /* Common */,
 				75BF0CDE2321E6D5001B0E31 /* Models */,
+				75BF0CF32321ECA2001B0E31 /* Network */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -217,6 +222,23 @@
 				75BF0CEF2321EAF9001B0E31 /* BestSellerResponse.swift */,
 			);
 			path = BestSeller;
+			sourceTree = "<group>";
+		};
+		75BF0CF32321ECA2001B0E31 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0CF62321ECC4001B0E31 /* Requests */,
+				75BF0CF42321ECB6001B0E31 /* APIConfiguration.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		75BF0CF62321ECC4001B0E31 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0CF72321ECDE001B0E31 /* APIRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,7 +349,9 @@
 				75BF0CEE2321E9A5001B0E31 /* Product.swift in Sources */,
 				75BF0CE82321E86E001B0E31 /* Category.swift in Sources */,
 				75BF0CEC2321E92E001B0E31 /* ProductResponse.swift in Sources */,
+				75BF0CF82321ECDE001B0E31 /* APIRequest.swift in Sources */,
 				75BF0CE32321E753001B0E31 /* Banner.swift in Sources */,
+				75BF0CF52321ECB6001B0E31 /* APIConfiguration.swift in Sources */,
 				75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */,
 				75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */,
 				75BF0CF02321EAF9001B0E31 /* BestSellerResponse.swift in Sources */,
