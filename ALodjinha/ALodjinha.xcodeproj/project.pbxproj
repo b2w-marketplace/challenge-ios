@@ -14,6 +14,7 @@
 		75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CD42321D28D001B0E31 /* Coordinatable.swift */; };
 		75BF0CD72321D2A8001B0E31 /* NavigationCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CD62321D2A8001B0E31 /* NavigationCoordinatable.swift */; };
 		75BF0CD92321D314001B0E31 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CD82321D314001B0E31 /* AppCoordinator.swift */; };
+		75BF0CDD2321E566001B0E31 /* AlodjinhaImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		75BF0CD42321D28D001B0E31 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
 		75BF0CD62321D2A8001B0E31 /* NavigationCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinatable.swift; sourceTree = "<group>"; };
 		75BF0CD82321D314001B0E31 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlodjinhaImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				75428A262305E03F00F0812C /* Application */,
+				75BF0CDA2321E543001B0E31 /* Common */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -137,6 +140,22 @@
 				75BF0CD62321D2A8001B0E31 /* NavigationCoordinatable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		75BF0CDA2321E543001B0E31 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0CDB2321E54E001B0E31 /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		75BF0CDB2321E54E001B0E31 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BF0CDD2321E566001B0E31 /* AlodjinhaImageView.swift in Sources */,
 				75BF0CD92321D314001B0E31 /* AppCoordinator.swift in Sources */,
 				75428A052305E00B00F0812C /* AppDelegate.swift in Sources */,
 				75BF0CD72321D2A8001B0E31 /* NavigationCoordinatable.swift in Sources */,
