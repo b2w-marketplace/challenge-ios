@@ -29,6 +29,7 @@
 		75BF0D012321ED9B001B0E31 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0CFF2321ED9B001B0E31 /* HomeView.xib */; };
 		75BF0D042321EE6F001B0E31 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D032321EE6F001B0E31 /* HomeViewModel.swift */; };
 		75BF0D072321EEC1001B0E31 /* HomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D062321EEC1001B0E31 /* HomeConstants.swift */; };
+		75BF0D0A2321EF91001B0E31 /* LoadContentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D092321EF91001B0E31 /* LoadContentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		75BF0CFF2321ED9B001B0E31 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		75BF0D032321EE6F001B0E31 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		75BF0D062321EEC1001B0E31 /* HomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstants.swift; sourceTree = "<group>"; };
+		75BF0D092321EF91001B0E31 /* LoadContentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadContentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		75BF0CDA2321E543001B0E31 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				75BF0D082321EF80001B0E31 /* Protocols */,
 				75BF0CDB2321E54E001B0E31 /* UI */,
 			);
 			path = Common;
@@ -296,6 +299,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		75BF0D082321EF80001B0E31 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D092321EF91001B0E31 /* LoadContentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75BF0D042321EE6F001B0E31 /* HomeViewModel.swift in Sources */,
+				75BF0D0A2321EF91001B0E31 /* LoadContentable.swift in Sources */,
 				75BF0CE62321E816001B0E31 /* CategoriesResponse.swift in Sources */,
 				75BF0D072321EEC1001B0E31 /* HomeConstants.swift in Sources */,
 				75BF0CDD2321E566001B0E31 /* AlodjinhaImageView.swift in Sources */,
