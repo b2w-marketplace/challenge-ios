@@ -22,6 +22,9 @@
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OaD-Eo-vFF">
                         <rect key="frame" x="0.0" y="0.0" width="334" height="135"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="135" id="MUV-Md-Jtg"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F25-jp-fyH">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -33,7 +36,7 @@
                         <rect key="frame" x="147.5" y="94" width="39" height="37"/>
                         <color key="pageIndicatorTintColor" red="0.4510893486" green="0.0" blue="0.90091329229999995" alpha="1" colorSpace="calibratedRGB"/>
                     </pageControl>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PrL-Td-7GY">
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PrL-Td-7GY">
                         <rect key="frame" x="148.5" y="49" width="37" height="37"/>
                         <color key="color" red="0.4510893486" green="0.0" blue="0.90091329229999995" alpha="1" colorSpace="calibratedRGB"/>
                     </activityIndicatorView>

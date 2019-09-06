@@ -29,6 +29,16 @@ class BannerTableViewCell: UITableViewCell {
         let bannerNibName = UINib(nibName: BannerString.BannerCollectionViewCell, bundle: nil)
         collectionView.register(bannerNibName, forCellWithReuseIdentifier: BannerString.BannerCollectionCell)
     }
+    
+    private func showLoading() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    }
+    
+    private func hideLoading() {
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
+    }
 }
 
 extension BannerTableViewCell: BannerViewDelegate {
@@ -55,6 +65,7 @@ extension BannerTableViewCell: UICollectionViewDataSource {
             return BannerCollectionViewCell()
         }
         cell.fill(dto: BannerCellDTO(image: banner?[indexPath.row].urlImagem ?? ""))
+        hideLoading()
         return cell
     }
 }

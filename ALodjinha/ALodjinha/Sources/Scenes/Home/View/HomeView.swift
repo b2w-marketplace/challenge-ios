@@ -95,6 +95,7 @@ extension HomeView: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: BannerString.BannerCell, for: indexPath) as? BannerTableViewCell else {
                 return BannerTableViewCell()
             }
+            cell.delegate?.fetchBanner(banner: viewModel.banners)
             return cell
         default:
             UITableViewCell()

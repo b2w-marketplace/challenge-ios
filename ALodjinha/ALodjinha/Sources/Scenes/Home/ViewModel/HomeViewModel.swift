@@ -17,6 +17,10 @@ class HomeViewModel {
     private var bannerResponse = BannerResponse()
     private weak var delegate: LoadContentable?
     
+    var banners: [Banner] {
+        return self.bannerResponse.data
+    }
+    
     init(delegate: LoadContentable?) {
         self.delegate = delegate
     }
