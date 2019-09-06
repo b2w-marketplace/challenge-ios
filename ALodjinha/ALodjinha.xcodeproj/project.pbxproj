@@ -34,6 +34,7 @@
 		75BF0D152321F1CB001B0E31 /* BannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D132321F1CB001B0E31 /* BannerTableViewCell.xib */; };
 		75BF0D1A2321F395001B0E31 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D182321F395001B0E31 /* BannerCollectionViewCell.swift */; };
 		75BF0D1B2321F395001B0E31 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D192321F395001B0E31 /* BannerCollectionViewCell.xib */; };
+		75BF0D1E23220020001B0E31 /* BannerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D1D23220020001B0E31 /* BannerViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		75BF0D132321F1CB001B0E31 /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerTableViewCell.xib; sourceTree = "<group>"; };
 		75BF0D182321F395001B0E31 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		75BF0D192321F395001B0E31 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		75BF0D1D23220020001B0E31 /* BannerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +277,7 @@
 		75BF0CFC2321ED59001B0E31 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				75BF0D1C23220007001B0E31 /* Protocols */,
 				75BF0D052321EEAF001B0E31 /* Constants */,
 				75BF0D022321EE61001B0E31 /* ViewModel */,
 				75BF0CFD2321ED6A001B0E31 /* View */,
@@ -357,6 +360,14 @@
 				75BF0D192321F395001B0E31 /* BannerCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		75BF0D1C23220007001B0E31 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D1D23220020001B0E31 /* BannerViewDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +488,7 @@
 				75BF0CEC2321E92E001B0E31 /* ProductResponse.swift in Sources */,
 				75BF0CF82321ECDE001B0E31 /* APIRequest.swift in Sources */,
 				75BF0CE32321E753001B0E31 /* Banner.swift in Sources */,
+				75BF0D1E23220020001B0E31 /* BannerViewDelegate.swift in Sources */,
 				75BF0CF52321ECB6001B0E31 /* APIConfiguration.swift in Sources */,
 				75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */,
 				75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */,
