@@ -10,8 +10,95 @@ import UIKit
 
 class HomeView: UIViewController {
 
+    //MARK: - Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: - Properties
+    private lazy var viewModel: HomeViewModel = HomeViewModel(delegate: self)
+    
+    //MARK: - Cycle life UIView
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+    
+    //MARK: - Private Methods
+    private func setupView() {
+        viewModel.loadBanner()
+        tableView.dataSource = self
+//        tableView.delegate = self
+        registerCells()
+        setupNavBar()
+        setupNavigationItemImage()
+    }
+    
+    private func registerCells() {
+        let bannerNibName = UINib(nibName: BannerString.BannerTableViewCell, bundle: nil)
+        tableView.register(bannerNibName, forCellReuseIdentifier: BannerString.BannerCell)
+    }
+    
+    //MARK: - NavigationBar
+    func setupNavigationItemImage() {
+        let logoContainer = UIView(frame: CGRect(x: 0,
+                                                 y: 0,
+                                                 width: 200,
+                                                 height: 30))
+        let imageView = UIImageView(frame: CGRect(x: 0,
+                                                  y: 0,
+                                                  width: 200,
+                                                  height: 30))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "logoNavbar")
+        logoContainer.addSubview(imageView)
+        self.navigationItem.titleView = logoContainer
+    }
+    
+    private func setupNavBar() {
+        self.navigationController?.navigationBar.isTranslucent = false
+        let nav = self.navigationController?.navigationBar
+        nav?.barTintColor = UIColor(red: 86.0/255.0,
+                                    green: 41.0/255.0,
+                                    blue: 126.0/255.0,
+                                    alpha: 1.0)
+        nav?.tintColor = .white
+        nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        setNeedsStatusBarAppearanceUpdate()
+    }
+}
 
+//MARK: - LoadContentable implements
+extension HomeView: LoadContentable {
+    func didLoad() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+}
+
+//MARK: - UITableViewDataSource implements
+extension HomeView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSections()
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.titleForHeader(section: section)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRows(section: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.section {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: BannerString.BannerCell, for: indexPath) as? BannerTableViewCell else {
+                return BannerTableViewCell()
+            }
+            return cell
+        default:
+            UITableViewCell()
+        }
+        return UITableViewCell()
     }
 }
