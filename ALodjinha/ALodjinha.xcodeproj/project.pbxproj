@@ -17,6 +17,8 @@
 		75BF0CDD2321E566001B0E31 /* AlodjinhaImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */; };
 		75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CE02321E6F7001B0E31 /* BannerResponse.swift */; };
 		75BF0CE32321E753001B0E31 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CE22321E753001B0E31 /* Banner.swift */; };
+		75BF0CE62321E816001B0E31 /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CE52321E816001B0E31 /* CategoriesResponse.swift */; };
+		75BF0CE82321E86E001B0E31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CE72321E86E001B0E31 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlodjinhaImageView.swift; sourceTree = "<group>"; };
 		75BF0CE02321E6F7001B0E31 /* BannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerResponse.swift; sourceTree = "<group>"; };
 		75BF0CE22321E753001B0E31 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		75BF0CE52321E816001B0E31 /* CategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
+		75BF0CE72321E86E001B0E31 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				75BF0CDF2321E6E9001B0E31 /* Banner */,
+				75BF0CE42321E7FA001B0E31 /* Categories */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +183,15 @@
 				75BF0CE22321E753001B0E31 /* Banner.swift */,
 			);
 			path = Banner;
+			sourceTree = "<group>";
+		};
+		75BF0CE42321E7FA001B0E31 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0CE52321E816001B0E31 /* CategoriesResponse.swift */,
+				75BF0CE72321E86E001B0E31 /* Category.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +294,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BF0CE62321E816001B0E31 /* CategoriesResponse.swift in Sources */,
 				75BF0CDD2321E566001B0E31 /* AlodjinhaImageView.swift in Sources */,
 				75BF0CD92321D314001B0E31 /* AppCoordinator.swift in Sources */,
 				75428A052305E00B00F0812C /* AppDelegate.swift in Sources */,
 				75BF0CD72321D2A8001B0E31 /* NavigationCoordinatable.swift in Sources */,
+				75BF0CE82321E86E001B0E31 /* Category.swift in Sources */,
 				75BF0CE32321E753001B0E31 /* Banner.swift in Sources */,
 				75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */,
 				75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */,
