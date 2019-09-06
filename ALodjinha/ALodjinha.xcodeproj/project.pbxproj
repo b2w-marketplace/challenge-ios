@@ -44,6 +44,11 @@
 		75BF0D3123227527001B0E31 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D2F23227527001B0E31 /* ProductTableViewCell.swift */; };
 		75BF0D3223227527001B0E31 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D3023227527001B0E31 /* ProductTableViewCell.xib */; };
 		75BF0D3523227B65001B0E31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D3423227B65001B0E31 /* Constants.swift */; };
+		75BF0D3723228603001B0E31 /* InfinitLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D3623228603001B0E31 /* InfinitLoadable.swift */; };
+		75BF0D3A23228652001B0E31 /* InfinitLoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D3923228652001B0E31 /* InfinitLoadingFooterView.swift */; };
+		75BF0D3C23228679001B0E31 /* InfinitLoadingFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D3B23228679001B0E31 /* InfinitLoadingFooterView.xib */; };
+		75BF0D3E23228ECD001B0E31 /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D3D23228ECD001B0E31 /* NibDesignable.swift */; };
+		75BF0D40232290D3001B0E31 /* AlodjinhaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D3F232290D3001B0E31 /* AlodjinhaTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +103,11 @@
 		75BF0D2F23227527001B0E31 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		75BF0D3023227527001B0E31 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		75BF0D3423227B65001B0E31 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		75BF0D3623228603001B0E31 /* InfinitLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinitLoadable.swift; sourceTree = "<group>"; };
+		75BF0D3923228652001B0E31 /* InfinitLoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinitLoadingFooterView.swift; sourceTree = "<group>"; };
+		75BF0D3B23228679001B0E31 /* InfinitLoadingFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfinitLoadingFooterView.xib; sourceTree = "<group>"; };
+		75BF0D3D23228ECD001B0E31 /* NibDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibDesignable.swift; sourceTree = "<group>"; };
+		75BF0D3F232290D3001B0E31 /* AlodjinhaTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlodjinhaTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,9 +226,11 @@
 		75BF0CDB2321E54E001B0E31 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				75BF0D382322862F001B0E31 /* InfinitLoadingFooterView */,
 				75BF0D2E23227505001B0E31 /* Cell */,
 				75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */,
 				75BF0D1F232202F1001B0E31 /* CustomizeTabBarController.swift */,
+				75BF0D3F232290D3001B0E31 /* AlodjinhaTableView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -336,6 +348,8 @@
 			isa = PBXGroup;
 			children = (
 				75BF0D092321EF91001B0E31 /* LoadContentable.swift */,
+				75BF0D3623228603001B0E31 /* InfinitLoadable.swift */,
+				75BF0D3D23228ECD001B0E31 /* NibDesignable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -437,6 +451,15 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		75BF0D382322862F001B0E31 /* InfinitLoadingFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D3923228652001B0E31 /* InfinitLoadingFooterView.swift */,
+				75BF0D3B23228679001B0E31 /* InfinitLoadingFooterView.xib */,
+			);
+			path = InfinitLoadingFooterView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -519,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75428A0F2305E00C00F0812C /* LaunchScreen.storyboard in Resources */,
+				75BF0D3C23228679001B0E31 /* InfinitLoadingFooterView.xib in Resources */,
 				75BF0D152321F1CB001B0E31 /* BannerTableViewCell.xib in Resources */,
 				75428A0C2305E00C00F0812C /* Assets.xcassets in Resources */,
 				75BF0D25232254B7001B0E31 /* CategoriesTableViewCell.xib in Resources */,
@@ -543,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BF0D40232290D3001B0E31 /* AlodjinhaTableView.swift in Sources */,
 				75BF0D042321EE6F001B0E31 /* HomeViewModel.swift in Sources */,
 				75BF0D0A2321EF91001B0E31 /* LoadContentable.swift in Sources */,
 				75BF0CE62321E816001B0E31 /* CategoriesResponse.swift in Sources */,
@@ -555,8 +580,10 @@
 				75BF0CD92321D314001B0E31 /* AppCoordinator.swift in Sources */,
 				75428A052305E00B00F0812C /* AppDelegate.swift in Sources */,
 				75BF0D3523227B65001B0E31 /* Constants.swift in Sources */,
+				75BF0D3A23228652001B0E31 /* InfinitLoadingFooterView.swift in Sources */,
 				75BF0CD72321D2A8001B0E31 /* NavigationCoordinatable.swift in Sources */,
 				75BF0CEE2321E9A5001B0E31 /* Product.swift in Sources */,
+				75BF0D3723228603001B0E31 /* InfinitLoadable.swift in Sources */,
 				75BF0CE82321E86E001B0E31 /* Category.swift in Sources */,
 				75BF0CEC2321E92E001B0E31 /* ProductResponse.swift in Sources */,
 				75BF0CF82321ECDE001B0E31 /* APIRequest.swift in Sources */,
@@ -567,6 +594,7 @@
 				75BF0D3123227527001B0E31 /* ProductTableViewCell.swift in Sources */,
 				75BF0CF52321ECB6001B0E31 /* APIConfiguration.swift in Sources */,
 				75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */,
+				75BF0D3E23228ECD001B0E31 /* NibDesignable.swift in Sources */,
 				75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */,
 				75BF0D002321ED9B001B0E31 /* HomeView.swift in Sources */,
 				75BF0CFB2321ED4D001B0E31 /* MainCoordinator.swift in Sources */,
