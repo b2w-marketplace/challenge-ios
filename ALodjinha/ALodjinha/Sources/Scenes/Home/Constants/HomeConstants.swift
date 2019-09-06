@@ -18,3 +18,10 @@ struct BannerString {
     static let BannerCollectionViewCell = "BannerCollectionViewCell"
     static let BannerCollectionCell = "BannerCollectionCell"
 }
+
+struct CategorriesString {
+    static let CategoriesTableViewCell = "CategoriesTableViewCell"
+    static let CategoriesCell = "CategoriesCell"
+    static let CategoriesCollectionViewCell = "CategoriesCollectionViewCell"
+    static let CategoriesCollectionCell = "CategoriesCollectionCell"
+}

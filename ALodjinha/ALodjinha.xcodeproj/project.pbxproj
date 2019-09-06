@@ -36,6 +36,11 @@
 		75BF0D1B2321F395001B0E31 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D192321F395001B0E31 /* BannerCollectionViewCell.xib */; };
 		75BF0D1E23220020001B0E31 /* BannerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D1D23220020001B0E31 /* BannerViewDelegate.swift */; };
 		75BF0D20232202F1001B0E31 /* CustomizeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D1F232202F1001B0E31 /* CustomizeTabBarController.swift */; };
+		75BF0D24232254B7001B0E31 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D22232254B7001B0E31 /* CategoriesTableViewCell.swift */; };
+		75BF0D25232254B7001B0E31 /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D23232254B7001B0E31 /* CategoriesTableViewCell.xib */; };
+		75BF0D2A232254E8001B0E31 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D28232254E8001B0E31 /* CategoriesCollectionViewCell.swift */; };
+		75BF0D2B232254E8001B0E31 /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D29232254E8001B0E31 /* CategoriesCollectionViewCell.xib */; };
+		75BF0D2D232258C3001B0E31 /* CategoriesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D2C232258C3001B0E31 /* CategoriesViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +87,11 @@
 		75BF0D192321F395001B0E31 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		75BF0D1D23220020001B0E31 /* BannerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewDelegate.swift; sourceTree = "<group>"; };
 		75BF0D1F232202F1001B0E31 /* CustomizeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeTabBarController.swift; sourceTree = "<group>"; };
+		75BF0D22232254B7001B0E31 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		75BF0D23232254B7001B0E31 /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
+		75BF0D28232254E8001B0E31 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		75BF0D29232254E8001B0E31 /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		75BF0D2C232258C3001B0E31 /* CategoriesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				75BF0D0D2321F176001B0E31 /* Banner */,
+				75BF0D2123225464001B0E31 /* Categories */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -369,8 +380,36 @@
 			isa = PBXGroup;
 			children = (
 				75BF0D1D23220020001B0E31 /* BannerViewDelegate.swift */,
+				75BF0D2C232258C3001B0E31 /* CategoriesViewDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		75BF0D2123225464001B0E31 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D26232254BE001B0E31 /* Components */,
+				75BF0D22232254B7001B0E31 /* CategoriesTableViewCell.swift */,
+				75BF0D23232254B7001B0E31 /* CategoriesTableViewCell.xib */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		75BF0D26232254BE001B0E31 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D27232254C6001B0E31 /* Cell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		75BF0D27232254C6001B0E31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D28232254E8001B0E31 /* CategoriesCollectionViewCell.swift */,
+				75BF0D29232254E8001B0E31 /* CategoriesCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,6 +496,8 @@
 				75428A0F2305E00C00F0812C /* LaunchScreen.storyboard in Resources */,
 				75BF0D152321F1CB001B0E31 /* BannerTableViewCell.xib in Resources */,
 				75428A0C2305E00C00F0812C /* Assets.xcassets in Resources */,
+				75BF0D25232254B7001B0E31 /* CategoriesTableViewCell.xib in Resources */,
+				75BF0D2B232254E8001B0E31 /* CategoriesCollectionViewCell.xib in Resources */,
 				75BF0D012321ED9B001B0E31 /* HomeView.xib in Resources */,
 				75BF0D1B2321F395001B0E31 /* BannerCollectionViewCell.xib in Resources */,
 			);
@@ -480,8 +521,10 @@
 				75BF0D0A2321EF91001B0E31 /* LoadContentable.swift in Sources */,
 				75BF0CE62321E816001B0E31 /* CategoriesResponse.swift in Sources */,
 				75BF0D1A2321F395001B0E31 /* BannerCollectionViewCell.swift in Sources */,
+				75BF0D2A232254E8001B0E31 /* CategoriesCollectionViewCell.swift in Sources */,
 				75BF0D072321EEC1001B0E31 /* HomeConstants.swift in Sources */,
 				75BF0CDD2321E566001B0E31 /* AlodjinhaImageView.swift in Sources */,
+				75BF0D2D232258C3001B0E31 /* CategoriesViewDelegate.swift in Sources */,
 				75BF0D142321F1CB001B0E31 /* BannerTableViewCell.swift in Sources */,
 				75BF0CD92321D314001B0E31 /* AppCoordinator.swift in Sources */,
 				75428A052305E00B00F0812C /* AppDelegate.swift in Sources */,
@@ -493,6 +536,7 @@
 				75BF0CE32321E753001B0E31 /* Banner.swift in Sources */,
 				75BF0D20232202F1001B0E31 /* CustomizeTabBarController.swift in Sources */,
 				75BF0D1E23220020001B0E31 /* BannerViewDelegate.swift in Sources */,
+				75BF0D24232254B7001B0E31 /* CategoriesTableViewCell.swift in Sources */,
 				75BF0CF52321ECB6001B0E31 /* APIConfiguration.swift in Sources */,
 				75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */,
 				75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */,
