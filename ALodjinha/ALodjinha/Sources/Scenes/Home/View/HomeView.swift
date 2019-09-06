@@ -25,6 +25,7 @@ class HomeView: UIViewController {
     //MARK: - Private Methods
     private func setupView() {
         viewModel.loadBanner()
+        viewModel.loadCategories()
         tableView.dataSource = self
 //        tableView.delegate = self
         registerCells()
@@ -35,6 +36,8 @@ class HomeView: UIViewController {
     private func registerCells() {
         let bannerNibName = UINib(nibName: BannerString.BannerTableViewCell, bundle: nil)
         tableView.register(bannerNibName, forCellReuseIdentifier: BannerString.BannerCell)
+        let categoriesNibName = UINib(nibName: CategorriesString.CategoriesTableViewCell, bundle: nil)
+        tableView.register(categoriesNibName, forCellReuseIdentifier: CategorriesString.CategoriesCell)
     }
     
     //MARK: - NavigationBar
@@ -96,6 +99,12 @@ extension HomeView: UITableViewDataSource {
                 return BannerTableViewCell()
             }
             cell.delegate?.fetchBanner(banner: viewModel.banners)
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CategorriesString.CategoriesCell, for: indexPath) as? CategoriesTableViewCell else {
+                return CategoriesTableViewCell()
+            }
+            cell.delegate?.fetchCategory(category: viewModel.category)
             return cell
         default:
             UITableViewCell()

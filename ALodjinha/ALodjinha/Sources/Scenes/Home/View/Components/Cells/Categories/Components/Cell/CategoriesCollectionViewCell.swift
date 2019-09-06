@@ -15,18 +15,21 @@ struct CategoriesCellDTO {
 
 class CategoriesCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var categoriesImage: AlodjinhaImageView!
-    @IBOutlet weak var categoriesDescriptionLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var categoriesImage: AlodjinhaImageView! {
+        didSet {
+            categoriesImage.contentMode = .scaleAspectFit
+        }
+    }
+    @IBOutlet weak var categoriesDescriptionLabel: UILabel! {
+        didSet {
+            categoriesDescriptionLabel.numberOfLines = 0
+            categoriesDescriptionLabel.lineBreakMode = .byWordWrapping
+            categoriesDescriptionLabel.font = UIFont.systemFont(ofSize: 10.0, weight: .semibold)
+        }
+    }
     
     func fill(dto: CategoriesCellDTO) {
         categoriesImage.downloadImage(withUrl: dto.image)
         categoriesDescriptionLabel.text = dto.description
-        hideLoading()
-    }
-    
-    private func hideLoading() {
-        activityIndicator.isHidden = true
-        activityIndicator.stopAnimating()
     }
 }

@@ -15,10 +15,15 @@ struct Section {
 class HomeViewModel {
     
     private var bannerResponse = BannerResponse()
+    private var categoriesResponse = CategoriesResponse()
     private weak var delegate: LoadContentable?
     
     var banners: [Banner] {
         return self.bannerResponse.data
+    }
+    
+    var category: [Category] {
+        return self.categoriesResponse.data
     }
     
     init(delegate: LoadContentable?) {
@@ -30,6 +35,16 @@ class HomeViewModel {
             guard let self = self else { return }
             if let response = response {
                 self.bannerResponse = response
+            }
+            self.delegate?.didLoad()
+        }
+    }
+    
+    func loadCategories() {
+        APIRequest().categoriesRequest { [weak self] response in
+            guard let self = self else { return }
+            if let response = response {
+                self.categoriesResponse = response
             }
             self.delegate?.didLoad()
         }

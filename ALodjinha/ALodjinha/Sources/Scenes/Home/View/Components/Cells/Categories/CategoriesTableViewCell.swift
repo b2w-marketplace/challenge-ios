@@ -11,6 +11,7 @@ import UIKit
 class CategoriesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var category: [Category]?
     weak var delegate: CategoriesViewDelegate?
@@ -26,6 +27,11 @@ class CategoriesTableViewCell: UITableViewCell {
     private func registerCell() {
         let categoriesNibName = UINib(nibName: CategorriesString.CategoriesCollectionViewCell, bundle: nil)
         collectionView.register(categoriesNibName, forCellWithReuseIdentifier: CategorriesString.CategoriesCollectionCell)
+    }
+    
+    private func hideLoading() {
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
     }
 
 }
@@ -54,6 +60,7 @@ extension CategoriesTableViewCell: UICollectionViewDataSource {
         }
         cell.fill(dto: CategoriesCellDTO(image: category?[indexPath.row].urlImagem ?? "",
                                          description: category?[indexPath.row].descricao ?? ""))
+        hideLoading()
         return cell
     }
 }
