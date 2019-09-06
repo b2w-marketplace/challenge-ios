@@ -15,7 +15,7 @@ struct Product {
     let descricao: String
     let precoDe: Double
     let precoPor: Double
-    let category: Category
+    let categoria: Category
 }
 
 extension Product: Decodable {
@@ -26,7 +26,7 @@ extension Product: Decodable {
         case descricao
         case precoDe
         case precoPor
-        case category
+        case categoria
     }
     
     init(from decoder: Decoder) throws {
@@ -37,6 +37,6 @@ extension Product: Decodable {
         descricao = try container.decode(String.self, forKey: .descricao)
         precoDe = try container.decode(Double.self, forKey: .precoDe)
         precoPor = try container.decode(Double.self, forKey: .precoPor)
-        category = try container.decode(Category.self, forKey: .category)
+        categoria = try container.decode(Category.self, forKey: .categoria)
     }
 }
