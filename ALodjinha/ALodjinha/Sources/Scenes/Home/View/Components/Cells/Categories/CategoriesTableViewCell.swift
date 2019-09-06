@@ -15,6 +15,7 @@ class CategoriesTableViewCell: UITableViewCell {
     
     private var category: [Category]?
     weak var delegate: CategoriesViewDelegate?
+    weak var homeViewDelegate: HomeViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -62,6 +63,14 @@ extension CategoriesTableViewCell: UICollectionViewDataSource {
                                          description: category?[indexPath.row].descricao ?? ""))
         hideLoading()
         return cell
+    }
+}
+
+extension CategoriesTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        homeViewDelegate?.displayProduct(category: category?[indexPath.row] ?? Category(descricao: "",
+                                                                                        id: 0,
+                                                                                        urlImagem: ""))
     }
 }
 

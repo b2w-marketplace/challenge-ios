@@ -15,6 +15,7 @@ class HomeView: UIViewController {
     
     //MARK: - Properties
     private lazy var viewModel: HomeViewModel = HomeViewModel(delegate: self)
+    weak var delegate: HomeViewDelegate?
     
     //MARK: - Cycle life UIView
     override func viewDidLoad() {
@@ -108,6 +109,7 @@ extension HomeView: UITableViewDataSource {
                 return CategoriesTableViewCell()
             }
             cell.delegate?.fetchCategory(category: viewModel.category)
+            cell.homeViewDelegate = self
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductString.ProductCell, for: indexPath) as? ProductTableViewCell else {
@@ -116,5 +118,11 @@ extension HomeView: UITableViewDataSource {
             cell.fill(dto: viewModel.dtoForRows(indexPath: indexPath))
             return cell
         }
+    }
+}
+
+extension HomeView: HomeViewDelegate {
+    func displayProduct(category: Category) {
+        delegate?.displayProduct(category: category)
     }
 }

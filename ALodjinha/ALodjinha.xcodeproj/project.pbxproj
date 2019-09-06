@@ -49,6 +49,10 @@
 		75BF0D3C23228679001B0E31 /* InfinitLoadingFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D3B23228679001B0E31 /* InfinitLoadingFooterView.xib */; };
 		75BF0D3E23228ECD001B0E31 /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D3D23228ECD001B0E31 /* NibDesignable.swift */; };
 		75BF0D40232290D3001B0E31 /* AlodjinhaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D3F232290D3001B0E31 /* AlodjinhaTableView.swift */; };
+		75BF0D45232291A9001B0E31 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D43232291A9001B0E31 /* ProductView.swift */; };
+		75BF0D46232291A9001B0E31 /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D44232291A9001B0E31 /* ProductView.xib */; };
+		75BF0D4823229281001B0E31 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D4723229281001B0E31 /* HomeViewDelegate.swift */; };
+		75BF0D4B23229563001B0E31 /* ProductViewString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D4A23229563001B0E31 /* ProductViewString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +112,10 @@
 		75BF0D3B23228679001B0E31 /* InfinitLoadingFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfinitLoadingFooterView.xib; sourceTree = "<group>"; };
 		75BF0D3D23228ECD001B0E31 /* NibDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibDesignable.swift; sourceTree = "<group>"; };
 		75BF0D3F232290D3001B0E31 /* AlodjinhaTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlodjinhaTableView.swift; sourceTree = "<group>"; };
+		75BF0D43232291A9001B0E31 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		75BF0D44232291A9001B0E31 /* ProductView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
+		75BF0D4723229281001B0E31 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
+		75BF0D4A23229563001B0E31 /* ProductViewString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +311,7 @@
 			children = (
 				75BF0CFA2321ED4D001B0E31 /* MainCoordinator.swift */,
 				75BF0CFC2321ED59001B0E31 /* Home */,
+				75BF0D4123229174001B0E31 /* Product */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -403,6 +412,7 @@
 			children = (
 				75BF0D1D23220020001B0E31 /* BannerViewDelegate.swift */,
 				75BF0D2C232258C3001B0E31 /* CategoriesViewDelegate.swift */,
+				75BF0D4723229281001B0E31 /* HomeViewDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -458,6 +468,32 @@
 				75BF0D3B23228679001B0E31 /* InfinitLoadingFooterView.xib */,
 			);
 			path = InfinitLoadingFooterView;
+			sourceTree = "<group>";
+		};
+		75BF0D4123229174001B0E31 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D492322952A001B0E31 /* Constants */,
+				75BF0D4223229195001B0E31 /* View */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		75BF0D4223229195001B0E31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D43232291A9001B0E31 /* ProductView.swift */,
+				75BF0D44232291A9001B0E31 /* ProductView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		75BF0D492322952A001B0E31 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D4A23229563001B0E31 /* ProductViewString.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,6 +585,7 @@
 				75BF0D2B232254E8001B0E31 /* CategoriesCollectionViewCell.xib in Resources */,
 				75BF0D3223227527001B0E31 /* ProductTableViewCell.xib in Resources */,
 				75BF0D012321ED9B001B0E31 /* HomeView.xib in Resources */,
+				75BF0D46232291A9001B0E31 /* ProductView.xib in Resources */,
 				75BF0D1B2321F395001B0E31 /* BannerCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,9 +608,11 @@
 				75BF0D042321EE6F001B0E31 /* HomeViewModel.swift in Sources */,
 				75BF0D0A2321EF91001B0E31 /* LoadContentable.swift in Sources */,
 				75BF0CE62321E816001B0E31 /* CategoriesResponse.swift in Sources */,
+				75BF0D4B23229563001B0E31 /* ProductViewString.swift in Sources */,
 				75BF0D1A2321F395001B0E31 /* BannerCollectionViewCell.swift in Sources */,
 				75BF0D2A232254E8001B0E31 /* CategoriesCollectionViewCell.swift in Sources */,
 				75BF0D072321EEC1001B0E31 /* HomeConstants.swift in Sources */,
+				75BF0D45232291A9001B0E31 /* ProductView.swift in Sources */,
 				75BF0CDD2321E566001B0E31 /* AlodjinhaImageView.swift in Sources */,
 				75BF0D2D232258C3001B0E31 /* CategoriesViewDelegate.swift in Sources */,
 				75BF0D142321F1CB001B0E31 /* BannerTableViewCell.swift in Sources */,
@@ -596,6 +635,7 @@
 				75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */,
 				75BF0D3E23228ECD001B0E31 /* NibDesignable.swift in Sources */,
 				75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */,
+				75BF0D4823229281001B0E31 /* HomeViewDelegate.swift in Sources */,
 				75BF0D002321ED9B001B0E31 /* HomeView.swift in Sources */,
 				75BF0CFB2321ED4D001B0E31 /* MainCoordinator.swift in Sources */,
 				75BF0CF02321EAF9001B0E31 /* BestSellerResponse.swift in Sources */,

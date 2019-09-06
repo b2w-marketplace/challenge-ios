@@ -12,6 +12,7 @@ class MainCoordinator: NavigationCoordinatable {
     
     private lazy var homeView: HomeView = {
         let viewController = HomeView(nibName: HomeString.HomeView, bundle: nil)
+        viewController.delegate = self
         return viewController
     }()
     
@@ -22,5 +23,17 @@ class MainCoordinator: NavigationCoordinatable {
     
     var rootViewController: UIViewController {
         return navigationController
+    }
+    
+    private func showProducts(category: Category) {
+        let viewController = ProductView(nibName: ProductViewString.ProductView, bundle: nil)
+        viewController.setup(category: category)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension MainCoordinator: HomeViewDelegate {
+    func displayProduct(category: Category) {
+        showProducts(category: category)
     }
 }
