@@ -19,5 +19,8 @@ class AppCoordinator: Coordinatable {
 
 extension AppCoordinator {
     func start() {
+        let tabBarController = CustomizeTabBarController(nibName: "CustomizeTabBarController", bundle: nil)
+        window.rootViewController = tabBarController
+        window.makeKeyAndVisible()
     }
 }
