@@ -35,6 +35,7 @@
 		75BF0D1A2321F395001B0E31 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D182321F395001B0E31 /* BannerCollectionViewCell.swift */; };
 		75BF0D1B2321F395001B0E31 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D192321F395001B0E31 /* BannerCollectionViewCell.xib */; };
 		75BF0D1E23220020001B0E31 /* BannerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D1D23220020001B0E31 /* BannerViewDelegate.swift */; };
+		75BF0D20232202F1001B0E31 /* CustomizeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D1F232202F1001B0E31 /* CustomizeTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		75BF0D182321F395001B0E31 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		75BF0D192321F395001B0E31 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		75BF0D1D23220020001B0E31 /* BannerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewDelegate.swift; sourceTree = "<group>"; };
+		75BF0D1F232202F1001B0E31 /* CustomizeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */,
+				75BF0D1F232202F1001B0E31 /* CustomizeTabBarController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				75BF0CEC2321E92E001B0E31 /* ProductResponse.swift in Sources */,
 				75BF0CF82321ECDE001B0E31 /* APIRequest.swift in Sources */,
 				75BF0CE32321E753001B0E31 /* Banner.swift in Sources */,
+				75BF0D20232202F1001B0E31 /* CustomizeTabBarController.swift in Sources */,
 				75BF0D1E23220020001B0E31 /* BannerViewDelegate.swift in Sources */,
 				75BF0CF52321ECB6001B0E31 /* APIConfiguration.swift in Sources */,
 				75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */,
