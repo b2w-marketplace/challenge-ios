@@ -41,6 +41,9 @@
 		75BF0D2A232254E8001B0E31 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D28232254E8001B0E31 /* CategoriesCollectionViewCell.swift */; };
 		75BF0D2B232254E8001B0E31 /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D29232254E8001B0E31 /* CategoriesCollectionViewCell.xib */; };
 		75BF0D2D232258C3001B0E31 /* CategoriesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D2C232258C3001B0E31 /* CategoriesViewDelegate.swift */; };
+		75BF0D3123227527001B0E31 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D2F23227527001B0E31 /* ProductTableViewCell.swift */; };
+		75BF0D3223227527001B0E31 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D3023227527001B0E31 /* ProductTableViewCell.xib */; };
+		75BF0D3523227B65001B0E31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D3423227B65001B0E31 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,9 @@
 		75BF0D28232254E8001B0E31 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		75BF0D29232254E8001B0E31 /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		75BF0D2C232258C3001B0E31 /* CategoriesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewDelegate.swift; sourceTree = "<group>"; };
+		75BF0D2F23227527001B0E31 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		75BF0D3023227527001B0E31 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		75BF0D3423227B65001B0E31 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 		75BF0CDA2321E543001B0E31 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				75BF0D3323227B56001B0E31 /* Constants */,
 				75BF0D082321EF80001B0E31 /* Protocols */,
 				75BF0CDB2321E54E001B0E31 /* UI */,
 			);
@@ -209,6 +216,7 @@
 		75BF0CDB2321E54E001B0E31 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				75BF0D2E23227505001B0E31 /* Cell */,
 				75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */,
 				75BF0D1F232202F1001B0E31 /* CustomizeTabBarController.swift */,
 			);
@@ -412,6 +420,23 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		75BF0D2E23227505001B0E31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D2F23227527001B0E31 /* ProductTableViewCell.swift */,
+				75BF0D3023227527001B0E31 /* ProductTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		75BF0D3323227B56001B0E31 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D3423227B65001B0E31 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,6 +523,7 @@
 				75428A0C2305E00C00F0812C /* Assets.xcassets in Resources */,
 				75BF0D25232254B7001B0E31 /* CategoriesTableViewCell.xib in Resources */,
 				75BF0D2B232254E8001B0E31 /* CategoriesCollectionViewCell.xib in Resources */,
+				75BF0D3223227527001B0E31 /* ProductTableViewCell.xib in Resources */,
 				75BF0D012321ED9B001B0E31 /* HomeView.xib in Resources */,
 				75BF0D1B2321F395001B0E31 /* BannerCollectionViewCell.xib in Resources */,
 			);
@@ -528,6 +554,7 @@
 				75BF0D142321F1CB001B0E31 /* BannerTableViewCell.swift in Sources */,
 				75BF0CD92321D314001B0E31 /* AppCoordinator.swift in Sources */,
 				75428A052305E00B00F0812C /* AppDelegate.swift in Sources */,
+				75BF0D3523227B65001B0E31 /* Constants.swift in Sources */,
 				75BF0CD72321D2A8001B0E31 /* NavigationCoordinatable.swift in Sources */,
 				75BF0CEE2321E9A5001B0E31 /* Product.swift in Sources */,
 				75BF0CE82321E86E001B0E31 /* Category.swift in Sources */,
@@ -537,6 +564,7 @@
 				75BF0D20232202F1001B0E31 /* CustomizeTabBarController.swift in Sources */,
 				75BF0D1E23220020001B0E31 /* BannerViewDelegate.swift in Sources */,
 				75BF0D24232254B7001B0E31 /* CategoriesTableViewCell.swift in Sources */,
+				75BF0D3123227527001B0E31 /* ProductTableViewCell.swift in Sources */,
 				75BF0CF52321ECB6001B0E31 /* APIConfiguration.swift in Sources */,
 				75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */,
 				75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */,

@@ -16,6 +16,7 @@ class HomeViewModel {
     
     private var bannerResponse = BannerResponse()
     private var categoriesResponse = CategoriesResponse()
+    private var bestSellerResponse = BestSellerResponse()
     private weak var delegate: LoadContentable?
     
     var banners: [Banner] {
@@ -50,6 +51,16 @@ class HomeViewModel {
         }
     }
     
+    func loadBestSeller() {
+        APIRequest().bestSellerRequest { [weak self] response in
+            guard let self = self else { return }
+            if let response = response {
+                self.bestSellerResponse = response
+            }
+            self.delegate?.didLoad()
+        }
+    }
+    
     func numberOfSections() -> Int {
         return Section().sections.count
     }
@@ -70,9 +81,17 @@ class HomeViewModel {
     func numberOfRows(section: Int) -> Int {
         switch section {
         case 2:
-            return 0
+            return self.bestSellerResponse.data.count
         default:
             return 1
         }
+    }
+    
+    func dtoForRows(indexPath: IndexPath) -> ProductCellDTO {
+        let dto = bestSellerResponse.data[indexPath.row]
+        return ProductCellDTO(name: dto.nome,
+                              image: dto.urlImagem,
+                              priceDe: dto.precoDe,
+                              pricePor: dto.precoPor)
     }
 }

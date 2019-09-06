@@ -25,6 +25,9 @@ class AlodjinhaImageView: UIImageView {
         
         URLSession.shared.dataTask(with: url!) { (data, _, error) in
             if error != nil {
+                DispatchQueue.main.async {
+                    self.image = UIImage(named: "placeholder")
+                }
                 print(error!)
                 return
             }

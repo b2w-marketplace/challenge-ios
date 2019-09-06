@@ -26,6 +26,7 @@ class HomeView: UIViewController {
     private func setupView() {
         viewModel.loadBanner()
         viewModel.loadCategories()
+        viewModel.loadBestSeller()
         tableView.dataSource = self
 //        tableView.delegate = self
         registerCells()
@@ -38,6 +39,8 @@ class HomeView: UIViewController {
         tableView.register(bannerNibName, forCellReuseIdentifier: BannerString.BannerCell)
         let categoriesNibName = UINib(nibName: CategorriesString.CategoriesTableViewCell, bundle: nil)
         tableView.register(categoriesNibName, forCellReuseIdentifier: CategorriesString.CategoriesCell)
+        let productNibName = UINib(nibName: ProductString.ProductTableViewCell, bundle: nil)
+        tableView.register(productNibName, forCellReuseIdentifier: ProductString.ProductCell)
     }
     
     //MARK: - NavigationBar
@@ -107,8 +110,11 @@ extension HomeView: UITableViewDataSource {
             cell.delegate?.fetchCategory(category: viewModel.category)
             return cell
         default:
-            UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductString.ProductCell, for: indexPath) as? ProductTableViewCell else {
+                return ProductTableViewCell()
+            }
+            cell.fill(dto: viewModel.dtoForRows(indexPath: indexPath))
+            return cell
         }
-        return UITableViewCell()
     }
 }
