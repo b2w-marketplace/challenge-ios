@@ -9,5 +9,12 @@
 import Foundation
 
 struct HomeString {
-    static let homeView = "HomeView"
+    static let HomeView = "HomeView"
+}
+
+struct BannerString {
+    static let BannerTableViewCell = "BannerTableViewCell"
+    static let BannerCell = "BannerCell"
+    static let BannerCollectionViewCell = "BannerCollectionViewCell"
+    static let BannerCollectionCell = "BannerCollectionCell"
 }
