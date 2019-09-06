@@ -15,6 +15,8 @@
 		75BF0CD72321D2A8001B0E31 /* NavigationCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CD62321D2A8001B0E31 /* NavigationCoordinatable.swift */; };
 		75BF0CD92321D314001B0E31 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CD82321D314001B0E31 /* AppCoordinator.swift */; };
 		75BF0CDD2321E566001B0E31 /* AlodjinhaImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */; };
+		75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CE02321E6F7001B0E31 /* BannerResponse.swift */; };
+		75BF0CE32321E753001B0E31 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0CE22321E753001B0E31 /* Banner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		75BF0CD62321D2A8001B0E31 /* NavigationCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinatable.swift; sourceTree = "<group>"; };
 		75BF0CD82321D314001B0E31 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlodjinhaImageView.swift; sourceTree = "<group>"; };
+		75BF0CE02321E6F7001B0E31 /* BannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerResponse.swift; sourceTree = "<group>"; };
+		75BF0CE22321E753001B0E31 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			children = (
 				75428A262305E03F00F0812C /* Application */,
 				75BF0CDA2321E543001B0E31 /* Common */,
+				75BF0CDE2321E6D5001B0E31 /* Models */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -156,6 +161,23 @@
 				75BF0CDC2321E566001B0E31 /* AlodjinhaImageView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		75BF0CDE2321E6D5001B0E31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0CDF2321E6E9001B0E31 /* Banner */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75BF0CDF2321E6E9001B0E31 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0CE02321E6F7001B0E31 /* BannerResponse.swift */,
+				75BF0CE22321E753001B0E31 /* Banner.swift */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +284,8 @@
 				75BF0CD92321D314001B0E31 /* AppCoordinator.swift in Sources */,
 				75428A052305E00B00F0812C /* AppDelegate.swift in Sources */,
 				75BF0CD72321D2A8001B0E31 /* NavigationCoordinatable.swift in Sources */,
+				75BF0CE32321E753001B0E31 /* Banner.swift in Sources */,
+				75BF0CE12321E6F7001B0E31 /* BannerResponse.swift in Sources */,
 				75BF0CD52321D28D001B0E31 /* Coordinatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
