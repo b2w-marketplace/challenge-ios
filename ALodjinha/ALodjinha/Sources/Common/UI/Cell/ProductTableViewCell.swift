@@ -25,7 +25,8 @@ class ProductTableViewCell: UITableViewCell {
     func fill(dto: ProductCellDTO) {
         productImage.downloadImage(withUrl: dto.image)
         nameLabel.text = dto.name
-        priceDeLabel.text = String(dto.priceDe)
-        pricePorLabel.text = String(dto.pricePor)
+        priceDeLabel.attributedText = String().makeStrikeThroughText("De \(Double().formatTwoDecimal(value: dto.priceDe))")
+        pricePorLabel.text = "Por \(Double().formatTwoDecimal(value: dto.pricePor))"
     }
 }
+

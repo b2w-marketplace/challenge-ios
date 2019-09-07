@@ -61,6 +61,8 @@
 		75BF0D5C232412D3001B0E31 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D5A232412D3001B0E31 /* AboutView.xib */; };
 		75BF0D60232414F3001B0E31 /* AboutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D5F232414F3001B0E31 /* AboutConstants.swift */; };
 		75BF0D63232420EC001B0E31 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D62232420EC001B0E31 /* Pacifico-Regular.ttf */; };
+		75BF0D6623242575001B0E31 /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D6523242575001B0E31 /* Extension+Double.swift */; };
+		75BF0D6823242594001B0E31 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D6723242594001B0E31 /* Extension+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,8 @@
 		75BF0D5A232412D3001B0E31 /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		75BF0D5F232414F3001B0E31 /* AboutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutConstants.swift; sourceTree = "<group>"; };
 		75BF0D62232420EC001B0E31 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		75BF0D6523242575001B0E31 /* Extension+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Double.swift"; sourceTree = "<group>"; };
+		75BF0D6723242594001B0E31 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,7 @@
 		75BF0CDA2321E543001B0E31 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				75BF0D6423242543001B0E31 /* Extensions */,
 				75BF0D3323227B56001B0E31 /* Constants */,
 				75BF0D082321EF80001B0E31 /* Protocols */,
 				75BF0CDB2321E54E001B0E31 /* UI */,
@@ -584,6 +589,15 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		75BF0D6423242543001B0E31 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D6523242575001B0E31 /* Extension+Double.swift */,
+				75BF0D6723242594001B0E31 /* Extension+String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -698,10 +712,12 @@
 				75BF0D40232290D3001B0E31 /* AlodjinhaTableView.swift in Sources */,
 				75BF0D042321EE6F001B0E31 /* HomeViewModel.swift in Sources */,
 				75BF0D0A2321EF91001B0E31 /* LoadContentable.swift in Sources */,
+				75BF0D6623242575001B0E31 /* Extension+Double.swift in Sources */,
 				75BF0CE62321E816001B0E31 /* CategoriesResponse.swift in Sources */,
 				75BF0D5B232412D3001B0E31 /* AboutView.swift in Sources */,
 				75BF0D4B23229563001B0E31 /* ProductViewString.swift in Sources */,
 				75BF0D1A2321F395001B0E31 /* BannerCollectionViewCell.swift in Sources */,
+				75BF0D6823242594001B0E31 /* Extension+String.swift in Sources */,
 				75BF0D2A232254E8001B0E31 /* CategoriesCollectionViewCell.swift in Sources */,
 				75BF0D072321EEC1001B0E31 /* HomeConstants.swift in Sources */,
 				75BF0D45232291A9001B0E31 /* ProductView.swift in Sources */,

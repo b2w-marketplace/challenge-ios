@@ -47,8 +47,8 @@ class DetailView: UIViewController {
     private func fill() {
         productImage.downloadImage(withUrl: product?.urlImagem ?? "")
         nameLabel.text = product?.nome ?? ""
-        priceDeLabel.text = String("\(product?.precoDe ?? 0)")
-        pricePorLabel.text = String("\(product?.precoPor ?? 0)")
+        priceDeLabel.attributedText = String().makeStrikeThroughText("De \(Double().formatTwoDecimal(value: product?.precoDe ?? 0))")
+        pricePorLabel.text = "Por \(Double().formatTwoDecimal(value: product?.precoPor ?? 0))"
         descriptionTextView.text = product?.descricao ?? ""
     }
     
