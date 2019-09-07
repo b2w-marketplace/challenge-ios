@@ -60,6 +60,13 @@ extension ProductView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if viewModel.numberOfRows() == 0 {
+            let alert = UIAlertController(title: "Atenção", message: "Produto indisponível no momento", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (dismiss) in
+                self.navigationController?.popViewController(animated: true)
+            }))
+            self.present(alert, animated: true)
+        }
         return viewModel.numberOfRows()
     }
     
