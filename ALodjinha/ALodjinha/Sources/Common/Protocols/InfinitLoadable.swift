@@ -19,7 +19,7 @@ extension InfinitLoadable where Self: UITableView {
         infinitLoadingFooterView.frame = CGRect(x: 0.0,
                                                 y: 0.0,
                                                 width: self.frame.size.width,
-                                                height: self.frame.size.height)
+                                                height: 0.0)
         self.tableFooterView = infinitLoadingFooterView
     }
     

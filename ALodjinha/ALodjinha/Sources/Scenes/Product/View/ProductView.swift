@@ -10,12 +10,64 @@ import UIKit
 
 class ProductView: UIViewController {
 
+    @IBOutlet weak var tableView: AlodjinhaTableView!
+    
+    private lazy var viewModel: ProductViewModel = ProductViewModel(delegate: self)
+    private var category: Category?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupView()
     }
     
     func setup(category: Category) {
-        print(category)
+        self.category = category
+        viewModel.setupInitial(category: category)
+    }
+    
+    func setupView() {
+        tableView.tableFooterView = UIView()
+        viewModel.loadProduct()
+        tableView.dataSource = self
+        registerCell()
+        setupNavBar()
+    }
+    
+    private func registerCell() {
+        let productNibName = UINib(nibName: ProductString.ProductTableViewCell, bundle: nil)
+        tableView.register(productNibName, forCellReuseIdentifier: ProductString.ProductCell)
+    }
+    
+    private func setupNavBar() {
+        self.navigationItem.title = category?.descricao ?? ""
+    }
+}
+
+extension ProductView: LoadContentable {
+    func didLoad() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+}
+
+extension ProductView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSections()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductString.ProductCell, for: indexPath) as? ProductTableViewCell else {
+            return ProductTableViewCell()
+        }
+        if viewModel.isLastIndex(indexPath: indexPath) {
+            viewModel.loadMore()
+        }
+        cell.fill(dto: viewModel.dtoForRows(indexPath: indexPath))
+        return cell
     }
 }
