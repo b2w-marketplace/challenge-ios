@@ -30,9 +30,19 @@ class MainCoordinator: NavigationCoordinatable {
         viewController.setup(category: category)
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    private func showDetail(product: Product) {
+        let viewController = DetailView(nibName: DetailString.DetailView, bundle: nil)
+        viewController.setup(product: product)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
 extension MainCoordinator: HomeViewDelegate {
+    func fetchProduct(product: Product) {
+        showDetail(product: product)
+    }
+    
     func displayProduct(category: Category) {
         showProducts(category: category)
     }

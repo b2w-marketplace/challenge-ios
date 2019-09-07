@@ -56,6 +56,7 @@
 		75BF0D4E23229FA7001B0E31 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D4D23229FA7001B0E31 /* ProductViewModel.swift */; };
 		75BF0D532322CCAC001B0E31 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D512322CCAC001B0E31 /* DetailView.swift */; };
 		75BF0D542322CCAC001B0E31 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D522322CCAC001B0E31 /* DetailView.xib */; };
+		75BF0D57232409AE001B0E31 /* DetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D56232409AE001B0E31 /* DetailConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		75BF0D4D23229FA7001B0E31 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		75BF0D512322CCAC001B0E31 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		75BF0D522322CCAC001B0E31 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		75BF0D56232409AE001B0E31 /* DetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,6 +517,7 @@
 		75BF0D4F2322CC87001B0E31 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				75BF0D552324099C001B0E31 /* Constants */,
 				75BF0D502322CC93001B0E31 /* View */,
 			);
 			path = Detail;
@@ -527,6 +530,14 @@
 				75BF0D522322CCAC001B0E31 /* DetailView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		75BF0D552324099C001B0E31 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D56232409AE001B0E31 /* DetailConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -674,6 +685,7 @@
 				75BF0D4823229281001B0E31 /* HomeViewDelegate.swift in Sources */,
 				75BF0D002321ED9B001B0E31 /* HomeView.swift in Sources */,
 				75BF0CFB2321ED4D001B0E31 /* MainCoordinator.swift in Sources */,
+				75BF0D57232409AE001B0E31 /* DetailConstants.swift in Sources */,
 				75BF0CF02321EAF9001B0E31 /* BestSellerResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

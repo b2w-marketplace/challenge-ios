@@ -29,7 +29,7 @@ class HomeView: UIViewController {
         viewModel.loadCategories()
         viewModel.loadBestSeller()
         tableView.dataSource = self
-//        tableView.delegate = self
+        tableView.delegate = self
         registerCells()
         setupNavBar()
         setupNavigationItemImage()
@@ -121,8 +121,15 @@ extension HomeView: UITableViewDataSource {
     }
 }
 
+extension HomeView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.fetchProduct(product: viewModel.productTransporter(indexPath: indexPath))
+    }
+}
+
 extension HomeView: HomeViewDelegate {
     func displayProduct(category: Category) {
         delegate?.displayProduct(category: category)
     }
+    func fetchProduct(product: Product) {}
 }

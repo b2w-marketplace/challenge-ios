@@ -94,4 +94,8 @@ class HomeViewModel {
                               priceDe: dto.precoDe,
                               pricePor: dto.precoPor)
     }
+    
+    func productTransporter(indexPath: IndexPath) -> Product {
+        return self.bestSellerResponse.data[indexPath.row]
+    }
 }

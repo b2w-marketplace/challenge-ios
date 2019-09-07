@@ -10,4 +10,5 @@ import Foundation
 
 protocol HomeViewDelegate: class {
     func displayProduct(category: Category)
+    func fetchProduct(product: Product)
 }
