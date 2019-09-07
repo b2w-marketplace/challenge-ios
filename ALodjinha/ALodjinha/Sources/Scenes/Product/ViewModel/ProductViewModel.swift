@@ -61,4 +61,8 @@ class ProductViewModel {
                               priceDe: dto.precoDe,
                               pricePor: dto.precoPor)
     }
+    
+    func productTransporter(indexPath: IndexPath) -> Product {
+        return self.productResponse.data[indexPath.row]
+    }
 }

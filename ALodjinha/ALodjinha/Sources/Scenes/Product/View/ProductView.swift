@@ -14,6 +14,7 @@ class ProductView: UIViewController {
     
     private lazy var viewModel: ProductViewModel = ProductViewModel(delegate: self)
     private var category: Category?
+    weak var delegate: HomeViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class ProductView: UIViewController {
         tableView.tableFooterView = UIView()
         viewModel.loadProduct()
         tableView.dataSource = self
+        tableView.delegate = self
         registerCell()
         setupNavBar()
     }
@@ -69,5 +71,11 @@ extension ProductView: UITableViewDataSource {
         }
         cell.fill(dto: viewModel.dtoForRows(indexPath: indexPath))
         return cell
+    }
+}
+
+extension ProductView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.fetchProduct(product: viewModel.productTransporter(indexPath: indexPath))
     }
 }

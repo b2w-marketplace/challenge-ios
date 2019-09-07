@@ -28,6 +28,7 @@ class MainCoordinator: NavigationCoordinatable {
     private func showProducts(category: Category) {
         let viewController = ProductView(nibName: ProductViewString.ProductView, bundle: nil)
         viewController.setup(category: category)
+        viewController.delegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
     
