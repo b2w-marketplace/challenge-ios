@@ -16,7 +16,11 @@ class DetailView: UIViewController {
     @IBOutlet weak var priceDeLabel: UILabel!
     @IBOutlet weak var pricePorLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var bookButton: UIButton!
+    @IBOutlet weak var bookButton: UIButton! {
+        didSet {
+            bookButton.layer.cornerRadius = 8.0
+        }
+    }
     
     private var product: Product?
 
@@ -46,4 +50,13 @@ class DetailView: UIViewController {
         pricePorLabel.text = String("\(product?.precoPor ?? 0)")
         descriptionTextView.text = product?.descricao ?? ""
     }
+    
+    @IBAction func actionBookButton(_ sender: UIButton) {
+        let alert = UIAlertController(title: "", message: "Produto reservado com sucesso", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (dismiss) in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true)
+    }
+    
 }
