@@ -36,6 +36,9 @@ class DetailView: UIViewController {
     }
     
     private func setupNavBar() {
+        let backButton = UIBarButtonItem()
+        backButton.title = "Voltar"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         self.navigationItem.title = product?.categoria.descricao ?? ""
     }
     
