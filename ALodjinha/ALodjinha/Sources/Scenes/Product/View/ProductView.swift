@@ -33,6 +33,7 @@ class ProductView: UIViewController {
         tableView.delegate = self
         registerCell()
         setupNavBar()
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     private func registerCell() {

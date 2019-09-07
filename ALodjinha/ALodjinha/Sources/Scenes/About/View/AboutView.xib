@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pacifico-Regular.ttf">
+            <string>Pacifico-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutView" customModule="ALodjinha" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07 Setembro de 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fka-1D-k8z">
+                    <rect key="frame" x="146.5" y="823" width="121" height="15"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luis Henrique Tavares DibrowaFerreira" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyP-Kx-bkA">
+                    <rect key="frame" x="83" y="790" width="248.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSobre" translatesAutoresizingMaskIntoConstraints="NO" id="yH9-uv-RBj">
+                    <rect key="frame" x="157" y="224" width="100" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="TMH-mA-45p"/>
+                        <constraint firstAttribute="height" constant="120" id="aC1-iP-ycn"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a Lodjinha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqG-2b-YiT">
+                    <rect key="frame" x="74.5" y="360" width="265.5" height="106"/>
+                    <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="60"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Fka-1D-k8z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2rV-Qc-8Zx"/>
+                <constraint firstItem="yH9-uv-RBj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="180" id="3cr-Us-0Gj"/>
+                <constraint firstItem="qqG-2b-YiT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JsY-zX-aVV"/>
+                <constraint firstItem="DyP-Kx-bkA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UjR-2t-pV6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Fka-1D-k8z" secondAttribute="bottom" constant="24" id="Y3x-gJ-BxO"/>
+                <constraint firstItem="yH9-uv-RBj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dbR-RY-zzG"/>
+                <constraint firstItem="qqG-2b-YiT" firstAttribute="top" secondItem="yH9-uv-RBj" secondAttribute="bottom" constant="16" id="tZ0-FP-IxF"/>
+                <constraint firstItem="Fka-1D-k8z" firstAttribute="top" secondItem="DyP-Kx-bkA" secondAttribute="bottom" constant="16" id="xHV-Zr-V2o"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logoSobre" width="107.5" height="114"/>
+    </resources>
+</document>

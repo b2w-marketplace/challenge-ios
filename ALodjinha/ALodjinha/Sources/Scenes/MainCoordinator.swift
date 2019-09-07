@@ -16,8 +16,18 @@ class MainCoordinator: NavigationCoordinatable {
         return viewController
     }()
     
+    private lazy var aboutView: AboutView = {
+        let viewController = AboutView(nibName: AboutString.AboutView, bundle: nil)
+        return viewController
+    }()
+    
     lazy var navigationController: UINavigationController = {
         let navigation = UINavigationController(rootViewController: self.homeView)
+        return navigation
+    }()
+    
+    lazy var aboutNavigationController: UINavigationController = {
+        let navigation = UINavigationController(rootViewController: self.aboutView)
         return navigation
     }()
     

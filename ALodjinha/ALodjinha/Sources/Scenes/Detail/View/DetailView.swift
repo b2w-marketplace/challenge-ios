@@ -32,6 +32,7 @@ class DetailView: UIViewController {
     private func setupView() {
         fill()
         setupNavBar()
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     private func setupNavBar() {

@@ -23,6 +23,10 @@ class HomeView: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     //MARK: - Private Methods
     private func setupView() {
         viewModel.loadBanner()

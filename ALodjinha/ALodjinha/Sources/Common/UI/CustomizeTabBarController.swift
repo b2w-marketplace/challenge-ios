@@ -26,7 +26,8 @@ class CustomizeTabBarController: UITabBarController {
         self.tabBar.barStyle = .default
         
         mainCoordinator.navigationController.tabBarItem.title = "Home"
+        mainCoordinator.aboutNavigationController.tabBarItem.title = "Sobre"
         
-        viewControllers = [mainCoordinator.navigationController]
+        viewControllers = [mainCoordinator.navigationController, mainCoordinator.aboutNavigationController]
     }
 }

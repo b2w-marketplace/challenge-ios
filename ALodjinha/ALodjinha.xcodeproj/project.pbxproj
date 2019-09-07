@@ -57,6 +57,10 @@
 		75BF0D532322CCAC001B0E31 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D512322CCAC001B0E31 /* DetailView.swift */; };
 		75BF0D542322CCAC001B0E31 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D522322CCAC001B0E31 /* DetailView.xib */; };
 		75BF0D57232409AE001B0E31 /* DetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D56232409AE001B0E31 /* DetailConstants.swift */; };
+		75BF0D5B232412D3001B0E31 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D59232412D3001B0E31 /* AboutView.swift */; };
+		75BF0D5C232412D3001B0E31 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D5A232412D3001B0E31 /* AboutView.xib */; };
+		75BF0D60232414F3001B0E31 /* AboutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D5F232414F3001B0E31 /* AboutConstants.swift */; };
+		75BF0D63232420EC001B0E31 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D62232420EC001B0E31 /* Pacifico-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +128,10 @@
 		75BF0D512322CCAC001B0E31 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		75BF0D522322CCAC001B0E31 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		75BF0D56232409AE001B0E31 /* DetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailConstants.swift; sourceTree = "<group>"; };
+		75BF0D59232412D3001B0E31 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		75BF0D5A232412D3001B0E31 /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+		75BF0D5F232414F3001B0E31 /* AboutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutConstants.swift; sourceTree = "<group>"; };
+		75BF0D62232420EC001B0E31 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +203,7 @@
 		75428A252305E02600F0812C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				75BF0D61232420C7001B0E31 /* Font */,
 				75428A0B2305E00C00F0812C /* Assets.xcassets */,
 				75428A0D2305E00C00F0812C /* LaunchScreen.storyboard */,
 				75428A102305E00C00F0812C /* Info.plist */,
@@ -319,6 +328,7 @@
 			children = (
 				75BF0CFA2321ED4D001B0E31 /* MainCoordinator.swift */,
 				75BF0CFC2321ED59001B0E31 /* Home */,
+				75BF0D58232412BD001B0E31 /* About */,
 				75BF0D4123229174001B0E31 /* Product */,
 				75BF0D4F2322CC87001B0E31 /* Detail */,
 			);
@@ -540,6 +550,40 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		75BF0D58232412BD001B0E31 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D5E232414E0001B0E31 /* Constants */,
+				75BF0D5D232414DA001B0E31 /* View */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		75BF0D5D232414DA001B0E31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D59232412D3001B0E31 /* AboutView.swift */,
+				75BF0D5A232412D3001B0E31 /* AboutView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		75BF0D5E232414E0001B0E31 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D5F232414F3001B0E31 /* AboutConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		75BF0D61232420C7001B0E31 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D62232420EC001B0E31 /* Pacifico-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -629,9 +673,11 @@
 				75BF0D2B232254E8001B0E31 /* CategoriesCollectionViewCell.xib in Resources */,
 				75BF0D3223227527001B0E31 /* ProductTableViewCell.xib in Resources */,
 				75BF0D012321ED9B001B0E31 /* HomeView.xib in Resources */,
+				75BF0D5C232412D3001B0E31 /* AboutView.xib in Resources */,
 				75BF0D46232291A9001B0E31 /* ProductView.xib in Resources */,
 				75BF0D1B2321F395001B0E31 /* BannerCollectionViewCell.xib in Resources */,
 				75BF0D542322CCAC001B0E31 /* DetailView.xib in Resources */,
+				75BF0D63232420EC001B0E31 /* Pacifico-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +699,7 @@
 				75BF0D042321EE6F001B0E31 /* HomeViewModel.swift in Sources */,
 				75BF0D0A2321EF91001B0E31 /* LoadContentable.swift in Sources */,
 				75BF0CE62321E816001B0E31 /* CategoriesResponse.swift in Sources */,
+				75BF0D5B232412D3001B0E31 /* AboutView.swift in Sources */,
 				75BF0D4B23229563001B0E31 /* ProductViewString.swift in Sources */,
 				75BF0D1A2321F395001B0E31 /* BannerCollectionViewCell.swift in Sources */,
 				75BF0D2A232254E8001B0E31 /* CategoriesCollectionViewCell.swift in Sources */,
@@ -671,6 +718,7 @@
 				75BF0D3723228603001B0E31 /* InfinitLoadable.swift in Sources */,
 				75BF0CE82321E86E001B0E31 /* Category.swift in Sources */,
 				75BF0CEC2321E92E001B0E31 /* ProductResponse.swift in Sources */,
+				75BF0D60232414F3001B0E31 /* AboutConstants.swift in Sources */,
 				75BF0CF82321ECDE001B0E31 /* APIRequest.swift in Sources */,
 				75BF0CE32321E753001B0E31 /* Banner.swift in Sources */,
 				75BF0D20232202F1001B0E31 /* CustomizeTabBarController.swift in Sources */,
