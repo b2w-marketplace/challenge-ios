@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "id": 45,
+            "nome": "Google Android",
+            "urlImagem": "https://images-submarino.b2w.io/produtos/01/00/item/125192/6/125192667_1GG.jpg",
+            "descricao": "Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>",
+            "precoDe": 29,
+            "precoPor": 11.99,
+            "categoria": {
+                "id": 2,
+                "descricao": "Livros",
+                "urlImagem": "http://4.bp.blogspot.com/-6Bta1H9d22g/UJAIJbqcHhI/AAAAAAAAKi4/hvgjWrlFc64/s1600/resenha-missiologia.png"
+            }
+        },
+        {
+            "id": 46,
+            "nome": "Android Essencial",
+            "urlImagem": "https://images-submarino.b2w.io/produtos/01/00/item/126077/9/126077951_1GG.jpg",
+            "descricao": "Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>",
+            "precoDe": 29,
+            "precoPor": 11.99,
+            "categoria": {
+                "id": 2,
+                "descricao": "Livros",
+                "urlImagem": "http://4.bp.blogspot.com/-6Bta1H9d22g/UJAIJbqcHhI/AAAAAAAAKi4/hvgjWrlFc64/s1600/resenha-missiologia.png"
+            }
+        },
+        {
+            "id": 47,
+            "nome": "Desenvolvimento de Jogos Para Android",
+            "urlImagem": "https://images-submarino.b2w.io/produtos/01/00/sku/8562/4/8562429_1GG.jpg",
+            "descricao": "Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>",
+            "precoDe": 299,
+            "precoPor": 19.99,
+            "categoria": {
+                "id": 2,
+                "descricao": "Livros",
+                "urlImagem": "http://4.bp.blogspot.com/-6Bta1H9d22g/UJAIJbqcHhI/AAAAAAAAKi4/hvgjWrlFc64/s1600/resenha-missiologia.png"
+            }
+        },
+        {
+            "id": 48,
+            "nome": "iOS: Programe para iPhone e iPad",
+            "urlImagem": "https://images-submarino.b2w.io/produtos/01/00/sku/10734/7/10734742_1GG.jpg",
+            "descricao": "Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>",
+            "precoDe": 29,
+            "precoPor": 19.99,
+            "categoria": {
+                "id": 2,
+                "descricao": "Livros",
+                "urlImagem": "http://4.bp.blogspot.com/-6Bta1H9d22g/UJAIJbqcHhI/AAAAAAAAKi4/hvgjWrlFc64/s1600/resenha-missiologia.png"
+            }
+        },
+        {
+            "id": 49,
+            "nome": "A Guerra dos tronos",
+            "urlImagem": "https://images-submarino.b2w.io/produtos/01/00/item/129303/7/129303774_1GG.jpg",
+            "descricao": "Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>",
+            "precoDe": 29,
+            "precoPor": 19.99,
+            "categoria": {
+                "id": 2,
+                "descricao": "Livros",
+                "urlImagem": "http://4.bp.blogspot.com/-6Bta1H9d22g/UJAIJbqcHhI/AAAAAAAAKi4/hvgjWrlFc64/s1600/resenha-missiologia.png"
+            }
+        },
+        {
+            "id": 50,
+            "nome": "Crepusculo",
+            "urlImagem": "https://images-submarino.b2w.io/produtos/01/00/item/124409/1/124409158_1GG.jpg",
+            "descricao": "Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>",
+            "precoDe": 29,
+            "precoPor": 11.99,
+            "categoria": {
+                "id": 2,
+                "descricao": "Livros",
+                "urlImagem": "http://4.bp.blogspot.com/-6Bta1H9d22g/UJAIJbqcHhI/AAAAAAAAKi4/hvgjWrlFc64/s1600/resenha-missiologia.png"
+            }
+        }
+    ],
+    "offset": 4,
+    "total": 75
+}

@@ -63,6 +63,19 @@
 		75BF0D63232420EC001B0E31 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D62232420EC001B0E31 /* Pacifico-Regular.ttf */; };
 		75BF0D6623242575001B0E31 /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D6523242575001B0E31 /* Extension+Double.swift */; };
 		75BF0D6823242594001B0E31 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D6723242594001B0E31 /* Extension+String.swift */; };
+		75BF0D6B23242E4A001B0E31 /* CategoriesMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D6A23242E4A001B0E31 /* CategoriesMock.json */; };
+		75BF0D6F232459FA001B0E31 /* BannerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D6E232459FA001B0E31 /* BannerTest.swift */; };
+		75BF0D7123245AAA001B0E31 /* BannerMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D7023245AAA001B0E31 /* BannerMock.json */; };
+		75BF0D7323245BB8001B0E31 /* BannerMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D7023245AAA001B0E31 /* BannerMock.json */; };
+		75BF0D7623246607001B0E31 /* CategoriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D7523246607001B0E31 /* CategoriesTest.swift */; };
+		75BF0D772324691D001B0E31 /* CategoriesMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D6A23242E4A001B0E31 /* CategoriesMock.json */; };
+		75BF0D7923246A9F001B0E31 /* BestSellerMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D7823246A9F001B0E31 /* BestSellerMock.json */; };
+		75BF0D7A23246AA7001B0E31 /* BestSellerMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D7823246A9F001B0E31 /* BestSellerMock.json */; };
+		75BF0D7D23246ADC001B0E31 /* BestSellerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D7C23246ADC001B0E31 /* BestSellerTest.swift */; };
+		75BF0D8023246F83001B0E31 /* ProductMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D7F23246F83001B0E31 /* ProductMock.json */; };
+		75BF0D8123246F8A001B0E31 /* ProductMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 75BF0D7F23246F83001B0E31 /* ProductMock.json */; };
+		75BF0D8323246FA7001B0E31 /* ProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D8223246FA7001B0E31 /* ProductTest.swift */; };
+		75BF0D86232477FB001B0E31 /* ExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF0D85232477FB001B0E31 /* ExtensionsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +149,15 @@
 		75BF0D62232420EC001B0E31 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		75BF0D6523242575001B0E31 /* Extension+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Double.swift"; sourceTree = "<group>"; };
 		75BF0D6723242594001B0E31 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		75BF0D6A23242E4A001B0E31 /* CategoriesMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CategoriesMock.json; sourceTree = "<group>"; };
+		75BF0D6E232459FA001B0E31 /* BannerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTest.swift; sourceTree = "<group>"; };
+		75BF0D7023245AAA001B0E31 /* BannerMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BannerMock.json; sourceTree = "<group>"; };
+		75BF0D7523246607001B0E31 /* CategoriesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTest.swift; sourceTree = "<group>"; };
+		75BF0D7823246A9F001B0E31 /* BestSellerMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BestSellerMock.json; sourceTree = "<group>"; };
+		75BF0D7C23246ADC001B0E31 /* BestSellerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerTest.swift; sourceTree = "<group>"; };
+		75BF0D7F23246F83001B0E31 /* ProductMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProductMock.json; sourceTree = "<group>"; };
+		75BF0D8223246FA7001B0E31 /* ProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTest.swift; sourceTree = "<group>"; };
+		75BF0D85232477FB001B0E31 /* ExtensionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +208,9 @@
 		75428A182305E00C00F0812C /* ALodjinhaTests */ = {
 			isa = PBXGroup;
 			children = (
+				75BF0D6923242DD6001B0E31 /* MockJson */,
+				75BF0D84232477E7001B0E31 /* Common */,
+				75BF0D6C23242E5C001B0E31 /* Scenes */,
 				75428A192305E00C00F0812C /* ALodjinhaTests.swift */,
 				75428A1B2305E00C00F0812C /* Info.plist */,
 			);
@@ -598,6 +623,76 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		75BF0D6923242DD6001B0E31 /* MockJson */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D6A23242E4A001B0E31 /* CategoriesMock.json */,
+				75BF0D7023245AAA001B0E31 /* BannerMock.json */,
+				75BF0D7823246A9F001B0E31 /* BestSellerMock.json */,
+				75BF0D7F23246F83001B0E31 /* ProductMock.json */,
+			);
+			path = MockJson;
+			sourceTree = "<group>";
+		};
+		75BF0D6C23242E5C001B0E31 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D7E23246F0F001B0E31 /* Product */,
+				75BF0D7223245AC7001B0E31 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		75BF0D6D23242E69001B0E31 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D6E232459FA001B0E31 /* BannerTest.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		75BF0D7223245AC7001B0E31 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D6D23242E69001B0E31 /* Banner */,
+				75BF0D74232465F3001B0E31 /* Categories */,
+				75BF0D7B23246AAF001B0E31 /* BestSeller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		75BF0D74232465F3001B0E31 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D7523246607001B0E31 /* CategoriesTest.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		75BF0D7B23246AAF001B0E31 /* BestSeller */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D7C23246ADC001B0E31 /* BestSellerTest.swift */,
+			);
+			path = BestSeller;
+			sourceTree = "<group>";
+		};
+		75BF0D7E23246F0F001B0E31 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D8223246FA7001B0E31 /* ProductTest.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		75BF0D84232477E7001B0E31 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				75BF0D85232477FB001B0E31 /* ExtensionsTest.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -681,12 +776,16 @@
 			files = (
 				75428A0F2305E00C00F0812C /* LaunchScreen.storyboard in Resources */,
 				75BF0D3C23228679001B0E31 /* InfinitLoadingFooterView.xib in Resources */,
+				75BF0D772324691D001B0E31 /* CategoriesMock.json in Resources */,
 				75BF0D152321F1CB001B0E31 /* BannerTableViewCell.xib in Resources */,
+				75BF0D8123246F8A001B0E31 /* ProductMock.json in Resources */,
 				75428A0C2305E00C00F0812C /* Assets.xcassets in Resources */,
 				75BF0D25232254B7001B0E31 /* CategoriesTableViewCell.xib in Resources */,
+				75BF0D7323245BB8001B0E31 /* BannerMock.json in Resources */,
 				75BF0D2B232254E8001B0E31 /* CategoriesCollectionViewCell.xib in Resources */,
 				75BF0D3223227527001B0E31 /* ProductTableViewCell.xib in Resources */,
 				75BF0D012321ED9B001B0E31 /* HomeView.xib in Resources */,
+				75BF0D7A23246AA7001B0E31 /* BestSellerMock.json in Resources */,
 				75BF0D5C232412D3001B0E31 /* AboutView.xib in Resources */,
 				75BF0D46232291A9001B0E31 /* ProductView.xib in Resources */,
 				75BF0D1B2321F395001B0E31 /* BannerCollectionViewCell.xib in Resources */,
@@ -699,6 +798,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BF0D6B23242E4A001B0E31 /* CategoriesMock.json in Resources */,
+				75BF0D7923246A9F001B0E31 /* BestSellerMock.json in Resources */,
+				75BF0D7123245AAA001B0E31 /* BannerMock.json in Resources */,
+				75BF0D8023246F83001B0E31 /* ProductMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,6 +861,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BF0D7D23246ADC001B0E31 /* BestSellerTest.swift in Sources */,
+				75BF0D86232477FB001B0E31 /* ExtensionsTest.swift in Sources */,
+				75BF0D6F232459FA001B0E31 /* BannerTest.swift in Sources */,
+				75BF0D7623246607001B0E31 /* CategoriesTest.swift in Sources */,
+				75BF0D8323246FA7001B0E31 /* ProductTest.swift in Sources */,
 				75428A1A2305E00C00F0812C /* ALodjinhaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

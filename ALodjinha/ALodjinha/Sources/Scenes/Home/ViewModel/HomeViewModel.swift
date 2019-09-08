@@ -27,8 +27,21 @@ class HomeViewModel {
         return self.categoriesResponse.data
     }
     
-    init(delegate: LoadContentable?) {
+    init(delegate: LoadContentable?, banners: BannerResponse? = nil,
+         categories: CategoriesResponse? = nil,
+         bestSeller: BestSellerResponse? = nil) {
+        
         self.delegate = delegate
+        
+        if let banner = banners {
+            self.bannerResponse = banner
+        }
+        if let category = categories {
+            self.categoriesResponse = category
+        }
+        if let bestSeller = bestSeller {
+            self.bestSellerResponse = bestSeller
+        }
     }
     
     func loadBanner() {

@@ -15,6 +15,7 @@ class BannerTableViewCell: UITableViewCell {
     @IBOutlet weak var pageControl: UIPageControl!
     
     private var banner: [Banner]?
+    private lazy var viewModel = HomeViewModel(delegate: self)
     weak var delegate: BannerViewDelegate?
     
     override func awakeFromNib() {
@@ -45,6 +46,14 @@ extension BannerTableViewCell: BannerViewDelegate {
     func fetchBanner(banner: [Banner]) {
         DispatchQueue.main.async {
             self.banner = banner
+            self.collectionView.reloadData()
+        }
+    }
+}
+
+extension BannerTableViewCell: LoadContentable {
+    func didLoad() {
+        DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
     }

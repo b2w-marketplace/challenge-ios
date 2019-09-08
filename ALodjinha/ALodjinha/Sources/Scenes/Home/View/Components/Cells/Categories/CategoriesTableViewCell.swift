@@ -14,6 +14,7 @@ class CategoriesTableViewCell: UITableViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var category: [Category]?
+    private lazy var viewModel = HomeViewModel(delegate: self)
     weak var delegate: CategoriesViewDelegate?
     weak var homeViewDelegate: HomeViewDelegate?
     
@@ -41,6 +42,14 @@ extension CategoriesTableViewCell: CategoriesViewDelegate {
     func fetchCategory(category: [Category]) {
         DispatchQueue.main.async {
             self.category = category
+            self.collectionView.reloadData()
+        }
+    }
+}
+
+extension CategoriesTableViewCell: LoadContentable {
+    func didLoad() {
+        DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
     }

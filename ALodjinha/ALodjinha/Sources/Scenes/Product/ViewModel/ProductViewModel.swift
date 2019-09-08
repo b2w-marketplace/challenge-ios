@@ -16,8 +16,12 @@ class ProductViewModel {
     private var currentPage: Int = 0
     private var isLoading: Bool = false
     
-    init(delegate: LoadContentable) {
+    init(delegate: LoadContentable?, product: ProductResponse? = nil) {
         self.delegate = delegate
+        
+        if let product = product {
+            self.productResponse = product
+        }
     }
     
     func setupInitial(category: Category) {
